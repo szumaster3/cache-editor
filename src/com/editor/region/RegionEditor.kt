@@ -3,249 +3,156 @@ package com.editor.region
 import com.displee.cache.CacheLibrary
 import java.awt.*
 import java.io.*
-import java.util.*
 import java.util.zip.ZipEntry
 import java.util.zip.ZipOutputStream
 import javax.swing.*
 
 class RegionEditor : JFrame() {
-    private val regionID: JTextField
-    private val symmetricKeyField: JTextField
-    private val sourceCache: JTextField
-    private val regionOutput: JTextField
-    private val regionInput: JTextField
-    private val editButton: JButton
-    private val selectSourceCache: JButton
-    private val backupButton: JButton
+    private val regionID = JTextField(10)
+    private val symmetricKeyField = JTextField(20)
+    private val sourceCache = JTextField(20).apply { isEditable = false }
+    private val regionOutput = JTextField(20).apply { isEditable = false }
+    private val regionInput = JTextField(10)
+    private val editButton = JButton("Transfer Region")
+    private val selectSourceCache = JButton("Select Source Cache")
+    private val backupButton = JButton("Backup Cache")
 
     init {
         title = "Region Editor"
         layout = GridBagLayout()
-        setSize(400, 500)
+        setSize(350, 420)
         defaultCloseOperation = 1
         setLocationRelativeTo(null)
+        val gbc = GridBagConstraints().apply { insets = Insets(5, 5, 5, 5); fill = GridBagConstraints.HORIZONTAL }
 
-        val gbc = GridBagConstraints()
-        gbc.insets = Insets(10, 10, 10, 10)
-        gbc.fill = GridBagConstraints.HORIZONTAL
-        gbc.anchor = GridBagConstraints.WEST
+        add(JLabel("Region ID:"), gbc.apply { gridx = 0; gridy = 0 })
+        add(regionID, gbc.apply { gridx = 1 })
 
-        // Region ID
-        val regionIdLabel = JLabel("Region ID:")
-        gbc.gridx = 0
-        gbc.gridy = 0
-        add(regionIdLabel, gbc)
+        add(JLabel("Symmetric Key:"), gbc.apply { gridx = 0; gridy = 1 })
+        add(symmetricKeyField, gbc.apply { gridx = 1 })
 
-        regionID = JTextField(10)
-        gbc.gridx = 1
-        gbc.gridy = 0
-        add(regionID, gbc)
+        add(JLabel("Region Output:"), gbc.apply { gridx = 0; gridy = 2 })
+        add(regionOutput, gbc.apply { gridx = 1 })
 
-        // Symmetric Key
-        val symmetricKeyLabel = JLabel("Symmetric Key:")
-        gbc.gridx = 0
-        gbc.gridy = 1
-        add(symmetricKeyLabel, gbc)
+        add(JLabel("Enter Region (lX_Y):"), gbc.apply { gridx = 0; gridy = 3 })
+        add(regionInput, gbc.apply { gridx = 1 })
 
-        symmetricKeyField = JTextField(20)
-        gbc.gridx = 1
-        gbc.gridy = 1
-        add(symmetricKeyField, gbc)
+        add(createCalculateRegionButton(), gbc.apply { gridx = 1; gridy = 4 })
+        add(createCalculateRegionIdButton(), gbc.apply { gridx = 1; gridy = 5 })
 
-        // Region Output
-        val regionOutputLabel = JLabel("Region Output:")
-        gbc.gridx = 0
-        gbc.gridy = 2
-        add(regionOutputLabel, gbc)
+        add(JLabel("Cache From Path:"), gbc.apply { gridx = 0; gridy = 6 })
+        add(sourceCache, gbc.apply { gridx = 1 })
 
-        regionOutput = JTextField(20)
-        regionOutput.isEditable = false
-        gbc.gridx = 1
-        gbc.gridy = 2
-        add(regionOutput, gbc)
+        selectSourceCache.addActionListener { selectSourceCachePath() }
+        add(selectSourceCache, gbc.apply { gridx = 1; gridy = 7 })
 
-        // Region Input
-        val regionInputLabel = JLabel("Enter Region (lX_Y):")
-        gbc.gridx = 0
-        gbc.gridy = 3
-        add(regionInputLabel, gbc)
+        editButton.addActionListener { transferRegion() }
+        add(editButton, gbc.apply { gridx = 1; gridy = 8 })
 
-        regionInput = JTextField(10)
-        gbc.gridx = 1
-        gbc.gridy = 3
-        add(regionInput, gbc)
-
-        // Calculate Region Button
-        val calculateRegionButton = JButton("Calculate Region")
-        gbc.gridx = 1
-        gbc.gridy = 4
-        add(calculateRegionButton, gbc)
-
-        // Calculate Region ID Button
-        val calculateRegionIdButton = JButton("Calculate Region ID")
-        gbc.gridx = 1
-        gbc.gridy = 5
-        add(calculateRegionIdButton, gbc)
-
-        // Source Cache Path
-        val cacheFromLabel = JLabel("Cache From Path:")
-        gbc.gridx = 0
-        gbc.gridy = 6
-        add(cacheFromLabel, gbc)
-
-        sourceCache = JTextField(20)
-        sourceCache.isEditable = false
-        gbc.gridx = 1
-        gbc.gridy = 6
-        add(sourceCache, gbc)
-
-        // Select Source Cache Button
-        selectSourceCache = JButton("Select Source Cache")
-        selectSourceCache.addActionListener {
-            val fileChooser = JFileChooser()
-            fileChooser.fileSelectionMode = JFileChooser.DIRECTORIES_ONLY
-            val result = fileChooser.showOpenDialog(this)
-            if (result == JFileChooser.APPROVE_OPTION) {
-                val selectedDirectory = fileChooser.selectedFile
-                sourceCache.text = selectedDirectory.absolutePath
-            }
-        }
-        gbc.gridx = 1
-        gbc.gridy = 7
-        add(selectSourceCache, gbc)
-
-        // Transfer Region Button
-        editButton = JButton("Transfer Region")
-        editButton.addActionListener {
-            val regionIdText = regionID.text.trim()
-            val xteaInput = symmetricKeyField.text.trim()
-            try {
-                val regionId = regionIdText.toInt()
-                editRegion(regionId, xteaInput)
-            } catch (ex: NumberFormatException) {
-                JOptionPane.showMessageDialog(this, "Invalid Region ID!", "Error", JOptionPane.ERROR_MESSAGE)
-            }
-        }
-        gbc.gridx = 1
-        gbc.gridy = 8
-        add(editButton, gbc)
-
-        // Backup Cache Button
-        backupButton = JButton("Backup Cache")
         backupButton.addActionListener { backupCache() }
-        gbc.gridx = 1
-        gbc.gridy = 9
-        add(backupButton, gbc)
+        add(backupButton, gbc.apply { gridx = 1; gridy = 9 })
 
-        // Set window visibility
         isVisible = true
     }
 
-    private fun backupCache() {
-        val cacheDirectory = File(cacheToPath)
-        if (!cacheDirectory.exists() || !cacheDirectory.isDirectory) {
-            JOptionPane.showMessageDialog(this, "Invalid source cache path.", "Error", JOptionPane.ERROR_MESSAGE)
+    private fun createCalculateRegionIdButton() = JButton("Calculate Region ID").apply {
+        addActionListener {
+            val text = regionInput.text.trim()
+            if (text.startsWith("l") && "_" in text) {
+                val parts = text.substring(1).split("_")
+                if (parts.size == 2) {
+                    val x = parts[0].toInt()
+                    val y = parts[1].toInt()
+                    regionID.text = ((x shl 8) or y).toString()
+                } else {
+                    showError("Invalid Region Format (lX_Y)!")
+                }
+            } else {
+                showError("Invalid Region Format (lX_Y)!")
+            }
+        }
+    }
+
+    private fun createCalculateRegionButton() = JButton("Calculate Region").apply {
+        addActionListener {
+            val id = regionID.text.trim().toIntOrNull()
+            if (id != null) {
+                val x = (id shr 8) and 0xFF
+                val y = id and 0xFF
+                regionOutput.text = "l${x}_$y"
+            } else {
+                showError("Invalid Region ID!")
+            }
+        }
+    }
+
+    private fun selectSourceCachePath() {
+        val fileChooser = JFileChooser().apply { fileSelectionMode = JFileChooser.DIRECTORIES_ONLY }
+        if (fileChooser.showOpenDialog(this) == JFileChooser.APPROVE_OPTION) {
+            sourceCache.text = fileChooser.selectedFile.absolutePath
+        }
+    }
+
+    private fun transferRegion() {
+        val regionId = regionID.text.trim().toIntOrNull()
+        val xtea = symmetricKeyField.text.trim().split(",").mapNotNull { it.toIntOrNull() }.toIntArray()
+
+        if (regionId == null || sourceCache.text.isEmpty()) {
+            showError("Invalid Region ID or Cache Path!")
             return
         }
 
-        val zipFilePath = "$cacheToPath/cache_backup.zip"
+        val cacheFrom = CacheLibrary.create(sourceCache.text)
+        val x = (regionId shr 8) and 0xFF
+        val y = regionId and 0xFF
+
+        val regionData = cacheFrom.data(5, "l${x}_$y", xtea)
+        val indexTo = cacheFrom.index(5)
+
+        regionData?.let {
+            cacheFrom.put(5, "l${x}_$y", it, xtea)
+            indexTo.update()
+            JOptionPane.showMessageDialog(this, "Region $regionId added.", "Success", JOptionPane.INFORMATION_MESSAGE)
+        } ?: showError("Region $regionId not found in source cache.")
+    }
+
+    private fun backupCache() {
+        val cachePath = sourceCache.text
+        if (cachePath.isEmpty()) {
+            showError("Please select a source cache.")
+            return
+        }
+        val cacheDirectory = File(cachePath)
+        if (!cacheDirectory.exists() || !cacheDirectory.isDirectory) {
+            showError("Invalid source cache path.")
+            return
+        }
+        val zipFilePath = "$cachePath/cache_backup.zip"
         try {
             FileOutputStream(zipFilePath).use { fos ->
                 ZipOutputStream(fos).use { zos ->
                     zipDirectory(cacheDirectory, cacheDirectory.name, zos)
-                    JOptionPane.showMessageDialog(
-                        this, "Backup created at: $zipFilePath", "Success", JOptionPane.INFORMATION_MESSAGE
-                    )
                 }
             }
+            JOptionPane.showMessageDialog(this, "Backup created: $zipFilePath", "Success", JOptionPane.INFORMATION_MESSAGE)
         } catch (e: IOException) {
-            JOptionPane.showMessageDialog(this, "Error while backing up the cache.", "Error", JOptionPane.ERROR_MESSAGE)
+            showError("An error occurred while backing up the cache.")
         }
     }
 
-    @Throws(IOException::class)
     private fun zipDirectory(folder: File, parentFolderName: String, zos: ZipOutputStream) {
-        for (file in folder.listFiles()) {
+        folder.listFiles()?.forEach { file ->
             if (file.isDirectory) {
                 zipDirectory(file, "$parentFolderName/${file.name}", zos)
             } else {
                 zos.putNextEntry(ZipEntry("$parentFolderName/${file.name}"))
-                FileInputStream(file).use { fis ->
-                    val buffer = ByteArray(1024)
-                    var length: Int
-                    while (fis.read(buffer).also { length = it } >= 0) {
-                        zos.write(buffer, 0, length)
-                    }
-                }
+                file.inputStream().use { it.copyTo(zos) }
                 zos.closeEntry()
             }
         }
     }
 
-    fun generateMapIndex() {
-        if (cacheToPath.isEmpty()) {
-            JOptionPane.showMessageDialog(this, "Please load the source cache!", "Error", JOptionPane.ERROR_MESSAGE)
-            return
-        }
-
-        val cacheFrom = CacheLibrary.create(cacheToPath)
-        val index = cacheFrom.index(5)
-
-        val mapIndexData = StringBuilder()
-        for (regionX in 0..255) {
-            for (regionY in 0..255) {
-                val landscapeId = MapIndexLoader.getLandscapeId(regionX, regionY)
-                val objectId = MapIndexLoader.getObjectId(regionX, regionY)
-
-                mapIndexData.append("Region (l$regionX|$regionY) Landscape ID: $landscapeId, Object ID: $objectId\n")
-            }
-        }
-
-        try {
-            BufferedWriter(FileWriter("map_index.txt")).use { writer ->
-                writer.write(mapIndexData.toString())
-                JOptionPane.showMessageDialog(
-                    this, "Map index saved to map_index.txt.", "Success", JOptionPane.INFORMATION_MESSAGE
-                )
-            }
-        } catch (e: IOException) {
-            JOptionPane.showMessageDialog(this, "Error saving map_index.", "Error", JOptionPane.ERROR_MESSAGE)
-        }
-    }
-
-    companion object {
-        private var cacheToPath = ""
-
-        fun setCacheForRegionEditor(cachePath: String) {
-            cacheToPath = cachePath
-        }
-
-        fun editRegion(regionId: Int, symmetricKeyInput: String) {
-            if (cacheToPath.isEmpty()) {
-                JOptionPane.showMessageDialog(null, "Please load the source cache!", "Error", JOptionPane.ERROR_MESSAGE)
-                return
-            }
-
-            val cacheFrom = CacheLibrary.create(cacheToPath)
-            val x = (regionId shr 8) and 0xFF
-            val y = regionId and 0xFF
-
-            val symmetricKey = symmetricKeyInput.split(",").map { it.trim().toInt() }.toIntArray()
-
-            val regionData = cacheFrom.data(5, "l$x" + "_" + "$y", symmetricKey)
-            val cacheTo = CacheLibrary.create(cacheToPath)
-
-            if (regionData != null) {
-                cacheTo.put(5, "l$x" + "_" + "$y", regionData, symmetricKey)
-                cacheTo.index(5).update()
-                JOptionPane.showMessageDialog(
-                    null, "Region $regionId added.", "Success", JOptionPane.INFORMATION_MESSAGE
-                )
-            } else {
-                JOptionPane.showMessageDialog(
-                    null, "Region $regionId not found in source cache.", "Error", JOptionPane.ERROR_MESSAGE
-                )
-            }
-        }
+    private fun showError(message: String) {
+        JOptionPane.showMessageDialog(this, message, "Error", JOptionPane.ERROR_MESSAGE)
     }
 }

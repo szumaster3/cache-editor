@@ -100,7 +100,6 @@ class ToolSelection : JFrame() {
                     Main.log("ToolSelection", "Failed to start NPC selection!")
                 }
                 2 -> try {
-                    RegionEditor.setCacheForRegionEditor(cache)
                     RegionEditor().isVisible = true
                     Main.log("ToolSelection", "RegionEditor Started")
                 } catch (e: Exception) {
