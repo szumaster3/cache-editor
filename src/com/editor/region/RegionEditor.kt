@@ -7,7 +7,7 @@ import java.util.zip.ZipEntry
 import java.util.zip.ZipOutputStream
 import javax.swing.*
 
-class RegionEditor : JFrame() {
+class RegionEditor(private val cacheTo: String) : JFrame() {
     private val regionID = JTextField(10)
     private val symmetricKeyField = JTextField(20)
     private val sourceCache = JTextField(20).apply { isEditable = false }
@@ -55,6 +55,80 @@ class RegionEditor : JFrame() {
         isVisible = true
     }
 
+    private fun transferRegion() {
+        val regionId = regionID.text.trim().toIntOrNull()
+        val xtea = symmetricKeyField.text.trim().split(",").mapNotNull { it.toIntOrNull() }.toIntArray()
+
+        if (regionId == null || sourceCache.text.isEmpty()) {
+            showError("Invalid Region ID or Cache Path!")
+            return
+        }
+
+        val cacheFrom = CacheLibrary.create(sourceCache.text)
+        val cacheDest = CacheLibrary.create(cacheTo)
+        val x = (regionId shr 8) and 0xFF
+        val y = regionId and 0xFF
+        val regionFileName = "l${x}_${y}"
+
+        val regionData = cacheFrom.data(5, regionFileName, xtea)
+        val indexTo = cacheDest.index(5)
+
+        if (regionData != null) {
+            cacheDest.put(5, regionFileName, regionData, xtea)
+            indexTo.update()
+            JOptionPane.showMessageDialog(this, "Region $regionId transferred successfully.", "Success", JOptionPane.INFORMATION_MESSAGE)
+        } else {
+            showError("Region $regionId not found in source cache.")
+        }
+    }
+
+    private fun backupCache() {
+        val cachePath = if (sourceCache.text.isNotEmpty()) sourceCache.text else cacheTo
+        val cacheDirectory = File(cachePath)
+        if (!cacheDirectory.exists() || !cacheDirectory.isDirectory) {
+            showError("Invalid source cache path.")
+            return
+        }
+        val zipFilePath = "$cachePath/cache_backup.zip"
+        try {
+            FileOutputStream(zipFilePath).use { fos ->
+                ZipOutputStream(fos).use { zos ->
+                    zipDirectory(cacheDirectory, cacheDirectory, zos)
+                }
+            }
+            JOptionPane.showMessageDialog(this, "Backup created: $zipFilePath", "Success", JOptionPane.INFORMATION_MESSAGE)
+        } catch (e: IOException) {
+            showError("An error occurred while backing up the cache.")
+        }
+    }
+
+    private fun zipDirectory(folder: File, baseFolder: File, zos: ZipOutputStream) {
+        folder.listFiles()?.forEach { file ->
+            if (file.name.endsWith(".zip")) return@forEach
+            val entryName = file.relativeTo(baseFolder).path.replace("\\", "/")
+            if (file.isDirectory) {
+                zipDirectory(file, baseFolder, zos)
+            } else {
+                zos.putNextEntry(ZipEntry(entryName))
+                file.inputStream().use { it.copyTo(zos) }
+                zos.closeEntry()
+            }
+        }
+    }
+
+    private fun createCalculateRegionButton() = JButton("Calculate Region").apply {
+        addActionListener {
+            val id = regionID.text.trim().toIntOrNull()
+            if (id != null) {
+                val x = (id shr 8) and 0xFF
+                val y = id and 0xFF
+                regionOutput.text = "l${x}_${y}"
+            } else {
+                showError("Invalid Region ID!")
+            }
+        }
+    }
+
     private fun createCalculateRegionIdButton() = JButton("Calculate Region ID").apply {
         addActionListener {
             val text = regionInput.text.trim()
@@ -73,82 +147,10 @@ class RegionEditor : JFrame() {
         }
     }
 
-    private fun createCalculateRegionButton() = JButton("Calculate Region").apply {
-        addActionListener {
-            val id = regionID.text.trim().toIntOrNull()
-            if (id != null) {
-                val x = (id shr 8) and 0xFF
-                val y = id and 0xFF
-                regionOutput.text = "l${x}_$y"
-            } else {
-                showError("Invalid Region ID!")
-            }
-        }
-    }
-
     private fun selectSourceCachePath() {
         val fileChooser = JFileChooser().apply { fileSelectionMode = JFileChooser.DIRECTORIES_ONLY }
         if (fileChooser.showOpenDialog(this) == JFileChooser.APPROVE_OPTION) {
             sourceCache.text = fileChooser.selectedFile.absolutePath
-        }
-    }
-
-    private fun transferRegion() {
-        val regionId = regionID.text.trim().toIntOrNull()
-        val xtea = symmetricKeyField.text.trim().split(",").mapNotNull { it.toIntOrNull() }.toIntArray()
-
-        if (regionId == null || sourceCache.text.isEmpty()) {
-            showError("Invalid Region ID or Cache Path!")
-            return
-        }
-
-        val cacheFrom = CacheLibrary.create(sourceCache.text)
-        val x = (regionId shr 8) and 0xFF
-        val y = regionId and 0xFF
-
-        val regionData = cacheFrom.data(5, "l${x}_$y", xtea)
-        val indexTo = cacheFrom.index(5)
-
-        regionData?.let {
-            cacheFrom.put(5, "l${x}_$y", it, xtea)
-            indexTo.update()
-            JOptionPane.showMessageDialog(this, "Region $regionId added.", "Success", JOptionPane.INFORMATION_MESSAGE)
-        } ?: showError("Region $regionId not found in source cache.")
-    }
-
-    private fun backupCache() {
-        val cachePath = sourceCache.text
-        if (cachePath.isEmpty()) {
-            showError("Please select a source cache.")
-            return
-        }
-        val cacheDirectory = File(cachePath)
-        if (!cacheDirectory.exists() || !cacheDirectory.isDirectory) {
-            showError("Invalid source cache path.")
-            return
-        }
-        val zipFilePath = "$cachePath/cache_backup.zip"
-        try {
-            FileOutputStream(zipFilePath).use { fos ->
-                ZipOutputStream(fos).use { zos ->
-                    zipDirectory(cacheDirectory, cacheDirectory.name, zos)
-                }
-            }
-            JOptionPane.showMessageDialog(this, "Backup created: $zipFilePath", "Success", JOptionPane.INFORMATION_MESSAGE)
-        } catch (e: IOException) {
-            showError("An error occurred while backing up the cache.")
-        }
-    }
-
-    private fun zipDirectory(folder: File, parentFolderName: String, zos: ZipOutputStream) {
-        folder.listFiles()?.forEach { file ->
-            if (file.isDirectory) {
-                zipDirectory(file, "$parentFolderName/${file.name}", zos)
-            } else {
-                zos.putNextEntry(ZipEntry("$parentFolderName/${file.name}"))
-                file.inputStream().use { it.copyTo(zos) }
-                zos.closeEntry()
-            }
         }
     }
 

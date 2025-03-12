@@ -1,7 +1,5 @@
 package console
 
-import com.editor.anim.AnimationEditor
-import com.editor.anim.AnimationSelection
 import com.editor.iface.InterfaceEditor
 import com.editor.item.ItemSelection
 import com.editor.item.ModelDumper
@@ -100,7 +98,7 @@ class ToolSelection : JFrame() {
                     Main.log("ToolSelection", "Failed to start NPC selection!")
                 }
                 2 -> try {
-                    RegionEditor().isVisible = true
+                    RegionEditor(cache).isVisible = true
                     Main.log("ToolSelection", "RegionEditor Started")
                 } catch (e: Exception) {
                     Main.log("ToolSelection", "Failed to start RegionEditor!")
