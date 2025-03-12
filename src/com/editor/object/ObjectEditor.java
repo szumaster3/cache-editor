@@ -356,7 +356,7 @@ public class ObjectEditor extends JFrame {
         this.exitMenuBtn = new JMenuItem();
         this.setDefaultCloseOperation(3);
         this.jLabel1.setText("Name");
-        this.objectName.setText("" + this.defs.name);
+        this.objectName.setText("" + this.getName());
         this.jLabel2.setText("Size X");
         this.sizeX.setText("" + this.defs.sizeX);
         this.sizeY.setText("" + this.defs.sizeY);

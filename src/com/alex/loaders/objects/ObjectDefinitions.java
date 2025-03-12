@@ -846,7 +846,7 @@ public class ObjectDefinitions implements Cloneable {
             Field field = arr$[i$];
             if ((field.getModifiers() & 8) == 0) {
                 try {
-                    System.out.println(field.getName() + ": " + this.getValue(field));
+                    System.out.println(this.name + ": " + this.getValue(field));
                 } catch (Throwable var6) {
                     var6.printStackTrace();
                 }
@@ -854,14 +854,6 @@ public class ObjectDefinitions implements Cloneable {
         }
 
         System.out.println("-- end of " + this.getClass().getSimpleName() + " fields --");
-    }
-
-    public String getName() {
-        return this.name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public byte[] encode() {
@@ -950,11 +942,6 @@ public class ObjectDefinitions implements Cloneable {
         return encodedData;
     }
 
-
-    public String toString() {
-        return this.id + " - " + this.name;
-    }
-
     public void setSizeX(int sizeX) {
         this.sizeX = sizeX;
     }
@@ -1016,5 +1003,15 @@ public class ObjectDefinitions implements Cloneable {
         store.getIndexes()[16].putFile(this.getArchiveId(), this.getFileId(), this.encode());
     }
 
+    public String toString() {
+        return this.id + " - " + this.getName();
+    }
+    public String getName() {
+        return this.name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 
 }

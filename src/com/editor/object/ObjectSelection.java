@@ -29,7 +29,7 @@ public class ObjectSelection extends JFrame {
 
     public ObjectSelection(String cache) throws IOException {
         STORE = new Store(cache);
-        this.setTitle("NPC Selection");
+        this.setTitle("Object Selection");
         this.setResizable(false);
         this.setDefaultCloseOperation(1);
         this.setLocationRelativeTo(null);
