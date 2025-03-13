@@ -95,7 +95,7 @@ class NPCSelection : JFrame {
                     if (result == JOptionPane.YES_OPTION) {
                         STORE?.indexes?.get(18)?.removeFile(defs.archiveId, defs.fileId)
                         this@NPCSelection.removeNPCDefs(defs)
-                        log("ItemSelection", "Item ${defs.id} removed.")
+                        log("NPCSelection", "NPC ID: ${defs.id} removed.")
                     }
                 }
             }

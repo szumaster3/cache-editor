@@ -55,11 +55,11 @@ class ToolSelection : JFrame() {
         selectionBox!!.model = DefaultComboBoxModel(
             arrayOf(
                 "Item Editor",
-                "NPCs Editor",
-                "Region Editor",
-                "Interface Editor",
+                "NPC Editor",
+                "Transfer Region",
+                "Transfer Interface",
                 "Object Editor",
-                "Model Dump",
+                "Model Export",
                 //"Animation Editor"
             )
         )

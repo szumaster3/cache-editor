@@ -63,6 +63,7 @@ sourceSets {
 }
 
 tasks.jar {
+    archiveBaseName.set("530-Editor")
     manifest {
         attributes(
                 'Main-Class': 'console.Main'
