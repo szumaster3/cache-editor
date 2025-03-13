@@ -7,19 +7,23 @@ import com.alex.store.Store;
 import java.lang.reflect.Field;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class ObjectDefinitions implements Cloneable {
     private static final ConcurrentHashMap objectDefinitions = new ConcurrentHashMap();
     private short[] originalColors;
     int[] toObjectIds;
+    public int[] childrenIds;
     static int anInt3832;
     int[] anIntArray3833 = null;
     public int anInt3834;
     int anInt3835;
+
     static int anInt3836;
     public byte aByte3837;
     int anInt3838 = -1;
+    public HashMap<Integer, Object> clientScriptData;
     boolean aBoolean3839;
     public int anInt3840;
     public int anInt3841;
@@ -27,6 +31,8 @@ public class ObjectDefinitions implements Cloneable {
     static int anInt3843;
     int anInt3844;
     boolean aBoolean3845;
+    public int models[];
+    public int arrayForModelId[];
     public byte aByte3847;
     public boolean ignoreClipOnAlternativeRoute;
     int[] animations = null;
@@ -47,7 +53,7 @@ public class ObjectDefinitions implements Cloneable {
     int[] anIntArray3859;
     int anInt3860;
     public String[] options;
-    public int configFileId;
+    int configFileId;
     private short[] modifiedColors;
     int anInt3865;
     boolean aBoolean3866;
@@ -99,11 +105,46 @@ public class ObjectDefinitions implements Cloneable {
     boolean aBoolean3924;
     int anInt3925;
     public int id;
-    public boolean aBool6886;
-    static int anInt3846;
+
+    @Override
+    public String toString() {
+        return this.name != null ? this.name : "" + this.id;
+    }
+
+    public short[] modifiedModelColors;
+
     public boolean projectileCliped;
 
+
+    public int anInt3876;
+
+
+    private int[][] anIntArrayArray3916;
+
+    public short[] modifiedTextureColors;
+    public short[] originalTextureColors;
+
+    private Object aClass194_3922;
+
+
+    public void setOriginalColors(short[] originalColors) {
+        this.originalColors = originalColors;
+    }
+
+    public void setModifiedColors(short[] modifiedColors) {
+        this.modifiedColors = modifiedColors;
+    }
+
+    public short[] getOriginalColors() {
+        return originalColors;
+    }
+
+    public short[] getModifiedColors() {
+        return modifiedColors;
+    }
+
     public ObjectDefinitions() {
+        this.name = "null";
         this.anInt3835 = -1;
         this.anInt3860 = -1;
         this.configFileId = -1;
@@ -142,7 +183,6 @@ public class ObjectDefinitions implements Cloneable {
         this.objectAnimation = -1;
         this.aBoolean3891 = false;
         this.anInt3905 = 0;
-        this.name = "null";
         this.anInt3913 = -1;
         this.aBoolean3906 = false;
         this.aBoolean3873 = false;
@@ -172,6 +212,67 @@ public class ObjectDefinitions implements Cloneable {
         return this.options != null && this.options.length >= 2 ? this.options[1] : "";
     }
 
+
+    public int getSizeX() {
+        return sizeX;
+    }
+
+
+    public int getSizeY() {
+        return sizeY;
+    }
+
+    public int getObjectAnimation() {
+        return objectAnimation;
+    }
+
+    public int[][] getModelIds() {
+        return modelIds;
+    }
+
+    public String[] getOpts() {
+        return options;
+    }
+
+    public short[] getOriginalModelColors() {
+        return originalColors;
+    }
+
+    public short[] getModifiedModelColors() {
+        return modifiedColors;
+    }
+
+    // Example setter for Size X
+    public void setSizeX(int sizeX) {
+        this.sizeX = sizeX;
+    }
+
+    // Example setter for Size Y
+    public void setSizeY(int sizeY) {
+        this.sizeY = sizeY;
+    }
+
+    // Example setter for Object Animation
+    public void setObjectAnimation(int objectAnimation) {
+        this.objectAnimation = objectAnimation;
+    }
+
+    // Example setter for Model IDs
+    public void setModelIds(int[][] modelIds) {
+        this.modelIds = modelIds;
+    }
+
+    // Example setter for Options
+    public void invOptions(String[] invOptions) {
+        this.options = invOptions;
+    }
+
+    // Example setter for Original & Modified Model Colors
+    public void setModelColors(short[] originalModelColors, short[] modifiedModelColors) {
+        this.originalColors = originalModelColors;
+        this.modifiedColors = modifiedModelColors;
+    }
+
     public String getOption(int option) {
         return this.options != null && this.options.length >= option && option != 0 ? this.options[option - 1] : "";
     }
@@ -182,14 +283,6 @@ public class ObjectDefinitions implements Cloneable {
 
     private static int getArchiveId(int i_0_) {
         return i_0_ >>> -1135990488;
-    }
-
-    public int getSizeX() {
-        return this.sizeX;
-    }
-
-    public int getSizeY() {
-        return this.sizeY;
     }
 
     private Object getValue(Field field) throws Throwable {
@@ -249,407 +342,408 @@ public class ObjectDefinitions implements Cloneable {
         return this.cflag;
     }
 
+
     private void readValues(InputStream stream, int opcode) {
-        while (true) {
-            opcode = stream.readUnsignedByte();
-            if (opcode == 0) {
-                break;
+        if (opcode == 1 || opcode == 5) {
+            int length = stream.readUnsignedByte();
+            models = new int[length];
+            if (opcode == 1)
+                arrayForModelId = new int[length];
+            for (int index = 0; index < length; index++) {
+                models[index] = stream.readUnsignedShort();
+                if (opcode == 1)
+                    arrayForModelId[index] = stream.readUnsignedByte();
             }
 
-            if (opcode == 1 || opcode == 5) {
-                int modelCount = stream.readUnsignedByte();
-                this.modelIds = new int[modelCount][];
-                this.possibleTypes = new byte[modelCount];
-
-                for (int i = 0; i < modelCount; ++i) {
-                    int modelIdCount = stream.readUnsignedByte();
-                    this.modelIds[i] = new int[modelIdCount];
-
-                    for (int j = 0; j < modelIdCount; ++j) {
-                        this.modelIds[i][j] = stream.readShort();
-                    }
-
-                    this.possibleTypes[i] = (byte) stream.readUnsignedByte();
-                }
-            }
         }
-        boolean aBoolean1162;
-        int i_73_;
-        int i_74_;
-        int i_75_;
-        if (opcode != 1 && opcode != 5) {
-            if (opcode != 2) {
-                if (opcode != 14) {
-                    if (opcode != 15) {
-                        if (opcode == 17) {
-                            this.projectileCliped = false;
-                            this.clipType = 0;
-                        } else if (opcode != 18) {
-                            if (opcode == 19) {
-                                this.secondInt = stream.readUnsignedByte();
-                            } else if (opcode == 21) {
-                                this.aByte3912 = 1;
-                            } else if (opcode != 22) {
-                                if (opcode != 23) {
-                                    if (opcode != 24) {
-                                        if (opcode == 27) {
-                                            this.clipType = 1;
-                                        } else if (opcode == 28) {
-                                            this.anInt3892 = stream.readUnsignedByte() << 2;
-                                        } else if (opcode != 29) {
-                                            if (opcode != 39) {
-                                                if (opcode >= 30 && opcode < 35) {
-                                                    this.options[-30 + opcode] = stream.readString();
-                                                } else {
-                                                    int var8;
-                                                    if (opcode == 40) {
-                                                        var8 = stream.readUnsignedByte();
-                                                        this.originalColors = new short[var8];
-                                                        this.modifiedColors = new short[var8];
-
-                                                        for (i_73_ = 0; var8 > i_73_; ++i_73_) {
-                                                            this.originalColors[i_73_] = (short) stream.readUnsignedShort();
-                                                            this.modifiedColors[i_73_] = (short) stream.readUnsignedShort();
-                                                        }
-                                                    } else {
-                                                        short var9;
-                                                        byte var10;
-                                                        if (44 == opcode) {
-                                                            var9 = (short) stream.readUnsignedShort();
-                                                            i_73_ = 0;
-
-                                                            for (i_74_ = var9; i_74_ > 0; i_74_ >>= 1) {
-                                                                ++i_73_;
-                                                            }
-
-                                                            this.unknownArray3 = new byte[i_73_];
-                                                            var10 = 0;
-
-                                                            for (i_75_ = 0; i_75_ < i_73_; ++i_75_) {
-                                                                if ((var9 & 1 << i_75_) > 0) {
-                                                                    this.unknownArray3[i_75_] = var10++;
-                                                                } else {
-                                                                    this.unknownArray3[i_75_] = -1;
-                                                                }
-                                                            }
-                                                        } else if (opcode == 45) {
-                                                            var9 = (short) stream.readUnsignedShort();
-                                                            i_73_ = 0;
-
-                                                            for (i_74_ = var9; i_74_ > 0; i_74_ >>= 1) {
-                                                                ++i_73_;
-                                                            }
-
-                                                            this.unknownArray4 = new byte[i_73_];
-                                                            var10 = 0;
-
-                                                            for (i_75_ = 0; i_75_ < i_73_; ++i_75_) {
-                                                                if ((var9 & 1 << i_75_) > 0) {
-                                                                    this.unknownArray4[i_75_] = var10++;
-                                                                } else {
-                                                                    this.unknownArray4[i_75_] = -1;
-                                                                }
-                                                            }
-                                                        } else if (opcode != 41) {
-                                                            if (opcode != 42) {
-                                                                if (opcode != 62) {
-                                                                    if (opcode != 64) {
-                                                                        if (opcode == 65) {
-                                                                            this.anInt3902 = stream.readUnsignedShort();
-                                                                        } else if (opcode != 66) {
-                                                                            if (opcode != 67) {
-                                                                                if (opcode == 69) {
-                                                                                    this.cflag = stream.readUnsignedByte();
-                                                                                } else if (opcode != 70) {
-                                                                                    if (opcode == 71) {
-                                                                                        this.anInt3889 = stream.readShort() << 2;
-                                                                                    } else if (opcode != 72) {
-                                                                                        if (opcode == 73) {
-                                                                                            this.secondBool = true;
-                                                                                        } else if (opcode == 74) {
-                                                                                            this.ignoreClipOnAlternativeRoute = true;
-                                                                                        } else if (opcode != 75) {
-                                                                                            if (opcode != 77 && opcode != 92) {
-                                                                                                if (opcode == 78) {
-                                                                                                    this.anInt3860 = stream.readUnsignedShort();
-                                                                                                    this.anInt3904 = stream.readUnsignedByte();
-                                                                                                } else if (opcode != 79) {
-                                                                                                    if (opcode == 81) {
-                                                                                                        this.aByte3912 = 2;
-                                                                                                        this.anInt3882 = 256 * stream.readUnsignedByte();
-                                                                                                    } else if (opcode != 82) {
-                                                                                                        if (opcode == 88) {
-                                                                                                            this.aBoolean3853 = false;
-                                                                                                        } else if (opcode != 89) {
-                                                                                                            if (opcode == 90) {
-                                                                                                                this.aBoolean3870 = true;
-                                                                                                            } else if (opcode != 91) {
-                                                                                                                if (opcode != 93) {
-                                                                                                                    if (opcode == 94) {
-                                                                                                                        this.aByte3912 = 4;
-                                                                                                                    } else if (opcode != 95) {
-                                                                                                                        if (opcode != 96) {
-                                                                                                                            if (opcode == 97) {
-                                                                                                                                this.aBoolean3866 = true;
-                                                                                                                            } else if (opcode == 98) {
-                                                                                                                                this.aBoolean3923 = true;
-                                                                                                                            } else if (opcode == 99) {
-                                                                                                                                this.anInt3857 = stream.readUnsignedByte();
-                                                                                                                                this.anInt3835 = stream.readUnsignedShort();
-                                                                                                                            } else if (opcode == 100) {
-                                                                                                                                this.anInt3844 = stream.readUnsignedByte();
-                                                                                                                                this.anInt3913 = stream.readUnsignedShort();
-                                                                                                                            } else if (opcode != 101) {
-                                                                                                                                if (opcode == 102) {
-                                                                                                                                    this.anInt3838 = stream.readUnsignedShort();
-                                                                                                                                } else if (opcode == 103) {
-                                                                                                                                    this.thirdInt = 0;
-                                                                                                                                } else if (opcode != 104) {
-                                                                                                                                    if (opcode == 105) {
-                                                                                                                                        this.aBoolean3906 = true;
-                                                                                                                                    } else if (opcode == 106) {
-                                                                                                                                        var8 = stream.readUnsignedByte();
-                                                                                                                                        this.anIntArray3869 = new int[var8];
-                                                                                                                                        this.animations = new int[var8];
-
-                                                                                                                                        for (i_73_ = 0; i_73_ < var8; ++i_73_) {
-                                                                                                                                            this.animations[i_73_] = stream.readBigSmart();
-                                                                                                                                            i_74_ = stream.readUnsignedByte();
-                                                                                                                                            this.anIntArray3869[i_73_] = i_74_;
-                                                                                                                                            this.anInt3881 += i_74_;
-                                                                                                                                        }
-                                                                                                                                    } else if (opcode == 107) {
-                                                                                                                                        this.anInt3851 = stream.readUnsignedShort();
-                                                                                                                                    } else if (opcode >= 150 && opcode < 155) {
-                                                                                                                                        this.options[opcode + -150] = stream.readString();
-                                                                                                                                    } else if (opcode != 160) {
-                                                                                                                                        if (opcode == 162) {
-                                                                                                                                            this.aByte3912 = 3;
-                                                                                                                                            this.anInt3882 = stream.readInt();
-                                                                                                                                        } else if (opcode == 163) {
-                                                                                                                                            this.aByte3847 = (byte) stream.readByte();
-                                                                                                                                            this.aByte3849 = (byte) stream.readByte();
-                                                                                                                                            this.aByte3837 = (byte) stream.readByte();
-                                                                                                                                            this.aByte3914 = (byte) stream.readByte();
-                                                                                                                                        } else if (opcode != 164) {
-                                                                                                                                            if (opcode != 165) {
-                                                                                                                                                if (opcode != 166) {
-                                                                                                                                                    if (opcode == 167) {
-                                                                                                                                                        this.anInt3921 = stream.readUnsignedShort();
-                                                                                                                                                    } else if (opcode != 168) {
-                                                                                                                                                        if (opcode == 169) {
-                                                                                                                                                            this.aBoolean3845 = true;
-                                                                                                                                                        } else if (opcode == 170) {
-                                                                                                                                                            var8 = stream.readUnsignedSmart();
-                                                                                                                                                        } else if (opcode == 171) {
-                                                                                                                                                            var8 = stream.readUnsignedSmart();
-                                                                                                                                                        } else if (opcode == 173) {
-                                                                                                                                                            var8 = stream.readUnsignedShort();
-                                                                                                                                                            i_73_ = stream.readUnsignedShort();
-                                                                                                                                                        } else if (opcode == 177) {
-                                                                                                                                                            aBoolean1162 = true;
-                                                                                                                                                        } else if (opcode == 178) {
-                                                                                                                                                            var8 = stream.readUnsignedByte();
-                                                                                                                                                        } else if (opcode == 189) {
-                                                                                                                                                            aBoolean1162 = true;
-                                                                                                                                                        } else if (opcode >= 190 && opcode < 196) {
-                                                                                                                                                            if (this.anIntArray4534 == null) {
-                                                                                                                                                                this.anIntArray4534 = new int[6];
-                                                                                                                                                                Arrays.fill(this.anIntArray4534, -1);
-                                                                                                                                                            }
-
-                                                                                                                                                            this.anIntArray4534[opcode - 190] = stream.readUnsignedShort();
-                                                                                                                                                        } else if (opcode == 249) {
-                                                                                                                                                            var8 = stream.readUnsignedByte();
-                                                                                                                                                            if (this.parameters == null) {
-                                                                                                                                                                this.parameters = new HashMap(var8);
-                                                                                                                                                            }
-
-                                                                                                                                                            for (i_73_ = 0; i_73_ < var8; ++i_73_) {
-                                                                                                                                                                boolean var11 = stream.readUnsignedByte() == 1;
-                                                                                                                                                                i_75_ = stream.read24BitInt();
-                                                                                                                                                                if (!var11) {
-                                                                                                                                                                    this.parameters.put(Integer.valueOf(i_75_), Integer.valueOf(stream.readInt()));
-                                                                                                                                                                } else {
-                                                                                                                                                                    this.parameters.put(Integer.valueOf(i_75_), stream.readString());
-                                                                                                                                                                }
-                                                                                                                                                            }
-                                                                                                                                                        }
-                                                                                                                                                    } else {
-                                                                                                                                                        this.aBoolean3894 = true;
-                                                                                                                                                    }
-                                                                                                                                                } else {
-                                                                                                                                                    this.anInt3877 = stream.readShort();
-                                                                                                                                                }
-                                                                                                                                            } else {
-                                                                                                                                                this.anInt3875 = stream.readShort();
-                                                                                                                                            }
-                                                                                                                                        } else {
-                                                                                                                                            this.anInt3834 = stream.readShort();
-                                                                                                                                        }
-                                                                                                                                    } else {
-                                                                                                                                        var8 = stream.readUnsignedByte();
-                                                                                                                                        this.anIntArray3908 = new int[var8];
-
-                                                                                                                                        for (i_73_ = 0; var8 > i_73_; ++i_73_) {
-                                                                                                                                            this.anIntArray3908[i_73_] = stream.readUnsignedShort();
-                                                                                                                                        }
-                                                                                                                                    }
-                                                                                                                                } else {
-                                                                                                                                    this.anInt3865 = stream.readUnsignedByte();
+        //if (opcode == 2)
+        //    name = stream.readString();
+        if (opcode != 2) {
+            if (opcode != 14) {
+                if (opcode != 15) {
+                    if (opcode == 17) {
+                        projectileCliped = false;
+                        clipType = 0;
+                    } else if (opcode != 18) {
+                        if (opcode == 19)
+                            secondInt = stream.readUnsignedByte();
+                        else if (opcode == 21)
+                            aByte3912 = (byte) 1;
+                        else if (opcode != 22) {
+                            if (opcode != 23) {
+                                if (opcode != 24) {
+                                    if (opcode == 27)
+                                        clipType = 1;
+                                    else if (opcode == 28)
+                                        anInt3892 = (stream
+                                                .readUnsignedByte() << 2);
+                                    else if (opcode != 29) {
+                                        if (opcode != 39) {
+                                            if (opcode < 30 || opcode >= 35) {
+                                                if (opcode == 40) {
+                                                    int i_53_ = (stream
+                                                            .readUnsignedByte());
+                                                    originalColors = new short[i_53_];
+                                                    modifiedColors = new short[i_53_];
+                                                    for (int i_54_ = 0; i_53_ > i_54_; i_54_++) {
+                                                        originalColors[i_54_] = (short) (stream
+                                                                .readUnsignedShort());
+                                                        modifiedColors[i_54_] = (short) (stream
+                                                                .readUnsignedShort());
+                                                    }
+                                                } else if (opcode != 41) {
+                                                    if (opcode != 42) {
+                                                        if (opcode != 62) {
+                                                            if (opcode != 64) {
+                                                                if (opcode == 65)
+                                                                    anInt3902 = stream
+                                                                            .readUnsignedShort();
+                                                                else if (opcode != 66) {
+                                                                    if (opcode != 67) {
+                                                                        if (opcode == 69)
+                                                                            anInt3925 = stream
+                                                                                    .readUnsignedByte();
+                                                                        else if (opcode != 70) {
+                                                                            if (opcode == 71)
+                                                                                anInt3889 = stream
+                                                                                        .readShort() << 2;
+                                                                            else if (opcode != 72) {
+                                                                                if (opcode == 73)
+                                                                                    secondBool = true;
+                                                                                else if (opcode == 74)
+                                                                                    notCliped = true;
+                                                                                else if (opcode != 75) {
+                                                                                    if (opcode != 77
+                                                                                            && opcode != 92) {
+                                                                                        if (opcode == 78) {
+                                                                                            anInt3860 = stream
+                                                                                                    .readUnsignedShort();
+                                                                                            anInt3904 = stream
+                                                                                                    .readUnsignedByte();
+                                                                                        } else if (opcode != 79) {
+                                                                                            if (opcode == 81) {
+                                                                                                aByte3912 = (byte) 2;
+                                                                                                anInt3882 = 256 * stream
+                                                                                                        .readUnsignedByte();
+                                                                                            } else if (opcode != 82) {
+                                                                                                if (opcode == 88)
+                                                                                                    aBoolean3853 = false;
+                                                                                                else if (opcode != 89) {
+                                                                                                    if (opcode == 90)
+                                                                                                        aBoolean3870 = true;
+                                                                                                    else if (opcode != 91) {
+                                                                                                        if (opcode != 93) {
+                                                                                                            if (opcode == 94)
+                                                                                                                aByte3912 = (byte) 4;
+                                                                                                            else if (opcode != 95) {
+                                                                                                                if (opcode != 96) {
+                                                                                                                    if (opcode == 97)
+                                                                                                                        aBoolean3866 = true;
+                                                                                                                    else if (opcode == 98)
+                                                                                                                        aBoolean3923 = true;
+                                                                                                                    else if (opcode == 99) {
+                                                                                                                        anInt3857 = stream
+                                                                                                                                .readUnsignedByte();
+                                                                                                                        anInt3835 = stream
+                                                                                                                                .readUnsignedShort();
+                                                                                                                    } else if (opcode == 100) {
+                                                                                                                        anInt3844 = stream
+                                                                                                                                .readUnsignedByte();
+                                                                                                                        anInt3913 = stream
+                                                                                                                                .readUnsignedShort();
+                                                                                                                    } else if (opcode != 101) {
+                                                                                                                        if (opcode == 102)
+                                                                                                                            anInt3838 = stream
+                                                                                                                                    .readUnsignedShort();
+                                                                                                                        else if (opcode == 103)
+                                                                                                                            thirdInt = 0;
+                                                                                                                        else if (opcode != 104) {
+                                                                                                                            if (opcode == 105)
+                                                                                                                                aBoolean3906 = true;
+                                                                                                                            else if (opcode == 106) {
+                                                                                                                                int i_55_ = stream
+                                                                                                                                        .readUnsignedByte();
+                                                                                                                                anIntArray3869 = new int[i_55_];
+                                                                                                                                anIntArray3833 = new int[i_55_];
+                                                                                                                                for (int i_56_ = 0; i_56_ < i_55_; i_56_++) {
+                                                                                                                                    anIntArray3833[i_56_] = stream
+                                                                                                                                            .readUnsignedShort();
+                                                                                                                                    int i_57_ = stream
+                                                                                                                                            .readUnsignedByte();
+                                                                                                                                    anIntArray3869[i_56_] = i_57_;
+                                                                                                                                    anInt3881 += i_57_;
                                                                                                                                 }
+                                                                                                                            } else if (opcode == 107)
+                                                                                                                                anInt3851 = stream
+                                                                                                                                        .readUnsignedShort();
+                                                                                                                            else if (opcode >= 150 && opcode < 155) {
+                                                                                                                                options[opcode + -150] = stream.readString();
+																																	/*if (!loader.showOptions)
+																																		options[opcode	+ -150] = null;*/
+                                                                                                                            } else if (opcode != 160) {
+                                                                                                                                if (opcode == 162) {
+                                                                                                                                    aByte3912 = (byte) 3;
+                                                                                                                                    anInt3882 = stream
+                                                                                                                                            .readInt();
+                                                                                                                                } else if (opcode == 163) {
+                                                                                                                                    aByte3847 = (byte) stream
+                                                                                                                                            .readByte();
+                                                                                                                                    aByte3849 = (byte) stream
+                                                                                                                                            .readByte();
+                                                                                                                                    aByte3837 = (byte) stream
+                                                                                                                                            .readByte();
+                                                                                                                                    aByte3914 = (byte) stream
+                                                                                                                                            .readByte();
+                                                                                                                                } else if (opcode != 164) {
+                                                                                                                                    if (opcode != 165) {
+                                                                                                                                        if (opcode != 166) {
+                                                                                                                                            if (opcode == 167)
+                                                                                                                                                anInt3921 = stream
+                                                                                                                                                        .readUnsignedShort();
+                                                                                                                                            else if (opcode != 168) {
+                                                                                                                                                if (opcode == 169) {
+                                                                                                                                                    aBoolean3845 = true;
+                                                                                                                                                    //added opcode
+                                                                                                                                                } else if (opcode == 170) {
+                                                                                                                                                    int anInt3383 = stream.readUnsignedSmart();
+                                                                                                                                                    //added opcode
+                                                                                                                                                } else if (opcode == 171) {
+                                                                                                                                                    int anInt3362 = stream.readUnsignedSmart();
+                                                                                                                                                    //added opcode
+                                                                                                                                                } else if (opcode == 173) {
+                                                                                                                                                    int anInt3302 = stream.readUnsignedShort();
+                                                                                                                                                    int anInt3336 = stream.readUnsignedShort();
+                                                                                                                                                    //added opcode
+                                                                                                                                                } else if (opcode == 177) {
+                                                                                                                                                    boolean ub = true;
+                                                                                                                                                    //added opcode
+                                                                                                                                                } else if (opcode == 178) {
+                                                                                                                                                    int db = stream.readUnsignedByte();
+                                                                                                                                                } else if (opcode == 249) {
+                                                                                                                                                    int i_58_ = stream.readUnsignedByte();
+                                                                                                                                                    if (clientScriptData == null)
+                                                                                                                                                        clientScriptData = new HashMap<Integer, Object>(i_58_);
+                                                                                                                                                    for (int i_60_ = 0; i_60_ < i_58_; i_60_++) {
+                                                                                                                                                        boolean bool = stream.readUnsignedByte() == 1;
+                                                                                                                                                        int key = stream.read24BitInt();
+                                                                                                                                                        Object value;
+                                                                                                                                                        if (bool)
+                                                                                                                                                            value = stream.readString();
+                                                                                                                                                        else
+                                                                                                                                                            value = stream.readInt();
+                                                                                                                                                        clientScriptData.put(key, value);
+                                                                                                                                                    }
+                                                                                                                                                }
+                                                                                                                                            } else
+                                                                                                                                                aBoolean3894 = true;
+                                                                                                                                        } else
+                                                                                                                                            anInt3877 = stream
+                                                                                                                                                    .readShort();
+                                                                                                                                    } else
+                                                                                                                                        anInt3875 = stream
+                                                                                                                                                .readShort();
+                                                                                                                                } else
+                                                                                                                                    anInt3834 = stream
+                                                                                                                                            .readShort();
                                                                                                                             } else {
-                                                                                                                                this.anInt3850 = stream.readUnsignedByte();
+                                                                                                                                int i_62_ = stream
+                                                                                                                                        .readUnsignedByte();
+                                                                                                                                anIntArray3908 = new int[i_62_];
+                                                                                                                                for (int i_63_ = 0; i_62_ > i_63_; i_63_++)
+                                                                                                                                    anIntArray3908[i_63_] = stream
+                                                                                                                                            .readUnsignedShort();
                                                                                                                             }
-                                                                                                                        } else {
-                                                                                                                            this.aBoolean3924 = true;
-                                                                                                                        }
-                                                                                                                    } else {
-                                                                                                                        this.aByte3912 = 5;
-                                                                                                                        this.anInt3882 = stream.readShort();
-                                                                                                                    }
-                                                                                                                } else {
-                                                                                                                    this.aByte3912 = 3;
-                                                                                                                    this.anInt3882 = stream.readUnsignedShort();
-                                                                                                                }
+                                                                                                                        } else
+                                                                                                                            anInt3865 = stream
+                                                                                                                                    .readUnsignedByte();
+                                                                                                                    } else
+                                                                                                                        anInt3850 = stream
+                                                                                                                                .readUnsignedByte();
+                                                                                                                } else
+                                                                                                                    aBoolean3924 = true;
                                                                                                             } else {
-                                                                                                                this.aBoolean3873 = true;
+                                                                                                                aByte3912 = (byte) 5;
+                                                                                                                anInt3882 = stream
+                                                                                                                        .readShort();
                                                                                                             }
                                                                                                         } else {
-                                                                                                            this.aBoolean3895 = false;
+                                                                                                            aByte3912 = (byte) 3;
+                                                                                                            anInt3882 = stream
+                                                                                                                    .readUnsignedShort();
                                                                                                         }
-                                                                                                    } else {
-                                                                                                        this.aBoolean3891 = true;
-                                                                                                    }
-                                                                                                } else {
-                                                                                                    this.anInt3900 = stream.readUnsignedShort();
-                                                                                                    this.anInt3905 = stream.readUnsignedShort();
-                                                                                                    this.anInt3904 = stream.readUnsignedByte();
-                                                                                                    var8 = stream.readUnsignedByte();
-                                                                                                    this.anIntArray3859 = new int[var8];
-
-                                                                                                    for (i_73_ = 0; i_73_ < var8; ++i_73_) {
-                                                                                                        this.anIntArray3859[i_73_] = stream.readUnsignedShort();
-                                                                                                    }
-                                                                                                }
-                                                                                            } else {
-                                                                                                this.configFileId = stream.readUnsignedShort();
-                                                                                                if (this.configFileId == '\uffff') {
-                                                                                                    this.configFileId = -1;
-                                                                                                }
-
-                                                                                                this.configId = stream.readUnsignedShort();
-                                                                                                if (this.configId == '\uffff') {
-                                                                                                    this.configId = -1;
-                                                                                                }
-
-                                                                                                var8 = -1;
-                                                                                                if (opcode == 92) {
-                                                                                                    var8 = stream.readBigSmart();
-                                                                                                }
-
-                                                                                                i_73_ = stream.readUnsignedByte();
-                                                                                                this.toObjectIds = new int[i_73_ - -2];
-
-                                                                                                for (i_74_ = 0; i_73_ >= i_74_; ++i_74_) {
-                                                                                                    this.toObjectIds[i_74_] = stream.readBigSmart();
-                                                                                                }
-
-                                                                                                this.toObjectIds[i_73_ + 1] = var8;
-                                                                                            }
+                                                                                                    } else
+                                                                                                        aBoolean3873 = true;
+                                                                                                } else
+                                                                                                    aBoolean3895 = false;
+                                                                                            } else
+                                                                                                aBoolean3891 = true;
                                                                                         } else {
-                                                                                            this.anInt3855 = stream.readUnsignedByte();
+                                                                                            anInt3900 = stream
+                                                                                                    .readUnsignedShort();
+                                                                                            anInt3905 = stream
+                                                                                                    .readUnsignedShort();
+                                                                                            anInt3904 = stream
+                                                                                                    .readUnsignedByte();
+                                                                                            int i_64_ = stream
+                                                                                                    .readUnsignedByte();
+                                                                                            anIntArray3859 = new int[i_64_];
+                                                                                            for (int i_65_ = 0; i_65_ < i_64_; i_65_++)
+                                                                                                anIntArray3859[i_65_] = stream
+                                                                                                        .readUnsignedShort();
                                                                                         }
                                                                                     } else {
-                                                                                        this.anInt3915 = stream.readShort() << 2;
+                                                                                        configFileId = stream
+                                                                                                .readUnsignedShort();
+                                                                                        if (configFileId == 65535)
+                                                                                            configFileId = -1;
+                                                                                        configId = stream
+                                                                                                .readUnsignedShort();
+                                                                                        if (configId == 65535)
+                                                                                            configId = -1;
+                                                                                        int i_66_ = -1;
+                                                                                        if (opcode == 92) {
+                                                                                            i_66_ = stream
+                                                                                                    .readUnsignedShort();
+                                                                                            if (i_66_ == 65535)
+                                                                                                i_66_ = -1;
+                                                                                        }
+                                                                                        int i_67_ = stream
+                                                                                                .readUnsignedByte();
+                                                                                        childrenIds = new int[i_67_
+                                                                                                - -2];
+                                                                                        for (int i_68_ = 0; i_67_ >= i_68_; i_68_++) {
+                                                                                            childrenIds[i_68_] = stream
+                                                                                                    .readUnsignedShort();
+                                                                                            if (childrenIds[i_68_] == 65535)
+                                                                                                childrenIds[i_68_] = -1;
+                                                                                        }
+                                                                                        childrenIds[i_67_ + 1] = i_66_;
                                                                                     }
-                                                                                } else {
-                                                                                    this.anInt3883 = stream.readShort() << 2;
-                                                                                }
-                                                                            } else {
-                                                                                this.anInt3917 = stream.readUnsignedShort();
-                                                                            }
-                                                                        } else {
-                                                                            this.anInt3841 = stream.readUnsignedShort();
-                                                                        }
-                                                                    } else {
-                                                                        this.aBoolean3872 = false;
-                                                                    }
-                                                                } else {
-                                                                    this.aBoolean3839 = true;
-                                                                }
-                                                            } else {
-                                                                var8 = stream.readUnsignedByte();
-                                                                this.aByteArray3858 = new byte[var8];
-
-                                                                for (i_73_ = 0; i_73_ < var8; ++i_73_) {
-                                                                    this.aByteArray3858[i_73_] = (byte) stream.readByte();
-                                                                }
-                                                            }
-                                                        } else {
-                                                            var8 = stream.readUnsignedByte();
-                                                            this.aShortArray3920 = new short[var8];
-                                                            this.aShortArray3919 = new short[var8];
-
-                                                            for (i_73_ = 0; var8 > i_73_; ++i_73_) {
-                                                                this.aShortArray3920[i_73_] = (short) stream.readUnsignedShort();
-                                                                this.aShortArray3919[i_73_] = (short) stream.readUnsignedShort();
-                                                            }
-                                                        }
+                                                                                } else
+                                                                                    anInt3855 = stream
+                                                                                            .readUnsignedByte();
+                                                                            } else
+                                                                                anInt3915 = stream
+                                                                                        .readShort() << 2;
+                                                                        } else
+                                                                            anInt3883 = stream
+                                                                                    .readShort() << 2;
+                                                                    } else
+                                                                        anInt3917 = stream
+                                                                                .readUnsignedShort();
+                                                                } else
+                                                                    anInt3841 = stream
+                                                                            .readUnsignedShort();
+                                                            } else
+                                                                aBoolean3872 = false;
+                                                        } else
+                                                            aBoolean3839 = true;
+                                                    } else {
+                                                        int i_69_ = (stream
+                                                                .readUnsignedByte());
+                                                        aByteArray3858 = (new byte[i_69_]);
+                                                        for (int i_70_ = 0; i_70_ < i_69_; i_70_++)
+                                                            aByteArray3858[i_70_] = (byte) (stream
+                                                                    .readByte());
+                                                    }
+                                                } else {
+                                                    int i_71_ = (stream
+                                                            .readUnsignedByte());
+                                                    originalTextureColors = new short[i_71_];
+                                                    modifiedTextureColors = new short[i_71_];
+                                                    for (int i_72_ = 0; i_71_ > i_72_; i_72_++) {
+                                                        originalTextureColors[i_72_] = (short) (stream
+                                                                .readUnsignedShort());
+                                                        modifiedTextureColors[i_72_] = (short) (stream
+                                                                .readUnsignedShort());
                                                     }
                                                 }
-                                            } else {
-                                                this.anInt3840 = stream.readByte() * 5;
-                                            }
-                                        } else {
-                                            this.anInt3878 = stream.readByte();
-                                        }
-                                    } else {
-                                        this.objectAnimation = stream.readBigSmart();
-                                    }
+                                            } else
+                                                options[-30
+                                                        + opcode] = (stream
+                                                        .readString());
+                                        } else
+                                            anInt3840 = (stream.readByte() * 5);
+                                    } else
+                                        anInt3878 = stream.readByte();
                                 } else {
-                                    this.thirdInt = 1;
+                                    anInt3876 = stream.readUnsignedShort();
+                                    if (anInt3876 == 65535)
+                                        anInt3876 = -1;
                                 }
-                            } else {
-                                this.aBoolean3867 = true;
-                            }
-                        } else {
-                            this.projectileCliped = false;
-                        }
-                    } else {
-                        this.sizeY = stream.readUnsignedByte();
-                    }
-                } else {
-                    this.sizeX = stream.readUnsignedByte();
-                }
-            } else {
-                this.name = stream.readString();
-            }
+                            } else
+                                thirdInt = 1;
+                        } else
+                            aBoolean3867 = true;
+                    } else
+                        projectileCliped = false;
+                } else
+                    sizeY = stream.readUnsignedByte();
+            } else
+                sizeX = stream.readUnsignedByte();
         } else {
-            aBoolean1162 = false;
-            if (opcode == 5 && aBoolean1162) {
-                this.skipReadModelIds(stream);
-            }
-
-            i_73_ = stream.readUnsignedByte();
-            this.modelIds = new int[i_73_][];
-            this.possibleTypes = new byte[i_73_];
-
-            for (i_74_ = 0; i_74_ < i_73_; ++i_74_) {
-                this.possibleTypes[i_74_] = (byte) stream.readByte();
-                i_75_ = stream.readUnsignedByte();
-                this.modelIds[i_74_] = new int[i_75_];
-
-                for (int i_76_ = 0; i_75_ > i_76_; ++i_76_) {
-                    this.modelIds[i_74_][i_76_] = stream.readIntLE(); //fix
-                }
-            }
-
-            if (opcode == 5 && !aBoolean1162) {
-                this.skipReadModelIds(stream);
-            }
+            name = stream.readString();
         }
+    }
 
+    private void setDefaultsVariableValues() {
+        anInt3835 = -1;
+        anInt3860 = -1;
+        configFileId = -1;
+        aBoolean3866 = false;
+        anInt3851 = -1;
+        anInt3865 = 255;
+        aBoolean3845 = false;
+        aBoolean3867 = false;
+        anInt3850 = 0;
+        anInt3844 = -1;
+        anInt3881 = 0;
+        anInt3857 = -1;
+        aBoolean3872 = true;
+        anInt3882 = -1;
+        anInt3834 = 0;
+        anInt3875 = 0;
+        aBoolean3839 = false;
+        anIntArray3869 = null;
+        sizeY = 1;
+        thirdInt = -1;
+        projectileCliped = true;
+        anInt3883 = 0;
+        aBoolean3895 = true;
+        anInt3840 = 0;
+        aBoolean3870 = false;
+        anInt3889 = 0;
+        aBoolean3853 = true;
+        secondBool = false;
+        clipType = 2;
+        anInt3855 = -1;
+        anInt3878 = 0;
+        anInt3904 = 0;
+        sizeX = 1;
+        anInt3876 = -1;
+        notCliped = false;
+        aBoolean3891 = false;
+        anInt3905 = 0;
+        name = "null";
+        anInt3913 = -1;
+        aBoolean3906 = false;
+        aBoolean3873 = false;
+        aByte3914 = (byte) 0;
+        anInt3915 = 0;
+        anInt3900 = 0;
+        secondInt = -1;
+        aBoolean3894 = false;
+        aByte3912 = (byte) 0;
+        anInt3921 = 0;
+        anInt3902 = 128;
+        configId = -1;
+        anInt3877 = 0;
+        anInt3925 = 0;
+        anInt3892 = 64;
+        aBoolean3923 = false;
+        aBoolean3924 = false;
+        anInt3841 = 128;
+        anInt3917 = 128;
     }
 
     private void skipReadModelIds(InputStream stream) {
@@ -678,7 +772,6 @@ public class ObjectDefinitions implements Cloneable {
     }
 
     public ObjectDefinitions(Store cache, int i) {
-        this.name = "null";
         this.anInt3835 = -1;
         this.anInt3860 = -1;
         this.configFileId = -1;
@@ -717,6 +810,7 @@ public class ObjectDefinitions implements Cloneable {
         this.objectAnimation = -1;
         this.aBoolean3891 = false;
         this.anInt3905 = 0;
+        this.name = "null";
         this.anInt3913 = -1;
         this.aBoolean3906 = false;
         this.aBoolean3873 = false;
@@ -764,7 +858,7 @@ public class ObjectDefinitions implements Cloneable {
     }
 
     private void loadObjectDefinition(Store store) {
-        byte[] data = store.getIndexes()[16].getFile(this.id >>> -1135990488, this.id & 0xff);
+        byte[] data = store.getIndexes()[16].getFile(id >>> 8, id & 0xFF);
         if (data == null) {
             System.out.println("FAILED LOADING OBJECT " + this.id);
         } else {
@@ -829,15 +923,6 @@ public class ObjectDefinitions implements Cloneable {
         objectDefinitions.clear();
     }
 
-    public Object clone() {
-        try {
-            return super.clone();
-        } catch (CloneNotSupportedException var2) {
-            var2.printStackTrace();
-            return null;
-        }
-    }
-
     public void printFields() {
         Field[] arr$ = this.getClass().getDeclaredFields();
         int len$ = arr$.length;
@@ -846,7 +931,7 @@ public class ObjectDefinitions implements Cloneable {
             Field field = arr$[i$];
             if ((field.getModifiers() & 8) == 0) {
                 try {
-                    System.out.println(this.name + ": " + this.getValue(field));
+                    System.out.println(field.getName() + ": " + this.getValue(field));
                 } catch (Throwable var6) {
                     var6.printStackTrace();
                 }
@@ -856,26 +941,33 @@ public class ObjectDefinitions implements Cloneable {
         System.out.println("-- end of " + this.getClass().getSimpleName() + " fields --");
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return this.name;
+    }
+
     public byte[] encode() {
         OutputStream stream = new OutputStream();
+        stream.writeByte(1);
+        int i_73_ = this.modelIds.length;
+        this.modelIds = new int[i_73_][];
+        this.aByteArray3899 = new byte[i_73_];
 
-        if (this.id == -1) {
-            return new byte[0];
-        }
+        int data;
+        for (data = 0; data < i_73_; ++data) {
+            stream.write128Byte(this.aByteArray3899[data]);
+            int var6 = this.modelIds[data].length;
+            this.modelIds[data] = new int[var6];
 
-        if (this.modelIds != null) {
-            stream.writeByte(1);
-            stream.writeByte(this.modelIds.length);
-            for (int i = 0; i < this.modelIds.length; i++) {
-                int modelCount = this.modelIds[i].length;
-                stream.writeByte(modelCount);
-                for (int j = 0; j < modelCount; j++) {
-                    stream.writeShort(this.modelIds[i][j]);
-                }
+            for (int i_76_ = 0; var6 > i_76_; ++i_76_) {
+                stream.writeBigSmart(this.modelIds[data][i_76_]);
             }
         }
 
-        if (this.name != null && !this.name.equals("null")) {
+        if (!this.name.equals("null")) {
             stream.writeByte(2);
             stream.writeString(this.name);
         }
@@ -890,128 +982,78 @@ public class ObjectDefinitions implements Cloneable {
             stream.writeByte(this.sizeY);
         }
 
-        if (this.clipType == 0 && !this.projectileCliped) {
-            stream.writeByte(17);
-        }
-        if (this.projectileCliped) {
-            stream.writeByte(18);
-        }
-        if (this.clipType == 1 || this.clipType == 2) {
-            stream.writeByte(27);
-        }
-
         if (this.objectAnimation != -1) {
             stream.writeByte(24);
             stream.writeBigSmart(this.objectAnimation);
         }
 
-        if (this.options != null) {
-            for (int i = 0; i < this.options.length; i++) {
-                String option = this.options[i];
-                if (option != null && !option.equalsIgnoreCase("Hidden")) {
-                    stream.writeByte(30 + i);
-                    stream.writeString(option);
-                }
+        for (data = 0; data < this.options.length; ++data) {
+            if (this.options[data] != null && this.options[data] != "Hidden") {
+                stream.writeByte(30 + data);
+                stream.writeString(this.options[data]);
             }
         }
 
         if (this.originalColors != null && this.modifiedColors != null) {
             stream.writeByte(40);
             stream.writeByte(this.originalColors.length);
-            for (int i = 0; i < this.originalColors.length; i++) {
-                stream.writeShort(this.originalColors[i]);
-                stream.writeShort(this.modifiedColors[i]);
+
+            for (data = 0; data < this.originalColors.length; ++data) {
+                stream.writeShort(this.originalColors[data]);
+                stream.writeShort(this.modifiedColors[data]);
             }
         }
-        // if (this.contouredGround == 1) {
-        //     stream.writeByte(21);
-        // }
-        // if (this.delayShading) {
-        //     stream.writeByte(22);
-        // }
-        // if (this.culling == 1) {
-        //     stream.writeByte(23);
-        // }
 
+        if (this.clipType == 0 && this.projectileCliped) {
+            stream.writeByte(17);
+        }
+
+        if (this.projectileCliped) {
+            stream.writeByte(18);
+        }
+
+        if (this.clipType == 1 || this.clipType == 2) {
+            stream.writeByte(27);
+        }
+        Iterator i$;
+        if (this.clientScriptData != null) {
+            stream.writeByte(249);
+            stream.writeByte(this.clientScriptData.size());
+            for (i$ = this.clientScriptData.keySet().iterator(); i$.hasNext(); ) {
+                int key = ((Integer) i$.next()).intValue();
+                Object value = this.clientScriptData.get(Integer.valueOf(key));
+                stream.writeByte((value instanceof String) ? 1 : 0);
+                stream.write24BitInt(key);
+                if ((value instanceof String))
+                    stream.writeString((String) value);
+                else {
+                    stream.writeInt(((Integer) value).intValue());
+                }
+            }
+        }
         stream.writeByte(0);
-
-        byte[] encodedData = new byte[stream.getOffset()];
+        byte[] var61 = new byte[stream.getOffset()];
         stream.setOffset(0);
-        stream.getBytes(encodedData, 0, encodedData.length); // Get the encoded bytes
-
-        return encodedData;
+        stream.getBytes(var61, 0, var61.length);
+        return var61;
     }
 
-    public void setSizeX(int sizeX) {
-        this.sizeX = sizeX;
+    public Object clone() {
+        try {
+            return super.clone();
+        } catch (CloneNotSupportedException var2) {
+            var2.printStackTrace();
+            return null;
+        }
     }
 
-
-    public void setSizeY(int sizeY) {
-        this.sizeY = sizeY;
-    }
-
-
-    public int getObjectAnimation() {
-        return objectAnimation;
-    }
-
-    public void setObjectAnimation(int objectAnimation) {
-        this.objectAnimation = objectAnimation;
-    }
-
-
-    public int[][] getModelIds() {
-        return modelIds;
-    }
-
-    public void setModelIds(int[][] modelIds) {
-        this.modelIds = modelIds;
-    }
-
-    public short[] getOriginalColors() {
-        return originalColors;
-    }
-
-    public void setOriginalColors(short[] originalColors) {
-        this.originalColors = originalColors;
-    }
-
-    public short[] getModifiedColors() {
-        return modifiedColors;
-    }
-
-    public void setModifiedColors(short[] modifiedColors) {
-        this.modifiedColors = modifiedColors;
-    }
-
-
-    public String[] getOpts() {
-        return options;
-    }
-
-    public void setOpts(String[] opts) {
-        this.options = opts;
-    }
-
-
-    public void setProjectileCliped(boolean projectileCliped) {
-        this.projectileCliped = projectileCliped;
-    }
-
+    /**
+     * Write.
+     *
+     * @param store the store
+     */
     public void write(Store store) {
         store.getIndexes()[16].putFile(this.getArchiveId(), this.getFileId(), this.encode());
-    }
-
-    public String toString() {
-        return this.id + " - " + this.getName();
-    }
-    public String getName() {
-        return this.name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
 }

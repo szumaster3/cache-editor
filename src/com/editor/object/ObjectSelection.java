@@ -3,180 +3,235 @@ package com.editor.object;
 import com.alex.loaders.objects.ObjectDefinitions;
 import com.alex.store.Store;
 import com.alex.Utils;
-import console.Main;
 import com.editor.item.ItemSelection;
+import console.Main;
 
 import javax.swing.*;
-import javax.swing.GroupLayout.Alignment;
-import javax.swing.LayoutStyle.ComponentPlacement;
 import java.awt.*;
 import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.io.IOException;
 
+/**
+ * The type Object selection.
+ */
 public class ObjectSelection extends JFrame {
-    private static final long serialVersionUID = 4997610945859480240L;
+    private static final long serialVersionUID = 3916958457638397356L;
     public static Store STORE;
     private JButton addButton;
     private JButton duplicateButton;
     private JButton editButton;
-    private DefaultListModel objectListModel;
-    private JList<ObjectDefinitions> objectList;
+    private DefaultListModel<ObjectDefinitions> objectsListModel;
+    private JList<ObjectDefinitions> objectsList;
     private JMenu jMenu1;
     private JMenuBar jMenuBar1;
     private JMenuItem exitButton;
     private JButton deleteButton;
 
+    /**
+     * Instantiates a new Object selection.
+     *
+     * @param cache the cache
+     * @throws IOException the io exception
+     */
     public ObjectSelection(String cache) throws IOException {
         STORE = new Store(cache);
-        this.setTitle("Object Selection");
-        this.setResizable(false);
-        this.setDefaultCloseOperation(1);
-        this.setLocationRelativeTo(null);
-        this.initComponents();
+        setTitle("Object Selection");
+        setResizable(false);
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        setLocationRelativeTo(null);
+        initComponents();
     }
 
+    /**
+     * Instantiates a new Object selection.
+     */
     public ObjectSelection() {
-        this.initComponents();
+        initComponents();
     }
 
+    /**
+     * The entry point of application.
+     *
+     * @param args the input arguments
+     * @throws IOException the io exception
+     */
     public static void main(String[] args) throws IOException {
         STORE = new Store("cache/", false);
-        EventQueue.invokeLater(() -> (new ObjectSelection()).setVisible(true));
+        EventQueue.invokeLater(() -> new ObjectSelection().setVisible(true));
     }
 
     private void initComponents() {
-        this.editButton = new JButton();
-        this.addButton = new JButton();
-        this.duplicateButton = new JButton();
-        this.deleteButton = new JButton();
-        this.jMenuBar1 = new JMenuBar();
-        this.jMenu1 = new JMenu();
-        this.exitButton = new JMenuItem();
-        this.setDefaultCloseOperation(1);
-        this.objectListModel = new DefaultListModel<>();
-        this.objectList = new JList<>(this.objectListModel);
-        this.objectList.setSelectionMode(1); // single selection
-        this.objectList.setLayoutOrientation(0);
-        this.objectList.setVisibleRowCount(-1);
-        JScrollPane jScrollPane1 = new JScrollPane(this.objectList);
+        editButton = new JButton("Edit");
+        addButton = new JButton("Add New");
+        duplicateButton = new JButton("Duplicate");
+        deleteButton = new JButton("Delete");
+        jMenuBar1 = new JMenuBar();
+        jMenu1 = new JMenu("File");
+        exitButton = new JMenuItem("Close");
 
-        this.editButton.setText("Edit");
-        this.editButton.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                ObjectDefinitions defs = (ObjectDefinitions) ObjectSelection.this.objectList.getSelectedValue();
-                if (defs != null) {
-                    new ObjectEditor(ObjectSelection.this, defs);
-                }
+        this.objectsListModel = new DefaultListModel<>();
+        this.objectsList = new JList<>(this.objectsListModel);
+        objectsList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+        objectsList.setCellRenderer(new ObjectListCellRenderer());  // Ustawienie renderer'a
+        JScrollPane jScrollPane1 = new JScrollPane(objectsList);
 
-            }
-        });
+        editButton.addActionListener(e -> editObject());
+        addButton.addActionListener(e -> addNewObject());
+        duplicateButton.addActionListener(e -> duplicateObject());
+        deleteButton.addActionListener(e -> deleteObject());
 
-        this.addButton.setText("Add New");
-        this.addButton.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                ObjectDefinitions npc = new ObjectDefinitions(ItemSelection.STORE, ObjectSelection.this.getNewSceneryID(), false);
-                if (npc != null && npc.id != -1) {
-                    new ObjectEditor(ObjectSelection.this, npc).setVisible(true);
-                }
-            }
-        });
+        exitButton.addActionListener(this::exitButtonActionPerformed);
+        jMenu1.add(exitButton);
+        jMenuBar1.add(jMenu1);
+        setJMenuBar(jMenuBar1);
 
-        this.duplicateButton.setText("Duplicate");
-        this.duplicateButton.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                ObjectDefinitions npc = objectList.getSelectedValue();
-                if (npc != null) {
-                    ObjectDefinitions clonedNpc = (ObjectDefinitions) npc.clone();
-                    if (clonedNpc != null) {
-                        clonedNpc.id = ObjectSelection.this.getNewSceneryID();
-                        if (clonedNpc.id != -1) {
-                            new ObjectEditor(ObjectSelection.this, clonedNpc).setVisible(true);
-                        }
-                    }
-                }
-            }
-        });
+        GroupLayout layout = new GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+                layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                                        .addComponent(jScrollPane1, GroupLayout.PREFERRED_SIZE, 200, GroupLayout.PREFERRED_SIZE)
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addComponent(editButton)
+                                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(addButton))
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addComponent(duplicateButton)
+                                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(deleteButton)))
+                                .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        )
+        );
 
+        layout.setVerticalGroup(
+                layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jScrollPane1, GroupLayout.PREFERRED_SIZE, 279, GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                                        .addComponent(editButton)
+                                        .addComponent(addButton))
+                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                                        .addComponent(duplicateButton)
+                                        .addComponent(deleteButton))
+                                .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        )
+        );
 
-        this.deleteButton.setText("Delete");
-        this.deleteButton.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                ObjectDefinitions defs = (ObjectDefinitions) ObjectSelection.this.objectList.getSelectedValue();
-                JFrame frame = new JFrame();
-                int result = JOptionPane.showConfirmDialog(frame, "Do you really want to delete item " + defs.id);
-                if (result == 0) {
-                    if (defs == null) {
-                        return;
-                    }
-
-                    ObjectSelection.STORE.getIndexes()[16].removeFile(defs.getArchiveId(), defs.getFileId());
-                    ObjectSelection.this.removeNPCDefs(defs);
-                    Main.log("ItemSelection", "Item " + defs.id + " removed.");
-                }
-
-            }
-        });
-
-        this.jMenu1.setText("File");
-        this.exitButton.setText("Close");
-        this.exitButton.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent evt) {
-                ObjectSelection.this.exitButtonActionPerformed(evt);
-            }
-        });
-        this.jMenu1.add(this.exitButton);
-        this.jMenuBar1.add(this.jMenu1);
-        this.setJMenuBar(this.jMenuBar1);
-
-        GroupLayout layout = new GroupLayout(this.getContentPane());
-        this.getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(layout.createParallelGroup(Alignment.LEADING).addGroup(layout.createSequentialGroup().addContainerGap().addGroup(layout.createParallelGroup(Alignment.LEADING).addGroup(layout.createSequentialGroup().addGroup(layout.createParallelGroup(Alignment.LEADING, false).addComponent(jScrollPane1, -2, 200, -2).addGroup(layout.createSequentialGroup().addComponent(this.editButton).addPreferredGap(ComponentPlacement.RELATED, -1, 32767).addComponent(this.addButton))).addGap(0, 0, 32767)).addGroup(layout.createSequentialGroup().addComponent(this.duplicateButton).addPreferredGap(ComponentPlacement.RELATED, -1, 32767).addComponent(this.deleteButton))).addContainerGap(-1, 32767)));
-        layout.setVerticalGroup(layout.createParallelGroup(Alignment.LEADING).addGroup(layout.createSequentialGroup().addContainerGap().addComponent(jScrollPane1, -2, 279, -2).addPreferredGap(ComponentPlacement.RELATED).addGroup(layout.createParallelGroup(Alignment.BASELINE).addComponent(this.editButton).addComponent(this.addButton)).addPreferredGap(ComponentPlacement.RELATED).addGroup(layout.createParallelGroup(Alignment.BASELINE).addComponent(this.duplicateButton).addComponent(this.deleteButton)).addContainerGap(-1, 32767)));
-
-        this.pack();
-        this.addAllObjects();
+        pack();
+        addAllObjects();
     }
 
     private void exitButtonActionPerformed(ActionEvent evt) {
-        this.dispose();
+        dispose();
     }
 
-    public int getNewSceneryID() {
-        return Utils.getObjectDefinitionsSize(STORE);
-    }
-
+    /**
+     * Add all objects to the list
+     */
     public void addAllObjects() {
         int id;
-        int npcCount = Utils.getObjectDefinitionsSize(STORE);
-        System.out.println("NPC Count: " + npcCount);
-        for (id = 0; id < npcCount; ++id) {
-            ObjectDefinitions npc = ObjectDefinitions.getObjectDefinition(STORE, id);
-            if (npc != null) {
-                this.addObjectDef(npc);
-            } else {
-                System.out.println("Error: NPC not loaded for ID " + id);
-            }
+        int totalObjects = Utils.getObjectDefinitionsSize(STORE);
+        for (id = 0; id < totalObjects; ++id) {
+            this.addObjectDefs(ObjectDefinitions.getObjectDefinitions(STORE, id));
         }
-        Main.log("NPCSelection", "All NPCs Loaded");
+
+        Main.log("ObjectSelection", "All Objects Loaded");
     }
 
-    public void addObjectDef(final ObjectDefinitions npc) {
-        EventQueue.invokeLater(() -> objectListModel.addElement(npc));
+    /**
+     * Add object definitions to the list model
+     *
+     * @param defs the object definition
+     */
+    public void addObjectDefs(final ObjectDefinitions defs) {
+        EventQueue.invokeLater(() -> ObjectSelection.this.objectsListModel.addElement(defs));
     }
 
-    public void updateObjectDef(final ObjectDefinitions npc) {
+    /**
+     * Update object definitions in the list model
+     *
+     * @param obj the object definition
+     */
+    public void updateObjectDefs(final ObjectDefinitions obj) {
         EventQueue.invokeLater(() -> {
-            int index = objectListModel.indexOf(npc);
+            int index = objectsListModel.indexOf(obj);
             if (index == -1) {
-                objectListModel.addElement(npc);
+                objectsListModel.addElement(obj);
             } else {
-                objectListModel.setElementAt(npc, index);
+                objectsListModel.setElementAt(obj, index);
             }
         });
     }
 
-    public void removeNPCDefs(final ObjectDefinitions npc) {
-        EventQueue.invokeLater(() -> objectListModel.removeElement(npc));
+    /**
+     * Remove object definitions from the list model
+     *
+     * @param obj the object definition
+     */
+    public void removeObjectDefs(final ObjectDefinitions obj) {
+        EventQueue.invokeLater(() -> objectsListModel.removeElement(obj));
+    }
+
+    private void editObject() {
+        int selectedIndex = objectsList.getSelectedIndex();
+        if (selectedIndex != -1) {
+            ObjectDefinitions obj = objectsList.getSelectedValue();
+            if (obj != null) {
+                new ObjectEditor(this, obj);
+            }
+        }
+    }
+
+    private void addNewObject() {
+        ObjectDefinitions obj = new ObjectDefinitions(ObjectSelection.STORE, getNewObjectID(), false);
+        if (obj != null && obj.id != -1) {
+            new ObjectEditor(this, obj).setVisible(true);
+        }
+    }
+
+    private void duplicateObject() {
+        ObjectDefinitions obj = objectsList.getSelectedValue();
+        if (obj != null) {
+            ObjectDefinitions clonedObj = (ObjectDefinitions) obj.clone();
+            if (clonedObj != null) {
+                clonedObj.id = getNewObjectID();
+                if (clonedObj.id != -1) {
+                    new ObjectEditor(this, clonedObj).setVisible(true);
+                }
+            }
+        }
+    }
+
+    private void deleteObject() {
+        ObjectDefinitions obj = objectsList.getSelectedValue();
+        if (obj != null) {
+            int result = JOptionPane.showConfirmDialog(this, "Do you really want to delete object " + obj.id + "?");
+            if (result == JOptionPane.YES_OPTION) {
+                STORE.getIndexes()[16].removeFile(obj.getArchiveId(), obj.getFileId());
+                removeObjectDefs(obj);
+                Main.log("ObjectSelection", "Object " + obj.id + " removed.");
+            }
+        }
+    }
+
+    private int getNewObjectID() {
+        return Utils.getObjectDefinitionsSize(STORE);
+    }
+
+    private class ObjectListCellRenderer extends DefaultListCellRenderer {
+        @Override
+        public Component getListCellRendererComponent(JList<?> list, Object value, int index, boolean isSelected, boolean cellHasFocus) {
+            Component c = super.getListCellRendererComponent(list, value, index, isSelected, cellHasFocus);
+            if (value instanceof ObjectDefinitions) {
+                ObjectDefinitions defs = (ObjectDefinitions) value;
+                setText(defs.id + " - " + defs.getName());
+            }
+            return c;
+        }
     }
 }
