@@ -242,32 +242,29 @@ public class ObjectDefinitions implements Cloneable {
         return modifiedColors;
     }
 
-    // Example setter for Size X
     public void setSizeX(int sizeX) {
         this.sizeX = sizeX;
     }
 
-    // Example setter for Size Y
     public void setSizeY(int sizeY) {
         this.sizeY = sizeY;
     }
 
-    // Example setter for Object Animation
     public void setObjectAnimation(int objectAnimation) {
         this.objectAnimation = objectAnimation;
     }
 
-    // Example setter for Model IDs
+
     public void setModelIds(int[][] modelIds) {
         this.modelIds = modelIds;
     }
 
-    // Example setter for Options
+
     public void invOptions(String[] invOptions) {
         this.options = invOptions;
     }
 
-    // Example setter for Original & Modified Model Colors
+
     public void setModelColors(short[] originalModelColors, short[] modifiedModelColors) {
         this.originalColors = originalModelColors;
         this.modifiedColors = modifiedModelColors;
@@ -952,20 +949,22 @@ public class ObjectDefinitions implements Cloneable {
     public byte[] encode() {
         OutputStream stream = new OutputStream();
         stream.writeByte(1);
+
         int i_73_ = this.modelIds.length;
-        this.modelIds = new int[i_73_][];
-        this.aByteArray3899 = new byte[i_73_];
+        this.possibleTypes = new byte[i_73_];
 
-        int data;
-        for (data = 0; data < i_73_; ++data) {
-            stream.write128Byte(this.aByteArray3899[data]);
+        for (int data = 0; data < i_73_; ++data) {
+
+            stream.write128Byte(this.possibleTypes[data]);
+
             int var6 = this.modelIds[data].length;
-            this.modelIds[data] = new int[var6];
+            stream.writeShort(var6);
 
-            for (int i_76_ = 0; var6 > i_76_; ++i_76_) {
-                stream.writeBigSmart(this.modelIds[data][i_76_]);
+            for (int i_76_ = 0; i_76_ < var6; ++i_76_) {
+                stream.writeShort(this.modelIds[data][i_76_]);
             }
         }
+
 
         if (!this.name.equals("null")) {
             stream.writeByte(2);
@@ -987,10 +986,10 @@ public class ObjectDefinitions implements Cloneable {
             stream.writeBigSmart(this.objectAnimation);
         }
 
-        for (data = 0; data < this.options.length; ++data) {
-            if (this.options[data] != null && this.options[data] != "Hidden") {
-                stream.writeByte(30 + data);
-                stream.writeString(this.options[data]);
+        for (i_73_ = 0; i_73_ < this.options.length; ++i_73_) {
+            if (this.options[i_73_] != null && this.options[i_73_] != "Hidden") {
+                stream.writeByte(30 + i_73_);
+                stream.writeString(this.options[i_73_]);
             }
         }
 
@@ -998,9 +997,9 @@ public class ObjectDefinitions implements Cloneable {
             stream.writeByte(40);
             stream.writeByte(this.originalColors.length);
 
-            for (data = 0; data < this.originalColors.length; ++data) {
-                stream.writeShort(this.originalColors[data]);
-                stream.writeShort(this.modifiedColors[data]);
+            for (i_73_ = 0; i_73_ < this.originalColors.length; ++i_73_) {
+                stream.writeShort(this.originalColors[i_73_]);
+                stream.writeShort(this.modifiedColors[i_73_]);
             }
         }
 

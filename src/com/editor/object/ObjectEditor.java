@@ -1,7 +1,6 @@
 package com.editor.object;
 
 import com.alex.loaders.objects.ObjectDefinitions;
-import com.editor.npc.NPCSelection;
 
 import javax.swing.*;
 import java.awt.*;
@@ -15,8 +14,8 @@ public class ObjectEditor extends JFrame {
     private JTextField objectName;
     private JTextField sizeX, sizeY;
     private JTextField objectAnimation;
-    private JTextField modelIds;  // Wrong
-    private JTextField originalColorsField, modifiedColorsField; // Wrong
+    private JTextField modelIds;
+    private JTextField originalColorsField;
     private JTextField objectOptions;
     private JCheckBox projectileClipped;
     private JButton saveButton, cancelButton;
@@ -80,25 +79,17 @@ public class ObjectEditor extends JFrame {
         gbc.gridx = 1;
         panel.add(modelIds, gbc);
 
-        // Original Colors
+        // Model Colors
         gbc.gridx = 0;
         gbc.gridy = 5;
-        panel.add(new JLabel("Original Colors"), gbc);
+        panel.add(new JLabel("Model Colors"), gbc);
         originalColorsField = new JTextField(20);
         gbc.gridx = 1;
         panel.add(originalColorsField, gbc);
 
-        // Modified Colors
-        gbc.gridx = 0;
-        gbc.gridy = 6;
-        panel.add(new JLabel("Modified Colors"), gbc);
-        modifiedColorsField = new JTextField(20);
-        gbc.gridx = 1;
-        panel.add(modifiedColorsField, gbc);
-
         // Options
         gbc.gridx = 0;
-        gbc.gridy = 7;
+        gbc.gridy = 6;
         panel.add(new JLabel("Options"), gbc);
         objectOptions = new JTextField(20);
         gbc.gridx = 1;
@@ -106,7 +97,7 @@ public class ObjectEditor extends JFrame {
 
         // Projectile Clipped Checkbox
         gbc.gridx = 0;
-        gbc.gridy = 8;
+        gbc.gridy = 7;
         panel.add(new JLabel("Projectile Clipped"), gbc);
         projectileClipped = new JCheckBox();
         gbc.gridx = 1;
@@ -142,18 +133,31 @@ public class ObjectEditor extends JFrame {
         objectAnimation.setText(String.valueOf(defs.getObjectAnimation()));
 
         if (defs.getModelIds() != null) {
-            StringBuilder modelIdStr = new StringBuilder();
-            for (int[] modelArray : defs.getModelIds()) {
-                for (int id : modelArray) {
-                    modelIdStr.append(id).append(";");
+            StringBuilder modelIdsStr = new StringBuilder();
+            for (int[] modelGroup : defs.getModelIds()) {
+                for (int i = 0; i < modelGroup.length; i++) {
+                    modelIdsStr.append(modelGroup[i]);
+                    if (i < modelGroup.length - 1) {
+                        modelIdsStr.append(";");
+                    }
                 }
+                modelIdsStr.append(";");
             }
-            modelIds.setText(modelIdStr.toString().trim());
+            modelIds.setText(modelIdsStr.toString());
         }
 
         if (defs.getOriginalColors() != null && defs.getModifiedColors() != null) {
-            originalColorsField.setText(arrayToString(defs.getOriginalColors()));
-            modifiedColorsField.setText(arrayToString(defs.getModifiedColors()));
+            StringBuilder colorsStr = new StringBuilder();
+            for (int i = 0; i < defs.getOriginalColors().length; i++) {
+                colorsStr.append(defs.getOriginalColors()[i])
+                        .append("=")
+                        .append(defs.getModifiedColors()[i]);
+
+                if (i < defs.getOriginalColors().length - 1) {
+                    colorsStr.append(";");
+                }
+            }
+            originalColorsField.setText(colorsStr.toString());
         }
 
         objectOptions.setText(arrayToString(defs.getOpts()));
@@ -168,23 +172,31 @@ public class ObjectEditor extends JFrame {
             this.defs.setObjectAnimation(Integer.parseInt(objectAnimation.getText().trim()));
 
             if (!modelIds.getText().trim().isEmpty()) {
-                String[] modelIdStrs = modelIds.getText().split(";");
-                int[][] modelIdArray = new int[1][modelIdStrs.length];
-                for (int i = 0; i < modelIdStrs.length; i++) {
-                    modelIdArray[0][i] = Integer.parseInt(modelIdStrs[i]);
+                String[] modelGroups = modelIds.getText().split(";");
+                int[][] modelIdArray = new int[modelGroups.length][];
+
+                for (int i = 0; i < modelGroups.length; i++) {
+                    String[] modelIdStrs = modelGroups[i].split(";");
+                    modelIdArray[i] = new int[modelIdStrs.length];
+
+                    for (int j = 0; j < modelIdStrs.length; j++) {
+                        modelIdArray[i][j] = Integer.parseInt(modelIdStrs[j].trim());
+                    }
                 }
+
                 this.defs.setModelIds(modelIdArray);
             }
 
-            if (!originalColorsField.getText().trim().isEmpty() && !modifiedColorsField.getText().trim().isEmpty()) {
-                String[] originalStrs = originalColorsField.getText().split(";");
-                String[] modifiedStrs = modifiedColorsField.getText().split(";");
-                short[] originalColors = new short[originalStrs.length];
-                short[] modifiedColors = new short[modifiedStrs.length];
+            // Save Colors
+            if (!originalColorsField.getText().trim().isEmpty()) {
+                String[] colorPairs = originalColorsField.getText().split(";");
+                short[] originalColors = new short[colorPairs.length];
+                short[] modifiedColors = new short[colorPairs.length];
 
-                for (int i = 0; i < originalStrs.length; i++) {
-                    originalColors[i] = Short.parseShort(originalStrs[i]);
-                    modifiedColors[i] = Short.parseShort(modifiedStrs[i]);
+                for (int i = 0; i < colorPairs.length; i++) {
+                    String[] pair = colorPairs[i].split("=");
+                    originalColors[i] = Short.parseShort(pair[0].trim());
+                    modifiedColors[i] = Short.parseShort(pair[1].trim());
                 }
 
                 this.defs.setOriginalColors(originalColors);
@@ -196,7 +208,7 @@ public class ObjectEditor extends JFrame {
             }
 
             this.defs.projectileCliped = projectileClipped.isSelected();
-            this.defs.write(NPCSelection.STORE);
+            this.defs.write(ObjectSelection.STORE);
             this.os.updateObjectDefs(this.defs);
 
             JOptionPane.showMessageDialog(this, "Object saved.");
@@ -207,7 +219,7 @@ public class ObjectEditor extends JFrame {
     }
 
     private String arrayToString(Object[] array) {
-        if (array == null) return "";
+        if (array == null || array.length == 0) return "";
         StringBuilder sb = new StringBuilder();
         for (Object obj : array) {
             sb.append(obj == null ? "null" : obj.toString()).append(";");
@@ -216,10 +228,31 @@ public class ObjectEditor extends JFrame {
     }
 
     private String arrayToString(short[] array) {
-        if (array == null) return "";
+        if (array == null || array.length == 0) return "";
         StringBuilder sb = new StringBuilder();
         for (short num : array) {
             sb.append(num).append(";");
+        }
+        return sb.toString().trim();
+    }
+
+    private String arrayToString(int[] array) {
+        if (array == null || array.length == 0) return "";
+        StringBuilder sb = new StringBuilder();
+        for (int num : array) {
+            sb.append(num).append(";");
+        }
+        return sb.toString().trim();
+    }
+
+    private String arrayToString(int[][] array) {
+        if (array == null) return "";
+        StringBuilder sb = new StringBuilder();
+        for (int[] subArray : array) {
+            for (int num : subArray) {
+                sb.append(num).append(";");
+            }
+            sb.append(";");
         }
         return sb.toString().trim();
     }
