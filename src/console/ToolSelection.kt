@@ -1,8 +1,10 @@
 package console
 
 import com.editor.iface.InterfaceEditor
+import com.editor.item.ItemListExport
 import com.editor.item.ItemSelection
 import com.editor.item.ModelDumper
+import com.editor.npc.NPCListExport
 import com.editor.npc.NPCSelection
 import com.editor.`object`.ObjectSelection
 import com.editor.region.RegionEditor
@@ -60,7 +62,8 @@ class ToolSelection : JFrame() {
                 "Transfer Interface",
                 "Object Editor",
                 "Model Export",
-                //"Animation Editor"
+                "NPC List Export",
+                "Item List Export"
             )
         )
         submitButton.addActionListener { evt -> submitButtonActionPerformed(evt) }
@@ -114,9 +117,21 @@ class ToolSelection : JFrame() {
                 }
                 5 -> try {
                     ModelDumper(cache).isVisible = true
-                    Main.log("ToolSelection", "ModelDumper Started")
+                    Main.log("ToolSelection", "Model Exporter Started")
                 } catch (e: Exception) {
-                    Main.log("ToolSelection", "Failed to start ModelDumper!")
+                    Main.log("ToolSelection", "Failed to start Model exporter!")
+                }
+                6 -> try {
+                    NPCListExport(cache)
+                    Main.log("ToolSelection", "NPC list export completed.")
+                } catch (e: Exception) {
+                    Main.log("ToolSelection", "Failed to start NPC list exporter!")
+                }
+                7 -> try {
+                    ItemListExport(cache)
+                    Main.log("ToolSelection", "Item list export completed.")
+                } catch (e: Exception) {
+                    Main.log("ToolSelection", "Failed to start Item list exporter!")
                 }
                 //6 -> try {
                 //    AnimationSelection(cache).isVisible = true
