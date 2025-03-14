@@ -8,11 +8,13 @@ import java.awt.Graphics2D
 import java.awt.Toolkit
 import java.awt.datatransfer.StringSelection
 import javax.swing.*
+import javax.swing.Timer
 
 class ColorPicker : JFrame() {
     private val colorPreview: JPanel
     private var selectedColor: Color = Color.WHITE
     private val statusLabel: JLabel = JLabel()
+    private var rs2hsb: Int = rgbToRS2HSB(selectedColor.red, selectedColor.green, selectedColor.blue)
 
     init {
         title = "Color Picker"
@@ -34,7 +36,6 @@ class ColorPicker : JFrame() {
                 val g2d = g as Graphics2D
                 g2d.color = textColor
                 g2d.font = g2d.font.deriveFont(12f).deriveFont(java.awt.Font.BOLD)
-                val rs2hsb = rgbToRS2HSB(selectedColor.red, selectedColor.green, selectedColor.blue)
                 val text = "RS2: $rs2hsb"
 
                 val fontMetrics = g2d.fontMetrics
@@ -59,6 +60,7 @@ class ColorPicker : JFrame() {
 
             colorChooser.selectionModel.addChangeListener {
                 selectedColor = colorChooser.color
+                rs2hsb = rgbToRS2HSB(selectedColor.red, selectedColor.green, selectedColor.blue)
                 colorPreview.repaint()
             }
 
@@ -70,7 +72,7 @@ class ColorPicker : JFrame() {
         copyButton.isFocusPainted = false
         copyButton.preferredSize = Dimension(45, 45)
         copyButton.addActionListener {
-            copyToClipboard("${selectedColor.red},${selectedColor.green},${selectedColor.blue}")
+            copyToClipboard(rs2hsb.toString())
             displayCopiedMessage()
         }
         buttonPanel.add(copyButton)
@@ -79,9 +81,9 @@ class ColorPicker : JFrame() {
         convertButton.isFocusPainted = false
         convertButton.preferredSize = Dimension(45, 45)
         convertButton.addActionListener {
-            val rs2hsb = rgbToRS2HSB(selectedColor.red, selectedColor.green, selectedColor.blue)
             val rgb = rs2hsbToRGB(rs2hsb)
             statusLabel.text = "RGB: $rgb"
+            copyToClipboard(rgb.toString())
         }
         buttonPanel.add(convertButton)
 
@@ -115,7 +117,6 @@ class ColorPicker : JFrame() {
      * @param green The green component of the color (0-255).
      * @param blue The blue component of the color (0-255).
      * @return An integer representing the color in RS2 HSB format, combining hue, saturation, and brightness.
-     *
      */
     private fun rgbToRS2HSB(red: Int, green: Int, blue: Int): Int {
         val HSB = Color.RGBtoHSB(red, green, blue, null)
