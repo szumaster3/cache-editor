@@ -75,6 +75,16 @@ class ColorPicker : JFrame() {
         }
         buttonPanel.add(copyButton)
 
+        val convertButton = JButton("\uD83C\uDF6D")
+        convertButton.isFocusPainted = false
+        convertButton.preferredSize = Dimension(45, 45)
+        convertButton.addActionListener {
+            val rs2hsb = rgbToRS2HSB(selectedColor.red, selectedColor.green, selectedColor.blue)
+            val rgb = rs2hsbToRGB(rs2hsb)
+            statusLabel.text = "RGB: $rgb"
+        }
+        buttonPanel.add(convertButton)
+
         statusLabel.preferredSize = Dimension(175, 30)
         statusLabel.horizontalAlignment = SwingConstants.CENTER
         add(statusLabel)
@@ -113,5 +123,12 @@ class ColorPicker : JFrame() {
         val encode_saturation = (HSB[1] * 7).toInt()
         val encode_brightness = (HSB[2] * 127).toInt()
         return (encode_hue shl 10) + (encode_saturation shl 7) + encode_brightness
+    }
+
+    private fun rs2hsbToRGB(RS2HSB: Int): Int {
+        val decode_hue = RS2HSB shr 10 and 0x3F
+        val decode_saturation = RS2HSB shr 7 and 0x7
+        val decode_brightness = RS2HSB and 0x7F
+        return Color.HSBtoRGB(decode_hue / 63.0f, decode_saturation / 7.0f, decode_brightness / 127.0f)
     }
 }
