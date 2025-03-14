@@ -1,12 +1,11 @@
-package com.editor.npc
+package com.editor.cache.npc
 
 import com.alex.Utils.getNPCDefinitionsSize
 import com.alex.loaders.npcs.NPCDefinitions
 import com.alex.store.Store
-import com.editor.item.ItemSelection
+import com.editor.cache.item.ItemSelection
 import console.Main.log
 import java.awt.EventQueue
-import java.awt.event.ActionEvent
 import java.io.IOException
 import javax.swing.*
 import javax.swing.LayoutStyle.ComponentPlacement

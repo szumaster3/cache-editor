@@ -1,4 +1,4 @@
-package com.editor.anim
+package com.editor.cache.anim
 
 import com.alex.loaders.animations.AnimationDefinitions
 import com.alex.store.Store

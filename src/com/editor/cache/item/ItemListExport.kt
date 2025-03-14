@@ -1,14 +1,14 @@
-package com.editor.npc
+package com.editor.cache.item
 
-import com.alex.Utils.getNPCDefinitionsSize
-import com.alex.loaders.npcs.NPCDefinitions
+import com.alex.Utils.getItemDefinitionsSize
+import com.alex.loaders.items.ItemDefinitions
 import com.alex.store.Store
 import java.io.BufferedWriter
 import java.io.File
 import java.io.FileWriter
 import java.io.IOException
 
-class NPCListExport(cache: String) {
+class ItemListExport(cache: String) {
 
     private val store: Store = Store(cache)
 
@@ -18,7 +18,7 @@ class NPCListExport(cache: String) {
             directory.mkdirs()
         }
 
-        val file = File(directory, "npc_list.txt")
+        val file = File(directory, "item_list.txt")
 
         try {
             file.createNewFile()
@@ -26,11 +26,11 @@ class NPCListExport(cache: String) {
             BufferedWriter(FileWriter(file)).use { writer ->
                 writer.appendLine()
 
-                for (id in 0 until getNPCDefinitionsSize(store)) {
-                    val def = NPCDefinitions.getNPCDefinition(store, id)
-                    val npcInfo = "$id - ${def.name}"
-                    writer.appendLine(npcInfo)
-                    println(npcInfo)
+                for (id in 0 until getItemDefinitionsSize(store)) {
+                    val def = ItemDefinitions.getItemDefinition(store, id)
+                    val itemInfo = "$id - ${def.name}"
+                    writer.appendLine(itemInfo)
+                    println(itemInfo)
                 }
             }
         } catch (e: IOException) {

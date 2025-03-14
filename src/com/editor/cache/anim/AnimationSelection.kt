@@ -1,10 +1,8 @@
-package com.editor.anim
+package com.editor.cache.anim
 
 import com.alex.loaders.animations.AnimationDefinitions
 import com.alex.store.Store
 import java.awt.EventQueue
-import java.awt.event.ActionEvent
-import java.io.IOException
 import javax.swing.*
 import javax.swing.LayoutStyle.ComponentPlacement
 

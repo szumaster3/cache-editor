@@ -1,8 +1,8 @@
-package com.editor.item
+package com.editor.cache.item
 
 import com.alex.store.Store
 import console.Main
-import util.Utils
+import com.editor.util.Utils
 import javax.swing.*
 import javax.swing.GroupLayout.*
 import java.io.File

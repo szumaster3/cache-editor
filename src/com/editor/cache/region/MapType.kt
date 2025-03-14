@@ -1,4 +1,4 @@
-package com.editor.region
+package com.editor.cache.region
 
 /**
  * The enum Map type.

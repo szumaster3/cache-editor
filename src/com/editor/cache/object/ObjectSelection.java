@@ -1,9 +1,8 @@
-package com.editor.object;
+package com.editor.cache.object;
 
 import com.alex.loaders.objects.ObjectDefinitions;
 import com.alex.store.Store;
 import com.alex.Utils;
-import com.editor.item.ItemSelection;
 import console.Main;
 
 import javax.swing.*;

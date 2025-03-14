@@ -1,14 +1,23 @@
-package util
+package com.editor.util
 
 import com.alex.store.Store
+import java.awt.Color
+import java.awt.Toolkit
+import java.awt.datatransfer.Clipboard
+import java.awt.datatransfer.StringSelection
 import java.io.File
 import java.io.FileInputStream
 import java.io.IOException
+import kotlin.math.pow
+
 
 /**
  * The type Utils.
  */
 object Utils {
+
+    var hsl2rgb: IntArray? = null
+
     /**
      * Get bytes from file byte [ ].
      *
@@ -47,6 +56,91 @@ object Utils {
 
             return bytes
         }
+    }
+
+    fun setColors() {
+        hsl2rgb = IntArray(65536)
+        val out1 = hsl2rgb
+        val d = 0.7
+        var i = 0
+
+        for (i1 in 0..511) {
+            val f = ((i1 shr 3).toFloat() / 64.0f + 0.0078125f) * 360.0f
+            val f1 = 0.0625f + (7 and i1).toFloat() / 8.0f
+
+            for (i2 in 0..127) {
+                val f2 = i2.toFloat() / 128.0f
+                var f3 = 0.0f
+                var f4 = 0.0f
+                var f5 = 0.0f
+                val f6 = f / 60.0f
+                val i3 = f6.toInt()
+                val i4 = i3 % 6
+                val f7 = f6 - i3.toFloat()
+                val f8 = f2 * (-f1 + 1.0f)
+                val f9 = f2 * (-(f7 * f1) + 1.0f)
+                val f10 = (1.0f - f1 * (-f7 + 1.0f)) * f2
+                if (i4 == 0) {
+                    f3 = f2
+                    f5 = f8
+                    f4 = f10
+                } else if (i4 == 1) {
+                    f5 = f8
+                    f3 = f9
+                    f4 = f2
+                } else if (i4 == 2) {
+                    f3 = f8
+                    f4 = f2
+                    f5 = f10
+                } else if (i4 == 3) {
+                    f4 = f9
+                    f3 = f8
+                    f5 = f2
+                } else if (i4 == 4) {
+                    f5 = f2
+                    f3 = f10
+                    f4 = f8
+                } else {
+                    f4 = f8
+                    f5 = f9
+                    f3 = f2
+                }
+
+                out1?.set(i++, ((f3.toDouble().pow(d).toFloat() * 256.0f).toInt() shl 16 or ((f4.toDouble().pow(d)
+                    .toFloat() * 256.0f).toInt() shl 8
+                        ) or (f5.toDouble().pow(d).toFloat() * 256.0f).toInt())
+                )
+            }
+        }
+    }
+
+    fun copyToClipboard(color: String?) {
+        val selection = StringSelection(color)
+        val clip: Clipboard = Toolkit.getDefaultToolkit().getSystemClipboard()
+        clip.setContents(selection, null)
+    }
+
+    fun getContrastColor(color: Color): Color {
+        val y = ((299 * color.red + 587 * color.green + 114 * color.blue) / 1000).toDouble()
+        return if (y >= 128) Color.black else Color.white
+    }
+
+    fun RGB_to_RS2HSB(red: Int, green: Int, blue: Int): Int {
+        val HSB = Color.RGBtoHSB(red, green, blue, null)
+        val hue = HSB[0]
+        val saturation = HSB[1]
+        val brightness = HSB[2]
+        val encode_hue = (hue * 63.0f).toInt()
+        val encode_saturation = (saturation * 7.0f).toInt()
+        val encode_brightness = (brightness * 127.0f).toInt()
+        return (encode_hue shl 10) + (encode_saturation shl 7) + encode_brightness
+    }
+
+    fun RS2HSB_to_RGB(RS2HSB: Int): Int {
+        val decode_hue = RS2HSB shr 10 and 0x3F
+        val decode_saturation = RS2HSB shr 7 and 0x7
+        val decode_brightness = RS2HSB and 0x7F
+        return Color.HSBtoRGB(decode_hue / 63.0f, decode_saturation / 7.0f, decode_brightness / 127.0f)
     }
 
     /**

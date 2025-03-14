@@ -1,4 +1,4 @@
-package com.editor.object;
+package com.editor.cache.object;
 
 import com.alex.loaders.objects.ObjectDefinitions;
 

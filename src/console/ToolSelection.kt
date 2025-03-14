@@ -1,14 +1,15 @@
 package console
 
-import com.editor.iface.InterfaceEditor
-import com.editor.item.ItemListExport
-import com.editor.item.ItemSelection
-import com.editor.item.ModelDumper
-import com.editor.item.ModelPack
-import com.editor.npc.NPCListExport
-import com.editor.npc.NPCSelection
-import com.editor.`object`.ObjectSelection
-import com.editor.region.RegionEditor
+import com.editor.cache.iface.InterfaceEditor
+import com.editor.cache.item.ItemListExport
+import com.editor.cache.item.ItemSelection
+import com.editor.cache.item.ModelDumper
+import com.editor.cache.item.ModelPack
+import com.editor.cache.npc.NPCListExport
+import com.editor.cache.npc.NPCSelection
+import com.editor.cache.`object`.ObjectSelection
+import com.editor.cache.region.RegionEditor
+import com.editor.model.ColorPicker
 import java.awt.*
 import java.awt.event.ActionEvent
 import java.io.IOException
@@ -65,7 +66,8 @@ class ToolSelection : JFrame() {
                 "Model Export",
                 "NPC List Export",
                 "Item List Export",
-                "Model Pack"
+                "Model Pack",
+                "Color Picker"
             )
         )
         submitButton.addActionListener { evt -> submitButtonActionPerformed(evt) }
@@ -86,71 +88,88 @@ class ToolSelection : JFrame() {
     }
 
     private fun submitButtonActionPerformed(evt: ActionEvent) {
-        if (cache.isEmpty()) {
+        if (cache.isEmpty() && selectionBox!!.selectedIndex != 9) {
             Main.log("ToolSelection", "No Cache Set!")
-        } else {
-            when (selectionBox!!.selectedIndex) {
-                0 -> try {
-                    ItemSelection(cache).isVisible = true
-                    Main.log("ToolSelection", "ItemSelection Started")
-                } catch (e: IOException) {
-                    Main.log("ToolSelection", "Failed to start ItemSelection!")
-                }
-                1 -> try {
-                    NPCSelection(cache).isVisible = true
-                    Main.log("ToolSelection", "NPCSelection Started")
-                } catch (e: Exception) {
-                    Main.log("ToolSelection", "Failed to start NPC selection!")
-                }
-                2 -> try {
-                    RegionEditor(cache).isVisible = true
-                    Main.log("ToolSelection", "RegionEditor Started")
-                } catch (e: Exception) {
-                    Main.log("ToolSelection", "Failed to start RegionEditor!")
-                }
-                3 -> InterfaceEditor(cache).isVisible = true.also {
-                    Main.log("ToolSelection", "InterfaceEditor Started")
-                }
-                4 -> try {
-                    ObjectSelection(cache).isVisible = true
-                    Main.log("ToolSelection", "ObjectSelection Started")
-                } catch (e: Exception) {
-                    Main.log("ToolSelection", "Failed to start Object selection!")
-                }
-                5 -> try {
-                    ModelDumper(cache).isVisible = true
-                    Main.log("ToolSelection", "Model Exporter Started")
-                } catch (e: Exception) {
-                    Main.log("ToolSelection", "Failed to start Model exporter!")
-                }
-                6 -> try {
-                    NPCListExport(cache)
-                    Main.log("ToolSelection", "NPC list export completed.")
-                } catch (e: Exception) {
-                    Main.log("ToolSelection", "Failed to start NPC list exporter!")
-                }
-                7 -> try {
-                    ItemListExport(cache)
-                    Main.log("ToolSelection", "Item list export completed.")
-                } catch (e: Exception) {
-                    Main.log("ToolSelection", "Failed to start Item list exporter!")
-                }
-                8 -> try {
-                    SwingUtilities.invokeLater {
-                        ModelPack(cache).isVisible = true
-                    }
-                    Main.log("ToolSelection", "Model pack started")
-                } catch (e: Exception) {
-                    Main.log("ToolSelection", "Failed to start Model packer!")
-                }
-                //6 -> try {
-                //    AnimationSelection(cache).isVisible = true
-                //    Main.log("ToolSelection", "AnimationSelection Started")
-                //} catch (e: Exception) {
-                //    Main.log("ToolSelection", "Failed to start AnimationSelection!")
-                //}
-                else -> Main.log("ToolSelection", "No Tool Selected!")
+            return
+        }
+        when (selectionBox!!.selectedIndex) {
+            0 -> try {
+                ItemSelection(cache).isVisible = true
+                Main.log("ToolSelection", "ItemSelection Started")
+            } catch (e: IOException) {
+                Main.log("ToolSelection", "Failed to start ItemSelection!")
             }
+
+            1 -> try {
+                NPCSelection(cache).isVisible = true
+                Main.log("ToolSelection", "NPCSelection Started")
+            } catch (e: Exception) {
+                Main.log("ToolSelection", "Failed to start NPC selection!")
+            }
+
+            2 -> try {
+                RegionEditor(cache).isVisible = true
+                Main.log("ToolSelection", "RegionEditor Started")
+            } catch (e: Exception) {
+                Main.log("ToolSelection", "Failed to start RegionEditor!")
+            }
+
+            3 -> InterfaceEditor(cache).isVisible = true.also {
+                Main.log("ToolSelection", "InterfaceEditor Started")
+            }
+
+            4 -> try {
+                ObjectSelection(cache).isVisible = true
+                Main.log("ToolSelection", "ObjectSelection Started")
+            } catch (e: Exception) {
+                Main.log("ToolSelection", "Failed to start Object selection!")
+            }
+
+            5 -> try {
+                ModelDumper(cache).isVisible = true
+                Main.log("ToolSelection", "Model Exporter Started")
+            } catch (e: Exception) {
+                Main.log("ToolSelection", "Failed to start Model exporter!")
+            }
+
+            6 -> try {
+                NPCListExport(cache)
+                Main.log("ToolSelection", "NPC list export completed.")
+            } catch (e: Exception) {
+                Main.log("ToolSelection", "Failed to start NPC list exporter!")
+            }
+
+            7 -> try {
+                ItemListExport(cache)
+                Main.log("ToolSelection", "Item list export completed.")
+            } catch (e: Exception) {
+                Main.log("ToolSelection", "Failed to start Item list exporter!")
+            }
+
+            8 -> try {
+                SwingUtilities.invokeLater {
+                    ModelPack(cache).isVisible = true
+                }
+                Main.log("ToolSelection", "Model pack started")
+            } catch (e: Exception) {
+                Main.log("ToolSelection", "Failed to start Model packer!")
+            }
+
+            9 -> try {
+                SwingUtilities.invokeLater {
+                    ColorPicker().isVisible = true
+                }
+                Main.log("ToolSelection", "Color picker started.")
+            } catch (e: Exception) {
+                Main.log("ToolSelection", "Failed to start Color picker!")
+            }
+            //6 -> try {
+            //    AnimationSelection(cache).isVisible = true
+            //    Main.log("ToolSelection", "AnimationSelection Started")
+            //} catch (e: Exception) {
+            //    Main.log("ToolSelection", "Failed to start AnimationSelection!")
+            //}
+            else -> Main.log("ToolSelection", "No Tool Selected!")
         }
     }
 

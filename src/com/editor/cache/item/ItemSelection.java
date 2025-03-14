@@ -1,4 +1,4 @@
-package com.editor.item;
+package com.editor.cache.item;
 
 import com.alex.loaders.items.ItemDefinitions;
 import com.alex.store.Store;

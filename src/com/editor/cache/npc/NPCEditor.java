@@ -1,8 +1,8 @@
-package com.editor.npc;
+package com.editor.cache.npc;
 
 import com.alex.loaders.npcs.NPCDefinitions;
 import console.Main;
-import util.Utils;
+import com.editor.util.Utils;
 
 import javax.swing.*;
 import javax.swing.GroupLayout.Alignment;

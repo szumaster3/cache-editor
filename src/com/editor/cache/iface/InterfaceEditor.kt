@@ -1,4 +1,4 @@
-package com.editor.iface
+package com.editor.cache.iface
 
 import com.displee.cache.CacheLibrary
 import com.displee.cache.index.archive.Archive

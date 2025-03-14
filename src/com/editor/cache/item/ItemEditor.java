@@ -1,9 +1,9 @@
-package com.editor.item;
+package com.editor.cache.item;
 
 import com.alex.loaders.items.ItemDefinitions;
 import console.Main;
 import util.SpringUtilities;
-import util.Utils;
+import com.editor.util.Utils;
 
 import javax.swing.*;
 import javax.swing.GroupLayout.Alignment;
