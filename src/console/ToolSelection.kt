@@ -137,7 +137,7 @@ class ToolSelection : JFrame() {
                 }
                 8 -> try {
                     SwingUtilities.invokeLater {
-                        ModelPack().isVisible = true
+                        ModelPack(cache).isVisible = true
                     }
                     Main.log("ToolSelection", "Model pack started")
                 } catch (e: Exception) {
