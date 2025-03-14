@@ -4,6 +4,7 @@ import com.editor.iface.InterfaceEditor
 import com.editor.item.ItemListExport
 import com.editor.item.ItemSelection
 import com.editor.item.ModelDumper
+import com.editor.item.ModelPack
 import com.editor.npc.NPCListExport
 import com.editor.npc.NPCSelection
 import com.editor.`object`.ObjectSelection
@@ -63,7 +64,8 @@ class ToolSelection : JFrame() {
                 "Object Editor",
                 "Model Export",
                 "NPC List Export",
-                "Item List Export"
+                "Item List Export",
+                "Model Pack"
             )
         )
         submitButton.addActionListener { evt -> submitButtonActionPerformed(evt) }
@@ -132,6 +134,14 @@ class ToolSelection : JFrame() {
                     Main.log("ToolSelection", "Item list export completed.")
                 } catch (e: Exception) {
                     Main.log("ToolSelection", "Failed to start Item list exporter!")
+                }
+                8 -> try {
+                    SwingUtilities.invokeLater {
+                        ModelPack().isVisible = true
+                    }
+                    Main.log("ToolSelection", "Model pack started")
+                } catch (e: Exception) {
+                    Main.log("ToolSelection", "Failed to start Model packer!")
                 }
                 //6 -> try {
                 //    AnimationSelection(cache).isVisible = true
