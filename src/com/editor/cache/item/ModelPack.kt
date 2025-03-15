@@ -89,10 +89,10 @@ class ModelPack(cache: String? = null) : JFrame() {
     }
 
     private fun setupFrame() {
-        defaultCloseOperation = JFrame.EXIT_ON_CLOSE
+        defaultCloseOperation = 1
         title = "ModelPack"
         isResizable = false
-        setJMenuBar(menuBar)
+        jMenuBar = menuBar
         setLocationRelativeTo(null)
         pack()
         isVisible = true
@@ -108,7 +108,6 @@ class ModelPack(cache: String? = null) : JFrame() {
             val fileName = file.name
             val modelId = if (keepID) fileName.replace(".dat", "") else ""
             try {
-                // Check if store is null before proceeding
                 store?.let {
                     val packedModel = Utils.packCustomModel(it, Utils.getBytesFromFile(file), modelId.toIntOrNull() ?: 0)
                     Main.log("ModelPack", "The model ID of $fileName is: $packedModel")

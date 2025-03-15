@@ -778,7 +778,7 @@ public class ItemEditor extends JFrame {
         BufferedWriter writer = null;
 
         try {
-            writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("export/item_" + this.defs.id + ".txt"), StandardCharsets.UTF_8));
+            writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("data/export/lists/items/" + this.defs.id + ".txt"), StandardCharsets.UTF_8));
             writer.write("name = " + this.defs.name);
             writer.write(lineSep);
             writer.write("value = " + this.defs.cost);

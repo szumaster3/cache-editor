@@ -19,7 +19,7 @@ class ColorPicker : JFrame() {
     init {
         title = "Color Picker"
         setSize(200, 250)
-        defaultCloseOperation = EXIT_ON_CLOSE
+        defaultCloseOperation = 1
         layout = FlowLayout(FlowLayout.CENTER)
         isResizable = false
         setLocationRelativeTo(null)

@@ -10,16 +10,23 @@ import com.editor.cache.npc.NPCSelection
 import com.editor.cache.`object`.ObjectSelection
 import com.editor.cache.region.RegionEditor
 import com.editor.model.ColorPicker
-import java.awt.*
+import java.awt.Dimension
+import java.awt.FlowLayout
+import java.awt.GridLayout
 import java.awt.event.ActionEvent
-import java.io.IOException
+import java.io.*
 import javax.swing.*
 import kotlin.system.exitProcess
 
 class ToolSelection : JFrame() {
     private var cache = ""
-    private var loadCacheButton: JButton? = null
-    private var selectionBox: JComboBox<String>? = null
+    private val loadCacheButton = JButton("Load Cache")
+    private val loadLastCacheButton = JButton("Last Location")
+    private val selectionBox: JComboBox<String> = JComboBox()
+    private val cacheFile = File("cache_location.txt")
+    private val toolSelected = "ToolSelection"
+    private val startMessage = "Tool started."
+    private val failMessage = "Failed to start."
 
     init {
         try {
@@ -31,45 +38,46 @@ class ToolSelection : JFrame() {
         this.isResizable = false
         this.defaultCloseOperation = EXIT_ON_CLOSE
         this.setLocationRelativeTo(null)
-        this.initComponents()
+        initComponents()
         Main.log("Main", "ToolSelection Started")
     }
 
     private fun initComponents() {
-        val alignmentPanel1 = JPanel(FlowLayout())
+        val alignmentPanel1 = JPanel(FlowLayout(FlowLayout.CENTER))
         val alignmentPanel2 = JPanel(FlowLayout())
         val alignmentPanel3 = JPanel(FlowLayout())
 
         this.preferredSize = Dimension(250, 200)
-        val selectYourEditorLabel = JLabel("Select your editor:")
-        this.selectionBox = JComboBox()
+        val selectYourEditorLabel = JLabel("Select your editor: ")
         val submitButton = JButton("Submit")
         val jMenuBar1 = JMenuBar()
         val jMenu1 = JMenu("File")
-        this.loadCacheButton = JButton("Load Cache")
         val exitButton = JMenuItem("Exit Program")
-        this.defaultCloseOperation = EXIT_ON_CLOSE
 
-        loadCacheButton!!.preferredSize = Dimension(125, 30)
-        loadCacheButton!!.addActionListener { e -> loadCacheButtonHandler(e) }
-        alignmentPanel1.add(loadCacheButton, BorderLayout.CENTER)
+        val buttonSize = Dimension(100, 30)
+        setupButton(loadCacheButton, buttonSize, this::loadCacheButtonHandler)
+        setupButton(loadLastCacheButton, buttonSize, this::loadLastCacheButtonHandler)
 
+        alignmentPanel1.add(loadCacheButton)
+        alignmentPanel1.add(Box.createHorizontalStrut(2))
+        alignmentPanel1.add(loadLastCacheButton)
         alignmentPanel2.add(selectYourEditorLabel)
 
-        selectionBox!!.model = DefaultComboBoxModel(
+        selectionBox.model = DefaultComboBoxModel(
             arrayOf(
                 "Item Editor",
                 "NPC Editor",
+                "Object Editor",
                 "Transfer Region",
                 "Transfer Interface",
-                "Object Editor",
-                "Model Export",
-                "NPC List Export",
-                "Item List Export",
-                "Model Pack",
-                "Color Picker"
+                "Export model",
+                "Export NPC list",
+                "Export Item list",
+                "Pack model",
+                "Pick a Color"
             )
         )
+
         submitButton.addActionListener { evt -> submitButtonActionPerformed(evt) }
         alignmentPanel3.add(selectionBox)
         alignmentPanel3.add(submitButton)
@@ -79,116 +87,144 @@ class ToolSelection : JFrame() {
         jMenuBar1.add(jMenu1)
         this.jMenuBar = jMenuBar1
 
-        val layout = GridLayout(3, 1, 5, 10)
-        this.contentPane.layout = layout
+        this.contentPane.layout = GridLayout(3, 1, 5, 10)
         this.add(alignmentPanel1)
         this.add(alignmentPanel2)
         this.add(alignmentPanel3)
+        this.revalidate()
+        this.repaint()
         this.pack()
     }
 
+    private fun setupButton(button: JButton, size: Dimension, action: (ActionEvent) -> Unit) {
+        button.apply {
+            preferredSize = size
+            minimumSize = size
+            maximumSize = size
+            addActionListener(action)
+        }
+    }
+
     private fun submitButtonActionPerformed(evt: ActionEvent) {
-        if (cache.isEmpty() && selectionBox!!.selectedIndex != 9) {
-            Main.log("ToolSelection", "No Cache Set!")
+        if (cache.isEmpty() && selectionBox.selectedIndex != 9) {
+            Main.log(toolSelected, "No Cache Set!")
             return
         }
-        when (selectionBox!!.selectedIndex) {
+        when (selectionBox.selectedIndex) {
             0 -> try {
-                ItemSelection(cache).isVisible = true
-                Main.log("ToolSelection", "ItemSelection Started")
+                ItemSelection(cache).isVisible = true;
+                Main.log(toolSelected, startMessage)
             } catch (e: IOException) {
-                Main.log("ToolSelection", "Failed to start ItemSelection!")
+                Main.log(toolSelected, failMessage)
             }
 
             1 -> try {
-                NPCSelection(cache).isVisible = true
-                Main.log("ToolSelection", "NPCSelection Started")
-            } catch (e: Exception) {
-                Main.log("ToolSelection", "Failed to start NPC selection!")
+                NPCSelection(cache).isVisible = true; Main.log(toolSelected, startMessage)
+            } catch (e: IOException) {
+                Main.log(toolSelected, failMessage)
             }
 
             2 -> try {
-                RegionEditor(cache).isVisible = true
-                Main.log("ToolSelection", "RegionEditor Started")
-            } catch (e: Exception) {
-                Main.log("ToolSelection", "Failed to start RegionEditor!")
+                ObjectSelection(cache).isVisible = true; Main.log(toolSelected, startMessage)
+            } catch (e: IOException) {
+                Main.log(toolSelected, failMessage)
             }
-
-            3 -> InterfaceEditor(cache).isVisible = true.also {
-                Main.log("ToolSelection", "InterfaceEditor Started")
+            3 -> try {
+                RegionEditor(cache).isVisible = true; Main.log(toolSelected, startMessage)
+            } catch (e: IOException) {
+                Main.log(toolSelected, failMessage)
             }
-
-            4 -> try {
-                ObjectSelection(cache).isVisible = true
-                Main.log("ToolSelection", "ObjectSelection Started")
-            } catch (e: Exception) {
-                Main.log("ToolSelection", "Failed to start Object selection!")
+            4 -> {
+                InterfaceEditor(cache).isVisible = true; Main.log(toolSelected, startMessage)
             }
 
             5 -> try {
-                ModelDumper(cache).isVisible = true
-                Main.log("ToolSelection", "Model Exporter Started")
-            } catch (e: Exception) {
-                Main.log("ToolSelection", "Failed to start Model exporter!")
+                ModelDumper(cache).isVisible = true; Main.log(toolSelected, startMessage)
+            } catch (e: IOException) {
+                Main.log(toolSelected, failMessage)
             }
 
             6 -> try {
-                NPCListExport(cache)
-                Main.log("ToolSelection", "NPC list export completed.")
-            } catch (e: Exception) {
-                Main.log("ToolSelection", "Failed to start NPC list exporter!")
+                NPCListExport(cache); Main.log(toolSelected, startMessage)
+            } catch (e: IOException) {
+                Main.log(toolSelected, failMessage)
             }
 
             7 -> try {
-                ItemListExport(cache)
-                Main.log("ToolSelection", "Item list export completed.")
-            } catch (e: Exception) {
-                Main.log("ToolSelection", "Failed to start Item list exporter!")
+                ItemListExport(cache); Main.log(toolSelected, startMessage)
+            } catch (e: IOException) {
+                Main.log(toolSelected, failMessage)
             }
 
             8 -> try {
-                SwingUtilities.invokeLater {
-                    ModelPack(cache).isVisible = true
-                }
-                Main.log("ToolSelection", "Model pack started")
-            } catch (e: Exception) {
-                Main.log("ToolSelection", "Failed to start Model packer!")
+                SwingUtilities.invokeLater { ModelPack(cache).isVisible = true }; Main.log(
+                    toolSelected, startMessage
+                )
+            } catch (e: IOException) {
+                Main.log(toolSelected, failMessage)
             }
 
             9 -> try {
-                SwingUtilities.invokeLater {
-                    ColorPicker().isVisible = true
-                }
-                Main.log("ToolSelection", "Color picker started.")
-            } catch (e: Exception) {
-                Main.log("ToolSelection", "Failed to start Color picker!")
+                SwingUtilities.invokeLater { ColorPicker().isVisible = true }; Main.log(
+                    toolSelected, startMessage
+                )
+            } catch (e: IOException) {
+                Main.log(toolSelected, failMessage)
             }
-            //6 -> try {
-            //    AnimationSelection(cache).isVisible = true
-            //    Main.log("ToolSelection", "AnimationSelection Started")
-            //} catch (e: Exception) {
-            //    Main.log("ToolSelection", "Failed to start AnimationSelection!")
-            //}
-            else -> Main.log("ToolSelection", "No Tool Selected!")
+
+            else -> Main.log(toolSelected, "No Tool Selected!")
         }
     }
 
     private fun loadCacheButtonHandler(evt: ActionEvent) {
-        val fc = JFileChooser()
-        fc.fileSelectionMode = JFileChooser.DIRECTORIES_ONLY
+        val fc = JFileChooser().apply { fileSelectionMode = JFileChooser.DIRECTORIES_ONLY }
         if (evt.source === loadCacheButton) {
             val returnVal = fc.showOpenDialog(this)
             if (returnVal == JFileChooser.APPROVE_OPTION) {
                 val file = fc.selectedFile
-                this.cache = file.path + "/"
+                this.cache = "${file.path}/"
+                saveLastCachePath(this.cache)
             }
+        }
+    }
+
+    private fun loadLastCacheButtonHandler(evt: ActionEvent) {
+        if (cacheFile.exists()) {
+            val lastCachePath = loadLastCachePath()
+            if (lastCachePath.isNotEmpty()) {
+                this.cache = lastCachePath
+                Main.log("ToolSelection", "Last location: $cache")
+            } else {
+                JOptionPane.showMessageDialog(this, "No previous cache found.")
+            }
+        } else {
+            JOptionPane.showMessageDialog(this, "No previous cache found.")
+        }
+    }
+
+    private fun saveLastCachePath(path: String) {
+        try {
+            BufferedWriter(FileWriter(cacheFile)).use { writer ->
+                writer.write(path)
+            }
+            Main.log("ToolSelection", "Cache path saved.")
+        } catch (e: IOException) {
+            Main.log("ToolSelection", "Failed to save cache path.")
+        }
+    }
+
+    private fun loadLastCachePath(): String {
+        return try {
+            BufferedReader(FileReader(cacheFile)).use { reader -> reader.readText() }
+        } catch (e: IOException) {
+            Main.log("ToolSelection", "Failed to load cache path.")
+            ""
         }
     }
 
     private fun exitButtonActionPerformed(evt: ActionEvent) {
         val response = JOptionPane.showConfirmDialog(
-            null, "Do you want to continue?", "Confirm",
-            JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE
+            null, "Do you want to continue?", "Confirm", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE
         )
         if (response == JOptionPane.YES_OPTION) {
             exitProcess(0)
