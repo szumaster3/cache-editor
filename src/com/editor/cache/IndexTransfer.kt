@@ -18,7 +18,7 @@ class IndexTransfer : JFrame() {
         title = "Transfer Indices"
         layout = GridBagLayout()
         size = Dimension(490, 190)
-        defaultCloseOperation = EXIT_ON_CLOSE
+        defaultCloseOperation = 1
         setLocationRelativeTo(null)
         isResizable = false
         val gbc = GridBagConstraints().apply {
