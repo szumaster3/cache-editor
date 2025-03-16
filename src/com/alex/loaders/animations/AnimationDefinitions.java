@@ -1,281 +1,416 @@
 package com.alex.loaders.animations;
 
 import com.alex.io.InputStream;
+import com.alex.io.OutputStream;
 import com.alex.store.Store;
 
-import java.io.IOException;
-import java.io.PrintStream;
 import java.util.concurrent.ConcurrentHashMap;
 
-public class AnimationDefinitions {
-   public static Store cache;
-   public static int id;
-   public int loopCycles = 99;
-   public int anInt2137;
-   public static int[] frames;
-   public int anInt2140 = -1;
-   public boolean aBoolean2141 = false;
-   public int priority = 5;
-   public int leftHandEquip = -1;
-   public int rightHandEquip = -1;
-   public int anInt2145;
-   public int[][] handledSounds;
-   public boolean[] aBooleanArray2149;
-   public int[] anIntArray2151;
-   public boolean aBoolean2152 = false;
-   public static int[] delays;
-   public int anInt2155 = 2;
-   public boolean aBoolean2158 = false;
-   public boolean aBoolean2159 = false;
-   public int anInt2162 = -1;
-   public int loopDelay = -1;
-   public int[] soundMinDelay;
-   public int[] soundMaxDelay;
-   public int[] anIntArray1362;
-   public boolean effect2Sound;
-   private static final ConcurrentHashMap animDefs = new ConcurrentHashMap();
+public class AnimationDefinitions implements Cloneable {
+    public static Store cache;
+    public static int id;
+    public int loopCycles = 99;
+    public int anInt2137;
+    public static int[] frames;
+    public int anInt2140 = -1;
+    public boolean aBoolean2141 = false;
+    public int priority = 5;
+    public int leftHandEquip = -1;
+    public int rightHandEquip = -1;
+    public int anInt2145;
+    public int[][] handledSounds;
+    public boolean[] aBooleanArray2149;
+    public int[] anIntArray2151;
+    public boolean aBoolean2152 = false;
+    public static int[] delays;
+    public int anInt2155 = 2;
+    public boolean aBoolean2158 = false;
+    public boolean aBoolean2159 = false;
+    public int anInt2162 = -1;
+    public int loopDelay = -1;
+    public int[] soundMinDelay;
+    public int[] soundMaxDelay;
+    public int[] anIntArray1362;
+    public boolean effect2Sound;
 
-   public static void main(String[] args) throws IOException {
-      cache = new Store("C:/Users/yvonne � christer/Dropbox/Source/data/562cache/");
+    private static final ConcurrentHashMap<Integer, AnimationDefinitions> animationDefinitions = new ConcurrentHashMap<>();
+    private static final int SEQUENCES_INDEX = 20;
 
-      label55:
-      for(int i = 0; i < 1; ++i) {
-         System.out.println("Emote ID: " + i);
-         int k = 0;
+    public static AnimationDefinitions getAnimationDefinitions(int id, Store store) {
+        AnimationDefinitions def = (AnimationDefinitions) animationDefinitions.get(Integer.valueOf(id));
 
-         while(true) {
-            getAnimationDefinitions(i);
-            PrintStream var10000;
-            StringBuilder var10001;
-            if(k >= delays.length) {
-               k = 0;
+        if (def == null) {
+            def = new AnimationDefinitions();
 
-               while(true) {
-                  getAnimationDefinitions(i);
-                  if(k >= frames.length) {
-                     System.out.println("loopDelay = " + getAnimationDefinitions(i).loopDelay);
-                     System.out.println("leftHandEquip = " + getAnimationDefinitions(i).leftHandEquip);
-                     System.out.println("priority = " + getAnimationDefinitions(i).priority);
-                     System.out.println("rightHandEquip = " + getAnimationDefinitions(i).rightHandEquip);
-                     System.out.println("loopCycles = " + getAnimationDefinitions(i).loopCycles);
-                     System.out.println("anInt2140 = " + getAnimationDefinitions(i).anInt2140);
-                     System.out.println("anInt2162 = " + getAnimationDefinitions(i).anInt2162);
-                     System.out.println("anInt2155 = " + getAnimationDefinitions(i).anInt2155);
-                     System.out.println("anInt2145 = " + getAnimationDefinitions(i).anInt2145);
+            byte[] data = store.getIndexes()[SEQUENCES_INDEX].getFile(id >>> 7, id & 127);
 
-                     for(k = 0; k < getAnimationDefinitions(i).anIntArray2151.length; ++k) {
-                        System.out.println("anIntArray2151[" + k + "] = " + getAnimationDefinitions(i).anIntArray2151[k]);
-                     }
+            if (data != null) {
+                def.readValueLoop(new InputStream(data));
+            }
+            def.method2394();
 
-                     for(k = 0; k < getAnimationDefinitions(i).aBooleanArray2149.length; ++k) {
-                        System.out.println("aBooleanArray2149[" + k + "] = " + getAnimationDefinitions(i).aBooleanArray2149[k]);
-                     }
+            animationDefinitions.put(Integer.valueOf(id), def);
+        }
 
-                     System.out.println("aBoolean2152 = " + getAnimationDefinitions(i).aBoolean2152);
+        return def;
+    }
 
-                     for(k = 0; k < getAnimationDefinitions(i).anIntArray1362.length; ++k) {
-                        System.out.println("anIntArray1362[" + k + "] = " + getAnimationDefinitions(i).anIntArray1362[k]);
-                     }
-                     continue label55;
-                  }
+    public Object clone() {
+        try {
+            return super.clone();
+        } catch (CloneNotSupportedException var2) {
+            var2.printStackTrace();
+            return null;
+        }
+    }
 
-                  var10000 = System.out;
-                  var10001 = (new StringBuilder()).append("frames[").append(k).append("] = ");
-                  getAnimationDefinitions(i);
-                  var10000.println(var10001.append(frames[k]).toString());
-                  ++k;
-               }
+    private static void printAnimationDetails(int emoteId) {
+        AnimationDefinitions animation = getAnimationDefinitions(emoteId);
+        if (animation != null) {
+            // Print details for delays
+            for (int i = 0; i < delays.length; i++) {
+                System.out.println("delays[" + i + "] = " + delays[i]);
             }
 
-            var10000 = System.out;
-            var10001 = (new StringBuilder()).append("delays[").append(k).append("] = ");
-            getAnimationDefinitions(i);
-            var10000.println(var10001.append(delays[k]).toString());
-            ++k;
-         }
-      }
-
-   }
-
-   public static final AnimationDefinitions getAnimationDefinitions(int emoteId) {
-      try {
-         AnimationDefinitions var3 = (AnimationDefinitions)animDefs.get(Integer.valueOf(emoteId));
-         if(var3 != null) {
-            return var3;
-         } else {
-            byte[] data = cache.getIndexes()[20].getFile(emoteId >>> 7, emoteId & 127);
-            var3 = new AnimationDefinitions();
-            if(data != null) {
-               var3.readValueLoop(new InputStream(data));
+            // Print details for frames
+            for (int i = 0; i < frames.length; i++) {
+                System.out.println("frames[" + i + "] = " + frames[i]);
             }
 
-            var3.method2394();
-            animDefs.put(Integer.valueOf(emoteId), var3);
-            id = emoteId;
-            return var3;
-         }
-      } catch (Throwable var31) {
-         return null;
-      }
-   }
+            // Print other properties
+            System.out.println("loopDelay = " + animation.loopDelay);
+            System.out.println("leftHandEquip = " + animation.leftHandEquip);
+            System.out.println("priority = " + animation.priority);
+            System.out.println("rightHandEquip = " + animation.rightHandEquip);
+            System.out.println("loopCycles = " + animation.loopCycles);
+            System.out.println("anInt2140 = " + animation.anInt2140);
+            System.out.println("anInt2162 = " + animation.anInt2162);
+            System.out.println("anInt2155 = " + animation.anInt2155);
+            System.out.println("anInt2145 = " + animation.anInt2145);
 
-   private void readValueLoop(InputStream stream) {
-      while(true) {
-         int opcode = stream.readUnsignedByte();
-         if(opcode == 0) {
-            return;
-         }
+            // Print array elements
+            printArray(animation.anIntArray2151, "anIntArray2151");
+            printArray(animation.aBooleanArray2149, "aBooleanArray2149");
+            System.out.println("aBoolean2152 = " + animation.aBoolean2152);
+            printArray(animation.anIntArray1362, "anIntArray1362");
+        }
+    }
 
-         this.readValues(stream, opcode);
-      }
-   }
-
-   public int getEmoteTime() {
-      if(delays == null) {
-         return 0;
-      } else {
-         int ms = 0;
-         int[] arr$ = delays;
-         int len$ = arr$.length;
-
-         for(int i$ = 0; i$ < len$; ++i$) {
-            int i = arr$[i$];
-            ms += i;
-         }
-
-         return ms * 30;
-      }
-   }
-
-   public int getEmoteGameTickets() {
-      return this.getEmoteTime() / 1000;
-   }
-
-   private void readValues(InputStream stream, int opcode) {
-      int index;
-      int i_21_;
-      if(opcode == 1) {
-         index = stream.readUnsignedShort();
-         delays = new int[index];
-
-         for(i_21_ = 0; ~index < ~i_21_; ++i_21_) {
-            delays[i_21_] = stream.readUnsignedShort();
-         }
-
-         frames = new int[index];
-
-         for(i_21_ = 0; ~i_21_ > ~index; ++i_21_) {
-            frames[i_21_] = stream.readUnsignedShort();
-         }
-
-         for(i_21_ = 0; i_21_ < index; ++i_21_) {
-            frames[i_21_] += stream.readUnsignedShort() << 16;
-         }
-      } else if(opcode == 2) {
-         this.loopDelay = stream.readUnsignedShort();
-      } else if(opcode == 3) {
-         this.aBooleanArray2149 = new boolean[256];
-         index = stream.readUnsignedByte();
-
-         for(i_21_ = 0; i_21_ < index; ++i_21_) {
-            this.aBooleanArray2149[stream.readUnsignedByte()] = true;
-         }
-      } else if(opcode == 4) {
-         this.aBoolean2152 = true;
-      } else if(opcode == 5) {
-         this.priority = stream.readUnsignedByte();
-      } else if(opcode == 6) {
-         this.rightHandEquip = stream.readUnsignedShort();
-      } else if(opcode == 7) {
-         this.leftHandEquip = stream.readUnsignedShort();
-      } else if(opcode == 8) {
-         this.loopCycles = stream.readUnsignedByte();
-      } else if(opcode == 9) {
-         this.anInt2140 = stream.readUnsignedByte();
-      } else if(opcode == 10) {
-         this.anInt2162 = stream.readUnsignedByte();
-      } else if(opcode == 11) {
-         this.anInt2155 = stream.readUnsignedByte();
-      } else if(opcode == 12) {
-         index = stream.readUnsignedByte();
-         this.anIntArray2151 = new int[index];
-
-         for(i_21_ = 0; ~i_21_ > ~index; ++i_21_) {
-            this.anIntArray2151[i_21_] = stream.readUnsignedShort();
-         }
-
-         for(i_21_ = 0; index > i_21_; ++i_21_) {
-            this.anIntArray2151[i_21_] += stream.readUnsignedShort() << 16;
-         }
-      } else if(opcode == 13) {
-         index = stream.readUnsignedShort();
-         this.handledSounds = new int[index][];
-
-         for(i_21_ = 0; i_21_ < index; ++i_21_) {
-            int i_22_ = stream.readUnsignedByte();
-            if(~i_22_ < -1) {
-               this.handledSounds[i_21_] = new int[i_22_];
-               this.handledSounds[i_21_][0] = stream.read24BitInt();
-
-               for(int i_23_ = 1; ~i_22_ < ~i_23_; ++i_23_) {
-                  this.handledSounds[i_21_][i_23_] = stream.readUnsignedShort();
-               }
+    private static void printArray(int[] array, String arrayName) {
+        if (array != null) {
+            for (int i = 0; i < array.length; i++) {
+                System.out.println(arrayName + "[" + i + "] = " + array[i]);
             }
-         }
-      } else if(opcode == 14) {
-         this.aBoolean2141 = true;
-      } else if(opcode == 15) {
-         this.aBoolean2159 = true;
-      } else if(opcode == 16) {
-         this.aBoolean2158 = true;
-      } else if(opcode == 17) {
-         this.anInt2145 = stream.readUnsignedByte();
-      } else if(opcode == 18) {
-         this.effect2Sound = true;
-      } else if(opcode == 19) {
-         if(this.anIntArray1362 == null) {
-            this.anIntArray1362 = new int[this.handledSounds.length];
+        }
+    }
 
-            for(index = 0; index < this.handledSounds.length; ++index) {
-               this.anIntArray1362[index] = 255;
+    private static void printArray(boolean[] array, String arrayName) {
+        if (array != null) {
+            for (int i = 0; i < array.length; i++) {
+                System.out.println(arrayName + "[" + i + "] = " + array[i]);
             }
-         }
+        }
+    }
 
-         this.anIntArray1362[stream.readUnsignedByte()] = stream.readUnsignedByte();
-      } else if(opcode == 20) {
-         if(this.soundMaxDelay == null || this.soundMinDelay == null) {
-            this.soundMaxDelay = new int[this.handledSounds.length];
-            this.soundMinDelay = new int[this.handledSounds.length];
-
-            for(index = 0; index < this.handledSounds.length; ++index) {
-               this.soundMaxDelay[index] = 256;
-               this.soundMinDelay[index] = 256;
+    public static final AnimationDefinitions getAnimationDefinitions(int emoteId) {
+        try {
+            AnimationDefinitions definition = animationDefinitions.get(emoteId);
+            if (definition == null) {
+                byte[] data = cache.getIndexes()[SEQUENCES_INDEX].getFile(emoteId >>> 7, emoteId & 127);
+                definition = new AnimationDefinitions();
+                if (data != null) {
+                    definition.readValueLoop(new InputStream(data));
+                }
+                definition.method2394();
+                animationDefinitions.put(emoteId, definition);
+                id = emoteId;
             }
-         }
+            return definition;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
 
-         index = stream.readUnsignedByte();
-         this.soundMaxDelay[index] = stream.readUnsignedShort();
-         this.soundMinDelay[index] = stream.readUnsignedShort();
-      }
+    private void readValueLoop(InputStream stream) {
+        while (true) {
+            int opcode = stream.readUnsignedByte();
+            if (opcode == 0) {
+                return;
+            }
 
-   }
+            this.readValues(stream, opcode);
+        }
+    }
 
-   public void method2394() {
-      if(this.anInt2140 == -1) {
-         if(this.aBooleanArray2149 == null) {
-            this.anInt2140 = 0;
-         } else {
-            this.anInt2140 = 2;
-         }
-      }
+    public int getEmoteTime() {
+        if (delays == null) {
+            return 0;
+        } else {
+            int ms = 0;
+            int[] arr$ = delays;
+            int len$ = arr$.length;
 
-      if(this.anInt2162 == -1) {
-         if(this.aBooleanArray2149 == null) {
-            this.anInt2162 = 0;
-         } else {
-            this.anInt2162 = 2;
-         }
-      }
+            for (int i$ = 0; i$ < len$; ++i$) {
+                int i = arr$[i$];
+                ms += i;
+            }
 
-   }
+            return ms * 30;
+        }
+    }
+
+    public int getEmoteGameTickets() {
+        return this.getEmoteTime() / 1000;
+    }
+
+    private void readValues(InputStream stream, int opcode) {
+        int index, length;
+
+        switch (opcode) {
+            case 1:
+                index = stream.readUnsignedShort();
+                this.delays = new int[index];
+                this.frames = new int[index];
+                for (length = 0; length < index; length++) {
+                    this.delays[length] = stream.readUnsignedShort();
+                    this.frames[length] = stream.readUnsignedShort() + (stream.readUnsignedShort() << 16);
+                }
+                break;
+            case 2:
+                this.loopDelay = stream.readUnsignedShort();
+                break;
+            case 3:
+                this.aBooleanArray2149 = new boolean[256];
+                index = stream.readUnsignedByte();
+                for (length = 0; length < index; length++) {
+                    this.aBooleanArray2149[stream.readUnsignedByte()] = true;
+                }
+                break;
+            case 4:
+                this.aBoolean2152 = true;
+                break;
+            case 5:
+                this.priority = stream.readUnsignedByte();
+                break;
+            case 6:
+                this.rightHandEquip = stream.readUnsignedShort();
+                break;
+            case 7:
+                this.leftHandEquip = stream.readUnsignedShort();
+                break;
+            case 8:
+                this.loopCycles = stream.readUnsignedByte();
+                break;
+            case 9:
+                this.anInt2140 = stream.readUnsignedByte();
+                break;
+            case 10:
+                this.anInt2162 = stream.readUnsignedByte();
+                break;
+            case 11:
+                this.anInt2155 = stream.readUnsignedByte();
+                break;
+            case 12:
+                index = stream.readUnsignedByte();
+                this.anIntArray2151 = new int[index];
+                for (length = 0; length < index; length++) {
+                    this.anIntArray2151[length] = stream.readUnsignedShort() + (stream.readUnsignedShort() << 16);
+                }
+                break;
+            case 13:
+                index = stream.readUnsignedShort();
+                this.handledSounds = new int[index][];
+                for (length = 0; length < index; length++) {
+                    int counter = stream.readUnsignedByte();
+                    if (counter > 0) {
+                        this.handledSounds[length] = new int[counter];
+                        this.handledSounds[length][0] = stream.read24BitInt();
+                        for (int i = 1; i < counter; i++) {
+                            this.handledSounds[length][i] = stream.readUnsignedShort();
+                        }
+                    }
+                }
+                break;
+            case 14:
+                this.aBoolean2141 = true;
+                break;
+            case 15:
+                this.aBoolean2159 = true;
+                break;
+            case 16:
+                this.aBoolean2158 = true;
+                break;
+            case 17:
+                this.anInt2145 = stream.readUnsignedByte();
+                break;
+            case 18:
+                this.effect2Sound = true;
+                break;
+            case 19:
+                if (this.anIntArray1362 == null) {
+                    this.anIntArray1362 = new int[handledSounds.length];
+                    for (index = 0; index < handledSounds.length; index++) {
+                        this.anIntArray1362[index] = 255;
+                    }
+                }
+                anIntArray1362[stream.readUnsignedByte()] = stream.readUnsignedByte();
+                break;
+            case 20:
+                if (this.soundMaxDelay == null || soundMinDelay == null) {
+                    this.soundMaxDelay = new int[handledSounds.length];
+                    this.soundMinDelay = new int[handledSounds.length];
+                    for (index = 0; index < handledSounds.length; index++) {
+                        this.soundMaxDelay[index] = 256;
+                        this.soundMinDelay[index] = 256;
+                    }
+                }
+                index = stream.readUnsignedByte();
+                this.soundMaxDelay[index] = stream.readUnsignedShort();
+                this.soundMinDelay[index] = stream.readUnsignedShort();
+                break;
+        }
+    }
+
+    public int getArchiveId() {
+        return this.id >>> 134238215;
+    }
+
+    public int getFileId() {
+        return 127 & this.id;
+    }
+
+    public byte[] encode() {
+        OutputStream stream = new OutputStream();
+
+        if (frames != null) {
+            stream.writeByte(1);
+            stream.writeShort(frames.length);
+            for (int i = 0; i < frames.length; i++) {
+                stream.writeShort(delays[i]);
+                stream.writeInt(frames[i]);
+            }
+        }
+
+        if (loopDelay != -1) {
+            stream.writeByte(2);
+            stream.writeShort(loopDelay);
+        }
+
+        if (aBooleanArray2149 != null) {
+            stream.writeByte(3);
+            stream.writeByte(aBooleanArray2149.length);
+            for (int i = 0; i < aBooleanArray2149.length; i++) {
+                if (aBooleanArray2149[i]) {
+                    stream.writeByte(i);
+                }
+            }
+        }
+
+        if (aBoolean2152) {
+            stream.writeByte(4);
+        }
+
+        if (priority != 5) {
+            stream.writeByte(5);
+            stream.writeByte(priority);
+        }
+
+        if (rightHandEquip != -1) {
+            stream.writeByte(6);
+            stream.writeShort(rightHandEquip);
+        }
+
+        if (leftHandEquip != -1) {
+            stream.writeByte(7);
+            stream.writeShort(leftHandEquip);
+        }
+
+        if (loopCycles != 99) {
+            stream.writeByte(8);
+            stream.writeByte(loopCycles);
+        }
+
+        if (anInt2140 != -1) {
+            stream.writeByte(9);
+            stream.writeByte(anInt2140);
+        }
+
+        if (anInt2162 != -1) {
+            stream.writeByte(10);
+            stream.writeByte(anInt2162);
+        }
+
+        if (anInt2155 != 2) {
+            stream.writeByte(11);
+            stream.writeByte(anInt2155);
+        }
+
+        if (anInt2145 != 0) {
+            stream.writeByte(12);
+            stream.writeByte(anInt2145);
+        }
+
+        if (anIntArray2151 != null) {
+            stream.writeByte(13);
+            stream.writeByte(anIntArray2151.length);
+            for (int value : anIntArray2151) {
+                stream.writeInt(value);
+            }
+        }
+
+        if (handledSounds != null) {
+            stream.writeByte(14);
+            stream.writeByte(handledSounds.length);
+            for (int[] sound : handledSounds) {
+                stream.writeByte(sound.length);
+                for (int s : sound) {
+                    stream.writeShort(s);
+                }
+            }
+        }
+
+        if (aBoolean2141) {
+            stream.writeByte(15);
+        }
+
+        if (aBoolean2159) {
+            stream.writeByte(16);
+        }
+
+        if (aBoolean2158) {
+            stream.writeByte(17);
+        }
+
+        if (anInt2145 != 0) {
+            stream.writeByte(18);
+        }
+
+        if (soundMaxDelay != null && soundMinDelay != null) {
+            stream.writeByte(20);
+            for (int i = 0; i < soundMaxDelay.length; i++) {
+                stream.writeShort(soundMaxDelay[i]);
+                stream.writeShort(soundMinDelay[i]);
+            }
+        }
+
+        stream.writeByte(0);
+        byte[] var61 = new byte[stream.getOffset()];
+        stream.setOffset(0);
+        stream.getBytes(var61, 0, var61.length);
+        return var61;
+    }
+
+    public void write(Store store) {
+        store.getIndexes()[SEQUENCES_INDEX].putFile(this.getArchiveId(), this.getFileId(), this.encode());
+    }
+
+    public void method2394() {
+        if (anInt2140 == -1) {
+            anInt2140 = aBooleanArray2149 == null ? 0 : 2;
+        }
+        if (anInt2162 == -1) {
+            anInt2162 = aBooleanArray2149 == null ? 0 : 2;
+        }
+    }
 }
