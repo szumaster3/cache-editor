@@ -1,5 +1,7 @@
 package console
 
+import com.displee.cache.CacheLibrary
+import com.editor.cache.FileManager
 import com.editor.cache.IndexTransfer
 import com.editor.cache.iface.InterfaceEditor
 import com.editor.cache.item.ItemListExport
@@ -76,7 +78,8 @@ class ToolSelection : JFrame() {
                 "Export NPC list",
                 "Export Item list",
                 "Pack model",
-                "Pick a Color"
+                "Pick a Color",
+                "File Manager"
             )
         )
 
@@ -179,7 +182,13 @@ class ToolSelection : JFrame() {
             } catch (e: IOException) {
                 Main.log(toolSelected, failMessage)
             }
-
+            11 -> try {
+                val lib = CacheLibrary.create(cache)
+                FileManager(lib).isVisible = true
+                Main.log(toolSelected, startMessage)
+            } catch (e: Exception) {
+                Main.log(toolSelected, failMessage)
+            }
             else -> Main.log(toolSelected, "No Tool Selected!")
         }
     }
