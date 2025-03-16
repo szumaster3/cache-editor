@@ -1,5 +1,6 @@
 package console
 
+import com.editor.cache.IndexTransfer
 import com.editor.cache.iface.InterfaceEditor
 import com.editor.cache.item.ItemListExport
 import com.editor.cache.item.ItemSelection
@@ -48,7 +49,7 @@ class ToolSelection : JFrame() {
         val alignmentPanel3 = JPanel(FlowLayout())
 
         this.preferredSize = Dimension(250, 200)
-        val selectYourEditorLabel = JLabel("Select your editor: ")
+        val selectYourEditorLabel = JLabel("Select tool")
         val submitButton = JButton("Submit")
         val jMenuBar1 = JMenuBar()
         val jMenu1 = JMenu("File")
@@ -70,6 +71,7 @@ class ToolSelection : JFrame() {
                 "Object Editor",
                 "Transfer Region",
                 "Transfer Interface",
+                "Transfer Index",
                 "Export model",
                 "Export NPC list",
                 "Export Item list",
@@ -106,7 +108,7 @@ class ToolSelection : JFrame() {
     }
 
     private fun submitButtonActionPerformed(evt: ActionEvent) {
-        if (cache.isEmpty() && selectionBox.selectedIndex != 9) {
+        if (cache.isEmpty() && selectionBox.selectedIndex != 9 && selectionBox.selectedIndex != 5) {
             Main.log(toolSelected, "No Cache Set!")
             return
         }
@@ -139,24 +141,30 @@ class ToolSelection : JFrame() {
             }
 
             5 -> try {
-                ModelDumper(cache).isVisible = true; Main.log(toolSelected, startMessage)
+                IndexTransfer().isVisible = true; Main.log(toolSelected, startMessage)
             } catch (e: IOException) {
                 Main.log(toolSelected, failMessage)
             }
 
             6 -> try {
-                NPCListExport(cache); Main.log(toolSelected, startMessage)
+                ModelDumper(cache).isVisible = true; Main.log(toolSelected, startMessage)
             } catch (e: IOException) {
                 Main.log(toolSelected, failMessage)
             }
 
             7 -> try {
-                ItemListExport(cache); Main.log(toolSelected, startMessage)
+                NPCListExport(cache); Main.log(toolSelected, startMessage)
             } catch (e: IOException) {
                 Main.log(toolSelected, failMessage)
             }
 
             8 -> try {
+                ItemListExport(cache); Main.log(toolSelected, startMessage)
+            } catch (e: IOException) {
+                Main.log(toolSelected, failMessage)
+            }
+
+            9 -> try {
                 SwingUtilities.invokeLater { ModelPack(cache).isVisible = true }; Main.log(
                     toolSelected, startMessage
                 )
@@ -164,7 +172,7 @@ class ToolSelection : JFrame() {
                 Main.log(toolSelected, failMessage)
             }
 
-            9 -> try {
+            10 -> try {
                 SwingUtilities.invokeLater { ColorPicker().isVisible = true }; Main.log(
                     toolSelected, startMessage
                 )
