@@ -986,7 +986,7 @@ public class NPCEditor extends JFrame {
 
     public String getOpts() {
         String text = "";
-        String[] arr$ = this.defs.getOptions();
+        String[] arr$ = this.defs.options;
         int len$ = arr$.length;
 
         for (int i$ = 0; i$ < len$; ++i$) {

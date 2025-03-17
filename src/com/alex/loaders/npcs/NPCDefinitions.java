@@ -1032,67 +1032,62 @@ public final class NPCDefinitions implements Cloneable {
 
     public byte[] encode() {
         OutputStream stream = new OutputStream();
-        stream.writeByte(1);
-        stream.writeByte(this.modelIds.length);
 
-        int data;
-        for (data = 0; data < this.modelIds.length; ++data) {
-            stream.writeBigSmart(this.modelIds[data]);
+        if (this.modelIds != null) {
+            stream.writeByte(1);
+            stream.writeByte(this.modelIds.length);
+            for (int i = 0; i < this.modelIds.length; ++i) {
+                stream.writeBigSmart(this.modelIds[i]);
+            }
         }
 
-        if (!this.name.equals("null")) {
+        if (this.name != null && !this.name.equals("null")) {
             stream.writeByte(2);
             stream.writeString(this.name);
         }
 
-        //if(this.size != 1) {
-        if (this.size > 1) {
+        if (this.size != 1) {
             stream.writeByte(12);
             stream.writeByte(this.size);
         }
 
         for (int index = 0; index < this.options.length; index++) {
+            String option = this.options[index];
             stream.writeByte(30 + index);
-            if (this.options[index] == null || this.options[index].equals("null"))
-                stream.writeString("null");
-            else
-                stream.writeString(this.options[index]);
+            stream.writeString(option != null && !option.equals("null") ? option : "hidden");
         }
 
         if (this.originalModelColors != null && this.modifiedModelColors != null) {
             stream.writeByte(40);
             stream.writeByte(this.originalModelColors.length);
-
-            for (data = 0; data < this.originalModelColors.length; ++data) {
-                stream.writeShort(this.originalModelColors[data]);
-                stream.writeShort(this.modifiedModelColors[data]);
+            for (int i = 0; i < this.originalModelColors.length; ++i) {
+                stream.writeShort(this.originalModelColors[i]);
+                stream.writeShort(this.modifiedModelColors[i]);
             }
         }
 
         if (this.originalTextureColors != null && this.modifiedTextureColors != null) {
             stream.writeByte(41);
             stream.writeByte(this.originalTextureColors.length);
-
-            for (data = 0; data < this.originalTextureColors.length; ++data) {
-                stream.writeShort(this.originalTextureColors[data]);
-                stream.writeShort(this.modifiedTextureColors[data]);
+            for (int i = 0; i < this.originalTextureColors.length; ++i) {
+                stream.writeShort(this.originalTextureColors[i]);
+                stream.writeShort(this.modifiedTextureColors[i]);
             }
         }
 
         if (this.unknownArray1 != null) {
             stream.writeByte(42);
             stream.writeByte(this.unknownArray1.length);
-
-            for (data = 0; data < this.unknownArray1.length; ++data) {
-                stream.writeByte(this.unknownArray1[data]);
+            for (int i = 0; i < this.unknownArray1.length; ++i) {
+                stream.writeByte(this.unknownArray1[i]);
             }
         }
 
-        if (this.anIntArray892 != null) {// chatHeadArray
+        if (this.anIntArray892 != null) {
             stream.writeByte(60);
             stream.writeByte(this.anIntArray892.length);
-            for (int index = 0; index < this.anIntArray892.length; index++) {
-                stream.writeBigSmart(this.anIntArray892[index]);
+            for (int i = 0; i < this.anIntArray892.length; ++i) {
+                stream.writeBigSmart(this.anIntArray892[i]);
             }
         }
 
@@ -1100,7 +1095,6 @@ public final class NPCDefinitions implements Cloneable {
             stream.writeByte(93);
         }
 
-        //if(this.combatLevel != 0) {
         if (this.combatLevel > -1) {
             stream.writeByte(95);
             stream.writeShort(this.combatLevel);
@@ -1130,11 +1124,6 @@ public final class NPCDefinitions implements Cloneable {
             stream.writeByte(this.unknownInt2 / 5);
         }
 
-        if (this.headIcons != 0) {
-            stream.writeByte(102);
-            stream.writeShort(this.headIcons & 0xFFFF);
-        }
-
         if (this.walkMask != -1) {
             stream.writeByte(119);
             stream.writeByte(this.walkMask);
@@ -1150,32 +1139,8 @@ public final class NPCDefinitions implements Cloneable {
             stream.writeShort(this.renderEmote);
         }
 
-        // for (int index = 0; index < this.options.length; index++) {
-        // 	   stream.writeByte(150 + index);
-        // 	   if (this.options[index] == null || this.options[index].equals("null"))
-        // 		   stream.writeString("Hidden");
-        // 	   else
-        // 		   stream.writeString(this.options[index]);
-        // }
-
-        Iterator i$;
-        if (this.clientScriptData != null) {
-            stream.writeByte(249);
-            stream.writeByte(this.clientScriptData.size());
-            for (i$ = this.clientScriptData.keySet().iterator(); i$.hasNext(); ) {
-                int key = ((Integer) i$.next()).intValue();
-                Object value = this.clientScriptData.get(Integer.valueOf(key));
-                stream.writeByte((value instanceof String) ? 1 : 0);
-                stream.write24BitInt(key);
-                if ((value instanceof String))
-                    stream.writeString((String) value);
-                else {
-                    stream.writeInt(((Integer) value).intValue());
-                }
-            }
-        }
-
         stream.writeByte(0);
+
         byte[] var61 = new byte[stream.getOffset()];
         stream.setOffset(0);
         stream.getBytes(var61, 0, var61.length);
