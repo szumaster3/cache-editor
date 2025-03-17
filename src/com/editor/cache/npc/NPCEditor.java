@@ -532,12 +532,6 @@ public class NPCEditor extends JFrame {
             this.defs.npcHeight = Integer.parseInt(this.npcHeight.getText());
             this.defs.npcWidth = Integer.parseInt(this.npcWidth.getText());
             this.defs.walkMask = (byte) Integer.parseInt(this.walkMask.getText());
-            try {
-                String input = this.headIcons.getText().trim();
-                this.defs.headIcons = input.isEmpty() ? -1 : Integer.parseInt(input);
-            } catch (NumberFormatException e) {
-                this.defs.headIcons = -1;
-            }
             this.defs.respawnDirection = (byte) Integer.parseInt(this.respawnDirection.getText());
             this.defs.renderEmote = Integer.parseInt(this.renderEmote.getText());
             String[] var15;
