@@ -70,7 +70,7 @@ class ToolSelection : JFrame() {
             arrayOf(
                 "Item Editor",
                 "NPC Editor",
-                "Object Editor",
+                "Object Editor [WIP]",
                 "Transfer Region",
                 "Transfer Interface",
                 "Transfer Index",
@@ -79,8 +79,8 @@ class ToolSelection : JFrame() {
                 "Export Item list",
                 "Pack model",
                 "Pick a Color",
-                "File Manager",
-                "Model Viewer"
+                "File Manager [WIP]",
+                "Model Viewer [WIP]"
 
             )
         )
