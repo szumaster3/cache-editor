@@ -1,8 +1,8 @@
 package com.editor.cache.npc
 
-import com.alex.Utils.getNPCDefinitionsSize
-import com.alex.loaders.npcs.NPCDefinitions
-import com.alex.store.Store
+import com.alex.util.Utils.getNPCDefinitionsSize
+import com.alex.defs.npcs.NPCDefinitions
+import com.alex.filestore.Store
 import com.editor.cache.item.ItemSelection
 import console.Main.log
 import java.awt.EventQueue

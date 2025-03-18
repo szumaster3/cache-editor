@@ -1,8 +1,8 @@
 package com.editor.cache.npc;
 
-import com.alex.loaders.npcs.NPCDefinitions;
+import com.alex.defs.npcs.NPCDefinitions;
 import console.Main;
-import com.editor.util.Utils;
+import com.alex.util.Utils;
 
 import javax.swing.*;
 import javax.swing.GroupLayout.Alignment;
@@ -157,6 +157,7 @@ public class NPCEditor extends JFrame {
         EventQueue.invokeLater(new Runnable() {
             public void run() {
                 (new NPCEditor()).setVisible(true);
+
             }
         });
     }

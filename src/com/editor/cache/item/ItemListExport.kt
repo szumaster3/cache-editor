@@ -1,8 +1,8 @@
 package com.editor.cache.item
 
-import com.alex.Utils.getItemDefinitionsSize
-import com.alex.loaders.items.ItemDefinitions
-import com.alex.store.Store
+import com.alex.util.Utils.getItemDefinitionsSize
+import com.alex.defs.items.ItemDefinitions
+import com.alex.filestore.Store
 import java.io.BufferedWriter
 import java.io.File
 import java.io.FileWriter

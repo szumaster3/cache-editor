@@ -1,6 +1,6 @@
 package com.editor.cache.item
 
-import com.alex.store.Store
+import com.alex.filestore.Store
 import console.Main.log
 import java.awt.event.ActionEvent
 import java.io.File
@@ -53,7 +53,7 @@ internal class ModelDumper(cache: String) : JFrame() {
         pack()
     }
 
-    private fun submitAction(cache: String) {
+    public fun submitAction(cache: String) {
         val dir = File("data/export/")
         dir.mkdirs()
 

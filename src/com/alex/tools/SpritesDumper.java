@@ -1,7 +1,7 @@
 package com.alex.tools;
 
-import com.alex.store.Index;
-import com.alex.store.Store;
+import com.alex.filestore.Index;
+import com.alex.filestore.Store;
 
 import javax.imageio.ImageIO;
 import javax.imageio.stream.ImageOutputStream;
@@ -45,7 +45,7 @@ public class SpritesDumper {
     }
 
     public static void main(String[] args) throws IOException {
-        Store cache = new Store("718/rscache/");
+        Store cache = new Store("");
         Index sprites = cache.getIndexes()[32];
         int[] arr$ = sprites.getTable().getValidArchiveIds();
         int len$ = arr$.length;

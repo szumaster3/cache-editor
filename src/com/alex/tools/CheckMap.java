@@ -1,7 +1,7 @@
 package com.alex.tools;
 
-import com.alex.store.Store;
-import com.alex.Utils;
+import com.alex.filestore.Store;
+import com.alex.util.Utils;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
@@ -11,7 +11,7 @@ import java.util.Random;
 
 public class CheckMap {
     public static void main(String[] args) throws IOException {
-        Store cache = new Store("C:/Users/yvonne � christer/Dropbox/Source/data/562cache/", false, null);
+        Store cache = new Store("data/rebuild", false, null);
         double land = 0.0D;
         double map = 0.0D;
 

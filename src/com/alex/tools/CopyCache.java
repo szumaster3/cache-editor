@@ -1,13 +1,13 @@
 package com.alex.tools;
 
-import com.alex.store.Index;
-import com.alex.store.Store;
+import com.alex.filestore.Index;
+import com.alex.filestore.Store;
 
 import java.io.IOException;
 
 public class CopyCache {
     public static void main(String[] args) throws IOException {
-        Store cache = new Store("718/cache/");
+        Store cache = new Store("");
         Store newCache = new Store("718/cacheCleaned/");
 
         for (int i = 0; i < cache.getIndexes().length; ++i) {

@@ -1,16 +1,16 @@
 package com.alex.tools;
 
-import com.alex.store.Archive;
-import com.alex.store.ArchiveReference;
-import com.alex.store.Index;
-import com.alex.store.Store;
+import com.alex.filestore.Archive;
+import com.alex.filestore.ArchiveReference;
+import com.alex.filestore.Index;
+import com.alex.filestore.Store;
 
 import java.io.IOException;
 import java.util.Random;
 
 public class ArchiveValidation {
     public static void main(String[] args) throws IOException {
-        Store rscache = new Store("718/cache/");
+        Store rscache = new Store("");
 
         for (int i = 0; i < rscache.getIndexes().length; ++i) {
             if (i != 5) {

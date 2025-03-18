@@ -257,4 +257,9 @@ public final class InputStream extends Stream {
             return -49152 + readUnsignedShort();
         return -64 + readUnsignedByte();
     }
+
+    public static int[] getBitMask() {
+        return BIT_MASK;
+    }
+
 }

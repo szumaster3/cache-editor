@@ -12,11 +12,9 @@ import com.editor.cache.npc.NPCListExport
 import com.editor.cache.npc.NPCSelection
 import com.editor.cache.`object`.ObjectSelection
 import com.editor.cache.region.RegionEditor
-import com.editor.model.ColorPicker
-import java.awt.Cursor
-import java.awt.Dimension
-import java.awt.FlowLayout
-import java.awt.GridLayout
+import com.editor.misc.ColorPicker
+import com.editor.model.frame.ModelFrame
+import java.awt.*
 import java.awt.event.ActionEvent
 import java.io.*
 import javax.swing.*
@@ -31,6 +29,7 @@ class ToolSelection : JFrame() {
     private val toolSelected = "ToolSelection"
     private val startMessage = "Tool started."
     private val failMessage = "Failed to start."
+    private var modelRendererThread: Thread? = null
 
     init {
         try {
@@ -80,7 +79,9 @@ class ToolSelection : JFrame() {
                 "Export Item list",
                 "Pack model",
                 "Pick a Color",
-                "File Manager"
+                "File Manager",
+                "Model Viewer"
+
             )
         )
 
@@ -194,10 +195,19 @@ class ToolSelection : JFrame() {
             } catch (e: Exception) {
                 Main.log(toolSelected, failMessage)
             }
-
+            12 -> try {
+                SwingUtilities.invokeLater {
+                    val frame = ModelFrame(cache)
+                    frame.isVisible = true
+                }
+                Main.log(toolSelected, startMessage)
+            } catch (e: Exception) {
+                Main.log(toolSelected, failMessage)
+            }
             else -> Main.log(toolSelected, "No Tool Selected!")
         }
     }
+
 
     private fun loadCacheButtonHandler(evt: ActionEvent) {
         val fc = JFileChooser().apply { fileSelectionMode = JFileChooser.DIRECTORIES_ONLY }

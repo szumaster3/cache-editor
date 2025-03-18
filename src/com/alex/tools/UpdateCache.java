@@ -1,10 +1,10 @@
 package com.alex.tools;
 
-import com.alex.loaders.images.IndexedColorImageFile;
-import com.alex.loaders.items.ItemDefinitions;
-import com.alex.store.Index;
-import com.alex.store.Store;
-import com.alex.Utils;
+import com.alex.defs.images.IndexedColorImageFile;
+import com.alex.defs.items.ItemDefinitions;
+import com.alex.filestore.Index;
+import com.alex.filestore.Store;
+import com.alex.util.Utils;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
@@ -78,7 +78,7 @@ public class UpdateCache {
     }
 
     public static void main77(String[] args) throws IOException {
-        Store originalCache = new Store("cache667/", false);
+        Store originalCache = new Store("", false);
         Store cache = new Store("cache667_2/", false);
 
         for (int i = 1610; i < 1616; ++i) {
@@ -197,7 +197,7 @@ public class UpdateCache {
         boolean addOldItems = true;
         Store rscache = new Store("cache697/");
         Store cache = new Store("cache667_2/", false);
-        Store originalCache = new Store("cache667/", false);
+        Store originalCache = new Store("", false);
         if (addOldItems) {
             cache.resetIndex(19, false, false, 2);
         }

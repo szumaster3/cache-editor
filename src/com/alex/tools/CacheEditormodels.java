@@ -1,8 +1,8 @@
 package com.alex.tools;
 
-import com.alex.loaders.items.ItemDefinitions;
-import com.alex.store.Store;
-import com.alex.Utils;
+import com.alex.defs.items.ItemDefinitions;
+import com.alex.filestore.Store;
+import com.alex.util.Utils;
 
 import javax.imageio.ImageIO;
 import javax.imageio.stream.ImageOutputStream;
@@ -102,8 +102,8 @@ public class CacheEditormodels {
             divideBackgrounds();
         }
 
-        Store rscache = new Store(beta ? "718/rsCacheBeta/" : "718/rscache/");
-        Store cache = new Store(beta ? "718/cacheBeta/" : "718/cache/");
+        Store rscache = new Store(beta ? "" : "");
+        Store cache = new Store(beta ? "" : "");
         cache.resetIndex(7, false, false, 2);
 
         boolean result;
@@ -116,7 +116,7 @@ public class CacheEditormodels {
 
         if (addNewItemDefinitions) {
             System.out.println("Packing old item definitions...");
-            Store var12 = new Store("cache667/", false);
+            Store var12 = new Store("", false);
             short currentSize = 30000;
             int oldSize = Utils.getItemDefinitionsSize(var12);
 

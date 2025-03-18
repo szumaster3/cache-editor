@@ -1,7 +1,7 @@
 package com.alex.tools;
 
-import com.alex.store.Index;
-import com.alex.store.Store;
+import com.alex.filestore.Index;
+import com.alex.filestore.Store;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
@@ -15,7 +15,7 @@ public class ProtectCache {
         boolean encryptTables = false;
         Store cache = new Store("718/cacheEncrypted/");
         if (encryptMaps) {
-            Store var13 = new Store("718/rscache/");
+            Store var13 = new Store("");
             Index var14 = cache.getIndexes()[5];
             Index rsIndex = var13.getIndexes()[5];
 

@@ -1,12 +1,11 @@
 package com.editor.cache.object;
 
-import com.alex.loaders.objects.ObjectDefinitions;
+import com.alex.defs.objects.ObjectDefinitions;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.Map;
 
 public class ObjectEditor extends JFrame {
     private ObjectDefinitions defs;

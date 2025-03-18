@@ -1,8 +1,8 @@
 package com.editor.cache.item;
 
-import com.alex.loaders.items.ItemDefinitions;
-import com.alex.store.Store;
-import com.alex.Utils;
+import com.alex.defs.items.ItemDefinitions;
+import com.alex.filestore.Store;
+import com.alex.util.Utils;
 import console.Main;
 
 import javax.swing.*;
