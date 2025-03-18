@@ -13,6 +13,7 @@ import com.editor.cache.npc.NPCSelection
 import com.editor.cache.`object`.ObjectSelection
 import com.editor.cache.region.RegionEditor
 import com.editor.model.ColorPicker
+import java.awt.Cursor
 import java.awt.Dimension
 import java.awt.FlowLayout
 import java.awt.GridLayout
@@ -33,7 +34,7 @@ class ToolSelection : JFrame() {
 
     init {
         try {
-            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName())
+            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
         } catch (e: Exception) {
             e.printStackTrace()
         }
@@ -56,8 +57,8 @@ class ToolSelection : JFrame() {
         val jMenuBar1 = JMenuBar()
         val jMenu1 = JMenu("File")
         val exitButton = JMenuItem("Exit Program")
-
         val buttonSize = Dimension(100, 30)
+        val submitButtonSize = Dimension(90, 22)
         setupButton(loadCacheButton, buttonSize, this::loadCacheButtonHandler)
         setupButton(loadLastCacheButton, buttonSize, this::loadLastCacheButtonHandler)
 
@@ -83,7 +84,7 @@ class ToolSelection : JFrame() {
             )
         )
 
-        submitButton.addActionListener { evt -> submitButtonActionPerformed(evt) }
+        setupButton(submitButton, submitButtonSize, this::submitButtonActionPerformed)
         alignmentPanel3.add(selectionBox)
         alignmentPanel3.add(submitButton)
 
@@ -92,7 +93,7 @@ class ToolSelection : JFrame() {
         jMenuBar1.add(jMenu1)
         this.jMenuBar = jMenuBar1
 
-        this.contentPane.layout = GridLayout(3, 1, 5, 10)
+        this.contentPane.layout = GridLayout(3, 1, 5, 5)
         this.add(alignmentPanel1)
         this.add(alignmentPanel2)
         this.add(alignmentPanel3)
@@ -107,6 +108,7 @@ class ToolSelection : JFrame() {
             minimumSize = size
             maximumSize = size
             addActionListener(action)
+            cursor = Cursor.getPredefinedCursor(Cursor.HAND_CURSOR)
         }
     }
 
@@ -134,11 +136,13 @@ class ToolSelection : JFrame() {
             } catch (e: IOException) {
                 Main.log(toolSelected, failMessage)
             }
+
             3 -> try {
                 RegionEditor(cache).isVisible = true; Main.log(toolSelected, startMessage)
             } catch (e: IOException) {
                 Main.log(toolSelected, failMessage)
             }
+
             4 -> {
                 InterfaceEditor(cache).isVisible = true; Main.log(toolSelected, startMessage)
             }
@@ -182,6 +186,7 @@ class ToolSelection : JFrame() {
             } catch (e: IOException) {
                 Main.log(toolSelected, failMessage)
             }
+
             11 -> try {
                 val lib = CacheLibrary.create(cache)
                 FileManager(lib).isVisible = true
@@ -189,6 +194,7 @@ class ToolSelection : JFrame() {
             } catch (e: Exception) {
                 Main.log(toolSelected, failMessage)
             }
+
             else -> Main.log(toolSelected, "No Tool Selected!")
         }
     }
