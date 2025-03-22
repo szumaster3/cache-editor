@@ -12,7 +12,7 @@ This project is not intended for commercial use but rather serves as a learning 
 ***
 
 ### Legal Notice
-This project is an independent educational tool and is **not affiliated with, endorsed by, or associated with All trademarks and copyrights related to RuneScape are the property of Jagex Ltd. or RuneScape**. It does not contain or distribute proprietary assets from RuneScape.
+This project is an independent educational tool and is **not affiliated with, endorsed by, or associated with All trademarks and copyrights related to RuneScape are the property of Jagex Ltd.** It does not contain or distribute proprietary assets from RuneScape.
 
 This tool is designed for **analyzing and modifying game data structures for educational and research purposes only**. It does not interact with live game servers or facilitate unauthorized modifications to any proprietary software.
 
@@ -94,3 +94,6 @@ To build the project, you will need to have Gradle installed on your system. Fol
 ### Additional Information
 For detailed documentation and troubleshooting, please refer to the repository's issues and discussions.
 
+### Contact
+
+[530editor@protonmail.com](mailto:530editor@protonmail.com)
