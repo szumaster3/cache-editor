@@ -13,11 +13,11 @@ import java.math.BigInteger
 import java.util.*
 import kotlin.math.pow
 
+
 /**
  * The type Utils.
  */
 object Utils {
-
 
     @JvmField
     var inputFolder: String = ""
@@ -338,5 +338,35 @@ object Utils {
             println("Failed packing model $modelId")
             -1
         }
+    }
+
+    @JvmStatic
+    fun getTextureDiffuseSize(store: Store): Int {
+        return store.indexes[9].lastArchiveId
+    }
+
+    @JvmStatic
+    fun getSpriteDefinitionSize(store: Store): Int {
+        return store.indexes[8].lastArchiveId
+    }
+
+    @JvmStatic
+    fun getParticleConfigSize(store: Store): Int {
+        return store.indexes[27].getLastFileId(0) + 1
+    }
+
+    @JvmStatic
+    fun getMagnetConfigSize(store: Store): Int {
+        return store.indexes[27].getLastFileId(1) + 1
+    }
+
+    @JvmStatic
+    fun getConfigArchive(id: Int, bits: Int): Int {
+        return (id) shr bits
+    }
+
+    @JvmStatic
+    fun getConfigFile(id: Int, bits: Int): Int {
+        return (id) and (1 shl bits) - 1
     }
 }

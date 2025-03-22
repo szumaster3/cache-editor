@@ -1,17 +1,20 @@
 package com.alex.defs.animations;
 
+import com.alex.filestore.Store;
 import com.alex.io.InputStream;
 import com.alex.io.OutputStream;
-import com.alex.filestore.Store;
 
 import java.util.concurrent.ConcurrentHashMap;
 
 public class AnimationDefinitions implements Cloneable {
+    private static final ConcurrentHashMap<Integer, AnimationDefinitions> animationDefinitions = new ConcurrentHashMap<>();
+    private static final int SEQUENCES_INDEX = 20;
     public static Store cache;
     public static int id;
+    public static int[] frames;
+    public static int[] delays;
     public int loopCycles = 99;
     public int anInt2137;
-    public static int[] frames;
     public int anInt2140 = -1;
     public boolean aBoolean2141 = false;
     public int priority = 5;
@@ -22,7 +25,6 @@ public class AnimationDefinitions implements Cloneable {
     public boolean[] aBooleanArray2149;
     public int[] anIntArray2151;
     public boolean aBoolean2152 = false;
-    public static int[] delays;
     public int anInt2155 = 2;
     public boolean aBoolean2158 = false;
     public boolean aBoolean2159 = false;
@@ -33,11 +35,8 @@ public class AnimationDefinitions implements Cloneable {
     public int[] anIntArray1362;
     public boolean effect2Sound;
 
-    private static final ConcurrentHashMap<Integer, AnimationDefinitions> animationDefinitions = new ConcurrentHashMap<>();
-    private static final int SEQUENCES_INDEX = 20;
-
     public static AnimationDefinitions getAnimationDefinitions(int id, Store store) {
-        AnimationDefinitions def = (AnimationDefinitions) animationDefinitions.get(Integer.valueOf(id));
+        AnimationDefinitions def = animationDefinitions.get(Integer.valueOf(id));
 
         if (def == null) {
             def = new AnimationDefinitions();
@@ -53,15 +52,6 @@ public class AnimationDefinitions implements Cloneable {
         }
 
         return def;
-    }
-
-    public Object clone() {
-        try {
-            return super.clone();
-        } catch (CloneNotSupportedException var2) {
-            var2.printStackTrace();
-            return null;
-        }
     }
 
     private static void printAnimationDetails(int emoteId) {
@@ -132,6 +122,15 @@ public class AnimationDefinitions implements Cloneable {
         }
     }
 
+    public Object clone() {
+        try {
+            return super.clone();
+        } catch (CloneNotSupportedException var2) {
+            var2.printStackTrace();
+            return null;
+        }
+    }
+
     private void readValueLoop(InputStream stream) {
         while (true) {
             int opcode = stream.readUnsignedByte();
@@ -170,11 +169,11 @@ public class AnimationDefinitions implements Cloneable {
         switch (opcode) {
             case 1:
                 index = stream.readUnsignedShort();
-                this.delays = new int[index];
-                this.frames = new int[index];
+                delays = new int[index];
+                frames = new int[index];
                 for (length = 0; length < index; length++) {
-                    this.delays[length] = stream.readUnsignedShort();
-                    this.frames[length] = stream.readUnsignedShort() + (stream.readUnsignedShort() << 16);
+                    delays[length] = stream.readUnsignedShort();
+                    frames[length] = stream.readUnsignedShort() + (stream.readUnsignedShort() << 16);
                 }
                 break;
             case 2:
@@ -273,11 +272,11 @@ public class AnimationDefinitions implements Cloneable {
     }
 
     public int getArchiveId() {
-        return this.id >>> 134238215;
+        return id >>> 134238215;
     }
 
     public int getFileId() {
-        return 127 & this.id;
+        return 127 & id;
     }
 
     public byte[] encode() {

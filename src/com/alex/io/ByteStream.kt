@@ -61,5 +61,25 @@ class ByteStream
     fun readBytes(paramInt1: Int, paramInt2: Int, paramInt3: Int, paramArrayOfByte: ByteArray) {
         for (i in paramInt2 until paramInt2 + paramInt1) paramArrayOfByte[i] = Buffer[(Offset++)]
     }
+
+
+    companion object {
+        @JvmStatic
+        fun nextPowerOfTwo(n: Int): Int {
+            var n = n
+            if (n == 0) return 1
+
+            // If n is already a power of two, return it:
+            if ((n and (n - 1)) == 0) return n
+
+            n = n or (n shr 1)
+            n = n or (n shr 2)
+            n = n or (n shr 4)
+            n = n or (n shr 8)
+            n = n or (n shr 16)
+
+            return n + 1
+        }
+    }
 }
 

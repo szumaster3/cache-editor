@@ -779,7 +779,7 @@ public class NPCEditor extends JFrame {
             this.defs.write(NPCSelection.STORE);
             this.ns.updateNPCDefs(this.defs);
         } catch (Exception var18) {
-            Main.log("NPCEditor", "Cannot save. Please check for mistypes.");
+            Main.log("NPCEditor", "Cannot write. Please check for mistypes.");
             System.out.println(var18);
         }
 

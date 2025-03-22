@@ -1,7 +1,7 @@
 package com.alex.defs.interfaces
 
-import com.alex.io.InputStream
 import com.alex.filestore.Store
+import com.alex.io.InputStream
 import com.alex.util.Utils
 import java.awt.Component
 import java.awt.Image
@@ -87,7 +87,7 @@ class Interface @JvmOverloads constructor(
             )
 
             for (componentId in components.indices) {
-               // components[componentId] = IComponent()
+                // components[componentId] = IComponent()
                 components[componentId]!!.hash = this.id shl 16 or componentId
                 val data = cache.indexes[3].getFile(this.id, componentId)
                     ?: throw RuntimeException("Interface " + this.id + ", component " + componentId + " data is null.")

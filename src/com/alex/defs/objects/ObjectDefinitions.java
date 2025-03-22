@@ -4,33 +4,28 @@ import com.alex.filestore.Store;
 import com.alex.io.InputStream;
 import com.alex.io.OutputStream;
 
-import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
 
 
 public class ObjectDefinitions implements Cloneable {
 
+    public static int anInt3832;
+    public static int anInt3836;
+    public static int anInt3842;
+    public static int anInt3843;
+    public static int anInt3846;
     public HashMap<Integer, Object> clientScriptData;
     public short[] originalModelColors;
     public int[] childrenIds;
-    public static int anInt3832;
-    int[] anIntArray3833 = null;
     public int anInt3834;
     public int anInt3835;
-    public static int anInt3836;
     public byte aByte3837;
     public int anInt3838 = -1;
     public boolean aBoolean3839;
     public int anInt3840;
     public int anInt3841;
-    public static int anInt3842;
-    public static int anInt3843;
     public int anInt3844;
-    boolean aBoolean3845;
-    public static int anInt3846;
     public byte aByte3847;
     public byte aByte3849;
     public int anInt3850;
@@ -40,21 +35,12 @@ public class ObjectDefinitions implements Cloneable {
     public int anInt3855;
     public boolean notCliped;
     public int anInt3857;
-    private byte[] aByteArray3858;
-    int[] anIntArray3859;
     public int anInt3860;
     public String[] options;
-    int configFileId;
     public short[] modifiedModelColors;
     public int anInt3865;
-    boolean aBoolean3866;
-    boolean aBoolean3867;
     public boolean projectileCliped;
-    private int[] anIntArray3869;
-    boolean aBoolean3870;
     public int sizeY;
-    boolean aBoolean3872;
-    boolean aBoolean3873;
     public int thirdInt;
     public int anInt3875;
     public int anInt3876;
@@ -64,48 +50,51 @@ public class ObjectDefinitions implements Cloneable {
     public int anInt3881;
     public int anInt3882;
     public int anInt3883;
-    Object loader;
     public int anInt3889;
     public int sizeX;
     public boolean aBoolean3891;
     public int anInt3892;
     public int secondInt;
-    boolean aBoolean3894;
-    boolean aBoolean3895;
     public int anInt3896;
     public int configId;
-    private byte[] aByteArray3899;
     public int anInt3900;
     public String name;
     public int anInt3902;
     public int anInt3904;
     public int anInt3905;
-    boolean aBoolean3906;
-    int[] anIntArray3908;
     public byte aByte3912;
     public int anInt3913;
     public byte aByte3914;
     public int anInt3915;
-    private int[][] anIntArrayArray3916;
     public int anInt3917;
     public short[] modifiedTextureColors;
     public short[] originalTextureColors;
     public int anInt3921;
-    private Object aClass194_3922;
+    public int anInt3925;
+    public int[] models;
+    public int[] arrayForModelId;
+    public int id;
+    int[] anIntArray3833 = null;
+    boolean aBoolean3845;
+    int[] anIntArray3859;
+    int configFileId;
+    boolean aBoolean3866;
+    boolean aBoolean3867;
+    boolean aBoolean3870;
+    boolean aBoolean3872;
+    boolean aBoolean3873;
+    Object loader;
+    boolean aBoolean3894;
+    boolean aBoolean3895;
+    boolean aBoolean3906;
+    int[] anIntArray3908;
     boolean aBoolean3923;
     boolean aBoolean3924;
-    public int anInt3925;
-    public int models[];
-    public int arrayForModelId[];
-    public int id;
-
-    public static ObjectDefinitions getObjectDefinition(Store cache, int itemId) {
-        return getObjectDefinition(cache, itemId, true);
-    }
-
-    public static ObjectDefinitions getObjectDefinition(Store cache, int itemId, boolean load) {
-        return new ObjectDefinitions(cache, itemId, load);
-    }
+    private byte[] aByteArray3858;
+    private int[] anIntArray3869;
+    private byte[] aByteArray3899;
+    private int[][] anIntArrayArray3916;
+    private Object aClass194_3922;
 
     public ObjectDefinitions(Store store, int id) {
         this(store, id, true);
@@ -117,6 +106,14 @@ public class ObjectDefinitions implements Cloneable {
         setDefaultOptions();
         if (load)
             loadObjectDefinitions(store);
+    }
+
+    public static ObjectDefinitions getObjectDefinition(Store cache, int itemId) {
+        return getObjectDefinition(cache, itemId, true);
+    }
+
+    public static ObjectDefinitions getObjectDefinition(Store cache, int itemId, boolean load) {
+        return new ObjectDefinitions(cache, itemId, load);
     }
 
     public void setDefaultOptions() {
@@ -202,7 +199,7 @@ public class ObjectDefinitions implements Cloneable {
         //         int key = entry.getKey();
         //         Object value = entry.getValue();
         //         stream.writeByte((value instanceof String) ? 1 : 0);
-        //         stream.write24BitInt(key);
+        //         stream.writeMedium(key);
         //         if (value instanceof String) {
         //             stream.writeString((String) value);
         //         } else {
@@ -380,20 +377,20 @@ public class ObjectDefinitions implements Cloneable {
                                                                                                                                                 if (opcode == 169) {
                                                                                                                                                     aBoolean3845 = true;
                                                                                                                                                     //added opcode
-                                                                                                                                                }else if (opcode == 170) {
+                                                                                                                                                } else if (opcode == 170) {
                                                                                                                                                     int anInt3383 = stream.readUnsignedSmart();
                                                                                                                                                     //added opcode
-                                                                                                                                                }else if (opcode == 171) {
+                                                                                                                                                } else if (opcode == 171) {
                                                                                                                                                     int anInt3362 = stream.readUnsignedSmart();
                                                                                                                                                     //added opcode
-                                                                                                                                                }else if (opcode == 173) {
+                                                                                                                                                } else if (opcode == 173) {
                                                                                                                                                     int anInt3302 = stream.readUnsignedShort();
                                                                                                                                                     int anInt3336 = stream.readUnsignedShort();
                                                                                                                                                     //added opcode
-                                                                                                                                                }else if (opcode == 177) {
+                                                                                                                                                } else if (opcode == 177) {
                                                                                                                                                     boolean ub = true;
                                                                                                                                                     //added opcode
-                                                                                                                                                }else if (opcode == 178) {
+                                                                                                                                                } else if (opcode == 178) {
                                                                                                                                                     int db = stream.readUnsignedByte();
                                                                                                                                                 } else if (opcode == 249) {
                                                                                                                                                     int i_58_ = stream.readUnsignedByte();
@@ -557,7 +554,7 @@ public class ObjectDefinitions implements Cloneable {
                     sizeY = stream.readUnsignedByte();
             } else
                 sizeX = stream.readUnsignedByte();
-        } else{
+        } else {
             name = stream.readString();
         }
     }
@@ -657,7 +654,7 @@ public class ObjectDefinitions implements Cloneable {
 
     @Override
     public String toString() {
-        return id+" - "+name;
+        return id + " - " + name;
     }
 
     public int getClipType() {

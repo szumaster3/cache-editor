@@ -256,7 +256,7 @@ class ToolSelection : JFrame() {
             }
             Main.log("ToolSelection", "cache path saved.")
         } catch (e: IOException) {
-            Main.log("ToolSelection", "Failed to save cache path.")
+            Main.log("ToolSelection", "Failed to write cache path.")
         }
     }
 

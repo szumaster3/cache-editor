@@ -1,8 +1,8 @@
 package com.alex.defs.images
 
+import com.alex.filestore.Store
 import com.alex.io.InputStream
 import com.alex.io.OutputStream
-import com.alex.filestore.Store
 import java.awt.image.BufferedImage
 
 /**
@@ -315,7 +315,7 @@ class IndexedColorImageFile {
 
         container = 0
         while (container < pallete!!.size) {
-            stream.write24BitInt(pallete!![container])
+            stream.writeMedium(pallete!![container])
             ++container
         }
 

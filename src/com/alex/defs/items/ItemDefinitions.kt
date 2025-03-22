@@ -1,8 +1,8 @@
 package com.alex.defs.items
 
+import com.alex.filestore.Store
 import com.alex.io.InputStream
 import com.alex.io.OutputStream
-import com.alex.filestore.Store
 
 /**
  * The type Item definitions.
@@ -833,7 +833,7 @@ class ItemDefinitions @JvmOverloads constructor(
             val iterator = clientScriptData!!.keys.iterator()
 
             while (iterator.hasNext()) {
-                val key = iterator.next() as Int
+                val key = iterator.next()
                 val value = clientScriptData!![key]
 
                 // Skip the entry if the value is not a String
@@ -1204,7 +1204,7 @@ class ItemDefinitions @JvmOverloads constructor(
                 data = (var5.next() as Int)
                 val value2 = clientScriptData!![data]
                 stream.writeByte(if (value2 is String) 1 else 0)
-                stream.write24BitInt(data)
+                stream.writeMedium(data)
                 if (value2 is String) {
                     stream.writeString(value2)
                 } else {

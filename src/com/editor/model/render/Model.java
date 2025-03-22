@@ -199,14 +199,14 @@ public class Model implements Cloneable {
 				  if (newformat < 15) {
 					  stream.writeShort(aShortArray1496[i_132_]);//stream_73_
 			          if (newformat >= 14)
-			        	  stream.write24BitInt(aShortArray1530[i_132_]);//stream_73_
+			        	  stream.writeMedium(aShortArray1530[i_132_]);//stream_73_
 			            else
 			            	stream.writeShort(aShortArray1530[i_132_]);//stream_73_
 		            	stream.writeShort(aShortArray1504[i_132_]);//stream_73_
 				  } else {
-					  stream.write24BitInt(aShortArray1496[i_132_]);//stream_73_
-					  stream.write24BitInt(aShortArray1530[i_132_]);//stream_73_
-					  stream.write24BitInt(aShortArray1504[i_132_]);//stream_73_
+					  stream.writeMedium(aShortArray1496[i_132_]);//stream_73_
+					  stream.writeMedium(aShortArray1530[i_132_]);//stream_73_
+					  stream.writeMedium(aShortArray1504[i_132_]);//stream_73_
 				  }
 				  //
 				  stream.writeByte(aByteArray1523[i_132_]);//stream_74_

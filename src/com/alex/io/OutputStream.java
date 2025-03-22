@@ -170,7 +170,7 @@ public final class OutputStream extends Stream {
         this.writeByte(i >> 8);
     }
 
-    public void write24BitInt(int i) {
+    public void writeMedium(int i) {
         this.writeByte(i >> 16);
         this.writeByte(i >> 8);
         this.writeByte(i);
@@ -310,6 +310,14 @@ public final class OutputStream extends Stream {
             var10000[bytePos] = (byte) (var10000[bytePos] | (value & BIT_MASK[numBits]) << bitOffset - numBits);
         }
 
+    }
+
+    public void writeSmartInt(int i) {
+        if (i >= 32767 && i >= 0) {
+            this.writeInt(i - Integer.MAX_VALUE - 1);
+        } else {
+            this.writeShort(i >= 0 ? i : 32767);
+        }
     }
 
     public void setBuffer(byte[] buffer) {

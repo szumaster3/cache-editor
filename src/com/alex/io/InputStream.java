@@ -245,7 +245,9 @@ public final class InputStream extends Stream {
             return this.readInt() & Integer.MAX_VALUE;
         }
     }
-
+    public int readMedium() {
+        return (this.readUnsignedByte() << 16) + (this.readUnsignedByte() << 8) + this.readUnsignedByte();
+    }
     public int readUnsignedSmart() {
         int i = 255 & this.buffer[this.offset];
         return i >= 128 ? -32768 + this.readUnsignedShort() : this.readUnsignedByte();
@@ -262,4 +264,22 @@ public final class InputStream extends Stream {
         return BIT_MASK;
     }
 
+    public int readShortSmart() {
+        int value = this.buffer[this.offset] & 255;
+        return value < 128 ? this.readUnsignedByte() - 64 : this.readUnsignedShort() - 49152;
+    }
+
+    public int readSmartInt() {
+        if (~this.buffer[this.offset] <= -1) {
+            int value = this.readUnsignedShort();
+            return value == 32767 ? -1 : value;
+        } else {
+            return this.readInt() & Integer.MAX_VALUE;
+        }
+    }
+
+    public int read24BitUnsignedInteger() {
+        offset += 3;
+        return ((buffer[offset - 1] & 0xff) + (((buffer[offset - 3] & 0xff) << 16) + ((buffer[offset - 2] & 0xff) << 8)));
+    }
 }

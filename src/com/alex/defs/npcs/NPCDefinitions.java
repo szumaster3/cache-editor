@@ -1,8 +1,8 @@
 package com.alex.defs.npcs;
 
+import com.alex.filestore.Store;
 import com.alex.io.InputStream;
 import com.alex.io.OutputStream;
-import com.alex.filestore.Store;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -1265,17 +1265,21 @@ public final class NPCDefinitions implements Cloneable {
     public void setNpcChatHeads(int[] npcChatHeads) {
         this.anIntArray892 = npcChatHeads;
     }
-    public void setHeadIcon(int headIcon) {
-        this.headIcons = headIcon;
-    }
+
     public int[] getOriginalModelColors() {
         return originalModelColors;
     }
+
+    public void setOriginalModelColors(int[] originalModelColors) {
+        this.originalModelColors = originalModelColors;
+    }
+
     public int getHeadIcon() {
         return headIcons != 0 ? headIcons : -1;
     }
-    public void setOriginalModelColors(int[] originalModelColors) {
-        this.originalModelColors = originalModelColors;
+
+    public void setHeadIcon(int headIcon) {
+        this.headIcons = headIcon;
     }
 
     public int[] getModifiedModelColors() {

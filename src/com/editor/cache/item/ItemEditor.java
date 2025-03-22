@@ -1161,7 +1161,7 @@ public class ItemEditor extends JFrame {
             this.defs.write(ItemSelection.STORE);
             this.is.updateItemDefs(this.defs);
         } catch (Exception var201) {
-            Main.log("ItemEditor", "Cannot save. Please check for mistypes.");
+            Main.log("ItemEditor", "Cannot write. Please check for mistypes.");
         }
 
     }
