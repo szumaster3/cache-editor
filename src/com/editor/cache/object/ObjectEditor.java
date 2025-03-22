@@ -4,9 +4,8 @@ import com.alex.defs.objects.ObjectDefinitions;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.util.Arrays;
+import java.io.*;
+import java.nio.file.*;
 
 public class ObjectEditor extends JFrame {
     private ObjectDefinitions defs;
@@ -18,9 +17,14 @@ public class ObjectEditor extends JFrame {
     private JTextField modelIds;
     private JTextField originalColorsField;
     private JTextField objectOptions;
+    private JTextField textureColorsField;
     private JCheckBox projectileClipped;
     private JTextField clipType;
-    private JButton saveButton, cancelButton;
+    private JTextField configFileIdField;
+    private JTextField configIdField;
+    private JButton saveButton, cancelButton, saveToFileButton;
+
+    private JCheckBox clippedCheckBox;
 
     public ObjectEditor(ObjectSelection os, ObjectDefinitions defs) {
         this.defs = defs;
@@ -43,38 +47,38 @@ public class ObjectEditor extends JFrame {
 
         gbc.gridx = 0;
         gbc.gridy = 0;
+        gbc.gridwidth = 2;
+        JLabel objectIdLabel = new JLabel("Object ID: " + defs.id, SwingConstants.CENTER);
+        panel.add(objectIdLabel, gbc);
+        gbc.gridwidth = 1;
+
+        gbc.gridx = 0;
+        gbc.gridy = 1;
         panel.add(new JLabel("Name"), gbc);
         objectName = new JTextField(20);
         gbc.gridx = 1;
         panel.add(objectName, gbc);
 
         gbc.gridx = 0;
-        gbc.gridy = 1;
+        gbc.gridy = 2;
         panel.add(new JLabel("Size X"), gbc);
         sizeX = new JTextField(20);
         gbc.gridx = 1;
         panel.add(sizeX, gbc);
 
         gbc.gridx = 0;
-        gbc.gridy = 2;
+        gbc.gridy = 3;
         panel.add(new JLabel("Size Y"), gbc);
         sizeY = new JTextField(20);
         gbc.gridx = 1;
         panel.add(sizeY, gbc);
 
         gbc.gridx = 0;
-        gbc.gridy = 3;
+        gbc.gridy = 4;
         panel.add(new JLabel("Model IDs"), gbc);
         modelIds = new JTextField(20);
         gbc.gridx = 1;
         panel.add(modelIds, gbc);
-
-        gbc.gridx = 0;
-        gbc.gridy = 4;
-        panel.add(new JLabel("Model Colors"), gbc);
-        originalColorsField = new JTextField(20);
-        gbc.gridx = 1;
-        panel.add(originalColorsField, gbc);
 
         gbc.gridx = 0;
         gbc.gridy = 5;
@@ -83,35 +87,81 @@ public class ObjectEditor extends JFrame {
         gbc.gridx = 1;
         panel.add(objectOptions, gbc);
 
-        gbc.gridx = 0;
-        gbc.gridy = 6;
-        panel.add(new JLabel("Projectile Clipped"), gbc);
-        projectileClipped = new JCheckBox();
-        gbc.gridx = 1;
-        panel.add(projectileClipped, gbc);
+        // Tab 2
+        JPanel texturePanel = new JPanel(new GridBagLayout());
+        GridBagConstraints gbcTex = new GridBagConstraints();
+        gbcTex.insets = new Insets(5, 5, 5, 5);
+        gbcTex.anchor = GridBagConstraints.WEST;
 
-        gbc.gridx = 0;
-        gbc.gridy = 7;
-        panel.add(new JLabel("Clip Type"), gbc);
+        gbcTex.gridx = 0;
+        gbcTex.gridy = 0;
+        texturePanel.add(new JLabel("Model Colors"), gbcTex);
+        originalColorsField = new JTextField(20);
+        gbcTex.gridx = 1;
+        texturePanel.add(originalColorsField, gbcTex);
+
+        gbcTex.gridx = 0;
+        gbcTex.gridy = 1;
+        texturePanel.add(new JLabel("Texture Colors"), gbcTex);
+        textureColorsField = new JTextField(20);
+        gbcTex.gridx = 1;
+        texturePanel.add(textureColorsField, gbcTex);
+
+        gbcTex.gridx = 0;
+        gbcTex.gridy = 2;
+        texturePanel.add(new JLabel("Config File ID"), gbcTex);
+        configFileIdField = new JTextField(20);
+        gbcTex.gridx = 1;
+        texturePanel.add(configFileIdField, gbcTex);
+
+        gbcTex.gridx = 0;
+        gbcTex.gridy = 3;
+        texturePanel.add(new JLabel("Config ID"), gbcTex);
+        configIdField = new JTextField(20);
+        gbcTex.gridx = 1;
+        texturePanel.add(configIdField, gbcTex);
+
+        gbcTex.gridx = 0;
+        gbcTex.gridy = 4;
+        texturePanel.add(new JLabel("Clip Type"), gbcTex);
         clipType = new JTextField(20);
-        gbc.gridx = 1;
-        panel.add(clipType, gbc);
+        gbcTex.gridx = 1;
+        texturePanel.add(clipType, gbcTex);
+
+        gbcTex.gridx = 0;
+        gbcTex.gridy = 5;
+        texturePanel.add(new JLabel("Projectile Clipped"), gbcTex);
+        projectileClipped = new JCheckBox();
+        gbcTex.gridx = 1;
+        texturePanel.add(projectileClipped, gbcTex);
+
+        gbcTex.gridx = 0;
+        gbcTex.gridy = 6;
+        texturePanel.add(new JLabel("Clipped"), gbcTex);
+        clippedCheckBox = new JCheckBox();
+        gbcTex.gridx = 1;
+        texturePanel.add(clippedCheckBox, gbcTex);
+
+        JTabbedPane tabbedPane = new JTabbedPane();
+        tabbedPane.addTab("Tab 1", panel);
+        tabbedPane.addTab("Tab 2", texturePanel);
+
+        this.add(tabbedPane, BorderLayout.CENTER);
 
         JPanel buttonPanel = new JPanel();
         saveButton = new JButton("Save");
         cancelButton = new JButton("Cancel");
+        saveToFileButton = new JButton("Save to txt");
         buttonPanel.add(saveButton);
         buttonPanel.add(cancelButton);
+        buttonPanel.add(saveToFileButton);
 
-        saveButton.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                save();
-            }
-        });
+        saveButton.addActionListener(e -> save());
         cancelButton.addActionListener(e -> dispose());
+        saveToFileButton.addActionListener(e -> saveToFile());
 
         this.setLayout(new BorderLayout());
-        this.add(panel, BorderLayout.CENTER);
+        this.add(tabbedPane, BorderLayout.CENTER);
         this.add(buttonPanel, BorderLayout.SOUTH);
 
         pack();
@@ -121,7 +171,6 @@ public class ObjectEditor extends JFrame {
         objectName.setText(this.defs.getName());
         sizeX.setText(String.valueOf(this.defs.getSizeX()));
         sizeY.setText(String.valueOf(this.defs.getSizeY()));
-        clipType.setText(String.valueOf(this.defs.getClipType()));
 
         if (this.defs.models != null) {
             StringBuilder modelIds = new StringBuilder();
@@ -131,21 +180,17 @@ public class ObjectEditor extends JFrame {
             }
             this.modelIds.setText(modelIds.toString());
         }
+        this.originalColorsField.setText(getChangedModelColors());
+        this.textureColorsField.setText(getChangedTextureColors());
 
-        if (this.defs.originalModelColors != null && this.defs.modifiedModelColors != null) {
-            StringBuilder colorsStr = new StringBuilder();
-            for (int i = 0; i < defs.originalModelColors.length; i++) {
-                colorsStr.append(defs.originalModelColors[i])
-                        .append("=")
-                        .append(this.defs.modifiedModelColors[i]);
-
-                colorsStr.append(";");
-            }
-            this.originalColorsField.setText(colorsStr.toString());
-        }
+        configFileIdField.setText(String.valueOf(this.defs.getConfigFileId()));
+        configIdField.setText(String.valueOf(this.defs.getConfigId()));
 
         objectOptions.setText(arrayToString(defs.options));
-        projectileClipped.setSelected(defs.isProjectileCliped());
+
+        clipType.setText(String.valueOf(this.defs.getClipType()));
+        projectileClipped.setSelected(this.defs.isProjectileCliped());
+        clippedCheckBox.setSelected(this.defs.getClipped());
     }
 
     private void save() {
@@ -164,7 +209,6 @@ public class ObjectEditor extends JFrame {
 
             this.defs.sizeX = Integer.parseInt(this.sizeX.getText().trim());
             this.defs.sizeY = Integer.parseInt(this.sizeY.getText().trim());
-
             this.defs.clipType = Integer.parseInt(this.clipType.getText().trim());
 
             if (!this.modelIds.getText().trim().isEmpty()) {
@@ -188,6 +232,24 @@ public class ObjectEditor extends JFrame {
                 this.defs.originalModelColors = originalColors;
                 this.defs.modifiedModelColors = modifiedColors;
             }
+
+            if (!this.textureColorsField.getText().trim().isEmpty()) {
+                String[] texturePairs = this.textureColorsField.getText().split(";");
+                short[] originalTextures = new short[texturePairs.length];
+                short[] modifiedTextures = new short[texturePairs.length];
+
+                for (int i = 0; i < texturePairs.length; i++) {
+                    String[] pair = texturePairs[i].split("=");
+                    originalTextures[i] = Short.parseShort(pair[0].trim());
+                    modifiedTextures[i] = Short.parseShort(pair[1].trim());
+                }
+                this.defs.originalTextureColors = originalTextures;
+                this.defs.modifiedTextureColors = modifiedTextures;
+            }
+
+            this.defs.setConfigFileId(Integer.parseInt(configFileIdField.getText().trim()));
+            this.defs.setConfigId(Integer.parseInt(configIdField.getText().trim()));
+
             String text = this.objectOptions.getText().trim();
             String[] var19 = text.isEmpty() ? new String[0] : text.split(";");
 
@@ -200,15 +262,44 @@ public class ObjectEditor extends JFrame {
             }
 
             this.defs.projectileCliped = this.projectileClipped.isSelected();
+            this.defs.setClipped(this.clippedCheckBox.isSelected());
 
             this.defs.write(ObjectSelection.STORE);
-
             this.os.updateObjectDefs(this.defs);
 
             JOptionPane.showMessageDialog(this, "Object saved.");
             dispose();
         } catch (Exception e) {
             JOptionPane.showMessageDialog(this, "Error saving object: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+        }
+    }
+
+    private void saveToFile() {
+        try {
+            String filePath = "data/export/objects/" + defs.id + ".txt";
+            Path path = Paths.get(filePath);
+
+            Files.createDirectories(path.getParent());
+
+            StringBuilder content = new StringBuilder();
+            content.append("Object ID: ").append(defs.id).append("\n");
+            content.append("Name: ").append(objectName.getText()).append("\n");
+            content.append("Size X: ").append(sizeX.getText()).append("\n");
+            content.append("Size Y: ").append(sizeY.getText()).append("\n");
+            content.append("Model IDs: ").append(modelIds.getText()).append("\n");
+            content.append("Options: ").append(objectOptions.getText()).append("\n");
+            content.append("Model Colors: ").append(originalColorsField.getText()).append("\n");
+            content.append("Texture Colors: ").append(textureColorsField.getText()).append("\n");
+            content.append("Config File ID: ").append(configFileIdField.getText()).append("\n");
+            content.append("Config ID: ").append(configIdField.getText()).append("\n");
+            content.append("Clip Type: ").append(clipType.getText()).append("\n");
+            content.append("Projectile Clipped: ").append(projectileClipped.isSelected()).append("\n");
+            content.append("Clipped: ").append(clippedCheckBox.isSelected()).append("\n");
+
+            Files.write(path, content.toString().getBytes());
+            JOptionPane.showMessageDialog(this, "Object data saved to file.");
+        } catch (IOException e) {
+            JOptionPane.showMessageDialog(this, "Error saving to file: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
         }
     }
 
@@ -230,24 +321,26 @@ public class ObjectEditor extends JFrame {
         return sb.toString().trim();
     }
 
-    private String arrayToString(int[] array) {
-        if (array == null || array.length == 0) return "";
-        StringBuilder sb = new StringBuilder();
-        for (int num : array) {
-            sb.append(num).append(";");
+
+    public String getChangedModelColors() {
+        String text = "";
+        if (this.defs.originalModelColors != null) {
+            for (int i = 0; i < this.defs.originalModelColors.length; ++i) {
+                text = text + this.defs.originalModelColors[i] + "=" + this.defs.modifiedModelColors[i] + ";";
+            }
         }
-        return sb.toString().trim();
+
+        return text;
     }
 
-    private String arrayToString(int[][] array) {
-        if (array == null) return "";
-        StringBuilder sb = new StringBuilder();
-        for (int[] subArray : array) {
-            for (int num : subArray) {
-                sb.append(num).append(";");
+    public String getChangedTextureColors() {
+        String text = "";
+        if (this.defs.originalTextureColors != null) {
+            for (int i = 0; i < this.defs.originalTextureColors.length; ++i) {
+                text = text + this.defs.originalTextureColors[i] + "=" + this.defs.modifiedTextureColors[i] + ";";
             }
-            sb.append(";");
         }
-        return sb.toString().trim();
+
+        return text;
     }
 }

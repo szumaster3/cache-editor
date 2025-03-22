@@ -167,6 +167,14 @@ public class ObjectDefinitions implements Cloneable {
                 stream.writeString(option);
             }
         }
+        if (this.clipType == 0 && this.projectileCliped) {
+            stream.writeByte(17);
+        } else if (this.projectileCliped) {
+            stream.writeByte(18);
+        }
+        if (this.clipType == 1 || this.clipType == 2) {
+            stream.writeByte(27);
+        }
 
         if (this.originalModelColors != null && this.modifiedModelColors != null
                 && this.originalModelColors.length == this.modifiedModelColors.length) {
@@ -178,13 +186,13 @@ public class ObjectDefinitions implements Cloneable {
             }
         }
 
-        if (this.clipType == 0 && this.projectileCliped) {
-            stream.writeByte(17);
-        } else if (this.projectileCliped) {
-            stream.writeByte(18);
-        }
-        if (this.clipType == 1 || this.clipType == 2) {
-            stream.writeByte(27);
+        if ((this.originalTextureColors != null) && (this.modifiedTextureColors != null)) {
+            stream.writeByte(41);
+            stream.writeByte(this.originalTextureColors.length);
+            for (int index = 0; index < this.originalTextureColors.length; index++) {
+                stream.writeShort(this.originalTextureColors[index]);
+                stream.writeShort(this.modifiedTextureColors[index]);
+            }
         }
 
         // if (this.clientScriptData != null) {
@@ -704,4 +712,39 @@ public class ObjectDefinitions implements Cloneable {
     public void setModels(int[] models) {
         this.models = models;
     }
+
+    public int getConfigFileId() {
+        return configFileId;
+    }
+
+    public void setConfigFileId(int configFileId) {
+        this.configFileId = configFileId;
+    }
+
+    public int getConfigId() {
+        return configId;
+    }
+
+    public void setConfigId(int configId) {
+        this.configId = configId;
+    }
+
+    public void readConfigData(InputStream stream) throws IOException {
+        configFileId = stream.readUnsignedShort();
+        if (configFileId == 65535)
+            configFileId = -1;
+
+        configId = stream.readUnsignedShort();
+        if (configId == 65535)
+            configId = -1;
+    }
+
+    public boolean getClipped() {
+        return notCliped;
+    }
+
+    public void setClipped(boolean notClipped) {
+        this.notCliped = notClipped;
+    }
+
 }
