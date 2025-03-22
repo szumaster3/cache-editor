@@ -29,7 +29,7 @@ public class ObjectEditor extends JFrame {
         setTitle("Object Editor");
         setResizable(false);
         setLocationRelativeTo(null);
-        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        setDefaultCloseOperation(1);
         setVisible(true);
     }
 

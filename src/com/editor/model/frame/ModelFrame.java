@@ -29,7 +29,7 @@ public class ModelFrame extends JFrame {
         STORE = new Store(cache);
         loadCache(STORE);
         setTitle("Model Viewer");
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(1);
         setSize(800, 600);
         setLocationRelativeTo(null);
         setLayout(new BorderLayout(10, 10));
