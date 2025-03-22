@@ -208,7 +208,7 @@ public class InterfaceEditor extends JFrame {
         interface_list.addListSelectionListener(evt -> {
             if (evt.getValueIsAdjusting()) return;
             int id = Integer.parseInt(interface_list.getSelectedValue().toString().replaceAll("Interface: ", ""));
-            Main.log("Iface tool", "Interface " + id + " is selected.");
+            System.out.println("Interface " + id + " is selected.");
             currentInterface = id;
             viewportPanel.repaint();
             drawTree(id);
@@ -408,7 +408,7 @@ public class InterfaceEditor extends JFrame {
         btnCopy.setPreferredSize(buttonSize);
         btnCopy.addActionListener(arg0 -> {
             copiedComp = ComponentDefinition.getInterfaceComponent(currentInterface, selectedComp);
-            Main.log("Iface tool", "Component " + copiedComp.componentId + " copied from interface " + copiedComp.interfaceId);
+            System.out.println("Component " + copiedComp.componentId + " copied from interface " + copiedComp.interfaceId);
         });
         componentButtons.add(btnCopy);
 
@@ -719,7 +719,7 @@ public class InterfaceEditor extends JFrame {
                         PropertyValues.loadValues();
                     } catch (Exception e) {
                         JOptionPane.showMessageDialog(null, "Properties can not be found, make sure you've a config.properties file.");
-                        Main.log("Iface tool", "Properties can not be found, make sure you've a config.properties file.\"");
+                        System.out.println("Properties can not be found, make sure you've a config.properties file.\"");
                     }
                 } else {
                     String path = args[0];
@@ -739,7 +739,7 @@ public class InterfaceEditor extends JFrame {
 
     public void setValues(int inter, int componentId) {
         /* cleaning previous values*/
-        Main.log("Iface tool", "Setting values for component: " + componentId + " from interface " + inter);
+        System.out.println("Setting values for component: " + componentId + " from interface " + inter);
         cleanValues();
         /*  selected component*/
         final ComponentDefinition comp = ComponentDefinition.getInterfaceComponent(inter, componentId);
@@ -1093,7 +1093,7 @@ public class InterfaceEditor extends JFrame {
         //message
         //JOptionPane.showMessageDialog(scrollPane_2, "Component has been succesfully saved.");
         //saves it
-        Main.log("Iface tool", "Saving component " + comp + " from interface interface " + inter);
+        System.out.println("Saving component " + comp + " from interface interface " + inter);
         STORE.getIndexes()[3].putFile(inter, comp, changedComponent.encode());
     }
 
@@ -1103,35 +1103,30 @@ public class InterfaceEditor extends JFrame {
      * @return DefaultListModel containing interface names.
      */
     public DefaultListModel populateList() {
-        Main.log("Iface tool", "Populating interface list");
+        System.out.println("Populating interface list");
 
         DefaultListModel listModel = new DefaultListModel();
 
-        // Ensure STORE is not null
         if (STORE == null) {
-            Main.log("Iface Tool", "STORE is null, cannot populate the interface list.");
+            System.out.println("STORE is null, cannot populate the interface list.");
             return listModel;
         }
 
-        // Get the total number of interface definitions
         int interfaceCount = ComponentDefinition.getInterfaceDefinitionsSize(STORE);
 
         for (int i = 0; i < interfaceCount; i++) {
             try {
-                // Attempt to retrieve the interface
                 ComponentDefinition[] interfaceDefs = ComponentDefinition.getInterface(i, false, STORE);
 
-                // If the interface is loaded successfully, add it to the list
                 if (interfaceDefs != null) {
                     listModel.addElement("Interface: " + i);
                 } else {
-                    Main.log("Iface Tool", "Interface " + i + " is null or failed to load.");
+                    System.out.println("Interface " + i + " is null or failed to load.");
                 }
 
             } catch (Exception ex) {
-                // Log the error if an exception occurs during interface loading
-                Main.log("Iface Tool", "Error loading interface " + i + ": " + ex.getMessage());
-                ex.printStackTrace();  // Optional: prints full stack trace for debugging
+                System.out.println("Error loading interface " + i + ": " + ex.getMessage());
+                ex.printStackTrace();
             }
         }
 
@@ -1213,7 +1208,6 @@ public class InterfaceEditor extends JFrame {
     public void addIndex0text(int interfaceId) {
         ComponentDefinition defaultButton = ComponentDefinition.getInterfaceComponent(6, 19);
         defaultButton.parentId = -1;
-        defaultButton.text = "I'm cleaned :)";
         STORE.getIndexes()[3].putFile(interfaceId, 0, defaultButton.encode());
     }
 
@@ -1335,7 +1329,7 @@ public class InterfaceEditor extends JFrame {
     }
 
     public void drawTree(int id) {
-        Main.log("Iface tool", "Drawing componenttree ");
+        System.out.println("Drawing component tree ");
         JTree tree = new JTree(createInterfaceTree(id));
         tree.addTreeSelectionListener(e -> {
             DefaultMutableTreeNode selectedNode = (DefaultMutableTreeNode) tree.getLastSelectedPathComponent();
@@ -1365,9 +1359,9 @@ public class InterfaceEditor extends JFrame {
     public void addDefaultComponent(int id) {
         switch (comboBox.getSelectedIndex()) {
             case 0://default close button (with hover)
-                ComponentDefinition defaultcloseButton = ComponentDefinition.getInterfaceComponent(6, 36);
-                defaultcloseButton.parentId = -1;
-                STORE.getIndexes()[3].putFile(currentInterface, ComponentDefinition.getInterfaceDefinitionsComponentsSize(STORE, currentInterface), defaultcloseButton.encode());
+                ComponentDefinition defaultCloseButton = ComponentDefinition.getInterfaceComponent(6, 36);
+                defaultCloseButton.parentId = -1;
+                STORE.getIndexes()[3].putFile(currentInterface, ComponentDefinition.getInterfaceDefinitionsComponentsSize(STORE, currentInterface), defaultCloseButton.encode());
                 ComponentDefinition.getInterface(currentInterface); //since we need to reload the array
                 drawTree(currentInterface);
                 break;
@@ -1389,7 +1383,7 @@ public class InterfaceEditor extends JFrame {
                 int place = ComponentDefinition.getInterfaceDefinitionsComponentsSize(STORE, currentInterface);
                 STORE.getIndexes()[3].putFile(currentInterface, place, basic.encode());
                 for (ComponentDefinition comp : ComponentDefinition.getChildsByParent(6, ComponentDefinition.getInterfaceComponent(6, 0).ihash)) {
-                    if (comp.text.toLowerCase().contains("brimhaven")) comp.text = "My starter interface";
+                    if (comp.text.toLowerCase().contains("brimhaven")) comp.text = "";
                     comp.parentId++;
                     STORE.getIndexes()[3].putFile(currentInterface, ComponentDefinition.getInterfaceDefinitionsComponentsSize(STORE, currentInterface), comp.encode());
                 }
@@ -1427,7 +1421,7 @@ public class InterfaceEditor extends JFrame {
 
     public void drawInterfaceComponents(int interfaceId, boolean showContainers, boolean showHidden, boolean showModels, boolean showRealFonts) {
         /* graphic part*/
-        Main.log("Iface tool", "Drawing preview interface");
+        System.out.println("Drawing preview interface");
         result = new BufferedImage(viewportPanel.getWidth(), viewportPanel.getHeight(), BufferedImage.TYPE_INT_RGB);
         /**
          * drawing

@@ -197,7 +197,7 @@ public class ComponentDefinition {
 	public static ComponentDefinition getInterfaceComponent(int interfaceId, int component) {
 		ComponentDefinition[] inter = getInterface(interfaceId); // Call the corrected method
 		if (inter == null || component >= inter.length) {
-			Main.log("Iface Tool", "Component " + component + " from " + interfaceId + " is null.");
+			System.out.println("Component " + component + " from " + interfaceId + " is null.");
 			return null;
 		}
 		return inter[component];
@@ -224,32 +224,32 @@ public class ComponentDefinition {
 	 */
 	public static ComponentDefinition[] getInterface(int id, boolean reload, Store store) {
 		if (id >= icomponentsdefs.length) {
-			Main.log("Iface Tool", "Interface ID " + id + " is out of bounds.");
+			System.out.println("Interface ID " + id + " is out of bounds.");
 			return null;
 		}
 
 		// Prevent recursion by checking if the data is already loaded
 		if (icomponentsdefs[id] == null || reload) {
 			if (store == null || store.getIndexes() == null || store.getIndexes().length < 4 || store.getIndexes()[3] == null) {
-				Main.log("Iface Tool", "Store or required index is null for interface " + id);
+				System.out.println("Store or required index is null for interface " + id);
 				return null;
 			}
 
 			// Initialize or reload the component definitions for this interface
 			icomponentsdefs[id] = new ComponentDefinition[getInterfaceDefinitionsComponentsSize(store, id)];
-			Main.log("Iface Tool", "Initializing interface " + id + " with " + icomponentsdefs[id].length + " components.");
+			System.out.println("Initializing interface " + id + " with " + icomponentsdefs[id].length + " components.");
 
 			// Load components for the interface
 			for (int i = 0; i < icomponentsdefs[id].length; i++) {
 				byte[] data = store.getIndexes()[3].getFile(id, i);
 				if (data == null) {
-					Main.log("Iface Tool", "Component " + i + " from interface " + id + " is null, on initial load.");
+					System.out.println("Component " + i + " from interface " + id + " is null, on initial load.");
 				} else {
 					ComponentDefinition defs = new ComponentDefinition();
 					defs.ihash = i + (id << 16);
 					defs.decode(new InputStream(data), i, id);
 					icomponentsdefs[id][i] = defs;
-					Main.log("Iface Tool", "Loaded component " + i + " from interface " + id);
+					System.out.println("Loaded component " + i + " from interface " + id);
 				}
 			}
 		}

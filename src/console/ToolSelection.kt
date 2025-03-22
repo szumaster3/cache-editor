@@ -152,8 +152,6 @@ class ToolSelection : JFrame() {
             3 -> try {
                 SwingUtilities.invokeLater {
                     val frame = InterfaceEditor(cache)
-                    Main.log(toolSelected, "This tool load a few seconds longer, please be patient.")
-                    Main.log(toolSelected, "Remember to export the sprites.")
                     frame.isVisible = true
                 }
                 Main.log(toolSelected, startMessage)
