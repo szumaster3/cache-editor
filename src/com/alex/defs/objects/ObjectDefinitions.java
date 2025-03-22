@@ -962,7 +962,7 @@ public class ObjectDefinitions implements Cloneable {
                 stream.writeByte(this.arrayForModelId[i]);
             }
         }
-        if (!this.name.equals("null")) {
+        if (this.name != null && !this.name.isEmpty() && !this.name.equals("null")) {
             stream.writeByte(2);
             stream.writeString(this.name);
         }
