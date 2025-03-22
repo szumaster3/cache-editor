@@ -136,7 +136,7 @@ public class ObjectSelection extends JFrame {
         int id;
         int totalObjects = Utils.getObjectDefinitionsSize(STORE);
         for (id = 0; id < totalObjects; ++id) {
-            this.addObjectDefs(ObjectDefinitions.getObjectDefinitions(STORE, id));
+            this.addObjectDefs(ObjectDefinitions.getObjectDefinition(STORE, id));
         }
 
         Main.log("ObjectSelection", "All Objects Loaded");
@@ -189,7 +189,10 @@ public class ObjectSelection extends JFrame {
     private void addNewObject() {
         ObjectDefinitions obj = new ObjectDefinitions(ObjectSelection.STORE, getNewObjectID(), false);
         if (obj != null && obj.id != -1) {
+            System.out.println("Adding new object with ID: " + obj.id);
             new ObjectEditor(this, obj).setVisible(true);
+        } else {
+            JOptionPane.showMessageDialog(this, "Failed to create a new object!", "Error", JOptionPane.ERROR_MESSAGE);
         }
     }
 
@@ -211,6 +214,7 @@ public class ObjectSelection extends JFrame {
         if (obj != null) {
             int result = JOptionPane.showConfirmDialog(this, "Do you really want to delete object " + obj.id + "?");
             if (result == JOptionPane.YES_OPTION) {
+                System.out.println("Deleting object: " + obj.id);
                 STORE.getIndexes()[16].removeFile(obj.getArchiveId(), obj.getFileId());
                 removeObjectDefs(obj);
                 Main.log("ObjectSelection", "Object " + obj.id + " removed.");
