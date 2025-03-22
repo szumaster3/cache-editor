@@ -1,5 +1,4 @@
 ![](https://i.imgur.com/w7729G1.gif)
-    <img src="https://i.imgur.com/Yhb5FtQ.png" height=20 width=90 />
 
 [![License][License: AGPL v3]][license-url] [![License][Shield: Fork]][fork-url]
 
