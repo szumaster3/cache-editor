@@ -144,7 +144,7 @@ public class ObjectEditor extends JFrame {
             this.originalColorsField.setText(colorsStr.toString());
         }
 
-        objectOptions.setText(arrayToString(defs.options) + ";");
+        objectOptions.setText(arrayToString(defs.options));
         projectileClipped.setSelected(defs.isProjectileCliped());
     }
 
@@ -188,20 +188,21 @@ public class ObjectEditor extends JFrame {
                 this.defs.originalModelColors = originalColors;
                 this.defs.modifiedModelColors = modifiedColors;
             }
+            String text = this.objectOptions.getText().trim();
+            String[] var19 = text.isEmpty() ? new String[0] : text.split(";");
 
-            // Set options
-            if (!this.objectOptions.getText().trim().isEmpty()) {
-                String[] options = this.objectOptions.getText().split(";");
-                this.defs.options = options;
+            for (int i = 0; i < this.defs.options.length; ++i) {
+                if (i < var19.length) {
+                    this.defs.options[i] = var19[i].equals("null") ? null : var19[i];
+                } else {
+                    this.defs.options[i] = null;
+                }
             }
 
-            // Set projectile clipped
             this.defs.projectileCliped = this.projectileClipped.isSelected();
 
-            // Write to store
             this.defs.write(ObjectSelection.STORE);
 
-            // Update object definitions
             this.os.updateObjectDefs(this.defs);
 
             JOptionPane.showMessageDialog(this, "Object saved.");

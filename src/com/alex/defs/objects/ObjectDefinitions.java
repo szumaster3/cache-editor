@@ -130,25 +130,24 @@ public class ObjectDefinitions implements Cloneable {
 
     public byte[] encode() {
         OutputStream stream = new OutputStream();
-        int modelsCount = this.models.length;
-        for (int i = 0; i < modelsCount; ++i) {
-            stream.writeShort(this.models[i]);
 
-            if (this.arrayForModelId != null && this.arrayForModelId.length > i) {
-                stream.writeByte(this.arrayForModelId[i]);
+        if (this.models != null) {
+            stream.writeByte(5);
+            stream.writeByte(models.length);
+            for (int i = 0; i < models.length; i++) {
+                stream.writeShort(models[i]);
+
+                if (this.arrayForModelId != null && this.arrayForModelId.length > i) {
+                    stream.writeByte(this.arrayForModelId[i]);
+                }
             }
         }
-        if (this.name != null && !this.name.isEmpty() && !this.name.equals("null")) {
+
+        if (this.name != null && !this.name.isEmpty() && !"null".equals(this.name)) {
             stream.writeByte(2);
             stream.writeString(this.name);
         }
-		if (models != null) {
-			stream.writeByte(5);
-			stream.writeByte(models.length);
-			for (int index = 0; index < models.length; index++) {
-				stream.writeShort(models[index]);
-			}
-		}
+
         if (this.sizeX != 1) {
             stream.writeByte(14);
             stream.write128Byte(this.sizeX);
@@ -158,19 +157,19 @@ public class ObjectDefinitions implements Cloneable {
             stream.writeByte(this.sizeY);
         }
 
-        for (int i = 0; i < this.options.length; ++i) {
-            if (this.options[i] != null && !this.options[i].equals("Hidden")) {
+        if (this.options != null) {
+            for (int i = 0; i < this.options.length; i++) {
+                String option = this.options[i];
+                if (option == null || "hidden".equals(option)) {
+                    continue;
+                }
                 stream.writeByte(30 + i);
-                stream.writeString(this.options[i]);
+                stream.writeString(option);
             }
         }
 
-        //if (this.objectAnimation != -1) {
-        //    stream.writeByte(24);
-        //    stream.writeBigSmart(this.objectAnimation);
-        //}
-
-        if (this.originalModelColors != null && this.modifiedModelColors != null) {
+        if (this.originalModelColors != null && this.modifiedModelColors != null
+                && this.originalModelColors.length == this.modifiedModelColors.length) {
             stream.writeByte(40);
             stream.writeByte(this.originalModelColors.length);
             for (int i = 0; i < this.originalModelColors.length; ++i) {
@@ -181,29 +180,28 @@ public class ObjectDefinitions implements Cloneable {
 
         if (this.clipType == 0 && this.projectileCliped) {
             stream.writeByte(17);
-        }
-        if (this.projectileCliped) {
+        } else if (this.projectileCliped) {
             stream.writeByte(18);
         }
         if (this.clipType == 1 || this.clipType == 2) {
             stream.writeByte(27);
         }
 
-        if (this.clientScriptData != null) {
-            stream.writeByte(249);
-            stream.writeByte(this.clientScriptData.size());
-            for (Map.Entry<Integer, Object> entry : this.clientScriptData.entrySet()) {
-                int key = entry.getKey();
-                Object value = entry.getValue();
-                stream.writeByte((value instanceof String) ? 1 : 0);
-                stream.write24BitInt(key);
-                if (value instanceof String) {
-                    stream.writeString((String) value);
-                } else {
-                    stream.writeInt((Integer) value);
-                }
-            }
-        }
+        // if (this.clientScriptData != null) {
+        //     stream.writeByte(249);
+        //     stream.writeByte(this.clientScriptData.size());
+        //     for (Map.Entry<Integer, Object> entry : this.clientScriptData.entrySet()) {
+        //         int key = entry.getKey();
+        //         Object value = entry.getValue();
+        //         stream.writeByte((value instanceof String) ? 1 : 0);
+        //         stream.write24BitInt(key);
+        //         if (value instanceof String) {
+        //             stream.writeString((String) value);
+        //         } else {
+        //             stream.writeInt((Integer) value);
+        //         }
+        //     }
+        // }
 
         stream.writeByte(0);
 
@@ -212,6 +210,7 @@ public class ObjectDefinitions implements Cloneable {
         stream.getBytes(encodedData, 0, encodedData.length);
         return encodedData;
     }
+
 
     private void readValues(InputStream stream, int opcode) {
         if (opcode == 1 || opcode == 5) {

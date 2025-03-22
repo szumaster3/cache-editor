@@ -71,7 +71,7 @@ public class ObjectSelection extends JFrame {
         this.objectsListModel = new DefaultListModel<>();
         this.objectsList = new JList<>(this.objectsListModel);
         objectsList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
-        objectsList.setCellRenderer(new ObjectListCellRenderer());  // Ustawienie renderer'a
+        objectsList.setCellRenderer(new ObjectListCellRenderer());
         JScrollPane jScrollPane1 = new JScrollPane(objectsList);
 
         editButton.addActionListener(e -> editObject());
