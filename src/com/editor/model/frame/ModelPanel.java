@@ -11,7 +11,6 @@ import java.io.DataInputStream;
 import java.io.File;
 import java.io.FileInputStream;
 
-@SuppressWarnings("serial")
 public class ModelPanel extends JPanel implements Runnable {
     public static boolean isOptimizedSelected = false;
     public boolean loaded = false;
