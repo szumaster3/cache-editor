@@ -212,7 +212,7 @@ public class ObjectSelection extends JFrame {
     private void deleteObject() {
         ObjectDefinitions obj = objectsList.getSelectedValue();
         if (obj != null) {
-            int result = JOptionPane.showConfirmDialog(this, "Do you really want to delete object " + obj.id + "?");
+            int result = JOptionPane.showConfirmDialog(this, "Do you really want to delete object [" + obj.id + "]?");
             if (result == JOptionPane.YES_OPTION) {
                 System.out.println("Deleting object: " + obj.id);
                 STORE.getIndexes()[16].removeFile(obj.getArchiveId(), obj.getFileId());

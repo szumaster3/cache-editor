@@ -99,7 +99,7 @@ public class ItemSelection extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 ItemDefinitions defs = (ItemDefinitions) ItemSelection.this.itemsList.getSelectedValue();
                 JFrame frame = new JFrame();
-                int result = JOptionPane.showConfirmDialog(frame, "Do you really want to delete item " + defs.id);
+                int result = JOptionPane.showConfirmDialog(frame, "Do you really want to delete item [" + defs.id + "]?");
                 if (result == 0) {
                     if (defs == null) {
                         return;

@@ -90,7 +90,7 @@ class NPCSelection : JFrame {
                 val defs = npcList?.selectedValue
                 if (defs != null) {
                     val frame = JFrame()
-                    val result = JOptionPane.showConfirmDialog(frame, "Do you really want to delete item ${defs.id}")
+                    val result = JOptionPane.showConfirmDialog(frame, "Do you really want to delete NPC: [${defs.id}]?")
                     if (result == JOptionPane.YES_OPTION) {
                         STORE?.indexes?.get(18)?.removeFile(defs.archiveId, defs.fileId)
                         this@NPCSelection.removeNPCDefs(defs)
