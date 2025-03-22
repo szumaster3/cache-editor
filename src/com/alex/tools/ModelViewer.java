@@ -1,7 +1,7 @@
 package com.alex.tools;
 
 import com.alex.filestore.Store;
-import com.editor.model.render.Model3D;
+import com.editor.model.view.render.Model3D;
 import com.jogamp.opengl.*;
 import com.jogamp.opengl.awt.GLJPanel;
 import com.jogamp.opengl.fixedfunc.GLLightingFunc;

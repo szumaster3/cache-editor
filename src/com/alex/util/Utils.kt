@@ -369,4 +369,5 @@ object Utils {
     fun getConfigFile(id: Int, bits: Int): Int {
         return (id) and (1 shl bits) - 1
     }
+
 }
