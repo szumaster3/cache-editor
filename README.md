@@ -1,22 +1,66 @@
-
-![](https://i.imgur.com/w7729G1.gif)
-
+![](https://i.imgur.com/w7729G1.gif)<br>
 [![License][License: AGPL v3]][license-url] [![License][Shield: Fork]][fork-url]
 
-### Information:
+***
 
+### Overview
+This project is developed purely for educational and research purposes. It does not contain or distribute copyrighted assets from any third-party game developer and is not affiliated with any commercial entity.
+
+### Purpose
+This project is not intended for commercial use but rather serves as a learning experience. The code is developed for educational purposes and to demonstrate techniques that can be applied to development challenges.
+
+***
+
+### Legal Notice
+This project is an independent educational tool and is **not affiliated with, endorsed by, or associated with All trademarks and copyrights related to RuneScape are the property of Jagex Ltd. or RuneScape**. It does not contain or distribute proprietary assets from RuneScape.
+
+This tool is designed for **analyzing and modifying game data structures for educational and research purposes only**. It does not interact with live game servers or facilitate unauthorized modifications to any proprietary software.
+
+> **Warning:**
+> Use of this tool is at the user's own risk.
+
+***
+
+### License
+This project is licensed under **GNU Affero General Public License v3.0 (AGPL-3.0)**.  
+Any modifications or derivatives of this project must also be released under the same open-source license when distributed.
+
+```
+Licensed under the GNU Affero General Public License (AGPL) v3.0.
+You may obtain a copy of the License at:
+https://www.gnu.org/licenses/agpl-3.0.html
+
+2009scape Item Definition Editor
+Copyright (C) 2022  2009Scape / Tools
+```
+
+[License: AGPL v3]: https://img.shields.io/badge/License-AGPL%20v3-khaki.svg
+
+[license-url]: https://www.gnu.org/licenses/agpl-3.0.en.html
+
+[Shield: Fork]: https://img.shields.io/badge/repository-fork-tan
+
+[fork-url]: https://gitlab.com/2009scape/tools/2009scape-item-definition-editor
+
+***
+
+### Information
 Fork of [2009scape-item-definition-editor](https://gitlab.com/2009scape/tools/2009scape-item-definition-editor)
 
-Never make a merge request to the main 2009scape repository after using this tool
+*Never make a merge request to the main 2009scape project repository after using this tool.*
 
-### Libraries / Dependencies:
+***
 
-This project use following libraries:
+### Libraries / Dependencies
+This project uses the following libraries:
 
-- **rs-cache-library**: [github repository](https://github.com/Displee/rs-cache-library)
-- The [names.dat](data/names.dat) file is provided from [rune-server thread](https://rune-server.org/threads/634-cache-file-hash-names.705673/). All credit to these gentlemen.
+- **rs-cache-library**: [GitHub Repository](https://github.com/Displee/rs-cache-library)
+- The [names.dat](data/names.dat) file is sourced from a public [Rune-Server thread](https://rune-server.org/threads/634-cache-file-hash-names.705673/).  
+  It is provided as-is, and all credit goes to the original contributors. If you are the rightful owner and believe this file should not be included, please contact us.
 
-### How to Build:
+***
+
+### How to Build
 
 To build the project, you will need to have Gradle installed on your system. Follow these steps:
 
@@ -45,25 +89,8 @@ To build the project, you will need to have Gradle installed on your system. Fol
    java -jar 530-editor.jar
    ```
 
-### Additional Information:
+***
 
+### Additional Information
 For detailed documentation and troubleshooting, please refer to the repository's issues and discussions.
 
-### License:
-
-```
-Licensed under the GNU Affero General Public License (AGPL) v3.0.
-You may obtain a copy of the License at:
-https://www.gnu.org/licenses/agpl-3.0.html
-
-2009scape Item Definition Editor
-Copyright (C) 2022  2009Scape / Tools
-```
-
-[License: AGPL v3]: https://img.shields.io/badge/License-AGPL%20v3-khaki.svg
-
-[license-url]: https://www.gnu.org/licenses/agpl-3.0.en.html
-
-[Shield: Fork]: https://img.shields.io/badge/repository-fork-tan
-
-[fork-url]: https://gitlab.com/2009scape/tools/2009scape-item-definition-editor
