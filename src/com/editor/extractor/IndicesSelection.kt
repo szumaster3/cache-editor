@@ -366,7 +366,7 @@ class IndicesSelection : JFrame() {
         checkBox28 = JCheckBox("28")
         checkBox255 = JCheckBox("255")
 
-        title = "cache Exporter Poesy700"
+        title = "Cache Exporter Poesy700"
         isResizable = false
         val contentPane = contentPane
         getContentPane().layout = null
