@@ -1050,10 +1050,15 @@ public final class NPCDefinitions implements Cloneable {
             stream.writeByte(this.size);
         }
 
-        for (int index = 0; index < this.options.length; index++) {
-            String option = this.options[index];
-            stream.writeByte(30 + index);
-            stream.writeString(option != null && !option.equals("null") ? option : "hidden");
+        if (this.options != null) {
+            for (int i = 0; i < this.options.length; i++) {
+                String option = this.options[i];
+                if (option == null || "hidden".equals(option)) {
+                    continue;
+                }
+                stream.writeByte(30 + i);
+                stream.writeString(option);
+            }
         }
 
         if (this.originalModelColors != null && this.modifiedModelColors != null) {
