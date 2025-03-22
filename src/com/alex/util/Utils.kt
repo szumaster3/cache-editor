@@ -1,7 +1,7 @@
 package com.alex.util
 
-import com.alex.io.OutputStream
 import com.alex.filestore.Store
+import com.alex.io.OutputStream
 import java.awt.Color
 import java.awt.Toolkit
 import java.awt.datatransfer.Clipboard
@@ -17,6 +17,22 @@ import kotlin.math.pow
  * The type Utils.
  */
 object Utils {
+
+
+    @JvmField
+    var inputFolder: String = ""
+
+    @JvmField
+    var outputFolder: String = ""
+
+    @JvmField
+    var format: String = ""
+
+    var nameFile: String = "$inputFolder/names.dat"
+
+    @JvmField
+    var toExtract: BooleanArray = BooleanArray(256)
+
     /**
      * Crypt rsa byte [ ].
      *
@@ -250,9 +266,10 @@ object Utils {
                     f3 = f2
                 }
 
-                out1?.set(i++, ((f3.toDouble().pow(d).toFloat() * 256.0f).toInt() shl 16 or ((f4.toDouble().pow(d)
-                    .toFloat() * 256.0f).toInt() shl 8
-                        ) or (f5.toDouble().pow(d).toFloat() * 256.0f).toInt())
+                out1?.set(
+                    i++, ((f3.toDouble().pow(d).toFloat() * 256.0f).toInt() shl 16 or ((f4.toDouble().pow(d)
+                        .toFloat() * 256.0f).toInt() shl 8
+                            ) or (f5.toDouble().pow(d).toFloat() * 256.0f).toInt())
                 )
             }
         }

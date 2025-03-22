@@ -12,9 +12,13 @@ import com.editor.cache.npc.NPCListExport
 import com.editor.cache.npc.NPCSelection
 import com.editor.cache.`object`.ObjectSelection
 import com.editor.cache.region.RegionEditor
+import com.editor.extractor.IndicesSelection
 import com.editor.misc.ColorPicker
 import com.editor.model.frame.ModelFrame
-import java.awt.*
+import java.awt.Cursor
+import java.awt.Dimension
+import java.awt.FlowLayout
+import java.awt.GridLayout
 import java.awt.event.ActionEvent
 import java.io.*
 import javax.swing.*
@@ -22,7 +26,7 @@ import kotlin.system.exitProcess
 
 class ToolSelection : JFrame() {
     private var cache = ""
-    private val loadCacheButton = JButton("Load Cache")
+    private val loadCacheButton = JButton("Load cache")
     private val loadLastCacheButton = JButton("Last Location")
     private val selectionBox: JComboBox<String> = JComboBox()
     private val cacheFile = File("cache_location.txt")
@@ -70,17 +74,18 @@ class ToolSelection : JFrame() {
             arrayOf(
                 "Item Editor",
                 "NPC Editor",
-                "Object Editor [WIP]",
+                "Object Editor",
                 "Transfer Region",
                 "Transfer Interface",
                 "Transfer Index",
                 "Export model",
                 "Export NPC list",
                 "Export Item list",
+                "Export Indices",
                 "Pack model",
                 "Pick a Color",
-                "File Manager [WIP]",
-                "Model Viewer [WIP]"
+                "File Manager",
+                "Model Viewer"
 
             )
         )
@@ -114,8 +119,9 @@ class ToolSelection : JFrame() {
     }
 
     private fun submitButtonActionPerformed(evt: ActionEvent) {
-        if (cache.isEmpty() && selectionBox.selectedIndex != 9 && selectionBox.selectedIndex != 5) {
-            Main.log(toolSelected, "No Cache Set!")
+        val toolID = selectionBox.selectedIndex
+        if (cache.isEmpty() && toolID != 9 && toolID != 5 && toolID != 10) {
+            Main.log(toolSelected, "No cache Set!")
             return
         }
         when (selectionBox.selectedIndex) {
@@ -173,6 +179,12 @@ class ToolSelection : JFrame() {
             }
 
             9 -> try {
+                IndicesSelection().isVisible = true ; Main.log(toolSelected, startMessage)
+            } catch (e: IOException) {
+                Main.log(toolSelected, failMessage)
+            }
+
+            10 -> try {
                 SwingUtilities.invokeLater { ModelPack(cache).isVisible = true }; Main.log(
                     toolSelected, startMessage
                 )
@@ -180,7 +192,7 @@ class ToolSelection : JFrame() {
                 Main.log(toolSelected, failMessage)
             }
 
-            10 -> try {
+            11 -> try {
                 SwingUtilities.invokeLater { ColorPicker().isVisible = true }; Main.log(
                     toolSelected, startMessage
                 )
@@ -188,14 +200,15 @@ class ToolSelection : JFrame() {
                 Main.log(toolSelected, failMessage)
             }
 
-            11 -> try {
+            12 -> try {
                 val lib = CacheLibrary.create(cache)
                 FileManager(lib).isVisible = true
                 Main.log(toolSelected, startMessage)
             } catch (e: Exception) {
                 Main.log(toolSelected, failMessage)
             }
-            12 -> try {
+
+            13 -> try {
                 SwingUtilities.invokeLater {
                     val frame = ModelFrame(cache)
                     frame.isVisible = true
@@ -204,6 +217,7 @@ class ToolSelection : JFrame() {
             } catch (e: Exception) {
                 Main.log(toolSelected, failMessage)
             }
+
             else -> Main.log(toolSelected, "No Tool Selected!")
         }
     }
@@ -240,7 +254,7 @@ class ToolSelection : JFrame() {
             BufferedWriter(FileWriter(cacheFile)).use { writer ->
                 writer.write(path)
             }
-            Main.log("ToolSelection", "Cache path saved.")
+            Main.log("ToolSelection", "cache path saved.")
         } catch (e: IOException) {
             Main.log("ToolSelection", "Failed to save cache path.")
         }

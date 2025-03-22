@@ -14,8 +14,8 @@ class RegionEditor(private val cacheTo: String) : JFrame() {
     private val regionOutput = JTextField(20).apply { isEditable = false }
     private val regionInput = JTextField(10)
     private val editButton = JButton("Transfer Region")
-    private val selectSourceCache = JButton("Select Source Cache")
-    private val backupButton = JButton("Backup Cache")
+    private val selectSourceCache = JButton("Select Source cache")
+    private val backupButton = JButton("Backup cache")
 
     init {
         title = "Region Editor"
@@ -40,7 +40,7 @@ class RegionEditor(private val cacheTo: String) : JFrame() {
         add(createCalculateRegionButton(), gbc.apply { gridx = 1; gridy = 4 })
         add(createCalculateRegionIdButton(), gbc.apply { gridx = 1; gridy = 5 })
 
-        add(JLabel("Cache From Path:"), gbc.apply { gridx = 0; gridy = 6 })
+        add(JLabel("cache From Path:"), gbc.apply { gridx = 0; gridy = 6 })
         add(sourceCache, gbc.apply { gridx = 1 })
 
         selectSourceCache.addActionListener { selectSourceCachePath() }
@@ -60,7 +60,7 @@ class RegionEditor(private val cacheTo: String) : JFrame() {
         val xtea = symmetricKeyField.text.trim().split(",").mapNotNull { it.toIntOrNull() }.toIntArray()
 
         if (regionId == null || sourceCache.text.isEmpty()) {
-            showError("Invalid Region ID or Cache Path!")
+            showError("Invalid Region ID or cache Path!")
             return
         }
 

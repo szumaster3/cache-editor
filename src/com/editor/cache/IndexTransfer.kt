@@ -25,21 +25,21 @@ class IndexTransfer : JFrame() {
             insets = Insets(5, 5, 5, 5)
             fill = GridBagConstraints.HORIZONTAL
         }
-        val selectSourceButton = JButton("Select Source Cache").apply {
+        val selectSourceButton = JButton("Select Source cache").apply {
             addActionListener { sourceCacheField.text = selectDirectory() }
         }
 
-        val selectTargetButton = JButton("Select Target Cache").apply {
+        val selectTargetButton = JButton("Select Target cache").apply {
             addActionListener { targetCacheField.text = selectDirectory() }
         }
 
         transferButton.addActionListener { transferIndices() }
 
-        add(JLabel("Source Cache"), gbc.apply { gridx = 0; gridy = 0 })
+        add(JLabel("Source cache"), gbc.apply { gridx = 0; gridy = 0 })
         add(sourceCacheField, gbc.apply { gridx = 1 })
         add(selectSourceButton, gbc.apply { gridx = 2 })
 
-        add(JLabel("Target Cache"), gbc.apply { gridx = 0; gridy = 1 })
+        add(JLabel("Target cache"), gbc.apply { gridx = 0; gridy = 1 })
         add(targetCacheField, gbc.apply { gridx = 1 })
         add(selectTargetButton, gbc.apply { gridx = 2 })
 
@@ -81,7 +81,7 @@ class IndexTransfer : JFrame() {
         }
 
         val result = JOptionPane.showConfirmDialog(
-            this, "Rebuild the cache?", "Rebuild Cache", JOptionPane.YES_NO_OPTION
+            this, "Rebuild the cache?", "Rebuild cache", JOptionPane.YES_NO_OPTION
         )
 
         if (result == JOptionPane.YES_OPTION) {

@@ -56,7 +56,7 @@ class InterfaceEditor(cacheLibrary: String) : JFrame() {
         val selectArchiveLabel = JLabel("Select Interface:")
         archiveBox = JComboBox()
         archiveBox!!.addItem("Select Interface...")
-        selectSourceCacheButton = JButton("Select Source Cache")
+        selectSourceCacheButton = JButton("Select Source cache")
         selectSourceCacheButton!!.addActionListener { selectSourceCache() }
 
         bottomPanel.add(selectArchiveLabel)
@@ -154,13 +154,13 @@ class InterfaceEditor(cacheLibrary: String) : JFrame() {
 
     private fun selectSourceCache() {
         val fileChooser = JFileChooser()
-        fileChooser.dialogTitle = "Select Source Cache Folder"
+        fileChooser.dialogTitle = "Select Source cache Folder"
         fileChooser.fileSelectionMode = JFileChooser.DIRECTORIES_ONLY
         val result = fileChooser.showOpenDialog(this)
         if (result == JFileChooser.APPROVE_OPTION) {
             val selectedDirectory = fileChooser.selectedFile
             sourceCachePath = selectedDirectory.absolutePath
-            JOptionPane.showMessageDialog(this, "Source Cache selected: $sourceCachePath")
+            JOptionPane.showMessageDialog(this, "Source cache selected: $sourceCachePath")
         }
     }
 }

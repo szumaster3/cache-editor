@@ -38,7 +38,7 @@ public class ModelFrame extends JFrame {
         add(tabbedPane, BorderLayout.CENTER);
 
         JPanel cachePanel = createCachePanel();
-        tabbedPane.addTab("Cache", cachePanel);
+        tabbedPane.addTab("cache", cachePanel);
 
         JPanel datPanel = createDatPanel();
         tabbedPane.addTab("Folder", datPanel);

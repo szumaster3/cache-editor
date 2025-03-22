@@ -19,7 +19,7 @@ class Interface @JvmOverloads constructor(
      */
     var id: Int,
     /**
-     * The Cache.
+     * The cache.
      */
     var cache: Store, load: Boolean = true
 ) {
