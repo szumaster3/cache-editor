@@ -16,6 +16,7 @@ import com.editor.misc.ColorPicker
 import com.editor.model.ModelExporter
 import com.editor.model.ModelPacker
 import com.editor.model.view.frame.ModelFrame
+import java.awt.Color
 import java.awt.Cursor
 import java.awt.Dimension
 import java.awt.FlowLayout
@@ -23,6 +24,8 @@ import java.awt.event.ActionEvent
 import java.io.*
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
+import java.util.zip.ZipEntry
+import java.util.zip.ZipOutputStream
 import javax.swing.*
 import kotlin.system.exitProcess
 
@@ -35,6 +38,7 @@ class ToolSelection : JFrame() {
     private val toolSelected = "ToolSelection"
     private val startMessage = "Tool started."
     private val failMessage = "Failed to start."
+    private val backupMessage = JLabel().apply { font = font.deriveFont(12) }
 
     init {
         try {
@@ -54,6 +58,7 @@ class ToolSelection : JFrame() {
         val tabbedPane = JTabbedPane()
 
         val panelTab = JPanel(FlowLayout(FlowLayout.LEFT))
+
         val selectToolButton = JLabel("Select tool")
 
         val button0 = JButton("Rebuild cache").apply {
@@ -61,29 +66,27 @@ class ToolSelection : JFrame() {
             preferredSize = Dimension(100, 30)
         }
 
-        val button1 = JButton("Button 1").apply {
-            val random = listOf("Hate!", "Stop!", "Boo!", "Don't...", "Psh...")
-
-
-            addActionListener { placeholderButton1(this, texts = random)}
+        val button1 = JButton("Backup cache").apply {
+            addActionListener { backup(this) }
             preferredSize = Dimension(100, 30)
         }
 
         val button2 = JButton("Timestamp").apply {
             addActionListener { placeholderButton2(this) }
-            preferredSize = Dimension(200, 30)
+            preferredSize = Dimension(205, 30)
         }
 
-        val panelMiddle = JPanel(FlowLayout(FlowLayout.LEFT))
+        val panelMiddle = JPanel(FlowLayout(FlowLayout.CENTER))
         panelMiddle.add(button0)
         panelMiddle.add(button1)
 
-        val panelBottom = JPanel(FlowLayout(FlowLayout.LEFT))
+        val panelBottom = JPanel(FlowLayout(FlowLayout.CENTER))
         panelBottom.add(button2)
 
         panelTab.add(selectToolButton)
         panelTab.add(panelMiddle)
         panelTab.add(panelBottom)
+        panelTab.add(backupMessage)
 
         val toolsTab = JPanel(FlowLayout())
         val submitButton = JButton("Submit")
@@ -341,11 +344,6 @@ class ToolSelection : JFrame() {
         }
     }
 
-    private fun placeholderButton1(button: JButton, texts: List<String>) {
-        val randomText = texts.random()
-        button.text = randomText
-    }
-
     private fun placeholderButton2(button: JButton) {
         val currentDateTime = LocalDateTime.now()
 
@@ -356,5 +354,56 @@ class ToolSelection : JFrame() {
         val time = currentDateTime.format(timeFormatter)
 
         button.text = "$date | $time"
+    }
+
+    private fun placeholderButton3(button: JButton, texts: List<String>) {
+        val randomText = texts.random()
+        button.text = randomText
+    }
+
+    private fun backup(button: JButton) {
+        if (cache.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "No cache loaded.", "Error", JOptionPane.ERROR_MESSAGE)
+            return
+        }
+        val backupDir = File("data/backups/").apply {
+            if (!exists()) {
+                mkdirs()
+            }
+        }
+
+        val zipFile = File(backupDir, "cache_backup_${LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMdd_HHmmss"))}.zip")
+
+        try {
+            ZipOutputStream(FileOutputStream(zipFile)).use { zos ->
+                val dir = File(cache)
+                zipDirectory(dir, zos, dir.name)
+            }
+            backupMessage.text = "                          Backup done"
+            backupMessage.foreground = Color.darkGray
+        } catch (e: IOException) {
+            JOptionPane.showMessageDialog(this, "Error while creating backup: ${e.message}", "Error", JOptionPane.ERROR_MESSAGE)
+        }
+    }
+
+    private fun zipDirectory(directory: File, zos: ZipOutputStream, parentDirectory: String) {
+        if (!directory.exists()) return
+
+        if (directory.isDirectory) {
+            val dirEntry = ZipEntry("$parentDirectory/")
+            zos.putNextEntry(dirEntry)
+            zos.closeEntry()
+
+            directory.listFiles()?.forEach { file ->
+                zipDirectory(file, zos, "$parentDirectory/${file.name}")
+            }
+        } else {
+            FileInputStream(directory).use { fis ->
+                val entry = ZipEntry(parentDirectory)
+                zos.putNextEntry(entry)
+                fis.copyTo(zos)
+                zos.closeEntry()
+            }
+        }
     }
 }
