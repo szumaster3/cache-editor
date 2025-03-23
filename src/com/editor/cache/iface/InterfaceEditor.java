@@ -2,6 +2,7 @@ package com.editor.cache.iface;
 
 import com.alex.defs.interfaces.ComponentDefinition;
 import com.alex.filestore.Cache;
+import com.displee.cache.CacheLibrary;
 import com.editor.cache.iface.sprites.ImageUtils;
 import com.editor.cache.iface.sprites.SpriteDumper;
 import com.editor.cache.iface.sprites.SpriteLoader;
@@ -51,7 +52,7 @@ public class InterfaceEditor extends JFrame {
     private JTextField txt_x = new JTextField();
     private JTextField txt_y = new JTextField();
     private JTextField txt_height = new JTextField();
-    private JTextField txt_widht = new JTextField();
+    private JTextField txt_width = new JTextField();
     private JTextField txt_text = new JTextField();
     private JTextField txt_leftclick = new JTextField();
     private JTextField txt_parent = new JTextField();
@@ -216,56 +217,65 @@ public class InterfaceEditor extends JFrame {
     private void constructWestPanel() {
         JPanel panel = new JPanel(new BorderLayout());
 
+        // Set the size constraints for the main panel
         panel.setMinimumSize(new Dimension(IfaceConstants.LEFT_SCROLLPANE_WIDTH, IfaceConstants.DEFAULT_EDITOR_HEIGHT));
         panel.setMaximumSize(new Dimension(IfaceConstants.LEFT_SCROLLPANE_WIDTH, IfaceConstants.DEFAULT_EDITOR_HEIGHT));
         panel.setPreferredSize(new Dimension(IfaceConstants.LEFT_SCROLLPANE_WIDTH, IfaceConstants.DEFAULT_EDITOR_HEIGHT));
 
-        JPanel searchPanel = new JPanel(new FlowLayout());
-        txt_interId = new JTextField();
-        txt_interId.setBounds(IfaceConstants.CONTENT_PADDING, IfaceConstants.CONTENT_PADDING, IfaceConstants.SEARCHBOX_WIDTH, IfaceConstants.SEARCHBOX_HEIGHT);
-        txt_interId.setColumns(10);
+        // Construct search panel
+        JPanel searchPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
+        txt_interId = new JTextField(10); // Define columns directly to make it clearer
         searchPanel.add(txt_interId);
 
-        JButton btnFind = new JButton("find");
-        btnFind.setBounds(IfaceConstants.CONTENT_PADDING * 2 + IfaceConstants.SEARCHBOX_WIDTH, IfaceConstants.CONTENT_PADDING, IfaceConstants.BUTTON_WIDTH, IfaceConstants.BUTTON_HEIGHT);
+        JButton btnFind = new JButton("Find");
         btnFind.addActionListener(arg0 -> {
-            int id = Integer.parseInt(txt_interId.getText());
-            currentInterface = id;
-            drawTree(id);
+            try {
+                int id = Integer.parseInt(txt_interId.getText());
+                currentInterface = id;
+                drawTree(id);
+            } catch (NumberFormatException e) {
+                JOptionPane.showMessageDialog(panel, "Invalid interface ID.");
+            }
         });
         searchPanel.add(btnFind);
         panel.add(searchPanel, BorderLayout.NORTH);
 
+        // Construct the interface list panel
         ifListScrollPane = new JScrollPane();
         ifListScrollPane.setPreferredSize(new Dimension(IfaceConstants.LEFT_SCROLLPANE_WIDTH, IfaceConstants.VIEWPORT_HEIGHT));
-        ifListScrollPane.setBounds(10, 54, 193, 331);
         interface_list = new JList(populateList());
         ifListScrollPane.setViewportView(interface_list);
+
         interface_list.addListSelectionListener(evt -> {
-            if (evt.getValueIsAdjusting()) return;
-            int id = Integer.parseInt(interface_list.getSelectedValue().toString().replaceAll("Interface: ", ""));
-            System.out.println("Interface " + id + " is selected.");
-            currentInterface = id;
-            viewportPanel.repaint();
-            drawTree(id);
-            cleanValues();
+            if (!evt.getValueIsAdjusting()) {
+                String selectedValue = interface_list.getSelectedValue().toString();
+                try {
+                    int id = Integer.parseInt(selectedValue.replaceAll("Interface: ", ""));
+                    currentInterface = id;
+                    viewportPanel.repaint();
+                    drawTree(id);
+                    cleanValues();
+                } catch (NumberFormatException e) {
+                    System.out.println("Invalid interface selected.");
+                }
+            }
         });
+
         panel.add(ifListScrollPane, BorderLayout.CENTER);
 
+        // Construct right-click popup menu for export
         final JPopupMenu popupMenu = new JPopupMenu();
         JMenuItem export = new JMenuItem("Export");
         popupMenu.add(export);
         interface_list.addMouseListener(new MouseAdapter() {
-
             public void mouseClicked(MouseEvent me) {
-                if (SwingUtilities.isRightMouseButton(me)    // if right mouse button clicked
-                        && !interface_list.isSelectionEmpty()            // and list selection is not empty
-                        && interface_list.locationToIndex(me.getPoint()) // and clicked point is
-                        == interface_list.getSelectedIndex()) {       //   inside selected item bounds
+                if (SwingUtilities.isRightMouseButton(me) && !interface_list.isSelectionEmpty() &&
+                        interface_list.locationToIndex(me.getPoint()) == interface_list.getSelectedIndex()) {
                     popupMenu.show(interface_list, me.getX(), me.getY());
                 }
             }
         });
+
         export.addActionListener(arg0 -> {
             try {
                 exportInterface(currentInterface);
@@ -274,31 +284,36 @@ public class InterfaceEditor extends JFrame {
             }
         });
 
+        // Construct additional buttons panel
         JPanel moreButtonsPanel = new JPanel(new FlowLayout());
         moreButtonsPanel.setPreferredSize(new Dimension(IfaceConstants.LEFT_SCROLLPANE_WIDTH, IfaceConstants.DEFAULT_EDITOR_HEIGHT / 3));
 
+        // Add interface button
         JButton addInterfaceButton = getJButton();
         moreButtonsPanel.add(addInterfaceButton);
 
+        // Delete interface button
         JButton deleteInterfaceButton = getButton();
         moreButtonsPanel.add(deleteInterfaceButton);
 
+        // Construct premade components panel
         JPanel premadeComponentsPanel = new JPanel(new FlowLayout());
-        premadeComponentsPanel.setBorder(new TitledBorder(null, "Premade components", TitledBorder.LEADING, TitledBorder.TOP, null, null));
+        premadeComponentsPanel.setBorder(new TitledBorder("Premade Components"));
         premadeComponentsPanel.setPreferredSize(new Dimension(IfaceConstants.PREMADE_COMP_WIDTH, IfaceConstants.PREMADE_COMP_HEIGHT));
 
-        comboBox = new JComboBox();
-        comboBox.setModel(new DefaultComboBoxModel(new String[]{"Close button", "Normal button", "Start interface", "Basic custom hover", "Basic button with pop-up"}));
+        comboBox = new JComboBox<>(new String[]{
+                "Close button", "Normal button", "Start interface", "Basic custom hover", "Basic button with pop-up"
+        });
         comboBox.setPreferredSize(new Dimension(IfaceConstants.PREMADE_COMP_WIDTH - 10, IfaceConstants.BUTTON_HEIGHT));
         premadeComponentsPanel.add(comboBox);
 
-
         JButton btnAddPremadeComponent = new JButton("Add Component");
-        btnAddPremadeComponent.addActionListener(arg0 -> addDefaultComponent(currentInterface));
         btnAddPremadeComponent.setPreferredSize(new Dimension(IfaceConstants.PREMADE_COMP_WIDTH - 10, IfaceConstants.BUTTON_HEIGHT));
+        btnAddPremadeComponent.addActionListener(arg0 -> addDefaultComponent(currentInterface));
         premadeComponentsPanel.add(btnAddPremadeComponent);
         moreButtonsPanel.add(premadeComponentsPanel);
 
+        // Save button
         JButton saveButton = new JButton("Save");
         saveButton.setPreferredSize(new Dimension(IfaceConstants.LEFT_SCROLLPANE_WIDTH, IfaceConstants.BUTTON_HEIGHT));
         saveButton.addActionListener(arg0 -> {
@@ -307,7 +322,7 @@ public class InterfaceEditor extends JFrame {
                 drawTree(currentInterface);
                 setValues(currentInterface, selectedComp);
             } else {
-                JOptionPane.showMessageDialog(interfaceViewportScrollPane, "Please selected a component & interface before saving it.");
+                JOptionPane.showMessageDialog(interfaceViewportScrollPane, "Please select a component & interface before saving it.");
             }
         });
         moreButtonsPanel.add(saveButton);
@@ -321,56 +336,91 @@ public class InterfaceEditor extends JFrame {
     private JButton getButton() {
         JButton deleteInterfaceButton = new JButton("Delete Selected");
         deleteInterfaceButton.addActionListener(arg0 -> {
-            int option = JOptionPane.showConfirmDialog(this, "Are you sure that you want to remove interface " + currentInterface + " ?", "Inane warning", JOptionPane.YES_NO_OPTION);
-            if (option == 0) {
-                for (int i = 0; i < ComponentDefinition.getInterfaceDefinitionsComponentsSize(Cache, currentInterface); i++) {
-                    if (i == 0) {
-                        addIndex0text((currentInterface));
-                    } else Cache.getIndexes()[3].removeFile((currentInterface), i);
-                }
+            int option = JOptionPane.showConfirmDialog(
+                    this,
+                    "Are you sure that you want to remove interface " + currentInterface + "?",
+                    "Inane warning",
+                    JOptionPane.YES_NO_OPTION
+            );
+
+            if (option == JOptionPane.YES_OPTION) {
+                Cache.getIndexes()[3].removeArchive(currentInterface);
                 ComponentDefinition.icomponentsdefs = new ComponentDefinition[ComponentDefinition.getInterfaceDefinitionsSize(Cache)][];
                 drawTree(currentInterface);
+
+                refreshInterface();
             }
         });
+
+        // Set the button's preferred size
         deleteInterfaceButton.setPreferredSize(new Dimension(IfaceConstants.LEFT_SCROLLPANE_WIDTH, IfaceConstants.BUTTON_HEIGHT));
+
         return deleteInterfaceButton;
     }
+
+    /**
+     * This method forces a full refresh of the interface.
+     * It clears and re-renders the UI elements as needed.
+     */
+    private void refreshInterface() {
+        getContentPane().removeAll();
+
+        constructWestPanel();
+        constructCenterPanel();
+        constructEastPanel();
+
+        revalidate();
+        repaint();
+    }
+
 
     @NotNull
     private JButton getJButton() {
         JButton addInterfaceButton = new JButton("Add Interface");
         addInterfaceButton.addActionListener(arg0 -> {
+            // Initialize default button and set properties
             ComponentDefinition defaultButton = ComponentDefinition.getInterfaceComponent(6, 36);
             defaultButton.basePositionX = 0;
             defaultButton.basePositionY = 0;
             defaultButton.parentId = -1;
+
+            // Save the default button to cache
             Cache.getIndexes()[3].putFile(ComponentDefinition.getInterfaceDefinitionsSize(Cache), 0, defaultButton.encode());
+
+            // Initialize component definitions array
             ComponentDefinition.icomponentsdefs = new ComponentDefinition[ComponentDefinition.getInterfaceDefinitionsSize(Cache)][];
-            JList list = new JList(populateList());
+
+            // Create list and set up its selection listener
+            JList<String> list = new JList<>(populateList());
             list.addListSelectionListener(evt -> {
-                if (evt.getValueIsAdjusting()) return;
+                if (evt.getValueIsAdjusting()) return; // Avoid unnecessary processing
                 int id = Integer.parseInt(list.getSelectedValue().toString().replaceAll("Interface: ", ""));
                 currentInterface = id;
                 drawTree(id);
             });
+
+            // Set the list to the scroll pane
             ifListScrollPane.setViewportView(list);
         });
+
+        // Set the button's preferred size
         addInterfaceButton.setPreferredSize(new Dimension(IfaceConstants.LEFT_SCROLLPANE_WIDTH, IfaceConstants.BUTTON_HEIGHT));
+
         return addInterfaceButton;
     }
 
     private void constructEastPanel() {
+        // Create main panel
         JPanel panel = new JPanel(new BorderLayout());
         panel.setPreferredSize(new Dimension(IfaceConstants.RIGHT_SCROLLPANE_WIDTH, IfaceConstants.DEFAULT_EDITOR_HEIGHT));
         panel.setMaximumSize(new Dimension(IfaceConstants.RIGHT_SCROLLPANE_WIDTH, IfaceConstants.DEFAULT_EDITOR_HEIGHT));
         panel.setMinimumSize(new Dimension(IfaceConstants.RIGHT_SCROLLPANE_WIDTH, IfaceConstants.DEFAULT_EDITOR_HEIGHT));
 
-        /**
-         * scrollpane for the jtree
-         */
+        // Scrollpane for the JTree
         componentScrollpane = new JScrollPane();
         componentScrollpane.setPreferredSize(new Dimension(IfaceConstants.RIGHT_SCROLLPANE_WIDTH, IfaceConstants.VIEWPORT_HEIGHT));
-        //jtree itself
+
+        // JTree setup
         JTree componentTree = new JTree(createInterfaceTree(1));
         componentScrollpane.setViewportView(componentTree);
         componentTree.addTreeSelectionListener(e -> {
@@ -382,46 +432,48 @@ public class InterfaceEditor extends JFrame {
         });
         panel.add(componentScrollpane, BorderLayout.CENTER);
 
+        // Panel for more buttons
         JPanel moreButtonsPanel = new JPanel(new FlowLayout());
         moreButtonsPanel.setPreferredSize(new Dimension(IfaceConstants.RIGHT_SCROLLPANE_WIDTH, IfaceConstants.DEFAULT_EDITOR_HEIGHT / 3));
 
+        // Component buttons panel
         JPanel componentButtons = getJPanel();
         moreButtonsPanel.add(componentButtons);
 
+        // Settings panel with a titled border
         JPanel settingsPanel = new JPanel(new FlowLayout());
         settingsPanel.setBorder(new TitledBorder(null, "Settings", TitledBorder.LEADING, TitledBorder.TOP, null, null));
         settingsPanel.setPreferredSize(new Dimension(IfaceConstants.RIGHT_SCROLLPANE_WIDTH, IfaceConstants.DEFAULT_EDITOR_HEIGHT / 4));
 
+        // Checkbox size
         Dimension checkBoxSize = new Dimension(IfaceConstants.RIGHT_SCROLLPANE_WIDTH - 10, IfaceConstants.BUTTON_HEIGHT_SMALL);
 
+        // "Show Containers" checkbox
         chckbxShowContainers = new JCheckBox("Show Containers");
         chckbxShowContainers.setSelected(true);
         chckbxShowContainers.setPreferredSize(checkBoxSize);
         chckbxShowContainers.addItemListener(e -> {
-            if (e.getStateChange() == ItemEvent.SELECTED) {
-                drawInterfaceComponents(currentInterface, true, chckbxShowHiddenComps.isSelected(), chckbxShowRectangles.isSelected(), chckbxRealFonttesting.isSelected());
-            } else {
-                drawInterfaceComponents(currentInterface, false, chckbxShowHiddenComps.isSelected(), chckbxShowRectangles.isSelected(), chckbxRealFonttesting.isSelected());
-            }
+            boolean selected = e.getStateChange() == ItemEvent.SELECTED;
+            drawInterfaceComponents(currentInterface, selected, chckbxShowHiddenComps.isSelected(), chckbxShowRectangles.isSelected(), chckbxRealFonttesting.isSelected());
         });
         settingsPanel.add(chckbxShowContainers);
 
+        // "Show Models" checkbox
         chckbxShowRectangles = new JCheckBox("Show Models");
         chckbxShowRectangles.setSelected(true);
         chckbxShowRectangles.setPreferredSize(checkBoxSize);
         chckbxShowRectangles.addItemListener(e -> {
-            if (e.getStateChange() == ItemEvent.SELECTED) {
-                drawInterfaceComponents(currentInterface, chckbxShowContainers.isSelected(), chckbxShowHiddenComps.isSelected(), true, chckbxRealFonttesting.isSelected());
-            } else {
-                drawInterfaceComponents(currentInterface, chckbxShowContainers.isSelected(), chckbxShowHiddenComps.isSelected(), false, chckbxRealFonttesting.isSelected());
-            }
+            boolean selected = e.getStateChange() == ItemEvent.SELECTED;
+            drawInterfaceComponents(currentInterface, chckbxShowContainers.isSelected(), chckbxShowHiddenComps.isSelected(), selected, chckbxRealFonttesting.isSelected());
         });
         settingsPanel.add(chckbxShowRectangles);
 
+        // "Show Hidden" checkbox
         chckbxShowHiddenComps = new JCheckBox("Show Hidden");
         chckbxShowHiddenComps.setPreferredSize(checkBoxSize);
         settingsPanel.add(chckbxShowHiddenComps);
 
+        // "Draw Real Font" checkbox with mouse listener
         chckbxRealFonttesting = new JCheckBox("Draw Real Font");
         chckbxRealFonttesting.setPreferredSize(checkBoxSize);
         chckbxRealFonttesting.addMouseListener(new MouseAdapter() {
@@ -431,11 +483,15 @@ public class InterfaceEditor extends JFrame {
                 drawInterfaceComponents(currentInterface, chckbxShowContainers.isSelected(), chckbxShowHiddenComps.isSelected(), chckbxShowRectangles.isSelected(), chckbxRealFonttesting.isSelected());
             }
         });
-        chckbxRealFonttesting.setBounds(6, 107, 193, 25);
         settingsPanel.add(chckbxRealFonttesting);
+
+        // Add settings panel to more buttons panel
         moreButtonsPanel.add(settingsPanel);
+
+        // Add the more buttons panel to the main panel
         panel.add(moreButtonsPanel, BorderLayout.SOUTH);
 
+        // Add the main panel to the content pane
         getContentPane().add(panel, BorderLayout.EAST);
     }
 
@@ -469,7 +525,6 @@ public class InterfaceEditor extends JFrame {
         componentButtons.add(btnDelete);
         return componentButtons;
     }
-
     @NotNull
     private JButton getButton(Dimension buttonSize) {
         JButton btnDelete = new JButton("Delete");
@@ -477,13 +532,23 @@ public class InterfaceEditor extends JFrame {
         btnDelete.setToolTipText("Deletes the selected component");
         btnDelete.addActionListener(e -> {
             if (selectedComp <= 0) {
-                JOptionPane.showMessageDialog(interfaceViewportScrollPane, "Please select an component first.");
+                JOptionPane.showMessageDialog(interfaceViewportScrollPane, "Please select a component first.");
             } else {
                 ComponentDefinition c = ComponentDefinition.getInterfaceComponent(currentInterface, selectedComp);
-                String message = (c.type == ComponentConstants.CONTAINER ? "Are you sure that you want to remove component " + selectedComp + " from interface " + currentInterface + " ? NOTE: this component is a container, childs will be removed aswell." : "Are you sure that you want to remove  component " + selectedComp + " from interface " + currentInterface + " ?");
+                String message = (c.type == ComponentConstants.CONTAINER ?
+                        "Are you sure that you want to remove component " + selectedComp + " from interface " + currentInterface +
+                                " ? NOTE: this component is a container, children will be removed as well." :
+                        "Are you sure that you want to remove component " + selectedComp + " from interface " + currentInterface + " ?");
                 int option = JOptionPane.showConfirmDialog(this, message, "Inane warning", JOptionPane.YES_NO_OPTION);
                 if (option == 0) {
                     try {
+                        // If the component is a container, delete all nested components as well
+                        if (c.type == ComponentConstants.CONTAINER) {
+                            for (int compId : getNestedComponents(currentInterface, selectedComp)) {
+                                Cache.getIndexes()[3].removeFile(currentInterface, compId);
+                            }
+                        }
+                        // Delete the selected component itself
                         Cache.getIndexes()[3].removeFile(currentInterface, selectedComp);
                         Cache.getIndexes()[3].resetCachedFiles();
                         Cache.getIndexes()[3].rewriteTable();
@@ -494,6 +559,38 @@ public class InterfaceEditor extends JFrame {
             }
         });
         return btnDelete;
+    }
+
+    /**
+     * This method retrieves nested components for a container component.
+     * It assumes the children are stored sequentially in the interface.
+     * @param interfaceId The ID of the interface.
+     * @param componentId The ID of the container component.
+     * @return A list of nested component IDs.
+     */
+    private List<Integer> getNestedComponents(int interfaceId, int componentId) {
+        List<Integer> nestedComponents = new ArrayList<>();
+
+        // Retrieve the components for the interface
+        ComponentDefinition[] interfaceComponents = ComponentDefinition.getInterface(interfaceId);
+        if (interfaceComponents == null || componentId >= interfaceComponents.length) {
+            return nestedComponents;
+        }
+
+        // Get the container component
+        ComponentDefinition containerComponent = interfaceComponents[componentId];
+        if (containerComponent == null || containerComponent.type != ComponentConstants.CONTAINER) {
+            return nestedComponents;
+        }
+
+        for (int i = componentId + 1; i < interfaceComponents.length; i++) {
+            ComponentDefinition childComponent = interfaceComponents[i];
+            if (childComponent != null && childComponent.parentId == componentId) {
+                nestedComponents.add(i);
+            }
+        }
+
+        return nestedComponents;
     }
 
     private void constructCenterPanel() {
@@ -675,7 +772,7 @@ public class InterfaceEditor extends JFrame {
         generalTab.add(createInfoFieldPanel("X Mode", txt_modex));
         generalTab.add(createInfoFieldPanel("Y Pos", txt_y));
         generalTab.add(createInfoFieldPanel("Y Mode", txt_positionmodeY));
-        generalTab.add(createInfoFieldPanel("Width", txt_widht));
+        generalTab.add(createInfoFieldPanel("Width", txt_width));
         generalTab.add(createInfoFieldPanel("Width Mode", txt_widthMode));
         generalTab.add(createInfoFieldPanel("Height", txt_height));
         generalTab.add(createInfoFieldPanel("Height Mode", txt_modeHeight));
@@ -771,7 +868,7 @@ public class InterfaceEditor extends JFrame {
         else txt_type.setText(comp.type + "");
         this.txt_scrollX.setText(comp.layerHeight + "");
         this.txt_scrollY.setText(comp.layerWidth + "");
-        this.txt_widht.setText(comp.baseWidth + "");
+        this.txt_width.setText(comp.baseWidth + "");
         this.txt_x.setText(comp.basePositionX + "");
         this.txt_y.setText(comp.basePositionY + "");
         this.txt_border.setText(comp.width2 + "");
@@ -1042,76 +1139,108 @@ public class InterfaceEditor extends JFrame {
     }
 
     /**
-     * saves the interface
+     * Saves the interface component data.
      *
-     * @param inter
-     * @param comp
+     * @param inter The interface ID.
+     * @param comp The component ID.
      */
     public void saveInterface(int inter, int comp) {
+        // Retrieve the component to be saved
         ComponentDefinition changedComponent = ComponentDefinition.getInterfaceComponent(inter, comp);
-        changedComponent.basePositionX = Integer.parseInt(txt_x.getText());
-        changedComponent.basePositionY = Integer.parseInt(txt_y.getText());
-        changedComponent.baseHeight = Integer.parseInt(txt_height.getText());
-        changedComponent.baseWidth = Integer.parseInt(this.txt_widht.getText());
-        changedComponent.parentId = Integer.parseInt(this.txt_parent.getText());
-        changedComponent.color = Integer.parseInt(this.txt_color.getText());
-        changedComponent.aspectXType = (byte) Integer.parseInt(this.txt_modex.getText());
-        changedComponent.aspectYType = (byte) Integer.parseInt(this.txt_positionmodeY.getText());
+
+        // Set basic properties
+        changedComponent.basePositionX = parseInt(txt_x.getText());
+        changedComponent.basePositionY = parseInt(txt_y.getText());
+        changedComponent.baseHeight = parseInt(txt_height.getText());
+        changedComponent.baseWidth = parseInt(txt_width.getText()); // Fixed typo from 'txt_width' to 'txt_width'
+        changedComponent.parentId = parseInt(txt_parent.getText());
+        changedComponent.color = parseInt(txt_color.getText());
+        changedComponent.aspectXType = (byte) parseInt(txt_modex.getText());
+        changedComponent.aspectYType = (byte) parseInt(txt_positionmodeY.getText());
+
+        // Handle sprite-specific properties
         if (changedComponent.type == ComponentConstants.SPRITE) {
-            changedComponent.spriteId = Integer.parseInt(this.txt_sprite.getText());
+            changedComponent.spriteId = parseInt(txt_sprite.getText());
         }
-		/*
-		 * this.txt_scrollX.setText(comp.layerHeight+"");
-			this.txt_scrollY.setText(comp.layerWidth+"");
-		 */
-        changedComponent.layerHeight = Integer.parseInt(this.txt_scrollX.getText());
-        changedComponent.layerWidth = Integer.parseInt(this.txt_scrollY.getText());
-        changedComponent.aspectXType = Byte.parseByte(this.txt_modex.getText());
-        changedComponent.aspectYType = Byte.parseByte(this.txt_positionmodeY.getText());
-        changedComponent.text = this.txt_text.getText();
-        if (!this.txt_font.getText().isEmpty()) changedComponent.fontId = Integer.parseInt(this.txt_font.getText());
-        if (!this.txt_animationId.getText().isEmpty())
-            changedComponent.animationId = Integer.parseInt(this.txt_animationId.getText());
+
+        // Set layer dimensions
+        changedComponent.layerHeight = parseInt(txt_scrollX.getText());
+        changedComponent.layerWidth = parseInt(txt_scrollY.getText());
+
+        // Set text and font properties
+        changedComponent.text = txt_text.getText();
+        if (!txt_font.getText().isEmpty()) {
+            changedComponent.fontId = parseInt(txt_font.getText());
+        }
+
+        // Handle animation ID
+        if (!txt_animationId.getText().isEmpty()) {
+            changedComponent.animationId = parseInt(txt_animationId.getText());
+        }
+
+        // Handle visibility and flipping
         changedComponent.hidden = chckbxHidden.isSelected();
-        changedComponent.hFlip = this.chckbxHorizontalFlip.isSelected();
-        changedComponent.vFlip = this.chckbxVerticalFlip.isSelected();
-        changedComponent.repeat_ = changedComponent.repeat_;//this.chckbxRepeat.isSelected();
-        changedComponent.modelId = Integer.parseInt(this.txt_model.getText());
-        changedComponent.aspectHeightType = (byte) Integer.parseInt(this.txt_modeHeight.getText());
-        changedComponent.aspectWidthType = (byte) Integer.parseInt(this.txt_widthMode.getText());
-        changedComponent.transparency = Integer.parseInt(this.txt_trans.getText());
-        changedComponent.filled = this.chckbxFilled.isSelected();
-        changedComponent.textHorizontalAli = Integer.parseInt(this.txt_xali.getText());
-        changedComponent.textVerticalAli = Integer.parseInt(this.txt_yali.getText());
-        /**
-         * saving texts
-         * TODO more options
-         */
-        if (!this.txt_leftclick.getText().isEmpty()) {
-            if (changedComponent.rightclickOptions == null) changedComponent.rightclickOptions = new String[5];
+        changedComponent.hFlip = chckbxHorizontalFlip.isSelected();
+        changedComponent.vFlip = chckbxVerticalFlip.isSelected();
+
+        // Set model and dimension properties
+        changedComponent.modelId = parseInt(txt_model.getText());
+        changedComponent.aspectHeightType = (byte) parseInt(txt_modeHeight.getText());
+        changedComponent.aspectWidthType = (byte) parseInt(txt_widthMode.getText());
+        changedComponent.transparency = parseInt(txt_trans.getText());
+        changedComponent.filled = chckbxFilled.isSelected();
+        changedComponent.textHorizontalAli = parseInt(txt_xali.getText());
+        changedComponent.textVerticalAli = parseInt(txt_yali.getText());
+
+        // Save right-click options
+        if (!txt_leftclick.getText().isEmpty()) {
+            if (changedComponent.rightclickOptions == null) {
+                changedComponent.rightclickOptions = new String[5];
+            }
             changedComponent.optionMask = ComponentConstants.CLICK_MASK;
-            changedComponent.rightclickOptions[0] = this.txt_leftclick.getText();
+            changedComponent.rightclickOptions[0] = txt_leftclick.getText();
         }
-        /**
-         * saving scripts
-         */
-        changedComponent.onMouseRepeat = InterfaceUtils.getScriptArray(this.txt_onMouseRepeat.getText());
-        changedComponent.onMouseHoverScript = InterfaceUtils.getScriptArray(this.txt_fullonhover.getText());
-        changedComponent.onMouseLeaveScript = InterfaceUtils.getScriptArray(this.txt_mouseLeave.getText());
-        changedComponent.onOptionClick = InterfaceUtils.getScriptArray(this.txt_onOptionClick.getText());
-        changedComponent.onStatTransmit = InterfaceUtils.getScriptArray(this.txt_onStatTransmit.getText());
-        changedComponent.onUse = InterfaceUtils.getScriptArray(this.txt_onUse.getText());
-        changedComponent.onVarpTransmit = InterfaceUtils.getScriptArray(this.txt_onVarpTransmit.getText());
-        changedComponent.onInvTransmit = InterfaceUtils.getScriptArray(this.txt_onInvTransmit.getText());
-        changedComponent.onTimer = InterfaceUtils.getScriptArray(this.txt_onTimer.getText());
-        changedComponent.onLoadScript = InterfaceUtils.getScriptArray(this.txt_onload.getText());
-        changedComponent.onUseWith = InterfaceUtils.getScriptArray(this.txt_onUseWith.getText());
-        changedComponent.varpTriggers = InterfaceUtils.getConfigArray(this.txt_varpTriggers.getText());
-        //message
-        //JOptionPane.showMessageDialog(scrollPane_2, "Component has been succesfully saved.");
-        //saves it
-        System.out.println("Saving component " + comp + " from interface interface " + inter);
+
+        // Save scripts
+        saveScripts(changedComponent);
+
+        // Save the component to the cache
+        System.out.println("Saving component " + comp + " from interface " + inter);
         Cache.getIndexes()[3].putFile(inter, comp, changedComponent.encode());
+    }
+
+    /**
+     * Parses the provided text to an integer, returning 0 if parsing fails.
+     *
+     * @param text The text to be parsed.
+     * @return The parsed integer, or 0 if parsing fails.
+     */
+    private int parseInt(String text) {
+        try {
+            return Integer.parseInt(text);
+        } catch (NumberFormatException e) {
+            return 0; // Return a default value if parsing fails
+        }
+    }
+
+    /**
+     * Saves the script arrays for the component.
+     *
+     * @param component The component to which scripts will be added.
+     */
+    private void saveScripts(ComponentDefinition component) {
+        component.onMouseRepeat = InterfaceUtils.getScriptArray(txt_onMouseRepeat.getText());
+        component.onMouseHoverScript = InterfaceUtils.getScriptArray(txt_fullonhover.getText());
+        component.onMouseLeaveScript = InterfaceUtils.getScriptArray(txt_mouseLeave.getText());
+        component.onOptionClick = InterfaceUtils.getScriptArray(txt_onOptionClick.getText());
+        component.onStatTransmit = InterfaceUtils.getScriptArray(txt_onStatTransmit.getText());
+        component.onUse = InterfaceUtils.getScriptArray(txt_onUse.getText());
+        component.onVarpTransmit = InterfaceUtils.getScriptArray(txt_onVarpTransmit.getText());
+        component.onInvTransmit = InterfaceUtils.getScriptArray(txt_onInvTransmit.getText());
+        component.onTimer = InterfaceUtils.getScriptArray(txt_onTimer.getText());
+        component.onLoadScript = InterfaceUtils.getScriptArray(txt_onload.getText());
+        component.onUseWith = InterfaceUtils.getScriptArray(txt_onUseWith.getText());
+        component.varpTriggers = InterfaceUtils.getConfigArray(txt_varpTriggers.getText());
     }
 
     /**
@@ -1152,119 +1281,152 @@ public class InterfaceEditor extends JFrame {
     }
 
     /**
-     * TODO rewrite this
-     * fills the jtree
+     * Fills the JTree with components for a given interface ID.
      *
-     * @param interfaceId
-     * @return
+     * @param interfaceId The ID of the interface.
+     * @return The tree model for the interface.
      */
     public DefaultTreeModel createInterfaceTree(int interfaceId) {
-        DefaultMutableTreeNode inter = new DefaultMutableTreeNode("Interface " + interfaceId + "");
-        //new stuff
+        DefaultMutableTreeNode root = new DefaultMutableTreeNode("Interface " + interfaceId);
+
+        // Loop through the components of the given interface ID.
         for (int i = 0; i < ComponentDefinition.getInterfaceDefinitionsComponentsSize(Cache, interfaceId); i++) {
-            ComponentDefinition c = ComponentDefinition.getInterfaceComponent(interfaceId, i);
-            if (c == null) {
-                System.out.println("is null" + i);
+            ComponentDefinition component = ComponentDefinition.getInterfaceComponent(interfaceId, i);
+            if (component == null) {
+                System.out.println("Component is null at index: " + i);
                 continue;
             }
-            //System.out.println("here");
-            //check for the base containers
-            if (c.parentId == -1 && ComponentDefinition.hasChilds(interfaceId, c.ihash)) {
-                DefaultMutableTreeNode child = new DefaultMutableTreeNode("Component " + c.componentId);
-                ArrayList<ComponentDefinition> childs = ComponentDefinition.getChildsByParent(interfaceId, c.ihash);
-                //loop throu the childs
-                for (ComponentDefinition c2 : childs) {
-                    //check if the child is a container , if so loop throu his childs etc..
-                    if (ComponentDefinition.hasChilds(interfaceId, c2.ihash)) {
-                        ArrayList<ComponentDefinition> childs2 = ComponentDefinition.getChildsByParent(interfaceId, c2.ihash);
-                        DefaultMutableTreeNode container2 = new DefaultMutableTreeNode("Component " + c2.componentId);
-                        for (ComponentDefinition c3 : childs2) {
-                            if (ComponentDefinition.hasChilds(interfaceId, c3.ihash)) {
-                                ArrayList<ComponentDefinition> childs3 = ComponentDefinition.getChildsByParent(interfaceId, c3.ihash);
-                                DefaultMutableTreeNode container3 = new DefaultMutableTreeNode("Component " + c3.componentId);
-                                for (ComponentDefinition c4 : childs3) {
-                                    if (ComponentDefinition.hasChilds(interfaceId, c4.ihash)) {
-                                        ArrayList<ComponentDefinition> child4 = ComponentDefinition.getChildsByParent(interfaceId, c4.ihash);
-                                        DefaultMutableTreeNode container4 = new DefaultMutableTreeNode("Component " + c4.componentId);
-                                        for (ComponentDefinition c5 : child4) {
-                                            DefaultMutableTreeNode childs4 = new DefaultMutableTreeNode("Component " + c5.componentId);
-                                            container4.add(childs4);
-                                        }
 
-                                        container3.add(container4);
-                                    } else {
-                                        DefaultMutableTreeNode child2 = new DefaultMutableTreeNode("Component " + c4.componentId);
-                                        container3.add(child2);
-                                    }
-                                }
-                                container2.add(container3);
-                            } else {
-                                DefaultMutableTreeNode child2 = new DefaultMutableTreeNode("Component " + c3.componentId);
-                                container2.add(child2);
-                            }
-                        }
-                        child.add(container2);
-                    } else {
-                        DefaultMutableTreeNode child2 = new DefaultMutableTreeNode("Component " + c2.componentId);
-                        child.add(child2);
-                    }
+            // Check if the component has child components.
+            if (component.parentId == -1 && ComponentDefinition.hasChilds(interfaceId, component.ihash)) {
+                DefaultMutableTreeNode parentNode = new DefaultMutableTreeNode("Component " + component.componentId);
+                ArrayList<ComponentDefinition> childComponents = ComponentDefinition.getChildsByParent(interfaceId, component.ihash);
+
+                // Loop through the child components.
+                for (ComponentDefinition child : childComponents) {
+                    addChildNodes(interfaceId, child, parentNode);
                 }
 
-                inter.add(child);
-            } else if (c.parentId == -1 && !ComponentDefinition.hasChilds(interfaceId, c.ihash)) {
-                DefaultMutableTreeNode child2 = new DefaultMutableTreeNode("Component " + c.componentId);
-                inter.add(child2);
+                root.add(parentNode);
+            } else if (component.parentId == -1) {
+                // If no children, add the component as a leaf node.
+                DefaultMutableTreeNode leafNode = new DefaultMutableTreeNode("Component " + component.componentId);
+                root.add(leafNode);
             }
-
         }
 
-        return new DefaultTreeModel(inter);
-
-    }
-
-    public void addIndex0text(int interfaceId) {
-        ComponentDefinition defaultButton = ComponentDefinition.getInterfaceComponent(6, 19);
-        defaultButton.parentId = -1;
-        Cache.getIndexes()[3].putFile(interfaceId, 0, defaultButton.encode());
+        return new DefaultTreeModel(root);
     }
 
     /**
-     * handles the component pasting
+     * Recursively adds child nodes for a component and its children.
+     *
+     * @param interfaceId The ID of the interface.
+     * @param component The component whose children are being added.
+     * @param parentNode The parent node to which the child nodes will be added.
+     */
+    private void addChildNodes(int interfaceId, ComponentDefinition component, DefaultMutableTreeNode parentNode) {
+        if (ComponentDefinition.hasChilds(interfaceId, component.ihash)) {
+            ArrayList<ComponentDefinition> childComponents = ComponentDefinition.getChildsByParent(interfaceId, component.ihash);
+            DefaultMutableTreeNode containerNode = new DefaultMutableTreeNode("Component " + component.componentId);
+
+            // Recursively add child nodes for this component.
+            for (ComponentDefinition child : childComponents) {
+                addChildNodes(interfaceId, child, containerNode);
+            }
+
+            parentNode.add(containerNode);
+        } else {
+            DefaultMutableTreeNode childNode = new DefaultMutableTreeNode("Component " + component.componentId);
+            parentNode.add(childNode);
+        }
+    }
+
+    /**
+     * Adds the default text to index 0 for a given interface ID.
+     *
+     * @param interfaceId The ID of the interface.
+     */
+    public void addIndex0text(int interfaceId) {
+        ComponentDefinition defaultButton = ComponentDefinition.getInterfaceComponent(6, 19);
+        if (defaultButton != null) {
+            defaultButton.parentId = -1;
+            Cache.getIndexes()[3].putFile(interfaceId, 0, defaultButton.encode());
+        } else {
+            System.out.println("Default button not found.");
+        }
+    }
+
+    /**
+     * Handles the pasting of a copied component into the current interface.
      */
     public void pasteComponent() {
         if (copiedComp == null) {
             JOptionPane.showMessageDialog(interfaceViewportScrollPane, "No component was selected to paste.");
             return;
         }
+
+        int componentSize = ComponentDefinition.getInterfaceDefinitionsComponentsSize(Cache, currentInterface);
+        copiedComp.parentId = -1; // Reset parent ID to detach from previous structure
+
+        // If copying a container, ensure child components are also copied
         if (copiedComp.type == ComponentConstants.CONTAINER) {
-            int containerPlace = ComponentDefinition.getInterfaceDefinitionsComponentsSize(Cache, currentInterface);
-            copiedComp.parentId = -1;
-            Cache.getIndexes()[3].putFile(currentInterface, containerPlace, copiedComp.encode());
-            ArrayList<ComponentDefinition> childs = ComponentDefinition.getChildsByParent(copiedComp.interfaceId, copiedComp.ihash);
-            for (ComponentDefinition c : childs) {
-                if (c.type == ComponentConstants.CONTAINER) { //TODO packing containers in containers
-
-                } else
-                    Cache.getIndexes()[3].putFile(currentInterface, ComponentDefinition.getInterfaceDefinitionsComponentsSize(Cache, currentInterface), c.encode());
-            }
-            ComponentDefinition.getInterface(currentInterface);
-            int size = ComponentDefinition.getInterfaceDefinitionsComponentsSize(Cache, currentInterface);
-            ComponentDefinition parent = ComponentDefinition.getInterfaceComponent(currentInterface, containerPlace);
-            for (int i = size - childs.size() - 1; i < size; i++) {
-                ComponentDefinition component = ComponentDefinition.getInterfaceComponent(currentInterface, i);
-                if (component.type != 0) {
-                    component.parentId = parent.ihash;
-                    Cache.getIndexes()[3].putFile(currentInterface, i, component.encode());
-
-                }
-            }
-            ComponentDefinition.getInterface(currentInterface);
-            drawTree(currentInterface);
+            pasteContainer(componentSize);
         } else {
-            copiedComp.parentId = -1;
-            Cache.getIndexes()[3].putFile(currentInterface, ComponentDefinition.getInterfaceDefinitionsComponentsSize(Cache, currentInterface), copiedComp.encode());
-            ComponentDefinition.getInterface(currentInterface);
-            drawTree(currentInterface);
+            pasteSingleComponent(componentSize);
+        }
+
+        ComponentDefinition.getInterface(currentInterface);
+        drawTree(currentInterface);
+    }
+
+    /**
+     * Pastes a container component along with its child components.
+     *
+     * @param containerIndex The index where the new container will be placed.
+     */
+    private void pasteContainer(int containerIndex) {
+        Cache.getIndexes()[3].putFile(currentInterface, containerIndex, copiedComp.encode());
+
+        // Retrieve and clone child components
+        ArrayList<ComponentDefinition> childComponents = ComponentDefinition.getChildsByParent(copiedComp.interfaceId, copiedComp.ihash);
+        if (childComponents == null || childComponents.isEmpty()) return;
+
+        int startIndex = ComponentDefinition.getInterfaceDefinitionsComponentsSize(Cache, currentInterface);
+        for (ComponentDefinition child : childComponents) {
+            child.parentId = copiedComp.ihash; // Assign new parent ID
+            Cache.getIndexes()[3].putFile(currentInterface, startIndex++, child.encode());
+        }
+
+        // Refresh parent-child relationships
+        updateParentReferences(containerIndex, childComponents);
+    }
+
+    /**
+     * Pastes a single component into the interface.
+     *
+     * @param componentIndex The index where the new component will be placed.
+     */
+    private void pasteSingleComponent(int componentIndex) {
+        Cache.getIndexes()[3].putFile(currentInterface, componentIndex, copiedComp.encode());
+    }
+
+    /**
+     * Updates the parent-child relationships for copied components.
+     *
+     * @param containerIndex The index of the new container component.
+     * @param childComponents The list of copied child components.
+     */
+    private void updateParentReferences(int containerIndex, ArrayList<ComponentDefinition> childComponents) {
+        int totalSize = ComponentDefinition.getInterfaceDefinitionsComponentsSize(Cache, currentInterface);
+        ComponentDefinition newParent = ComponentDefinition.getInterfaceComponent(currentInterface, containerIndex);
+
+        for (int i = totalSize - childComponents.size(); i < totalSize; i++) {
+            ComponentDefinition child = ComponentDefinition.getInterfaceComponent(currentInterface, i);
+            if (child != null && child.type != ComponentConstants.CONTAINER) {
+                child.parentId = newParent.ihash;
+                Cache.getIndexes()[3].putFile(currentInterface, i, child.encode());
+            }
         }
     }
 
@@ -1450,197 +1612,182 @@ public class InterfaceEditor extends JFrame {
 
 
     private void drawInterfaceToGraphics(Graphics g, int interfaceId, boolean showContainers, boolean showHidden, boolean showModels, boolean showRealFonts) {
+        // Fill the background with the designated color
         g.setColor(IfaceConstants.BG_FILL_COLOR);
         g.fillRect(0, 0, IfaceConstants.VIEWPORT_WIDTH, IfaceConstants.VIEWPORT_HEIGHT);
-        /**
-         * make sure you get them in the right order (containers)
-         */
+
+        // Get ordered components for the given interface ID
         List<ComponentDefinition> orderedComponents = this.getOrderedComps(interfaceId);
         if (orderedComponents == null) {
-            System.out.println("is null");
+            System.out.println("Ordered components list is null.");
             return;
         }
+
+        // Iterate through all components
         for (ComponentDefinition component : orderedComponents) {
+            // Set the component position values
             ComponentPosition.setValues(component);
-            /**
-             * if hidden or no null
-             */
+
+            // Skip hidden components if not required to show them
             if (component == null || (InterfaceUtils.isHidden(component) && !showHidden)) {
                 continue;
             }
-            /* vars */
+
+            // Retrieve component dimensions and position
             int width = component.width;
             int height = component.height;
             int x = ComponentDefinition.getX(component, interfaceId);
             int y = ComponentDefinition.getY(component, interfaceId);
-            ComponentDefinition parent = InterfaceUtils.getParent(component.parentId);//ComponentDefinition.getParent(component, interfaceId);
-            /*if (parent == null)
-                continue;*/
-            /* setting correct values of the parent ofcourse*/
-            if (parent != null) {
-//                ComponentPosition.setValues(parent);
-//
-//                if (width > parent.width)
-//                    width = parent.width;
-//                if (height > parent.height)
-//                    height = parent.height;
-//                if (component.positionX < 0)
-//                    component.positionX = 0;
-//                if ((component.positionX + component.width) > parent.width)
-//                    component.positionX = (parent.width - component.width);
-//                if (component.positionY < 0)
-//                    component.positionY = 0;
-//                if ((component.positionY + component.height) > parent.height)
-//                    component.positionY = (parent.height - component.height);
-            }
-            /**
-             * checks if it's a sprite
-             */
+
+            // Handle sprite components
             if (component.type == ComponentConstants.SPRITE && component.spriteId > -1) {
-                BufferedImage sprite = null;
-                BufferedImage unscaled = SpriteLoader.getSprite(component.spriteId);
-
-                if (unscaled == null) return;
-
-                Image scaled = unscaled.getScaledInstance(component.width, component.height, Image.SCALE_SMOOTH);
-                sprite = ImageUtils.imageToBufferedImage(scaled);
-
-                /* horizontal flip*/
-                if (component.hFlip) sprite = ImageUtils.horizontalFlip(sprite);
-                /* vertical flip*/
-                if (component.vFlip) sprite = ImageUtils.verticalFlip(sprite);
-                g.drawImage(sprite, x, y, null);
-
+                BufferedImage sprite = getScaledSprite(component);
+                if (sprite != null) {
+                    // Draw sprite with appropriate flips
+                    if (component.hFlip) sprite = ImageUtils.horizontalFlip(sprite);
+                    if (component.vFlip) sprite = ImageUtils.verticalFlip(sprite);
+                    g.drawImage(sprite, x, y, null);
+                }
             }
 
-            /**
-             * Rectangles
-             */
+            // Draw rectangles for figure components
             if (component.type == ComponentConstants.FIGURE) {
-                if (component.color == 0) {
-                    g.setColor(Color.black);
-                } else {
-                    /** Setting the color **/
-                    Color color = new Color(component.color);
-                    int red = color.getRed();
-                    int green = color.getGreen();
-                    int blue = color.getBlue();
-                    g.setColor(new Color(red, green, blue));
-                }
-                g.drawRect(ComponentDefinition.getX(component, currentInterface), ComponentDefinition.getY(component, currentInterface), component.width, component.height);
-                if (component.filled)
-                    g.fillRect(ComponentDefinition.getX(component, currentInterface), ComponentDefinition.getY(component, currentInterface), component.width, component.height);
+                drawRectangle(g, component, x, y);
             }
-            /**
-             * models
-             */
+
+            // Handle model drawing
             if (component.type == ComponentConstants.MODEL && showModels) {
-                g.setColor(Color.BLUE);
-                g.drawRect(ComponentDefinition.getX(component, interfaceId), ComponentDefinition.getY(component, interfaceId), component.width, component.height);
-
+                drawModel(g, component, x, y);
             }
-            /**
-             * Containers
-             *
-             *
-             * ComponentDefinition.getX(comp, interafece)
-             */
+
+            // Handle containers
             if (component.type == ComponentConstants.CONTAINER) {
-                BufferedImage sprite = null;
-                if (ContainerHelper.isScrollBar(component)) {
-                    try {
-                        sprite = ImageUtils.resize(ImageIO.read(new File("data/export/scriptsprites/scrollbar.jpg")), width, height);
-                    } catch (IOException e) {
-                        System.out.println("scrollbar.jpg not found");
-                    }
-                    g.drawImage(sprite, ComponentDefinition.getX(component, interfaceId), ComponentDefinition.getY(component, interfaceId), null);
-                } else if (ContainerHelper.isButton(component)) {
-                    try {
-                        sprite = ImageUtils.resize(ImageIO.read(new File("data/scriptsprites/button.png")), width, height);
-                    } catch (IOException e) {
-                        System.out.println("button.png not found");
-                    }
-                    g.drawImage(sprite, ComponentDefinition.getX(component, interfaceId), ComponentDefinition.getY(component, interfaceId), null);
-                } else if (showContainers) {
-                    g.setColor(Color.RED);
-                    if (component.parentId > 0) {
-                        g.drawRect(ComponentDefinition.getX(component, interfaceId), ComponentDefinition.getY(component, interfaceId), component.width, component.height);
-                    } else {
-                        g.setColor(Color.green);
-                        g.drawRect(component.positionX, component.positionY, component.width, component.height);
-
-                    }
-                }
+                drawContainer(g, component, x, y, showContainers);
             }
-            /**
-             * checks if it's text
-             * TODO make it written by container some text doesn't get shown because it's under the other sprite
-             */
+
+            // Handle text components
             if (component.type == ComponentConstants.TEXT) {
-                FontMetrics fm = g.getFontMetrics();
-                Rectangle2D rect = fm.getStringBounds(component.text, g);
-                /**
-                 * color of the text
-                 */
-                Color color = new Color(component.color);
-                int red = color.getRed();
-                int green = color.getGreen();
-                int blue = color.getBlue();
-                g.setColor(new Color(red, green, blue));
-                /** setting font **/
-                g.setFont(new Font("Helvetica", 0, 11));
-                if (component.parentId == -1) {
-                    g.drawString(component.text, (int) (component.positionX + component.width / 2 - rect.getWidth() / 2), (int) (component.positionY + component.height / 2 + rect.getHeight() / 2));
+                drawText(g, component, x, y, showRealFonts);
+            }
+        }
+        repaint();
+    }
+
+    private BufferedImage getScaledSprite(ComponentDefinition component) {
+        // Fetch the sprite from the cache using the spriteId
+        BufferedImage sprite = SpriteLoader.getSprite(component.spriteId);
+
+        if (sprite == null) {
+            // If the sprite is not found, trigger a load (or refresh) from the cache.
+            reloadSpritesFromCache();
+            sprite = SpriteLoader.getSprite(component.spriteId);
+            if (sprite == null) {
+                return null;  // Return null if the sprite still isn't found
+            }
+        }
+
+        // Scale the sprite to fit the component's size
+        return ImageUtils.imageToBufferedImage(sprite.getScaledInstance(component.width, component.height, Image.SCALE_SMOOTH));
+    }
+
+    /**
+     * Reload or refresh sprites from the cache.
+     * This could be useful when sprites are dumped and need to be refreshed from the cache after the dump.
+     */
+    private void reloadSpritesFromCache() {
+        SpriteLoader.INSTANCE.getSpriteCache();
+    }
+
+    private void drawRectangle(Graphics g, ComponentDefinition component, int x, int y) {
+        // Set the rectangle's color
+        g.setColor(component.color == 0 ? Color.black : new Color(component.color));
+        // Draw the rectangle
+        g.drawRect(x, y, component.width, component.height);
+        if (component.filled) {
+            g.fillRect(x, y, component.width, component.height);
+        }
+    }
+
+    private void drawModel(Graphics g, ComponentDefinition component, int x, int y) {
+        // Draw a blue rectangle for the model
+        g.setColor(Color.BLUE);
+        g.drawRect(x, y, component.width, component.height);
+    }
+
+    private void drawContainer(Graphics g, ComponentDefinition component, int x, int y, boolean showContainers) {
+        // If the container is a scrollbar, use a specific sprite
+        if (ContainerHelper.isScrollBar(component)) {
+            BufferedImage sprite = loadImage("data/export/scriptsprites/scrollbar.jpg", component.width, component.height);
+            if (sprite != null) {
+                g.drawImage(sprite, x, y, null);
+            }
+        } else if (ContainerHelper.isButton(component)) {
+            // Load and draw button sprite
+            BufferedImage sprite = loadImage("data/scriptsprites/button.png", component.width, component.height);
+            if (sprite != null) {
+                g.drawImage(sprite, x, y, null);
+            }
+        } else if (showContainers) {
+            // Draw container borders with different colors
+            g.setColor(component.parentId > 0 ? Color.RED : Color.GREEN);
+            g.drawRect(x, y, component.width, component.height);
+        }
+    }
+
+    private BufferedImage loadImage(String path, int width, int height) {
+        try {
+            BufferedImage image = ImageIO.read(new File(path));
+            return ImageUtils.resize(image, width, height);
+        } catch (IOException e) {
+            System.out.println(path + " not found");
+            return null;
+        }
+    }
+
+    private void drawText(Graphics g, ComponentDefinition component, int x, int y, boolean showRealFonts) {
+        FontMetrics fm = g.getFontMetrics();
+        Rectangle2D rect = fm.getStringBounds(component.text, g);
+
+        // Set the color for the text
+        g.setColor(new Color(component.color));
+
+        // Set the font and draw text
+        g.setFont(new Font("Helvetica", Font.PLAIN, 11));
+        if (component.parentId == -1) {
+            g.drawString(component.text, x + (component.width / 2 - (int) rect.getWidth() / 2), y + (component.height / 2 + (int) rect.getHeight() / 2));
+        } else {
+            ComponentDefinition parent = InterfaceUtils.getParent(component.parentId);
+            if (parent != null) {
+                // Center text for button-like components
+                if (component.baseWidth == 0 && component.baseHeight == 0) {
+                    drawCenteredText(g, component.text, parent);
                 } else {
-                    ComponentPosition.setValues(parent);
-
-                    //text in buttons, to center it lol capypasta
-                    if (component.baseWidth == 0 && component.baseHeight == 0) {
-                        FontMetrics metrics = g.getFontMetrics(new Font("Helvetica", 0, 11));
-                        // Determine the X coordinate for the text
-                        int x2 = parent.positionX + (parent.width - metrics.stringWidth(component.text)) / 2;
-                        // Determine the Y coordinate for the text (note we add the ascent, as in java 2d 0 is top of the screen)
-                        int y2 = parent.positionY + ((parent.height - metrics.getHeight()) / 2) + metrics.getAscent();
-                        // Set the font
-                        g.setFont(new Font("Helvetica", 0, 11));
-                        // Draw the String
-                        g.drawString(component.text, x2, y2);
-                    } else {
-                        /*position*/
-                        int positionX = ComponentDefinition.getX(component, interfaceId);
-                        int positionY = ComponentDefinition.getY(component, interfaceId);
-                        /*  not drAWING OUTSIDE THE CONTAINER*/
-                        if (positionX > parent.width + parent.positionX) positionX = parent.width - component.width;
-                        // if(positionY > parent.height + parent.positionY)
-                        //positionY = parent.height - component.height;
-                        g.drawString(component.text, (int) (positionX + component.width / 2 - rect.getWidth() / 2), (int) (positionY + component.height / 2 + rect.getHeight() / 2));
-
-                    }
-                }
-                /**
-                 * special
-                 */
-                if (component.text.contains("</u>")) {
-
-                }
-                /**
-                 * testing
-                 */
-                if (showRealFonts) {
-                    int positionX = ComponentDefinition.getX(component, interfaceId);
-                    int positionY = ComponentDefinition.getY(component, interfaceId);
-                    int startX = (int) (positionX + component.width / 2 - rect.getWidth() / 2);
-                    for (BufferedImage im : FontDecoding.getTextArray(component)) {
-                        g.drawImage(ImageUtils.colorImage(im, color), startX, (int) (positionY + component.height / 2 + rect.getHeight() / 2), null);
-                        startX += im.getWidth() / 2;
-                    }
+                    // Position text within its container
+                    g.drawString(component.text, x + (component.width / 2 - (int) rect.getWidth() / 2), y + (component.height / 2 + (int) rect.getHeight() / 2));
                 }
             }
         }
 
-
-        //interfaceViewportScrollPane.setViewportView(jLabel);
-        //this.getContentPane().add(jPanel);
+        // If showing real fonts, use the special font decoding
+        if (showRealFonts) {
+            drawRealFontText(g, component, x, y, rect);
+        }
     }
+
+    private void drawCenteredText(Graphics g, String text, ComponentDefinition parent) {
+        FontMetrics metrics = g.getFontMetrics(new Font("Helvetica", Font.PLAIN, 11));
+        int x2 = parent.positionX + (parent.width - metrics.stringWidth(text)) / 2;
+        int y2 = parent.positionY + ((parent.height - metrics.getHeight()) / 2) + metrics.getAscent();
+        g.drawString(text, x2, y2);
+    }
+
+    private void drawRealFontText(Graphics g, ComponentDefinition component, int x, int y, Rectangle2D rect) {
+        int startX = x + (component.width / 2 - (int) rect.getWidth() / 2);
+        for (BufferedImage im : FontDecoding.getTextArray(component)) {
+            g.drawImage(ImageUtils.colorImage(im, new Color(component.color)), startX, y + (component.height / 2 + (int) rect.getHeight() / 2), null);
+            startX += im.getWidth() / 2;
+        }
+    }
+
 }
 
