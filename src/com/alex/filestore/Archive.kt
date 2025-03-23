@@ -106,14 +106,14 @@ class Archive {
                 compressedData1 = BZip2Compressor.compress(this.data!!)
                 stream.writeInt(compressedData1!!.size)
                 stream.writeInt(data!!.size)
-                compressedData1 = GZipCompressor.compress(this.data)
-                stream.writeInt(compressedData1.size)
+                compressedData1 = GZipCompressor.compress(this.data!!)
+                stream.writeInt(compressedData1!!.size)
                 stream.writeInt(data!!.size)
             }
 
             else -> {
-                compressedData1 = GZipCompressor.compress(this.data)
-                stream.writeInt(compressedData1.size)
+                compressedData1 = GZipCompressor.compress(this.data!!)
+                stream.writeInt(compressedData1!!.size)
                 stream.writeInt(data!!.size)
             }
         }
