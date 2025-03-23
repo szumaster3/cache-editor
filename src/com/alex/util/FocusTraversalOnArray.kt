@@ -22,22 +22,22 @@ import java.awt.FocusTraversalPolicy
  *
  * @author scheglov_ke
  */
-class FocusTraversalOnArray
-    (private val m_Components: Array<Component>) : FocusTraversalPolicy() {
-    /** ///////////////////////////////////////////////////////////////////////// */
-    // Constructor
-    //
-    /** ///////////////////////////////////////////////////////////////////////// */ //
-    // Utilities
-    //
-    /** ///////////////////////////////////////////////////////////////////////// */
-    private fun indexCycle(index: Int, delta: Int): Int {
+class FocusTraversalOnArray(
+    private val m_Components: Array<Component>,
+) : FocusTraversalPolicy() {
+    private fun indexCycle(
+        index: Int,
+        delta: Int,
+    ): Int {
         val size = m_Components.size
         val next = (index + delta + size) % size
         return next
     }
 
-    private fun cycle(currentComponent: Component, delta: Int): Component? {
+    private fun cycle(
+        currentComponent: Component,
+        delta: Int,
+    ): Component {
         var index = -1
         loop@ for (i in m_Components.indices) {
             val component = m_Components[i]
@@ -66,27 +66,19 @@ class FocusTraversalOnArray
         return currentComponent
     }
 
-    /** ///////////////////////////////////////////////////////////////////////// */
-    // FocusTraversalPolicy
-    //
-    /** ///////////////////////////////////////////////////////////////////////// */
-    override fun getComponentAfter(container: Container, component: Component): Component {
-        return cycle(component, 1)!!
-    }
+    override fun getComponentAfter(
+        container: Container,
+        component: Component,
+    ): Component = cycle(component, 1)!!
 
-    override fun getComponentBefore(container: Container, component: Component): Component {
-        return cycle(component, -1)!!
-    }
+    override fun getComponentBefore(
+        container: Container,
+        component: Component,
+    ): Component = cycle(component, -1)!!
 
-    override fun getFirstComponent(container: Container): Component {
-        return m_Components[0]
-    }
+    override fun getFirstComponent(container: Container): Component = m_Components[0]
 
-    override fun getLastComponent(container: Container): Component {
-        return m_Components[m_Components.size - 1]
-    }
+    override fun getLastComponent(container: Container): Component = m_Components[m_Components.size - 1]
 
-    override fun getDefaultComponent(container: Container): Component {
-        return getFirstComponent(container)
-    }
+    override fun getDefaultComponent(container: Container): Component = getFirstComponent(container)
 }

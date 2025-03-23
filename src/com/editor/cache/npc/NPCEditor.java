@@ -1,8 +1,9 @@
 package com.editor.cache.npc;
 
 import com.alex.defs.npcs.NPCDefinitions;
-import console.Main;
 import com.alex.util.Utils;
+import com.editor.model.view.frame.ModelFrame;
+import console.Main;
 
 import javax.swing.*;
 import javax.swing.GroupLayout.Alignment;
@@ -145,7 +146,7 @@ public class NPCEditor extends JFrame {
         this.setResizable(false);
         this.setTitle("NPC Editor");
         this.setDefaultCloseOperation(1);
-        this.setLocationRelativeTo((Component) null);
+        this.setLocationRelativeTo(null);
         this.setVisible(true);
     }
 
@@ -718,7 +719,7 @@ public class NPCEditor extends JFrame {
                         this.defs.clientScriptData.put(Integer.valueOf(Integer.parseInt(this.csk1.getText())), Integer.valueOf(Integer.parseInt(this.csv1.getText())));
                     } catch (Exception var161) {
                         this.defs.clientScriptData.remove(this.csk1);
-                        this.defs.clientScriptData.put(Integer.valueOf(Integer.parseInt(this.csk1.getText())), this.csv1.getText().toString());
+                        this.defs.clientScriptData.put(Integer.valueOf(Integer.parseInt(this.csk1.getText())), this.csv1.getText());
                     }
                 }
 
@@ -728,7 +729,7 @@ public class NPCEditor extends JFrame {
                         this.defs.clientScriptData.put(Integer.valueOf(Integer.parseInt(this.csk2.getText())), Integer.valueOf(Integer.parseInt(this.csv2.getText())));
                     } catch (Exception var151) {
                         this.defs.clientScriptData.remove(this.csk2);
-                        this.defs.clientScriptData.put(Integer.valueOf(Integer.parseInt(this.csk2.getText())), this.csv2.getText().toString());
+                        this.defs.clientScriptData.put(Integer.valueOf(Integer.parseInt(this.csk2.getText())), this.csv2.getText());
                     }
                 }
 
@@ -738,7 +739,7 @@ public class NPCEditor extends JFrame {
                         this.defs.clientScriptData.put(Integer.valueOf(Integer.parseInt(this.csk3.getText())), Integer.valueOf(Integer.parseInt(this.csv3.getText())));
                     } catch (Exception var14) {
                         this.defs.clientScriptData.remove(this.csk3);
-                        this.defs.clientScriptData.put(Integer.valueOf(Integer.parseInt(this.csk3.getText())), this.csv3.getText().toString());
+                        this.defs.clientScriptData.put(Integer.valueOf(Integer.parseInt(this.csk3.getText())), this.csv3.getText());
                     }
                 }
 
@@ -748,7 +749,7 @@ public class NPCEditor extends JFrame {
                         this.defs.clientScriptData.put(Integer.valueOf(Integer.parseInt(this.csk4.getText())), Integer.valueOf(Integer.parseInt(this.csv4.getText())));
                     } catch (Exception var13) {
                         this.defs.clientScriptData.remove(this.csk4);
-                        this.defs.clientScriptData.put(Integer.valueOf(Integer.parseInt(this.csk4.getText())), this.csv4.getText().toString());
+                        this.defs.clientScriptData.put(Integer.valueOf(Integer.parseInt(this.csk4.getText())), this.csv4.getText());
                     }
                 }
 
@@ -758,7 +759,7 @@ public class NPCEditor extends JFrame {
                         this.defs.clientScriptData.put(Integer.valueOf(Integer.parseInt(this.csk5.getText())), Integer.valueOf(Integer.parseInt(this.csv5.getText())));
                     } catch (Exception var12) {
                         this.defs.clientScriptData.remove(this.csk5);
-                        this.defs.clientScriptData.put(Integer.valueOf(Integer.parseInt(this.csk5.getText())), this.csv5.getText().toString());
+                        this.defs.clientScriptData.put(Integer.valueOf(Integer.parseInt(this.csk5.getText())), this.csv5.getText());
                     }
                 }
 
@@ -768,7 +769,7 @@ public class NPCEditor extends JFrame {
                         this.defs.clientScriptData.put(Integer.valueOf(Integer.parseInt(this.csk6.getText())), Integer.valueOf(Integer.parseInt(this.csv6.getText())));
                     } catch (Exception var11) {
                         this.defs.clientScriptData.remove(this.csk6);
-                        this.defs.clientScriptData.put(Integer.valueOf(Integer.parseInt(this.csk6.getText())), this.csv6.getText().toString());
+                        this.defs.clientScriptData.put(Integer.valueOf(Integer.parseInt(this.csk6.getText())), this.csv6.getText());
                     }
                 }
             } catch (Exception var171) {
@@ -776,7 +777,7 @@ public class NPCEditor extends JFrame {
             }
 
             NPCSelection var10001 = this.ns;
-            this.defs.write(NPCSelection.STORE);
+            this.defs.write(NPCSelection.Cache);
             this.ns.updateNPCDefs(this.defs);
         } catch (Exception var18) {
             Main.log("NPCEditor", "Cannot write. Please check for mistypes.");
@@ -793,7 +794,7 @@ public class NPCEditor extends JFrame {
         if (result == 0) {
             JFrame fc1 = new JFrame();
             String returnVal1 = JOptionPane.showInputDialog(fc1, "Enter new model ID:");
-            if (Integer.parseInt(returnVal1.toString()) != -1) {
+            if (Integer.parseInt(returnVal1) != -1) {
                 JFileChooser file2 = new JFileChooser();
                 file2.setFileSelectionMode(0);
                 int var9 = file2.showOpenDialog(this);
@@ -803,7 +804,7 @@ public class NPCEditor extends JFrame {
                     try {
                         var10001 = (new StringBuilder()).append("The model ID of the recently packed model is: ");
                         var10002 = this.ns;
-                        Main.log("NPCEditor", var10001.append(Utils.packCustomModel(NPCSelection.STORE, Utils.getBytesFromFile(new File(file1.getPath().toString())), Integer.parseInt(returnVal1.toString()))).toString());
+                        Main.log("NPCEditor", var10001.append(Utils.packCustomModel(NPCSelection.Cache, Utils.getBytesFromFile(new File(file1.getPath())), Integer.parseInt(returnVal1))).toString());
                     } catch (IOException var12) {
                         Main.log("NPCEditor", "There was an error packing the model.");
                     }
@@ -819,7 +820,7 @@ public class NPCEditor extends JFrame {
                 try {
                     var10001 = (new StringBuilder()).append("The model ID of the recently packed model is: ");
                     var10002 = this.ns;
-                    Main.log("NPCEditor", var10001.append(Utils.packCustomModel(NPCSelection.STORE, Utils.getBytesFromFile(new File(file21.getPath().toString())))).toString());
+                    Main.log("NPCEditor", var10001.append(Utils.packCustomModel(NPCSelection.Cache, Utils.getBytesFromFile(new File(file21.getPath())))).toString());
                 } catch (IOException var11) {
                     Main.log("NPCEditor", "There was an error packing the model.");
                 }
@@ -946,7 +947,6 @@ public class NPCEditor extends JFrame {
             try {
                 writer.close();
             } catch (Exception var14) {
-                ;
             }
 
         }
@@ -979,7 +979,6 @@ public class NPCEditor extends JFrame {
                 text = text + index + ";";
             }
         } catch (Exception var6) {
-            ;
         }
 
         return text;
@@ -1033,7 +1032,6 @@ public class NPCEditor extends JFrame {
                 text = text + index + ";";
             }
         } catch (Exception var6) {
-            ;
         }
 
         return text;
@@ -1051,7 +1049,6 @@ public class NPCEditor extends JFrame {
                 text = text + index + ";";
             }
         } catch (Exception var6) {
-            ;
         }
 
         return text;
@@ -1069,7 +1066,6 @@ public class NPCEditor extends JFrame {
                 text = text + index + ";";
             }
         } catch (Exception var6) {
-            ;
         }
 
         return text;
@@ -1087,7 +1083,6 @@ public class NPCEditor extends JFrame {
                 text = text + index + ";";
             }
         } catch (Exception var6) {
-            ;
         }
 
         return text;
@@ -1105,7 +1100,6 @@ public class NPCEditor extends JFrame {
                 text = text + index + ";";
             }
         } catch (Exception var6) {
-            ;
         }
 
         return text;
@@ -1123,7 +1117,6 @@ public class NPCEditor extends JFrame {
                 text = text + index + ";";
             }
         } catch (Exception var6) {
-            ;
         }
 
         return text;

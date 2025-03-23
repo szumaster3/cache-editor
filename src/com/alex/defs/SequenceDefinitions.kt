@@ -1,6 +1,6 @@
 package com.alex.defs
 
-import com.alex.filestore.Store
+import com.alex.filestore.Cache
 import com.alex.io.InputStream
 import com.alex.io.OutputStream
 import com.alex.util.Utils
@@ -37,22 +37,25 @@ class SequenceDefinitions {
     companion object {
         private val sequenceDefinitionsCache = ConcurrentHashMap<Int, SequenceDefinitions>()
 
-        fun getAnimationDefinitions(store: Store, emoteId: Int): SequenceDefinitions? {
-            return try {
+        fun getAnimationDefinitions(
+            cache: Cache,
+            emoteId: Int,
+        ): SequenceDefinitions? =
+            try {
                 sequenceDefinitionsCache[emoteId] ?: run {
-                    val data = store.indexes[20].getFile(emoteId shr 7, emoteId and 0x7f)
-                    val definition = SequenceDefinitions().apply {
-                        id = emoteId
-                        data?.let { decode(InputStream(it)) }
-                        method2394()
-                    }
+                    val data = cache.indexes[20].getFile(emoteId shr 7, emoteId and 0x7f)
+                    val definition =
+                        SequenceDefinitions().apply {
+                            id = emoteId
+                            data?.let { decode(InputStream(it)) }
+                            method2394()
+                        }
                     sequenceDefinitionsCache[emoteId] = definition
                     definition
                 }
             } catch (e: Throwable) {
                 null
             }
-        }
     }
 
     fun decode(stream: InputStream) {
@@ -72,7 +75,10 @@ class SequenceDefinitions {
         }
     }
 
-    private fun readMinecraft(stream: InputStream, opcode: Int) {
+    private fun readMinecraft(
+        stream: InputStream,
+        opcode: Int,
+    ) {
         var count: Int
         when (opcode) {
             1 -> {
@@ -126,9 +132,7 @@ class SequenceDefinitions {
         }
     }
 
-    fun write(cache: Store): Boolean {
-        return cache.indexes[20].putFile(Utils.getConfigArchive(id, 8), Utils.getConfigFile(id, 8), encode())
-    }
+    fun write(cache: Cache): Boolean = cache.indexes[20].putFile(Utils.getConfigArchive(id, 8), Utils.getConfigFile(id, 8), encode())
 
     private fun encode(): ByteArray {
         val stream = OutputStream()
@@ -209,7 +213,10 @@ class SequenceDefinitions {
         return offsetStream
     }
 
-    private fun read(stream: InputStream, opcode: Int) {
+    private fun read(
+        stream: InputStream,
+        opcode: Int,
+    ) {
         var count: Int
         when (opcode) {
             1 -> {

@@ -14,7 +14,10 @@ class MainFile internal constructor(
      *
      * @return the id
      */
-    @JvmField val id: Int, data: RandomAccessFile, index: RandomAccessFile, private val newProtocol: Boolean
+    @JvmField val id: Int,
+    data: RandomAccessFile,
+    index: RandomAccessFile,
+    private val newProtocol: Boolean,
 ) {
     private val index: FileChannel = index.channel
 
@@ -26,9 +29,7 @@ class MainFile internal constructor(
      * @param id the id
      * @return the archive
      */
-    fun getArchive(id: Int): Archive? {
-        return this.getArchive(id, null)
-    }
+    fun getArchive(id: Int): Archive? = this.getArchive(id, null)
 
     /**
      * Gets archive.
@@ -37,7 +38,10 @@ class MainFile internal constructor(
      * @param keys the keys
      * @return the archive
      */
-    fun getArchive(id: Int, keys: IntArray?): Archive? {
+    fun getArchive(
+        id: Int,
+        keys: IntArray?,
+    ): Archive? {
         val data = this.getArchiveData(id)
         return if (data == null) null else Archive(id, data, keys)
     }
@@ -137,9 +141,7 @@ class MainFile internal constructor(
      * @param archive the archive
      * @return the boolean
      */
-    fun putArchive(archive: Archive): Boolean {
-        return this.putArchiveData(archive.id, archive.data!!)
-    }
+    fun putArchive(archive: Archive): Boolean = this.putArchiveData(archive.id, archive.data!!)
 
     /**
      * Put archive data boolean.
@@ -148,7 +150,10 @@ class MainFile internal constructor(
      * @param archive the archive
      * @return the boolean
      */
-    fun putArchiveData(id: Int, archive: ByteArray): Boolean {
+    fun putArchiveData(
+        id: Int,
+        archive: ByteArray,
+    ): Boolean {
         val buffer = ByteBuffer.wrap(archive)
         var done = this.putArchiveData(id, buffer, archive.size, true)
         if (!done) {
@@ -167,7 +172,12 @@ class MainFile internal constructor(
      * @param exists    the exists
      * @return the boolean
      */
-    fun putArchiveData(archiveId: Int, archive: ByteBuffer, size: Int, exists: Boolean): Boolean {
+    fun putArchiveData(
+        archiveId: Int,
+        archive: ByteBuffer,
+        size: Int,
+        exists: Boolean,
+    ): Boolean {
         var exists = exists
         val var5 = this.data
         val var6 = this.data
@@ -337,12 +347,18 @@ class MainFile internal constructor(
          */
         const val TOTAL_BLOCK_LEN: Int = 520
         private val tempBuffer: ByteBuffer = ByteBuffer.allocateDirect(520)
-        private fun getMediumInt(buffer: ByteBuffer): Int {
-            return (buffer.get().toInt() and 255) shl 16 or ((buffer.get().toInt() and 255) shl 8) or (buffer.get()
-                .toInt() and 255)
-        }
 
-        private fun putMediumInt(buffer: ByteBuffer, `val`: Int) {
+        private fun getMediumInt(buffer: ByteBuffer): Int =
+            (buffer.get().toInt() and 255) shl 16 or ((buffer.get().toInt() and 255) shl 8) or (
+                buffer
+                    .get()
+                    .toInt() and 255
+            )
+
+        private fun putMediumInt(
+            buffer: ByteBuffer,
+            `val`: Int,
+        ) {
             buffer.put((`val` shr 16).toByte())
             buffer.put((`val` shr 8).toByte())
             buffer.put(`val`.toByte())

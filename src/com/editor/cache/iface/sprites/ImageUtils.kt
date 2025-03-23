@@ -34,7 +34,6 @@ import java.awt.image.RGBImageFilter
  * Utility functions for manipulating images, including flipping, resizing, and color transformations.
  */
 object ImageUtils {
-
     /**
      * Flips the provided image horizontally.
      *
@@ -76,7 +75,10 @@ object ImageUtils {
      * @param factor The factor by which to scale the image.
      * @return A new `BufferedImage` that is the scaled version of the provided image.
      */
-    fun getScaledImage(src: BufferedImage, factor: Double): BufferedImage {
+    fun getScaledImage(
+        src: BufferedImage,
+        factor: Double,
+    ): BufferedImage {
         var factor = factor
         var finalw = src.width
         var finalh = src.height
@@ -103,21 +105,28 @@ object ImageUtils {
      * @param color The color to make transparent.
      * @return A new `BufferedImage` with the specified color made transparent.
      */
-    fun makeColorTransparent(im: BufferedImage, color: Color): BufferedImage {
-        val filter: ImageFilter = object : RGBImageFilter() {
-            var markerRGB: Int = color.rgb or -0x1000000
+    fun makeColorTransparent(
+        im: BufferedImage,
+        color: Color,
+    ): BufferedImage {
+        val filter: ImageFilter =
+            object : RGBImageFilter() {
+                var markerRGB: Int = color.rgb or -0x1000000
 
-            override fun filterRGB(x: Int, y: Int, rgb: Int): Int {
-                return if ((rgb or -0x1000000) == markerRGB) {
-                    0x00FFFFFF and rgb
-                } else {
-                    rgb
-                }
+                override fun filterRGB(
+                    x: Int,
+                    y: Int,
+                    rgb: Int,
+                ): Int =
+                    if ((rgb or -0x1000000) == markerRGB) {
+                        0x00FFFFFF and rgb
+                    } else {
+                        rgb
+                    }
             }
-        }
 
         return imageToBufferedImage(
-            Toolkit.getDefaultToolkit().createImage(FilteredImageSource(im.source, filter))
+            Toolkit.getDefaultToolkit().createImage(FilteredImageSource(im.source, filter)),
         )
     }
 
@@ -148,7 +157,10 @@ object ImageUtils {
      * @param bufImgType The image type to convert to (e.g., `BufferedImage.TYPE_INT_ARGB`).
      * @return A new `BufferedImage` of the specified type.
      */
-    fun convert(src: BufferedImage, bufImgType: Int): BufferedImage {
+    fun convert(
+        src: BufferedImage,
+        bufImgType: Int,
+    ): BufferedImage {
         val img = BufferedImage(src.width, src.height, bufImgType)
         val g2d = img.createGraphics()
         g2d.drawImage(src, 0, 0, null)
@@ -163,7 +175,10 @@ object ImageUtils {
      * @param color The background color.
      * @return A new `BufferedImage` with the original image overlaid on a colored background.
      */
-    fun createColoredBackground(image: BufferedImage, color: Color?): BufferedImage {
+    fun createColoredBackground(
+        image: BufferedImage,
+        color: Color?,
+    ): BufferedImage {
         val copy = BufferedImage(image.width, image.height, BufferedImage.TYPE_INT_ARGB)
         val g2d = copy.createGraphics()
         g2d.color = color
@@ -182,7 +197,11 @@ object ImageUtils {
      * @return A new `BufferedImage` with the specified dimensions.
      */
     @JvmStatic
-    fun resize(img: BufferedImage, newW: Int, newH: Int): BufferedImage {
+    fun resize(
+        img: BufferedImage,
+        newW: Int,
+        newH: Int,
+    ): BufferedImage {
         var newW = newW
         var newH = newH
         if (newW <= 0) newW = img.width
@@ -203,7 +222,10 @@ object ImageUtils {
      * @return A new `BufferedImage` with the recolored image.
      */
     @JvmStatic
-    fun colorImage(image: BufferedImage, col: Color): BufferedImage {
+    fun colorImage(
+        image: BufferedImage,
+        col: Color,
+    ): BufferedImage {
         val width = image.width
         val height = image.height
         val raster = image.raster

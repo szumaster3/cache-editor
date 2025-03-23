@@ -33,7 +33,13 @@ import java.nio.ByteBuffer
  * @author Graham
  * @author `Discardedx2
  */
-class SpriteArchive @JvmOverloads constructor(width: Int, height: Int, size: Int = 1) {
+class SpriteArchive
+@JvmOverloads
+constructor(
+    width: Int,
+    height: Int,
+    size: Int = 1,
+) {
     /**
      * Gets the width of this sprite.
      *
@@ -69,6 +75,7 @@ class SpriteArchive @JvmOverloads constructor(width: Int, height: Int, size: Int
      * @param size
      * The number of animation frames.
      */
+
     /**
      * Creates a new sprite with one frame.
      *
@@ -102,31 +109,31 @@ class SpriteArchive @JvmOverloads constructor(width: Int, height: Int, size: Int
         val bout = ByteArrayOutputStream()
         val os = DataOutputStream(bout)
         os.use { os ->
-            /* set up some variables */
+            // set up some variables
             val palette: MutableList<Int> = ArrayList()
-            palette.add(0) /* transparent colour */
+            palette.add(0) // transparent colour
 
-            /* write the sprites */
-            for (image in frames) {/* check if we can encode this */
+            // write the sprites
+            for (image in frames) { // check if we can encode this
                 if (image!!.width != width || image.height != height) throw IOException("All frames must be the same size.")
 
-                /* loop through all the pixels constructing a palette */
+                // loop through all the pixels constructing a palette
                 var flags = FLAG_VERTICAL // TODO: do we need to support
                 // horizontal encoding?
                 for (x in 0 until width) {
-                    for (y in 0 until height) {/* grab the colour of this pixel */
+                    for (y in 0 until height) { // grab the colour of this pixel
                         val argb = image.getRGB(x, y)
                         val alpha = (argb shr 24) and 0xFF
                         var rgb = argb and 0xFFFFFF
                         if (rgb == 0) rgb = 1
 
-                        /* we need an alpha channel to encode this image */
+                        // we need an alpha channel to encode this image
                         if (alpha != 0 && alpha != 255) flags = flags or FLAG_ALPHA
 
                         /*
-                             * add the colour to the palette if it isn't already in
-                             * the palette
-                             */
+                         * add the colour to the palette if it isn't already in
+                         * the palette
+                         */
                         if (!palette.contains(rgb)) {
                             if (palette.size >= 256) throw IOException("Too many colours in this sprite!")
                             palette.add(rgb)
@@ -134,7 +141,7 @@ class SpriteArchive @JvmOverloads constructor(width: Int, height: Int, size: Int
                     }
                 }
 
-                /* write this sprite */
+                // write this sprite
                 os.write(flags)
                 for (x in 0 until width) {
                     for (y in 0 until height) {
@@ -151,7 +158,7 @@ class SpriteArchive @JvmOverloads constructor(width: Int, height: Int, size: Int
                     }
                 }
 
-                /* write the alpha channel if this sprite has one */
+                // write the alpha channel if this sprite has one
                 if ((flags and FLAG_ALPHA) != 0) {
                     for (x in 0 until width) {
                         for (y in 0 until height) {
@@ -163,7 +170,7 @@ class SpriteArchive @JvmOverloads constructor(width: Int, height: Int, size: Int
                 }
             }
 
-            /* write the palette */
+            // write the palette
             for (i in 1 until palette.size) {
                 val rgb = palette[i]
                 os.write((rgb shr 16).toByte().toInt())
@@ -171,12 +178,12 @@ class SpriteArchive @JvmOverloads constructor(width: Int, height: Int, size: Int
                 os.write(rgb.toByte().toInt())
             }
 
-            /* write the max width, height and palette size */
+            // write the max width, height and palette size
             os.writeShort(width)
             os.writeShort(height)
             os.write(palette.size - 1)
 
-            /* write the individual offsets and dimensions */
+            // write the individual offsets and dimensions
             for (i in frames.indices) {
                 os.writeShort(0) // offset X
                 os.writeShort(0) // offset Y
@@ -184,10 +191,10 @@ class SpriteArchive @JvmOverloads constructor(width: Int, height: Int, size: Int
                 os.writeShort(height)
             }
 
-            /* write the number of frames */
+            // write the number of frames
             os.writeShort(frames.size)
 
-            /* convert the stream to a byte array and then wrap a buffer */
+            // convert the stream to a byte array and then wrap a buffer
             val bytes = bout.toByteArray()
             return ByteBuffer.wrap(bytes)
         }
@@ -200,9 +207,7 @@ class SpriteArchive @JvmOverloads constructor(width: Int, height: Int, size: Int
      * The id.
      * @return The frame.
      */
-    fun getSprite(id: Int): BufferedImage {
-        return frames[id]!!
-    }
+    fun getSprite(id: Int): BufferedImage = frames[id]!!
 
     /**
      * Sets the frame with the specified id.
@@ -212,8 +217,13 @@ class SpriteArchive @JvmOverloads constructor(width: Int, height: Int, size: Int
      * @param frame
      * The frame.
      */
-    fun setFrame(id: Int, frame: BufferedImage) {
-        require(!(frame.width != width || frame.height != height)) { "The frame's dimensions do not match with the sprite's dimensions." }
+    fun setFrame(
+        id: Int,
+        frame: BufferedImage,
+    ) {
+        require(
+            !(frame.width != width || frame.height != height),
+        ) { "The frame's dimensions do not match with the sprite's dimensions." }
 
         frames[id] = frame
     }
@@ -223,9 +233,7 @@ class SpriteArchive @JvmOverloads constructor(width: Int, height: Int, size: Int
      *
      * @return The number of frames.
      */
-    fun size(): Int {
-        return frames.size
-    }
+    fun size(): Int = frames.size
 
     companion object {
         /**
@@ -248,26 +256,27 @@ class SpriteArchive @JvmOverloads constructor(width: Int, height: Int, size: Int
          * @return The sprite.
          */
         fun decode(buffer: ByteBuffer): SpriteArchive? {
-            try {/* find the size of this sprite set */
+            try {
+                // find the size of this sprite set
                 buffer.position(buffer.limit() - 2)
                 val size = buffer.getShort().toInt() and 0xFFFF
 
-                /* allocate arrays to store info */
+                // allocate arrays to store info
                 val offsetsX = IntArray(size)
                 val offsetsY = IntArray(size)
                 val subWidths = IntArray(size)
                 val subHeights = IntArray(size)
 
-                /* read the width, height and palette size */
+                // read the width, height and palette size
                 buffer.position(buffer.limit() - size * 8 - 7)
                 val width = buffer.getShort().toInt() and 0xFFFF
                 val height = buffer.getShort().toInt() and 0xFFFF
                 val palette = IntArray((buffer.get().toInt() and 0xFF) + 1)
 
-                /* and allocate an object for this sprite set */
+                // and allocate an object for this sprite set
                 val set = SpriteArchive(width, height, size)
 
-                /* read the offsets and dimensions of the individual sprites */
+                // read the offsets and dimensions of the individual sprites
                 for (i in 0 until size) {
                     offsetsX[i] = buffer.getShort().toInt() and 0xFFFF
                 }
@@ -281,35 +290,37 @@ class SpriteArchive @JvmOverloads constructor(width: Int, height: Int, size: Int
                     subHeights[i] = buffer.getShort().toInt() and 0xFFFF
                 }
 
-                /* read the palette */
+                // read the palette
                 buffer.position(buffer.limit() - size * 8 - 7 - (palette.size - 1) * 3)
-                palette[0] = 0 /* transparent colour (black) */
+                palette[0] = 0 // transparent colour (black)
                 for (index in 1 until palette.size) {
                     palette[index] = getMedium(buffer)
                     if (palette[index] == 0) palette[index] = 1
                 }
 
-                /* read the pixels themselves */
+                // read the pixels themselves
                 buffer.position(0)
-                for (id in 0 until size) {/* grab some frequently used values */
+                for (id in 0 until size) { // grab some frequently used values
                     val subWidth = subWidths[id]
                     val subHeight = subHeights[id]
                     val offsetX = offsetsX[id]
                     val offsetY = offsetsY[id]
-                    if (subWidth > 1000 || subHeight > 1000 || width > 1000 || height > 1000)  //since it give jpc errors
-                        continue/* create a BufferedImage to store the resulting image */
+                    if (subWidth > 1000 || subHeight > 1000 || width > 1000 || height > 1000) {
+                        // since it give jpc errors
+                        continue // create a BufferedImage to store the resulting image
+                    }
                     set.frames[id] = BufferedImage(width, height, BufferedImage.TYPE_INT_ARGB)
-                    val image = set.frames[id]/* allocate an array for the palette indices */
+                    val image = set.frames[id] // allocate an array for the palette indices
                     val indices = Array(subWidth) { IntArray(subHeight) }
 
                     /*
-			 * read the flags so we know whether to read horizontally or
-			 * vertically
-			 */
+                     * read the flags so we know whether to read horizontally or
+                     * vertically
+                     */
                     val flags = buffer.get().toInt() and 0xFF
 
-                    /* now read the image */
-                    if (image != null) {/* read the palette indices */
+                    // now read the image
+                    if (image != null) { // read the palette indices
                         if ((flags and FLAG_VERTICAL) != 0) {
                             for (x in 0 until subWidth) {
                                 for (y in 0 until subHeight) {
@@ -328,8 +339,8 @@ class SpriteArchive @JvmOverloads constructor(width: Int, height: Int, size: Int
                         }
 
                         /*
-				 * read the alpha (if there is alpha) and convert values to ARGB
-				 */
+                         * read the alpha (if there is alpha) and convert values to ARGB
+                         */
                         if ((flags and FLAG_ALPHA) != 0) {
                             if ((flags and FLAG_VERTICAL) != 0) {
                                 for (x in 0 until subWidth) {
@@ -344,7 +355,9 @@ class SpriteArchive @JvmOverloads constructor(width: Int, height: Int, size: Int
                                         val alpha = buffer.get().toInt() and 0xFF
                                         try {
                                             image.setRGB(
-                                                x + offsetX, y + offsetY, alpha shl 24 or palette[indices[x][y]]
+                                                x + offsetX,
+                                                y + offsetY,
+                                                alpha shl 24 or palette[indices[x][y]],
                                             )
                                         } catch (e: Exception) {
                                         }
@@ -371,9 +384,11 @@ class SpriteArchive @JvmOverloads constructor(width: Int, height: Int, size: Int
             return null
         }
 
-        fun getMedium(buf: ByteBuffer): Int {
-            return ((buf.get().toInt() and 0xFF) shl 16) or ((buf.get().toInt() and 0xFF) shl 8) or (buf.get()
-                .toInt() and 0xFF)
-        }
+        fun getMedium(buf: ByteBuffer): Int =
+            ((buf.get().toInt() and 0xFF) shl 16) or ((buf.get().toInt() and 0xFF) shl 8) or (
+                    buf
+                        .get()
+                        .toInt() and 0xFF
+                    )
     }
 }

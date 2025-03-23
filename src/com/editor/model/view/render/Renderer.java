@@ -6,13 +6,13 @@ import java.awt.*;
 import java.awt.image.*;
 
 public final class Renderer implements ImageObserver, ImageProducer {
-    private int[] screen;
-    private int[] pixels;
     private final int width;
     private final int height;
     private final ColorModel colorModel = new DirectColorModel(32, 16711680, '\uff00', 255);
-    private ImageConsumer imageProducer;
     private final Image generated3DModelImage;
+    private final int[] screen;
+    private final int[] pixels;
+    private ImageConsumer imageProducer;
 
     public Renderer(int width, int height, Component component) {
         ModelCanvas.setLighting(0.8D);
@@ -46,12 +46,12 @@ public final class Renderer implements ImageObserver, ImageProducer {
         PanelProperties.field65 = PanelProperties.width2 - 1;
     }
 
-    public final void updatePreview(int var1, int var2, Graphics g) {
+    public void updatePreview(int var1, int var2, Graphics g) {
         this.generatePixels();
         g.drawImage(this.generated3DModelImage, 0, 0, this);
     }
 
-    public final synchronized void addConsumer(ImageConsumer c) {
+    public synchronized void addConsumer(ImageConsumer c) {
         this.imageProducer = c;
         c.setDimensions(this.width, this.height);
         c.setProperties(null);
@@ -59,22 +59,22 @@ public final class Renderer implements ImageObserver, ImageProducer {
         c.setHints(14);
     }
 
-    public final synchronized boolean isConsumer(ImageConsumer var1) {
+    public synchronized boolean isConsumer(ImageConsumer var1) {
         return this.imageProducer == var1;
     }
 
-    public final synchronized void removeConsumer(ImageConsumer var1) {
+    public synchronized void removeConsumer(ImageConsumer var1) {
         if (this.imageProducer == var1) {
             this.imageProducer = null;
         }
 
     }
 
-    public final void startProduction(ImageConsumer var1) {
+    public void startProduction(ImageConsumer var1) {
         this.addConsumer(var1);
     }
 
-    public final void requestTopDownLeftRightResend(ImageConsumer var1) {
+    public void requestTopDownLeftRightResend(ImageConsumer var1) {
         System.out.println("TDLR");
     }
 
@@ -83,11 +83,11 @@ public final class Renderer implements ImageObserver, ImageProducer {
         this.imageProducer.imageComplete(2);
     }
 
-    public final boolean imageUpdate(Image arg0, int arg1, int arg2, int arg3, int arg4, int arg5) {
+    public boolean imageUpdate(Image arg0, int arg1, int arg2, int arg3, int arg4, int arg5) {
         return true;
     }
 
-    public final void updateModel(Canvas model, int x, int axisX, int y, int axisY, int axisZ) {
+    public void updateModel(Canvas model, int x, int axisX, int y, int axisY, int axisZ) {
         this.initScreenProperties();
         ModelCanvas.screen = this.screen;
         if (axisY < 0) axisY = 0;
@@ -103,7 +103,7 @@ public final class Renderer implements ImageObserver, ImageProducer {
         }
     }
 
-    public final void clear() {
+    public void clear() {
         this.initScreenProperties();
         int screen = PanelProperties.width * PanelProperties.height;
         //set background color

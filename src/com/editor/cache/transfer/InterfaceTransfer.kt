@@ -9,7 +9,9 @@ import javax.swing.*
 /**
  * The type Interface editor.
  */
-class InterfaceTransfer(cacheLibrary: String) : JFrame() {
+class InterfaceTransfer(
+    cacheLibrary: String,
+) : JFrame() {
     private val cacheLibrary = CacheLibrary.create(cacheLibrary)
     private var archiveBox: JComboBox<String>? = null
     private var idField: JTextField? = null
@@ -141,7 +143,7 @@ class InterfaceTransfer(cacheLibrary: String) : JFrame() {
             val newId = if (newIdString != null && !newIdString.isEmpty()) newIdString.toInt() else archiveId
 
             val replace = true
-            cacheLibrary!!.index(3).add(archiveToCopy, newId, null, replace)
+            cacheLibrary.index(3).add(archiveToCopy, newId, null, replace)
             cacheLibrary.index(3).update()
 
             JOptionPane.showMessageDialog(this, "Archive transferred successfully with new ID: $newId")

@@ -1,7 +1,7 @@
 package com.editor.model.view.frame;
 
-import com.editor.model.view.render.Renderer;
 import com.editor.model.view.render.Canvas;
+import com.editor.model.view.render.Renderer;
 
 import javax.swing.*;
 import java.awt.*;
@@ -13,9 +13,10 @@ import java.io.FileInputStream;
 
 public class ModelPanel extends JPanel implements Runnable {
     public static boolean isOptimizedSelected = false;
+    private static long gcDelay = 0L;
     public boolean loaded = false;
-    private int oriPosX = 120;
-    private int oriPosY = 100;
+    private final int oriPosX = 120;
+    private final int oriPosY = 100;
     private int posX = oriPosX;
     private int posY = oriPosY;
     private int axisX = 0;
@@ -23,7 +24,6 @@ public class ModelPanel extends JPanel implements Runnable {
     private int axisZ = 500;
     private int screenX = -1;
     private int screenY = -1;
-    private static long gcDelay = 0L;
     private Canvas model;
     private Renderer renderer;
 
@@ -50,28 +50,26 @@ public class ModelPanel extends JPanel implements Runnable {
                 mouseDraggedCallback(e);
             }
         });
-		GroupLayout layout = new GroupLayout(this);
-		setLayout(layout);
-		layout.setHorizontalGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING).addGap(0, 536, 32767));
-		layout.setVerticalGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING).addGap(0, 318, 32767));
+        GroupLayout layout = new GroupLayout(this);
+        setLayout(layout);
+        layout.setHorizontalGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING).addGap(0, 536, 32767));
+        layout.setVerticalGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING).addGap(0, 318, 32767));
     }
 
     @Override
     public void run() {
         Graphics g = null;
         while (true) {
-
-                //System.out.println("33");
-                g = getGraphics();
-                if (model != null && g != null) {
-                    try {
-                        renderer.updateModel(model, posX, axisY, posY, axisX, axisZ);
-                        renderer.updatePreview(0, 0, g);
-                        renderer.clear();
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
+            g = getGraphics();
+            if (model != null && g != null) {
+                try {
+                    renderer.updateModel(model, posX, axisY, posY, axisX, axisZ);
+                    renderer.updatePreview(0, 0, g);
+                    renderer.clear();
+                } catch (Exception e) {
+                    e.printStackTrace();
                 }
+            }
 
 
             try {

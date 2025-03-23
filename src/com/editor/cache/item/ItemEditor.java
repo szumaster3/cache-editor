@@ -1,9 +1,10 @@
 package com.editor.cache.item;
 
 import com.alex.defs.items.ItemDefinitions;
-import console.Main;
 import com.alex.util.SpringUtilities;
 import com.alex.util.Utils;
+import com.editor.model.view.render.Model3D;
+import console.Main;
 
 import javax.swing.*;
 import javax.swing.GroupLayout.Alignment;
@@ -11,8 +12,13 @@ import javax.swing.LayoutStyle.ComponentPlacement;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.*;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
 import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.Iterator;
 
@@ -772,13 +778,15 @@ public class ItemEditor extends JFrame {
     }
 
     private void export() {
-        File f = new File("./export");
-        f.mkdirs();
-        String lineSep = System.getProperty("line.separator");
-        BufferedWriter writer = null;
+        File exportLocation = new File("data/export/lists/items/");
+        exportLocation.mkdirs();
 
-        try {
-            writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("data/export/lists/items/" + this.defs.id + ".txt"), StandardCharsets.UTF_8));
+        String lineSep = System.lineSeparator();
+
+        try (BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(
+                Files.newOutputStream(Paths.get(exportLocation.getPath(), this.defs.id + ".txt")),
+                StandardCharsets.UTF_8))) {
+
             writer.write("name = " + this.defs.name);
             writer.write(lineSep);
             writer.write("value = " + this.defs.cost);
@@ -910,13 +918,7 @@ public class ItemEditor extends JFrame {
                 }
             }
         } catch (IOException var151) {
-            Main.log("ItemEditor", "Failed to export Item Defs to .txt");
-        } finally {
-            try {
-                writer.close();
-            } catch (Exception var14) {
-            }
-
+            Main.log("ItemEditor", "Failed to export item definition.");
         }
 
     }
@@ -1158,8 +1160,8 @@ public class ItemEditor extends JFrame {
             }
 
             ItemSelection var10001 = this.is;
-            this.defs.write(ItemSelection.STORE);
-            this.is.updateItemDefs(this.defs);
+            this.defs.write(ItemSelection.Companion.getCACHE());
+            this.is.updateItemDefinition(this.defs);
         } catch (Exception var201) {
             Main.log("ItemEditor", "Cannot write. Please check for mistypes.");
         }
@@ -1184,7 +1186,7 @@ public class ItemEditor extends JFrame {
                     try {
                         var10001 = (new StringBuilder()).append("The model ID of the recently packed model is: ");
                         var10002 = this.is;
-                        Main.log("ItemEditor", var10001.append(Utils.packCustomModel(ItemSelection.STORE, Utils.getBytesFromFile(new File(file1.getPath())), Integer.parseInt(returnVal1))).toString());
+                        Main.log("ItemEditor", var10001.append(Utils.packCustomModel(ItemSelection.Companion.getCACHE(), Utils.getBytesFromFile(new File(file1.getPath())), Integer.parseInt(returnVal1))).toString());
                     } catch (IOException var12) {
                         Main.log("ItemEditor", "There was an error packing the model.");
                     }
@@ -1200,7 +1202,7 @@ public class ItemEditor extends JFrame {
                 try {
                     var10001 = (new StringBuilder()).append("The model ID of the recently packed model is: ");
                     var10002 = this.is;
-                    Main.log("ItemEditor", var10001.append(Utils.packCustomModel(ItemSelection.STORE, Utils.getBytesFromFile(new File(file21.getPath())))).toString());
+                    Main.log("ItemEditor", var10001.append(Utils.packCustomModel(ItemSelection.Companion.getCACHE(), Utils.getBytesFromFile(new File(file21.getPath())))).toString());
                 } catch (IOException var11) {
                     Main.log("ItemEditor", "There was an error packing the model.");
                 }

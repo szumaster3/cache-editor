@@ -18,6 +18,7 @@ class ArchiveReference {
      */
     @JvmField
     var nameHash: Int = 0
+
     /**
      * Get whirpool byte [ ].
      *
@@ -38,6 +39,7 @@ class ArchiveReference {
      */
     var cRC: Int = 0
         private set
+
     /**
      * Gets revision.
      *

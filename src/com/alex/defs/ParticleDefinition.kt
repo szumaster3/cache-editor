@@ -1,11 +1,12 @@
 package com.alex.defs
 
-import com.alex.filestore.Store
+import com.alex.filestore.Cache
 import com.alex.io.InputStream
 import com.alex.io.OutputStream
 
-data class ParticleDefinition(val id: Int) : Cloneable {
-
+data class ParticleDefinition(
+    val id: Int,
+) : Cloneable {
     var isActiveFirst: Boolean = true
     var opcode2: Int = 0
     var minimumAngleH: Short = 0
@@ -297,11 +298,7 @@ data class ParticleDefinition(val id: Int) : Cloneable {
         }
     }
 
-    fun write(cache: Store): Boolean {
-        return cache.indexes[27].putFile(0, id, encode())
-    }
+    fun write(cache: Cache): Boolean = cache.indexes[27].putFile(0, id, encode())
 
-    override fun toString(): String {
-        return "$id"
-    }
+    override fun toString(): String = "$id"
 }

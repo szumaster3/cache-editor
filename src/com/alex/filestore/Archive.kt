@@ -179,7 +179,11 @@ class Archive {
         }
     }
 
-    private fun checkRevision(compressedLength: Int, archive: ByteArray, o: Int) {
+    private fun checkRevision(
+        compressedLength: Int,
+        archive: ByteArray,
+        o: Int,
+    ) {
         val stream = InputStream(archive)
         val offset = stream.offset
         if (stream.length - (compressedLength + o) >= 2) {
@@ -198,17 +202,24 @@ class Archive {
      * @param mainFile the main file
      * @return the object [ ]
      */
-    fun editNoRevision(data: ByteArray?, mainFile: MainFile): Array<Any>? {
+    fun editNoRevision(
+        data: ByteArray?,
+        mainFile: MainFile,
+    ): Array<Any>? {
         this.data = data
         if (this.compression == 1) {
             this.compression = 2
         }
 
         val compressed = this.compress()
-        return if (!mainFile.putArchiveData(this.id, compressed)) null else arrayOf(
-            CRC32HGenerator.getHash(compressed),
-            Whirlpool.getHash(compressed, 0, compressed.size)
-        )
+        return if (!mainFile.putArchiveData(this.id, compressed)) {
+            null
+        } else {
+            arrayOf(
+                CRC32HGenerator.getHash(compressed),
+                Whirlpool.whirlpool(compressed, 0, compressed.size),
+            )
+        }
     }
 
     val decompressedLength: Int

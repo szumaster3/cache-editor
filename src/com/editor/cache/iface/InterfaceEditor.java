@@ -1,7 +1,7 @@
 package com.editor.cache.iface;
 
 import com.alex.defs.interfaces.ComponentDefinition;
-import com.alex.filestore.Store;
+import com.alex.filestore.Cache;
 import com.editor.cache.iface.sprites.ImageUtils;
 import com.editor.cache.iface.sprites.SpriteDumper;
 import com.editor.cache.iface.sprites.SpriteLoader;
@@ -30,7 +30,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class InterfaceEditor extends JFrame {
-    public static Store STORE;
+    public static Cache Cache;
     public static JProgressBar progressBar;
     public ProgressMonitor progressMonitor;
     protected JList interface_list;
@@ -116,9 +116,10 @@ public class InterfaceEditor extends JFrame {
     private int currentInterface = -1;
     private int selectedComp = -1;
     private ComponentDefinition copiedComp = null;
+    private ComponentDefinition selectedComponent;
 
     public InterfaceEditor(String cache) throws IOException {
-        STORE = new Store(cache);
+        Cache = new Cache(cache);
         setTitle("Interface Editor Shnek");
         getContentPane().setLayout(new BorderLayout());
         setDefaultCloseOperation(1);
@@ -143,7 +144,7 @@ public class InterfaceEditor extends JFrame {
 
         JMenuItem mntmDumpSprites = new JMenuItem("Export sprites");
         mntmDumpSprites.addActionListener(arg0 -> {
-            progressMonitor = new ProgressMonitor(menuBar, "Dumping sprites", "", 0, STORE.getIndexes()[8].getLastArchiveId());
+            progressMonitor = new ProgressMonitor(menuBar, "Dumping sprites", "", 0, Cache.getIndexes()[8].getLastArchiveId());
             progressMonitor.setProgress(1);
             SpriteDumper.dump(cache);
         });
@@ -153,6 +154,41 @@ public class InterfaceEditor extends JFrame {
 
         pack();
         revalidate();
+    }
+
+    public static void main(String[] args) {
+
+        EventQueue.invokeLater(() -> {
+            try {
+                try {
+                    UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+                    JFrame.setDefaultLookAndFeelDecorated(true);
+                    JDialog.setDefaultLookAndFeelDecorated(true);
+
+                } catch (Exception e) {
+                    JOptionPane.showMessageDialog(null, "" + e);
+                    Main.log("Iface tool", e.getMessage());
+                }
+
+                if (args.length < 1) {
+                    try {
+                        PropertyValues.loadValues();
+                    } catch (Exception e) {
+                        JOptionPane.showMessageDialog(null, "Properties can not be found, make sure you've a config.properties file.");
+                        System.out.println("Properties can not be found, make sure you've a config.properties file.\"");
+                    }
+                } else {
+                    String path = args[0];
+                    Main.log("Iface tool", "Using cache path: " + path);
+                    PropertyValues.setCachePath(path);
+                }
+                Main.log("Iface tool", "Application started...");
+                InterfaceEditor frame = new InterfaceEditor(Cache.toString());
+                frame.setVisible(true);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        });
     }
 
     @NotNull
@@ -244,20 +280,7 @@ public class InterfaceEditor extends JFrame {
         JButton addInterfaceButton = getJButton();
         moreButtonsPanel.add(addInterfaceButton);
 
-        JButton deleteInterfaceButton = new JButton("Delete Selected");
-        deleteInterfaceButton.addActionListener(arg0 -> {
-            int option = JOptionPane.showConfirmDialog(this, "Are you sure that you want to remove interface " + currentInterface + " ?", "Inane warning", JOptionPane.YES_NO_OPTION);
-            if (option == 0) {
-                for (int i = 0; i < ComponentDefinition.getInterfaceDefinitionsComponentsSize(STORE, currentInterface); i++) {
-                    if (i == 0) {
-                        addIndex0text((currentInterface));
-                    } else STORE.getIndexes()[3].removeFile((currentInterface), i);
-                }
-                ComponentDefinition.icomponentsdefs = new ComponentDefinition[ComponentDefinition.getInterfaceDefinitionsSize(STORE)][];
-                drawTree(currentInterface);
-            }
-        });
-        deleteInterfaceButton.setPreferredSize(new Dimension(IfaceConstants.LEFT_SCROLLPANE_WIDTH, IfaceConstants.BUTTON_HEIGHT));
+        JButton deleteInterfaceButton = getButton();
         moreButtonsPanel.add(deleteInterfaceButton);
 
         JPanel premadeComponentsPanel = new JPanel(new FlowLayout());
@@ -295,6 +318,25 @@ public class InterfaceEditor extends JFrame {
     }
 
     @NotNull
+    private JButton getButton() {
+        JButton deleteInterfaceButton = new JButton("Delete Selected");
+        deleteInterfaceButton.addActionListener(arg0 -> {
+            int option = JOptionPane.showConfirmDialog(this, "Are you sure that you want to remove interface " + currentInterface + " ?", "Inane warning", JOptionPane.YES_NO_OPTION);
+            if (option == 0) {
+                for (int i = 0; i < ComponentDefinition.getInterfaceDefinitionsComponentsSize(Cache, currentInterface); i++) {
+                    if (i == 0) {
+                        addIndex0text((currentInterface));
+                    } else Cache.getIndexes()[3].removeFile((currentInterface), i);
+                }
+                ComponentDefinition.icomponentsdefs = new ComponentDefinition[ComponentDefinition.getInterfaceDefinitionsSize(Cache)][];
+                drawTree(currentInterface);
+            }
+        });
+        deleteInterfaceButton.setPreferredSize(new Dimension(IfaceConstants.LEFT_SCROLLPANE_WIDTH, IfaceConstants.BUTTON_HEIGHT));
+        return deleteInterfaceButton;
+    }
+
+    @NotNull
     private JButton getJButton() {
         JButton addInterfaceButton = new JButton("Add Interface");
         addInterfaceButton.addActionListener(arg0 -> {
@@ -302,8 +344,8 @@ public class InterfaceEditor extends JFrame {
             defaultButton.basePositionX = 0;
             defaultButton.basePositionY = 0;
             defaultButton.parentId = -1;
-            STORE.getIndexes()[3].putFile(ComponentDefinition.getInterfaceDefinitionsSize(STORE), 0, defaultButton.encode());
-            ComponentDefinition.icomponentsdefs = new ComponentDefinition[ComponentDefinition.getInterfaceDefinitionsSize(STORE)][];
+            Cache.getIndexes()[3].putFile(ComponentDefinition.getInterfaceDefinitionsSize(Cache), 0, defaultButton.encode());
+            ComponentDefinition.icomponentsdefs = new ComponentDefinition[ComponentDefinition.getInterfaceDefinitionsSize(Cache)][];
             JList list = new JList(populateList());
             list.addListSelectionListener(evt -> {
                 if (evt.getValueIsAdjusting()) return;
@@ -423,6 +465,13 @@ public class InterfaceEditor extends JFrame {
         });
         componentButtons.add(btnPaste);
 
+        JButton btnDelete = getButton(buttonSize);
+        componentButtons.add(btnDelete);
+        return componentButtons;
+    }
+
+    @NotNull
+    private JButton getButton(Dimension buttonSize) {
         JButton btnDelete = new JButton("Delete");
         btnDelete.setPreferredSize(buttonSize);
         btnDelete.setToolTipText("Deletes the selected component");
@@ -435,17 +484,16 @@ public class InterfaceEditor extends JFrame {
                 int option = JOptionPane.showConfirmDialog(this, message, "Inane warning", JOptionPane.YES_NO_OPTION);
                 if (option == 0) {
                     try {
-                        STORE.getIndexes()[3].removeFile(currentInterface, selectedComp);
-                        STORE.getIndexes()[3].resetCachedFiles();
-                        STORE.getIndexes()[3].rewriteTable();
+                        Cache.getIndexes()[3].removeFile(currentInterface, selectedComp);
+                        Cache.getIndexes()[3].resetCachedFiles();
+                        Cache.getIndexes()[3].rewriteTable();
                     } finally {
                         drawTree(currentInterface);
                     }
                 }
             }
         });
-        componentButtons.add(btnDelete);
-        return componentButtons;
+        return btnDelete;
     }
 
     private void constructCenterPanel() {
@@ -460,21 +508,7 @@ public class InterfaceEditor extends JFrame {
         JButton btnAddSprite = getJButton(buttonSize);
         buttonPanel.add(btnAddSprite);
 
-        JButton btnAddText = new JButton("Add Text");
-        btnAddText.setPreferredSize(buttonSize);
-        btnAddText.addActionListener(e -> {
-            if (currentInterface <= 0) return;
-            ComponentDefinition comp = ComponentDefinition.getInterfaceComponent(4, 5);
-            comp.basePositionX = 0;
-            comp.basePositionY = 0;
-            comp.parentId = -1;
-            comp.text = "Hallo world";
-            comp.ihash = ComponentDefinition.getInterfaceDefinitionsComponentsSize(STORE, currentInterface) + (currentInterface << 16);
-            STORE.getIndexes()[3].putFile(currentInterface, ComponentDefinition.getInterfaceDefinitionsComponentsSize(STORE, currentInterface), comp.encode());
-            ComponentDefinition.getInterface(currentInterface);
-            drawTree(currentInterface);
-
-        });
+        JButton btnAddText = getBtnAddText(buttonSize);
         buttonPanel.add(btnAddText);
 
         JButton btnAddContainer = new JButton("Add Container");
@@ -487,7 +521,7 @@ public class InterfaceEditor extends JFrame {
             comp.baseHeight = 50;
             comp.baseWidth = 50;
             comp.parentId = -1;
-            STORE.getIndexes()[3].putFile(currentInterface, ComponentDefinition.getInterfaceDefinitionsComponentsSize(STORE, currentInterface), comp.encode());
+            Cache.getIndexes()[3].putFile(currentInterface, ComponentDefinition.getInterfaceDefinitionsComponentsSize(Cache, currentInterface), comp.encode());
             ComponentDefinition.getInterface(currentInterface);
             drawTree(currentInterface);
 
@@ -502,8 +536,8 @@ public class InterfaceEditor extends JFrame {
             comp.basePositionX = 0;
             comp.basePositionY = 0;
             comp.parentId = -1;
-            comp.ihash = ComponentDefinition.getInterfaceDefinitionsComponentsSize(STORE, currentInterface) + (currentInterface << 16);
-            STORE.getIndexes()[3].putFile(currentInterface, ComponentDefinition.getInterfaceDefinitionsComponentsSize(STORE, currentInterface), comp.encode());
+            comp.ihash = ComponentDefinition.getInterfaceDefinitionsComponentsSize(Cache, currentInterface) + (currentInterface << 16);
+            Cache.getIndexes()[3].putFile(currentInterface, ComponentDefinition.getInterfaceDefinitionsComponentsSize(Cache, currentInterface), comp.encode());
             ComponentDefinition.getInterface(currentInterface);
             drawTree(currentInterface);
         });
@@ -517,8 +551,8 @@ public class InterfaceEditor extends JFrame {
             comp.basePositionX = 0;
             comp.basePositionY = 0;
             comp.parentId = -1;
-            comp.ihash = ComponentDefinition.getInterfaceDefinitionsComponentsSize(STORE, currentInterface) + (currentInterface << 16);
-            STORE.getIndexes()[3].putFile(currentInterface, ComponentDefinition.getInterfaceDefinitionsComponentsSize(STORE, currentInterface), comp.encode());
+            comp.ihash = ComponentDefinition.getInterfaceDefinitionsComponentsSize(Cache, currentInterface) + (currentInterface << 16);
+            Cache.getIndexes()[3].putFile(currentInterface, ComponentDefinition.getInterfaceDefinitionsComponentsSize(Cache, currentInterface), comp.encode());
             ComponentDefinition.getInterface(currentInterface);
             drawTree(currentInterface);
 
@@ -557,6 +591,26 @@ public class InterfaceEditor extends JFrame {
     }
 
     @NotNull
+    private JButton getBtnAddText(Dimension buttonSize) {
+        JButton btnAddText = new JButton("Add Text");
+        btnAddText.setPreferredSize(buttonSize);
+        btnAddText.addActionListener(e -> {
+            if (currentInterface <= 0) return;
+            ComponentDefinition comp = ComponentDefinition.getInterfaceComponent(4, 5);
+            comp.basePositionX = 0;
+            comp.basePositionY = 0;
+            comp.parentId = -1;
+            comp.text = "Hallo world";
+            comp.ihash = ComponentDefinition.getInterfaceDefinitionsComponentsSize(Cache, currentInterface) + (currentInterface << 16);
+            Cache.getIndexes()[3].putFile(currentInterface, ComponentDefinition.getInterfaceDefinitionsComponentsSize(Cache, currentInterface), comp.encode());
+            ComponentDefinition.getInterface(currentInterface);
+            drawTree(currentInterface);
+
+        });
+        return btnAddText;
+    }
+
+    @NotNull
     private JButton getJButton(Dimension buttonSize) {
         JButton btnAddSprite = new JButton("Add Sprite");
         btnAddSprite.setPreferredSize(buttonSize);
@@ -567,8 +621,8 @@ public class InterfaceEditor extends JFrame {
             comp.basePositionY = 0;
             comp.parentId = -1;
             comp.spriteId = 0;
-            comp.ihash = ComponentDefinition.getInterfaceDefinitionsComponentsSize(STORE, currentInterface) + (currentInterface << 16);
-            STORE.getIndexes()[3].putFile(currentInterface, ComponentDefinition.getInterfaceDefinitionsComponentsSize(STORE, currentInterface), comp.encode());
+            comp.ihash = ComponentDefinition.getInterfaceDefinitionsComponentsSize(Cache, currentInterface) + (currentInterface << 16);
+            Cache.getIndexes()[3].putFile(currentInterface, ComponentDefinition.getInterfaceDefinitionsComponentsSize(Cache, currentInterface), comp.encode());
             ComponentDefinition.getInterface(currentInterface);
             drawTree(currentInterface);
 
@@ -699,43 +753,6 @@ public class InterfaceEditor extends JFrame {
         triggersTab.add(createInfoFieldPanel("varcStrTriggers", txt_varcStrTriggers));
         return triggersTab;
     }
-
-    public static void main(String[] args) {
-
-        EventQueue.invokeLater(() -> {
-            try {
-                try {
-                    UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-                    JFrame.setDefaultLookAndFeelDecorated(true);
-                    JDialog.setDefaultLookAndFeelDecorated(true);
-
-                } catch (Exception e) {
-                    JOptionPane.showMessageDialog(null, "" + e);
-                    Main.log("Iface tool", e.getMessage());
-                }
-
-                if (args.length < 1) {
-                    try {
-                        PropertyValues.loadValues();
-                    } catch (Exception e) {
-                        JOptionPane.showMessageDialog(null, "Properties can not be found, make sure you've a config.properties file.");
-                        System.out.println("Properties can not be found, make sure you've a config.properties file.\"");
-                    }
-                } else {
-                    String path = args[0];
-                    Main.log("Iface tool", "Using cache path: " + path);
-                    PropertyValues.setCachePath(path);
-                }
-                Main.log("Iface tool", "Application started...");
-                InterfaceEditor frame = new InterfaceEditor(STORE.toString());
-                frame.setVisible(true);
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        });
-    }
-
-    private ComponentDefinition selectedComponent;
 
     public void setValues(int inter, int componentId) {
         /* cleaning previous values*/
@@ -1094,7 +1111,7 @@ public class InterfaceEditor extends JFrame {
         //JOptionPane.showMessageDialog(scrollPane_2, "Component has been succesfully saved.");
         //saves it
         System.out.println("Saving component " + comp + " from interface interface " + inter);
-        STORE.getIndexes()[3].putFile(inter, comp, changedComponent.encode());
+        Cache.getIndexes()[3].putFile(inter, comp, changedComponent.encode());
     }
 
     /**
@@ -1107,16 +1124,16 @@ public class InterfaceEditor extends JFrame {
 
         DefaultListModel listModel = new DefaultListModel();
 
-        if (STORE == null) {
-            System.out.println("STORE is null, cannot populate the interface list.");
+        if (Cache == null) {
+            System.out.println("Cache is null, cannot populate the interface list.");
             return listModel;
         }
 
-        int interfaceCount = ComponentDefinition.getInterfaceDefinitionsSize(STORE);
+        int interfaceCount = ComponentDefinition.getInterfaceDefinitionsSize(Cache);
 
         for (int i = 0; i < interfaceCount; i++) {
             try {
-                ComponentDefinition[] interfaceDefs = ComponentDefinition.getInterface(i, false, STORE);
+                ComponentDefinition[] interfaceDefs = ComponentDefinition.getInterface(i, false, Cache);
 
                 if (interfaceDefs != null) {
                     listModel.addElement("Interface: " + i);
@@ -1144,7 +1161,7 @@ public class InterfaceEditor extends JFrame {
     public DefaultTreeModel createInterfaceTree(int interfaceId) {
         DefaultMutableTreeNode inter = new DefaultMutableTreeNode("Interface " + interfaceId + "");
         //new stuff
-        for (int i = 0; i < ComponentDefinition.getInterfaceDefinitionsComponentsSize(STORE, interfaceId); i++) {
+        for (int i = 0; i < ComponentDefinition.getInterfaceDefinitionsComponentsSize(Cache, interfaceId); i++) {
             ComponentDefinition c = ComponentDefinition.getInterfaceComponent(interfaceId, i);
             if (c == null) {
                 System.out.println("is null" + i);
@@ -1208,7 +1225,7 @@ public class InterfaceEditor extends JFrame {
     public void addIndex0text(int interfaceId) {
         ComponentDefinition defaultButton = ComponentDefinition.getInterfaceComponent(6, 19);
         defaultButton.parentId = -1;
-        STORE.getIndexes()[3].putFile(interfaceId, 0, defaultButton.encode());
+        Cache.getIndexes()[3].putFile(interfaceId, 0, defaultButton.encode());
     }
 
     /**
@@ -1220,24 +1237,24 @@ public class InterfaceEditor extends JFrame {
             return;
         }
         if (copiedComp.type == ComponentConstants.CONTAINER) {
-            int containerPlace = ComponentDefinition.getInterfaceDefinitionsComponentsSize(STORE, currentInterface);
+            int containerPlace = ComponentDefinition.getInterfaceDefinitionsComponentsSize(Cache, currentInterface);
             copiedComp.parentId = -1;
-            STORE.getIndexes()[3].putFile(currentInterface, containerPlace, copiedComp.encode());
+            Cache.getIndexes()[3].putFile(currentInterface, containerPlace, copiedComp.encode());
             ArrayList<ComponentDefinition> childs = ComponentDefinition.getChildsByParent(copiedComp.interfaceId, copiedComp.ihash);
             for (ComponentDefinition c : childs) {
                 if (c.type == ComponentConstants.CONTAINER) { //TODO packing containers in containers
 
                 } else
-                    STORE.getIndexes()[3].putFile(currentInterface, ComponentDefinition.getInterfaceDefinitionsComponentsSize(STORE, currentInterface), c.encode());
+                    Cache.getIndexes()[3].putFile(currentInterface, ComponentDefinition.getInterfaceDefinitionsComponentsSize(Cache, currentInterface), c.encode());
             }
             ComponentDefinition.getInterface(currentInterface);
-            int size = ComponentDefinition.getInterfaceDefinitionsComponentsSize(STORE, currentInterface);
+            int size = ComponentDefinition.getInterfaceDefinitionsComponentsSize(Cache, currentInterface);
             ComponentDefinition parent = ComponentDefinition.getInterfaceComponent(currentInterface, containerPlace);
             for (int i = size - childs.size() - 1; i < size; i++) {
                 ComponentDefinition component = ComponentDefinition.getInterfaceComponent(currentInterface, i);
                 if (component.type != 0) {
                     component.parentId = parent.ihash;
-                    STORE.getIndexes()[3].putFile(currentInterface, i, component.encode());
+                    Cache.getIndexes()[3].putFile(currentInterface, i, component.encode());
 
                 }
             }
@@ -1245,7 +1262,7 @@ public class InterfaceEditor extends JFrame {
             drawTree(currentInterface);
         } else {
             copiedComp.parentId = -1;
-            STORE.getIndexes()[3].putFile(currentInterface, ComponentDefinition.getInterfaceDefinitionsComponentsSize(STORE, currentInterface), copiedComp.encode());
+            Cache.getIndexes()[3].putFile(currentInterface, ComponentDefinition.getInterfaceDefinitionsComponentsSize(Cache, currentInterface), copiedComp.encode());
             ComponentDefinition.getInterface(currentInterface);
             drawTree(currentInterface);
         }
@@ -1260,7 +1277,7 @@ public class InterfaceEditor extends JFrame {
      */
     public void exportInterface(int interfaceId) throws FileNotFoundException, IOException {
         File file = new File("data/export/" + interfaceId + ".dat");
-        byte[] data = STORE.getIndexes()[3].getArchive(interfaceId).getData();
+        byte[] data = Cache.getIndexes()[3].getArchive(interfaceId).getData();
         try (FileOutputStream fos = new FileOutputStream(file)) {
             fos.write(data);
             fos.close();
@@ -1278,11 +1295,11 @@ public class InterfaceEditor extends JFrame {
         byte[] data;
         try {
             data = Files.readAllBytes(new File(path).toPath());
-            int archiveId = ComponentDefinition.getInterfaceDefinitionsSize(STORE);
+            int archiveId = ComponentDefinition.getInterfaceDefinitionsSize(Cache);
             ComponentDefinition defaultButton = ComponentDefinition.getInterfaceComponent(6, 19);
             defaultButton.parentId = -1;
-            STORE.getIndexes()[3].putFile(archiveId, 0, defaultButton.encode());
-            //STORE.getIndexes()[3].getArchive(archiveId).s(data);
+            Cache.getIndexes()[3].putFile(archiveId, 0, defaultButton.encode());
+            //Cache.getIndexes()[3].getArchive(archiveId).s(data);
             this.drawTree(archiveId);
         } catch (IOException e) {
             // TODO Auto-generated catch block
@@ -1361,31 +1378,31 @@ public class InterfaceEditor extends JFrame {
             case 0://default close button (with hover)
                 ComponentDefinition defaultCloseButton = ComponentDefinition.getInterfaceComponent(6, 36);
                 defaultCloseButton.parentId = -1;
-                STORE.getIndexes()[3].putFile(currentInterface, ComponentDefinition.getInterfaceDefinitionsComponentsSize(STORE, currentInterface), defaultCloseButton.encode());
+                Cache.getIndexes()[3].putFile(currentInterface, ComponentDefinition.getInterfaceDefinitionsComponentsSize(Cache, currentInterface), defaultCloseButton.encode());
                 ComponentDefinition.getInterface(currentInterface); //since we need to reload the array
                 drawTree(currentInterface);
                 break;
             case 1: //normal hover button
                 ComponentDefinition container = ComponentDefinition.getInterfaceComponent(506, 1);
                 ComponentDefinition text = ComponentDefinition.getInterfaceComponent(506, 2);
-                STORE.getIndexes()[3].putFile(currentInterface, ComponentDefinition.getInterfaceDefinitionsComponentsSize(STORE, currentInterface), container.encode());
-                STORE.getIndexes()[3].putFile(currentInterface, ComponentDefinition.getInterfaceDefinitionsComponentsSize(STORE, currentInterface), text.encode());
+                Cache.getIndexes()[3].putFile(currentInterface, ComponentDefinition.getInterfaceDefinitionsComponentsSize(Cache, currentInterface), container.encode());
+                Cache.getIndexes()[3].putFile(currentInterface, ComponentDefinition.getInterfaceDefinitionsComponentsSize(Cache, currentInterface), text.encode());
                 ComponentDefinition.getInterface(currentInterface); //since we need to reload the array
-                ComponentDefinition n = ComponentDefinition.getInterfaceComponent(currentInterface, ComponentDefinition.getInterfaceDefinitionsComponentsSize(STORE, currentInterface) - 2);
-                ComponentDefinition xd = ComponentDefinition.getInterfaceComponent(currentInterface, ComponentDefinition.getInterfaceDefinitionsComponentsSize(STORE, currentInterface) - 1);
+                ComponentDefinition n = ComponentDefinition.getInterfaceComponent(currentInterface, ComponentDefinition.getInterfaceDefinitionsComponentsSize(Cache, currentInterface) - 2);
+                ComponentDefinition xd = ComponentDefinition.getInterfaceComponent(currentInterface, ComponentDefinition.getInterfaceDefinitionsComponentsSize(Cache, currentInterface) - 1);
                 xd.parentId = n.ihash;
-                STORE.getIndexes()[3].putFile(currentInterface, ComponentDefinition.getInterfaceDefinitionsComponentsSize(STORE, currentInterface) - 1, xd.encode());
+                Cache.getIndexes()[3].putFile(currentInterface, ComponentDefinition.getInterfaceDefinitionsComponentsSize(Cache, currentInterface) - 1, xd.encode());
                 ComponentDefinition.getInterface(currentInterface); //since we need to reload the array
                 drawTree(currentInterface);
                 break;
             case 2: //basic starter interface
                 ComponentDefinition basic = ComponentDefinition.getInterfaceComponent(6, 0);
-                int place = ComponentDefinition.getInterfaceDefinitionsComponentsSize(STORE, currentInterface);
-                STORE.getIndexes()[3].putFile(currentInterface, place, basic.encode());
+                int place = ComponentDefinition.getInterfaceDefinitionsComponentsSize(Cache, currentInterface);
+                Cache.getIndexes()[3].putFile(currentInterface, place, basic.encode());
                 for (ComponentDefinition comp : ComponentDefinition.getChildsByParent(6, ComponentDefinition.getInterfaceComponent(6, 0).ihash)) {
                     if (comp.text.toLowerCase().contains("brimhaven")) comp.text = "";
                     comp.parentId++;
-                    STORE.getIndexes()[3].putFile(currentInterface, ComponentDefinition.getInterfaceDefinitionsComponentsSize(STORE, currentInterface), comp.encode());
+                    Cache.getIndexes()[3].putFile(currentInterface, ComponentDefinition.getInterfaceDefinitionsComponentsSize(Cache, currentInterface), comp.encode());
                 }
                 ComponentDefinition.getInterface(currentInterface); //since we need to reload the array
                 drawTree(currentInterface);
@@ -1398,7 +1415,7 @@ public class InterfaceEditor extends JFrame {
                 hover.spriteId = 0;
                 hover.onMouseHoverScript[2] = 1;
                 hover.onMouseLeaveScript[2] = 0;
-                STORE.getIndexes()[3].putFile(currentInterface, ComponentDefinition.getInterfaceDefinitionsComponentsSize(STORE, currentInterface), hover.encode());
+                Cache.getIndexes()[3].putFile(currentInterface, ComponentDefinition.getInterfaceDefinitionsComponentsSize(Cache, currentInterface), hover.encode());
                 ComponentDefinition.getInterface(currentInterface); //since we need to reload the array
                 drawTree(currentInterface);
                 break;
@@ -1407,12 +1424,12 @@ public class InterfaceEditor extends JFrame {
                 ComponentDefinition cont = ComponentDefinition.getInterfaceComponent(762, 119);
                 cont.parentId = -1;
                 popupButton.parentId = -1;
-                int place2 = ComponentDefinition.getInterfaceDefinitionsComponentsSize(STORE, currentInterface);
-                STORE.getIndexes()[3].putFile(currentInterface, place2, cont.encode());
+                int place2 = ComponentDefinition.getInterfaceDefinitionsComponentsSize(Cache, currentInterface);
+                Cache.getIndexes()[3].putFile(currentInterface, place2, cont.encode());
                 popupButton.onMouseRepeat[3] = "Click here to change your preset settings.";
                 popupButton.onMouseLeaveScript[2] = ComponentDefinition.getInterfaceComponent(currentInterface, place2).ihash;
                 popupButton.onMouseRepeat[2] = ComponentDefinition.getInterfaceComponent(currentInterface, place2).ihash;
-                STORE.getIndexes()[3].putFile(currentInterface, ComponentDefinition.getInterfaceDefinitionsComponentsSize(STORE, currentInterface), popupButton.encode());
+                Cache.getIndexes()[3].putFile(currentInterface, ComponentDefinition.getInterfaceDefinitionsComponentsSize(Cache, currentInterface), popupButton.encode());
                 ComponentDefinition.getInterface(currentInterface); //since we need to reload the array
                 drawTree(currentInterface);
                 break;

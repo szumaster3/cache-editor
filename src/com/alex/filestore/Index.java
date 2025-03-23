@@ -2,9 +2,9 @@ package com.alex.filestore;
 
 import com.alex.io.InputStream;
 import com.alex.io.OutputStream;
+import com.alex.util.Utils;
 import com.alex.util.crc32.CRC32HGenerator;
 import com.alex.util.whirlpool.Whirlpool;
-import com.alex.util.Utils;
 
 public final class Index {
     private final MainFile mainFile;
@@ -20,7 +20,7 @@ public final class Index {
         byte[] archiveData = index255.getArchiveData(this.getId());
         if (archiveData != null) {
             this.crc = CRC32HGenerator.getHash(archiveData);
-            this.whirlpool = Whirlpool.getHash(archiveData, 0, archiveData.length);
+            this.whirlpool = Whirlpool.whirlpool(archiveData, 0, archiveData.length);
             Archive archive = new Archive(this.getId(), archiveData, keys);
             this.table = new ReferenceTable(archive);
             this.resetCachedFiles();
@@ -129,27 +129,27 @@ public final class Index {
         }
     }
 
-    public boolean packIndex(Store originalStore) {
-        return this.packIndex(originalStore, false);
+    public boolean packIndex(Cache originalCache) {
+        return this.packIndex(originalCache, false);
     }
 
-    public boolean packIndex(Store originalStore, boolean checkCRC) {
+    public boolean packIndex(Cache originalCache, boolean checkCRC) {
         try {
-            return this.packIndex(this.getId(), originalStore, checkCRC);
+            return this.packIndex(this.getId(), originalCache, checkCRC);
         } catch (Exception var4) {
-            return this.packIndex(this.getId(), originalStore, checkCRC);
+            return this.packIndex(this.getId(), originalCache, checkCRC);
         }
     }
 
-    public boolean packIndex(int id, Store originalStore, boolean checkCRC) {
+    public boolean packIndex(int id, Cache originalCache, boolean checkCRC) {
         try {
-            Index var9 = originalStore.getIndexes()[id];
+            Index var9 = originalCache.getIndexes()[id];
             int[] arr$ = var9.table.getValidArchiveIds();
             int len$ = arr$.length;
 
             for (int i$ = 0; i$ < len$; ++i$) {
                 int archiveId = arr$[i$];
-                if ((!checkCRC || !this.archiveExists(archiveId) || var9.table.getArchives()[archiveId].getCRC() != this.table.getArchives()[archiveId].getCRC()) && !this.putArchive(id, archiveId, originalStore, false, false)) {
+                if ((!checkCRC || !this.archiveExists(archiveId) || var9.table.getArchives()[archiveId].getCRC() != this.table.getArchives()[archiveId].getCRC()) && !this.putArchive(id, archiveId, originalCache, false, false)) {
                     return false;
                 }
             }
@@ -165,13 +165,14 @@ public final class Index {
         }
     }
 
-    public boolean putArchive(int archiveId, Store originalStore) {
-        return this.putArchive(this.getId(), archiveId, originalStore, true, true);
+    public boolean putArchive(int archiveId, Cache originalCache) {
+        return this.putArchive(this.getId(), archiveId, originalCache, true, true);
     }
 
-    public boolean putArchive(int archiveId, Store originalStore, boolean rewriteTable, boolean resetCache) {
-        return this.putArchive(this.getId(), archiveId, originalStore, rewriteTable, resetCache);
+    public boolean putArchive(int archiveId, Cache originalCache, boolean rewriteTable, boolean resetCache) {
+        return this.putArchive(this.getId(), archiveId, originalCache, rewriteTable, resetCache);
     }
+
     public void removeArchive(int archiveId) {
         byte temp[][][] = new byte[cachedFiles.length - 1][][];
         int count = 0;
@@ -186,9 +187,9 @@ public final class Index {
     }
 
 
-    public boolean putArchive(int id, int archiveId, Store originalStore, boolean rewriteTable, boolean resetCache) {
+    public boolean putArchive(int id, int archiveId, Cache originalCache, boolean rewriteTable, boolean resetCache) {
         try {
-            Index var11 = originalStore.getIndexes()[id];
+            Index var11 = originalCache.getIndexes()[id];
             byte[] data = var11.getMainFile().getArchiveData(archiveId);
             if (data == null) {
                 return false;
@@ -272,7 +273,7 @@ public final class Index {
             Archive var131 = new Archive(archiveId, compression, reference.revision, archiveData);
             byte[] var141 = var131.compress();
             reference.setCrc(CRC32HGenerator.getHash(var141, 0, var141.length - 2));
-            reference.whirpool = Whirlpool.getHash(var141, 0, var141.length - 2);
+            reference.whirpool = Whirlpool.whirlpool(var141, 0, var141.length - 2);
             if (!this.mainFile.putArchiveData(archiveId, var141)) {
                 return false;
             } else if (!this.rewriteTable()) {
@@ -341,7 +342,7 @@ public final class Index {
         Archive var181 = new Archive(archiveId, compression, reference.revision, archiveData);
         byte[] var191 = var181.compress();
         reference.setCrc(CRC32HGenerator.getHash(var191, 0, var191.length - 2));
-        reference.whirpool = Whirlpool.getHash(var191, 0, var191.length - 2);
+        reference.whirpool = Whirlpool.whirlpool(var191, 0, var191.length - 2);
         if (archiveName != -1) {
             reference.nameHash = archiveName;
         }
@@ -384,7 +385,7 @@ public final class Index {
                     archive.setKeys(keys);
                     byte[] closedArchive = archive.compress();
                     reference.setCrc(CRC32HGenerator.getHash(closedArchive, 0, closedArchive.length - 2));
-                    reference.whirpool = Whirlpool.getHash(closedArchive, 0, closedArchive.length - 2);
+                    reference.whirpool = Whirlpool.whirlpool(closedArchive, 0, closedArchive.length - 2);
                     if (!this.mainFile.putArchiveData(archiveId, closedArchive)) {
                         return false;
                     } else if (rewriteTable && !this.rewriteTable()) {

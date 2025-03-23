@@ -16,7 +16,7 @@ object FontDecoding {
                 arr[counter] =
                     ImageIO.read(File("data/export/fonts/" + component.fontId + "_" + getCharIndex(c) + ".png"))
             } catch (e: IOException) {
-                //e.printStackTrace();
+                // e.printStackTrace();
             }
 
             counter++

@@ -20,8 +20,9 @@ object IfaceConstants {
     const val PREMADE_COMP_HEIGHT: Int = 112
     const val INFO_FIELD_WIDTH: Int = 300
     const val INFO_FIELD_HEIGHT: Int = BUTTON_HEIGHT_SMALL
+
     @JvmField
-	val BG_FILL_COLOR: Color = Color.lightGray
+    val BG_FILL_COLOR: Color = Color.lightGray
     const val VIEWPORT_WIDTH: Int = DEFAULT_EDITOR_WIDTH - LEFT_SCROLLPANE_WIDTH - RIGHT_SCROLLPANE_WIDTH
     const val VIEWPORT_HEIGHT: Int = 503
 }

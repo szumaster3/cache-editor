@@ -1,6 +1,6 @@
 package com.alex.defs.objects;
 
-import com.alex.filestore.Store;
+import com.alex.filestore.Cache;
 import com.alex.io.InputStream;
 import com.alex.io.OutputStream;
 
@@ -96,23 +96,23 @@ public class ObjectDefinitions implements Cloneable {
     private int[][] anIntArrayArray3916;
     private Object aClass194_3922;
 
-    public ObjectDefinitions(Store store, int id) {
-        this(store, id, true);
+    public ObjectDefinitions(Cache cache, int id) {
+        this(cache, id, true);
     }
 
-    public ObjectDefinitions(Store store, int id, boolean load) {
+    public ObjectDefinitions(Cache cache, int id, boolean load) {
         this.id = id;
         setDefaultsVariableValues();
         setDefaultOptions();
         if (load)
-            loadObjectDefinitions(store);
+            loadObjectDefinitions(cache);
     }
 
-    public static ObjectDefinitions getObjectDefinition(Store cache, int itemId) {
+    public static ObjectDefinitions getObjectDefinition(Cache cache, int itemId) {
         return getObjectDefinition(cache, itemId, true);
     }
 
-    public static ObjectDefinitions getObjectDefinition(Store cache, int itemId, boolean load) {
+    public static ObjectDefinitions getObjectDefinition(Cache cache, int itemId, boolean load) {
         return new ObjectDefinitions(cache, itemId, load);
     }
 
@@ -121,8 +121,8 @@ public class ObjectDefinitions implements Cloneable {
     }
 
 
-    public void write(Store store) {
-        store.getIndexes()[16].putFile(this.getArchiveId(), this.getFileId(), this.encode());
+    public void write(Cache cache) {
+        cache.getIndexes()[16].putFile(this.getArchiveId(), this.getFileId(), this.encode());
     }
 
     public byte[] encode() {
@@ -644,7 +644,7 @@ public class ObjectDefinitions implements Cloneable {
         this.name = name;
     }
 
-    public void loadObjectDefinitions(Store cache) {
+    public void loadObjectDefinitions(Cache cache) {
         byte[] data = cache.getIndexes()[16].getFile(getArchiveId(), getFileId());
         if (data == null) {
             return;

@@ -1,6 +1,6 @@
 package com.editor.model
 
-import com.alex.filestore.Store
+import com.alex.filestore.Cache
 import console.Main.log
 import java.awt.event.ActionEvent
 import java.io.File
@@ -8,7 +8,9 @@ import java.io.FileOutputStream
 import java.io.IOException
 import javax.swing.*
 
-internal class ModelExporter(cache: String) : JFrame() {
+internal class ModelExporter(
+    cache: String,
+) : JFrame() {
     private val modelID = JTextField(10)
     private val submit = JButton("Submit")
     private val exit = JMenuItem("Exit")
@@ -27,18 +29,20 @@ internal class ModelExporter(cache: String) : JFrame() {
         layout.autoCreateContainerGaps = true
 
         layout.setHorizontalGroup(
-            layout.createParallelGroup(GroupLayout.Alignment.CENTER)
+            layout
+                .createParallelGroup(GroupLayout.Alignment.CENTER)
                 .addComponent(label)
                 .addComponent(modelID, GroupLayout.PREFERRED_SIZE, 170, GroupLayout.PREFERRED_SIZE)
-                .addComponent(submit)
+                .addComponent(submit),
         )
 
         layout.setVerticalGroup(
-            layout.createSequentialGroup()
+            layout
+                .createSequentialGroup()
                 .addComponent(label)
                 .addComponent(modelID, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
                 .addGap(20)
-                .addComponent(submit)
+                .addComponent(submit),
         )
 
         contentPane.layout = layout
@@ -58,7 +62,7 @@ internal class ModelExporter(cache: String) : JFrame() {
         dir.mkdirs()
 
         try {
-            val store = Store(cache)
+            val store = Cache(cache)
             val index = store.indexes[7]
             val modelId = modelID.text.toInt()
             val data = index.getFile(modelId)
@@ -74,7 +78,10 @@ internal class ModelExporter(cache: String) : JFrame() {
 
     companion object {
         @Throws(IOException::class)
-        fun writeFile(data: ByteArray, fileName: String) {
+        fun writeFile(
+            data: ByteArray,
+            fileName: String,
+        ) {
             FileOutputStream(fileName).use { fos ->
                 fos.write(data)
                 fos.close()

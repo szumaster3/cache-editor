@@ -73,7 +73,13 @@ object SpringUtilities {
      */
     @JvmStatic
     fun makeGrid(
-        parent: Container, rows: Int, cols: Int, initialX: Int, initialY: Int, xPad: Int, yPad: Int
+        parent: Container,
+        rows: Int,
+        cols: Int,
+        initialX: Int,
+        initialY: Int,
+        xPad: Int,
+        yPad: Int,
     ) {
         val layout: SpringLayout
         try {
@@ -89,76 +95,90 @@ object SpringUtilities {
         val initialYSpring = Spring.constant(initialY)
         val max = rows * cols
 
-        //Calculate Springs that are the max of the width/height so that all
-        //cells have the same size.
+        // Calculate Springs that are the max of the width/height so that all
+        // cells have the same size.
         var maxWidthSpring = layout.getConstraints(parent.getComponent(0)).getWidth()
 
         var maxHeightSpring = layout.getConstraints(parent.getComponent(0)).getHeight()
 
         for (i in 1 until max) {
-            val cons = layout.getConstraints(
-                parent.getComponent(i)
-            )
+            val cons =
+                layout.getConstraints(
+                    parent.getComponent(i),
+                )
 
             maxWidthSpring = Spring.max(maxWidthSpring, cons.width)
             maxHeightSpring = Spring.max(maxHeightSpring, cons.height)
         }
 
-        //Apply the new width/height Spring. This forces all the
-        //components to have the same size.
+        // Apply the new width/height Spring. This forces all the
+        // components to have the same size.
         for (i in 0 until max) {
-            val cons = layout.getConstraints(
-                parent.getComponent(i)
-            )
+            val cons =
+                layout.getConstraints(
+                    parent.getComponent(i),
+                )
 
             cons.width = maxWidthSpring
             cons.height = maxHeightSpring
         }
 
-        //Then adjust the x/y constraints of all the cells so that they
-        //are aligned in a grid.
+        // Then adjust the x/y constraints of all the cells so that they
+        // are aligned in a grid.
         var lastCons: SpringLayout.Constraints? = null
         var lastRowCons: SpringLayout.Constraints? = null
         for (i in 0 until max) {
-            val cons = layout.getConstraints(
-                parent.getComponent(i)
-            )
-            if (i % cols == 0) { //start of new row
+            val cons =
+                layout.getConstraints(
+                    parent.getComponent(i),
+                )
+            if (i % cols == 0) { // start of new row
                 lastRowCons = lastCons
                 cons.x = initialXSpring
-            } else { //x position depends on previous component
-                cons.x = Spring.sum(
-                    lastCons!!.getConstraint(SpringLayout.EAST), xPadSpring
-                )
+            } else { // x position depends on previous component
+                cons.x =
+                    Spring.sum(
+                        lastCons!!.getConstraint(SpringLayout.EAST),
+                        xPadSpring,
+                    )
             }
 
-            if (i / cols == 0) { //first row
+            if (i / cols == 0) { // first row
                 cons.y = initialYSpring
-            } else { //y position depends on previous row
-                cons.y = Spring.sum(
-                    lastRowCons!!.getConstraint(SpringLayout.SOUTH), yPadSpring
-                )
+            } else { // y position depends on previous row
+                cons.y =
+                    Spring.sum(
+                        lastRowCons!!.getConstraint(SpringLayout.SOUTH),
+                        yPadSpring,
+                    )
             }
             lastCons = cons
         }
 
-        //Set the parent's size.
+        // Set the parent's size.
         val pCons = layout.getConstraints(parent)
         pCons.setConstraint(
-            SpringLayout.SOUTH, Spring.sum(
-                Spring.constant(yPad), lastCons!!.getConstraint(SpringLayout.SOUTH)
-            )
+            SpringLayout.SOUTH,
+            Spring.sum(
+                Spring.constant(yPad),
+                lastCons!!.getConstraint(SpringLayout.SOUTH),
+            ),
         )
         pCons.setConstraint(
-            SpringLayout.EAST, Spring.sum(
-                Spring.constant(xPad), lastCons.getConstraint(SpringLayout.EAST)
-            )
+            SpringLayout.EAST,
+            Spring.sum(
+                Spring.constant(xPad),
+                lastCons.getConstraint(SpringLayout.EAST),
+            ),
         )
     }
 
-    /* Used by makeCompactGrid. */
+    // Used by makeCompactGrid.
     private fun getConstraintsForCell(
-        row: Int, col: Int, parent: Container, cols: Int
+        row: Int,
+        col: Int,
+        parent: Container,
+        cols: Int,
     ): SpringLayout.Constraints {
         val layout = parent.layout as SpringLayout
         val c = parent.getComponent(row * cols + col)
@@ -183,7 +203,13 @@ object SpringUtilities {
      */
     @JvmStatic
     fun makeCompactGrid(
-        parent: Container, rows: Int, cols: Int, initialX: Int, initialY: Int, xPad: Int, yPad: Int
+        parent: Container,
+        rows: Int,
+        cols: Int,
+        initialX: Int,
+        initialY: Int,
+        xPad: Int,
+        yPad: Int,
     ) {
         val layout: SpringLayout
         try {
@@ -193,14 +219,16 @@ object SpringUtilities {
             return
         }
 
-        //Align all cells in each column and make them the same width.
+        // Align all cells in each column and make them the same width.
         var x = Spring.constant(initialX)
         for (c in 0 until cols) {
             var width = Spring.constant(0)
             for (r in 0 until rows) {
-                width = Spring.max(
-                    width, getConstraintsForCell(r, c, parent, cols).width
-                )
+                width =
+                    Spring.max(
+                        width,
+                        getConstraintsForCell(r, c, parent, cols).width,
+                    )
             }
             for (r in 0 until rows) {
                 val constraints = getConstraintsForCell(r, c, parent, cols)
@@ -210,14 +238,16 @@ object SpringUtilities {
             x = Spring.sum(x, Spring.sum(width, Spring.constant(xPad)))
         }
 
-        //Align all cells in each row and make them the same height.
+        // Align all cells in each row and make them the same height.
         var y = Spring.constant(initialY)
         for (r in 0 until rows) {
             var height = Spring.constant(0)
             for (c in 0 until cols) {
-                height = Spring.max(
-                    height, getConstraintsForCell(r, c, parent, cols).height
-                )
+                height =
+                    Spring.max(
+                        height,
+                        getConstraintsForCell(r, c, parent, cols).height,
+                    )
             }
             for (c in 0 until cols) {
                 val constraints = getConstraintsForCell(r, c, parent, cols)
@@ -227,7 +257,7 @@ object SpringUtilities {
             y = Spring.sum(y, Spring.sum(height, Spring.constant(yPad)))
         }
 
-        //Set the parent's size.
+        // Set the parent's size.
         val pCons = layout.getConstraints(parent)
         pCons.setConstraint(SpringLayout.SOUTH, y)
         pCons.setConstraint(SpringLayout.EAST, x)

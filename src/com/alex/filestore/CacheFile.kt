@@ -1,10 +1,12 @@
-package com.editor.cache.extract
+package com.alex.filestore
 
 import com.alex.io.ByteStream
 import java.io.RandomAccessFile
 
-class CacheFile
-    (paramArrayOfByte: ByteArray, var dataFile: RandomAccessFile) {
+class CacheFile(
+    paramArrayOfByte: ByteArray,
+    var dataFile: RandomAccessFile,
+) {
     var numberOfFiles: Int = (paramArrayOfByte.size / 6)
     var fileLength: IntArray = IntArray(this.numberOfFiles)
 
@@ -37,7 +39,8 @@ class CacheFile
         while (true) {
             val arrayOfByte2 = readBlock(i) ?: return null
             i =
-                ((arrayOfByte2[4].toInt() and 0xFF) shl 16) + ((arrayOfByte2[5].toInt() and 0xFF) shl 8) + (arrayOfByte2[6].toInt() and 0xFF)
+                ((arrayOfByte2[4].toInt() and 0xFF) shl 16) + ((arrayOfByte2[5].toInt() and 0xFF) shl 8) +
+                (arrayOfByte2[6].toInt() and 0xFF)
             if (fileLength[paramInt] - j - 8 > 512) {
                 System.arraycopy(arrayOfByte2, 8, arrayOfByte1, j, 512)
             } else {
@@ -48,4 +51,3 @@ class CacheFile
         }
     }
 }
-

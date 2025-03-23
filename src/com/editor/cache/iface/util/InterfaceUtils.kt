@@ -8,7 +8,6 @@ import com.alex.defs.interfaces.ComponentDefinition
  * and parsing script and configuration arrays.
  */
 object InterfaceUtils {
-
     /**
      * Checks if the given component is hidden or if it is inside a hidden parent.
      *
@@ -67,7 +66,8 @@ object InterfaceUtils {
         val objs = arrayOfNulls<Any>(values.size)
         try {
             values[0].toInt()
-        } catch (exp: Exception) { // Return null if the first value isn't a number
+        } catch (exp: Exception) {
+            // Return null if the first value isn't a number
             return null
         }
         for (i in values.indices) {

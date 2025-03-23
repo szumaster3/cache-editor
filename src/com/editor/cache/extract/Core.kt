@@ -1,5 +1,7 @@
 package com.editor.cache.extract
 
+import com.alex.filestore.CacheFile
+import com.alex.filestore.FileOperations
 import com.alex.util.Utils
 import console.Main
 import java.io.RandomAccessFile
@@ -39,7 +41,7 @@ object Core {
                 }
                 Main.log(
                     this.javaClass.name,
-                    " - Extracting Expected " + Cache!![i]!!.numberOfFiles + " in Cache " + i + " \"" + CacheType!![i] + "\"..."
+                    " - Extracting Expected " + Cache!![i]!!.numberOfFiles + " in Cache " + i + " \"" + CacheType!![i] + "\"...",
                 )
                 FileOperations.TotalWrite = 0
                 for (j in 0 until Cache!![i]!!.numberOfFiles) {
@@ -49,12 +51,14 @@ object Core {
                         if (cacheVersion === "new") {
                             arrayOfByte = Unpack.unpackSecondMethod(localByteStream)
                             FileOperations.WriteFile(
-                                OutputDir + CacheType!![i] + "/" + j + "." + CacheExt!![i]!!, arrayOfByte
+                                OutputDir + CacheType!![i] + "/" + j + "." + CacheExt!![i]!!,
+                                arrayOfByte,
                             )
                         } else {
                             arrayOfByte = Unpack.unpack(localByteStream, OutputDir + CacheType!![i] + "/" + j)
                             FileOperations.WriteFile(
-                                OutputDir + CacheType!![i] + "/" + j + "." + CacheExt!![i], arrayOfByte
+                                OutputDir + CacheType!![i] + "/" + j + "." + CacheExt!![i],
+                                arrayOfByte,
                             )
                         }
                     } else {
@@ -63,18 +67,18 @@ object Core {
                 }
                 Main.log(
                     this.javaClass.name,
-                    "  - " + FileOperations.TotalWrite + " Files Extracted to /" + CacheType!![i] + "/*." + CacheExt!![i] + "."
+                    "  - " + FileOperations.TotalWrite + " Files Extracted to /" + CacheType!![i] + "/*." + CacheExt!![i] + ".",
                 )
-                //break;
+
             }
         }
-        // if (NameFile != null)
-        // {
-        //   System.out.Main.log(this.javaClass.name,"Now Checking to see if any Naming was not found");
-        //   for (int i = 0; i < fFound.length; i++)
-        //     if (fFound[i] == false)
-        //       System.out.Main.log(this.javaClass.name,"Did not find " + fNames[i] + " filesize: " + fInts[i]);
-        // }
+
+
+
+
+
+
+
         Main.log(this.javaClass.name, "Successfully extracted.")
     }
 

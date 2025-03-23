@@ -1,27 +1,29 @@
 package com.alex.defs
 
-import com.alex.filestore.Store
+import com.alex.filestore.Cache
 import com.alex.io.InputStream
 import com.alex.io.OutputStream
 import java.util.concurrent.ConcurrentHashMap
 
 class OverlayDefinition {
-
     companion object {
         private val cachedDefinition = ConcurrentHashMap<Int, OverlayDefinition>()
 
-        fun getOverlayDefinition(cache: Store, id: Int): OverlayDefinition {
-            return cachedDefinition[id] ?: run {
+        fun getOverlayDefinition(
+            cache: Cache,
+            id: Int,
+        ): OverlayDefinition =
+            cachedDefinition[id] ?: run {
                 val data = cache.getIndexes()[2].getFile(4, id)
-                val definition = OverlayDefinition().apply {
-                    this.id = id
-                    data?.let { decode(InputStream(it)) }
-                    processIdAndOpcode()
-                }
+                val definition =
+                    OverlayDefinition().apply {
+                        this.id = id
+                        data?.let { decode(InputStream(it)) }
+                        processIdAndOpcode()
+                    }
                 cachedDefinition[id] = definition
                 definition
             }
-        }
     }
 
     var id: Int = -1
@@ -50,7 +52,10 @@ class OverlayDefinition {
         }
     }
 
-    private fun decode(stream: InputStream, opcode: Int) {
+    private fun decode(
+        stream: InputStream,
+        opcode: Int,
+    ) {
         when (opcode) {
             1 -> rgbColor = stream.readMedium()
             2 -> textureId = stream.readUnsignedByte()
@@ -79,7 +84,7 @@ class OverlayDefinition {
         textureOverride = (textureOverride shl 8) or id
     }
 
-    fun write(cache: Store) {
+    fun write(cache: Cache) {
         cache.indexes[2].putFile(4, id, encode())
     }
 

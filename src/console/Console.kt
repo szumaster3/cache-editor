@@ -55,10 +55,10 @@ class Console : JFrame() {
         val layout = GroupLayout(this.contentPane)
         this.contentPane.layout = layout
         layout.setHorizontalGroup(
-            layout.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(jScrollPane1, -1, 618, 32767)
+            layout.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(jScrollPane1, -1, 618, 32767),
         )
         layout.setVerticalGroup(
-            layout.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(jScrollPane1, -1, 240, 32767)
+            layout.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(jScrollPane1, -1, 240, 32767),
         )
         this.pack()
     }
@@ -98,19 +98,24 @@ class Console : JFrame() {
          */
         @JvmStatic
         fun redirectSystemStreams() {
-            val out: OutputStream = object : OutputStream() {
-                override fun write(b: Int) {
-                    updateTextArea(b.toChar().toString())
-                }
+            val out: OutputStream =
+                object : OutputStream() {
+                    override fun write(b: Int) {
+                        updateTextArea(b.toChar().toString())
+                    }
 
-                override fun write(b: ByteArray, off: Int, len: Int) {
-                    updateTextArea(String(b, off, len))
-                }
+                    override fun write(
+                        b: ByteArray,
+                        off: Int,
+                        len: Int,
+                    ) {
+                        updateTextArea(String(b, off, len))
+                    }
 
-                override fun write(b: ByteArray) {
-                    this.write(b, 0, b.size)
+                    override fun write(b: ByteArray) {
+                        this.write(b, 0, b.size)
+                    }
                 }
-            }
             System.setOut(PrintStream(out, true))
             System.setErr(PrintStream(out, true))
         }

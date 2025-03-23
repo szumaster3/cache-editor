@@ -1,9 +1,8 @@
 package com.editor.cache.npc
 
-import com.alex.util.Utils.getNPCDefinitionsSize
 import com.alex.defs.npcs.NPCDefinitions
-import com.alex.filestore.Store
-import com.editor.cache.item.ItemSelection
+import com.alex.filestore.Cache
+import com.alex.util.Utils.getNPCDefinitionsSize
 import console.Main.log
 import java.awt.EventQueue
 import java.io.IOException
@@ -22,7 +21,7 @@ class NPCSelection : JFrame {
     private var deleteButton: JButton? = null
 
     constructor(cache: String?) {
-        STORE = Store(cache)
+        Cache = Cache(cache)
         this.title = "NPC Selection"
         this.isResizable = false
         this.defaultCloseOperation = 1
@@ -63,7 +62,7 @@ class NPCSelection : JFrame {
         addButton?.apply {
             text = "Add New"
             addActionListener {
-                val npc = NPCDefinitions(ItemSelection.STORE, newNPCID, false)
+                val npc = NPCDefinitions(Cache, newNPCID, false)
                 if (npc.id != -1) {
                     NPCEditor(this@NPCSelection, npc).isVisible = true
                 }
@@ -92,7 +91,7 @@ class NPCSelection : JFrame {
                     val frame = JFrame()
                     val result = JOptionPane.showConfirmDialog(frame, "Do you really want to delete NPC: [${defs.id}]?")
                     if (result == JOptionPane.YES_OPTION) {
-                        STORE?.indexes?.get(18)?.removeFile(defs.archiveId, defs.fileId)
+                        Cache?.indexes?.get(18)?.removeFile(defs.archiveId, defs.fileId)
                         this@NPCSelection.removeNPCDefs(defs)
                         log("NPCSelection", "NPC ID: ${defs.id} removed.")
                     }
@@ -116,35 +115,57 @@ class NPCSelection : JFrame {
         this.contentPane.layout = layout
         layout.setHorizontalGroup(
             layout.createParallelGroup(GroupLayout.Alignment.LEADING).addGroup(
-                layout.createSequentialGroup().addContainerGap().addGroup(
-                    layout.createParallelGroup(GroupLayout.Alignment.LEADING).addGroup(
-                        layout.createSequentialGroup().addGroup(
-                            layout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jScrollPane1, -2, 200, -2).addGroup(
-                                    layout.createSequentialGroup().addComponent(this.editButton)
-                                        .addPreferredGap(ComponentPlacement.RELATED, -1, 32767)
-                                        .addComponent(this.addButton)
-                                )
-                        ).addGap(0, 0, 32767)
-                    ).addGroup(
-                        layout.createSequentialGroup().addComponent(this.duplicateButton)
-                            .addPreferredGap(ComponentPlacement.RELATED, -1, 32767)
-                            .addComponent(this.deleteButton)
-                    )
-                ).addContainerGap(-1, 32767)
-            )
+                layout
+                    .createSequentialGroup()
+                    .addContainerGap()
+                    .addGroup(
+                        layout
+                            .createParallelGroup(GroupLayout.Alignment.LEADING)
+                            .addGroup(
+                                layout
+                                    .createSequentialGroup()
+                                    .addGroup(
+                                        layout
+                                            .createParallelGroup(GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(jScrollPane1, -2, 200, -2)
+                                            .addGroup(
+                                                layout
+                                                    .createSequentialGroup()
+                                                    .addComponent(this.editButton)
+                                                    .addPreferredGap(ComponentPlacement.RELATED, -1, 32767)
+                                                    .addComponent(this.addButton),
+                                            ),
+                                    ).addGap(0, 0, 32767),
+                            ).addGroup(
+                                layout
+                                    .createSequentialGroup()
+                                    .addComponent(this.duplicateButton)
+                                    .addPreferredGap(ComponentPlacement.RELATED, -1, 32767)
+                                    .addComponent(this.deleteButton),
+                            ),
+                    ).addContainerGap(-1, 32767),
+            ),
         )
         layout.setVerticalGroup(
             layout.createParallelGroup(GroupLayout.Alignment.LEADING).addGroup(
-                layout.createSequentialGroup().addContainerGap().addComponent(jScrollPane1, -2, 279, -2)
-                    .addPreferredGap(ComponentPlacement.RELATED).addGroup(
-                        layout.createParallelGroup(GroupLayout.Alignment.BASELINE).addComponent(this.editButton)
-                            .addComponent(this.addButton)
-                    ).addPreferredGap(ComponentPlacement.RELATED).addGroup(
-                        layout.createParallelGroup(GroupLayout.Alignment.BASELINE).addComponent(this.duplicateButton)
-                            .addComponent(this.deleteButton)
-                    ).addContainerGap(-1, 32767)
-            )
+                layout
+                    .createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(jScrollPane1, -2, 279, -2)
+                    .addPreferredGap(ComponentPlacement.RELATED)
+                    .addGroup(
+                        layout
+                            .createParallelGroup(GroupLayout.Alignment.BASELINE)
+                            .addComponent(this.editButton)
+                            .addComponent(this.addButton),
+                    ).addPreferredGap(ComponentPlacement.RELATED)
+                    .addGroup(
+                        layout
+                            .createParallelGroup(GroupLayout.Alignment.BASELINE)
+                            .addComponent(this.duplicateButton)
+                            .addComponent(this.deleteButton),
+                    ).addContainerGap(-1, 32767),
+            ),
         )
 
         this.pack()
@@ -156,14 +177,14 @@ class NPCSelection : JFrame {
     }
 
     val newNPCID: Int
-        get() = getNPCDefinitionsSize(STORE!!)
+        get() = getNPCDefinitionsSize(Cache!!)
 
     fun addAllNPCs() {
-        val npcCount = getNPCDefinitionsSize(STORE!!)
+        val npcCount = getNPCDefinitionsSize(Cache!!)
         println("NPC Count: $npcCount")
         var id = 0
         while (id < npcCount) {
-            val npc = NPCDefinitions.getNPCDefinition(STORE, id)
+            val npc = NPCDefinitions.getNPCDefinition(Cache, id)
             if (npc != null) {
                 this.addNPCDefs(npc)
             } else {
@@ -197,12 +218,12 @@ class NPCSelection : JFrame {
 
     companion object {
         @JvmField
-        var STORE: Store? = null
+        var Cache: Cache? = null
 
         @Throws(IOException::class)
         @JvmStatic
         fun main(args: Array<String>) {
-            STORE = Store("cache/", false)
+            Cache = Cache("cache/", false)
             EventQueue.invokeLater { NPCSelection().isVisible = true }
         }
     }

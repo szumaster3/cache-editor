@@ -90,13 +90,13 @@ public final class PackJAG {
             }
 
             byte[] abyte0 = new byte[6];
-            for (byte byte16 = 0; byte16 < j4; byte16 = (byte)(byte16 + 1)) {
+            for (byte byte16 = 0; byte16 < j4; byte16 = (byte) (byte16 + 1)) {
                 abyte0[byte16] = byte16;
             }
             for (int j1 = 0; j1 < k4; j1++) {
                 byte byte17 = class5.aByteArray86[j1];
                 byte byte15 = abyte0[byte17];
-                for (; byte17 > 0; byte17 = (byte)(byte17 - 1)) {
+                for (; byte17 > 0; byte17 = (byte) (byte17 - 1)) {
                     abyte0[byte17] = abyte0[(byte17 - 1)];
                 }
                 abyte0[0] = byte15;
@@ -116,7 +116,7 @@ public final class PackJAG {
                     }
                     class5.aByteArrayArray87[k3][k1] = ((byte) l6);
                     k1++;
-                } while ( k1 < i4 );
+                } while (k1 < i4);
             }
 
             for (int l3 = 0; l3 < j4; l3++) {
@@ -142,7 +142,7 @@ public final class PackJAG {
             int l9 = 4095;
             for (int l8 = 15; l8 >= 0; l8--) {
                 for (int j9 = 15; j9 >= 0; j9--) {
-                    class5.aByteArray83[l9] = ((byte)(l8 * 16 + j9));
+                    class5.aByteArray83[l9] = ((byte) (l8 * 16 + j9));
                     l9--;
                 }
 
@@ -172,7 +172,7 @@ public final class PackJAG {
 
             }
 
-            for (int k5 = ai2[(l7 - ai1[i7])]; k5 != l4;) {
+            for (int k5 = ai2[(l7 - ai1[i7])]; k5 != l4; ) {
 
                 if ((k5 == 0) || (k5 == 1)) {
 
@@ -228,7 +228,7 @@ public final class PackJAG {
 
                         k5 = ai2[(i8 - ai1[j7])];
 
-                    } while (( k5 == 0 ) || (k5 == 1));
+                    } while ((k5 == 0) || (k5 == 1));
 
                     j6++;
 
@@ -392,7 +392,7 @@ public final class PackJAG {
 
             for (int l2 = 0; l2 < i6; l2++) {
 
-                byte byte7 = (byte)(PackHeadJAG.anIntArray78[l2] & 0xFF);
+                byte byte7 = (byte) (PackHeadJAG.anIntArray78[l2] & 0xFF);
 
                 PackHeadJAG.anIntArray78[class5.anIntArray76[(byte7 & 0xFF)]] |= l2 << 8;
 
@@ -406,7 +406,7 @@ public final class PackJAG {
 
             class5.anInt72 = PackHeadJAG.anIntArray78[class5.anInt72];
 
-            class5.anInt73 = ((byte)(class5.anInt72 & 0xFF));
+            class5.anInt73 = ((byte) (class5.anInt72 & 0xFF));
 
             class5.anInt72 >>= 8;
 
@@ -504,7 +504,7 @@ public final class PackJAG {
 
                 l = ai[l];
 
-                byte byte0 = (byte)(l & 0xFF);
+                byte byte0 = (byte) (l & 0xFF);
 
                 l >>= 8;
 
@@ -556,7 +556,7 @@ public final class PackJAG {
 
             l = ai[l];
 
-            byte byte1 = (byte)(l & 0xFF);
+            byte byte1 = (byte) (l & 0xFF);
 
             l >>= 8;
 
@@ -573,7 +573,7 @@ public final class PackJAG {
 
                     l = ai[l];
 
-                    byte byte2 = (byte)(l & 0xFF);
+                    byte byte2 = (byte) (l & 0xFF);
 
                     l >>= 8;
 
@@ -588,7 +588,7 @@ public final class PackJAG {
 
                             l = ai[l];
 
-                            byte byte3 = (byte)(l & 0xFF);
+                            byte byte3 = (byte) (l & 0xFF);
 
                             l >>= 8;
 
@@ -598,7 +598,7 @@ public final class PackJAG {
 
                             l = ai[l];
 
-                            k = (byte)(l & 0xFF);
+                            k = (byte) (l & 0xFF);
 
                             l >>= 8;
 
@@ -724,7 +724,7 @@ public final class PackJAG {
 
     public static int method73(byte[] abyte0, int i, byte[] abyte1, int j, int k) {
 
-        synchronized(aClass5_43) {
+        synchronized (aClass5_43) {
 
             aClass5_43.aByteArray54 = abyte1;
 

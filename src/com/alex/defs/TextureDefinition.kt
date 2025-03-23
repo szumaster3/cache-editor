@@ -1,11 +1,12 @@
 package com.alex.defs
 
-import com.alex.filestore.Store
+import com.alex.filestore.Cache
 import com.alex.io.InputStream
 import com.alex.io.OutputStream
 
-data class TextureDefinition(val id: Int) : Cloneable {
-
+data class TextureDefinition(
+    val id: Int,
+) : Cloneable {
     var textureId: Int = 0
     var isVisible: Boolean = false
     var textureIndexes: IntArray? = null
@@ -60,11 +61,7 @@ data class TextureDefinition(val id: Int) : Cloneable {
         }
     }
 
-    fun write(cache: Store): Boolean {
-        return cache.indexes[9].putFile(id, 0, 2, encode(), null, true, false, -1, -1)
-    }
+    fun write(cache: Cache): Boolean = cache.indexes[9].putFile(id, 0, 2, encode(), null, true, false, -1, -1)
 
-    override fun toString(): String {
-        return id.toString()
-    }
+    override fun toString(): String = id.toString()
 }

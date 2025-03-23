@@ -1,11 +1,11 @@
 package com.editor.model.view.mouse;
 
 
-import com.editor.model.view.render.Canvas;
 import com.editor.model.view.Main;
+import com.editor.model.view.render.Canvas;
 
 public final class ModelRunner implements Runnable {
-    public final void run() {
+    public void run() {
         Main main;
         (main = new Main()).setTitle("");
         main.loadFiles();

@@ -1,8 +1,8 @@
 package com.editor.cache.extract
 
+import com.alex.filestore.FileOperations.WriteFile
 import com.alex.io.ByteStream
 import com.editor.cache.extract.Core.checkNames
-import com.editor.cache.extract.FileOperations.WriteFile
 import com.editor.cache.extract.PackJAG.method73
 import console.Main
 import java.io.ByteArrayInputStream
@@ -11,9 +11,15 @@ import java.io.IOException
 import java.util.zip.GZIPInputStream
 
 object Unpack {
-    fun unpack(paramByteStream: ByteStream, paramString: String): ByteArray {
+    fun unpack(
+        paramByteStream: ByteStream,
+        paramString: String,
+    ): ByteArray {
         var arrayOfByte2: ByteArray
-        if ((paramByteStream.readUnsignedByte() == 31) && (paramByteStream.readUnsignedByte() == 139) && (paramByteStream.readUnsignedByte() == 8)) {
+        if ((paramByteStream.readUnsignedByte() == 31) &&
+            (paramByteStream.readUnsignedByte() == 139) &&
+            (paramByteStream.readUnsignedByte() == 8)
+        ) {
             var i = 0
             val arrayOfByte1 = ByteArray(9999999)
             try {
@@ -33,8 +39,8 @@ object Unpack {
             return arrayOfByte2
         }
         val localJagFile = JagFile(paramByteStream.Buffer)
-        for (j in 0 until localJagFile.datasize) {
-            arrayOfByte2 = ByteArray(localJagFile.filesize!![j])
+        for (j in 0 until localJagFile.dataSize) {
+            arrayOfByte2 = ByteArray(localJagFile.fileSize!![j])
             val arrayOfByte3 = localJagFile.readfile(j, arrayOfByte2)
             if (arrayOfByte3 != null) {
                 WriteFile(paramString + "/" + checkNames(localJagFile.filename!![j]), arrayOfByte3)

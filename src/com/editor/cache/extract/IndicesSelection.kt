@@ -288,7 +288,6 @@ class IndicesSelection : JFrame() {
         }
     }
 
-
     init {
         setSize(350, 370)
         initComponents()
@@ -307,8 +306,10 @@ class IndicesSelection : JFrame() {
                 Utils.inputFolder = selectedDir.absolutePath
                 Main.log(this.javaClass.name, "Input directory set as: " + Utils.inputFolder)
             }
-            if (Utils.inputFolder !== "" && Utils.outputFolder !== "" && Utils.format !== "") btnExtract!!.isEnabled =
-                true
+            if (Utils.inputFolder !== "" && Utils.outputFolder !== "" && Utils.format !== "") {
+                btnExtract!!.isEnabled =
+                    true
+            }
         }
     }
 
@@ -322,8 +323,10 @@ class IndicesSelection : JFrame() {
                 Utils.outputFolder = selectedDir.absolutePath
                 Main.log(this.javaClass.name, "Output directory set as: " + Utils.outputFolder)
             }
-            if (Utils.inputFolder !== "" && Utils.outputFolder !== "" && Utils.format !== "") btnExtract!!.isEnabled =
-                true
+            if (Utils.inputFolder !== "" && Utils.outputFolder !== "" && Utils.format !== "") {
+                btnExtract!!.isEnabled =
+                    true
+            }
         }
     }
 
@@ -331,7 +334,6 @@ class IndicesSelection : JFrame() {
         start()
         lblNewLabel!!.text = "Done"
     }
-
 
     private fun initComponents() {
         btnExtract = JButton()
@@ -374,61 +376,104 @@ class IndicesSelection : JFrame() {
         val btnNewButton = JButton("Select input folder")
         btnNewButton.setBounds(20, 11, 127, 23)
         getContentPane().add(btnNewButton)
-        btnNewButton.addMouseListener(object : MouseAdapter() {
-            override fun mouseReleased(e: MouseEvent) {
-                selectInput(e)
-            }
-        })
+        btnNewButton.addMouseListener(
+            object : MouseAdapter() {
+                override fun mouseReleased(e: MouseEvent) {
+                    selectInput(e)
+                }
+            },
+        )
 
         val button = JButton("Select output folder")
         button.setBounds(184, 11, 127, 23)
         getContentPane().add(button)
-        button.addMouseListener(object : MouseAdapter() {
-            override fun mouseReleased(e: MouseEvent) {
-                selectOutput(e)
-            }
-        })
+        button.addMouseListener(
+            object : MouseAdapter() {
+                override fun mouseReleased(e: MouseEvent) {
+                    selectOutput(e)
+                }
+            },
+        )
 
         val format = arrayOf<String?>("", "Old", "New")
         val comboBox: JComboBox<*> = JComboBox<Any?>(format)
         comboBox.toolTipText = "Choose format"
         comboBox.setBounds(184, 59, 127, 20)
         getContentPane().add(comboBox)
-        val cbActionListener = ActionListener()
-        {
-            val s = comboBox.selectedItem as String
-            when (s) {
-                "Old" -> {
-                    Utils.format = "old"
-                    Main.log(this.javaClass.name, "cache format set to: " + Utils.format)
-                    if (Utils.inputFolder !== "" && Utils.outputFolder !== "" && Utils.format !== "") {
-                        btnExtract!!.isEnabled = true
-                        checkBox!!.isEnabled = true
-                        checkBox1!!.isEnabled = true
-                        checkBox2!!.isEnabled = true
-                        checkBox3!!.isEnabled = true
-                        checkBox4!!.isEnabled = true
-                        checkBox5!!.isEnabled = false
-                        checkBox6!!.isEnabled = false
-                        checkBox7!!.isEnabled = false
-                        checkBox8!!.isEnabled = false
-                        checkBox9!!.isEnabled = false
-                        checkBox10!!.isEnabled = false
-                        checkBox11!!.isEnabled = false
-                        checkBox12!!.isEnabled = false
-                        checkBox13!!.isEnabled = false
-                        checkBox14!!.isEnabled = false
-                        checkBox15!!.isEnabled = false
-                        checkBox16!!.isEnabled = false
-                        checkBox17!!.isEnabled = false
-                        checkBox18!!.isEnabled = false
+        val cbActionListener =
+            ActionListener {
+                val s = comboBox.selectedItem as String
+                when (s) {
+                    "Old" -> {
+                        Utils.format = "old"
+                        Main.log(this.javaClass.name, "cache format set to: " + Utils.format)
+                        if (Utils.inputFolder !== "" && Utils.outputFolder !== "" && Utils.format !== "") {
+                            btnExtract!!.isEnabled = true
+                            checkBox!!.isEnabled = true
+                            checkBox1!!.isEnabled = true
+                            checkBox2!!.isEnabled = true
+                            checkBox3!!.isEnabled = true
+                            checkBox4!!.isEnabled = true
+                            checkBox5!!.isEnabled = false
+                            checkBox6!!.isEnabled = false
+                            checkBox7!!.isEnabled = false
+                            checkBox8!!.isEnabled = false
+                            checkBox9!!.isEnabled = false
+                            checkBox10!!.isEnabled = false
+                            checkBox11!!.isEnabled = false
+                            checkBox12!!.isEnabled = false
+                            checkBox13!!.isEnabled = false
+                            checkBox14!!.isEnabled = false
+                            checkBox15!!.isEnabled = false
+                            checkBox16!!.isEnabled = false
+                            checkBox17!!.isEnabled = false
+                            checkBox18!!.isEnabled = false
+                        }
                     }
-                }
 
-                "New" -> {
-                    Utils.format = "new"
-                    Main.log(this.javaClass.name, "cache format set to: " + Utils.format)
-                    if (Utils.inputFolder !== "" && Utils.outputFolder !== "" && Utils.format !== "") {
+                    "New" -> {
+                        Utils.format = "new"
+                        Main.log(this.javaClass.name, "cache format set to: " + Utils.format)
+                        if (Utils.inputFolder !== "" && Utils.outputFolder !== "" && Utils.format !== "") {
+                            btnExtract!!.isEnabled = true
+                            checkBox!!.isEnabled = true
+                            checkBox1!!.isEnabled = true
+                            checkBox2!!.isEnabled = true
+                            checkBox3!!.isEnabled = true
+                            checkBox4!!.isEnabled = true
+                            checkBox5!!.isEnabled = true
+                            checkBox6!!.isEnabled = true
+                            checkBox7!!.isEnabled = true
+                            checkBox8!!.isEnabled = true
+                            checkBox9!!.isEnabled = true
+                            checkBox10!!.isEnabled = true
+                            checkBox11!!.isEnabled = true
+                            checkBox12!!.isEnabled = true
+                            checkBox13!!.isEnabled = true
+                            checkBox14!!.isEnabled = true
+                            checkBox15!!.isEnabled = true
+                            checkBox16!!.isEnabled = true
+                            checkBox17!!.isEnabled = true
+                            checkBox18!!.isEnabled = true
+                            checkBox19!!.isEnabled = true
+                            checkBox20!!.isEnabled = true
+                            checkBox21!!.isEnabled = true
+                            checkBox22!!.isEnabled = true
+                            checkBox23!!.isEnabled = true
+                            checkBox24!!.isEnabled = true
+                            checkBox25!!.isEnabled = true
+                            checkBox26!!.isEnabled = true
+                            checkBox27!!.isEnabled = true
+                            checkBox28!!.isEnabled = true
+                            checkBox255!!.isEnabled = true
+                        }
+                    }
+
+                    else -> {
+                        Main.log(this.javaClass.name, "Default")
+                        Utils.format = ""
+                        btnExtract!!.isEnabled = false
+                        checkBox!!.isEnabled = false
                         btnExtract!!.isEnabled = true
                         checkBox!!.isEnabled = true
                         checkBox1!!.isEnabled = true
@@ -462,46 +507,7 @@ class IndicesSelection : JFrame() {
                         checkBox255!!.isEnabled = true
                     }
                 }
-
-                else -> {
-                    Main.log(this.javaClass.name, "Default")
-                    Utils.format = ""
-                    btnExtract!!.isEnabled = false
-                    checkBox!!.isEnabled = false
-                    btnExtract!!.isEnabled = true
-                    checkBox!!.isEnabled = true
-                    checkBox1!!.isEnabled = true
-                    checkBox2!!.isEnabled = true
-                    checkBox3!!.isEnabled = true
-                    checkBox4!!.isEnabled = true
-                    checkBox5!!.isEnabled = true
-                    checkBox6!!.isEnabled = true
-                    checkBox7!!.isEnabled = true
-                    checkBox8!!.isEnabled = true
-                    checkBox9!!.isEnabled = true
-                    checkBox10!!.isEnabled = true
-                    checkBox11!!.isEnabled = true
-                    checkBox12!!.isEnabled = true
-                    checkBox13!!.isEnabled = true
-                    checkBox14!!.isEnabled = true
-                    checkBox15!!.isEnabled = true
-                    checkBox16!!.isEnabled = true
-                    checkBox17!!.isEnabled = true
-                    checkBox18!!.isEnabled = true
-                    checkBox19!!.isEnabled = true
-                    checkBox20!!.isEnabled = true
-                    checkBox21!!.isEnabled = true
-                    checkBox22!!.isEnabled = true
-                    checkBox23!!.isEnabled = true
-                    checkBox24!!.isEnabled = true
-                    checkBox25!!.isEnabled = true
-                    checkBox26!!.isEnabled = true
-                    checkBox27!!.isEnabled = true
-                    checkBox28!!.isEnabled = true
-                    checkBox255!!.isEnabled = true
-                }
             }
-        }
 
         comboBox.addActionListener(cbActionListener)
 
@@ -509,16 +515,18 @@ class IndicesSelection : JFrame() {
         lblCacheFormat.setBounds(22, 63, 74, 14)
         getContentPane().add(lblCacheFormat)
 
-        //JButton btnExtract = new JButton("Extract");
+
         btnExtract!!.text = "Extract"
         btnExtract!!.isEnabled = false
         btnExtract!!.setBounds(125, 265, 89, 23)
-        btnExtract!!.addMouseListener(object : MouseAdapter() {
-            override fun mouseReleased(e: MouseEvent) {
-                lblNewLabel!!.text = "Extracting..."
-                extract(e)
-            }
-        })
+        btnExtract!!.addMouseListener(
+            object : MouseAdapter() {
+                override fun mouseReleased(e: MouseEvent) {
+                    lblNewLabel!!.text = "Extracting..."
+                    extract(e)
+                }
+            },
+        )
         getContentPane().add(btnExtract)
 
         checkBox!!.isEnabled = false

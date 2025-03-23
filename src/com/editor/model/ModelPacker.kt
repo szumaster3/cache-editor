@@ -1,41 +1,48 @@
 package com.editor.model
 
-import com.alex.filestore.Store
+import com.alex.filestore.Cache
 import com.alex.util.Utils
 import console.Main
-import javax.swing.*
-import javax.swing.GroupLayout.*
 import java.io.File
 import java.io.IOException
+import javax.swing.*
+import javax.swing.GroupLayout.Alignment
 
-class ModelPacker(cache: String? = null) : JFrame() {
-
-    private var store: Store? = null
+class ModelPacker(
+    cache: String? = null,
+) : JFrame() {
+    private var cache: Cache? = null
     private val modelDirField: JTextField = JTextField()
-    private val sameId: JCheckBox = JCheckBox("Keep Same ID").apply {
-        toolTipText = "Keeps same ID as named"
-    }
-    private val submitButton: JButton = JButton("Submit").apply {
-        addActionListener { submitActionPerformed() }
-    }
-    private val modelDirItem: JMenuItem = JMenuItem("Select model directory").apply {
-        addActionListener { modelDirActionPerformed() }
-    }
-    private val exitItem: JMenuItem = JMenuItem("Exit").apply {
-        addActionListener { exitActionPerformed() }
-    }
-    private val menuBar: JMenuBar = JMenuBar().apply {
-        val fileMenu = JMenu("File").apply {
-            add(modelDirItem)
-            add(exitItem)
+    private val sameId: JCheckBox =
+        JCheckBox("Keep Same ID").apply {
+            toolTipText = "Keeps same ID as named"
         }
-        add(fileMenu)
-    }
+    private val submitButton: JButton =
+        JButton("Submit").apply {
+            addActionListener { submitActionPerformed() }
+        }
+    private val modelDirItem: JMenuItem =
+        JMenuItem("Select model directory").apply {
+            addActionListener { modelDirActionPerformed() }
+        }
+    private val exitItem: JMenuItem =
+        JMenuItem("Exit").apply {
+            addActionListener { exitActionPerformed() }
+        }
+    private val menuBar: JMenuBar =
+        JMenuBar().apply {
+            val fileMenu =
+                JMenu("File").apply {
+                    add(modelDirItem)
+                    add(exitItem)
+                }
+            add(fileMenu)
+        }
 
     init {
         if (cache != null) {
             try {
-                store = Store(cache)
+                this.cache = Cache(cache)
             } catch (e: Exception) {
                 Main.log("ModelPack", "Cannot find cache directory")
             }
@@ -47,45 +54,52 @@ class ModelPacker(cache: String? = null) : JFrame() {
     private fun initComponents() {
         val label1 = JLabel("Multiple Model Packer")
         val label2 = JLabel("Models Directory")
-        layout = GroupLayout(contentPane).apply {
-            setHorizontalGroup(
-                createParallelGroup(Alignment.LEADING)
-                    .addGroup(createSequentialGroup()
+        layout =
+            GroupLayout(contentPane).apply {
+                setHorizontalGroup(
+                    createParallelGroup(Alignment.LEADING)
+                        .addGroup(
+                            createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(label1)
+                                .addContainerGap(),
+                        ).addGroup(
+                            createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(label2)
+                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(modelDirField, GroupLayout.DEFAULT_SIZE, 150, Int.MAX_VALUE)
+                                .addContainerGap(),
+                        ).addGroup(
+                            createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(sameId)
+                                .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(submitButton)
+                                .addContainerGap(),
+                        ),
+                )
+                setVerticalGroup(
+                    createSequentialGroup()
                         .addContainerGap()
                         .addComponent(label1)
-                        .addContainerGap()
-                    )
-                    .addGroup(createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(label2)
-                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(modelDirField, GroupLayout.DEFAULT_SIZE, 150, Int.MAX_VALUE)
-                        .addContainerGap()
-                    )
-                    .addGroup(createSequentialGroup()
-                        .addContainerGap()
+                        .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(
+                            createParallelGroup(Alignment.BASELINE)
+                                .addComponent(label2)
+                                .addComponent(
+                                    modelDirField,
+                                    GroupLayout.PREFERRED_SIZE,
+                                    GroupLayout.DEFAULT_SIZE,
+                                    GroupLayout.PREFERRED_SIZE,
+                                ),
+                        ).addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(sameId)
-                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                        .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(submitButton)
-                        .addContainerGap()
-                    )
-            )
-            setVerticalGroup(
-                createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(label1)
-                    .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
-                    .addGroup(createParallelGroup(Alignment.BASELINE)
-                        .addComponent(label2)
-                        .addComponent(modelDirField, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                    )
-                    .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
-                    .addComponent(sameId)
-                    .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
-                    .addComponent(submitButton)
-                    .addContainerGap(10, Int.MAX_VALUE)
-            )
-        }
+                        .addContainerGap(10, Int.MAX_VALUE),
+                )
+            }
     }
 
     private fun setupFrame() {
@@ -108,11 +122,12 @@ class ModelPacker(cache: String? = null) : JFrame() {
             val fileName = file.name
             val modelId = if (keepID) fileName.replace(".dat", "") else ""
             try {
-                store?.let {
-                    val packedModel = Utils.packCustomModel(it, Utils.getBytesFromFile(file), modelId.toIntOrNull() ?: 0)
+                cache?.let {
+                    val packedModel =
+                        Utils.packCustomModel(it, Utils.getBytesFromFile(file), modelId.toIntOrNull() ?: 0)
                     Main.log("ModelPack", "The model ID of $fileName is: $packedModel")
                 } ?: run {
-                    Main.log("ModelPack", "Store is not initialized.")
+                    Main.log("ModelPack", "Cache is not initialized.")
                 }
             } catch (e: IOException) {
                 Main.log("ModelPack", "There was an error packing the model.")
@@ -130,5 +145,4 @@ class ModelPacker(cache: String? = null) : JFrame() {
     private fun exitActionPerformed() {
         dispose()
     }
-
 }

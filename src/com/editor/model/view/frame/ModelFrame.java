@@ -1,7 +1,7 @@
 package com.editor.model.view.frame;
 
+import com.alex.filestore.Cache;
 import com.alex.util.Utils;
-import com.alex.filestore.Store;
 import com.editor.model.view.render.Canvas;
 import com.editor.model.view.render.Model;
 import org.jetbrains.annotations.NotNull;
@@ -14,20 +14,20 @@ import java.awt.event.KeyEvent;
 import java.io.*;
 
 public class ModelFrame extends JFrame {
-    public static Store STORE;
+    public static Cache Cache;
     private JTextField txtModel;
-    private DefaultListModel<Integer> listModelM = new DefaultListModel<>();
-    private JList<Integer> listModel = new JList<>(listModelM);
-    private JFileChooser chooser = new JFileChooser();
-    private JButton btnDelete = new JButton("Delete");
+    private final DefaultListModel<Integer> listModelM = new DefaultListModel<>();
+    private final JList<Integer> listModel = new JList<>(listModelM);
+    private final JFileChooser chooser = new JFileChooser();
+    private final JButton btnDelete = new JButton("Delete");
     private ModelPanel modelPanel;
     private Thread modelViewThread;
     private Model model = null;
-    private JTabbedPane tabbedPane;  // Add a tabbed pane
+    private final JTabbedPane tabbedPane;  // Add a tabbed pane
 
     public ModelFrame(String cache) throws IOException {
-        STORE = new Store(cache);
-        loadCache(STORE);
+        Cache = new Cache(cache);
+        loadCache(Cache);
         setTitle("Model Viewer");
         setDefaultCloseOperation(1);
         setSize(800, 600);
@@ -44,6 +44,37 @@ public class ModelFrame extends JFrame {
         tabbedPane.addTab("Folder", datPanel);
 
 
+    }
+
+    @NotNull
+    private static JTextField getJTextField(DefaultListModel<String> datListModel, JList<String> datList) {
+        JTextField txtFilter = new JTextField();
+        txtFilter.setPreferredSize(new Dimension(100, 25));
+        txtFilter.addKeyListener(new KeyAdapter() {
+            @Override
+            public void keyReleased(KeyEvent e) {
+                String filterText = txtFilter.getText().toLowerCase();
+                DefaultListModel<String> filteredModel = new DefaultListModel<>();
+                for (int i = 0; i < datListModel.getSize(); i++) {
+                    String fileName = datListModel.getElementAt(i);
+                    if (fileName.toLowerCase().contains(filterText)) {
+                        filteredModel.addElement(fileName);
+                    }
+                }
+                datList.setModel(filteredModel);
+            }
+        });
+        return txtFilter;
+    }
+
+    public static void main(String[] args) {
+        try {
+            String cache = "";
+            ModelFrame frame = new ModelFrame(cache);
+            frame.setVisible(true);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     private JPanel createCachePanel() {
@@ -67,12 +98,12 @@ public class ModelFrame extends JFrame {
             if (!modelPanel.loaded) {
                 modelPanel.loaded = true;
                 modelPanel.render();
-                modelViewThread = new Thread((Runnable) modelPanel);
+                modelViewThread = new Thread(modelPanel);
                 modelViewThread.start();
                 Canvas.load();
             }
             int id = listModel.getSelectedIndex();
-            byte[] data = STORE.getIndexes()[7].getFile(id, 0, null);
+            byte[] data = Cache.getIndexes()[7].getFile(id, 0, null);
             if (data != null) {
                 model = new Model(id, data);
                 modelPanel.loadModelFromBytes(data);
@@ -102,14 +133,14 @@ public class ModelFrame extends JFrame {
         JButton btnReplace = createButton("Replace", e -> {
             File file = getFile();
             if (file != null) {
-                replaceCustomModel(STORE, file, 64);
+                replaceCustomModel(Cache, file, 64);
             }
         });
         buttonsPanel.add(btnReplace);
 
         JButton btnDelete = createButton("Delete", e -> {
             int view = listModel.getSelectedIndex() - 1;
-            STORE.getIndexes()[7].removeArchive(listModel.getSelectedIndex() + 1);
+            Cache.getIndexes()[7].removeArchive(listModel.getSelectedIndex() + 1);
             listModelM.remove(listModel.getSelectedIndex());
             listModel.setSelectedIndex(view > -1 ? view : 0);
             listModel.ensureIndexIsVisible(view > -1 ? view : 0);
@@ -119,7 +150,7 @@ public class ModelFrame extends JFrame {
         JButton btnAdd = createButton("Add", e -> {
             File file = getFile();
             if (file != null) {
-                int index = addCustomModel(STORE, file);
+                int index = addCustomModel(Cache, file);
                 if (index != -1) listModelM.addElement(index);
                 listModel.setSelectedIndex(index);
                 listModel.ensureIndexIsVisible(index);
@@ -129,7 +160,7 @@ public class ModelFrame extends JFrame {
 
         JButton btnDump = createButton("Dump", e -> {
             try {
-                dumpModel(STORE.getIndexes()[7].getFile(64, 0, null), "" + model.modelId);
+                dumpModel(Cache.getIndexes()[7].getFile(64, 0, null), "" + model.modelId);
             } catch (IOException ex) {
                 ex.printStackTrace();
             }
@@ -167,7 +198,7 @@ public class ModelFrame extends JFrame {
         controlPanel.add(txtFilter);
 
         JPanel buttonsPanel = new JPanel();
-        buttonsPanel.setLayout(new GridLayout(1, 2, 5, 5));
+        buttonsPanel.setLayout(new GridLayout(1, 2, 10, 10));
         controlPanel.add(buttonsPanel);
 
         JButton loadDatButton = getJButton(datListModel);
@@ -204,27 +235,6 @@ public class ModelFrame extends JFrame {
         return loadDatButton;
     }
 
-    @NotNull
-    private static JTextField getJTextField(DefaultListModel<String> datListModel, JList<String> datList) {
-        JTextField txtFilter = new JTextField();
-        txtFilter.setPreferredSize(new Dimension(100, 25));
-        txtFilter.addKeyListener(new KeyAdapter() {
-            @Override
-            public void keyReleased(KeyEvent e) {
-                String filterText = txtFilter.getText().toLowerCase();
-                DefaultListModel<String> filteredModel = new DefaultListModel<>();
-                for (int i = 0; i < datListModel.getSize(); i++) {
-                    String fileName = datListModel.getElementAt(i);
-                    if (fileName.toLowerCase().contains(filterText)) {
-                        filteredModel.addElement(fileName);
-                    }
-                }
-                datList.setModel(filteredModel);
-            }
-        });
-        return txtFilter;
-    }
-
     private JButton createButton(String text, ActionListener actionListener) {
         JButton button = new JButton(text);
         button.addActionListener(actionListener);
@@ -258,17 +268,17 @@ public class ModelFrame extends JFrame {
         return null;
     }
 
-    public void replaceCustomModel(Store store, File file, int index) {
+    public void replaceCustomModel(Cache cache, File file, int index) {
         try {
-            Utils.packCustomModel(store, getBytesFromFile(file), index);
+            Utils.packCustomModel(cache, getBytesFromFile(file), index);
         } catch (IOException ex) {
             System.out.println("Error Packing Custom Model.");
         }
     }
 
-    public int addCustomModel(Store store, File file) {
+    public int addCustomModel(Cache cache, File file) {
         try {
-            return Utils.packCustomModel(store, getBytesFromFile(file), store.getIndexes()[7].getLastArchiveId() + 1);
+            return Utils.packCustomModel(cache, getBytesFromFile(file), cache.getIndexes()[7].getLastArchiveId() + 1);
         } catch (IOException ex) {
             System.out.println("Error Packing Custom Model.");
         }
@@ -310,20 +320,10 @@ public class ModelFrame extends JFrame {
         }
     }
 
-    private void loadCache(Store store) {
-        store.getIndexes()[7].getArchive(64);
-        for (int id = 0; id < store.getIndexes()[7].getLastArchiveId(); id++) {
+    private void loadCache(Cache cache) {
+        cache.getIndexes()[7].getArchive(64);
+        for (int id = 0; id < cache.getIndexes()[7].getLastArchiveId(); id++) {
             listModelM.addElement(id);
-        }
-    }
-
-    public static void main(String[] args) {
-        try {
-            String cache = "";
-            ModelFrame frame = new ModelFrame(cache);
-            frame.setVisible(true);
-        } catch (Exception e) {
-            e.printStackTrace();
         }
     }
 

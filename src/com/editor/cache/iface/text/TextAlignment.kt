@@ -9,7 +9,6 @@ package com.editor.cache.iface.text
  * @since 04/08/2019
  */
 object TextAlignment {
-
     /**
      * Constant value representing left alignment.
      */

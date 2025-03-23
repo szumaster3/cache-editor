@@ -1,11 +1,12 @@
 package com.alex.defs
 
-import com.alex.filestore.Store
+import com.alex.filestore.Cache
 import com.alex.io.InputStream
 import com.alex.io.OutputStream
 
-class IdentityKit(val id: Int) : Cloneable {
-
+class IdentityKit(
+    val id: Int,
+) : Cloneable {
     var bodyPartId: Int = -1
     var bodyModels: IntArray? = null
     var headModels: IntArray = IntArray(5) { -1 }
@@ -98,7 +99,5 @@ class IdentityKit(val id: Int) : Cloneable {
         return null
     }
 
-    fun write(cache: Store): Boolean {
-        return cache.indexes[2].putFile(3, id, encode()!!)
-    }
+    fun write(cache: Cache): Boolean = cache.indexes[2].putFile(3, id, encode()!!)
 }

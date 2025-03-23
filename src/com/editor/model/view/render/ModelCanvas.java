@@ -4,31 +4,36 @@ import com.editor.model.view.Main;
 import com.editor.model.view.properties.PanelProperties;
 
 public final class ModelCanvas extends PanelProperties {
-    private static boolean field7 = true;
-    static boolean field8;
-    private static boolean field9;
-    private static boolean field10 = true;
+    public static final int[] field15 = new int[2048];
     public static int field11;
     public static int screenPosX;
     public static int screenPosY;
-    private static int[] field14 = new int[512];
-    public static final int[] field15 = new int[2048];
     public static int[] field16 = new int[2048];
     public static int[] field17 = new int[2048];
     public static int[] screen;
-    private static boolean[] field19 = new boolean[50];
     /*private static int field20;
     private static int[][] field21;
     private static int[][] field22 = new int[50][];*/
     public static int[] faceLighting = new int[65536];
+    static boolean field8;
+    private static final boolean field7 = true;
+    private static boolean field9;
+    private static final boolean field10 = true;
+    private static final int[] field14 = new int[512];
+    private static final boolean[] field19 = new boolean[50];
 
-    public static void setDimensions(int width, int height) {
-        screen = new int[height];
-        for (int i = 0; i < height; ++i) {
-            screen[i] = width * i;
+    static {
+        for (int i = 1; i < 512; ++i) {
+            field14[i] = 32768 / i;
         }
-        screenPosX = width / 2;
-        screenPosY = height / 2;
+        for (int i = 1; i < 2048; ++i) {
+            field15[i] = 65536 / i;
+        }
+        for (int i = 0; i < 2048; ++i) {
+            field16[i] = (int) (65536.0D * Math.sin((double) i * 0.0030679615D));
+            field17[i] = (int) (65536.0D * Math.cos((double) i * 0.0030679615D));
+        }
+
     }
 
    /*public static void method1() {
@@ -44,6 +49,15 @@ public final class ModelCanvas extends PanelProperties {
 		   field22[i] = null;
 	   }
    }*/
+
+    public static void setDimensions(int width, int height) {
+        screen = new int[height];
+        for (int i = 0; i < height; ++i) {
+            screen[i] = width * i;
+        }
+        screenPosX = width / 2;
+        screenPosY = height / 2;
+    }
 
     public static void setLighting(double brightness) {
         brightness += Math.random() * 0.03D - 0.015D;
@@ -1472,7 +1486,7 @@ public final class ModelCanvas extends PanelProperties {
                                         return;
                                     }
 
-                                    method8(PanelProperties.pixels, (int[]) null, var0, var5 >> 16, var4 >> 16, var8 >> 8, var7 >> 8, var18, var21, var15, var19, var12, var13);
+                                    method8(PanelProperties.pixels, null, var0, var5 >> 16, var4 >> 16, var8 >> 8, var7 >> 8, var18, var21, var15, var19, var12, var13);
                                     var5 += var22;
                                     var4 += var16;
                                     var8 += var23;
@@ -1484,7 +1498,7 @@ public final class ModelCanvas extends PanelProperties {
                                 }
                             }
 
-                            method8(PanelProperties.pixels, (int[]) null, var0, var5 >> 16, var3 >> 16, var8 >> 8, var6 >> 8, var18, var21, var15, var19, var12, var13);
+                            method8(PanelProperties.pixels, null, var0, var5 >> 16, var3 >> 16, var8 >> 8, var6 >> 8, var18, var21, var15, var19, var12, var13);
                             var5 += var22;
                             var3 += var11;
                             var8 += var23;
@@ -1508,7 +1522,7 @@ public final class ModelCanvas extends PanelProperties {
                                         return;
                                     }
 
-                                    method8(PanelProperties.pixels, (int[]) null, var0, var4 >> 16, var5 >> 16, var7 >> 8, var8 >> 8, var18, var21, var15, var19, var12, var13);
+                                    method8(PanelProperties.pixels, null, var0, var4 >> 16, var5 >> 16, var7 >> 8, var8 >> 8, var18, var21, var15, var19, var12, var13);
                                     var5 += var22;
                                     var4 += var16;
                                     var8 += var23;
@@ -1520,7 +1534,7 @@ public final class ModelCanvas extends PanelProperties {
                                 }
                             }
 
-                            method8(PanelProperties.pixels, (int[]) null, var0, var3 >> 16, var5 >> 16, var6 >> 8, var8 >> 8, var18, var21, var15, var19, var12, var13);
+                            method8(PanelProperties.pixels, null, var0, var3 >> 16, var5 >> 16, var6 >> 8, var8 >> 8, var18, var21, var15, var19, var12, var13);
                             var5 += var22;
                             var3 += var11;
                             var8 += var23;
@@ -1568,7 +1582,7 @@ public final class ModelCanvas extends PanelProperties {
                                         return;
                                     }
 
-                                    method8(PanelProperties.pixels, (int[]) null, var0, var3 >> 16, var5 >> 16, var6 >> 8, var8 >> 8, var18, var21, var15, var19, var12, var13);
+                                    method8(PanelProperties.pixels, null, var0, var3 >> 16, var5 >> 16, var6 >> 8, var8 >> 8, var18, var21, var15, var19, var12, var13);
                                     var5 += var16;
                                     var3 += var11;
                                     var8 += var17;
@@ -1580,7 +1594,7 @@ public final class ModelCanvas extends PanelProperties {
                                 }
                             }
 
-                            method8(PanelProperties.pixels, (int[]) null, var0, var3 >> 16, var4 >> 16, var6 >> 8, var7 >> 8, var18, var21, var15, var19, var12, var13);
+                            method8(PanelProperties.pixels, null, var0, var3 >> 16, var4 >> 16, var6 >> 8, var7 >> 8, var18, var21, var15, var19, var12, var13);
                             var4 += var22;
                             var3 += var11;
                             var7 += var23;
@@ -1604,7 +1618,7 @@ public final class ModelCanvas extends PanelProperties {
                                         return;
                                     }
 
-                                    method8(PanelProperties.pixels, (int[]) null, var0, var5 >> 16, var3 >> 16, var8 >> 8, var6 >> 8, var18, var21, var15, var19, var12, var13);
+                                    method8(PanelProperties.pixels, null, var0, var5 >> 16, var3 >> 16, var8 >> 8, var6 >> 8, var18, var21, var15, var19, var12, var13);
                                     var5 += var16;
                                     var3 += var11;
                                     var8 += var17;
@@ -1616,7 +1630,7 @@ public final class ModelCanvas extends PanelProperties {
                                 }
                             }
 
-                            method8(PanelProperties.pixels, (int[]) null, var0, var4 >> 16, var3 >> 16, var7 >> 8, var6 >> 8, var18, var21, var15, var19, var12, var13);
+                            method8(PanelProperties.pixels, null, var0, var4 >> 16, var3 >> 16, var7 >> 8, var6 >> 8, var18, var21, var15, var19, var12, var13);
                             var4 += var22;
                             var3 += var11;
                             var7 += var23;
@@ -1676,7 +1690,7 @@ public final class ModelCanvas extends PanelProperties {
                                         return;
                                     }
 
-                                    method8(PanelProperties.pixels, (int[]) null, var1, var3 >> 16, var5 >> 16, var6 >> 8, var8 >> 8, var18, var21, var15, var19, var12, var13);
+                                    method8(PanelProperties.pixels, null, var1, var3 >> 16, var5 >> 16, var6 >> 8, var8 >> 8, var18, var21, var15, var19, var12, var13);
                                     var3 += var11;
                                     var5 += var22;
                                     var6 += var14;
@@ -1688,7 +1702,7 @@ public final class ModelCanvas extends PanelProperties {
                                 }
                             }
 
-                            method8(PanelProperties.pixels, (int[]) null, var1, var3 >> 16, var4 >> 16, var6 >> 8, var7 >> 8, var18, var21, var15, var19, var12, var13);
+                            method8(PanelProperties.pixels, null, var1, var3 >> 16, var4 >> 16, var6 >> 8, var7 >> 8, var18, var21, var15, var19, var12, var13);
                             var3 += var11;
                             var4 += var16;
                             var6 += var14;
@@ -1712,7 +1726,7 @@ public final class ModelCanvas extends PanelProperties {
                                         return;
                                     }
 
-                                    method8(PanelProperties.pixels, (int[]) null, var1, var5 >> 16, var3 >> 16, var8 >> 8, var6 >> 8, var18, var21, var15, var19, var12, var13);
+                                    method8(PanelProperties.pixels, null, var1, var5 >> 16, var3 >> 16, var8 >> 8, var6 >> 8, var18, var21, var15, var19, var12, var13);
                                     var3 += var11;
                                     var5 += var22;
                                     var6 += var14;
@@ -1724,7 +1738,7 @@ public final class ModelCanvas extends PanelProperties {
                                 }
                             }
 
-                            method8(PanelProperties.pixels, (int[]) null, var1, var4 >> 16, var3 >> 16, var7 >> 8, var6 >> 8, var18, var21, var15, var19, var12, var13);
+                            method8(PanelProperties.pixels, null, var1, var4 >> 16, var3 >> 16, var7 >> 8, var6 >> 8, var18, var21, var15, var19, var12, var13);
                             var3 += var11;
                             var4 += var16;
                             var6 += var14;
@@ -1772,7 +1786,7 @@ public final class ModelCanvas extends PanelProperties {
                                         return;
                                     }
 
-                                    method8(PanelProperties.pixels, (int[]) null, var1, var3 >> 16, var4 >> 16, var6 >> 8, var7 >> 8, var18, var21, var15, var19, var12, var13);
+                                    method8(PanelProperties.pixels, null, var1, var3 >> 16, var4 >> 16, var6 >> 8, var7 >> 8, var18, var21, var15, var19, var12, var13);
                                     var3 += var22;
                                     var4 += var16;
                                     var6 += var23;
@@ -1784,7 +1798,7 @@ public final class ModelCanvas extends PanelProperties {
                                 }
                             }
 
-                            method8(PanelProperties.pixels, (int[]) null, var1, var5 >> 16, var4 >> 16, var8 >> 8, var7 >> 8, var18, var21, var15, var19, var12, var13);
+                            method8(PanelProperties.pixels, null, var1, var5 >> 16, var4 >> 16, var8 >> 8, var7 >> 8, var18, var21, var15, var19, var12, var13);
                             var5 += var11;
                             var4 += var16;
                             var8 += var14;
@@ -1808,7 +1822,7 @@ public final class ModelCanvas extends PanelProperties {
                                         return;
                                     }
 
-                                    method8(PanelProperties.pixels, (int[]) null, var1, var4 >> 16, var3 >> 16, var7 >> 8, var6 >> 8, var18, var21, var15, var19, var12, var13);
+                                    method8(PanelProperties.pixels, null, var1, var4 >> 16, var3 >> 16, var7 >> 8, var6 >> 8, var18, var21, var15, var19, var12, var13);
                                     var3 += var22;
                                     var4 += var16;
                                     var6 += var23;
@@ -1820,7 +1834,7 @@ public final class ModelCanvas extends PanelProperties {
                                 }
                             }
 
-                            method8(PanelProperties.pixels, (int[]) null, var1, var4 >> 16, var5 >> 16, var7 >> 8, var8 >> 8, var18, var21, var15, var19, var12, var13);
+                            method8(PanelProperties.pixels, null, var1, var4 >> 16, var5 >> 16, var7 >> 8, var8 >> 8, var18, var21, var15, var19, var12, var13);
                             var5 += var11;
                             var4 += var16;
                             var8 += var14;
@@ -1879,7 +1893,7 @@ public final class ModelCanvas extends PanelProperties {
                                     return;
                                 }
 
-                                method8(PanelProperties.pixels, (int[]) null, var2, var4 >> 16, var3 >> 16, var7 >> 8, var6 >> 8, var18, var21, var15, var19, var12, var13);
+                                method8(PanelProperties.pixels, null, var2, var4 >> 16, var3 >> 16, var7 >> 8, var6 >> 8, var18, var21, var15, var19, var12, var13);
                                 var4 += var16;
                                 var3 += var11;
                                 var7 += var17;
@@ -1891,7 +1905,7 @@ public final class ModelCanvas extends PanelProperties {
                             }
                         }
 
-                        method8(PanelProperties.pixels, (int[]) null, var2, var4 >> 16, var5 >> 16, var7 >> 8, var8 >> 8, var18, var21, var15, var19, var12, var13);
+                        method8(PanelProperties.pixels, null, var2, var4 >> 16, var5 >> 16, var7 >> 8, var8 >> 8, var18, var21, var15, var19, var12, var13);
                         var4 += var16;
                         var5 += var22;
                         var7 += var17;
@@ -1915,7 +1929,7 @@ public final class ModelCanvas extends PanelProperties {
                                     return;
                                 }
 
-                                method8(PanelProperties.pixels, (int[]) null, var2, var3 >> 16, var4 >> 16, var6 >> 8, var7 >> 8, var18, var21, var15, var19, var12, var13);
+                                method8(PanelProperties.pixels, null, var2, var3 >> 16, var4 >> 16, var6 >> 8, var7 >> 8, var18, var21, var15, var19, var12, var13);
                                 var4 += var16;
                                 var3 += var11;
                                 var7 += var17;
@@ -1927,7 +1941,7 @@ public final class ModelCanvas extends PanelProperties {
                             }
                         }
 
-                        method8(PanelProperties.pixels, (int[]) null, var2, var5 >> 16, var4 >> 16, var8 >> 8, var7 >> 8, var18, var21, var15, var19, var12, var13);
+                        method8(PanelProperties.pixels, null, var2, var5 >> 16, var4 >> 16, var8 >> 8, var7 >> 8, var18, var21, var15, var19, var12, var13);
                         var4 += var16;
                         var5 += var22;
                         var7 += var17;
@@ -1975,7 +1989,7 @@ public final class ModelCanvas extends PanelProperties {
                                     return;
                                 }
 
-                                method8(PanelProperties.pixels, (int[]) null, var2, var4 >> 16, var5 >> 16, var7 >> 8, var8 >> 8, var18, var21, var15, var19, var12, var13);
+                                method8(PanelProperties.pixels, null, var2, var4 >> 16, var5 >> 16, var7 >> 8, var8 >> 8, var18, var21, var15, var19, var12, var13);
                                 var4 += var11;
                                 var5 += var22;
                                 var7 += var14;
@@ -1987,7 +2001,7 @@ public final class ModelCanvas extends PanelProperties {
                             }
                         }
 
-                        method8(PanelProperties.pixels, (int[]) null, var2, var3 >> 16, var5 >> 16, var6 >> 8, var8 >> 8, var18, var21, var15, var19, var12, var13);
+                        method8(PanelProperties.pixels, null, var2, var3 >> 16, var5 >> 16, var6 >> 8, var8 >> 8, var18, var21, var15, var19, var12, var13);
                         var3 += var16;
                         var5 += var22;
                         var6 += var17;
@@ -2011,7 +2025,7 @@ public final class ModelCanvas extends PanelProperties {
                                     return;
                                 }
 
-                                method8(PanelProperties.pixels, (int[]) null, var2, var5 >> 16, var4 >> 16, var8 >> 8, var7 >> 8, var18, var21, var15, var19, var12, var13);
+                                method8(PanelProperties.pixels, null, var2, var5 >> 16, var4 >> 16, var8 >> 8, var7 >> 8, var18, var21, var15, var19, var12, var13);
                                 var4 += var11;
                                 var5 += var22;
                                 var7 += var14;
@@ -2023,7 +2037,7 @@ public final class ModelCanvas extends PanelProperties {
                             }
                         }
 
-                        method8(PanelProperties.pixels, (int[]) null, var2, var5 >> 16, var3 >> 16, var8 >> 8, var6 >> 8, var18, var21, var15, var19, var12, var13);
+                        method8(PanelProperties.pixels, null, var2, var5 >> 16, var3 >> 16, var8 >> 8, var6 >> 8, var18, var21, var15, var19, var12, var13);
                         var3 += var16;
                         var5 += var22;
                         var6 += var17;
@@ -2417,19 +2431,5 @@ public final class ModelCanvas extends PanelProperties {
                 }
             }
         }
-    }
-
-    static {
-        for (int i = 1; i < 512; ++i) {
-            field14[i] = 32768 / i;
-        }
-        for (int i = 1; i < 2048; ++i) {
-            field15[i] = 65536 / i;
-        }
-        for (int i = 0; i < 2048; ++i) {
-            field16[i] = (int) (65536.0D * Math.sin((double) i * 0.0030679615D));
-            field17[i] = (int) (65536.0D * Math.cos((double) i * 0.0030679615D));
-        }
-
     }
 }

@@ -1,17 +1,21 @@
 package com.alex.defs.npcs
 
-import com.alex.filestore.Store
+import com.alex.filestore.Cache
 import com.alex.io.InputStream
 import com.alex.io.OutputStream
 import com.alex.util.Utils.getConfigArchive
 import com.alex.util.Utils.getConfigFile
 
-class NPCDefinition(var id: Int) : Cloneable {
+class NPCDefinition(
+    var id: Int,
+) : Cloneable {
     var unknownInt13: Int = 0
     var unknownInt6: Int = 0
     var unknownInt15: Int = 0
+
     @JvmField
     var respawnDirection: Byte = 7
+
     @JvmField
     var size: Int = 1
     var unknownArray3: Array<IntArray>? = null
@@ -20,6 +24,7 @@ class NPCDefinition(var id: Int) : Cloneable {
     var unknownInt4: Int = 0
     var unknownArray2: IntArray? = null
     var unknownInt7: Int = 0
+
     @JvmField
     var renderEmote: Int
     var unknownBoolean5: Boolean = false
@@ -30,20 +35,26 @@ class NPCDefinition(var id: Int) : Cloneable {
     var unknownByte2: Byte = 0
     var unknownBoolean6: Boolean = false
     var unknownBoolean4: Boolean = false
+
     @JvmField
     var originalModelColors: IntArray? = null
+
     @JvmField
     var combatLevel: Int
     var unknownArray1: ByteArray? = null
     var unknownShort1: Short = 0
     var unknownBoolean1: Boolean = false
+
     @JvmField
     var npcHeight: Int = 128
+
     @JvmField
     var name: String = "null"
     var modifiedTextureColors: IntArray? = null
+
     @JvmField
     var walkMask: Byte = 0
+
     @JvmField
     var modelIds: IntArray?
     var unknownInt1: Int = 0
@@ -53,6 +64,7 @@ class NPCDefinition(var id: Int) : Cloneable {
     var unknownInt14: Int = 0
     var unknownInt12: Int = 0
     var unknownInt8: Int = 0
+
     @JvmField
     var headIcon: Int
     var unknownInt19: Int = 0
@@ -62,10 +74,12 @@ class NPCDefinition(var id: Int) : Cloneable {
     var unknownArray4: IntArray? = null
     var unknownInt5: Int = 0
     var unknownInt16: Int = 0
+
     @JvmField
     var invisibleOnMap: Boolean = true
     var npcChatHeads: IntArray? = null
     var unknownShort2: Short = 0
+
     @JvmField
     var options: Array<String?>
     var modifiedModelColors: IntArray?? = null
@@ -114,6 +128,7 @@ class NPCDefinition(var id: Int) : Cloneable {
     var aShort894: Short = 0
     var recolorToReplace: ShortArray? = null
     var contrast: Int = 0
+
     @JvmField
     var npcWidth: Int = 128
     var anInt901: Int
@@ -153,8 +168,9 @@ class NPCDefinition(var id: Int) : Cloneable {
             val opcode = stream.readUnsignedByte()
             if (opcode == 0) break
             if (opcode != 1) {
-                if (opcode == 2) name = stream.readString()
-                else if ((opcode xor -0x1) != -13) {
+                if (opcode == 2) {
+                    name = stream.readString()
+                } else if ((opcode xor -0x1) != -13) {
                     if (opcode >= 30 && (opcode xor -0x1) > -36) {
                         options[opcode - 30] = stream.readString()
                         if (options[-30 + opcode].equals("Hidden", ignoreCase = true)) options[-30 + opcode] = null
@@ -212,15 +228,22 @@ class NPCDefinition(var id: Int) : Cloneable {
                                 i_55_++
                             }
                         } else if ((opcode xor -0x1) != -61) {
-                            if (opcode == 93) invisibleOnMap = false
-                            else if ((opcode xor -0x1) == -96) combatLevel = stream.readUnsignedShort()
-                            else if (opcode != 97) {
-                                if ((opcode xor -0x1) == -99) npcWidth = stream.readUnsignedShort()
-                                else if ((opcode xor -0x1) == -100) renderPriority = true
-                                else if (opcode == 100) ambient = stream.readByte()
-                                else if ((opcode xor -0x1) == -102) contrast = stream.readByte() * 5
-                                else if ((opcode xor -0x1) == -103) headIcon = stream.readUnsignedShort()
-                                else if (opcode != 103) {
+                            if (opcode == 93) {
+                                invisibleOnMap = false
+                            } else if ((opcode xor -0x1) == -96) {
+                                combatLevel = stream.readUnsignedShort()
+                            } else if (opcode != 97) {
+                                if ((opcode xor -0x1) == -99) {
+                                    npcWidth = stream.readUnsignedShort()
+                                } else if ((opcode xor -0x1) == -100) {
+                                    renderPriority = true
+                                } else if (opcode == 100) {
+                                    ambient = stream.readByte()
+                                } else if ((opcode xor -0x1) == -102) {
+                                    contrast = stream.readByte() * 5
+                                } else if ((opcode xor -0x1) == -103) {
+                                    headIcon = stream.readUnsignedShort()
+                                } else if (opcode != 103) {
                                     if (opcode == 106 || opcode == 118) {
                                         bConfig = stream.readUnsignedShort()
                                         if (bConfig == 65535) bConfig = -1
@@ -241,8 +264,9 @@ class NPCDefinition(var id: Int) : Cloneable {
                                         }
                                         transformTo!![i_56_ - -1] = i
                                     } else if ((opcode xor -0x1) != -108) {
-                                        if ((opcode xor -0x1) == -110) aBoolean852 = false
-                                        else if ((opcode xor -0x1) != -112) {
+                                        if ((opcode xor -0x1) == -110) {
+                                            aBoolean852 = false
+                                        } else if ((opcode xor -0x1) != -112) {
                                             if (opcode != 113) {
                                                 if (opcode == 114) {
                                                     aByte851 = (stream.readByte()).toByte()
@@ -253,12 +277,15 @@ class NPCDefinition(var id: Int) : Cloneable {
                                                 } else if ((opcode xor -0x1) != -120) {
                                                     if (opcode != 121) {
                                                         if ((opcode xor -0x1) != -123) {
-                                                            if (opcode == 123) anInt846 = (stream.readUnsignedShort())
-                                                            else if (opcode != 125) {
-                                                                if (opcode == 127) renderEmote =
-                                                                    (stream.readUnsignedShort())
-                                                                else if ((opcode xor -0x1) == -129) stream.readUnsignedByte()
-                                                                else if (opcode != 134) {
+                                                            if (opcode == 123) {
+                                                                anInt846 = (stream.readUnsignedShort())
+                                                            } else if (opcode != 125) {
+                                                                if (opcode == 127) {
+                                                                    renderEmote =
+                                                                        (stream.readUnsignedShort())
+                                                                } else if ((opcode xor -0x1) == -129) {
+                                                                    stream.readUnsignedByte()
+                                                                } else if (opcode != 134) {
                                                                     if (opcode == 135) {
                                                                         anInt833 = stream.readUnsignedByte()
                                                                         anInt874 = stream.readUnsignedShort()
@@ -266,18 +293,26 @@ class NPCDefinition(var id: Int) : Cloneable {
                                                                         if (opcode != 137) {
                                                                             if (opcode != 138) {
                                                                                 if ((opcode xor -0x1) != -140) {
-                                                                                    if (opcode == 140) anInt850 = stream
-                                                                                        .readUnsignedByte()
-                                                                                    else if (opcode == 141) aBoolean849 =
-                                                                                        true
-                                                                                    else if ((opcode
-                                                                                                xor -0x1) != -143
-                                                                                    ) {
-                                                                                        if (opcode == 143) aBoolean856 =
+                                                                                    if (opcode == 140) {
+                                                                                        anInt850 =
+                                                                                            stream
+                                                                                                .readUnsignedByte()
+                                                                                    } else if (opcode == 141) {
+                                                                                        aBoolean849 =
                                                                                             true
-                                                                                        else if ((opcode
-                                                                                                    xor -0x1) <= -151
-                                                                                            && opcode < 155
+                                                                                    } else if ((
+                                                                                            opcode
+                                                                                                xor -0x1
+                                                                                        ) != -143
+                                                                                    ) {
+                                                                                        if (opcode == 143) {
+                                                                                            aBoolean856 =
+                                                                                                true
+                                                                                        } else if ((
+                                                                                                opcode
+                                                                                                    xor -0x1
+                                                                                            ) <= -151 &&
+                                                                                            opcode < 155
                                                                                         ) {
                                                                                             options[opcode - 150] =
                                                                                                 stream
@@ -285,15 +320,22 @@ class NPCDefinition(var id: Int) : Cloneable {
                                                                                             if (options[opcode - 150]
                                                                                                     .equals(
                                                                                                         "Hidden",
-                                                                                                        ignoreCase = true
+                                                                                                        ignoreCase = true,
                                                                                                     )
-                                                                                            ) options[opcode
-                                                                                                    + -150] = null
-                                                                                        } else if ((opcode
-                                                                                                    xor -0x1) == -161
+                                                                                            ) {
+                                                                                                options[
+                                                                                                    opcode +
+                                                                                                        -150,
+                                                                                                ] = null
+                                                                                            }
+                                                                                        } else if ((
+                                                                                                opcode
+                                                                                                    xor -0x1
+                                                                                            ) == -161
                                                                                         ) {
-                                                                                            val i = stream
-                                                                                                .readUnsignedByte()
+                                                                                            val i =
+                                                                                                stream
+                                                                                                    .readUnsignedByte()
                                                                                             anIntArray885 = IntArray(i)
                                                                                             var i_58_ = 0
                                                                                             while (i > i_58_) {
@@ -308,14 +350,18 @@ class NPCDefinition(var id: Int) : Cloneable {
                                                                                             // after
                                                                                             // here
                                                                                         } else if (opcode == 155) {
-                                                                                            val aByte821 = stream
-                                                                                                .readByte()
-                                                                                            val aByte824 = stream
-                                                                                                .readByte()
-                                                                                            val aByte843 = stream
-                                                                                                .readByte()
-                                                                                            val aByte855 = stream
-                                                                                                .readByte()
+                                                                                            val aByte821 =
+                                                                                                stream
+                                                                                                    .readByte()
+                                                                                            val aByte824 =
+                                                                                                stream
+                                                                                                    .readByte()
+                                                                                            val aByte843 =
+                                                                                                stream
+                                                                                                    .readByte()
+                                                                                            val aByte855 =
+                                                                                                stream
+                                                                                                    .readByte()
                                                                                         } else if (opcode == 158) {
                                                                                             val aByte833 = 1.toByte()
                                                                                         } else if (opcode == 159) {
@@ -327,21 +373,26 @@ class NPCDefinition(var id: Int) : Cloneable {
                                                                                             // true;
                                                                                         } else if (opcode == 163) { // added
                                                                                             // opcode
-                                                                                            val anInt864 = stream
-                                                                                                .readUnsignedByte()
+                                                                                            val anInt864 =
+                                                                                                stream
+                                                                                                    .readUnsignedByte()
                                                                                         } else if (opcode == 164) {
-                                                                                            val anInt848 = stream
-                                                                                                .readUnsignedShort()
-                                                                                            val anInt837 = stream
-                                                                                                .readUnsignedShort()
+                                                                                            val anInt848 =
+                                                                                                stream
+                                                                                                    .readUnsignedShort()
+                                                                                            val anInt837 =
+                                                                                                stream
+                                                                                                    .readUnsignedShort()
                                                                                         } else if (opcode == 165) {
-                                                                                            val anInt847 = stream
-                                                                                                .readUnsignedByte()
+                                                                                            val anInt847 =
+                                                                                                stream
+                                                                                                    .readUnsignedByte()
                                                                                         } else if (opcode == 168) {
-                                                                                            val anInt828 = stream
-                                                                                                .readUnsignedByte()
-                                                                                        } else if (opcode >= 170
-                                                                                            && opcode < 176
+                                                                                            val anInt828 =
+                                                                                                stream
+                                                                                                    .readUnsignedByte()
+                                                                                        } else if (opcode >= 170 &&
+                                                                                            opcode < 176
                                                                                         ) {
                                                                                             // if
                                                                                             // (null
@@ -355,45 +406,64 @@ class NPCDefinition(var id: Int) : Cloneable {
                                                                                             // Arrays.fill(anIntArray2930,
                                                                                             // -1);
                                                                                             // }
-                                                                                            var i_44_ = stream
-                                                                                                .readUnsignedShort()
-                                                                                                .toShort().toInt()
-                                                                                            if (i_44_ == 65535) i_44_ =
-                                                                                                -1
+                                                                                            var i_44_ =
+                                                                                                stream
+                                                                                                    .readUnsignedShort()
+                                                                                                    .toShort()
+                                                                                                    .toInt()
+                                                                                            if (i_44_ == 65535) {
+                                                                                                i_44_ =
+                                                                                                    -1
+                                                                                            }
                                                                                             // anIntArray2930[opcode
                                                                                             // -
                                                                                             // 170]
                                                                                             // =
                                                                                             // i_44_;
                                                                                         } else if (opcode == 249) {
-                                                                                            val i = stream
-                                                                                                .readUnsignedByte()
+                                                                                            val i =
+                                                                                                stream
+                                                                                                    .readUnsignedByte()
                                                                                             if (params == null) {
-                                                                                                params = HashMap(
-                                                                                                    i
-                                                                                                )
+                                                                                                params =
+                                                                                                    HashMap(
+                                                                                                        i,
+                                                                                                    )
                                                                                             }
                                                                                             var i_60_ = 0
                                                                                             while (i > i_60_) {
                                                                                                 val stringInstance =
                                                                                                     stream
                                                                                                         .readUnsignedByte() == 1
-                                                                                                val key = stream
-                                                                                                    .readMedium()
+                                                                                                val key =
+                                                                                                    stream
+                                                                                                        .readMedium()
                                                                                                 val value: Any =
-                                                                                                    if (stringInstance) stream
-                                                                                                        .readString()
-                                                                                                    else stream
-                                                                                                        .readInt()
+                                                                                                    if (stringInstance) {
+                                                                                                        stream
+                                                                                                            .readString()
+                                                                                                    } else {
+                                                                                                        stream
+                                                                                                            .readInt()
+                                                                                                    }
                                                                                                 params!![key] = value
                                                                                                 i_60_++
                                                                                             }
                                                                                         }
-                                                                                    } else anInt870 = stream
-                                                                                        .readUnsignedShort()
-                                                                                } else anInt879 = stream.readSmartInt()
-                                                                            } else anInt901 = stream.readSmartInt()
-                                                                        } else anInt872 = stream.readUnsignedShort()
+                                                                                    } else {
+                                                                                        anInt870 =
+                                                                                            stream
+                                                                                                .readUnsignedShort()
+                                                                                    }
+                                                                                } else {
+                                                                                    anInt879 = stream.readSmartInt()
+                                                                                }
+                                                                            } else {
+                                                                                anInt901 = stream.readSmartInt()
+                                                                            }
+                                                                        } else {
+                                                                            anInt872 = stream.readUnsignedShort()
+                                                                        }
                                                                     } else {
                                                                         anInt837 = stream.readUnsignedByte()
                                                                         anInt889 = stream.readUnsignedShort()
@@ -409,14 +479,22 @@ class NPCDefinition(var id: Int) : Cloneable {
                                                                     if ((anInt871 xor -0x1) == -65536) anInt871 = -1
                                                                     anInt875 = (stream.readUnsignedByte())
                                                                 }
-                                                            } else respawnDirection = (stream.readByte()).toByte()
-                                                        } else anInt836 = stream.readSmartInt()
+                                                            } else {
+                                                                respawnDirection = (stream.readByte()).toByte()
+                                                            }
+                                                        } else {
+                                                            anInt836 = stream.readSmartInt()
+                                                        }
                                                     } else {
                                                         anIntArrayArray840 = (arrayOfNulls(modelIds!!.size))
                                                         val i = (stream.readUnsignedByte())
                                                         var i_62_ = 0
-                                                        while (((i_62_ xor -0x1) > (i
-                                                                    xor -0x1))
+                                                        while ((
+                                                                (i_62_ xor -0x1) > (
+                                                                    i
+                                                                        xor -0x1
+                                                                )
+                                                            )
                                                         ) {
                                                             val i_63_ = (stream.readUnsignedByte())
                                                             val `is` =
@@ -427,15 +505,25 @@ class NPCDefinition(var id: Int) : Cloneable {
                                                             i_62_++
                                                         }
                                                     }
-                                                } else walkMask = (stream.readByte()).toByte()
+                                                } else {
+                                                    walkMask = (stream.readByte()).toByte()
+                                                }
                                             } else {
                                                 aShort862 = (stream.readUnsignedShort()).toShort()
                                                 aShort894 = (stream.readUnsignedShort()).toShort()
                                             }
-                                        } else aBoolean857 = false
-                                    } else aBoolean841 = false
-                                } else anInt853 = stream.readUnsignedShort()
-                            } else npcHeight = stream.readUnsignedShort()
+                                        } else {
+                                            aBoolean857 = false
+                                        }
+                                    } else {
+                                        aBoolean841 = false
+                                    }
+                                } else {
+                                    anInt853 = stream.readUnsignedShort()
+                                }
+                            } else {
+                                npcHeight = stream.readUnsignedShort()
+                            }
                         } else {
                             val i = stream.readUnsignedByte()
                             npcChatHeads = IntArray(i)
@@ -456,7 +544,9 @@ class NPCDefinition(var id: Int) : Cloneable {
                             i_65_++
                         }
                     }
-                } else size = stream.readUnsignedByte()
+                } else {
+                    size = stream.readUnsignedByte()
+                }
             } else {
                 val i = stream.readUnsignedByte()
                 modelIds = IntArray(i)
@@ -618,15 +708,9 @@ class NPCDefinition(var id: Int) : Cloneable {
         return var61
     }
 
-    fun write(cache: Store): Boolean {
-        return cache.indexes[18].putFile(getConfigArchive(id, 7), getConfigFile(id, 7), encode())
-    }
+    fun write(cache: Cache): Boolean = cache.indexes[18].putFile(getConfigArchive(id, 7), getConfigFile(id, 7), encode())
 
-    override fun toString(): String {
-        return id.toString() + " - " + this.name
-    }
+    override fun toString(): String = id.toString() + " - " + this.name
 
-    public override fun clone(): Cloneable {
-        return this
-    }
+    public override fun clone(): Cloneable = this
 }

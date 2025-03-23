@@ -1,6 +1,6 @@
 package com.alex.defs.images
 
-import com.alex.filestore.Store
+import com.alex.filestore.Cache
 import com.alex.io.InputStream
 import com.alex.io.OutputStream
 import java.awt.image.BufferedImage
@@ -59,7 +59,7 @@ class IndexedColorImageFile {
      * @param archiveId the archive id
      * @param fileId    the file id
      */
-    constructor(cache: Store, archiveId: Int, fileId: Int) : this(cache, 8, archiveId, fileId)
+    constructor(cache: Cache, archiveId: Int, fileId: Int) : this(cache, 8, archiveId, fileId)
 
     /**
      * Instantiates a new Indexed color image file.
@@ -69,7 +69,7 @@ class IndexedColorImageFile {
      * @param archiveId the archive id
      * @param fileId    the file id
      */
-    constructor(cache: Store, idx: Int, archiveId: Int, fileId: Int) {
+    constructor(cache: Cache, idx: Int, archiveId: Int, fileId: Int) {
         this.decodeArchive(cache, idx, archiveId, fileId)
     }
 
@@ -81,7 +81,12 @@ class IndexedColorImageFile {
      * @param archiveId the archive id
      * @param fileId    the file id
      */
-    fun decodeArchive(cache: Store, idx: Int, archiveId: Int, fileId: Int) {
+    fun decodeArchive(
+        cache: Cache,
+        idx: Int,
+        archiveId: Int,
+        fileId: Int,
+    ) {
         val data = cache.indexes[idx].getFile(archiveId, fileId)
         if (data != null) {
             val stream = InputStream(data)
@@ -211,13 +216,14 @@ class IndexedColorImageFile {
                     }
                 }
 
-                images[i_20_] = this.getBufferedImage(
-                    imagesWidth[i_20_],
-                    imagesHeight[i_20_],
-                    pixelsIndexes!![i_20_]!!,
-                    alpha!![i_20_],
-                    usesAlpha!![i_20_]
-                )
+                images[i_20_] =
+                    this.getBufferedImage(
+                        imagesWidth[i_20_],
+                        imagesHeight[i_20_],
+                        pixelsIndexes!![i_20_]!!,
+                        alpha!![i_20_],
+                        usesAlpha!![i_20_],
+                    )
                 ++i_20_
             }
         }
@@ -234,7 +240,11 @@ class IndexedColorImageFile {
      * @return the buffered image
      */
     fun getBufferedImage(
-        width: Int, height: Int, pixelsIndexes: IntArray, extraPixels: ByteArray?, useExtraPixels: Boolean
+        width: Int,
+        height: Int,
+        pixelsIndexes: IntArray,
+        extraPixels: ByteArray?,
+        useExtraPixels: Boolean,
     ): BufferedImage? {
         if (width > 0 && height > 0) {
             val image = BufferedImage(width, height, 6)
@@ -424,7 +434,10 @@ class IndexedColorImageFile {
      * @param image the image
      * @param index the index
      */
-    fun replaceImage(image: BufferedImage?, index: Int) {
+    fun replaceImage(
+        image: BufferedImage?,
+        index: Int,
+    ) {
         images[index] = image
         this.pallete = null
         this.pixelsIndexes = null

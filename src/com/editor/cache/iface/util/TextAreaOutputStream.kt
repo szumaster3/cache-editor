@@ -11,7 +11,10 @@ import javax.swing.SwingUtilities
  * #Shnek6969
  */
 
-class TextAreaOutputStream(private val textArea: JTextArea, private val title: String) : OutputStream() {
+class TextAreaOutputStream(
+    private val textArea: JTextArea,
+    private val title: String,
+) : OutputStream() {
     private val sb = StringBuilder()
 
     init {

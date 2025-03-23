@@ -7,7 +7,9 @@ import java.util.*
 /**
  * The type Reference table.
  */
-class ReferenceTable internal constructor(private val archive: Archive) {
+class ReferenceTable internal constructor(
+    private val archive: Archive,
+) {
     private var revision = 0
 
     /**
@@ -53,6 +55,7 @@ class ReferenceTable internal constructor(private val archive: Archive) {
          * @return the int [ ]
          */
         get() = archive.keys
+
         /**
          * Sets keys.
          *
@@ -392,9 +395,7 @@ class ReferenceTable internal constructor(private val archive: Archive) {
      *
      * @return the revision
      */
-    fun getRevision(): Int {
-        return this.revision
-    }
+    fun getRevision(): Int = this.revision
 
     /**
      * Sets revision.
@@ -411,17 +412,17 @@ class ReferenceTable internal constructor(private val archive: Archive) {
      *
      * @return the boolean
      */
-    fun usesWhirpool(): Boolean {
-        return this.usesWhirpool
-    }
+    fun usesWhirpool(): Boolean = this.usesWhirpool
 
     fun removeArchive(archiveId: Int) {
         val temp = arrayOfNulls<ArchiveReference>(archives.size - 1)
         val temp2 = IntArray(validArchiveIds.size - 1)
         var count = 0
-        for (i in archives.indices) if (i != archiveId) {
-            temp[count] = archives[i]
-            count++
+        for (i in archives.indices) {
+            if (i != archiveId) {
+                temp[count] = archives[i]
+                count++
+            }
         }
         for (i in 0 until validArchiveIds.size - 1) temp2[i] = validArchiveIds[i]
         archives = temp

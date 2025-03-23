@@ -31,12 +31,18 @@ object Main {
      * @param message   the message
      */
     @JvmStatic
-    fun log(className: String, message: String) {
+    fun log(
+        className: String,
+        message: String,
+    ) {
         println("[$className]: $message")
         printDebug(className, message)
     }
 
-    private fun printDebug(className: String, message: String) {
+    private fun printDebug(
+        className: String,
+        message: String,
+    ) {
         val f = File("logs.txt")
 
         try {

@@ -1,6 +1,6 @@
 package com.alex.defs.npcs;
 
-import com.alex.filestore.Store;
+import com.alex.filestore.Cache;
 import com.alex.io.InputStream;
 import com.alex.io.OutputStream;
 
@@ -118,7 +118,7 @@ public final class NPCDefinitions implements Cloneable {
     private byte[] aByteArray12930;
     private int[] anIntArray2930;
 
-    public NPCDefinitions(Store cache, int id, boolean load) {
+    public NPCDefinitions(Cache cache, int id, boolean load) {
         this.id = id;
         this.setDefaultVariableValues();
         this.setDefaultOptions();
@@ -172,12 +172,12 @@ public final class NPCDefinitions implements Cloneable {
         this.anInt901 = -1;
     }
 
-    public static NPCDefinitions getNPCDefinitions(int id, Store store) {
+    public static NPCDefinitions getNPCDefinitions(int id, Cache cache) {
         NPCDefinitions def = (NPCDefinitions) npcDefinitions.get(Integer.valueOf(id));
         if (def == null) {
             def = new NPCDefinitions(id);
             def.method694();
-            byte[] data = store.getIndexes()[18].getFile(id >>> 134238215, id & 127);
+            byte[] data = cache.getIndexes()[18].getFile(id >>> 134238215, id & 127);
             if (data != null) {
                 def.readValueLoop(new InputStream(data));
             }
@@ -188,11 +188,11 @@ public final class NPCDefinitions implements Cloneable {
         return def;
     }
 
-    public static NPCDefinitions getNPCDefinition(Store cache, int npcId) {
+    public static NPCDefinitions getNPCDefinition(Cache cache, int npcId) {
         return getNPCDefinition(cache, npcId, true);
     }
 
-    public static NPCDefinitions getNPCDefinition(Store cache, int npcId, boolean load) {
+    public static NPCDefinitions getNPCDefinition(Cache cache, int npcId, boolean load) {
         return new NPCDefinitions(cache, npcId, load);
     }
 
@@ -256,7 +256,7 @@ public final class NPCDefinitions implements Cloneable {
         this.unknownInt18 = -1;
     }
 
-    private void loadNPCDefinition(Store cache) {
+    private void loadNPCDefinition(Cache cache) {
         byte[] data = cache.getIndexes()[18].getFile(this.getArchiveId(), this.getFileId());
         if (data != null) {
             try {
@@ -289,8 +289,8 @@ public final class NPCDefinitions implements Cloneable {
         return 127 & this.id;
     }
 
-    public void write(Store store) {
-        store.getIndexes()[18].putFile(this.getArchiveId(), this.getFileId(), this.encode());
+    public void write(Cache cache) {
+        cache.getIndexes()[18].putFile(this.getArchiveId(), this.getFileId(), this.encode());
     }
 
     public void method694() {

@@ -1,6 +1,6 @@
 package com.alex.defs.animations;
 
-import com.alex.filestore.Store;
+import com.alex.filestore.Cache;
 import com.alex.io.InputStream;
 import com.alex.io.OutputStream;
 
@@ -9,7 +9,7 @@ import java.util.concurrent.ConcurrentHashMap;
 public class AnimationDefinitions implements Cloneable {
     private static final ConcurrentHashMap<Integer, AnimationDefinitions> animationDefinitions = new ConcurrentHashMap<>();
     private static final int SEQUENCES_INDEX = 20;
-    public static Store cache;
+    public static Cache cache;
     public static int id;
     public static int[] frames;
     public static int[] delays;
@@ -35,13 +35,13 @@ public class AnimationDefinitions implements Cloneable {
     public int[] anIntArray1362;
     public boolean effect2Sound;
 
-    public static AnimationDefinitions getAnimationDefinitions(int id, Store store) {
+    public static AnimationDefinitions getAnimationDefinitions(int id, Cache cache) {
         AnimationDefinitions def = animationDefinitions.get(Integer.valueOf(id));
 
         if (def == null) {
             def = new AnimationDefinitions();
 
-            byte[] data = store.getIndexes()[SEQUENCES_INDEX].getFile(id >>> 7, id & 127);
+            byte[] data = cache.getIndexes()[SEQUENCES_INDEX].getFile(id >>> 7, id & 127);
 
             if (data != null) {
                 def.readValueLoop(new InputStream(data));
@@ -400,8 +400,8 @@ public class AnimationDefinitions implements Cloneable {
         return var61;
     }
 
-    public void write(Store store) {
-        store.getIndexes()[SEQUENCES_INDEX].putFile(this.getArchiveId(), this.getFileId(), this.encode());
+    public void write(Cache cache) {
+        cache.getIndexes()[SEQUENCES_INDEX].putFile(this.getArchiveId(), this.getFileId(), this.encode());
     }
 
     public void method2394() {

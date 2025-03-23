@@ -1,6 +1,6 @@
 package com.alex.defs.images
 
-import com.alex.filestore.Store
+import com.alex.filestore.Cache
 import java.awt.Image
 import java.awt.Toolkit
 
@@ -31,13 +31,18 @@ class LoaderImageArchive {
      * @param cache     the cache
      * @param archiveId the archive id
      */
-    constructor(cache: Store, archiveId: Int) : this(cache, 32, archiveId, 0)
+    constructor(cache: Cache, archiveId: Int) : this(cache, 32, archiveId, 0)
 
-    private constructor(cache: Store, idx: Int, archiveId: Int, fileId: Int) {
+    private constructor(cache: Cache, idx: Int, archiveId: Int, fileId: Int) {
         this.decodeArchive(cache, idx, archiveId, fileId)
     }
 
-    private fun decodeArchive(cache: Store, idx: Int, archiveId: Int, fileId: Int) {
+    private fun decodeArchive(
+        cache: Cache,
+        idx: Int,
+        archiveId: Int,
+        fileId: Int,
+    ) {
         val data = cache.indexes[idx].getFile(archiveId, fileId)
         if (data != null) {
             this.imageData = data

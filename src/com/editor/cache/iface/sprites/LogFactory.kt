@@ -1,7 +1,6 @@
 package com.editor.cache.iface.sprites
 
 import java.util.logging.ConsoleHandler
-import java.util.logging.Formatter
 import java.util.logging.Logger
 
 /**

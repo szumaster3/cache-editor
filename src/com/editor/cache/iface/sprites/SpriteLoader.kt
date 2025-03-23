@@ -1,19 +1,19 @@
 package com.editor.cache.iface.sprites
 
+import com.alex.filestore.Cache
 import com.alex.filestore.Index
-import com.alex.filestore.Store
 import java.awt.image.BufferedImage
 import java.io.IOException
 import java.nio.ByteBuffer
 
 object SpriteLoader {
     var spriteCache: HashMap<Int, SpriteArchive> = HashMap()
-    var STORE: Store? = null
+    var Cache: Cache? = null
 
     @Throws(IOException::class)
     fun initStore(cachePath: String?) {
-        if (STORE == null) {
-            STORE = Store(cachePath)
+        if (Cache == null) {
+            Cache = Cache(cachePath)
         }
     }
 
@@ -53,11 +53,12 @@ object SpriteLoader {
     }
 
     @JvmStatic
-    fun getSprite(archive: Int): BufferedImage? {
-        return getSprite(archive, 0)
-    }
+    fun getSprite(archive: Int): BufferedImage? = getSprite(archive, 0)
 
-    fun getSprite(archive: Int, fileIndex: Int): BufferedImage? {
+    fun getSprite(
+        archive: Int,
+        fileIndex: Int,
+    ): BufferedImage? {
         val arch = getArchive(archive) ?: return null
 
         return arch.getSprite(fileIndex)
@@ -65,16 +66,16 @@ object SpriteLoader {
 
     val spriteIndex: Index?
         get() {
-            if (STORE == null) {
-                println("Store is not initialized. Please initialize it first.")
+            if (Cache == null) {
+                println("Cache is not initialized. Please initialize it first.")
                 return null
             }
 
-            if (STORE!!.indexes.size < 9) {
+            if (Cache!!.indexes.size < 9) {
                 println("Cache does not contain enough indexes.")
                 return null
             }
 
-            return STORE!!.indexes[8]
+            return Cache!!.indexes[8]
         }
 }

@@ -1,38 +1,38 @@
 package com.alex.filestore;
 
 import com.alex.io.OutputStream;
-import com.alex.util.whirlpool.Whirlpool;
 import com.alex.util.Utils;
+import com.alex.util.whirlpool.Whirlpool;
 
 import java.io.IOException;
 import java.io.RandomAccessFile;
 import java.math.BigInteger;
 import java.util.Arrays;
 
-public final class Store {
+public final class Cache {
     private final MainFile index255;
     private final String path;
     private final RandomAccessFile data;
     private final boolean newProtocol;
     private Index[] indexes;
 
-    public Store(String path) throws IOException {
+    public Cache(String path) throws IOException {
         this(path, true);
     }
 
-    public Store(String path, boolean newProtocol) throws IOException {
+    public Cache(String path, boolean newProtocol) throws IOException {
         this(path, newProtocol, null);
     }
 
-    public Store(String path, boolean newProtocol, int[][] keys) throws IOException {
+    public Cache(String path, boolean newProtocol, int[][] keys) throws IOException {
         this.path = path;
         this.newProtocol = newProtocol;
         this.data = new RandomAccessFile(path + "main_file_cache.dat2", "rw");
         this.index255 = new MainFile(255, this.data, new RandomAccessFile(path + "main_file_cache.idx255", "rw"), newProtocol);
-        int idxsCount = this.index255.getArchivesCount();
-        this.indexes = new Index[idxsCount];
+        int idxCount = this.index255.getArchivesCount();
+        this.indexes = new Index[idxCount];
 
-        for (int id = 0; id < idxsCount; ++id) {
+        for (int id = 0; id < idxCount; ++id) {
             Index index = new Index(this.index255, new MainFile(id, this.data, new RandomAccessFile(path + "main_file_cache.idx" + id, "rw"), newProtocol), keys == null ? null : keys[id]);
             if (index.getTable() != null) {
                 this.indexes[id] = index;
@@ -75,7 +75,7 @@ public final class Store {
         stream.getBytes(var91, 0, var91.length);
         OutputStream var111 = new OutputStream(65);
         var111.writeByte(0);
-        var111.writeBytes(Whirlpool.getHash(var91, 0, var91.length));
+        var111.writeBytes(Whirlpool.whirlpool(var91, 0, var91.length));
         byte[] var121 = new byte[var111.getOffset()];
         var111.setOffset(0);
         var111.getBytes(var121, 0, var121.length);
@@ -129,14 +129,14 @@ public final class Store {
         return id;
     }
 
-    public void resetIndex(int id, boolean named, boolean usesWhirpool, int tableCompression) throws IOException {
-        this.resetIndex(id, this.indexes, named, usesWhirpool, tableCompression);
+    public void resetIndex(int id, boolean named, boolean usesWhirlpool, int tableCompression) throws IOException {
+        this.resetIndex(id, this.indexes, named, usesWhirlpool, tableCompression);
     }
 
-    public void resetIndex(int id, Index[] indexes, boolean named, boolean usesWhirpool, int tableCompression) throws IOException {
+    public void resetIndex(int id, Index[] indexes, boolean named, boolean usesWhirlpool, int tableCompression) throws IOException {
         OutputStream stream = new OutputStream(4);
         stream.writeByte(5);
-        stream.writeByte((named ? 1 : 0) | (usesWhirpool ? 2 : 0));
+        stream.writeByte((named ? 1 : 0) | (usesWhirlpool ? 2 : 0));
         stream.writeShort(0);
         byte[] archiveData = new byte[stream.getOffset()];
         stream.setOffset(0);

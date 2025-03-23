@@ -1,24 +1,24 @@
 package com.alex.util
 
-import com.alex.filestore.Store
+import com.alex.filestore.Cache
 import com.alex.io.OutputStream
+import com.alex.util.bzip2.CBZip2InputStream
+import com.alex.util.bzip2.CBZip2OutputStream
 import java.awt.Color
 import java.awt.Toolkit
 import java.awt.datatransfer.Clipboard
 import java.awt.datatransfer.StringSelection
-import java.io.File
-import java.io.FileInputStream
-import java.io.IOException
+import java.io.*
 import java.math.BigInteger
 import java.util.*
+import java.util.zip.GZIPInputStream
+import java.util.zip.GZIPOutputStream
 import kotlin.math.pow
-
 
 /**
  * The type Utils.
  */
 object Utils {
-
     @JvmField
     var inputFolder: String = ""
 
@@ -42,9 +42,11 @@ object Utils {
      * @return the byte [ ]
      */
     @JvmStatic
-    fun cryptRSA(data: ByteArray, exponent: BigInteger?, modulus: BigInteger?): ByteArray {
-        return (BigInteger(data)).modPow(exponent, modulus).toByteArray()
-    }
+    fun cryptRSA(
+        data: ByteArray,
+        exponent: BigInteger?,
+        modulus: BigInteger?,
+    ): ByteArray = (BigInteger(data)).modPow(exponent, modulus).toByteArray()
 
     /**
      * Get archive packet data byte [ ].
@@ -55,7 +57,11 @@ object Utils {
      * @return the byte [ ]
      */
     @JvmStatic
-    fun getArchivePacketData(indexId: Int, archiveId: Int, archive: ByteArray): ByteArray {
+    fun getArchivePacketData(
+        indexId: Int,
+        archiveId: Int,
+        archive: ByteArray,
+    ): ByteArray {
         val stream = OutputStream(archive.size + 4)
         stream.writeByte(indexId)
         stream.writeShort(archiveId)
@@ -86,92 +92,89 @@ object Utils {
      * @return the name hash
      */
     @JvmStatic
-    fun getNameHash(name: String): Int {
-        return name.lowercase(Locale.getDefault()).hashCode()
-    }
+    fun getNameHash(name: String): Int = name.lowercase(Locale.getDefault()).hashCode()
 
     /**
      * Gets interface definitions size.
      *
-     * @param store the store
+     * @param cache the cache
      * @return the interface definitions size
      */
-    fun getInterfaceDefinitionsSize(store: Store): Int {
-        return store.indexes[3].lastArchiveId + 1
-    }
+    fun getInterfaceDefinitionsSize(cache: Cache): Int = cache.indexes[3].lastArchiveId + 1
 
     /**
      * Gets interface definitions components size.
      *
-     * @param store       the store
+     * @param cache       the cache
      * @param interfaceId the interface id
      * @return the interface definitions components size
      */
-    fun getInterfaceDefinitionsComponentsSize(store: Store, interfaceId: Int): Int {
-        return store.indexes[3].getLastFileId(interfaceId) + 1
-    }
+    fun getInterfaceDefinitionsComponentsSize(
+        cache: Cache,
+        interfaceId: Int,
+    ): Int = cache.indexes[3].getLastFileId(interfaceId) + 1
 
     /**
      * Gets animation definitions size.
      *
-     * @param store the store
+     * @param cache the cache
      * @return the animation definitions size
      */
-    fun getAnimationDefinitionsSize(store: Store): Int {
-        val lastArchiveId = store.indexes[20].lastArchiveId
-        return lastArchiveId * 128 + store.indexes[20].getValidFilesCount(lastArchiveId)
+    fun getAnimationDefinitionsSize(cache: Cache): Int {
+        val lastArchiveId = cache.indexes[20].lastArchiveId
+        return lastArchiveId * 128 + cache.indexes[20].getValidFilesCount(lastArchiveId)
     }
 
     /**
      * Gets item definitions size.
      *
-     * @param store the store
+     * @param cache the cache
      * @return the item definitions size
      */
     @JvmStatic
-    fun getItemDefinitionsSize(store: Store): Int {
-        val lastArchiveId = store.indexes[19].lastArchiveId
-        return lastArchiveId * 256 + store.indexes[19].getValidFilesCount(lastArchiveId)
+    fun getItemDefinitionsSize(cache: Cache): Int {
+        val lastArchiveId = cache.indexes[19].lastArchiveId
+        return lastArchiveId * 256 + cache.indexes[19].getValidFilesCount(lastArchiveId)
     }
 
     /**
      * Gets npc definitions size.
      *
-     * @param store the store
+     * @param cache the cache
      * @return the npc definitions size
      */
     @JvmStatic
-    fun getNPCDefinitionsSize(store: Store): Int {
-        val lastArchiveId = store.indexes[18].lastArchiveId
-        return lastArchiveId * 128 + store.indexes[18].getValidFilesCount(lastArchiveId)
+    fun getNPCDefinitionsSize(cache: Cache): Int {
+        val lastArchiveId = cache.indexes[18].lastArchiveId
+        return lastArchiveId * 128 + cache.indexes[18].getValidFilesCount(lastArchiveId)
     }
 
     /**
      * Gets object definitions size.
      *
-     * @param store the store
+     * @param cache the cache
      * @return the object definitions size
      */
     @JvmStatic
-    fun getObjectDefinitionsSize(store: Store): Int {
-        val lastArchiveId = store.indexes[16].lastArchiveId
-        return lastArchiveId * 256 + store.indexes[16].getValidFilesCount(lastArchiveId)
+    fun getObjectDefinitionsSize(cache: Cache): Int {
+        val lastArchiveId = cache.indexes[16].lastArchiveId
+        return lastArchiveId * 256 + cache.indexes[16].getValidFilesCount(lastArchiveId)
     }
 
     /**
      * Gets graphic definitions size.
      *
-     * @param store the store
+     * @param cache the cache
      * @return the graphic definitions size
      */
-    fun getGraphicDefinitionsSize(store: Store): Int {
-        val lastArchiveId = store.indexes[21].lastArchiveId
-        return lastArchiveId * 256 + store.indexes[21].getValidFilesCount(lastArchiveId)
+    fun getGraphicDefinitionsSize(cache: Cache): Int {
+        val lastArchiveId = cache.indexes[21].lastArchiveId
+        return lastArchiveId * 256 + cache.indexes[21].getValidFilesCount(lastArchiveId)
     }
 
     @JvmStatic
-    fun getClientScriptsSize(store: Store): Int {
-        val lastArchiveId = store.indexes[12].lastArchiveId
+    fun getClientScriptsSize(cache: Cache): Int {
+        val lastArchiveId = cache.indexes[12].lastArchiveId
         return lastArchiveId
     }
 
@@ -188,7 +191,8 @@ object Utils {
     @JvmStatic
     @Throws(IOException::class)
     fun getBytesFromFile(file: File): ByteArray {
-        FileInputStream(file).use { inputStream ->  // Automatically closes the stream when done
+        FileInputStream(file).use { inputStream ->
+            // Automatically closes the stream when done
             val length = file.length()
 
             // Check if file length exceeds Integer.MAX_VALUE
@@ -267,9 +271,17 @@ object Utils {
                 }
 
                 out1?.set(
-                    i++, ((f3.toDouble().pow(d).toFloat() * 256.0f).toInt() shl 16 or ((f4.toDouble().pow(d)
-                        .toFloat() * 256.0f).toInt() shl 8
-                            ) or (f5.toDouble().pow(d).toFloat() * 256.0f).toInt())
+                    i++,
+                    (
+                            (f3.toDouble().pow(d).toFloat() * 256.0f).toInt() shl 16 or (
+                                    (
+                                            f4
+                                                .toDouble()
+                                                .pow(d)
+                                                .toFloat() * 256.0f
+                                            ).toInt() shl 8
+                                    ) or (f5.toDouble().pow(d).toFloat() * 256.0f).toInt()
+                            ),
                 )
             }
         }
@@ -277,7 +289,7 @@ object Utils {
 
     fun copyToClipboard(color: String?) {
         val selection = StringSelection(color)
-        val clip: Clipboard = Toolkit.getDefaultToolkit().getSystemClipboard()
+        val clip: Clipboard = Toolkit.getDefaultToolkit().systemClipboard
         clip.setContents(selection, null)
     }
 
@@ -286,7 +298,11 @@ object Utils {
         return if (y >= 128) Color.black else Color.white
     }
 
-    fun RGB_to_RS2HSB(red: Int, green: Int, blue: Int): Int {
+    fun RGB_to_RS2HSB(
+        red: Int,
+        green: Int,
+        blue: Int,
+    ): Int {
         val HSB = Color.RGBtoHSB(red, green, blue, null)
         val hue = HSB[0]
         val saturation = HSB[1]
@@ -312,7 +328,10 @@ object Utils {
      * @return the int
      */
     @JvmStatic
-    fun packCustomModel(cache: Store, data: ByteArray?): Int {
+    fun packCustomModel(
+        cache: Cache,
+        data: ByteArray?,
+    ): Int {
         val archiveId = cache.indexes[7].lastArchiveId + 1
         return if (cache.indexes[7].putFile(archiveId, 0, data)) {
             archiveId
@@ -331,43 +350,40 @@ object Utils {
      * @return the int
      */
     @JvmStatic
-    fun packCustomModel(cache: Store, data: ByteArray?, modelId: Int): Int {
-        return if (cache.indexes[7].putFile(modelId, 0, data)) {
+    fun packCustomModel(
+        cache: Cache,
+        data: ByteArray?,
+        modelId: Int,
+    ): Int =
+        if (cache.indexes[7].putFile(modelId, 0, data)) {
             modelId
         } else {
             println("Failed packing model $modelId")
             -1
         }
-    }
 
     @JvmStatic
-    fun getTextureDiffuseSize(store: Store): Int {
-        return store.indexes[9].lastArchiveId
-    }
+    fun getTextureDiffuseSize(cache: Cache): Int = cache.indexes[9].lastArchiveId
 
     @JvmStatic
-    fun getSpriteDefinitionSize(store: Store): Int {
-        return store.indexes[8].lastArchiveId
-    }
+    fun getSpriteDefinitionSize(cache: Cache): Int = cache.indexes[8].lastArchiveId
 
     @JvmStatic
-    fun getParticleConfigSize(store: Store): Int {
-        return store.indexes[27].getLastFileId(0) + 1
-    }
+    fun getParticleConfigSize(cache: Cache): Int = cache.indexes[27].getLastFileId(0) + 1
 
     @JvmStatic
-    fun getMagnetConfigSize(store: Store): Int {
-        return store.indexes[27].getLastFileId(1) + 1
-    }
+    fun getMagnetConfigSize(cache: Cache): Int = cache.indexes[27].getLastFileId(1) + 1
 
     @JvmStatic
-    fun getConfigArchive(id: Int, bits: Int): Int {
-        return (id) shr bits
-    }
+    fun getConfigArchive(
+        id: Int,
+        bits: Int,
+    ): Int = (id) shr bits
 
     @JvmStatic
-    fun getConfigFile(id: Int, bits: Int): Int {
-        return (id) and (1 shl bits) - 1
-    }
+    fun getConfigFile(
+        id: Int,
+        bits: Int,
+    ): Int = (id) and (1 shl bits) - 1
 
 }

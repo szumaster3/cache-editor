@@ -11,7 +11,6 @@ import com.alex.defs.interfaces.ComponentDefinition
  * @date: 04/08/2019
  */
 object ContainerHelper {
-
     /**
      * Checks if the given component has a scroll bar script associated with it.
      *
@@ -21,10 +20,8 @@ object ContainerHelper {
     @JvmStatic
     fun isScrollBar(component: ComponentDefinition): Boolean {
         // Check if the component's onLoadScript matches the scroll bar script constant
-        if (component.onLoadScript != null && component.onLoadScript[0].toString().toInt() == ComponentConstants.SCROLL_BAR_SCRIPT) {
-            return true
-        }
-        return false
+        return component.onLoadScript != null && component.onLoadScript[0].toString()
+            .toInt() == ComponentConstants.SCROLL_BAR_SCRIPT
     }
 
     /**
@@ -36,9 +33,7 @@ object ContainerHelper {
     @JvmStatic
     fun isButton(component: ComponentDefinition): Boolean {
         // Check if the component's onLoadScript matches the button script constant
-        if (component.onLoadScript != null && component.onLoadScript[0].toString().toInt() == ComponentConstants.BUTTON_SCRIPT) {
-            return true
-        }
-        return false
+        return component.onLoadScript != null && component.onLoadScript[0].toString()
+            .toInt() == ComponentConstants.BUTTON_SCRIPT
     }
 }

@@ -1,14 +1,8 @@
 package com.editor.misc
 
-import java.awt.Color
-import java.awt.Dimension
-import java.awt.FlowLayout
-import java.awt.Graphics
-import java.awt.Graphics2D
-import java.awt.Toolkit
+import java.awt.*
 import java.awt.datatransfer.StringSelection
 import javax.swing.*
-import javax.swing.Timer
 
 class ColorPicker : JFrame() {
     private val colorPreview: JPanel
@@ -24,26 +18,28 @@ class ColorPicker : JFrame() {
         isResizable = false
         setLocationRelativeTo(null)
 
-        colorPreview = object : JPanel() {
-            override fun paintComponent(g: Graphics) {
-                super.paintComponent(g)
-                g.color = selectedColor
-                g.fillRect(0, 0, width, height)
+        colorPreview =
+            object : JPanel() {
+                override fun paintComponent(g: Graphics) {
+                    super.paintComponent(g)
+                    g.color = selectedColor
+                    g.fillRect(0, 0, width, height)
 
-                val luminance = 0.2126 * selectedColor.red + 0.7152 * selectedColor.green + 0.0722 * selectedColor.blue
-                val textColor = if (luminance < 128) Color.WHITE else Color.BLACK
+                    val luminance =
+                        0.2126 * selectedColor.red + 0.7152 * selectedColor.green + 0.0722 * selectedColor.blue
+                    val textColor = if (luminance < 128) Color.WHITE else Color.BLACK
 
-                val g2d = g as Graphics2D
-                g2d.color = textColor
-                g2d.font = g2d.font.deriveFont(12f).deriveFont(java.awt.Font.BOLD)
-                val text = "RS2: $rs2hsb"
+                    val g2d = g as Graphics2D
+                    g2d.color = textColor
+                    g2d.font = g2d.font.deriveFont(12f).deriveFont(Font.BOLD)
+                    val text = "RS2: $rs2hsb"
 
-                val fontMetrics = g2d.fontMetrics
-                val x = (width - fontMetrics.stringWidth(text)) / 2
-                val y = (height + fontMetrics.height) / 2
-                g2d.drawString(text, x, y)
+                    val fontMetrics = g2d.fontMetrics
+                    val x = (width - fontMetrics.stringWidth(text)) / 2
+                    val y = (height + fontMetrics.height) / 2
+                    g2d.drawString(text, x, y)
+                }
             }
-        }
         colorPreview.preferredSize = Dimension(175, 85)
         add(colorPreview)
 
@@ -118,7 +114,11 @@ class ColorPicker : JFrame() {
      * @param blue The blue component of the color (0-255).
      * @return An integer representing the color in RS2 HSB format, combining hue, saturation, and brightness.
      */
-    private fun rgbToRS2HSB(red: Int, green: Int, blue: Int): Int {
+    private fun rgbToRS2HSB(
+        red: Int,
+        green: Int,
+        blue: Int,
+    ): Int {
         val HSB = Color.RGBtoHSB(red, green, blue, null)
         val encode_hue = (HSB[0] * 63).toInt()
         val encode_saturation = (HSB[1] * 7).toInt()

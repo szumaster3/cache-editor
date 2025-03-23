@@ -8,7 +8,9 @@ import javax.swing.tree.DefaultMutableTreeNode
 import javax.swing.tree.DefaultTreeModel
 import javax.swing.tree.TreeSelectionModel
 
-class FileManager(private val library: CacheLibrary) : JFrame() {
+class FileManager(
+    private val library: CacheLibrary,
+) : JFrame() {
     private var selectedIndex: Int? = null
     private var selectedArchive: Int? = null
     private var selectedFile: Int? = null
@@ -19,7 +21,11 @@ class FileManager(private val library: CacheLibrary) : JFrame() {
 
         val mainPanel = JPanel(BorderLayout())
         val treePanel = createTreePanel()
-        val gbc = GridBagConstraints().apply { insets = Insets(5, 5, 5, 5); fill = GridBagConstraints.HORIZONTAL }
+        val gbc =
+            GridBagConstraints().apply {
+                insets = Insets(5, 5, 5, 5)
+                fill = GridBagConstraints.HORIZONTAL
+            }
 
         val actionPanel = JPanel(GridLayout(4, 5, 10, 10))
 
@@ -91,54 +97,47 @@ class FileManager(private val library: CacheLibrary) : JFrame() {
         }
     }
 
-    private fun createAddArchiveButton(): JButton {
-        return JButton("Add archive").apply {
+    private fun createAddArchiveButton(): JButton =
+        JButton("Add archive").apply {
             addActionListener { addArchive() }
             size = Dimension(40, 25)
         }
-    }
 
-    private fun createRemoveArchiveButton(): JButton {
-        return JButton("Remove archive").apply {
+    private fun createRemoveArchiveButton(): JButton =
+        JButton("Remove archive").apply {
             addActionListener { removeArchive() }
             size = Dimension(40, 25)
         }
-    }
 
-    private fun createAddFileButton(): JButton {
-        return JButton("Add file to archive").apply {
+    private fun createAddFileButton(): JButton =
+        JButton("Add file to archive").apply {
             addActionListener { addFileToArchive() }
             size = Dimension(40, 25)
         }
-    }
 
-    private fun createRemoveFileButton(): JButton {
-        return JButton("Remove file from archive").apply {
+    private fun createRemoveFileButton(): JButton =
+        JButton("Remove file from archive").apply {
             addActionListener { removeFileFromArchive() }
             size = Dimension(40, 25)
         }
-    }
 
-    private fun createUpdateIndexButton(): JButton {
-        return JButton("Update Index").apply {
+    private fun createUpdateIndexButton(): JButton =
+        JButton("Update Index").apply {
             addActionListener { updateIndex() }
             size = Dimension(40, 25)
         }
-    }
 
-    private fun createEditFileButton(): JButton {
-        return JButton("Edit file").apply {
+    private fun createEditFileButton(): JButton =
+        JButton("Edit file").apply {
             addActionListener { editFile() }
             size = Dimension(40, 25)
         }
-    }
 
-    private fun createSaveFileButton(): JButton {
-        return JButton("Save file").apply {
+    private fun createSaveFileButton(): JButton =
+        JButton("Save file").apply {
             addActionListener { saveFile() }
             size = Dimension(40, 25)
         }
-    }
 
     private fun editFile() {
         selectedIndex?.let { indexId ->
@@ -174,13 +173,12 @@ class FileManager(private val library: CacheLibrary) : JFrame() {
         return scrollPane
     }
 
-    private fun byteArrayToHex(byteArray: ByteArray): String {
-        return buildString {
+    private fun byteArrayToHex(byteArray: ByteArray): String =
+        buildString {
             for (byte in byteArray) {
                 append(String.format("%02X ", byte))
             }
         }
-    }
 
     private fun addArchive() {
         selectedIndex?.let {
@@ -239,5 +237,4 @@ class FileManager(private val library: CacheLibrary) : JFrame() {
     private fun saveFile() {
         JOptionPane.showMessageDialog(this, "WIP.")
     }
-
 }

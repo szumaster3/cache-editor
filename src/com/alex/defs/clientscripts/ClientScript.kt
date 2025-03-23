@@ -1,6 +1,6 @@
 package com.alex.defs.clientscripts
 
-import com.alex.filestore.Store
+import com.alex.filestore.Cache
 import com.alex.io.InputStream
 import java.io.BufferedWriter
 import java.io.File
@@ -8,7 +8,7 @@ import java.io.FileWriter
 import java.io.IOException
 
 class ClientScripts {
-    var STORE: Store? = null
+    var Cache: Cache? = null
     var aCharArray6195: CharArray? = null
     var aString6198: String? = null
     var aCharArray6205: CharArray? = null
@@ -25,8 +25,8 @@ class ClientScripts {
     var scripts: ArrayList<Any?> = ArrayList()
     var id: Int = 0
 
-    fun write(store: Store) {
-        store.indexes[12].putFile(id, 0, encode())
+    fun write(cache: Cache) {
+        cache.indexes[12].putFile(id, 0, encode())
     }
 
     fun encode(): ByteArray {
@@ -45,8 +45,10 @@ class ClientScripts {
     fun loadScripts(id: Int) {
         try {
             this.id = id
-            val data: ByteArray? = STORE!!.indexes[12]
-                .getFile(id, 0)
+            val data: ByteArray? =
+                Cache!!
+                    .indexes[12]
+                    .getFile(id, 0)
             if (data!!.isEmpty()) return
             method231(data, -2)
         } catch (e: RuntimeException) {
@@ -55,7 +57,10 @@ class ClientScripts {
     }
 
     @Suppress("unused")
-    fun method231(data: ByteArray?, arg1: Int) {
+    fun method231(
+        data: ByteArray?,
+        arg1: Int,
+    ) {
         try {
             val stream = InputStream(data)
             stream.offset = stream.buffer.size - 2

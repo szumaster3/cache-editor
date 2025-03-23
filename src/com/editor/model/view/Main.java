@@ -14,6 +14,9 @@ import java.util.Properties;
 
 public class Main extends JFrame implements Runnable {
     public static boolean isOptimizedSelected = false;
+    private static long gcDelay = 0L;
+    private static com.editor.model.view.render.Renderer renderer;
+    JFileChooser fileChooser2;
     private int posY = 159;
     private int posX = 268;
     private int axisX = 0;
@@ -22,20 +25,17 @@ public class Main extends JFrame implements Runnable {
     private int screenX = -1;
     private int screenY = -1;
     private String directoryPath = "";
-    private static long gcDelay = 0L;
     private com.editor.model.view.render.Canvas model;
-    private JFileChooser fileChooser1;
-    JFileChooser fileChooser2;
-    private static com.editor.model.view.render.Renderer renderer;
-    private JList<String> field44;
-    private JMenu field45;
-    private JMenuBar field46;
-    private JMenuItem field47;
-    private JScrollPane field48;
-    private JMenuItem field49;
-    private JMenuItem field50;
-    private JCheckBox optimizedRendering;
-    private JPanel modelViewerPanel;
+    private final JFileChooser fileChooser1;
+    private final JList<String> field44;
+    private final JMenu field45;
+    private final JMenuBar field46;
+    private final JMenuItem field47;
+    private final JScrollPane field48;
+    private final JMenuItem field49;
+    private final JMenuItem field50;
+    private final JCheckBox optimizedRendering;
+    private final JPanel modelViewerPanel;
 
     public Main() {
         this.fileChooser1 = new JFileChooser();
@@ -101,80 +101,6 @@ public class Main extends JFrame implements Runnable {
         EventQueue.invokeLater(new ModelRunner());
     }
 
-    public void run() {
-        while (true) {
-            if (this.model != null) {
-                try {
-                    renderer.updateModel(this.model, posX, this.axisY, posY, this.axisX, this.axisZ);
-                    renderer.updatePreview(0, 0, this.modelViewerPanel.getGraphics());
-                    renderer.clear();
-                } catch (Exception var5) {
-                    var5.printStackTrace();
-                }
-            }
-
-            try {
-                Thread.sleep(10L);
-            } catch (InterruptedException var3) {
-            }
-            if (System.currentTimeMillis() - gcDelay > 60000L) {
-                System.gc();
-                gcDelay = System.currentTimeMillis();
-            }
-        }
-    }
-
-    public final void render() {
-        renderer = new Renderer(this.modelViewerPanel.getWidth(), this.modelViewerPanel.getHeight(), this.modelViewerPanel);
-    }
-
-    @SuppressWarnings("unchecked")
-    public final void loadFiles() {
-        try {
-            FileInputStream var1 = new FileInputStream("");
-            Properties var2;
-            (var2 = new Properties()).load(var1);
-            String var3 = var2.getProperty("path");
-            String var8;
-            if ((var8 = var2.getProperty("optimize")) != null) {
-                isOptimizedSelected = Boolean.valueOf(var8).booleanValue();
-            }
-
-            this.optimizedRendering.setSelected(isOptimizedSelected);
-            if (var3 != null) {
-                this.directoryPath = var3;
-                File var9;
-                if ((var9 = new File(this.directoryPath)).isDirectory()) {
-                    System.out.println("" + this.directoryPath);
-                    int var6;
-                    File[] var10;
-                    String[] var4 = new String[var6 = (var10 = var9.listFiles()).length];
-
-                    for (int var5 = 0; var5 < var6; ++var5) {
-                        var4[var5] = var10[var5].getName();
-                    }
-
-                    this.field44.setModel(new EditorAbstractListModel2(this, var6, var4));
-                }
-
-                var1.close();
-            }
-        } catch (Exception var7) {
-            ;
-        }
-    }
-
-    private void method11() {
-        try {
-            Properties var1;
-            (var1 = new Properties()).setProperty("path", this.directoryPath);
-            var1.setProperty("optimize", Boolean.toString(isOptimizedSelected));
-            var1.store(new FileOutputStream(""), "");
-        } catch (IOException var2) {
-            var2.printStackTrace();
-        }
-    }
-
     private static byte[] getBytesFromFile(String var0) {
         try {
             int var2;
@@ -220,53 +146,9 @@ public class Main extends JFrame implements Runnable {
         }
     }
 
-    @SuppressWarnings("static-access")
-    public void mouseDragged(Main main, MouseEvent event) {
-        int x = event.getX();
-        int y = event.getY();
-        String button = event.getMouseModifiersText(event.getModifiersEx());
-        int mouseType = Character.getNumericValue(button.charAt(button.length() - 1));
-        if (mouseType == 1) {
-            if (main.screenX != -1 || main.screenY != -1) {
-                main.axisX += (main.screenX - x) * 3;
-                if (main.axisX < 0) {
-                    main.axisX += 2048;
-                } else if (main.axisX >= 2048) {
-                    main.axisX = 2048 - main.axisX;
-                }
-
-                main.axisY -= (main.screenY - y) * 3;
-                if (main.axisY < 0) {
-                    main.axisY += 2048;
-                } else if (main.axisY >= 2048) {
-                    main.axisY = 2048 - main.axisY;
-                }
-            }
-        } else if (mouseType == 2) {
-            if (main.screenX != -1 || main.screenY != -1) {
-                main.posX += x - main.screenX;
-                if (main.posX < 0) {
-                    main.posX += 2048;
-                } else if (main.posX >= 2048) {
-                    main.posX = 2048 - main.posX;
-                }
-
-                main.posY -= main.screenY - y;
-                if (main.posY < 0) {
-                    main.posY += 2048;
-                } else if (main.posY >= 2048) {
-                    main.posY = 2048 - main.posY;
-                }
-            }
-        }
-
-        main.screenX = x;
-        main.screenY = y;
-    }
-
     public static void listSelectionValueChanged(Main main, ListSelectionEvent var1) {
         if (!var1.getValueIsAdjusting()) {
-            String fileName = main.field44.getModel().getElementAt(main.field44.getAnchorSelectionIndex()).toString();
+            String fileName = main.field44.getModel().getElementAt(main.field44.getAnchorSelectionIndex());
             byte[] modelBytes;
             com.editor.model.view.render.Canvas model;
             if ((modelBytes = getBytesFromFile(main.directoryPath + System.getProperty("file.separator") + fileName))[modelBytes.length - 1] == -1 && modelBytes[modelBytes.length - 2] == -1) {
@@ -317,7 +199,7 @@ public class Main extends JFrame implements Runnable {
         File var5;
         if (var0.fileChooser2.showOpenDialog(var0) == 0 && (var5 = var0.fileChooser2.getSelectedFile()).isDirectory()) {
             var0.directoryPath = var5.getAbsolutePath();
-            System.out.println("" + var0.directoryPath);
+            System.out.println(var0.directoryPath);
             int var2;
             File[] var6;
             String[] var3 = new String[var2 = (var6 = var5.listFiles()).length];
@@ -330,5 +212,122 @@ public class Main extends JFrame implements Runnable {
             var0.method11();
         }
 
+    }
+
+    public void run() {
+        while (true) {
+            if (this.model != null) {
+                try {
+                    renderer.updateModel(this.model, posX, this.axisY, posY, this.axisX, this.axisZ);
+                    renderer.updatePreview(0, 0, this.modelViewerPanel.getGraphics());
+                    renderer.clear();
+                } catch (Exception var5) {
+                    var5.printStackTrace();
+                }
+            }
+
+            try {
+                Thread.sleep(10L);
+            } catch (InterruptedException var3) {
+            }
+            if (System.currentTimeMillis() - gcDelay > 60000L) {
+                System.gc();
+                gcDelay = System.currentTimeMillis();
+            }
+        }
+    }
+
+    public final void render() {
+        renderer = new Renderer(this.modelViewerPanel.getWidth(), this.modelViewerPanel.getHeight(), this.modelViewerPanel);
+    }
+
+    @SuppressWarnings("unchecked")
+    public final void loadFiles() {
+        try {
+            FileInputStream var1 = new FileInputStream("");
+            Properties var2;
+            (var2 = new Properties()).load(var1);
+            String var3 = var2.getProperty("path");
+            String var8;
+            if ((var8 = var2.getProperty("optimize")) != null) {
+                isOptimizedSelected = Boolean.valueOf(var8).booleanValue();
+            }
+
+            this.optimizedRendering.setSelected(isOptimizedSelected);
+            if (var3 != null) {
+                this.directoryPath = var3;
+                File var9;
+                if ((var9 = new File(this.directoryPath)).isDirectory()) {
+                    System.out.println(this.directoryPath);
+                    int var6;
+                    File[] var10;
+                    String[] var4 = new String[var6 = (var10 = var9.listFiles()).length];
+
+                    for (int var5 = 0; var5 < var6; ++var5) {
+                        var4[var5] = var10[var5].getName();
+                    }
+
+                    this.field44.setModel(new EditorAbstractListModel2(this, var6, var4));
+                }
+
+                var1.close();
+            }
+        } catch (Exception var7) {
+        }
+    }
+
+    private void method11() {
+        try {
+            Properties var1;
+            (var1 = new Properties()).setProperty("path", this.directoryPath);
+            var1.setProperty("optimize", Boolean.toString(isOptimizedSelected));
+            var1.store(new FileOutputStream(""), "");
+        } catch (IOException var2) {
+            var2.printStackTrace();
+        }
+    }
+
+    @SuppressWarnings("static-access")
+    public void mouseDragged(Main main, MouseEvent event) {
+        int x = event.getX();
+        int y = event.getY();
+        String button = event.getMouseModifiersText(event.getModifiersEx());
+        int mouseType = Character.getNumericValue(button.charAt(button.length() - 1));
+        if (mouseType == 1) {
+            if (main.screenX != -1 || main.screenY != -1) {
+                main.axisX += (main.screenX - x) * 3;
+                if (main.axisX < 0) {
+                    main.axisX += 2048;
+                } else if (main.axisX >= 2048) {
+                    main.axisX = 2048 - main.axisX;
+                }
+
+                main.axisY -= (main.screenY - y) * 3;
+                if (main.axisY < 0) {
+                    main.axisY += 2048;
+                } else if (main.axisY >= 2048) {
+                    main.axisY = 2048 - main.axisY;
+                }
+            }
+        } else if (mouseType == 2) {
+            if (main.screenX != -1 || main.screenY != -1) {
+                main.posX += x - main.screenX;
+                if (main.posX < 0) {
+                    main.posX += 2048;
+                } else if (main.posX >= 2048) {
+                    main.posX = 2048 - main.posX;
+                }
+
+                main.posY -= main.screenY - y;
+                if (main.posY < 0) {
+                    main.posY += 2048;
+                } else if (main.posY >= 2048) {
+                    main.posY = 2048 - main.posY;
+                }
+            }
+        }
+
+        main.screenX = x;
+        main.screenY = y;
     }
 }

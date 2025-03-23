@@ -4,55 +4,55 @@ import com.alex.io.InputStream;
 import com.alex.io.OutputStream;
 
 public class Model implements Cloneable {
-    public boolean isNewHeader = false;
-    public Surface[] surfaces;
-    public int modelId = 0;
     public static int[] anIntArray1490;
-    public byte[] aByteArray1491;
     public static int anInt1492;
     //public byte[] faceRenderType; aByteArray1493
     public static int anInt1494 = 0;
-    public int numTexTriangles = 0;
-    public short[] aShortArray1496;
     public static int anInt1497;
     public static int anInt1498;
-    public int[] anIntArray1500;
-    //public short[] texTrianglesPoint1; textureTriangleNIndex
-    public short[] aShortArray1502;
     public static int anInt1503;
-    public short[] aShortArray1504;
     //public byte[] faceAlpha; aByteArray1505
     public static int anInt1507;
     public static int anInt1508;
     public static int anInt1509;
     public static int anInt1510;
-    //public int[] vertexY;
-    /// public short[] texTrianglesPoint3; textureTrianglePIndex
-    //public short[] aShortArray1513; triangleViewspaceY
-    //public short[] aShortArray1514; triangleViewspaceX
-    public byte[] aByteArray1515;
     //public short[] colorValues; modelColors
     public static int anInt1517;
     public static int[] anIntArray1518;
     public static int anInt1519;
-    //public short[] faceTexture;
-    public byte[] aByteArray1521;
-    //public byte[] trianglePriorities;
-    public byte[] aByteArray1523;
-    //public int[] anIntArray1524;//faceTexture
-    public short[] aShortArray1525;
     //public static int anInt1526;
     public static int anInt1527;
-    //public int numVertices1;
-    public byte[] aByteArray1529;
-    public short[] aShortArray1530;
-    public byte[] aByteArray1532;
     //public int[] vertexX;
     //public int[] vertexZ;
     //public int numTriangles1;
     //public short[] texTrianglesPoint2; textureTriangleMIndex
     public static int anInt1538;
     public static int anInt1539;
+    public boolean isNewHeader = false;
+    public Surface[] surfaces;
+    public int modelId = 0;
+    //public int[] vertexY;
+    public byte[] aByteArray1491;
+    public int numTexTriangles = 0;
+    public short[] aShortArray1496;
+    public int[] anIntArray1500;
+    //public short[] texTrianglesPoint1; textureTriangleNIndex
+    public short[] aShortArray1502;
+    public short[] aShortArray1504;
+    /// public short[] texTrianglesPoint3; textureTrianglePIndex
+    //public short[] aShortArray1513; triangleViewspaceY
+    //public short[] aShortArray1514; triangleViewspaceX
+    public byte[] aByteArray1515;
+    //public short[] faceTexture;
+    public byte[] aByteArray1521;
+    //public byte[] trianglePriorities;
+    public byte[] aByteArray1523;
+    //public int[] anIntArray1524;//faceTexture
+    public short[] aShortArray1525;
+    //public int numVertices1;
+    public byte[] aByteArray1529;
+    public short[] aShortArray1530;
+    public byte[] aByteArray1532;
     //public byte[] textureCoords;
     //public short[] aShortArray1541; triangleViewspaceZ
     public boolean isNewModel;
@@ -144,7 +144,7 @@ public class Model implements Cloneable {
         if (temp_isolated_normal_count != 0 || temp_skinAmount != 0) hash += 2;
 
         stream.writeByte(hash);
-        ;//add has_large_size
+        //add has_large_size
         //if has_large_size
         //stream.writeByte(newformat);
         stream.writeByte(trianglePriorities != null ? 255 : 0);

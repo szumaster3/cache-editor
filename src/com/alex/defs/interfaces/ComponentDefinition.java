@@ -1,16 +1,14 @@
 package com.alex.defs.interfaces;
 
-import java.util.ArrayList;
-import java.util.Hashtable;
-
-import com.alex.filestore.Store;
+import com.alex.filestore.Cache;
 import com.alex.io.InputStream;
 import com.alex.io.OutputStream;
-
 import com.editor.cache.iface.util.ComponentConstants;
 import com.editor.cache.iface.util.ComponentPosition;
 import com.editor.cache.iface.util.InterfaceUtils;
-import console.Main;
+
+import java.util.ArrayList;
+import java.util.Hashtable;
 
 /**
  * Interface tool
@@ -18,7 +16,7 @@ import console.Main;
  * #Shnek6969
  */
 public class ComponentDefinition {
-	public static Store STORE;
+	public static Cache Cache;
 	public static ComponentDefinition[][] icomponentsdefs = new ComponentDefinition[850][];
 	private static IComponentSettings GLOBAL_SETTINGS = new IComponentSettings(0, -1);
 /**
@@ -212,17 +210,17 @@ public class ComponentDefinition {
 	public static ComponentDefinition[] getInterface(int id) {
 		// You need to specify how to load/store the cache when this method is called
 		// For now, assume reload=false and store is available globally or passed elsewhere
-		return getInterface(id, false, STORE); // Corrected call
+		return getInterface(id, false, Cache); // Corrected call
 	}
 
 	/**
 	 * Returns an array of components aka the interface
 	 * @param id Interface ID
 	 * @param reload Whether to reload the interface
-	 * @param store The store containing the data
+	 * @param cache The cache containing the data
 	 * @return The array of components for the interface
 	 */
-	public static ComponentDefinition[] getInterface(int id, boolean reload, Store store) {
+	public static ComponentDefinition[] getInterface(int id, boolean reload, Cache cache) {
 		if (id >= icomponentsdefs.length) {
 			System.out.println("Interface ID " + id + " is out of bounds.");
 			return null;
@@ -230,18 +228,18 @@ public class ComponentDefinition {
 
 		// Prevent recursion by checking if the data is already loaded
 		if (icomponentsdefs[id] == null || reload) {
-			if (store == null || store.getIndexes() == null || store.getIndexes().length < 4 || store.getIndexes()[3] == null) {
-				System.out.println("Store or required index is null for interface " + id);
+			if (cache == null || cache.getIndexes() == null || cache.getIndexes().length < 4 || cache.getIndexes()[3] == null) {
+				System.out.println("Cache or required index is null for interface " + id);
 				return null;
 			}
 
 			// Initialize or reload the component definitions for this interface
-			icomponentsdefs[id] = new ComponentDefinition[getInterfaceDefinitionsComponentsSize(store, id)];
+			icomponentsdefs[id] = new ComponentDefinition[getInterfaceDefinitionsComponentsSize(cache, id)];
 			System.out.println("Initializing interface " + id + " with " + icomponentsdefs[id].length + " components.");
 
 			// Load components for the interface
 			for (int i = 0; i < icomponentsdefs[id].length; i++) {
-				byte[] data = store.getIndexes()[3].getFile(id, i);
+				byte[] data = cache.getIndexes()[3].getFile(id, i);
 				if (data == null) {
 					System.out.println("Component " + i + " from interface " + id + " is null, on initial load.");
 				} else {
@@ -260,21 +258,21 @@ public class ComponentDefinition {
 
 	/**
 	 * Returns the size of the interface definitions.
-	 * @param store The store containing the data
+	 * @param cache The cache containing the data
 	 * @return The size of the interface definitions
 	 */
-	public static int getInterfaceDefinitionsSize(Store store) {
-		return store.getIndexes()[3].getLastArchiveId() + 1;
+	public static int getInterfaceDefinitionsSize(Cache cache) {
+		return cache.getIndexes()[3].getLastArchiveId() + 1;
 	}
 
 	/**
 	 * Returns the size of the components for a specific interface.
-	 * @param store The store containing the data
+	 * @param cache The cache containing the data
 	 * @param interfaceId The interface ID
 	 * @return The size of the components for the interface
 	 */
-	public static int getInterfaceDefinitionsComponentsSize(Store store, int interfaceId) {
-		return store.getIndexes()[3].getLastFileId(interfaceId) + 1;
+	public static int getInterfaceDefinitionsComponentsSize(Cache cache, int interfaceId) {
+		return cache.getIndexes()[3].getLastFileId(interfaceId) + 1;
 	}
 	/**
 

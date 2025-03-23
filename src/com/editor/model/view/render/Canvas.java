@@ -5,6 +5,59 @@ import com.editor.model.view.properties.ModelProperties;
 import com.editor.model.view.properties.PanelProperties;
 
 public final class Canvas extends Field {
+    private static final int[] field134;
+    private static final int[] field135;
+    private static final int[] field136;
+    private static ModelProperties[] properties;
+    private static final boolean[] field119;
+    private static final boolean[] field120;
+    private static final int[] field121;
+    private static final int[] field122;
+    private static final int[] field123;
+    private static final int[] field124;
+    private static final int[] field125;
+    private static final int[] field126;
+    private static final int[] field127;
+    private static final int[][] field128;
+    private static final int[] field129;
+    private static final int[][] field130;
+    private static final int[] field131;
+    private static final int[] field132;
+    private static final int[] field133;
+    @SuppressWarnings("unused")
+    private static final int[] field137;
+    private static final int[] field138;
+    private static final int[] field139;
+    private static final int[] field140;
+    private static final int[] field141;
+
+    static {
+        new Canvas();
+        field119 = new boolean[4096];
+        field120 = new boolean[4096];
+        field121 = new int[4096];
+        field122 = new int[4096];
+        field123 = new int[4096];
+        field124 = new int[4096];
+        field125 = new int[4096];
+        field126 = new int[4096];
+        field127 = new int[1500];
+        field128 = new int[1500][512];
+        field129 = new int[12];
+        field130 = new int[12][2000];
+        field131 = new int[2000];
+        field132 = new int[2000];
+        field133 = new int[12];
+        field134 = new int[10];
+        field135 = new int[10];
+        field136 = new int[10];
+        field137 = new int[1000];
+        field138 = ModelCanvas.field16;
+        field139 = ModelCanvas.field17;
+        field140 = ModelCanvas.faceLighting;
+        field141 = ModelCanvas.field15;
+    }
+
     public boolean isNewHeader = false;
     private int verticeCount;
     private int[] vertexX;
@@ -33,130 +86,8 @@ public final class Canvas extends Field {
     private int[] triangleSkinValues;
     @SuppressWarnings("unused")
     private Fields[] field117;
-    private static ModelProperties[] properties;
-    private static boolean[] field119;
-    private static boolean[] field120;
-    private static int[] field121;
-    private static int[] field122;
-    private static int[] field123;
-    private static int[] field124;
-    private static int[] field125;
-    private static int[] field126;
-    private static int[] field127;
-    private static int[][] field128;
-    private static int[] field129;
-    private static int[][] field130;
-    private static int[] field131;
-    private static int[] field132;
-    private static int[] field133;
-    private static final int[] field134;
-    private static final int[] field135;
-    private static final int[] field136;
-    @SuppressWarnings("unused")
-    private static int[] field137;
-    private static int[] field138;
-    private static int[] field139;
-    private static int[] field140;
-    private static int[] field141;
-
-    public static void load() {
-        properties = new ModelProperties[1];
-    }
-
-    public static void initModel(byte[] data) {//load empty model
-        if (data == null) {
-            ModelProperties prop = properties[0] = new ModelProperties();
-            prop.numVertices = 0;
-            prop.numTriangles = 0;
-            prop.numTexTriangles = 0;
-        } else {
-            Buffer buffer = new Buffer(data);
-            buffer.offset = data.length - 18;
-            ModelProperties prop = properties[0] = new ModelProperties();
-            prop.data = data;
-            prop.numVertices = buffer.readUnsignedShort();
-            prop.numTriangles = buffer.readUnsignedShort();
-            prop.numTexTriangles = buffer.readUnsignedByte();
-            int hash = buffer.readUnsignedByte();
-            int var3 = buffer.readUnsignedByte();
-            int var4 = buffer.readUnsignedByte();
-            int var5 = buffer.readUnsignedByte();
-            int var6 = buffer.readUnsignedByte();
-            int var7 = buffer.readUnsignedShort();
-            int var8 = buffer.readUnsignedShort();
-            buffer.readUnsignedShort();
-            int var11 = buffer.readUnsignedShort();
-
-            prop.field70 = 0;
-            int var9 = 0 + prop.numVertices;
-            prop.field76 = var9;
-            var9 += prop.numTriangles;
-            prop.field79 = var9;
-            if (var3 == 255) {
-                var9 += prop.numTriangles;
-            } else {
-                prop.field79 = -var3 - 1;
-            }
-
-            prop.field81 = var9;
-            if (var5 == 1) {
-                var9 += prop.numTriangles;
-            } else {
-                prop.field81 = -1;
-            }
-
-            prop.field78 = var9;
-            if (hash == 1) {
-                var9 += prop.numTriangles;
-            } else {
-                prop.field78 = -1;
-            }
-
-            prop.field74 = var9;
-            if (var6 == 1) {
-                var9 += prop.numVertices;
-            } else {
-                prop.field74 = -1;
-            }
-
-            prop.field80 = var9;
-            if (var4 == 1) {
-                var9 += prop.numTriangles;
-            } else {
-                prop.field80 = -1;
-            }
-
-            prop.field75 = var9;
-            var9 += var11;
-            prop.field77 = var9;
-            var9 += prop.numTriangles << 1;
-            prop.field82 = var9;
-            var9 += prop.numTexTriangles * 6;
-            prop.field71 = var9;
-            var9 += var7;
-            prop.field72 = var9;
-            var9 += var8;
-            prop.field73 = var9;
-        }
-    }
-
-    public static Canvas createEmptyModel() {
-        return properties == null ? null : new Canvas(0);
-    }
-
-    public static Canvas loadModel(byte[] modelBytes) {
-        return new Canvas(modelBytes);
-    }
 
     private Canvas() {
-    }
-
-    public final void downScaleModel(int scale) {
-        for (int i = 0; i < this.verticeCount; ++i) {
-            this.vertexX[i] /= scale;//default is 4
-            this.vertexY[i] /= scale;
-            this.vertexZ[i] /= scale;
-        }
     }
 
     private Canvas(byte[] data) {
@@ -1130,7 +1061,124 @@ public final class Canvas extends Field {
 
     }
 
-    public final void method38(int var1, int uselessInt, int var3, int var4, int var5, boolean uselessBool) {
+    public static void load() {
+        properties = new ModelProperties[1];
+    }
+
+    public static void initModel(byte[] data) {//load empty model
+        if (data == null) {
+            ModelProperties prop = properties[0] = new ModelProperties();
+            prop.numVertices = 0;
+            prop.numTriangles = 0;
+            prop.numTexTriangles = 0;
+        } else {
+            Buffer buffer = new Buffer(data);
+            buffer.offset = data.length - 18;
+            ModelProperties prop = properties[0] = new ModelProperties();
+            prop.data = data;
+            prop.numVertices = buffer.readUnsignedShort();
+            prop.numTriangles = buffer.readUnsignedShort();
+            prop.numTexTriangles = buffer.readUnsignedByte();
+            int hash = buffer.readUnsignedByte();
+            int var3 = buffer.readUnsignedByte();
+            int var4 = buffer.readUnsignedByte();
+            int var5 = buffer.readUnsignedByte();
+            int var6 = buffer.readUnsignedByte();
+            int var7 = buffer.readUnsignedShort();
+            int var8 = buffer.readUnsignedShort();
+            buffer.readUnsignedShort();
+            int var11 = buffer.readUnsignedShort();
+
+            prop.field70 = 0;
+            int var9 = prop.numVertices;
+            prop.field76 = var9;
+            var9 += prop.numTriangles;
+            prop.field79 = var9;
+            if (var3 == 255) {
+                var9 += prop.numTriangles;
+            } else {
+                prop.field79 = -var3 - 1;
+            }
+
+            prop.field81 = var9;
+            if (var5 == 1) {
+                var9 += prop.numTriangles;
+            } else {
+                prop.field81 = -1;
+            }
+
+            prop.field78 = var9;
+            if (hash == 1) {
+                var9 += prop.numTriangles;
+            } else {
+                prop.field78 = -1;
+            }
+
+            prop.field74 = var9;
+            if (var6 == 1) {
+                var9 += prop.numVertices;
+            } else {
+                prop.field74 = -1;
+            }
+
+            prop.field80 = var9;
+            if (var4 == 1) {
+                var9 += prop.numTriangles;
+            } else {
+                prop.field80 = -1;
+            }
+
+            prop.field75 = var9;
+            var9 += var11;
+            prop.field77 = var9;
+            var9 += prop.numTriangles << 1;
+            prop.field82 = var9;
+            var9 += prop.numTexTriangles * 6;
+            prop.field71 = var9;
+            var9 += var7;
+            prop.field72 = var9;
+            var9 += var8;
+            prop.field73 = var9;
+        }
+    }
+
+    public static Canvas createEmptyModel() {
+        return properties == null ? null : new Canvas(0);
+    }
+
+    public static Canvas loadModel(byte[] modelBytes) {
+        return new Canvas(modelBytes);
+    }
+
+    private static int method39(int var0, int var1, int var2) {
+        if ((var2 & 2) == 2) {
+            if (var1 < 0) {
+                var1 = 0;
+            } else if (var1 > 127) {
+                var1 = 127;
+            }
+
+            return var1 = 127 - var1;
+        } else {
+            if ((var1 = var1 * (var0 & 127) >> 7) < 2) {
+                var1 = 2;
+            } else if (var1 > 126) {
+                var1 = 126;
+            }
+
+            return (var0 & 'ﾀ') + var1;
+        }
+    }
+
+    public void downScaleModel(int scale) {
+        for (int i = 0; i < this.verticeCount; ++i) {
+            this.vertexX[i] /= scale;//default is 4
+            this.vertexY[i] /= scale;
+            this.vertexZ[i] /= scale;
+        }
+    }
+
+    public void method38(int var1, int uselessInt, int var3, int var4, int var5, boolean uselessBool) {
         var1 = (int) Math.sqrt(5100.0D);
         var1 = var1 * 768 >> 8;
         if (this.field100 == null) {
@@ -1175,7 +1223,7 @@ public final class Canvas extends Field {
                 var8 >>= 1;
             }
 
-            if ((var7 = (int) Math.sqrt((double) (var12 * var12 + var8 * var8 + var20 * var20))) <= 0) {
+            if ((var7 = (int) Math.sqrt(var12 * var12 + var8 * var8 + var20 * var20)) <= 0) {
                 var7 = 1;
             }
 
@@ -1284,32 +1332,12 @@ public final class Canvas extends Field {
             }
         }
 
-        var14.field111 = (int) (Math.sqrt((double) var14.field111) + 0.99D);
-        var14.field114 = (int) (Math.sqrt((double) (var14.field111 * var14.field111 + var14.field90 * var14.field90)) + 0.99D);
-        var14.field113 = var14.field114 + (int) (Math.sqrt((double) (var14.field111 * var14.field111 + var14.field112 * var14.field112)) + 0.99D);
+        var14.field111 = (int) (Math.sqrt(var14.field111) + 0.99D);
+        var14.field114 = (int) (Math.sqrt(var14.field111 * var14.field111 + var14.field90 * var14.field90) + 0.99D);
+        var14.field113 = var14.field114 + (int) (Math.sqrt(var14.field111 * var14.field111 + var14.field112 * var14.field112) + 0.99D);
     }
 
-    private static int method39(int var0, int var1, int var2) {
-        if ((var2 & 2) == 2) {
-            if (var1 < 0) {
-                var1 = 0;
-            } else if (var1 > 127) {
-                var1 = 127;
-            }
-
-            return var1 = 127 - var1;
-        } else {
-            if ((var1 = var1 * (var0 & 127) >> 7) < 2) {
-                var1 = 2;
-            } else if (var1 > 126) {
-                var1 = 126;
-            }
-
-            return (var0 & 'ﾀ') + var1;
-        }
-    }
-
-    public final void setViewPoint(int var1, int axisY, int var3, int axisX, int var5, int var6, int axisZ) {
+    public void setViewPoint(int var1, int axisY, int var3, int axisX, int var5, int var6, int axisZ) {
         var5 = ModelCanvas.screenPosX;
         int var8 = ModelCanvas.screenPosY;
         int var9 = field138[var1];
@@ -1530,7 +1558,6 @@ public final class Canvas extends Field {
                 }
             }
         } catch (Exception var27) {
-            ;
         }
 
     }
@@ -1747,32 +1774,5 @@ public final class Canvas extends Field {
 
             }
         }
-    }
-
-    static {
-        new Canvas();
-        field119 = new boolean[4096];
-        field120 = new boolean[4096];
-        field121 = new int[4096];
-        field122 = new int[4096];
-        field123 = new int[4096];
-        field124 = new int[4096];
-        field125 = new int[4096];
-        field126 = new int[4096];
-        field127 = new int[1500];
-        field128 = new int[1500][512];
-        field129 = new int[12];
-        field130 = new int[12][2000];
-        field131 = new int[2000];
-        field132 = new int[2000];
-        field133 = new int[12];
-        field134 = new int[10];
-        field135 = new int[10];
-        field136 = new int[10];
-        field137 = new int[1000];
-        field138 = ModelCanvas.field16;
-        field139 = ModelCanvas.field17;
-        field140 = ModelCanvas.faceLighting;
-        field141 = ModelCanvas.field15;
     }
 }

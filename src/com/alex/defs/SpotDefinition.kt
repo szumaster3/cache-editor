@@ -1,11 +1,12 @@
 package com.alex.defs
 
-import com.alex.filestore.Store
+import com.alex.filestore.Cache
 import com.alex.io.InputStream
 import com.alex.io.OutputStream
 
-data class SpotDefinition(var id: Int) : Cloneable {
-
+data class SpotDefinition(
+    var id: Int,
+) : Cloneable {
     var modelId: Int = -1
     var animation: Int = 0
     var resizeX: Int = 128
@@ -174,16 +175,10 @@ data class SpotDefinition(var id: Int) : Cloneable {
         return payload
     }
 
-    fun write(cache: Store): Boolean {
-        return cache.getIndexes()[21].putFile(id shr 8, id and 0xff, encode())
-    }
+    fun write(cache: Cache): Boolean = cache.getIndexes()[21].putFile(id shr 8, id and 0xff, encode())
 
-    override fun toString(): String {
-        return id.toString()
-    }
+    override fun toString(): String = id.toString()
 
     @Suppress("UNCHECKED_CAST")
-    override fun clone(): SpotDefinition {
-        return this.copy()
-    }
+    override fun clone(): SpotDefinition = this.copy()
 }

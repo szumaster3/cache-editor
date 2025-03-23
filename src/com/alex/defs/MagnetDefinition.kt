@@ -1,11 +1,12 @@
 package com.alex.defs
 
-import com.alex.filestore.Store
+import com.alex.filestore.Cache
 import com.alex.io.InputStream
 import com.alex.io.OutputStream
 
-class MagnetDefinition(val id: Int) : Cloneable {
-
+class MagnetDefinition(
+    val id: Int,
+) : Cloneable {
     var intensity: Int = 0
     var positionX: Int = 0
     var positionY: Int = 0
@@ -78,7 +79,5 @@ class MagnetDefinition(val id: Int) : Cloneable {
         return flipped
     }
 
-    fun write(cache: Store): Boolean {
-        return cache.indexes[27].putFile(1, id, encode())
-    }
+    fun write(cache: Cache): Boolean = cache.indexes[27].putFile(1, id, encode())
 }

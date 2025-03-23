@@ -264,7 +264,7 @@ public class ObjectEditor extends JFrame {
             this.defs.projectileCliped = this.projectileClipped.isSelected();
             this.defs.setClipped(this.clippedCheckBox.isSelected());
 
-            this.defs.write(ObjectSelection.STORE);
+            this.defs.write(ObjectSelection.Cache);
             this.os.updateObjectDefs(this.defs);
 
             JOptionPane.showMessageDialog(this, "Object saved.");

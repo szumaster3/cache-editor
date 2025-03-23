@@ -4,7 +4,6 @@ public abstract class Stream {
     public int offset;
     protected int length;
     protected byte[] buffer;
-    protected int bitPosition;
 
     public int getLength() {
         return this.length;

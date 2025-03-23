@@ -1620,8 +1620,6 @@ abstract class IComponent {
          * @param arg0 the arg 0
          * @return the int
          */
-        fun method2412(arg0: Int): Int {
-            return 127 and (arg0 shr -809958741)
-        }
+        fun method2412(arg0: Int): Int = 127 and (arg0 shr -809958741)
     }
 }

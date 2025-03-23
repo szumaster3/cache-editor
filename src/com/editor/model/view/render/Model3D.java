@@ -92,8 +92,8 @@ public class Model3D extends Model {
             boolean textured = textures != null;
             //bool textured = Form1.enableModelTextures & textures != null;
             gl.glBegin(GL.GL_TRIANGLES);
-            byte r = ((byte) ((int) color >> 16));
-            byte g = ((byte) ((int) color >> 8));
+            byte r = ((byte) (color >> 16));
+            byte g = ((byte) (color >> 8));
             byte b = ((byte) color);
             byte alpha = (byte) (faceAlpha == null ? 0xff : ~faceAlpha[triangle]);
             /*if (r < 0)

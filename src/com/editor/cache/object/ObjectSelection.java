@@ -1,7 +1,7 @@
 package com.editor.cache.object;
 
 import com.alex.defs.objects.ObjectDefinitions;
-import com.alex.filestore.Store;
+import com.alex.filestore.Cache;
 import com.alex.util.Utils;
 import console.Main;
 
@@ -15,7 +15,7 @@ import java.io.IOException;
  */
 public class ObjectSelection extends JFrame {
     private static final long serialVersionUID = 3916958457638397356L;
-    public static Store STORE;
+    public static Cache Cache;
     private JButton addButton;
     private JButton duplicateButton;
     private JButton editButton;
@@ -33,7 +33,7 @@ public class ObjectSelection extends JFrame {
      * @throws IOException the io exception
      */
     public ObjectSelection(String cache) throws IOException {
-        STORE = new Store(cache);
+        Cache = new Cache(cache);
         setTitle("Object Selection");
         setResizable(false);
         setDefaultCloseOperation(1);
@@ -55,7 +55,7 @@ public class ObjectSelection extends JFrame {
      * @throws IOException the io exception
      */
     public static void main(String[] args) throws IOException {
-        STORE = new Store("cache/", false);
+        Cache = new Cache("cache/", false);
         EventQueue.invokeLater(() -> new ObjectSelection().setVisible(true));
     }
 
@@ -74,9 +74,27 @@ public class ObjectSelection extends JFrame {
         objectsList.setCellRenderer(new ObjectListCellRenderer());
         JScrollPane jScrollPane1 = new JScrollPane(objectsList);
 
-        editButton.addActionListener(e -> editObject());
-        addButton.addActionListener(e -> addNewObject());
-        duplicateButton.addActionListener(e -> duplicateObject());
+        editButton.addActionListener(e -> {
+            try {
+                editObject();
+            } catch (IOException ex) {
+                throw new RuntimeException(ex);
+            }
+        });
+        addButton.addActionListener(e -> {
+            try {
+                addNewObject();
+            } catch (IOException ex) {
+                throw new RuntimeException(ex);
+            }
+        });
+        duplicateButton.addActionListener(e -> {
+            try {
+                duplicateObject();
+            } catch (IOException ex) {
+                throw new RuntimeException(ex);
+            }
+        });
         deleteButton.addActionListener(e -> deleteObject());
 
         exitButton.addActionListener(this::exitButtonActionPerformed);
@@ -134,9 +152,9 @@ public class ObjectSelection extends JFrame {
      */
     public void addAllObjects() {
         int id;
-        int totalObjects = Utils.getObjectDefinitionsSize(STORE);
+        int totalObjects = Utils.getObjectDefinitionsSize(Cache);
         for (id = 0; id < totalObjects; ++id) {
-            this.addObjectDefs(ObjectDefinitions.getObjectDefinition(STORE, id));
+            this.addObjectDefs(ObjectDefinitions.getObjectDefinition(Cache, id));
         }
 
         Main.log("ObjectSelection", "All Objects Loaded");
@@ -176,7 +194,7 @@ public class ObjectSelection extends JFrame {
         EventQueue.invokeLater(() -> objectsListModel.removeElement(obj));
     }
 
-    private void editObject() {
+    private void editObject() throws IOException {
         int selectedIndex = objectsList.getSelectedIndex();
         if (selectedIndex != -1) {
             ObjectDefinitions obj = objectsList.getSelectedValue();
@@ -186,8 +204,8 @@ public class ObjectSelection extends JFrame {
         }
     }
 
-    private void addNewObject() {
-        ObjectDefinitions obj = new ObjectDefinitions(ObjectSelection.STORE, getNewObjectID(), false);
+    private void addNewObject() throws IOException {
+        ObjectDefinitions obj = new ObjectDefinitions(ObjectSelection.Cache, getNewObjectID(), false);
         if (obj != null && obj.id != -1) {
             System.out.println("Adding new object with ID: " + obj.id);
             new ObjectEditor(this, obj).setVisible(true);
@@ -196,7 +214,7 @@ public class ObjectSelection extends JFrame {
         }
     }
 
-    private void duplicateObject() {
+    private void duplicateObject() throws IOException {
         ObjectDefinitions obj = objectsList.getSelectedValue();
         if (obj != null) {
             ObjectDefinitions clonedObj = (ObjectDefinitions) obj.clone();
@@ -215,7 +233,7 @@ public class ObjectSelection extends JFrame {
             int result = JOptionPane.showConfirmDialog(this, "Do you really want to delete object [" + obj.id + "]?");
             if (result == JOptionPane.YES_OPTION) {
                 System.out.println("Deleting object: " + obj.id);
-                STORE.getIndexes()[16].removeFile(obj.getArchiveId(), obj.getFileId());
+                Cache.getIndexes()[16].removeFile(obj.getArchiveId(), obj.getFileId());
                 removeObjectDefs(obj);
                 Main.log("ObjectSelection", "Object " + obj.id + " removed.");
             }
@@ -223,7 +241,7 @@ public class ObjectSelection extends JFrame {
     }
 
     private int getNewObjectID() {
-        return Utils.getObjectDefinitionsSize(STORE);
+        return Utils.getObjectDefinitionsSize(Cache);
     }
 
     private class ObjectListCellRenderer extends DefaultListCellRenderer {

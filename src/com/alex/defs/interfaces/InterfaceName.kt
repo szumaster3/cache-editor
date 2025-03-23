@@ -1,6 +1,6 @@
 package com.alex.defs.interfaces
 
-import com.alex.filestore.Store
+import com.alex.filestore.Cache
 import com.alex.util.Utils
 import java.io.IOException
 
@@ -11,34 +11,35 @@ object InterfaceName {
     /**
      * The constant VALID_CHARS.
      */
-    val VALID_CHARS: CharArray = charArrayOf(
-        'a',
-        'b',
-        'c',
-        'd',
-        'e',
-        'f',
-        'g',
-        'h',
-        'i',
-        'j',
-        'k',
-        'l',
-        'm',
-        'n',
-        'o',
-        'p',
-        'q',
-        'r',
-        's',
-        't',
-        'u',
-        'v',
-        'w',
-        'x',
-        'y',
-        'z'
-    )
+    val VALID_CHARS: CharArray =
+        charArrayOf(
+            'a',
+            'b',
+            'c',
+            'd',
+            'e',
+            'f',
+            'g',
+            'h',
+            'i',
+            'j',
+            'k',
+            'l',
+            'm',
+            'n',
+            'o',
+            'p',
+            'q',
+            'r',
+            's',
+            't',
+            'u',
+            'v',
+            'w',
+            'x',
+            'y',
+            'z',
+        )
 
     /**
      * Print all combinations 4 letters.
@@ -55,8 +56,11 @@ object InterfaceName {
     @Throws(IOException::class)
     @JvmStatic
     fun main(args: Array<String>) {
-        val rscache = Store("cache/", false)
-        val hash = rscache.indexes[3].table.archives[884]?.nameHash
+        val rscache = Cache("cache/", false)
+        val hash =
+            rscache.indexes[3]
+                .table.archives[884]
+                ?.nameHash
         val `arr$` = VALID_CHARS
         val `len$` = `arr$`.size
 
