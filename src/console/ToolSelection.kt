@@ -19,9 +19,10 @@ import com.editor.model.view.frame.ModelFrame
 import java.awt.Cursor
 import java.awt.Dimension
 import java.awt.FlowLayout
-import java.awt.GridLayout
 import java.awt.event.ActionEvent
 import java.io.*
+import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
 import javax.swing.*
 import kotlin.system.exitProcess
 
@@ -50,62 +51,91 @@ class ToolSelection : JFrame() {
     }
 
     private fun initComponents() {
+        val tabbedPane = JTabbedPane()
+
+        val panelTab = JPanel(FlowLayout(FlowLayout.LEFT))
+        val selectToolButton = JLabel("Select tool")
+
+        val button0 = JButton("Rebuild cache").apply {
+            addActionListener { rebuildCache() }
+            preferredSize = Dimension(100, 30)
+        }
+
+        val button1 = JButton("Button 1").apply {
+            val random = listOf("Hate!", "Stop!", "Boo!", "Don't...", "Psh...")
+
+
+            addActionListener { placeholderButton1(this, texts = random)}
+            preferredSize = Dimension(100, 30)
+        }
+
+        val button2 = JButton("Timestamp").apply {
+            addActionListener { placeholderButton2(this) }
+            preferredSize = Dimension(200, 30)
+        }
+
+        val panelMiddle = JPanel(FlowLayout(FlowLayout.LEFT))
+        panelMiddle.add(button0)
+        panelMiddle.add(button1)
+
+        val panelBottom = JPanel(FlowLayout(FlowLayout.LEFT))
+        panelBottom.add(button2)
+
+        panelTab.add(selectToolButton)
+        panelTab.add(panelMiddle)
+        panelTab.add(panelBottom)
+
+        val toolsTab = JPanel(FlowLayout())
+        val submitButton = JButton("Submit")
+        val buttonSize = Dimension(100, 30)
+        val submitButtonSize = Dimension(90, 22)
+
+        setupButton(loadCacheButton, buttonSize, this::loadCacheButtonHandler)
+        setupButton(loadLastCacheButton, buttonSize, this::loadLastCacheButtonHandler)
+
         val alignmentPanel1 = JPanel(FlowLayout(FlowLayout.CENTER))
         val alignmentPanel2 = JPanel(FlowLayout())
         val alignmentPanel3 = JPanel(FlowLayout())
 
-        this.preferredSize = Dimension(250, 200)
-        val selectYourEditorLabel = JLabel("Select tool")
-        val submitButton = JButton("Submit")
-        val jMenuBar1 = JMenuBar()
-        val jMenu1 = JMenu("File")
-        val exitButton = JMenuItem("Exit Program")
-        val buttonSize = Dimension(100, 30)
-        val submitButtonSize = Dimension(90, 22)
-        setupButton(loadCacheButton, buttonSize, this::loadCacheButtonHandler)
-        setupButton(loadLastCacheButton, buttonSize, this::loadLastCacheButtonHandler)
-
         alignmentPanel1.add(loadCacheButton)
         alignmentPanel1.add(Box.createHorizontalStrut(2))
         alignmentPanel1.add(loadLastCacheButton)
-        alignmentPanel2.add(selectYourEditorLabel)
+        alignmentPanel2.add(selectToolButton)
 
-        selectionBox.model =
-            DefaultComboBoxModel(
-                arrayOf(
-                    "Item Editor",
-                    "NPC Editor",
-                    "Object Editor",
-                    "Interface Editor",
-                    "Transfer Region",
-                    "Transfer Interface",
-                    "Transfer Index",
-                    "Export model",
-                    "Export NPC list",
-                    "Export Item list",
-                    "Export Indices",
-                    "Pack model",
-                    "Pick a Color",
-                    "File Manager",
-                    "Model Viewer",
-                ),
-            )
+        selectionBox.model = DefaultComboBoxModel(
+            arrayOf(
+                "Item Editor",
+                "NPC Editor",
+                "Object Editor",
+                "Interface Editor",
+                "Transfer Region",
+                "Transfer Interface",
+                "Transfer Index",
+                "Export model",
+                "Export NPC list",
+                "Export Item list",
+                "Export Indices",
+                "Pack model",
+                "Pick a Color",
+                "File Manager",
+                "Model Viewer",
+            ),
+        )
 
         setupButton(submitButton, submitButtonSize, this::submitButtonActionPerformed)
         alignmentPanel3.add(selectionBox)
         alignmentPanel3.add(submitButton)
 
-        exitButton.addActionListener { evt -> exitButtonActionPerformed(evt) }
-        jMenu1.add(exitButton)
-        jMenuBar1.add(jMenu1)
-        this.jMenuBar = jMenuBar1
+        toolsTab.add(alignmentPanel1)
+        toolsTab.add(alignmentPanel2)
+        toolsTab.add(alignmentPanel3)
 
-        this.contentPane.layout = GridLayout(3, 1, 5, 5)
-        this.add(alignmentPanel1)
-        this.add(alignmentPanel2)
-        this.add(alignmentPanel3)
-        this.revalidate()
-        this.repaint()
+        tabbedPane.addTab("Tools", toolsTab)
+        tabbedPane.addTab("Panel", panelTab)
+
+        this.contentPane.add(tabbedPane)
+
+        this.preferredSize = Dimension(250, 200)
         this.pack()
     }
 
@@ -123,6 +153,7 @@ class ToolSelection : JFrame() {
         }
     }
 
+
     private fun submitButtonActionPerformed(evt: ActionEvent) {
         val toolID = selectionBox.selectedIndex
         if (cache.isEmpty() && toolID != 10 && toolID != 6 && toolID != 12) {
@@ -130,135 +161,97 @@ class ToolSelection : JFrame() {
             return
         }
         when (selectionBox.selectedIndex) {
-            0 ->
-                try {
-                    ItemSelection(cache).isVisible = true
-                    Main.log(toolSelected, startMessage)
-                } catch (e: IOException) {
-                    Main.log(toolSelected, failMessage)
-                }
-
-            1 ->
-                try {
-                    NPCSelection(cache).isVisible = true
-                    Main.log(toolSelected, startMessage)
-                } catch (e: IOException) {
-                    Main.log(toolSelected, failMessage)
-                }
-
-            2 ->
-                try {
-                    ObjectSelection(cache).isVisible = true
-                    Main.log(toolSelected, startMessage)
-                } catch (e: IOException) {
-                    Main.log(toolSelected, failMessage)
-                }
-
-            3 ->
-                try {
-                    SwingUtilities.invokeLater {
-                        val frame = InterfaceEditor(cache)
-                        frame.isVisible = true
-                    }
-                    Main.log(toolSelected, startMessage)
-                } catch (e: Exception) {
-                    Main.log(toolSelected, failMessage)
-                }
-
-            4 ->
-                try {
-                    RegionTransfer(cache).isVisible = true
-                    Main.log(toolSelected, startMessage)
-                } catch (e: IOException) {
-                    Main.log(toolSelected, failMessage)
-                }
-
-            5 -> {
-                InterfaceTransfer(cache).isVisible = true
-                Main.log(toolSelected, startMessage)
+            0 -> try {
+                ItemSelection(cache).isVisible = true; Main.log(toolSelected, startMessage)
+            } catch (e: IOException) {
+                Main.log(toolSelected, failMessage)
             }
 
-            6 ->
-                try {
-                    IndexTransfer().isVisible = true
-                    Main.log(toolSelected, startMessage)
-                } catch (e: IOException) {
-                    Main.log(toolSelected, failMessage)
-                }
+            1 -> try {
+                NPCSelection(cache).isVisible = true; Main.log(toolSelected, startMessage)
+            } catch (e: IOException) {
+                Main.log(toolSelected, failMessage)
+            }
 
-            7 ->
-                try {
-                    ModelExporter(cache).isVisible = true
-                    Main.log(toolSelected, startMessage)
-                } catch (e: IOException) {
-                    Main.log(toolSelected, failMessage)
-                }
+            2 -> try {
+                ObjectSelection(cache).isVisible = true; Main.log(toolSelected, startMessage)
+            } catch (e: IOException) {
+                Main.log(toolSelected, failMessage)
+            }
 
-            8 ->
-                try {
-                    NPCListExport(cache)
-                    Main.log(toolSelected, startMessage)
-                } catch (e: IOException) {
-                    Main.log(toolSelected, failMessage)
-                }
+            3 -> try {
+                SwingUtilities.invokeLater { InterfaceEditor(cache).isVisible = true }; Main.log(
+                    toolSelected, startMessage
+                )
+            } catch (e: Exception) {
+                Main.log(toolSelected, failMessage)
+            }
 
-            9 ->
-                try {
-                    ItemListExport(cache)
-                    Main.log(toolSelected, startMessage)
-                } catch (e: IOException) {
-                    Main.log(toolSelected, failMessage)
-                }
+            4 -> try {
+                RegionTransfer(cache).isVisible = true; Main.log(toolSelected, startMessage)
+            } catch (e: IOException) {
+                Main.log(toolSelected, failMessage)
+            }
 
-            10 ->
-                try {
-                    IndicesSelection().isVisible = true
-                    Main.log(toolSelected, startMessage)
-                } catch (e: IOException) {
-                    Main.log(toolSelected, failMessage)
-                }
+            5 -> {
+                InterfaceTransfer(cache).isVisible = true; Main.log(toolSelected, startMessage)
+            }
 
-            11 ->
-                try {
-                    SwingUtilities.invokeLater { ModelPacker(cache).isVisible = true }
-                    Main.log(
-                        toolSelected,
-                        startMessage,
-                    )
-                } catch (e: IOException) {
-                    Main.log(toolSelected, failMessage)
-                }
+            6 -> try {
+                IndexTransfer().isVisible = true; Main.log(toolSelected, startMessage)
+            } catch (e: IOException) {
+                Main.log(toolSelected, failMessage)
+            }
 
-            12 ->
-                try {
-                    SwingUtilities.invokeLater { ColorPicker().isVisible = true }
-                    Main.log(
-                        toolSelected,
-                        startMessage,
-                    )
-                } catch (e: IOException) {
-                    Main.log(toolSelected, failMessage)
-                }
+            7 -> try {
+                ModelExporter(cache).isVisible = true; Main.log(toolSelected, startMessage)
+            } catch (e: IOException) {
+                Main.log(toolSelected, failMessage)
+            }
 
-            13 ->
-                try {
-                    val lib = CacheLibrary.create(cache)
-                    FileManager(lib).isVisible = true
-                    Main.log(toolSelected, startMessage)
-                } catch (e: Exception) {
-                    Main.log(toolSelected, failMessage)
-                }
+            8 -> try {
+                NPCListExport(cache); Main.log(toolSelected, startMessage)
+            } catch (e: IOException) {
+                Main.log(toolSelected, failMessage)
+            }
 
-            14 ->
-                try {
-                    SwingUtilities.invokeLater {
-                        val frame = ModelFrame(cache)
-                        frame.isVisible = true
-                    }
-                    Main.log(toolSelected, startMessage)
-                } catch (e: Exception) {
-                    Main.log(toolSelected, failMessage)
-                }
+            9 -> try {
+                ItemListExport(cache); Main.log(toolSelected, startMessage)
+            } catch (e: IOException) {
+                Main.log(toolSelected, failMessage)
+            }
+
+            10 -> try {
+                IndicesSelection().isVisible = true; Main.log(toolSelected, startMessage)
+            } catch (e: IOException) {
+                Main.log(toolSelected, failMessage)
+            }
+
+            11 -> try {
+                SwingUtilities.invokeLater { ModelPacker(cache).isVisible = true }; Main.log(toolSelected, startMessage)
+            } catch (e: IOException) {
+                Main.log(toolSelected, failMessage)
+            }
+
+            12 -> try {
+                SwingUtilities.invokeLater { ColorPicker().isVisible = true }; Main.log(toolSelected, startMessage)
+            } catch (e: IOException) {
+                Main.log(toolSelected, failMessage)
+            }
+
+            13 -> try {
+                val lib = CacheLibrary.create(cache); FileManager(lib).isVisible = true; Main.log(
+                    toolSelected, startMessage
+                )
+            } catch (e: Exception) {
+                Main.log(toolSelected, failMessage)
+            }
+
+            14 -> try {
+                SwingUtilities.invokeLater { ModelFrame(cache).isVisible = true }; Main.log(toolSelected, startMessage)
+            } catch (e: Exception) {
+                Main.log(toolSelected, failMessage)
+            }
 
             else -> Main.log(toolSelected, "No Tool Selected!")
         }
@@ -292,34 +285,76 @@ class ToolSelection : JFrame() {
 
     private fun saveLastCachePath(path: String) {
         try {
-            BufferedWriter(FileWriter(cacheFile)).use { writer ->
-                writer.write(path)
-            }
+            BufferedWriter(FileWriter(cacheFile)).use { writer -> writer.write(path) }
             Main.log("ToolSelection", "cache path saved.")
         } catch (e: IOException) {
             Main.log("ToolSelection", "Failed to write cache path.")
         }
     }
 
-    private fun loadLastCachePath(): String =
-        try {
-            BufferedReader(FileReader(cacheFile)).use { reader -> reader.readText() }
-        } catch (e: IOException) {
-            Main.log("ToolSelection", "Failed to load cache path.")
-            ""
-        }
+    private fun loadLastCachePath(): String = try {
+        BufferedReader(FileReader(cacheFile)).use { reader -> reader.readText() }
+    } catch (e: IOException) {
+        Main.log("ToolSelection", "Failed to load cache path.")
+        ""
+    }
 
     private fun exitButtonActionPerformed(evt: ActionEvent) {
-        val response =
-            JOptionPane.showConfirmDialog(
-                null,
-                "Do you want to continue?",
-                "Confirm",
-                JOptionPane.YES_NO_OPTION,
-                JOptionPane.QUESTION_MESSAGE,
-            )
+        val response = JOptionPane.showConfirmDialog(
+            null,
+            "Do you want to continue?",
+            "Confirm",
+            JOptionPane.YES_NO_OPTION,
+            JOptionPane.QUESTION_MESSAGE,
+        )
         if (response == JOptionPane.YES_OPTION) {
             exitProcess(0)
         }
+    }
+
+    private fun rebuildCache() {
+        val response = JOptionPane.showConfirmDialog(
+            null,
+            "Are you sure?",
+            "Confirm",
+            JOptionPane.YES_NO_OPTION,
+            JOptionPane.QUESTION_MESSAGE,
+        )
+        if (response == JOptionPane.YES_OPTION) {
+            try {
+                val cache = CacheLibrary.create(cache)
+                cache.rebuild(File("data/cache_rebuild/"))
+                JOptionPane.showMessageDialog(
+                    null,
+                    "Cache rebuild completed successfully.",
+                    "Success",
+                    JOptionPane.INFORMATION_MESSAGE
+                )
+            } catch (e: Exception) {
+                JOptionPane.showMessageDialog(
+                    null,
+                    "An error occurred during the cache rebuild.",
+                    "Error",
+                    JOptionPane.ERROR_MESSAGE
+                )
+            }
+        }
+    }
+
+    private fun placeholderButton1(button: JButton, texts: List<String>) {
+        val randomText = texts.random()
+        button.text = randomText
+    }
+
+    private fun placeholderButton2(button: JButton) {
+        val currentDateTime = LocalDateTime.now()
+
+        val dateFormatter = DateTimeFormatter.ofPattern("dd.MM.yyyy")
+        val timeFormatter = DateTimeFormatter.ofPattern("HH:mm:ss")
+
+        val date = currentDateTime.format(dateFormatter)
+        val time = currentDateTime.format(timeFormatter)
+
+        button.text = "$date | $time"
     }
 }
