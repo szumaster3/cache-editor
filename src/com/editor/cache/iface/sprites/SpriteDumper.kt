@@ -8,7 +8,7 @@ import javax.imageio.ImageIO
 
 object SpriteDumper {
     @JvmStatic
-    fun dump(cachePath: String?) {
+    fun dump(cachePath: String?, progressMonitor: javax.swing.ProgressMonitor) {
         try {
             SpriteLoader.initStore(cachePath)
 
@@ -22,21 +22,29 @@ object SpriteDumper {
                 val s = SpriteLoader.getArchive(i) ?: continue
 
                 for (frame in 0 until s.size()) {
-                    val file = File(PropertyValues.dump_path, i.toString() + "_" + frame + ".png")
+                    val file = File(PropertyValues.dump_path, "$i"+"_$frame.png")
                     val image = s.getSprite(frame)
                     try {
                         ImageIO.write(image, "png", file)
                     } catch (e: Exception) {
-                        log("Sprite Dumper", "Could not dump sprite " + i + " error ->" + e.message)
+                        log("Sprite Dumper", "Could not dump sprite $i error -> ${e.message}")
                         continue
                     }
                 }
 
+                // Update progress monitor
                 val progress = (i + 1).toDouble() / size * 100
-                log("Sprite Dumper", (i + 1).toString() + " out of " + size + " " + Math.round(progress) + "%")
+                progressMonitor.setProgress(i + 1)
+                progressMonitor.setNote("Dumping sprite ${i + 1} of $size - ${Math.round(progress)}%")
+
+                // Check if the task was canceled
+                if (progressMonitor.isCanceled) {
+                    log("Sprite Dumper", "Sprite dumping canceled.")
+                    break
+                }
             }
         } catch (e: IOException) {
-            log("Sprite Dumper", "Error initializing store: " + e.message)
+            log("Sprite Dumper", "Error initializing store: ${e.message}")
         }
     }
 }

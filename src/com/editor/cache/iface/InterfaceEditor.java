@@ -2,7 +2,6 @@ package com.editor.cache.iface;
 
 import com.alex.defs.interfaces.ComponentDefinition;
 import com.alex.filestore.Cache;
-import com.displee.cache.CacheLibrary;
 import com.editor.cache.iface.sprites.ImageUtils;
 import com.editor.cache.iface.sprites.SpriteDumper;
 import com.editor.cache.iface.sprites.SpriteLoader;
@@ -26,7 +25,6 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -136,20 +134,16 @@ public class InterfaceEditor extends JFrame {
         JMenu mnNewMenu = new JMenu("");
         menuBar.add(mnNewMenu);
 
-        JMenu mnNewMenu_1 = new JMenu("Informations");
+        JMenu mnNewMenu_1 = new JMenu("Information");
         mnNewMenu_1.addActionListener(arg0 -> JOptionPane.showMessageDialog(interfaceViewportScrollPane, "Interface editor made by Shnek, Discord : Cara Shnek#6969 "));
         menuBar.add(mnNewMenu_1);
 
         JMenu mnAbout = new JMenu("Extra");
         menuBar.add(mnAbout);
 
-        JMenuItem mntmDumpSprites = new JMenuItem("Export sprites");
-        mntmDumpSprites.addActionListener(arg0 -> {
-            progressMonitor = new ProgressMonitor(menuBar, "Dumping sprites", "", 0, Cache.getIndexes()[8].getLastArchiveId());
-            progressMonitor.setProgress(1);
-            SpriteDumper.dump(cache);
-        });
+        JMenuItem mntmDumpSprites = getJMenuItem(cache, menuBar);
         mnAbout.add(mntmDumpSprites);
+
         JMenuItem mntmPackInterface = getJMenuItem();
         mnAbout.add(mntmPackInterface);
 
@@ -157,8 +151,26 @@ public class InterfaceEditor extends JFrame {
         revalidate();
     }
 
-    public static void main(String[] args) {
+    @NotNull
+    private JMenuItem getJMenuItem(String cache, JMenuBar menuBar) {
+        JMenuItem mntmDumpSprites = new JMenuItem("Export sprites");
+        mntmDumpSprites.addActionListener(arg0 -> {
+            progressMonitor = new ProgressMonitor(menuBar, "Dumping sprites...", "", 0, Cache.getIndexes()[8].getLastArchiveId());
+            progressMonitor.setProgress(1);
 
+            new Thread(() -> {
+                try {
+                    SpriteDumper.dump(cache, progressMonitor);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    JOptionPane.showMessageDialog(interfaceViewportScrollPane, "An error occurred during sprite dumping.", "Error", JOptionPane.ERROR_MESSAGE);
+                }
+            }).start();
+        });
+        return mntmDumpSprites;
+    }
+
+    public static void main(String[] args) {
         EventQueue.invokeLater(() -> {
             try {
                 try {
@@ -170,7 +182,6 @@ public class InterfaceEditor extends JFrame {
                     JOptionPane.showMessageDialog(null, "" + e);
                     Main.log("Iface tool", e.getMessage());
                 }
-
                 if (args.length < 1) {
                     try {
                         PropertyValues.loadValues();
@@ -195,24 +206,29 @@ public class InterfaceEditor extends JFrame {
     @NotNull
     private JMenuItem getJMenuItem() {
         JMenuItem mntmPackInterface = new JMenuItem("Pack interface");
-        mntmPackInterface.addActionListener(arg0 -> {
+        mntmPackInterface.addActionListener(e -> {
             JFileChooser chooser = new JFileChooser();
             chooser.setCurrentDirectory(new File("."));
-            chooser.setDialogTitle("choosertitle");
+            chooser.setDialogTitle("Choose a file to pack interface");
             chooser.setFileSelectionMode(JFileChooser.FILES_ONLY);
             chooser.setAcceptAllFileFilterUsed(false);
 
-            if (chooser.showOpenDialog(null) == JFileChooser.APPROVE_OPTION) {
-                packInterface(chooser.getSelectedFile().getPath());
-                // System.out.println("getSelectedFile() : " + chooser.getSelectedFile());
+            int result = chooser.showOpenDialog(null);
+            if (result == JFileChooser.APPROVE_OPTION) {
+                File selectedFile = chooser.getSelectedFile();
+                if (selectedFile != null && selectedFile.exists()) {
+                    packInterface(selectedFile.getPath());
+                    JOptionPane.showMessageDialog(null, "Interface packed successfully: " + selectedFile.getName());
+                } else {
+                    JOptionPane.showMessageDialog(null, "The selected file does not exist.", "Error", JOptionPane.ERROR_MESSAGE);
+                }
             } else {
-                System.out.println("No Selection ");
+                System.out.println("No file selected.");
             }
-
-
         });
         return mntmPackInterface;
     }
+
 
     private void constructWestPanel() {
         JPanel panel = new JPanel(new BorderLayout());
@@ -222,9 +238,8 @@ public class InterfaceEditor extends JFrame {
         panel.setMaximumSize(new Dimension(IfaceConstants.LEFT_SCROLLPANE_WIDTH, IfaceConstants.DEFAULT_EDITOR_HEIGHT));
         panel.setPreferredSize(new Dimension(IfaceConstants.LEFT_SCROLLPANE_WIDTH, IfaceConstants.DEFAULT_EDITOR_HEIGHT));
 
-        // Construct search panel
-        JPanel searchPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
-        txt_interId = new JTextField(10); // Define columns directly to make it clearer
+        JPanel searchPanel = new JPanel(new FlowLayout(FlowLayout.CENTER));
+        txt_interId = new JTextField(10);
         searchPanel.add(txt_interId);
 
         JButton btnFind = new JButton("Find");
@@ -301,15 +316,14 @@ public class InterfaceEditor extends JFrame {
         premadeComponentsPanel.setBorder(new TitledBorder("Premade Components"));
         premadeComponentsPanel.setPreferredSize(new Dimension(IfaceConstants.PREMADE_COMP_WIDTH, IfaceConstants.PREMADE_COMP_HEIGHT));
 
-        comboBox = new JComboBox<>(new String[]{
-                "Close button", "Normal button", "Start interface", "Basic custom hover", "Basic button with pop-up"
-        });
+        comboBox = new JComboBox();
+        comboBox.setModel(new DefaultComboBoxModel(new String[]{"Close button", "Normal button", "Start interface", "Basic custom hover", "Basic button with pop-up"}));
         comboBox.setPreferredSize(new Dimension(IfaceConstants.PREMADE_COMP_WIDTH - 10, IfaceConstants.BUTTON_HEIGHT));
         premadeComponentsPanel.add(comboBox);
 
         JButton btnAddPremadeComponent = new JButton("Add Component");
-        btnAddPremadeComponent.setPreferredSize(new Dimension(IfaceConstants.PREMADE_COMP_WIDTH - 10, IfaceConstants.BUTTON_HEIGHT));
         btnAddPremadeComponent.addActionListener(arg0 -> addDefaultComponent(currentInterface));
+        btnAddPremadeComponent.setPreferredSize(new Dimension(IfaceConstants.PREMADE_COMP_WIDTH - 10, IfaceConstants.BUTTON_HEIGHT));
         premadeComponentsPanel.add(btnAddPremadeComponent);
         moreButtonsPanel.add(premadeComponentsPanel);
 
@@ -525,6 +539,7 @@ public class InterfaceEditor extends JFrame {
         componentButtons.add(btnDelete);
         return componentButtons;
     }
+
     @NotNull
     private JButton getButton(Dimension buttonSize) {
         JButton btnDelete = new JButton("Delete");
@@ -564,6 +579,7 @@ public class InterfaceEditor extends JFrame {
     /**
      * This method retrieves nested components for a container component.
      * It assumes the children are stored sequentially in the interface.
+     *
      * @param interfaceId The ID of the interface.
      * @param componentId The ID of the container component.
      * @return A list of nested component IDs.
@@ -1142,7 +1158,7 @@ public class InterfaceEditor extends JFrame {
      * Saves the interface component data.
      *
      * @param inter The interface ID.
-     * @param comp The component ID.
+     * @param comp  The component ID.
      */
     public void saveInterface(int inter, int comp) {
         // Retrieve the component to be saved
@@ -1298,9 +1314,9 @@ public class InterfaceEditor extends JFrame {
             }
 
             // Check if the component has child components.
-            if (component.parentId == -1 && ComponentDefinition.hasChilds(interfaceId, component.ihash)) {
+            if (component.parentId == -1 && ComponentDefinition.hasChildren(interfaceId, component.ihash)) {
                 DefaultMutableTreeNode parentNode = new DefaultMutableTreeNode("Component " + component.componentId);
-                ArrayList<ComponentDefinition> childComponents = ComponentDefinition.getChildsByParent(interfaceId, component.ihash);
+                ArrayList<ComponentDefinition> childComponents = ComponentDefinition.getChildrenByParent(interfaceId, component.ihash);
 
                 // Loop through the child components.
                 for (ComponentDefinition child : childComponents) {
@@ -1322,12 +1338,12 @@ public class InterfaceEditor extends JFrame {
      * Recursively adds child nodes for a component and its children.
      *
      * @param interfaceId The ID of the interface.
-     * @param component The component whose children are being added.
-     * @param parentNode The parent node to which the child nodes will be added.
+     * @param component   The component whose children are being added.
+     * @param parentNode  The parent node to which the child nodes will be added.
      */
     private void addChildNodes(int interfaceId, ComponentDefinition component, DefaultMutableTreeNode parentNode) {
-        if (ComponentDefinition.hasChilds(interfaceId, component.ihash)) {
-            ArrayList<ComponentDefinition> childComponents = ComponentDefinition.getChildsByParent(interfaceId, component.ihash);
+        if (ComponentDefinition.hasChildren(interfaceId, component.ihash)) {
+            ArrayList<ComponentDefinition> childComponents = ComponentDefinition.getChildrenByParent(interfaceId, component.ihash);
             DefaultMutableTreeNode containerNode = new DefaultMutableTreeNode("Component " + component.componentId);
 
             // Recursively add child nodes for this component.
@@ -1339,21 +1355,6 @@ public class InterfaceEditor extends JFrame {
         } else {
             DefaultMutableTreeNode childNode = new DefaultMutableTreeNode("Component " + component.componentId);
             parentNode.add(childNode);
-        }
-    }
-
-    /**
-     * Adds the default text to index 0 for a given interface ID.
-     *
-     * @param interfaceId The ID of the interface.
-     */
-    public void addIndex0text(int interfaceId) {
-        ComponentDefinition defaultButton = ComponentDefinition.getInterfaceComponent(6, 19);
-        if (defaultButton != null) {
-            defaultButton.parentId = -1;
-            Cache.getIndexes()[3].putFile(interfaceId, 0, defaultButton.encode());
-        } else {
-            System.out.println("Default button not found.");
         }
     }
 
@@ -1389,7 +1390,7 @@ public class InterfaceEditor extends JFrame {
         Cache.getIndexes()[3].putFile(currentInterface, containerIndex, copiedComp.encode());
 
         // Retrieve and clone child components
-        ArrayList<ComponentDefinition> childComponents = ComponentDefinition.getChildsByParent(copiedComp.interfaceId, copiedComp.ihash);
+        ArrayList<ComponentDefinition> childComponents = ComponentDefinition.getChildrenByParent(copiedComp.interfaceId, copiedComp.ihash);
         if (childComponents == null || childComponents.isEmpty()) return;
 
         int startIndex = ComponentDefinition.getInterfaceDefinitionsComponentsSize(Cache, currentInterface);
@@ -1414,7 +1415,7 @@ public class InterfaceEditor extends JFrame {
     /**
      * Updates the parent-child relationships for copied components.
      *
-     * @param containerIndex The index of the new container component.
+     * @param containerIndex  The index of the new container component.
      * @param childComponents The list of copied child components.
      */
     private void updateParentReferences(int containerIndex, ArrayList<ComponentDefinition> childComponents) {
@@ -1430,13 +1431,6 @@ public class InterfaceEditor extends JFrame {
         }
     }
 
-    /**
-     * export to interface to a basic file
-     *
-     * @param interfaceId
-     * @throws IOException
-     * @throws FileNotFoundException
-     */
     public void exportInterface(int interfaceId) throws FileNotFoundException, IOException {
         File file = new File("data/export/" + interfaceId + ".dat");
         byte[] data = Cache.getIndexes()[3].getArchive(interfaceId).getData();
@@ -1449,64 +1443,55 @@ public class InterfaceEditor extends JFrame {
     }
 
     /**
-     * todo
+     * Packs an interface from the given file path.
      *
-     * @param path
+     * @param path the file path of the data to pack.
      */
     public void packInterface(String path) {
-        byte[] data;
-        try {
-            data = Files.readAllBytes(new File(path).toPath());
-            int archiveId = ComponentDefinition.getInterfaceDefinitionsSize(Cache);
-            ComponentDefinition defaultButton = ComponentDefinition.getInterfaceComponent(6, 19);
-            defaultButton.parentId = -1;
-            Cache.getIndexes()[3].putFile(archiveId, 0, defaultButton.encode());
-            //Cache.getIndexes()[3].getArchive(archiveId).s(data);
-            this.drawTree(archiveId);
-        } catch (IOException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
+        int archiveId = ComponentDefinition.getInterfaceDefinitionsSize(Cache);
+        ComponentDefinition defaultButton = ComponentDefinition.getInterfaceComponent(6, 19);
+        defaultButton.parentId = -1;
+
+        Cache.getIndexes()[3].putFile(archiveId, 0, defaultButton.encode());
+        Cache.getIndexes()[3].getArchive(archiveId).getData();
+
+        drawTree(archiveId);
     }
 
     /**
-     * returns them in the right order
+     * Returns components in the correct order, including containers and children.
      *
-     * @param interfaceId
-     * @return sorted comp list
+     * @param interfaceId the interface ID.
+     * @return sorted list of components.
      */
     public ArrayList<ComponentDefinition> getOrderedComps(int interfaceId) {
-        ArrayList<ComponentDefinition> comps = new ArrayList();
-        ArrayList<ComponentDefinition> containers = ComponentDefinition.getInterfaceContainers(interfaceId); //gets all the containers of an interface
+        ArrayList<ComponentDefinition> comps = new ArrayList<>();
+        ArrayList<ComponentDefinition> containers = ComponentDefinition.getInterfaceContainers(interfaceId);
         ComponentDefinition[] allComps = ComponentDefinition.getInterface(interfaceId);
-        if (allComps == null) return null;
-       /* for (ComponentDefinition c : allComps) {
-            if (c == null)
-                continue;
-            if (c.parentId == -1)
-                comps.add(c);
-        }*/
+
+        if (allComps == null) return comps;
+
+        // Add containers and their children to the list
         for (ComponentDefinition comp : containers) {
-            if (!comps.contains(comp)) comps.add(comp); //add container itself
-            for (ComponentDefinition child : ComponentDefinition.getChildsByParent(interfaceId, comp.ihash))
-                comps.add(child); //Add childs
+            if (!comps.contains(comp)) comps.add(comp);
+            comps.addAll(ComponentDefinition.getChildrenByParent(interfaceId, comp.ihash));
         }
-        /**
-         * adding all the comps who don't have a parent
-         */
-        for (int i = 0; i < allComps.length; i++) {
-            if (allComps[i] == null) continue;
-            ComponentPosition.setValues(allComps[i]);
-            boolean found = false;
-            for (ComponentDefinition c : comps) {
-                if (c.componentId == allComps[i].componentId) found = true;
+
+        // Add all components that don't have a parent
+        for (ComponentDefinition comp : allComps) {
+            if (comp != null && !comps.contains(comp)) {
+                ComponentPosition.setValues(comp);
+                comps.add(comp);
             }
-            if (!found) comps.add(allComps[i]);
         }
         return comps;
-
     }
 
+    /**
+     * Draws the component tree for a given interface ID.
+     *
+     * @param id the interface ID to draw.
+     */
     public void drawTree(int id) {
         System.out.println("Drawing component tree ");
         JTree tree = new JTree(createInterfaceTree(id));
@@ -1561,7 +1546,7 @@ public class InterfaceEditor extends JFrame {
                 ComponentDefinition basic = ComponentDefinition.getInterfaceComponent(6, 0);
                 int place = ComponentDefinition.getInterfaceDefinitionsComponentsSize(Cache, currentInterface);
                 Cache.getIndexes()[3].putFile(currentInterface, place, basic.encode());
-                for (ComponentDefinition comp : ComponentDefinition.getChildsByParent(6, ComponentDefinition.getInterfaceComponent(6, 0).ihash)) {
+                for (ComponentDefinition comp : ComponentDefinition.getChildrenByParent(6, ComponentDefinition.getInterfaceComponent(6, 0).ihash)) {
                     if (comp.text.toLowerCase().contains("brimhaven")) comp.text = "";
                     comp.parentId++;
                     Cache.getIndexes()[3].putFile(currentInterface, ComponentDefinition.getInterfaceDefinitionsComponentsSize(Cache, currentInterface), comp.encode());
