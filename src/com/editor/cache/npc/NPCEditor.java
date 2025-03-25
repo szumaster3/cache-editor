@@ -2,7 +2,6 @@ package com.editor.cache.npc;
 
 import com.alex.defs.npcs.NPCDefinitions;
 import com.alex.util.Utils;
-import com.editor.model.view.frame.ModelFrame;
 import console.Main;
 
 import javax.swing.*;
@@ -102,7 +101,7 @@ public class NPCEditor extends JFrame {
     private JTextField renderEmote;
     private JTextField respawnDirection;
     private JMenuItem saveButton;
-    private JTextField headIcons;
+    private JTextField textureColorField;
     private JTextField unknownArray1;
     private JTextField unknownArray2;
     private JTextField unknownArray3;
@@ -194,7 +193,7 @@ public class NPCEditor extends JFrame {
         this.jLabel8 = new JLabel();
         this.modelColorField = new JTextField();
         this.jLabel9 = new JLabel();
-        this.headIcons = new JTextField();
+        this.textureColorField = new JTextField();
         this.jPanel4 = new JPanel();
         this.jLabel15 = new JLabel();
         this.unknownArray1 = new JTextField();
@@ -319,12 +318,12 @@ public class NPCEditor extends JFrame {
         this.optionsField.setText(this.getOpts());
         this.jLabel8.setText("Model Colors");
         this.modelColorField.setText(this.getChangedModelColors());
-        this.jLabel9.setText("Head Icons");
-        this.headIcons.setText("");
+        this.jLabel9.setText("Texture Colors");
+        this.textureColorField.setText(this.getChangedTextureColors());
         GroupLayout jPanel3Layout = new GroupLayout(this.jPanel3);
         this.jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(jPanel3Layout.createParallelGroup(Alignment.LEADING).addGroup(jPanel3Layout.createSequentialGroup().addContainerGap().addGroup(jPanel3Layout.createParallelGroup(Alignment.LEADING, false).addComponent(this.jLabel7).addComponent(this.optionsField, -1, 275, 32767).addComponent(this.jLabel8).addComponent(this.modelColorField).addComponent(this.jLabel9).addComponent(this.headIcons)).addContainerGap(379, 32767)));
-        jPanel3Layout.setVerticalGroup(jPanel3Layout.createParallelGroup(Alignment.LEADING).addGroup(jPanel3Layout.createSequentialGroup().addContainerGap().addComponent(this.jLabel7).addPreferredGap(ComponentPlacement.RELATED).addComponent(this.optionsField, -2, -1, -2).addGap(18, 18, 18).addComponent(this.jLabel8).addPreferredGap(ComponentPlacement.RELATED).addComponent(this.modelColorField, -2, -1, -2).addGap(18, 18, 18).addComponent(this.jLabel9).addPreferredGap(ComponentPlacement.RELATED).addComponent(this.headIcons, -2, -1, -2).addContainerGap(201, 32767)));
+        jPanel3Layout.setHorizontalGroup(jPanel3Layout.createParallelGroup(Alignment.LEADING).addGroup(jPanel3Layout.createSequentialGroup().addContainerGap().addGroup(jPanel3Layout.createParallelGroup(Alignment.LEADING, false).addComponent(this.jLabel7).addComponent(this.optionsField, -1, 275, 32767).addComponent(this.jLabel8).addComponent(this.modelColorField).addComponent(this.jLabel9).addComponent(this.textureColorField)).addContainerGap(379, 32767)));
+        jPanel3Layout.setVerticalGroup(jPanel3Layout.createParallelGroup(Alignment.LEADING).addGroup(jPanel3Layout.createSequentialGroup().addContainerGap().addComponent(this.jLabel7).addPreferredGap(ComponentPlacement.RELATED).addComponent(this.optionsField, -2, -1, -2).addGap(18, 18, 18).addComponent(this.jLabel8).addPreferredGap(ComponentPlacement.RELATED).addComponent(this.modelColorField, -2, -1, -2).addGap(18, 18, 18).addComponent(this.jLabel9).addPreferredGap(ComponentPlacement.RELATED).addComponent(this.textureColorField, -2, -1, -2).addContainerGap(201, 32767)));
         this.jTabbedPane1.addTab("Options", this.jPanel3);
         this.jLabel15.setText("unknownArray1");
         this.unknownArray1.setText(this.getUnknownArray1());
@@ -337,66 +336,66 @@ public class NPCEditor extends JFrame {
         this.jLabel19.setText("unknownArray5");
         this.unknownArray5.setText(this.getUnknownArray5());
         this.unknownBoolean1.setSelected(this.defs.unknownBoolean1);
-        this.unknownBoolean1.setText("unknownBoolean1");
+        this.unknownBoolean1.setText("hasShadow");
         this.unknownBoolean2.setSelected(this.defs.unknownBoolean2);
-        this.unknownBoolean2.setText("unknownBoolean2");
+        this.unknownBoolean2.setText("visibleOnMinimap");
         this.unknownBoolean3.setSelected(this.defs.unknownBoolean3);
-        this.unknownBoolean3.setText("unknownBoolean3");
+        this.unknownBoolean3.setText("interactable");
         this.unknownBoolean5.setSelected(this.defs.unknownBoolean5);
-        this.unknownBoolean5.setText("unknownBoolean5");
+        this.unknownBoolean5.setText("aggressive");
         this.unknownBoolean4.setSelected(this.defs.unknownBoolean4);
-        this.unknownBoolean4.setText("unknownBoolean4");
+        this.unknownBoolean4.setText("renderOnMap");
         this.unknownBoolean6.setSelected(this.defs.unknownBoolean6);
-        this.unknownBoolean6.setText("unknownBoolean6");
+        this.unknownBoolean6.setText("canAttack");
         this.unknownBoolean7.setSelected(this.defs.unknownBoolean7);
-        this.unknownBoolean7.setText("unknownBoolean7");
-        this.jLabel20.setText("unknownInt1");
+        this.unknownBoolean7.setText("isFollower");
+        this.jLabel20.setText("lightModifier          ");
         this.unknownInt1.setText("" + this.defs.unknownInt1);
-        this.jLabel21.setText("unknownInt2");
+        this.jLabel21.setText("shadowModifier     ");
         this.unknownInt2.setText("" + this.defs.unknownInt2);
-        this.jLabel22.setText("unknownInt3");
+        this.jLabel22.setText("turnSpeed             ");
         this.unknownInt3.setText("" + this.defs.unknownInt3);
-        this.jLabel23.setText("unknownInt4");
+        this.jLabel23.setText("drawMapDot         ");
         this.unknownInt4.setText("" + this.defs.unknownInt4);
-        this.jLabel24.setText("unknownInt5");
+        this.jLabel24.setText("defaultHeadIcon   ");
         this.unknownInt5.setText("" + this.defs.unknownInt5);
-        this.jLabel25.setText("unknownInt6");
+        this.jLabel25.setText("animationId1         ");
         this.unknownInt6.setText("" + this.defs.unknownInt6);
-        this.jLabel26.setText("unknownInt7");
+        this.jLabel26.setText("animationId2         ");
         this.unknownInt7.setText("" + this.defs.unknownInt7);
-        this.jLabel27.setText("unknownInt8");
+        this.jLabel27.setText("attackSoundId        ");
         this.unknownInt8.setText("" + this.defs.unknownInt8);
-        this.jLabel28.setText("unknownInt9");
+        this.jLabel28.setText("deathSoundId         ");
         this.unknownInt9.setText("" + this.defs.unknownInt9);
-        this.jLabel29.setText("unknownInt10");
+        this.jLabel29.setText("transformValue  ");
         this.unknownInt10.setText("" + this.defs.unknownInt10);
-        this.jLabel30.setText("unknownInt11");
+        this.jLabel30.setText("walkAnimationId");
         this.unknownInt11.setText("" + this.defs.unknownInt11);
-        this.jLabel31.setText("unknownInt12");
+        this.jLabel31.setText("idleAnimationId  ");
         this.unknownInt12.setText("" + this.defs.unknownInt12);
-        this.jLabel32.setText("unknownInt13");
+        this.jLabel32.setText("extraAnimationId");
         this.unknownInt13.setText("" + this.defs.unknownInt13);
-        this.jLabel33.setText("unknownInt14");
+        this.jLabel33.setText("anIntUnused1");
         this.unknownInt14.setText("" + this.defs.unknownInt14);
-        this.jLabel34.setText("unknownInt15");
+        this.jLabel34.setText("combatLevel");
         this.unknownInt15.setText("" + this.defs.unknownInt15);
-        this.jLabel35.setText("unknownInt16");
+        this.jLabel35.setText("configVarbit");
         this.unknownInt16.setText("" + this.defs.unknownInt16);
-        this.jLabel36.setText("unknownInt17");
+        this.jLabel36.setText("configVarp");
         this.unknownInt17.setText("" + this.defs.unknownInt17);
-        this.jLabel37.setText("unknownInt18");
+        this.jLabel37.setText("respawnTime");
         this.unknownInt18.setText("" + this.defs.unknownInt18);
-        this.jLabel38.setText("unknownInt19");
+        this.jLabel38.setText("combatScriptId ");
         this.unknownInt19.setText("" + this.defs.unknownInt19);
-        this.jLabel39.setText("unknownInt20");
+        this.jLabel39.setText("visibilityRange  ");
         this.unknownInt20.setText("" + this.defs.unknownInt20);
-        this.jLabel40.setText("unknownInt21");
+        this.jLabel40.setText("clientParameters");
         this.unknownInt21.setText("" + this.defs.unknownInt21);
         GroupLayout jPanel4Layout = new GroupLayout(this.jPanel4);
         this.jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(jPanel4Layout.createParallelGroup(Alignment.LEADING).addGroup(jPanel4Layout.createSequentialGroup().addContainerGap().addGroup(jPanel4Layout.createParallelGroup(Alignment.LEADING).addGroup(jPanel4Layout.createSequentialGroup().addGroup(jPanel4Layout.createParallelGroup(Alignment.LEADING).addComponent(this.unknownArray2, -2, 175, -2).addComponent(this.jLabel15).addComponent(this.unknownArray1, -2, 175, -2).addComponent(this.jLabel16).addComponent(this.jLabel17)).addGap(18, 18, 18).addGroup(jPanel4Layout.createParallelGroup(Alignment.LEADING).addGroup(jPanel4Layout.createSequentialGroup().addComponent(this.jLabel20).addPreferredGap(ComponentPlacement.RELATED).addComponent(this.unknownInt1, -2, 100, -2).addPreferredGap(ComponentPlacement.RELATED, 33, 32767).addComponent(this.jLabel32).addPreferredGap(ComponentPlacement.RELATED).addComponent(this.unknownInt13, -2, 100, -2)).addGroup(jPanel4Layout.createSequentialGroup().addComponent(this.jLabel21).addPreferredGap(ComponentPlacement.RELATED).addComponent(this.unknownInt2, -2, 100, -2).addPreferredGap(ComponentPlacement.RELATED, -1, 32767).addComponent(this.jLabel33).addPreferredGap(ComponentPlacement.RELATED).addComponent(this.unknownInt14, -2, 100, -2)).addGroup(Alignment.TRAILING, jPanel4Layout.createSequentialGroup().addGroup(jPanel4Layout.createParallelGroup(Alignment.LEADING).addComponent(this.unknownBoolean5).addComponent(this.unknownBoolean6).addComponent(this.unknownBoolean7)).addPreferredGap(ComponentPlacement.RELATED, -1, 32767).addGroup(jPanel4Layout.createParallelGroup(Alignment.LEADING).addGroup(jPanel4Layout.createSequentialGroup().addComponent(this.jLabel31).addPreferredGap(ComponentPlacement.RELATED).addComponent(this.unknownInt12, -2, 100, -2)).addGroup(jPanel4Layout.createSequentialGroup().addComponent(this.jLabel30).addPreferredGap(ComponentPlacement.RELATED).addComponent(this.unknownInt11, -2, 100, -2)).addGroup(jPanel4Layout.createSequentialGroup().addComponent(this.jLabel29).addPreferredGap(ComponentPlacement.RELATED).addComponent(this.unknownInt10, -2, 100, -2)))))).addGroup(jPanel4Layout.createSequentialGroup().addGroup(jPanel4Layout.createParallelGroup(Alignment.LEADING).addComponent(this.unknownArray3, -2, 175, -2).addComponent(this.jLabel18)).addGap(18, 18, 18).addGroup(jPanel4Layout.createParallelGroup(Alignment.LEADING).addGroup(jPanel4Layout.createSequentialGroup().addComponent(this.jLabel23).addPreferredGap(ComponentPlacement.RELATED).addComponent(this.unknownInt4, -2, 100, -2).addPreferredGap(ComponentPlacement.RELATED, -1, 32767).addComponent(this.jLabel35).addPreferredGap(ComponentPlacement.RELATED).addComponent(this.unknownInt16, -2, 100, -2)).addGroup(jPanel4Layout.createSequentialGroup().addComponent(this.jLabel22).addPreferredGap(ComponentPlacement.RELATED).addComponent(this.unknownInt3, -2, 100, -2).addPreferredGap(ComponentPlacement.RELATED, -1, 32767).addComponent(this.jLabel34).addPreferredGap(ComponentPlacement.RELATED).addComponent(this.unknownInt15, -2, 100, -2)))).addGroup(jPanel4Layout.createSequentialGroup().addGroup(jPanel4Layout.createParallelGroup(Alignment.LEADING).addComponent(this.unknownBoolean4).addComponent(this.unknownBoolean3)).addGap(0, 0, 32767)).addGroup(jPanel4Layout.createSequentialGroup().addGroup(jPanel4Layout.createParallelGroup(Alignment.LEADING).addComponent(this.unknownArray4, -2, 175, -2).addComponent(this.jLabel19)).addGap(18, 18, 18).addGroup(jPanel4Layout.createParallelGroup(Alignment.LEADING).addGroup(jPanel4Layout.createSequentialGroup().addComponent(this.jLabel25).addPreferredGap(ComponentPlacement.RELATED).addComponent(this.unknownInt6, -2, 100, -2).addPreferredGap(ComponentPlacement.RELATED, -1, 32767).addComponent(this.jLabel37).addPreferredGap(ComponentPlacement.RELATED).addComponent(this.unknownInt18, -2, 100, -2)).addGroup(jPanel4Layout.createSequentialGroup().addComponent(this.jLabel24).addPreferredGap(ComponentPlacement.RELATED).addComponent(this.unknownInt5, -2, 100, -2).addPreferredGap(ComponentPlacement.RELATED, -1, 32767).addComponent(this.jLabel36).addPreferredGap(ComponentPlacement.RELATED).addComponent(this.unknownInt17, -2, 100, -2)))).addGroup(jPanel4Layout.createSequentialGroup().addGroup(jPanel4Layout.createParallelGroup(Alignment.TRAILING, false).addGroup(Alignment.LEADING, jPanel4Layout.createSequentialGroup().addComponent(this.unknownArray5, -2, 175, -2).addGap(18, 18, 18).addComponent(this.jLabel26).addPreferredGap(ComponentPlacement.RELATED).addComponent(this.unknownInt7, -2, 100, -2)).addGroup(jPanel4Layout.createSequentialGroup().addGroup(jPanel4Layout.createParallelGroup(Alignment.LEADING).addGroup(jPanel4Layout.createSequentialGroup().addComponent(this.unknownBoolean1).addPreferredGap(ComponentPlacement.RELATED, -1, 32767)).addGroup(Alignment.TRAILING, jPanel4Layout.createSequentialGroup().addComponent(this.unknownBoolean2).addGap(80, 80, 80))).addGroup(jPanel4Layout.createParallelGroup(Alignment.LEADING).addGroup(jPanel4Layout.createSequentialGroup().addComponent(this.jLabel28).addPreferredGap(ComponentPlacement.RELATED).addComponent(this.unknownInt9, -2, 100, -2)).addGroup(jPanel4Layout.createSequentialGroup().addComponent(this.jLabel27).addPreferredGap(ComponentPlacement.RELATED).addComponent(this.unknownInt8, -2, 100, -2))))).addPreferredGap(ComponentPlacement.RELATED, -1, 32767).addGroup(jPanel4Layout.createParallelGroup(Alignment.LEADING).addGroup(Alignment.TRAILING, jPanel4Layout.createParallelGroup(Alignment.LEADING).addGroup(jPanel4Layout.createSequentialGroup().addComponent(this.jLabel38).addPreferredGap(ComponentPlacement.RELATED).addComponent(this.unknownInt19, -2, 100, -2)).addGroup(jPanel4Layout.createSequentialGroup().addComponent(this.jLabel39).addPreferredGap(ComponentPlacement.RELATED).addComponent(this.unknownInt20, -2, 100, -2))).addGroup(Alignment.TRAILING, jPanel4Layout.createSequentialGroup().addComponent(this.jLabel40).addPreferredGap(ComponentPlacement.RELATED).addComponent(this.unknownInt21, -2, 100, -2))))).addGap(88, 88, 88)));
         jPanel4Layout.setVerticalGroup(jPanel4Layout.createParallelGroup(Alignment.LEADING).addGroup(jPanel4Layout.createSequentialGroup().addContainerGap().addGroup(jPanel4Layout.createParallelGroup(Alignment.LEADING, false).addGroup(jPanel4Layout.createSequentialGroup().addComponent(this.jLabel15).addGap(4, 4, 4).addComponent(this.unknownArray1, -2, -1, -2).addPreferredGap(ComponentPlacement.RELATED).addComponent(this.jLabel16).addPreferredGap(ComponentPlacement.RELATED).addComponent(this.unknownArray2, -2, -1, -2)).addGroup(jPanel4Layout.createSequentialGroup().addGroup(jPanel4Layout.createParallelGroup(Alignment.TRAILING).addGroup(jPanel4Layout.createSequentialGroup().addGroup(jPanel4Layout.createParallelGroup(Alignment.BASELINE).addComponent(this.unknownBoolean5).addComponent(this.jLabel29).addComponent(this.unknownInt10, -2, -1, -2)).addGap(22, 22, 22)).addGroup(jPanel4Layout.createParallelGroup(Alignment.BASELINE).addComponent(this.unknownBoolean6).addComponent(this.jLabel30).addComponent(this.unknownInt11, -2, -1, -2))).addGroup(jPanel4Layout.createParallelGroup(Alignment.BASELINE).addComponent(this.unknownBoolean7).addComponent(this.jLabel31).addComponent(this.unknownInt12, -2, -1, -2)).addPreferredGap(ComponentPlacement.RELATED, -1, 32767).addGroup(jPanel4Layout.createParallelGroup(Alignment.BASELINE).addComponent(this.jLabel20).addComponent(this.unknownInt1, -2, -1, -2).addComponent(this.jLabel32).addComponent(this.unknownInt13, -2, -1, -2)))).addPreferredGap(ComponentPlacement.RELATED).addGroup(jPanel4Layout.createParallelGroup(Alignment.BASELINE).addComponent(this.jLabel17).addComponent(this.jLabel21).addComponent(this.unknownInt2, -2, -1, -2).addComponent(this.jLabel33).addComponent(this.unknownInt14, -2, -1, -2)).addPreferredGap(ComponentPlacement.RELATED).addGroup(jPanel4Layout.createParallelGroup(Alignment.BASELINE).addComponent(this.unknownArray3, -2, -1, -2).addComponent(this.jLabel22).addComponent(this.unknownInt3, -2, -1, -2).addComponent(this.jLabel34).addComponent(this.unknownInt15, -2, -1, -2)).addPreferredGap(ComponentPlacement.RELATED).addGroup(jPanel4Layout.createParallelGroup(Alignment.BASELINE).addComponent(this.jLabel18).addComponent(this.jLabel23).addComponent(this.unknownInt4, -2, -1, -2).addComponent(this.jLabel35).addComponent(this.unknownInt16, -2, -1, -2)).addPreferredGap(ComponentPlacement.RELATED).addGroup(jPanel4Layout.createParallelGroup(Alignment.BASELINE).addComponent(this.unknownArray4, -2, -1, -2).addComponent(this.jLabel24).addComponent(this.unknownInt5, -2, -1, -2).addComponent(this.jLabel36).addComponent(this.unknownInt17, -2, -1, -2)).addPreferredGap(ComponentPlacement.RELATED).addGroup(jPanel4Layout.createParallelGroup(Alignment.LEADING).addComponent(this.unknownInt6, -2, 20, -2).addGroup(jPanel4Layout.createParallelGroup(Alignment.BASELINE).addComponent(this.jLabel19).addComponent(this.jLabel25).addComponent(this.jLabel37).addComponent(this.unknownInt18, -2, -1, -2))).addPreferredGap(ComponentPlacement.RELATED).addGroup(jPanel4Layout.createParallelGroup(Alignment.BASELINE).addComponent(this.unknownArray5, -2, -1, -2).addComponent(this.jLabel26).addComponent(this.unknownInt7, -2, -1, -2).addComponent(this.jLabel38).addComponent(this.unknownInt19, -2, -1, -2)).addPreferredGap(ComponentPlacement.UNRELATED).addGroup(jPanel4Layout.createParallelGroup(Alignment.BASELINE).addComponent(this.unknownBoolean1).addComponent(this.jLabel27).addComponent(this.unknownInt8, -2, -1, -2).addComponent(this.jLabel39).addComponent(this.unknownInt20, -2, -1, -2)).addPreferredGap(ComponentPlacement.RELATED).addGroup(jPanel4Layout.createParallelGroup(Alignment.BASELINE).addComponent(this.unknownBoolean2).addComponent(this.jLabel28).addComponent(this.unknownInt9, -2, -1, -2).addComponent(this.jLabel40).addComponent(this.unknownInt21, -2, -1, -2)).addPreferredGap(ComponentPlacement.RELATED).addComponent(this.unknownBoolean3).addPreferredGap(ComponentPlacement.RELATED).addComponent(this.unknownBoolean4).addContainerGap(-1, 32767)));
-        this.jTabbedPane1.addTab("Unknown Definitions", this.jPanel4);
+        this.jTabbedPane1.addTab("Definitions", this.jPanel4);
         this.clientScriptOutput.setColumns(20);
         this.clientScriptOutput.setRows(5);
         this.clientScriptOutput.setText(this.getClientScripts());
@@ -489,7 +488,7 @@ public class NPCEditor extends JFrame {
         this.jTextField2.setText(this.getNPCChatHeads());
         this.optionsField.setText(this.getOpts());
         this.modelColorField.setText(this.getChangedModelColors());
-        this.headIcons.setText("");
+        this.textureColorField.setText(this.getChangedTextureColors());
         this.unknownArray1.setText(this.getUnknownArray1());
         this.unknownArray2.setText(this.getUnknownArray2());
         this.unknownArray3.setText(this.getUnknownArray3());
@@ -568,15 +567,28 @@ public class NPCEditor extends JFrame {
             int i$;
             String t;
             String[] editedColor;
-            if (!this.modelColorField.getText().equals("")) {
+            if(!this.modelColorField.getText().equals("")) {
                 var17 = this.modelColorField.getText().split(";");
                 i = var17;
                 len$ = var17.length;
 
-                for (i$ = 0; i$ < len$; ++i$) {
+                for(i$ = 0; i$ < len$; ++i$) {
                     t = i[i$];
                     editedColor = t.split("=");
                     this.defs.changeModelColor(Integer.valueOf(editedColor[0]).intValue(), Integer.valueOf(editedColor[1]).intValue());
+                }
+            }
+
+            this.defs.resetTextureColors();
+            if(!this.textureColorField.getText().equals("")) {
+                var17 = this.textureColorField.getText().split(";");
+                i = var17;
+                len$ = var17.length;
+
+                for(i$ = 0; i$ < len$; ++i$) {
+                    t = i[i$];
+                    editedColor = t.split("=");
+                    this.defs.changeTextureColor(Integer.valueOf(editedColor[0]).intValue(), Integer.valueOf(editedColor[1]).intValue());
                 }
             }
 
@@ -861,7 +873,7 @@ public class NPCEditor extends JFrame {
             writer.write(lineSep);
             writer.write("model colors = " + this.getChangedModelColors());
             writer.write(lineSep);
-            writer.write("head icon = " + this.getChangedTextureColors());
+            writer.write("texture colors = " + this.getChangedTextureColors());
             writer.write(lineSep);
             writer.write("unknown array1 = " + this.getUnknownArray1());
             writer.write(lineSep);
@@ -999,8 +1011,8 @@ public class NPCEditor extends JFrame {
 
     public String getChangedModelColors() {
         String text = "";
-        if (this.defs.originalModelColors != null) {
-            for (int i = 0; i < this.defs.originalModelColors.length; ++i) {
+        if(this.defs.originalModelColors != null) {
+            for(int i = 0; i < this.defs.originalModelColors.length; ++i) {
                 text = text + this.defs.originalModelColors[i] + "=" + this.defs.modifiedModelColors[i] + ";";
             }
         }
@@ -1008,11 +1020,10 @@ public class NPCEditor extends JFrame {
         return text;
     }
 
-
     public String getChangedTextureColors() {
         String text = "";
-        if (this.defs.originalTextureColors != null) {
-            for (int i = 0; i < this.defs.originalTextureColors.length; ++i) {
+        if(this.defs.originalTextureColors != null) {
+            for(int i = 0; i < this.defs.originalTextureColors.length; ++i) {
                 text = text + this.defs.originalTextureColors[i] + "=" + this.defs.modifiedTextureColors[i] + ";";
             }
         }

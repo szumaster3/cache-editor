@@ -29,6 +29,7 @@ class NPCListExport(
 
                 for (id in 0 until getNPCDefinitionsSize(this.cache)) {
                     val def = NPCDefinitions.getNPCDefinition(this.cache, id)
+                    //val npcInfo = "const val ${def.name.capitalize()}_$id = $id"
                     val npcInfo = "$id - ${def.name}"
                     writer.appendLine(npcInfo)
                     println(npcInfo)
