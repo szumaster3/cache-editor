@@ -8,6 +8,7 @@ import com.editor.cache.item.ItemListExport
 import com.editor.cache.item.ItemSelection
 import com.editor.cache.npc.NPCListExport
 import com.editor.cache.npc.NPCSelection
+import com.editor.cache.`object`.ObjectListExport
 import com.editor.cache.`object`.ObjectSelection
 import com.editor.cache.transfer.IndexTransfer
 import com.editor.cache.transfer.InterfaceTransfer
@@ -117,6 +118,7 @@ class ToolSelection : JFrame() {
                 "Export model",
                 "Export NPC list",
                 "Export Item list",
+                "Export Object list",
                 "Export Indices",
                 "Pack model",
                 "Pick a Color",
@@ -159,7 +161,7 @@ class ToolSelection : JFrame() {
 
     private fun submitButtonActionPerformed(evt: ActionEvent) {
         val toolID = selectionBox.selectedIndex
-        if (cache.isEmpty() && toolID != 10 && toolID != 6 && toolID != 12) {
+        if (cache.isEmpty() && toolID != 10 && toolID != 6 && toolID != 13) {
             Main.log(toolSelected, "No cache Set!")
             return
         }
@@ -225,24 +227,30 @@ class ToolSelection : JFrame() {
             }
 
             10 -> try {
-                IndicesSelection().isVisible = true; Main.log(toolSelected, startMessage)
+                ObjectListExport(cache); Main.log(toolSelected, startMessage)
             } catch (e: IOException) {
                 Main.log(toolSelected, failMessage)
             }
 
             11 -> try {
-                SwingUtilities.invokeLater { ModelPacker(cache).isVisible = true }; Main.log(toolSelected, startMessage)
+                IndicesSelection().isVisible = true; Main.log(toolSelected, startMessage)
             } catch (e: IOException) {
                 Main.log(toolSelected, failMessage)
             }
 
             12 -> try {
-                SwingUtilities.invokeLater { ColorPicker().isVisible = true }; Main.log(toolSelected, startMessage)
+                SwingUtilities.invokeLater { ModelPacker(cache).isVisible = true }; Main.log(toolSelected, startMessage)
             } catch (e: IOException) {
                 Main.log(toolSelected, failMessage)
             }
 
             13 -> try {
+                SwingUtilities.invokeLater { ColorPicker().isVisible = true }; Main.log(toolSelected, startMessage)
+            } catch (e: IOException) {
+                Main.log(toolSelected, failMessage)
+            }
+
+            14 -> try {
                 val lib = CacheLibrary.create(cache); FileManager(lib).isVisible = true; Main.log(
                     toolSelected, startMessage
                 )
@@ -250,7 +258,7 @@ class ToolSelection : JFrame() {
                 Main.log(toolSelected, failMessage)
             }
 
-            14 -> try {
+            15 -> try {
                 SwingUtilities.invokeLater { ModelFrame(cache).isVisible = true }; Main.log(toolSelected, startMessage)
             } catch (e: Exception) {
                 Main.log(toolSelected, failMessage)
