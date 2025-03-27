@@ -1,0 +1,1525 @@
+{"$schema":".schema-spotanims_batch.json","files":[
+
+{"model": 22327, "sequence": 5811, "$fileid": 1024}
+,
+
+{"model": 22768, "sequence": 5820, "$fileid": 1025}
+,
+
+{"model": 22769, "sequence": 5835, "$fileid": 1026}
+,
+
+{"model": 23152, "sequence": 5871, "$fileid": 1027}
+,
+
+{"model": 23153, "sequence": 5899, "$fileid": 1028}
+,
+
+{"model": 23852, "sequence": 6009, "$fileid": 1029}
+,
+
+{"model": 23857, "sequence": 6019, "$fileid": 1030}
+,
+
+{"model": 23857, "sequence": 6020, "$fileid": 1031}
+,
+
+{"model": 23857, "sequence": 6021, "$fileid": 1032}
+,
+
+{"model": 23857, "sequence": 6022, "$fileid": 1033}
+,
+
+{
+  "model": 23715,
+  "sequence": 6065,
+  "contrast": 40,
+  "ambient": 40,
+  "$fileid": 1034
+}
+,
+
+{
+  "model": 23716,
+  "sequence": 6056,
+  "scaleX": 86,
+  "scaleYorZ": 86,
+  "$fileid": 1035
+}
+,
+
+{"model": 23869, "sequence": 6074, "$fileid": 1036}
+,
+
+{"model": 21499, "sequence": 6097, "$fileid": 1037}
+,
+
+{"model": 23962, "sequence": 6105, "$fileid": 1038}
+,
+
+{"model": 23901, "sequence": 3856, "$fileid": 1039}
+,
+
+{"model": 24026, "sequence": 3858, "$fileid": 1040}
+,
+
+{"model": 24027, "sequence": 3858, "$fileid": 1041}
+,
+
+{"model": 24028, "sequence": 3858, "$fileid": 1042}
+,
+
+{"model": 24029, "sequence": 3858, "$fileid": 1043}
+,
+
+{"model": 24030, "sequence": 3858, "$fileid": 1044}
+,
+
+{"model": 24031, "sequence": 3858, "$fileid": 1045}
+,
+
+{"model": 14417, "sequence": 6110, "$fileid": 1046}
+,
+
+{"model": 5810, "sequence": 5272, "$fileid": 1047}
+,
+
+{
+  "model": 24153,
+  "sequence": 6119,
+  "contrast": 40,
+  "ambient": 40,
+  "$fileid": 1048
+}
+,
+
+{"model": 24511, "sequence": 6142, "$fileid": 1049}
+,
+
+{"model": 24512, "sequence": 6144, "$fileid": 1050}
+,
+
+{"model": 24512, "sequence": 6145, "$fileid": 1051}
+,
+
+{"model": 24513, "sequence": 6148, "$fileid": 1052}
+,
+
+{"model": 24511, "sequence": 6191, "$fileid": 1053}
+,
+
+{"model": 24540, "sequence": 6216, "$fileid": 1054}
+,
+
+{"model": 24600, "sequence": 6269, "$fileid": 1055}
+,
+
+{"model": 3809, "sequence": 6302, "$fileid": 1056}
+,
+
+{"model": 24989, "sequence": 6357, "$fileid": 1057}
+,
+
+{"model": 24989, "sequence": 6358, "$fileid": 1058}
+,
+
+{"model": 25016, "sequence": 6306, "$fileid": 1059}
+,
+
+{"model": 25017, "sequence": 6306, "$fileid": 1060}
+,
+
+{"model": 25009, "sequence": 6307, "$fileid": 1061}
+,
+
+{"model": 25012, "sequence": 6309, "$fileid": 1062}
+,
+
+{"model": 25011, "sequence": 6308, "$fileid": 1063}
+,
+
+{"model": 25018, "sequence": 6316, "$fileid": 1064}
+,
+
+{"model": 25021, "sequence": 6355, "$fileid": 1065}
+,
+
+{"model": 25014, "sequence": 6326, "$fileid": 1066}
+,
+
+{"model": 25013, "sequence": 6327, "$fileid": 1067}
+,
+
+{"model": 25021, "sequence": 6323, "$fileid": 1068}
+,
+
+{"model": 25022, "sequence": 6333, "$fileid": 1069}
+,
+
+{"model": 25022, "sequence": 6334, "$fileid": 1070}
+,
+
+{"model": 25019, "sequence": 6335, "$fileid": 1071}
+,
+
+{"model": 25019, "sequence": 6336, "$fileid": 1072}
+,
+
+{"model": 25020, "sequence": 6337, "$fileid": 1073}
+,
+
+{
+  "model": 25010,
+  "sequence": 6353,
+  "ambient": 30,
+  "contrast": 30,
+  "$fileid": 1074
+}
+,
+
+{"model": 25015, "sequence": 6352, "$fileid": 1075}
+,
+
+{"model": 24540, "sequence": 6460, "$fileid": 1076}
+,
+
+{"model": 25884, "sequence": 6498, "$fileid": 1077}
+,
+
+{"model": 26080, "sequence": 6516, "$fileid": 1078}
+,
+
+{
+  "model": 26191,
+  "sequence": 6543,
+  "replace_colors": [
+    [18597, 555],
+    [18721, 673],
+    [18716, 792],
+    [5392, 8728],
+    [5272, 7580]
+  ],
+  "$fileid": 1079
+}
+,
+
+{
+  "model": 26192,
+  "sequence": 6543,
+  "replace_colors": [[38172, 7690], [38053, 142], [38292, 5640]],
+  "$fileid": 1080
+}
+,
+
+{
+  "model": 26193,
+  "sequence": 6543,
+  "replace_colors": [
+    [18716, 547],
+    [18721, 666],
+    [18597, 914],
+    [3367, 64],
+    [3371, 72],
+    [3375, 82]
+  ],
+  "$fileid": 1081
+}
+,
+
+{
+  "model": 26194,
+  "sequence": 6543,
+  "replace_colors": [
+    [43074, 22],
+    [43065, 18],
+    [43057, 138],
+    [38292, 301],
+    [38172, 423],
+    [38053, 673]
+  ],
+  "$fileid": 1082
+}
+,
+
+{
+  "model": 26195,
+  "sequence": 6543,
+  "replace_colors": [
+    [43074, 22],
+    [43065, 18],
+    [43057, 138],
+    [18597, 22],
+    [18721, 18],
+    [18716, 138]
+  ],
+  "$fileid": 1083
+}
+,
+
+{
+  "model": 26196,
+  "sequence": 6543,
+  "replace_colors": [
+    [18597, 10320],
+    [18721, 10312],
+    [18716, 10304],
+    [43074, 10320],
+    [43065, 10312],
+    [43057, 10304]
+  ],
+  "$fileid": 1084
+}
+,
+
+{
+  "model": 26197,
+  "sequence": 6543,
+  "replace_colors": [
+    [18597, 32786],
+    [18721, 32910],
+    [18716, 32906],
+    [3375, 547],
+    [3371, 540],
+    [3367, 662]
+  ],
+  "$fileid": 1085
+}
+,
+
+{
+  "model": 26198,
+  "sequence": 6543,
+  "replace_colors": [
+    [38053, 677],
+    [38172, 670],
+    [38292, 792],
+    [18597, 10320],
+    [18721, 10312],
+    [18716, 10304]
+  ],
+  "$fileid": 1086
+}
+,
+
+{
+  "model": 26199,
+  "sequence": 6543,
+  "replace_colors": [
+    [2260, 32910],
+    [63680, 32906],
+    [62637, 33030],
+    [43072, 801],
+    [43057, 677],
+    [43045, 553]
+  ],
+  "$fileid": 1087
+}
+,
+
+{
+  "model": 26203,
+  "sequence": 6543,
+  "replace_colors": [
+    [2260, 78],
+    [63680, 72],
+    [62637, 66],
+    [10531, 549],
+    [9544, 673],
+    [9521, 666]
+  ],
+  "$fileid": 1088
+}
+,
+
+{
+  "model": 26204,
+  "sequence": 6543,
+  "replace_colors": [[43072, 931], [43057, 2842], [43045, 530]],
+  "$fileid": 1089
+}
+,
+
+{
+  "model": 26205,
+  "sequence": 6543,
+  "replace_colors": [[9544, 80], [9521, 72], [10531, 64]],
+  "$fileid": 1090
+}
+,
+
+{
+  "model": 26206,
+  "sequence": 6543,
+  "replace_colors": [
+    [38053, 677],
+    [38172, 670],
+    [38292, 792],
+    [18597, 10320],
+    [18721, 10312],
+    [18716, 10304]
+  ],
+  "$fileid": 1091
+}
+,
+
+{
+  "model": 26207,
+  "sequence": 6543,
+  "replace_colors": [
+    [2260, 32910],
+    [63680, 32906],
+    [62637, 33030],
+    [43072, 801],
+    [43057, 677],
+    [43045, 553]
+  ],
+  "$fileid": 1092
+}
+,
+
+{
+  "model": 26208,
+  "sequence": 6543,
+  "replace_colors": [
+    [43072, 931],
+    [43057, 2842],
+    [43045, 530],
+    [2260, 931],
+    [63680, 2842],
+    [62637, 530]
+  ],
+  "$fileid": 1093
+}
+,
+
+{
+  "model": 26209,
+  "sequence": 6543,
+  "replace_colors": [
+    [2260, 931],
+    [63680, 2842],
+    [62637, 530],
+    [9544, 142],
+    [9521, 18],
+    [10531, 22]
+  ],
+  "$fileid": 1094
+}
+,
+
+{
+  "model": 26210,
+  "sequence": 6543,
+  "replace_colors": [[2260, 679], [63680, 803], [62637, 798]],
+  "$fileid": 1095
+}
+,
+
+{
+  "model": 26200,
+  "sequence": 6543,
+  "replace_colors": [[2260, 679], [63680, 803], [62637, 798]],
+  "$fileid": 1096
+}
+,
+
+{
+  "model": 26201,
+  "sequence": 6543,
+  "replace_colors": [
+    [43072, 931],
+    [43057, 2842],
+    [43045, 530],
+    [2260, 931],
+    [63680, 2842],
+    [62637, 530]
+  ],
+  "$fileid": 1097
+}
+,
+
+{"model": 26202, "sequence": 6543, "$fileid": 1098}
+,
+
+{"model": 26391, "sequence": 6585, "$fileid": 1099}
+,
+
+{"model": 26390, "sequence": 6586, "$fileid": 1100}
+,
+
+{"model": 26393, "sequence": 6590, "$fileid": 1101}
+,
+
+{"model": 26393, "sequence": 6589, "$fileid": 1102}
+,
+
+{"model": 26393, "sequence": 6588, "$fileid": 1103}
+,
+
+{
+  "model": 26293,
+  "sequence": 366,
+  "replace_colors": [[57, 5652], [61, 5652]],
+  "$fileid": 1104
+}
+,
+
+{
+  "model": 26293,
+  "sequence": 366,
+  "replace_colors": [[57, 33], [61, 33]],
+  "$fileid": 1105
+}
+,
+
+{"model": 26293, "sequence": 366, "$fileid": 1106}
+,
+
+{
+  "model": 26293,
+  "sequence": 366,
+  "replace_colors": [[57, 43297], [61, 43297]],
+  "$fileid": 1107
+}
+,
+
+{
+  "model": 26293,
+  "sequence": 366,
+  "replace_colors": [[57, 21662], [61, 21662]],
+  "$fileid": 1108
+}
+,
+
+{
+  "model": 26293,
+  "sequence": 366,
+  "replace_colors": [[57, 36133], [61, 36133]],
+  "$fileid": 1109
+}
+,
+
+{
+  "model": 26293,
+  "sequence": 366,
+  "replace_colors": [
+    [57, 37340],
+    [61, 37340],
+    [5012, 37444],
+    [926, 37340],
+    [5012, 37340]
+  ],
+  "$fileid": 1110
+}
+,
+
+{"model": 26294, "sequence": 366, "$fileid": 1111}
+,
+
+{"model": 26292, "sequence": 366, "$fileid": 1112}
+,
+
+{"model": 26295, "sequence": 366, "$fileid": 1113}
+,
+
+{"model": 26297, "sequence": 366, "$fileid": 1114}
+,
+
+{"model": 26296, "$fileid": 1115}
+,
+
+{"model": 26298, "sequence": 366, "$fileid": 1116}
+,
+
+{"model": 26383, "sequence": 6591, "$fileid": 1117}
+,
+
+{"model": 26384, "sequence": 6602, "$fileid": 1118}
+,
+
+{"model": 26385, "sequence": 6612, "ambient": 25, "$fileid": 1119}
+,
+
+{"model": 26377, "sequence": 6622, "ambient": 25, "$fileid": 1120}
+,
+
+{"model": 26378, "sequence": 6622, "ambient": 25, "$fileid": 1121}
+,
+
+{"model": 26379, "sequence": 6622, "ambient": 25, "$fileid": 1122}
+,
+
+{"model": 26301, "sequence": 370, "$fileid": 1123}
+,
+
+{
+  "model": 26380,
+  "sequence": 6621,
+  "replace_colors": [
+    [43030, 29892],
+    [43034, 11705],
+    [43038, 11705],
+    [43043, 11705],
+    [555, 11705]
+  ],
+  "$fileid": 1124
+}
+,
+
+{
+  "model": 26380,
+  "sequence": 6621,
+  "replace_colors": [
+    [43030, 7390],
+    [43034, 7390],
+    [43038, 8980],
+    [43043, 7390],
+    [555, 7390]
+  ],
+  "$fileid": 1125
+}
+,
+
+{
+  "model": 26380,
+  "sequence": 6621,
+  "replace_colors": [
+    [43030, 54480],
+    [43034, 54480],
+    [43038, 10157],
+    [43043, 54480],
+    [555, 54348]
+  ],
+  "$fileid": 1126
+}
+,
+
+{
+  "model": 26380,
+  "sequence": 6621,
+  "replace_colors": [
+    [43030, 1736],
+    [43034, 3788],
+    [43038, 3788],
+    [43043, 3767],
+    [555, 3788]
+  ],
+  "$fileid": 1127
+}
+,
+
+{
+  "model": 26380,
+  "sequence": 6621,
+  "replace_colors": [
+    [43030, 10652],
+    [43034, 21914],
+    [43038, 21914],
+    [43043, 21675],
+    [555, 21914]
+  ],
+  "$fileid": 1128
+}
+,
+
+{
+  "model": 26380,
+  "sequence": 6621,
+  "replace_colors": [
+    [43030, 4444],
+    [43034, 4329],
+    [43038, 55622],
+    [43043, 4329],
+    [555, 4329]
+  ],
+  "$fileid": 1129
+}
+,
+
+{
+  "model": 26380,
+  "sequence": 6621,
+  "replace_colors": [
+    [43030, 28723],
+    [43034, 33678],
+    [43038, 33321],
+    [43043, 33678],
+    [555, 33678]
+  ],
+  "$fileid": 1130
+}
+,
+
+{
+  "model": 26380,
+  "sequence": 6621,
+  "replace_colors": [
+    [43030, 7481],
+    [43034, 8497],
+    [43038, 11053],
+    [43043, 11053],
+    [555, 8497]
+  ],
+  "$fileid": 1131
+}
+,
+
+{
+  "model": 26380,
+  "sequence": 6621,
+  "replace_colors": [
+    [43030, 6435],
+    [43034, 8497],
+    [43038, 21782],
+    [43043, 6435],
+    [555, 21675]
+  ],
+  "$fileid": 1132
+}
+,
+
+{"model": 26380, "sequence": 6621, "$fileid": 1133}
+,
+
+{
+  "model": 26381,
+  "sequence": 6619,
+  "replace_colors": [
+    [43030, 29892],
+    [43034, 11705],
+    [43038, 11705],
+    [43043, 11705],
+    [555, 11705]
+  ],
+  "$fileid": 1134
+}
+,
+
+{
+  "model": 26381,
+  "sequence": 6619,
+  "replace_colors": [
+    [43030, 7390],
+    [43034, 7390],
+    [43038, 8980],
+    [43043, 7390],
+    [555, 7390]
+  ],
+  "$fileid": 1135
+}
+,
+
+{
+  "model": 26381,
+  "sequence": 6619,
+  "replace_colors": [
+    [43030, 54480],
+    [43034, 54480],
+    [43038, 10157],
+    [43043, 54480],
+    [555, 54348]
+  ],
+  "$fileid": 1136
+}
+,
+
+{
+  "model": 26381,
+  "sequence": 6619,
+  "replace_colors": [
+    [43030, 1736],
+    [43034, 3788],
+    [43038, 3788],
+    [43043, 3767],
+    [555, 3788]
+  ],
+  "$fileid": 1137
+}
+,
+
+{
+  "model": 26381,
+  "sequence": 6619,
+  "replace_colors": [
+    [43030, 10652],
+    [43034, 21914],
+    [43038, 21914],
+    [43043, 21675],
+    [555, 21914]
+  ],
+  "$fileid": 1138
+}
+,
+
+{
+  "model": 26381,
+  "sequence": 6619,
+  "replace_colors": [
+    [43030, 4444],
+    [43034, 4329],
+    [43038, 55622],
+    [43043, 4329],
+    [555, 4329]
+  ],
+  "$fileid": 1139
+}
+,
+
+{
+  "model": 26381,
+  "sequence": 6619,
+  "replace_colors": [
+    [43030, 28723],
+    [43034, 33678],
+    [43038, 33321],
+    [43043, 33678],
+    [555, 33678]
+  ],
+  "$fileid": 1140
+}
+,
+
+{
+  "model": 26381,
+  "sequence": 6619,
+  "replace_colors": [
+    [43030, 7481],
+    [43034, 8497],
+    [43038, 11053],
+    [43043, 11053],
+    [555, 8497]
+  ],
+  "$fileid": 1141
+}
+,
+
+{
+  "model": 26381,
+  "sequence": 6619,
+  "replace_colors": [
+    [43030, 6435],
+    [43034, 8497],
+    [43038, 21782],
+    [43043, 6435],
+    [555, 21675]
+  ],
+  "$fileid": 1142
+}
+,
+
+{"model": 26381, "sequence": 6619, "$fileid": 1143}
+,
+
+{
+  "model": 26381,
+  "sequence": 6620,
+  "replace_colors": [
+    [43030, 29892],
+    [43034, 11705],
+    [43038, 11705],
+    [43043, 11705],
+    [555, 11705]
+  ],
+  "$fileid": 1144
+}
+,
+
+{
+  "model": 26381,
+  "sequence": 6620,
+  "replace_colors": [
+    [43030, 7390],
+    [43034, 7390],
+    [43038, 8980],
+    [43043, 7390],
+    [555, 7390]
+  ],
+  "$fileid": 1145
+}
+,
+
+{
+  "model": 26381,
+  "sequence": 6620,
+  "replace_colors": [
+    [43030, 54480],
+    [43034, 54480],
+    [43038, 10157],
+    [43043, 54480],
+    [555, 54348]
+  ],
+  "$fileid": 1146
+}
+,
+
+{
+  "model": 26381,
+  "sequence": 6620,
+  "replace_colors": [
+    [43030, 1736],
+    [43034, 3788],
+    [43038, 3788],
+    [43043, 3767],
+    [555, 3788]
+  ],
+  "$fileid": 1147
+}
+,
+
+{
+  "model": 26381,
+  "sequence": 6620,
+  "replace_colors": [
+    [43030, 10652],
+    [43034, 21914],
+    [43038, 21914],
+    [43043, 21675],
+    [555, 21914]
+  ],
+  "$fileid": 1148
+}
+,
+
+{
+  "model": 26381,
+  "sequence": 6620,
+  "replace_colors": [
+    [43030, 4444],
+    [43034, 4329],
+    [43038, 55622],
+    [43043, 4329],
+    [555, 4329]
+  ],
+  "$fileid": 1149
+}
+,
+
+{
+  "model": 26381,
+  "sequence": 6620,
+  "replace_colors": [
+    [43030, 28723],
+    [43034, 33678],
+    [43038, 33321],
+    [43043, 33678],
+    [555, 33678]
+  ],
+  "$fileid": 1150
+}
+,
+
+{
+  "model": 26381,
+  "sequence": 6620,
+  "replace_colors": [
+    [43030, 7481],
+    [43034, 8497],
+    [43038, 11053],
+    [43043, 11053],
+    [555, 8497]
+  ],
+  "$fileid": 1151
+}
+,
+
+{
+  "model": 26381,
+  "sequence": 6620,
+  "replace_colors": [
+    [43030, 6435],
+    [43034, 8497],
+    [43038, 21782],
+    [43043, 6435],
+    [555, 21675]
+  ],
+  "$fileid": 1152
+}
+,
+
+{"model": 26381, "sequence": 6620, "$fileid": 1153}
+,
+
+{"model": 26594, "sequence": 6647, "$fileid": 1154}
+,
+
+{"model": 26593, "sequence": 6648, "ambient": 60, "$fileid": 1155}
+,
+
+{"model": 26606, "sequence": 6667, "$fileid": 1156}
+,
+
+{"model": 26607, "sequence": 6668, "$fileid": 1157}
+,
+
+{"model": 26607, "sequence": 6669, "$fileid": 1158}
+,
+
+{"model": 26607, "sequence": 6670, "$fileid": 1159}
+,
+
+{"model": 26598, "sequence": 6690, "$fileid": 1160}
+,
+
+{"model": 26598, "sequence": 6691, "$fileid": 1161}
+,
+
+{"model": 26598, "sequence": 6692, "$fileid": 1162}
+,
+
+{"model": 26598, "sequence": 6693, "$fileid": 1163}
+,
+
+{"model": 26598, "sequence": 6694, "$fileid": 1164}
+,
+
+{"model": 26597, "sequence": 6697, "$fileid": 1165}
+,
+
+{"model": 26595, "sequence": 6698, "$fileid": 1166}
+,
+
+{"model": 26596, "sequence": 6699, "$fileid": 1167}
+,
+
+{"model": 26598, "sequence": 6701, "$fileid": 1168}
+,
+
+{"model": 26688, "sequence": 6721, "$fileid": 1169}
+,
+
+{"model": 17149, "sequence": 6760, "$fileid": 1170}
+,
+
+{"model": 28996, "sequence": 7230, "ambient": 10, "$fileid": 1171}
+,
+
+{"model": 28994, "sequence": 7234, "ambient": 10, "$fileid": 1172}
+,
+
+{"model": 26586, "sequence": 6852, "$fileid": 1173}
+,
+
+{"model": 26877, "sequence": 6848, "$fileid": 1174}
+,
+
+{"model": 27162, "sequence": 6877, "$fileid": 1175}
+,
+
+{"model": 27156, "sequence": 6889, "ambient": 20, "$fileid": 1176}
+,
+
+{"model": 27160, "sequence": 6888, "ambient": 20, "$fileid": 1177}
+,
+
+{"model": 14446, "sequence": 1126, "$fileid": 1178}
+,
+
+{"model": 27229, "sequence": 6924, "$fileid": 1179}
+,
+
+{"model": 27228, "sequence": 6930, "$fileid": 1180}
+,
+
+{"model": 27711, "sequence": 6936, "$fileid": 1181}
+,
+
+{"model": 27711, "sequence": 6937, "$fileid": 1182}
+,
+
+{"model": 27711, "sequence": 6938, "$fileid": 1183}
+,
+
+{
+  "model": 28178,
+  "sequence": 7020,
+  "ambient": 30,
+  "contrast": 30,
+  "$fileid": 1184
+}
+,
+
+{
+  "model": 28220,
+  "sequence": 7021,
+  "ambient": 30,
+  "contrast": 30,
+  "$fileid": 1185
+}
+,
+
+{
+  "model": 28179,
+  "sequence": 7022,
+  "ambient": 30,
+  "contrast": 30,
+  "$fileid": 1186
+}
+,
+
+{
+  "model": 28217,
+  "sequence": 7012,
+  "replace_colors": [[57, 43297], [61, 43173], [926, 37181]],
+  "$fileid": 1187
+}
+,
+
+{
+  "model": 28217,
+  "sequence": 7013,
+  "replace_colors": [[57, 43297], [61, 43173], [926, 37181]],
+  "$fileid": 1188
+}
+,
+
+{"model": 28173, "sequence": 6948, "$fileid": 1189}
+,
+
+{"model": 28240, "sequence": 6957, "$fileid": 1190}
+,
+
+{"model": 28238, "sequence": 6958, "$fileid": 1191}
+,
+
+{"model": 28236, "sequence": 6959, "$fileid": 1192}
+,
+
+{"model": 28239, "sequence": 6961, "$fileid": 1193}
+,
+
+{"model": 28174, "sequence": 6968, "$fileid": 1194}
+,
+
+{"model": 28201, "sequence": 6969, "$fileid": 1195}
+,
+
+{"model": 28176, "sequence": 6970, "$fileid": 1196}
+,
+
+{"model": 28177, "sequence": 6970, "$fileid": 1197}
+,
+
+{
+  "model": 28177,
+  "sequence": 6970,
+  "replace_colors": [[123, 37588], [99, 37584], [78, 37452], [70, 37448]],
+  "$fileid": 1198
+}
+,
+
+{"model": 28237, "sequence": 6960, "$fileid": 1199}
+,
+
+{
+  "model": 28216,
+  "sequence": 7006,
+  "contrast": 30,
+  "ambient": 30,
+  "$fileid": 1200
+}
+,
+
+{
+  "model": 27793,
+  "sequence": 7027,
+  "contrast": 20,
+  "ambient": 20,
+  "$fileid": 1201
+}
+,
+
+{
+  "model": 28202,
+  "sequence": 7026,
+  "contrast": 20,
+  "ambient": 20,
+  "$fileid": 1202
+}
+,
+
+{
+  "model": 28202,
+  "sequence": 7025,
+  "contrast": 20,
+  "ambient": 20,
+  "$fileid": 1203
+}
+,
+
+{
+  "model": 28202,
+  "sequence": 7028,
+  "contrast": 20,
+  "ambient": 20,
+  "$fileid": 1204
+}
+,
+
+{
+  "model": 27795,
+  "sequence": 7029,
+  "contrast": 20,
+  "ambient": 20,
+  "$fileid": 1205
+}
+,
+
+{
+  "model": 28218,
+  "sequence": 7030,
+  "contrast": 20,
+  "ambient": 20,
+  "$fileid": 1206
+}
+,
+
+{
+  "model": 28219,
+  "sequence": 7031,
+  "contrast": 20,
+  "ambient": 20,
+  "$fileid": 1207
+}
+,
+
+{
+  "model": 28180,
+  "sequence": 7032,
+  "contrast": 20,
+  "ambient": 20,
+  "$fileid": 1208
+}
+,
+
+{
+  "model": 28180,
+  "sequence": 7034,
+  "contrast": 20,
+  "ambient": 20,
+  "$fileid": 1209
+}
+,
+
+{
+  "model": 28221,
+  "sequence": 7035,
+  "contrast": 20,
+  "ambient": 20,
+  "$fileid": 1210
+}
+,
+
+{
+  "model": 28221,
+  "sequence": 7036,
+  "contrast": 20,
+  "ambient": 20,
+  "$fileid": 1211
+}
+,
+
+{
+  "model": 28172,
+  "sequence": 7037,
+  "contrast": 20,
+  "ambient": 20,
+  "$fileid": 1212
+}
+,
+
+{
+  "model": 28172,
+  "sequence": 7038,
+  "contrast": 20,
+  "ambient": 20,
+  "$fileid": 1213
+}
+,
+
+{
+  "model": 28262,
+  "sequence": 7053,
+  "contrast": 60,
+  "ambient": 60,
+  "$fileid": 1214
+}
+,
+
+{
+  "model": 28263,
+  "sequence": 7054,
+  "contrast": 60,
+  "ambient": 60,
+  "$fileid": 1215
+}
+,
+
+{
+  "model": 28266,
+  "sequence": 7055,
+  "contrast": 60,
+  "ambient": 60,
+  "$fileid": 1216
+}
+,
+
+{
+  "model": 28265,
+  "sequence": 7056,
+  "contrast": 60,
+  "ambient": 60,
+  "$fileid": 1217
+}
+,
+
+{
+  "model": 28264,
+  "sequence": 7057,
+  "contrast": 60,
+  "ambient": 60,
+  "$fileid": 1218
+}
+,
+
+{
+  "model": 28273,
+  "sequence": 7065,
+  "contrast": 30,
+  "ambient": 30,
+  "$fileid": 1219
+}
+,
+
+{"model": 28195, "sequence": 7068, "ambient": 30, "$fileid": 1220}
+,
+
+{"model": 28223, "sequence": 7069, "ambient": 30, "$fileid": 1221}
+,
+
+{"model": 28249, "sequence": 7075, "ambient": 30, "$fileid": 1222}
+,
+
+{"model": 28211, "sequence": 7077, "ambient": 30, "$fileid": 1223}
+,
+
+{"model": 28175, "sequence": 7076, "ambient": 30, "$fileid": 1224}
+,
+
+{"model": 11224, "sequence": 7079, "ambient": 30, "$fileid": 1225}
+,
+
+{"model": 28289, "sequence": 7080, "$fileid": 1226}
+,
+
+{"model": 28350, "sequence": 7107, "$fileid": 1227}
+,
+
+{"model": 28347, "sequence": 7083, "$fileid": 1228}
+,
+
+{"model": 28347, "sequence": 7085, "$fileid": 1229}
+,
+
+{"model": 17150, "sequence": 7149, "ambient": 10, "$fileid": 1230}
+,
+
+{
+  "model": 28548,
+  "sequence": 7148,
+  "ambient": 64,
+  "contrast": 94,
+  "$fileid": 1231
+}
+,
+
+{"model": 17150, "sequence": 7150, "ambient": 10, "$fileid": 1232}
+,
+
+{"model": 28849, "sequence": 7204, "$fileid": 1233}
+,
+
+{
+  "model": 26300,
+  "sequence": 581,
+  "replace_colors": [[82, 5652]],
+  "$fileid": 1234
+}
+,
+
+{"model": 26300, "sequence": 581, "replace_colors": [[82, 33]], "$fileid": 1235}
+,
+
+{"model": 26300, "sequence": 581, "replace_colors": [[82, 61]], "$fileid": 1236}
+,
+
+{"model": 26300, "sequence": 581, "replace_colors": [[82, 0]], "$fileid": 1237}
+,
+
+{
+  "model": 26300,
+  "sequence": 581,
+  "replace_colors": [[82, 43282]],
+  "$fileid": 1238
+}
+,
+
+{
+  "model": 26300,
+  "sequence": 581,
+  "replace_colors": [[82, 21662]],
+  "$fileid": 1239
+}
+,
+
+{
+  "model": 26300,
+  "sequence": 581,
+  "replace_colors": [[82, 36133]],
+  "$fileid": 1240
+}
+,
+
+{"model": 29121, "sequence": 7250, "ambient": 15, "$fileid": 1241}
+,
+
+{"model": 26301, "sequence": 581, "$fileid": 1242}
+,
+
+{"model": 28995, "sequence": 7251, "ambient": 32, "$fileid": 1243}
+,
+
+{"model": 29175, "sequence": 7279, "$fileid": 1244}
+,
+
+{"model": 29167, "sequence": 7292, "$fileid": 1245}
+,
+
+{"model": 29173, "sequence": 7294, "$fileid": 1246}
+,
+
+{
+  "model": 29222,
+  "sequence": 7300,
+  "contrast": 20,
+  "ambient": 20,
+  "$fileid": 1247
+}
+,
+
+{"model": 29248, "sequence": 7306, "$fileid": 1248}
+,
+
+{"model": 29242, "sequence": 7306, "$fileid": 1249}
+,
+
+{"model": 29237, "sequence": 7306, "$fileid": 1250}
+,
+
+{"model": 29245, "sequence": 7306, "$fileid": 1251}
+,
+
+{"model": 29246, "sequence": 7306, "$fileid": 1252}
+,
+
+{"model": 29241, "sequence": 7306, "$fileid": 1253}
+,
+
+{"model": 29248, "sequence": 7305, "$fileid": 1254}
+,
+
+{"model": 29242, "sequence": 7305, "$fileid": 1255}
+,
+
+{"model": 29237, "sequence": 7305, "$fileid": 1256}
+,
+
+{"model": 29245, "sequence": 7305, "$fileid": 1257}
+,
+
+{"model": 29246, "sequence": 7305, "$fileid": 1258}
+,
+
+{"model": 29241, "sequence": 7305, "$fileid": 1259}
+,
+
+{"model": 29535, "sequence": 7334, "$fileid": 1260}
+,
+
+{"model": 29535, "sequence": 7335, "$fileid": 1261}
+,
+
+{"model": 29535, "sequence": 7336, "$fileid": 1262}
+,
+
+{"model": 29543, "sequence": 7344, "$fileid": 1263}
+,
+
+{"model": 29546, "sequence": 7337, "$fileid": 1264}
+,
+
+{
+  "model": 29546,
+  "sequence": 7338,
+  "replace_colors": [[960, 38835], [7104, 45985], [10469, 32883]],
+  "$fileid": 1265
+}
+,
+
+{"model": 29547, "sequence": 7339, "$fileid": 1266}
+,
+
+{"model": 29549, "sequence": 7340, "ambient": 30, "$fileid": 1267}
+,
+
+{"model": 29550, "sequence": 7341, "ambient": 30, "$fileid": 1268}
+,
+
+{"model": 29537, "sequence": 7345, "$fileid": 1269}
+,
+
+{"model": 29544, "sequence": 7355, "$fileid": 1270}
+,
+
+{"model": 28463, "sequence": 7362, "$fileid": 1271}
+,
+
+{
+  "model": 30266,
+  "sequence": 7488,
+  "ambient": 64,
+  "contrast": 12,
+  "$fileid": 1274
+}
+,
+
+{
+  "model": 30154,
+  "sequence": 7525,
+  "ambient": 32,
+  "contrast": 64,
+  "$fileid": 1275
+}
+,
+
+{
+  "model": 30178,
+  "sequence": 7494,
+  "ambient": 20,
+  "contrast": 20,
+  "$fileid": 1276
+}
+,
+
+{
+  "model": 30178,
+  "sequence": 7495,
+  "ambient": 20,
+  "contrast": 20,
+  "$fileid": 1277
+}
+,
+
+{"model": 30179, "sequence": 7511, "$fileid": 1278}
+,
+
+{"model": 30181, "sequence": 7509, "$fileid": 1279}]}

@@ -1,0 +1,2394 @@
+{"$schema":".schema-npcs_batch.json","files":[
+
+{
+  "animation_group": 262,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "combat": 57,
+  "name": "Zombie pirate",
+  "models": [21432, 21470, 21414, 21442, 21462, 21456, 21421],
+  "movementCapabilities": 3,
+  "$fileid": 5632
+}
+,
+
+{
+  "animation_group": 262,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "combat": 57,
+  "name": "Zombie pirate",
+  "models": [21434, 21470, 21414, 21442, 21462, 21455, 21423],
+  "movementCapabilities": 3,
+  "$fileid": 5633
+}
+,
+
+{
+  "animation_group": 262,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "combat": 57,
+  "color_replacements": [
+    [21646, 54540],
+    [21522, 54420],
+    [21526, 54544],
+    [21530, 54420],
+    [21534, 54424],
+    [7442, 54540]
+  ],
+  "name": "Zombie pirate",
+  "models": [21435, 21472, 21414, 21442, 21462, 21456, 21421],
+  "movementCapabilities": 3,
+  "$fileid": 5634
+}
+,
+
+{
+  "animation_group": 262,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "combat": 57,
+  "color_replacements": [
+    [3986, 38300],
+    [3862, 38305],
+    [3738, 38181],
+    [3614, 38185],
+    [3619, 38189]
+  ],
+  "name": "Zombie pirate",
+  "models": [21436, 21473, 21414, 21442, 21462, 21455, 21423],
+  "movementCapabilities": 3,
+  "$fileid": 5635
+}
+,
+
+{
+  "animation_group": 262,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "combat": 57,
+  "color_replacements": [
+    [3986, 38300],
+    [3862, 38305],
+    [3738, 38181],
+    [3614, 38185],
+    [3619, 38189]
+  ],
+  "name": "Zombie pirate",
+  "models": [21436, 21473, 21414, 21442, 21462, 21455, 21423],
+  "movementCapabilities": 3,
+  "$fileid": 5636
+}
+,
+
+{
+  "animation_group": 263,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "combat": 57,
+  "name": "Zombie pirate",
+  "models": [21433, 21474, 21414, 21443, 21463, 21455, 21423],
+  "movementCapabilities": 3,
+  "$fileid": 5637
+}
+,
+
+{
+  "animation_group": 263,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "combat": 57,
+  "color_replacements": [
+    [3986, 38300],
+    [3862, 38305],
+    [3738, 38181],
+    [3614, 38185],
+    [3619, 38189]
+  ],
+  "name": "Zombie pirate",
+  "models": [21437, 21476, 21415, 21443, 21463, 21455, 21423],
+  "movementCapabilities": 3,
+  "$fileid": 5638
+}
+,
+
+{
+  "animation_group": 263,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "combat": 57,
+  "name": "Zombie pirate",
+  "models": [21438, 21477, 21416, 21443, 21463, 21456, 21423],
+  "movementCapabilities": 3,
+  "$fileid": 5639
+}
+,
+
+{
+  "animation_group": 263,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "combat": 57,
+  "color_replacements": [
+    [3986, 8078],
+    [3862, 7954],
+    [3738, 7830],
+    [3614, 7706],
+    [3619, 7582],
+    [1934, 6024]
+  ],
+  "name": "Zombie pirate",
+  "models": [21431, 21476, 21419, 21443, 21463, 21455, 21421],
+  "movementCapabilities": 3,
+  "$fileid": 5640
+}
+,
+
+{
+  "animation_group": 263,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "combat": 57,
+  "color_replacements": [
+    [21646, 54540],
+    [21522, 54420],
+    [21526, 54544],
+    [21530, 54420],
+    [21534, 54424],
+    [7442, 54540]
+  ],
+  "name": "Zombie pirate",
+  "models": [21432, 21477, 21415, 21443, 21463, 21456, 21421],
+  "movementCapabilities": 3,
+  "$fileid": 5641
+}
+,
+
+{
+  "animation_group": 995,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "combat": 57,
+  "name": "Zombie pirate",
+  "models": [21433, 21475, 21415, 21444, 21463, 21454, 21424],
+  "movementCapabilities": 3,
+  "$fileid": 5642
+}
+,
+
+{
+  "animation_group": 995,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "combat": 57,
+  "name": "Zombie pirate",
+  "models": [21434, 21475, 21416, 21444, 21463, 21449, 21424],
+  "movementCapabilities": 3,
+  "$fileid": 5643
+}
+,
+
+{
+  "animation_group": 995,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "combat": 57,
+  "name": "Zombie pirate",
+  "models": [21435, 21475, 21419, 21444, 21463, 21455, 21425],
+  "movementCapabilities": 3,
+  "$fileid": 5644
+}
+,
+
+{
+  "animation_group": 995,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "combat": 57,
+  "color_replacements": [
+    [906, 8720],
+    [1932, 8596],
+    [3982, 8472],
+    [3858, 7452],
+    [3734, 7452],
+    [28731, 7452]
+  ],
+  "name": "Zombie pirate",
+  "models": [21436, 21477, 21416, 21444, 21463, 21449, 21424],
+  "movementCapabilities": 3,
+  "$fileid": 5645
+}
+,
+
+{
+  "animation_group": 995,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "combat": 57,
+  "name": "Zombie pirate",
+  "models": [21437, 21476, 21419, 21444, 21463, 21456, 21425],
+  "movementCapabilities": 3,
+  "$fileid": 5646
+}
+,
+
+{
+  "animation_group": 993,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "combat": 57,
+  "name": "Zombie pirate",
+  "models": [21438, 21479, 21417, 21441, 21463, 21449, 21421],
+  "movementCapabilities": 3,
+  "$fileid": 5647
+}
+,
+
+{
+  "animation_group": 993,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "combat": 57,
+  "color_replacements": [
+    [906, 8720],
+    [1932, 8596],
+    [3982, 8472],
+    [3858, 7452],
+    [3734, 7452],
+    [28731, 7452]
+  ],
+  "name": "Zombie pirate",
+  "models": [21431, 21477, 21418, 21441, 21465, 21449, 21424],
+  "movementCapabilities": 3,
+  "$fileid": 5648
+}
+,
+
+{
+  "animation_group": 993,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "combat": 57,
+  "color_replacements": [
+    [906, 8720],
+    [1932, 8596],
+    [3982, 8472],
+    [3858, 7452],
+    [3734, 7452],
+    [28731, 7452]
+  ],
+  "name": "Zombie pirate",
+  "models": [21431, 21477, 21418, 21441, 21465, 21449, 21424],
+  "movementCapabilities": 3,
+  "$fileid": 5649
+}
+,
+
+{
+  "animation_group": 993,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "combat": 57,
+  "color_replacements": [
+    [906, 38540],
+    [1932, 38416],
+    [3982, 38292],
+    [3858, 38168],
+    [3734, 38168]
+  ],
+  "name": "Zombie pirate",
+  "models": [21432, 21478, 21418, 21441, 21465, 21449, 21424],
+  "movementCapabilities": 3,
+  "$fileid": 5650
+}
+,
+
+{
+  "animation_group": 993,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "combat": 57,
+  "color_replacements": [
+    [906, 38540],
+    [1932, 38416],
+    [3982, 38292],
+    [3858, 38168],
+    [3734, 38168]
+  ],
+  "name": "Zombie pirate",
+  "models": [21432, 21478, 21418, 21441, 21465, 21449, 21424],
+  "movementCapabilities": 3,
+  "$fileid": 5651
+}
+,
+
+{
+  "animation_group": 993,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "combat": 57,
+  "color_replacements": [
+    [906, 10644],
+    [1932, 10524],
+    [3982, 10529],
+    [3858, 10405],
+    [3734, 10405]
+  ],
+  "name": "Zombie pirate",
+  "models": [21434, 21478, 21418, 21443, 21463, 21449, 21424],
+  "movementCapabilities": 3,
+  "$fileid": 5652
+}
+,
+
+{
+  "animation_group": 993,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "combat": 57,
+  "color_replacements": [
+    [906, 10644],
+    [1932, 10524],
+    [3982, 10529],
+    [3858, 10405],
+    [3734, 10405]
+  ],
+  "name": "Zombie pirate",
+  "models": [21434, 21478, 21418, 21443, 21463, 21449, 21424],
+  "movementCapabilities": 3,
+  "$fileid": 5653
+}
+,
+
+{
+  "animation_group": 993,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "combat": 57,
+  "color_replacements": [
+    [906, 54924],
+    [1932, 54800],
+    [3982, 54676],
+    [3858, 54552],
+    [3734, 54552]
+  ],
+  "name": "Zombie pirate",
+  "models": [21436, 21474, 21417, 21443, 21463, 21449, 21425],
+  "movementCapabilities": 3,
+  "$fileid": 5654
+}
+,
+
+{
+  "animation_group": 993,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "combat": 57,
+  "color_replacements": [
+    [906, 54924],
+    [1932, 54800],
+    [3982, 54676],
+    [3858, 54552],
+    [3734, 54552]
+  ],
+  "name": "Zombie pirate",
+  "models": [21436, 21474, 21417, 21443, 21463, 21449, 21425],
+  "movementCapabilities": 3,
+  "$fileid": 5655
+}
+,
+
+{
+  "animation_group": 994,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "combat": 57,
+  "name": "Zombie pirate",
+  "models": [21437, 21475, 21415, 21441, 21464, 21453, 21423],
+  "movementCapabilities": 3,
+  "$fileid": 5656
+}
+,
+
+{
+  "animation_group": 994,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "combat": 57,
+  "name": "Zombie pirate",
+  "models": [21437, 21475, 21415, 21441, 21464, 21453, 21423],
+  "movementCapabilities": 3,
+  "$fileid": 5657
+}
+,
+
+{
+  "animation_group": 994,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "combat": 57,
+  "color_replacements": [
+    [3734, 25478],
+    [7452, 3734],
+    [7333, 3610],
+    [5002, 22402]
+  ],
+  "name": "Zombie pirate",
+  "models": [21438, 21475, 21416, 21441, 21465, 21455, 21424],
+  "movementCapabilities": 3,
+  "$fileid": 5658
+}
+,
+
+{
+  "animation_group": 994,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "combat": 57,
+  "color_replacements": [
+    [3734, 43288],
+    [7452, 7471],
+    [7333, 7479],
+    [5002, 43536]
+  ],
+  "name": "Zombie pirate",
+  "models": [21431, 21475, 21419, 21441, 21466, 21456, 21421],
+  "movementCapabilities": 3,
+  "$fileid": 5659
+}
+,
+
+{
+  "animation_group": 994,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "combat": 57,
+  "color_replacements": [
+    [3734, 43288],
+    [7452, 7471],
+    [7333, 7479],
+    [5002, 43536]
+  ],
+  "name": "Zombie pirate",
+  "models": [21431, 21475, 21419, 21441, 21466, 21456, 21421],
+  "movementCapabilities": 3,
+  "$fileid": 5660
+}
+,
+
+{
+  "animation_group": 994,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "combat": 57,
+  "color_replacements": [
+    [3734, 49556],
+    [7452, 1934],
+    [7333, 1686],
+    [5002, 50056]
+  ],
+  "name": "Zombie pirate",
+  "models": [21434, 21475, 21415, 21443, 21466, 21454, 21424],
+  "movementCapabilities": 3,
+  "$fileid": 5661
+}
+,
+
+{
+  "animation_group": 994,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "combat": 57,
+  "color_replacements": [
+    [3734, 49556],
+    [7452, 1934],
+    [7333, 1686],
+    [5002, 50056]
+  ],
+  "name": "Zombie pirate",
+  "models": [21434, 21475, 21415, 21443, 21466, 21454, 21424],
+  "movementCapabilities": 3,
+  "$fileid": 5662
+}
+,
+
+{
+  "animation_group": 994,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "combat": 57,
+  "color_replacements": [[3734, 10157], [7452, 16], [7333, 20], [5002, 11030]],
+  "name": "Zombie pirate",
+  "models": [21435, 21475, 21416, 21443, 21464, 21453, 21424],
+  "movementCapabilities": 3,
+  "$fileid": 5663
+}
+,
+
+{
+  "animation_group": 994,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "combat": 57,
+  "color_replacements": [[3734, 10157], [7452, 16], [7333, 20], [5002, 11030]],
+  "name": "Zombie pirate",
+  "models": [21435, 21475, 21416, 21443, 21464, 21453, 21424],
+  "movementCapabilities": 3,
+  "$fileid": 5664
+}
+,
+
+{
+  "animation_group": 994,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "combat": 57,
+  "color_replacements": [[3734, 10157], [7452, 16], [7333, 20], [5002, 11030]],
+  "name": "Zombie pirate",
+  "models": [21435, 21480, 21416, 21443, 21464, 21453, 21424],
+  "movementCapabilities": 3,
+  "$fileid": 5665
+}
+,
+
+{
+  "animation_group": 987,
+  "actions_1": "Attack",
+  "boundSize": 3,
+  "unknown_63": true,
+  "combat": 170,
+  "name": "Barrelchest",
+  "models": [22790],
+  "movementCapabilities": 3,
+  "$fileid": 5666
+}
+,
+
+{
+  "animation_group": 986,
+  "actions_0": "Talk-to",
+  "actions_2": "Transport",
+  "combat": 0,
+  "unknown_63": true,
+  "morphs_1": {
+    "unk1": 4294902740,
+    "unk2": [
+      5616,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      5616,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      5616,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      5616,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      5616,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      5616,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      5616,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      5616,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      5616,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      5616,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      5617,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      5617,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      5617,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535
+    ],
+    "unk3": 368146179
+  },
+  "$fileid": 5667
+}
+,
+
+{
+  "animation_group": 986,
+  "actions_0": "Talk-to",
+  "actions_2": "Transport",
+  "combat": 0,
+  "unknown_63": true,
+  "morphs_1": {
+    "unk1": 4294902740,
+    "unk2": [
+      5616,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      5616,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      5616,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      5616,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      5616,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      5616,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      5616,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      5616,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      5616,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      5616,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      5617,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      5617,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      5617,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535
+    ],
+    "unk3": 368146179
+  },
+  "$fileid": 5668
+}
+,
+
+{
+  "animation_group": 988,
+  "actions_0": "Talk-to",
+  "combat": 0,
+  "unknown_63": true,
+  "morphs_1": {"unk1": 223346687, "unk2": [5623], "unk3": 367556355},
+  "$fileid": 5669
+}
+,
+
+{
+  "animation_group": 988,
+  "actions_0": "Talk-to",
+  "combat": 0,
+  "unknown_63": true,
+  "morphs_1": {"unk1": 223346687, "unk2": [5624], "unk3": 367621891},
+  "$fileid": 5670
+}
+,
+
+{
+  "animation_group": 988,
+  "actions_0": "Talk-to",
+  "combat": 0,
+  "unknown_63": true,
+  "morphs_1": {"unk1": 223346687, "unk2": [5625], "unk3": 367687427},
+  "$fileid": 5671
+}
+,
+
+{
+  "animation_group": 988,
+  "actions_0": "Talk-to",
+  "combat": 0,
+  "unknown_63": true,
+  "morphs_1": {"unk1": 223346687, "unk2": [5626], "unk3": 367752963},
+  "$fileid": 5672
+}
+,
+
+{
+  "animation_group": 262,
+  "combat": 0,
+  "actions_0": "Talk-to",
+  "unknown_63": true,
+  "morphs_1": {"unk1": 223346687, "unk2": [], "unk3": 368277251},
+  "$fileid": 5673
+}
+,
+
+{
+  "animation_group": 262,
+  "combat": 0,
+  "actions_0": "Talk-to",
+  "unknown_63": true,
+  "morphs_1": {"unk1": 223346687, "unk2": [], "unk3": 368342787},
+  "$fileid": 5674
+}
+,
+
+{
+  "animation_group": 262,
+  "combat": 0,
+  "actions_0": "Talk-to",
+  "unknown_63": true,
+  "morphs_1": {"unk1": 223346687, "unk2": [], "unk3": 368408323},
+  "$fileid": 5675
+}
+,
+
+{
+  "animation_group": 262,
+  "combat": 0,
+  "actions_0": "Talk-to",
+  "unknown_63": true,
+  "morphs_1": {"unk1": 223346687, "unk2": [], "unk3": 368473859},
+  "$fileid": 5676
+}
+,
+
+{
+  "animation_group": 262,
+  "combat": 0,
+  "actions_0": "Talk-to",
+  "unknown_63": true,
+  "morphs_1": {"unk1": 223346687, "unk2": [], "unk3": 368211715},
+  "$fileid": 5677
+}
+,
+
+{
+  "animation_group": 336,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 10,
+  "combat": 30,
+  "name": "Undead Lumberjack",
+  "models": [23213],
+  "movementCapabilities": 3,
+  "$fileid": 5678
+}
+,
+
+{
+  "animation_group": 334,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 10,
+  "combat": 30,
+  "name": "Undead Lumberjack",
+  "models": [23213],
+  "movementCapabilities": 3,
+  "$fileid": 5679
+}
+,
+
+{
+  "animation_group": 335,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 10,
+  "combat": 30,
+  "color_replacements": [
+    [5276, 10266],
+    [5281, 10270],
+    [43034, 47],
+    [43043, 51],
+    [43047, 55],
+    [43051, 59]
+  ],
+  "name": "Undead Lumberjack",
+  "models": [23214],
+  "movementCapabilities": 3,
+  "$fileid": 5680
+}
+,
+
+{
+  "animation_group": 337,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 10,
+  "combat": 30,
+  "color_replacements": [
+    [5276, 10266],
+    [5281, 10270],
+    [43034, 47],
+    [43043, 51],
+    [43047, 55],
+    [43051, 59]
+  ],
+  "name": "Undead Lumberjack",
+  "models": [23214],
+  "movementCapabilities": 3,
+  "$fileid": 5681
+}
+,
+
+{
+  "animation_group": 336,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 10,
+  "combat": 30,
+  "color_replacements": [
+    [5276, 10266],
+    [5281, 10270],
+    [43034, 47],
+    [43043, 51],
+    [43047, 55],
+    [43051, 59]
+  ],
+  "name": "Undead Lumberjack",
+  "models": [23214],
+  "movementCapabilities": 3,
+  "$fileid": 5682
+}
+,
+
+{
+  "animation_group": 334,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 10,
+  "combat": 30,
+  "color_replacements": [
+    [5276, 10266],
+    [5281, 10270],
+    [43034, 47],
+    [43043, 51],
+    [43047, 55],
+    [43051, 59]
+  ],
+  "name": "Undead Lumberjack",
+  "models": [23214],
+  "movementCapabilities": 3,
+  "$fileid": 5683
+}
+,
+
+{
+  "animation_group": 335,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 10,
+  "combat": 35,
+  "name": "Undead Lumberjack",
+  "models": [23213],
+  "movementCapabilities": 3,
+  "$fileid": 5684
+}
+,
+
+{
+  "animation_group": 337,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 10,
+  "combat": 35,
+  "name": "Undead Lumberjack",
+  "models": [23213],
+  "movementCapabilities": 3,
+  "$fileid": 5685
+}
+,
+
+{
+  "animation_group": 336,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 10,
+  "combat": 35,
+  "name": "Undead Lumberjack",
+  "models": [23213],
+  "movementCapabilities": 3,
+  "$fileid": 5686
+}
+,
+
+{
+  "animation_group": 334,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 10,
+  "combat": 35,
+  "name": "Undead Lumberjack",
+  "models": [23213],
+  "movementCapabilities": 3,
+  "$fileid": 5687
+}
+,
+
+{
+  "animation_group": 335,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 10,
+  "combat": 35,
+  "color_replacements": [
+    [5276, 10266],
+    [5281, 10270],
+    [43034, 47],
+    [43043, 51],
+    [43047, 55],
+    [43051, 59]
+  ],
+  "name": "Undead Lumberjack",
+  "models": [23214],
+  "movementCapabilities": 3,
+  "$fileid": 5688
+}
+,
+
+{
+  "animation_group": 337,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 10,
+  "combat": 35,
+  "color_replacements": [
+    [5276, 10266],
+    [5281, 10270],
+    [43034, 47],
+    [43043, 51],
+    [43047, 55],
+    [43051, 59]
+  ],
+  "name": "Undead Lumberjack",
+  "models": [23214],
+  "movementCapabilities": 3,
+  "$fileid": 5689
+}
+,
+
+{
+  "animation_group": 336,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 10,
+  "combat": 35,
+  "color_replacements": [
+    [5276, 10266],
+    [5281, 10270],
+    [43034, 47],
+    [43043, 51],
+    [43047, 55],
+    [43051, 59]
+  ],
+  "name": "Undead Lumberjack",
+  "models": [23214],
+  "movementCapabilities": 3,
+  "$fileid": 5690
+}
+,
+
+{
+  "animation_group": 334,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 10,
+  "combat": 35,
+  "color_replacements": [
+    [5276, 10266],
+    [5281, 10270],
+    [43034, 47],
+    [43043, 51],
+    [43047, 55],
+    [43051, 59]
+  ],
+  "name": "Undead Lumberjack",
+  "models": [23214],
+  "movementCapabilities": 3,
+  "$fileid": 5691
+}
+,
+
+{
+  "animation_group": 335,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 10,
+  "combat": 40,
+  "name": "Undead Lumberjack",
+  "models": [23213],
+  "movementCapabilities": 3,
+  "$fileid": 5692
+}
+,
+
+{
+  "animation_group": 337,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 10,
+  "combat": 40,
+  "name": "Undead Lumberjack",
+  "models": [23213],
+  "movementCapabilities": 3,
+  "$fileid": 5693
+}
+,
+
+{
+  "animation_group": 336,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 10,
+  "combat": 40,
+  "name": "Undead Lumberjack",
+  "models": [23213],
+  "movementCapabilities": 3,
+  "$fileid": 5694
+}
+,
+
+{
+  "animation_group": 334,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 10,
+  "combat": 40,
+  "name": "Undead Lumberjack",
+  "models": [23213],
+  "movementCapabilities": 3,
+  "$fileid": 5695
+}
+,
+
+{
+  "animation_group": 335,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 10,
+  "combat": 40,
+  "color_replacements": [
+    [5276, 10266],
+    [5281, 10270],
+    [43034, 47],
+    [43043, 51],
+    [43047, 55],
+    [43051, 59]
+  ],
+  "name": "Undead Lumberjack",
+  "models": [23214],
+  "movementCapabilities": 3,
+  "$fileid": 5696
+}
+,
+
+{
+  "animation_group": 337,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 10,
+  "combat": 40,
+  "color_replacements": [
+    [5276, 10266],
+    [5281, 10270],
+    [43034, 47],
+    [43043, 51],
+    [43047, 55],
+    [43051, 59]
+  ],
+  "name": "Undead Lumberjack",
+  "models": [23214],
+  "movementCapabilities": 3,
+  "$fileid": 5697
+}
+,
+
+{
+  "animation_group": 336,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 10,
+  "combat": 40,
+  "color_replacements": [
+    [5276, 10266],
+    [5281, 10270],
+    [43034, 47],
+    [43043, 51],
+    [43047, 55],
+    [43051, 59]
+  ],
+  "name": "Undead Lumberjack",
+  "models": [23214],
+  "movementCapabilities": 3,
+  "$fileid": 5698
+}
+,
+
+{
+  "animation_group": 334,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 10,
+  "combat": 40,
+  "color_replacements": [
+    [5276, 10266],
+    [5281, 10270],
+    [43034, 47],
+    [43043, 51],
+    [43047, 55],
+    [43051, 59]
+  ],
+  "name": "Undead Lumberjack",
+  "models": [23214],
+  "movementCapabilities": 3,
+  "$fileid": 5699
+}
+,
+
+{
+  "animation_group": 335,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 10,
+  "combat": 45,
+  "name": "Undead Lumberjack",
+  "models": [23213],
+  "movementCapabilities": 3,
+  "$fileid": 5700
+}
+,
+
+{
+  "animation_group": 337,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 10,
+  "combat": 45,
+  "name": "Undead Lumberjack",
+  "models": [23213],
+  "movementCapabilities": 3,
+  "$fileid": 5701
+}
+,
+
+{
+  "animation_group": 336,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 10,
+  "combat": 45,
+  "name": "Undead Lumberjack",
+  "models": [23213],
+  "movementCapabilities": 3,
+  "$fileid": 5702
+}
+,
+
+{
+  "animation_group": 334,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 10,
+  "combat": 45,
+  "name": "Undead Lumberjack",
+  "models": [23213],
+  "movementCapabilities": 3,
+  "$fileid": 5703
+}
+,
+
+{
+  "animation_group": 335,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 10,
+  "combat": 45,
+  "color_replacements": [
+    [5276, 10266],
+    [5281, 10270],
+    [43034, 47],
+    [43043, 51],
+    [43047, 55],
+    [43051, 59]
+  ],
+  "name": "Undead Lumberjack",
+  "models": [23214],
+  "movementCapabilities": 3,
+  "$fileid": 5704
+}
+,
+
+{
+  "animation_group": 337,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 10,
+  "combat": 45,
+  "color_replacements": [
+    [5276, 10266],
+    [5281, 10270],
+    [43034, 47],
+    [43043, 51],
+    [43047, 55],
+    [43051, 59]
+  ],
+  "name": "Undead Lumberjack",
+  "models": [23214],
+  "movementCapabilities": 3,
+  "$fileid": 5705
+}
+,
+
+{
+  "animation_group": 336,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 10,
+  "combat": 45,
+  "color_replacements": [
+    [5276, 10266],
+    [5281, 10270],
+    [43034, 47],
+    [43043, 51],
+    [43047, 55],
+    [43051, 59]
+  ],
+  "name": "Undead Lumberjack",
+  "models": [23214],
+  "movementCapabilities": 3,
+  "$fileid": 5706
+}
+,
+
+{
+  "animation_group": 334,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 10,
+  "combat": 45,
+  "color_replacements": [
+    [5276, 10266],
+    [5281, 10270],
+    [43034, 47],
+    [43043, 51],
+    [43047, 55],
+    [43051, 59]
+  ],
+  "name": "Undead Lumberjack",
+  "models": [23214],
+  "movementCapabilities": 3,
+  "$fileid": 5707
+}
+,
+
+{
+  "animation_group": 335,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 10,
+  "combat": 50,
+  "name": "Undead Lumberjack",
+  "models": [23213],
+  "movementCapabilities": 3,
+  "$fileid": 5708
+}
+,
+
+{
+  "animation_group": 337,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 10,
+  "combat": 50,
+  "name": "Undead Lumberjack",
+  "models": [23213],
+  "movementCapabilities": 3,
+  "$fileid": 5709
+}
+,
+
+{
+  "animation_group": 336,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 10,
+  "combat": 50,
+  "name": "Undead Lumberjack",
+  "models": [23213],
+  "movementCapabilities": 3,
+  "$fileid": 5710
+}
+,
+
+{
+  "animation_group": 334,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 10,
+  "combat": 50,
+  "name": "Undead Lumberjack",
+  "models": [23213],
+  "movementCapabilities": 3,
+  "$fileid": 5711
+}
+,
+
+{
+  "animation_group": 335,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 10,
+  "combat": 50,
+  "color_replacements": [
+    [5276, 10266],
+    [5281, 10270],
+    [43034, 47],
+    [43043, 51],
+    [43047, 55],
+    [43051, 59]
+  ],
+  "name": "Undead Lumberjack",
+  "models": [23214],
+  "movementCapabilities": 3,
+  "$fileid": 5712
+}
+,
+
+{
+  "animation_group": 337,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 10,
+  "combat": 50,
+  "color_replacements": [
+    [5276, 10266],
+    [5281, 10270],
+    [43034, 47],
+    [43043, 51],
+    [43047, 55],
+    [43051, 59]
+  ],
+  "name": "Undead Lumberjack",
+  "models": [23214],
+  "movementCapabilities": 3,
+  "$fileid": 5713
+}
+,
+
+{
+  "animation_group": 336,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 10,
+  "combat": 50,
+  "color_replacements": [
+    [5276, 10266],
+    [5281, 10270],
+    [43034, 47],
+    [43043, 51],
+    [43047, 55],
+    [43051, 59]
+  ],
+  "name": "Undead Lumberjack",
+  "models": [23214],
+  "movementCapabilities": 3,
+  "$fileid": 5714
+}
+,
+
+{
+  "animation_group": 334,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 10,
+  "combat": 50,
+  "color_replacements": [
+    [5276, 10266],
+    [5281, 10270],
+    [43034, 47],
+    [43043, 51],
+    [43047, 55],
+    [43051, 59]
+  ],
+  "name": "Undead Lumberjack",
+  "models": [23214],
+  "movementCapabilities": 3,
+  "$fileid": 5715
+}
+,
+
+{
+  "animation_group": 335,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 10,
+  "combat": 55,
+  "name": "Undead Lumberjack",
+  "models": [23213],
+  "movementCapabilities": 3,
+  "$fileid": 5716
+}
+,
+
+{
+  "animation_group": 337,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 10,
+  "combat": 55,
+  "name": "Undead Lumberjack",
+  "models": [23213],
+  "movementCapabilities": 3,
+  "$fileid": 5717
+}
+,
+
+{
+  "animation_group": 336,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 10,
+  "combat": 55,
+  "name": "Undead Lumberjack",
+  "models": [23213],
+  "movementCapabilities": 3,
+  "$fileid": 5718
+}
+,
+
+{
+  "animation_group": 334,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 10,
+  "combat": 55,
+  "name": "Undead Lumberjack",
+  "models": [23213],
+  "movementCapabilities": 3,
+  "$fileid": 5719
+}
+,
+
+{
+  "animation_group": 335,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 10,
+  "combat": 55,
+  "color_replacements": [
+    [5276, 10266],
+    [5281, 10270],
+    [43034, 47],
+    [43043, 51],
+    [43047, 55],
+    [43051, 59]
+  ],
+  "name": "Undead Lumberjack",
+  "models": [23214],
+  "movementCapabilities": 3,
+  "$fileid": 5720
+}
+,
+
+{
+  "animation_group": 337,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 10,
+  "combat": 55,
+  "color_replacements": [
+    [5276, 10266],
+    [5281, 10270],
+    [43034, 47],
+    [43043, 51],
+    [43047, 55],
+    [43051, 59]
+  ],
+  "name": "Undead Lumberjack",
+  "models": [23214],
+  "movementCapabilities": 3,
+  "$fileid": 5721
+}
+,
+
+{
+  "animation_group": 336,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 10,
+  "combat": 55,
+  "color_replacements": [
+    [5276, 10266],
+    [5281, 10270],
+    [43034, 47],
+    [43043, 51],
+    [43047, 55],
+    [43051, 59]
+  ],
+  "name": "Undead Lumberjack",
+  "models": [23214],
+  "movementCapabilities": 3,
+  "$fileid": 5722
+}
+,
+
+{
+  "animation_group": 334,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 10,
+  "combat": 55,
+  "color_replacements": [
+    [5276, 10266],
+    [5281, 10270],
+    [43034, 47],
+    [43043, 51],
+    [43047, 55],
+    [43051, 59]
+  ],
+  "name": "Undead Lumberjack",
+  "models": [23214],
+  "movementCapabilities": 3,
+  "$fileid": 5723
+}
+,
+
+{
+  "animation_group": 335,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 10,
+  "combat": 60,
+  "name": "Undead Lumberjack",
+  "models": [23213],
+  "movementCapabilities": 3,
+  "$fileid": 5724
+}
+,
+
+{
+  "animation_group": 337,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 10,
+  "combat": 60,
+  "name": "Undead Lumberjack",
+  "models": [23213],
+  "movementCapabilities": 3,
+  "$fileid": 5725
+}
+,
+
+{
+  "animation_group": 336,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 10,
+  "combat": 60,
+  "name": "Undead Lumberjack",
+  "models": [23213],
+  "movementCapabilities": 3,
+  "$fileid": 5726
+}
+,
+
+{
+  "animation_group": 334,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 10,
+  "combat": 60,
+  "name": "Undead Lumberjack",
+  "models": [23213],
+  "movementCapabilities": 3,
+  "$fileid": 5727
+}
+,
+
+{
+  "animation_group": 335,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 10,
+  "combat": 60,
+  "color_replacements": [
+    [5276, 10266],
+    [5281, 10270],
+    [43034, 47],
+    [43043, 51],
+    [43047, 55],
+    [43051, 59]
+  ],
+  "name": "Undead Lumberjack",
+  "models": [23214],
+  "movementCapabilities": 3,
+  "$fileid": 5728
+}
+,
+
+{
+  "animation_group": 337,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 10,
+  "combat": 60,
+  "color_replacements": [
+    [5276, 10266],
+    [5281, 10270],
+    [43034, 47],
+    [43043, 51],
+    [43047, 55],
+    [43051, 59]
+  ],
+  "name": "Undead Lumberjack",
+  "models": [23214],
+  "movementCapabilities": 3,
+  "$fileid": 5729
+}
+,
+
+{
+  "animation_group": 336,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 10,
+  "combat": 60,
+  "color_replacements": [
+    [5276, 10266],
+    [5281, 10270],
+    [43034, 47],
+    [43043, 51],
+    [43047, 55],
+    [43051, 59]
+  ],
+  "name": "Undead Lumberjack",
+  "models": [23214],
+  "movementCapabilities": 3,
+  "$fileid": 5730
+}
+,
+
+{
+  "animation_group": 334,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 10,
+  "combat": 60,
+  "color_replacements": [
+    [5276, 10266],
+    [5281, 10270],
+    [43034, 47],
+    [43043, 51],
+    [43047, 55],
+    [43051, 59]
+  ],
+  "name": "Undead Lumberjack",
+  "models": [23214],
+  "movementCapabilities": 3,
+  "$fileid": 5731
+}
+,
+
+{
+  "animation_group": 335,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 10,
+  "combat": 64,
+  "name": "Undead Lumberjack",
+  "models": [23213],
+  "movementCapabilities": 3,
+  "$fileid": 5732
+}
+,
+
+{
+  "animation_group": 337,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 10,
+  "combat": 64,
+  "name": "Undead Lumberjack",
+  "models": [23213],
+  "movementCapabilities": 3,
+  "$fileid": 5733
+}
+,
+
+{
+  "animation_group": 336,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 10,
+  "combat": 64,
+  "name": "Undead Lumberjack",
+  "models": [23213],
+  "movementCapabilities": 3,
+  "$fileid": 5734
+}
+,
+
+{
+  "animation_group": 334,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 10,
+  "combat": 64,
+  "name": "Undead Lumberjack",
+  "models": [23213],
+  "movementCapabilities": 3,
+  "$fileid": 5735
+}
+,
+
+{
+  "animation_group": 335,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 10,
+  "combat": 64,
+  "color_replacements": [
+    [5276, 10266],
+    [5281, 10270],
+    [43034, 47],
+    [43043, 51],
+    [43047, 55],
+    [43051, 59]
+  ],
+  "name": "Undead Lumberjack",
+  "models": [23214],
+  "movementCapabilities": 3,
+  "$fileid": 5736
+}
+,
+
+{
+  "animation_group": 337,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 10,
+  "combat": 64,
+  "color_replacements": [
+    [5276, 10266],
+    [5281, 10270],
+    [43034, 47],
+    [43043, 51],
+    [43047, 55],
+    [43051, 59]
+  ],
+  "name": "Undead Lumberjack",
+  "models": [23214],
+  "movementCapabilities": 3,
+  "$fileid": 5737
+}
+,
+
+{
+  "animation_group": 336,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 10,
+  "combat": 64,
+  "color_replacements": [
+    [5276, 10266],
+    [5281, 10270],
+    [43034, 47],
+    [43043, 51],
+    [43047, 55],
+    [43051, 59]
+  ],
+  "name": "Undead Lumberjack",
+  "models": [23214],
+  "movementCapabilities": 3,
+  "$fileid": 5738
+}
+,
+
+{
+  "animation_group": 334,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 10,
+  "combat": 64,
+  "color_replacements": [
+    [5276, 10266],
+    [5281, 10270],
+    [43034, 47],
+    [43043, 51],
+    [43047, 55],
+    [43051, 59]
+  ],
+  "name": "Undead Lumberjack",
+  "models": [23214],
+  "movementCapabilities": 3,
+  "$fileid": 5739
+}
+,
+
+{
+  "animation_group": 335,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 10,
+  "combat": 70,
+  "name": "Undead Lumberjack",
+  "models": [23213],
+  "movementCapabilities": 3,
+  "$fileid": 5740
+}
+,
+
+{
+  "animation_group": 337,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 10,
+  "combat": 70,
+  "name": "Undead Lumberjack",
+  "models": [23213],
+  "movementCapabilities": 3,
+  "$fileid": 5741
+}
+,
+
+{
+  "animation_group": 336,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 10,
+  "combat": 70,
+  "name": "Undead Lumberjack",
+  "models": [23213],
+  "movementCapabilities": 3,
+  "$fileid": 5742
+}
+,
+
+{
+  "animation_group": 334,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 10,
+  "combat": 70,
+  "name": "Undead Lumberjack",
+  "models": [23213],
+  "movementCapabilities": 3,
+  "$fileid": 5743
+}
+,
+
+{
+  "animation_group": 335,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 10,
+  "combat": 70,
+  "color_replacements": [
+    [5276, 10266],
+    [5281, 10270],
+    [43034, 47],
+    [43043, 51],
+    [43047, 55],
+    [43051, 59]
+  ],
+  "name": "Undead Lumberjack",
+  "models": [23214],
+  "movementCapabilities": 3,
+  "$fileid": 5744
+}
+,
+
+{
+  "animation_group": 337,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 10,
+  "combat": 70,
+  "color_replacements": [
+    [5276, 10266],
+    [5281, 10270],
+    [43034, 47],
+    [43043, 51],
+    [43047, 55],
+    [43051, 59]
+  ],
+  "name": "Undead Lumberjack",
+  "models": [23214],
+  "movementCapabilities": 3,
+  "$fileid": 5745
+}
+,
+
+{
+  "animation_group": 336,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 10,
+  "combat": 70,
+  "color_replacements": [
+    [5276, 10266],
+    [5281, 10270],
+    [43034, 47],
+    [43043, 51],
+    [43047, 55],
+    [43051, 59]
+  ],
+  "name": "Undead Lumberjack",
+  "models": [23214],
+  "movementCapabilities": 3,
+  "$fileid": 5746
+}
+,
+
+{
+  "animation_group": 334,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 10,
+  "combat": 70,
+  "color_replacements": [
+    [5276, 10266],
+    [5281, 10270],
+    [43034, 47],
+    [43043, 51],
+    [43047, 55],
+    [43051, 59]
+  ],
+  "name": "Undead Lumberjack",
+  "models": [23214],
+  "movementCapabilities": 3,
+  "$fileid": 5747
+}
+,
+
+{
+  "animation_group": 265,
+  "combat": 0,
+  "boundSize": 1,
+  "drawMapDot": false,
+  "actions_0": "Net",
+  "actions_2": "Bait",
+  "actions_3": "hidden",
+  "actions_4": "hidden",
+  "name": "Fishing spot",
+  "models": [6568],
+  "movementCapabilities": 5,
+  "$fileid": 5748
+}
+,
+
+{
+  "animation_group": 265,
+  "combat": 0,
+  "boundSize": 1,
+  "drawMapDot": false,
+  "actions_0": "Net",
+  "actions_2": "Bait",
+  "actions_3": "hidden",
+  "actions_4": "hidden",
+  "name": "Fishing spot",
+  "models": [6568],
+  "movementCapabilities": 5,
+  "$fileid": 5749
+}
+,
+
+{
+  "animation_group": 652,
+  "boundSize": 2,
+  "actions_1": "Attack",
+  "combat": 96,
+  "name": "Cave bug",
+  "models": [23853],
+  "movementCapabilities": 3,
+  "$fileid": 5750
+}
+,
+
+{
+  "animation_group": 653,
+  "actions_1": "Attack",
+  "ambience": -30,
+  "modelContract": -30,
+  "unknown_63": true,
+  "combat": 51,
+  "name": "Molanisk",
+  "models": [23855],
+  "movementCapabilities": 3,
+  "$fileid": 5751
+}
+,
+
+{
+  "animation_group": 214,
+  "combat": 0,
+  "actions_0": "Talk-to",
+  "actions_2": "Pickpocket",
+  "name": "Cave goblin",
+  "models": [23651, 23696, 23634],
+  "headModels": [23246, 23225],
+  "movementCapabilities": 3,
+  "$fileid": 5752
+}
+,
+
+{
+  "animation_group": 214,
+  "combat": 0,
+  "actions_0": "Talk-to",
+  "actions_2": "Pickpocket",
+  "name": "Cave goblin",
+  "models": [23652, 23694, 23629],
+  "headModels": [23246],
+  "movementCapabilities": 3,
+  "$fileid": 5753
+}
+,
+
+{
+  "animation_group": 214,
+  "combat": 0,
+  "actions_0": "Talk-to",
+  "actions_2": "Pickpocket",
+  "color_replacements": [[20, 17566], [16, 26904], [24, 26904]],
+  "name": "Cave goblin",
+  "models": [23669, 23708, 23629],
+  "headModels": [23233, 23246],
+  "movementCapabilities": 3,
+  "$fileid": 5754
+}
+,
+
+{
+  "animation_group": 214,
+  "combat": 0,
+  "actions_0": "Talk-to",
+  "actions_2": "Pickpocket",
+  "name": "Cave goblin",
+  "models": [23659, 23694, 23635],
+  "headModels": [23246],
+  "movementCapabilities": 3,
+  "$fileid": 5755
+}
+,
+
+{
+  "animation_group": 214,
+  "combat": 0,
+  "actions_0": "Talk-to",
+  "actions_2": "Pickpocket",
+  "color_replacements": [[4403, 2237], [4399, 2233], [4395, 2229]],
+  "name": "Cave goblin",
+  "models": [23653, 23696, 23629],
+  "headModels": [23225, 23246],
+  "movementCapabilities": 3,
+  "$fileid": 5756
+}
+,
+
+{
+  "animation_group": 214,
+  "combat": 0,
+  "actions_0": "Talk-to",
+  "actions_2": "Pickpocket",
+  "color_replacements": [
+    [40125, 23731],
+    [40117, 23727],
+    [40237, 23723],
+    [1325, 5157],
+    [1321, 5281],
+    [1441, 3226]
+  ],
+  "name": "Cave goblin",
+  "models": [23659, 23698, 23635],
+  "headModels": [23226, 23246],
+  "movementCapabilities": 3,
+  "$fileid": 5757
+}
+,
+
+{
+  "animation_group": 214,
+  "combat": 0,
+  "actions_0": "Talk-to",
+  "actions_2": "Pickpocket",
+  "color_replacements": [
+    [10894, 28835],
+    [8976, 28830],
+    [5549, 59453],
+    [5673, 54327],
+    [5793, 54319]
+  ],
+  "name": "Cave goblin",
+  "models": [23651, 23706, 23635],
+  "headModels": [23248],
+  "movementCapabilities": 3,
+  "$fileid": 5758
+}
+,
+
+{
+  "animation_group": 214,
+  "combat": 0,
+  "actions_0": "Talk-to",
+  "actions_2": "Pickpocket",
+  "name": "Cave goblin",
+  "models": [23673, 23705, 23634],
+  "headModels": [23249],
+  "movementCapabilities": 3,
+  "$fileid": 5759
+}]}

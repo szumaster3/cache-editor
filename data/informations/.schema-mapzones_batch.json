@@ -1,0 +1,76 @@
+{
+  "type": "object",
+  "properties": {
+    "files": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "internal_name": {"type": "string"},
+          "name": {"type": "string"},
+          "center": {"type": "number", "maximum": 4294967295, "minimum": 0},
+          "unknown_1": {"type": "number", "maximum": 4294967295, "minimum": 0},
+          "show": {"type": "boolean"},
+          "default_zoom": {"type": "number", "maximum": 255, "minimum": 0},
+          "unknown_2": {"type": "number", "maximum": 255, "minimum": 0},
+          "bounds": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "plane": {"type": "number", "maximum": 255, "minimum": 0},
+                "src": {
+                  "type": "object",
+                  "properties": {
+                    "xstart": {
+                      "type": "number",
+                      "maximum": 65535,
+                      "minimum": 0
+                    },
+                    "zstart": {
+                      "type": "number",
+                      "maximum": 65535,
+                      "minimum": 0
+                    },
+                    "xend": {"type": "number", "maximum": 65535, "minimum": 0},
+                    "zend": {"type": "number", "maximum": 65535, "minimum": 0}
+                  },
+                  "required": ["xstart", "zstart", "xend", "zend"]
+                },
+                "dst": {
+                  "type": "object",
+                  "properties": {
+                    "xstart": {
+                      "type": "number",
+                      "maximum": 65535,
+                      "minimum": 0
+                    },
+                    "zstart": {
+                      "type": "number",
+                      "maximum": 65535,
+                      "minimum": 0
+                    },
+                    "xend": {"type": "number", "maximum": 65535, "minimum": 0},
+                    "zend": {"type": "number", "maximum": 65535, "minimum": 0}
+                  },
+                  "required": ["xstart", "zstart", "xend", "zend"]
+                }
+              },
+              "required": ["plane", "src", "dst"]
+            }
+          }
+        },
+        "required": [
+          "internal_name",
+          "name",
+          "center",
+          "unknown_1",
+          "show",
+          "default_zoom",
+          "unknown_2",
+          "bounds"
+        ]
+      }
+    }
+  }
+}

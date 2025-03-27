@@ -1,0 +1,204 @@
+{
+  "type": "object",
+  "properties": {
+    "files": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "mats": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {"type": "integer"},
+                "hasprops": {"type": "number", "maximum": 255, "minimum": 0},
+                "unk1": {
+                  "oneOf": [
+                    {"type": "number", "maximum": 255, "minimum": 0},
+                    {"type": "null"}
+                  ]
+                },
+                "unk2": {
+                  "oneOf": [
+                    {"type": "number", "maximum": 255, "minimum": 0},
+                    {"type": "null"}
+                  ]
+                },
+                "unk3": {
+                  "anyOf": [
+                    {"const": null},
+                    {
+                      "oneOf": [
+                        {"type": "number", "maximum": 255, "minimum": 0},
+                        {"type": "null"}
+                      ]
+                    }
+                  ]
+                },
+                "unk4": {
+                  "oneOf": [
+                    {"type": "number", "maximum": 65535, "minimum": 0},
+                    {"type": "null"}
+                  ]
+                },
+                "basecolorfraction": {
+                  "oneOf": [
+                    {"type": "number", "maximum": 255, "minimum": 0},
+                    {"type": "null"}
+                  ]
+                },
+                "unk6": {
+                  "oneOf": [
+                    {"type": "number", "maximum": 255, "minimum": 0},
+                    {"type": "null"}
+                  ]
+                },
+                "unk7": {
+                  "oneOf": [
+                    {"type": "number", "maximum": 255, "minimum": 0},
+                    {"type": "null"}
+                  ]
+                },
+                "basecolor": {
+                  "oneOf": [
+                    {"type": "number", "maximum": 65535, "minimum": 0},
+                    {"type": "null"}
+                  ]
+                },
+                "unk10": {
+                  "anyOf": [
+                    {
+                      "oneOf": [
+                        {"type": "number", "maximum": 255, "minimum": 0},
+                        {"type": "null"}
+                      ]
+                    },
+                    {"const": null}
+                  ]
+                },
+                "unk11": {
+                  "anyOf": [
+                    {
+                      "oneOf": [
+                        {"type": "number", "maximum": 255, "minimum": 0},
+                        {"type": "null"}
+                      ]
+                    },
+                    {"const": null}
+                  ]
+                },
+                "unk20": {
+                  "anyOf": [
+                    {
+                      "oneOf": [
+                        {"type": "number", "maximum": 255, "minimum": 0},
+                        {"type": "null"}
+                      ]
+                    },
+                    {"const": null}
+                  ]
+                },
+                "unk21": {
+                  "anyOf": [
+                    {
+                      "oneOf": [
+                        {"type": "number", "maximum": 255, "minimum": 0},
+                        {"type": "null"}
+                      ]
+                    },
+                    {"const": null}
+                  ]
+                },
+                "unk30": {
+                  "anyOf": [
+                    {
+                      "oneOf": [
+                        {"type": "number", "maximum": 255, "minimum": 0},
+                        {"type": "null"}
+                      ]
+                    },
+                    {"const": null}
+                  ]
+                },
+                "unk31": {
+                  "anyOf": [
+                    {
+                      "oneOf": [
+                        {"type": "number", "maximum": 255, "minimum": 0},
+                        {"type": "null"}
+                      ]
+                    },
+                    {"const": null}
+                  ]
+                },
+                "unk32": {
+                  "anyOf": [
+                    {
+                      "oneOf": [
+                        {"type": "number", "maximum": 255, "minimum": 0},
+                        {"type": "null"}
+                      ]
+                    },
+                    {"const": null}
+                  ]
+                },
+                "unk33": {
+                  "anyOf": [
+                    {
+                      "oneOf": [
+                        {"type": "number", "maximum": 255, "minimum": 0},
+                        {"type": "null"}
+                      ]
+                    },
+                    {"const": null}
+                  ]
+                },
+                "unk40": {
+                  "anyOf": [
+                    {"oneOf": [{"type": "string"}, {"type": "null"}]},
+                    {"const": null}
+                  ]
+                },
+                "unk41": {
+                  "anyOf": [
+                    {
+                      "oneOf": [
+                        {"type": "number", "maximum": 255, "minimum": 0},
+                        {"type": "null"}
+                      ]
+                    },
+                    {"const": null}
+                  ]
+                }
+              },
+              "required": [
+                "id",
+                "hasprops",
+                "unk1",
+                "unk2",
+                "unk3",
+                "unk4",
+                "basecolorfraction",
+                "unk6",
+                "unk7",
+                "basecolor",
+                "unk10",
+                "unk11",
+                "unk20",
+                "unk21",
+                "unk30",
+                "unk31",
+                "unk32",
+                "unk33",
+                "unk40",
+                "unk41"
+              ]
+            }
+          }
+        },
+        "required": ["mats"]
+      }
+    }
+  }
+}

@@ -1,0 +1,2737 @@
+{"$schema":".schema-objects_batch.json","files":[
+
+{
+  "unknown_16": true,
+  "deletable": false,
+  "ambient": 30,
+  "contrast": 30,
+  "material_replacements": [[532, 70]],
+  "models_05": {"models": [{"type": 10, "values": [3241], "unktail": []}]},
+  "$fileid": 3072
+}
+,
+
+{
+  "unknown_16": true,
+  "deletable": false,
+  "ambient": 30,
+  "contrast": 30,
+  "material_replacements": [[532, 70]],
+  "models_05": {"models": [{"type": 10, "values": [3242], "unktail": []}]},
+  "$fileid": 3073
+}
+,
+
+{
+  "unknown_16": true,
+  "deletable": false,
+  "ambient": 30,
+  "contrast": 30,
+  "material_replacements": [[532, 70]],
+  "models_05": {"models": [{"type": 10, "values": [3243], "unktail": []}]},
+  "$fileid": 3074
+}
+,
+
+{
+  "unknown_16": true,
+  "deletable": false,
+  "ambient": 30,
+  "contrast": 30,
+  "material_replacements": [[532, 70]],
+  "models_05": {"models": [{"type": 10, "values": [3277], "unktail": []}]},
+  "$fileid": 3075
+}
+,
+
+{
+  "unknown_16": true,
+  "deletable": false,
+  "mirror": true,
+  "ambient": 30,
+  "contrast": 30,
+  "material_replacements": [[532, 70]],
+  "models_05": {"models": [{"type": 10, "values": [3245], "unktail": []}]},
+  "$fileid": 3076
+}
+,
+
+{
+  "unknown_49": true,
+  "ambient": 30,
+  "contrast": 30,
+  "actions_4": "Lean against",
+  "mapscene": 22,
+  "maybe_allows_lineofsight": true,
+  "models": [
+    {"values": [3286], "type": 0},
+    {"values": [3287], "type": 1},
+    {"values": [3288], "type": 9}
+  ],
+  "name": "Wall",
+  "$fileid": 3077
+}
+,
+
+{
+  "unknown_49": true,
+  "ambient": 30,
+  "contrast": 30,
+  "actions_4": "Lean against",
+  "maybe_allows_lineofsight": true,
+  "color_replacements": [[6932, 6689]],
+  "models": [{"values": [3227], "type": 0}],
+  "name": "Wall",
+  "$fileid": 3078
+}
+,
+
+{
+  "unknown_49": true,
+  "ambient": 30,
+  "contrast": 30,
+  "unknown_16": true,
+  "actions_4": "Lean against",
+  "mapscene": 22,
+  "maybe_allows_lineofsight": true,
+  "models": [{"values": [3309], "type": 0}],
+  "name": "Wall",
+  "$fileid": 3079
+}
+,
+
+{
+  "unknown_49": true,
+  "ambient": 30,
+  "contrast": 30,
+  "unknown_16": true,
+  "deletable": false,
+  "mapscene": 22,
+  "models": [{"values": [3236], "type": 0}],
+  "$fileid": 3080
+}
+,
+
+{
+  "unknown_49": true,
+  "ambient": 30,
+  "contrast": 30,
+  "mirror": true,
+  "deletable": false,
+  "mapscene": 22,
+  "maybe_allows_lineofsight": true,
+  "models": [{"values": [3236], "type": 0}],
+  "$fileid": 3081
+}
+,
+
+{
+  "unknown_49": true,
+  "ambient": 30,
+  "contrast": 30,
+  "unknown_16": true,
+  "actions_4": "Lean against",
+  "mapscene": 22,
+  "maybe_allows_lineofsight": true,
+  "models": [{"values": [3257], "type": 0}],
+  "name": "Wall",
+  "$fileid": 3082
+}
+,
+
+{
+  "unknown_49": true,
+  "ambient": 30,
+  "contrast": 30,
+  "unknown_16": true,
+  "actions_4": "Lean against",
+  "mapscene": 22,
+  "maybe_allows_lineofsight": true,
+  "models": [{"values": [3274], "type": 0}],
+  "name": "Wall",
+  "$fileid": 3083
+}
+,
+
+{
+  "unknown_49": true,
+  "ambient": 30,
+  "contrast": 30,
+  "mapscene": 22,
+  "maybe_allows_lineofsight": true,
+  "models": [
+    {"values": [3286], "type": 0},
+    {"values": [3287], "type": 1},
+    {"values": [3288], "type": 9}
+  ],
+  "$fileid": 3084
+}
+,
+
+{
+  "unknown_49": true,
+  "ambient": 30,
+  "contrast": 30,
+  "unknown_16": true,
+  "mapscene": 22,
+  "maybe_allows_lineofsight": true,
+  "models": [{"values": [3309], "type": 0}],
+  "$fileid": 3085
+}
+,
+
+{
+  "unknown_49": true,
+  "ambient": 30,
+  "contrast": 30,
+  "unknown_16": true,
+  "mapscene": 22,
+  "maybe_allows_lineofsight": true,
+  "models": [{"values": [3257], "type": 0}],
+  "$fileid": 3086
+}
+,
+
+{
+  "unknown_49": true,
+  "ambient": 30,
+  "contrast": 30,
+  "unknown_16": true,
+  "mapscene": 22,
+  "maybe_allows_lineofsight": true,
+  "models": [{"values": [3274], "type": 0}],
+  "$fileid": 3087
+}
+,
+
+{
+  "unknown_49": true,
+  "ambient": 30,
+  "contrast": 30,
+  "mapscene": 22,
+  "maybe_allows_lineofsight": true,
+  "models": [{"values": [3318], "type": 2}, {"values": [3218], "type": 3}],
+  "$fileid": 3088
+}
+,
+
+{
+  "ambient": 60,
+  "contrast": 60,
+  "deletable": false,
+  "color_replacements": [[6932, 6689]],
+  "models_05": {"models": [{"type": 10, "values": [3276], "unktail": []}]},
+  "$fileid": 3089
+}
+,
+
+{
+  "ambient": 60,
+  "contrast": 60,
+  "length": 2,
+  "deletable": false,
+  "maybe_allows_lineofsight": true,
+  "color_replacements": [[6932, 6689], [7626, 2485]],
+  "models_05": {"models": [{"type": 10, "values": [3278], "unktail": []}]},
+  "$fileid": 3090
+}
+,
+
+{
+  "ambient": 60,
+  "contrast": 60,
+  "length": 2,
+  "deletable": false,
+  "maybe_allows_lineofsight": true,
+  "color_replacements": [[6932, 6689], [7626, 2485]],
+  "models_05": {"models": [{"type": 10, "values": [3229], "unktail": []}]},
+  "$fileid": 3091
+}
+,
+
+{
+  "ambient": 60,
+  "contrast": 60,
+  "length": 2,
+  "deletable": false,
+  "maybe_allows_lineofsight": true,
+  "color_replacements": [[6932, 6689], [7626, 2485]],
+  "models_05": {"models": [{"type": 10, "values": [3250], "unktail": []}]},
+  "$fileid": 3092
+}
+,
+
+{
+  "ambient": 60,
+  "contrast": 60,
+  "mirror": true,
+  "length": 2,
+  "deletable": false,
+  "maybe_allows_lineofsight": true,
+  "color_replacements": [[6932, 6689], [7626, 2485]],
+  "models_05": {"models": [{"type": 10, "values": [3250], "unktail": []}]},
+  "$fileid": 3093
+}
+,
+
+{
+  "ambient": 60,
+  "contrast": 60,
+  "length": 2,
+  "deletable": false,
+  "maybe_allows_lineofsight": true,
+  "color_replacements": [[6932, 6689], [7626, 2485]],
+  "models_05": {"models": [{"type": 10, "values": [3251], "unktail": []}]},
+  "$fileid": 3094
+}
+,
+
+{
+  "ambient": 60,
+  "contrast": 60,
+  "mirror": true,
+  "length": 2,
+  "deletable": false,
+  "maybe_allows_lineofsight": true,
+  "color_replacements": [[6932, 6689], [7626, 2485]],
+  "models_05": {"models": [{"type": 10, "values": [3251], "unktail": []}]},
+  "$fileid": 3095
+}
+,
+
+{
+  "ambient": 60,
+  "contrast": 60,
+  "length": 2,
+  "deletable": false,
+  "maybe_allows_lineofsight": true,
+  "color_replacements": [[6932, 6689], [7626, 43063]],
+  "models_05": {"models": [{"type": 10, "values": [3278], "unktail": []}]},
+  "$fileid": 3096
+}
+,
+
+{
+  "ambient": 60,
+  "contrast": 60,
+  "length": 2,
+  "deletable": false,
+  "maybe_allows_lineofsight": true,
+  "color_replacements": [[6932, 6689], [7626, 43063]],
+  "models_05": {"models": [{"type": 10, "values": [3229], "unktail": []}]},
+  "$fileid": 3097
+}
+,
+
+{
+  "ambient": 60,
+  "contrast": 60,
+  "length": 2,
+  "deletable": false,
+  "maybe_allows_lineofsight": true,
+  "color_replacements": [[6932, 6689], [7626, 43063]],
+  "models_05": {"models": [{"type": 10, "values": [3250], "unktail": []}]},
+  "$fileid": 3098
+}
+,
+
+{
+  "ambient": 60,
+  "contrast": 60,
+  "mirror": true,
+  "length": 2,
+  "deletable": false,
+  "maybe_allows_lineofsight": true,
+  "color_replacements": [[6932, 6689], [7626, 43063]],
+  "models_05": {"models": [{"type": 10, "values": [3250], "unktail": []}]},
+  "$fileid": 3099
+}
+,
+
+{
+  "ambient": 60,
+  "contrast": 60,
+  "length": 2,
+  "deletable": false,
+  "maybe_allows_lineofsight": true,
+  "color_replacements": [[6932, 6689], [7626, 43063]],
+  "models_05": {"models": [{"type": 10, "values": [3251], "unktail": []}]},
+  "$fileid": 3100
+}
+,
+
+{
+  "ambient": 60,
+  "contrast": 60,
+  "mirror": true,
+  "length": 2,
+  "deletable": false,
+  "maybe_allows_lineofsight": true,
+  "color_replacements": [[6932, 6689], [7626, 43063]],
+  "models_05": {"models": [{"type": 10, "values": [3251], "unktail": []}]},
+  "$fileid": 3101
+}
+,
+
+{
+  "ambient": 60,
+  "contrast": 60,
+  "length": 2,
+  "deletable": false,
+  "maybe_allows_lineofsight": true,
+  "color_replacements": [[6932, 6689], [7626, 20810]],
+  "models_05": {"models": [{"type": 10, "values": [3278], "unktail": []}]},
+  "$fileid": 3102
+}
+,
+
+{
+  "ambient": 60,
+  "contrast": 60,
+  "length": 2,
+  "deletable": false,
+  "maybe_allows_lineofsight": true,
+  "color_replacements": [[6932, 6689], [7626, 20810]],
+  "models_05": {"models": [{"type": 10, "values": [3229], "unktail": []}]},
+  "$fileid": 3103
+}
+,
+
+{
+  "ambient": 60,
+  "contrast": 60,
+  "length": 2,
+  "deletable": false,
+  "maybe_allows_lineofsight": true,
+  "color_replacements": [[6932, 6689], [7626, 20810]],
+  "models_05": {"models": [{"type": 10, "values": [3250], "unktail": []}]},
+  "$fileid": 3104
+}
+,
+
+{
+  "ambient": 60,
+  "contrast": 60,
+  "mirror": true,
+  "length": 2,
+  "deletable": false,
+  "maybe_allows_lineofsight": true,
+  "color_replacements": [[6932, 6689], [7626, 20810]],
+  "models_05": {"models": [{"type": 10, "values": [3250], "unktail": []}]},
+  "$fileid": 3105
+}
+,
+
+{
+  "ambient": 60,
+  "contrast": 60,
+  "length": 2,
+  "deletable": false,
+  "maybe_allows_lineofsight": true,
+  "color_replacements": [[6932, 6689], [7626, 20810]],
+  "models_05": {"models": [{"type": 10, "values": [3251], "unktail": []}]},
+  "$fileid": 3106
+}
+,
+
+{
+  "ambient": 60,
+  "contrast": 60,
+  "mirror": true,
+  "length": 2,
+  "deletable": false,
+  "maybe_allows_lineofsight": true,
+  "color_replacements": [[6932, 6689], [7626, 20810]],
+  "models_05": {"models": [{"type": 10, "values": [3251], "unktail": []}]},
+  "$fileid": 3107
+}
+,
+
+{
+  "width": 2,
+  "ambient": 60,
+  "contrast": 60,
+  "actions_0": "Forfeit",
+  "deletable": true,
+  "probably_animation": 917,
+  "maybe_allows_lineofsight": true,
+  "color_replacements": [[6932, 6689]],
+  "models_05": {"models": [{"type": 10, "values": [3321], "unktail": []}]},
+  "name": "Entrance",
+  "$fileid": 3108
+}
+,
+
+{
+  "width": 2,
+  "ambient": 60,
+  "contrast": 60,
+  "actions_0": "Forfeit",
+  "deletable": true,
+  "probably_animation": 917,
+  "maybe_allows_lineofsight": true,
+  "color_replacements": [[6932, 6689]],
+  "models_05": {"models": [{"type": 10, "values": [3320], "unktail": []}]},
+  "name": "Entrance",
+  "$fileid": 3109
+}
+,
+
+{
+  "ambient": 60,
+  "contrast": 60,
+  "color_replacements": [[6932, 6689]],
+  "models": [{"values": [3233], "type": 4}],
+  "$fileid": 3110
+}
+,
+
+{
+  "width": 2,
+  "ambient": 60,
+  "contrast": 60,
+  "actions_0": "Forfeit",
+  "deletable": true,
+  "probably_animation": 917,
+  "maybe_allows_lineofsight": true,
+  "color_replacements": [[6932, 6689]],
+  "models_05": {"models": [{"type": 10, "values": [3324], "unktail": []}]},
+  "name": "Entrance",
+  "$fileid": 3111
+}
+,
+
+{
+  "width": 2,
+  "ambient": 60,
+  "contrast": 60,
+  "actions_0": "Forfeit",
+  "deletable": true,
+  "probably_animation": 917,
+  "maybe_allows_lineofsight": true,
+  "color_replacements": [[6932, 6689]],
+  "models_05": {"models": [{"type": 10, "values": [3319], "unktail": []}]},
+  "name": "Entrance",
+  "$fileid": 3112
+}
+,
+
+{
+  "width": 2,
+  "ambient": 60,
+  "contrast": 60,
+  "mirror": true,
+  "actions_0": "Forfeit",
+  "deletable": true,
+  "probably_animation": 917,
+  "maybe_allows_lineofsight": true,
+  "color_replacements": [[6932, 6689]],
+  "models_05": {"models": [{"type": 10, "values": [3324], "unktail": []}]},
+  "name": "Entrance",
+  "$fileid": 3113
+}
+,
+
+{
+  "width": 2,
+  "ambient": 60,
+  "contrast": 60,
+  "mirror": true,
+  "actions_0": "Forfeit",
+  "deletable": true,
+  "probably_animation": 917,
+  "maybe_allows_lineofsight": true,
+  "color_replacements": [[6932, 6689]],
+  "models_05": {"models": [{"type": 10, "values": [3319], "unktail": []}]},
+  "name": "Entrance",
+  "$fileid": 3114
+}
+,
+
+{"deletable": false, "models": [{"values": [3290], "type": 3}], "$fileid": 3115}
+,
+
+{"deletable": false, "models": [{"values": [3303], "type": 3}], "$fileid": 3116}
+,
+
+{"deletable": false, "models": [{"values": [3224], "type": 3}], "$fileid": 3117}
+,
+
+{"deletable": false, "models": [{"values": [3234], "type": 3}], "$fileid": 3118}
+,
+
+{"deletable": false, "models": [{"values": [3246], "type": 3}], "$fileid": 3119}
+,
+
+{"deletable": false, "models": [{"values": [3268], "type": 3}], "$fileid": 3120}
+,
+
+{"deletable": false, "models": [{"values": [3279], "type": 3}], "$fileid": 3121}
+,
+
+{"deletable": false, "models": [{"values": [3238], "type": 3}], "$fileid": 3122}
+,
+
+{
+  "unknown_16": true,
+  "unknown_49": true,
+  "probably_morphFloor": true,
+  "mapscene": 46,
+  "deletable": false,
+  "unknown_5A": true,
+  "color_replacements": [[6932, 6689], [6684, 6569]],
+  "models": [{"values": [1089], "type": 22}],
+  "$fileid": 3123
+}
+,
+
+{
+  "unknown_16": true,
+  "probably_morphFloor": true,
+  "mapscene": 46,
+  "unknown_49": true,
+  "deletable": false,
+  "color_replacements": [[6932, 6689], [6684, 6569]],
+  "models": [{"values": [1137], "type": 22}],
+  "$fileid": 3124
+}
+,
+
+{
+  "unknown_16": true,
+  "probably_morphFloor": true,
+  "deletable": false,
+  "maybe_allows_lineofsight": true,
+  "color_replacements": [[6932, 6689], [6684, 6569], [6930, 6565]],
+  "models": [
+    {"values": [993], "type": 0},
+    {"values": [995], "type": 1},
+    {"values": [996], "type": 2},
+    {"values": [998], "type": 3},
+    {"values": [999], "type": 9}
+  ],
+  "$fileid": 3125
+}
+,
+
+{
+  "unknown_16": true,
+  "probably_morphFloor": true,
+  "deletable": false,
+  "maybe_allows_lineofsight": true,
+  "color_replacements": [[6932, 6689], [6684, 6569], [6930, 6565]],
+  "models": [{"values": [3198], "type": 0}],
+  "$fileid": 3126
+}
+,
+
+{
+  "unknown_16": true,
+  "probably_morphFloor": true,
+  "deletable": false,
+  "mirror": true,
+  "maybe_allows_lineofsight": true,
+  "color_replacements": [[6932, 6689], [6684, 6569], [6930, 6565]],
+  "models": [{"values": [3198], "type": 0}],
+  "$fileid": 3127
+}
+,
+
+{
+  "deletable": false,
+  "probably_nocollision": true,
+  "unknown_16": true,
+  "models_05": {"models": [{"type": 10, "values": [3235], "unktail": []}]},
+  "$fileid": 3128
+}
+,
+
+{
+  "deletable": false,
+  "probably_nocollision": true,
+  "unknown_16": true,
+  "models_05": {"models": [{"type": 10, "values": [3283], "unktail": []}]},
+  "$fileid": 3129
+}
+,
+
+{
+  "deletable": false,
+  "probably_nocollision": true,
+  "unknown_16": true,
+  "models_05": {"models": [{"type": 10, "values": [3314], "unktail": []}]},
+  "$fileid": 3130
+}
+,
+
+{
+  "deletable": false,
+  "probably_nocollision": true,
+  "unknown_16": true,
+  "models_05": {"models": [{"type": 10, "values": [3307], "unktail": []}]},
+  "$fileid": 3131
+}
+,
+
+{
+  "deletable": false,
+  "probably_nocollision": true,
+  "unknown_16": true,
+  "models_05": {"models": [{"type": 10, "values": [3285], "unktail": []}]},
+  "$fileid": 3132
+}
+,
+
+{
+  "deletable": false,
+  "probably_nocollision": true,
+  "unknown_16": true,
+  "models_05": {"models": [{"type": 10, "values": [3231], "unktail": []}]},
+  "$fileid": 3133
+}
+,
+
+{
+  "deletable": false,
+  "probably_nocollision": true,
+  "unknown_16": true,
+  "models_05": {"models": [{"type": 10, "values": [3260], "unktail": []}]},
+  "$fileid": 3134
+}
+,
+
+{
+  "deletable": false,
+  "probably_nocollision": true,
+  "unknown_16": true,
+  "models_05": {"models": [{"type": 10, "values": [3258], "unktail": []}]},
+  "$fileid": 3135
+}
+,
+
+{
+  "deletable": false,
+  "probably_nocollision": true,
+  "unknown_16": true,
+  "models_05": {"models": [{"type": 10, "values": [3232], "unktail": []}]},
+  "$fileid": 3136
+}
+,
+
+{
+  "deletable": false,
+  "probably_nocollision": true,
+  "unknown_16": true,
+  "models_05": {"models": [{"type": 10, "values": [3282], "unktail": []}]},
+  "$fileid": 3137
+}
+,
+
+{
+  "deletable": false,
+  "probably_nocollision": true,
+  "unknown_16": true,
+  "models_05": {"models": [{"type": 10, "values": [3305], "unktail": []}]},
+  "$fileid": 3138
+}
+,
+
+{
+  "deletable": false,
+  "probably_nocollision": true,
+  "unknown_16": true,
+  "models_05": {"models": [{"type": 10, "values": [3306], "unktail": []}]},
+  "$fileid": 3139
+}
+,
+
+{
+  "deletable": false,
+  "probably_nocollision": true,
+  "unknown_16": true,
+  "models_05": {"models": [{"type": 10, "values": [3280], "unktail": []}]},
+  "$fileid": 3140
+}
+,
+
+{
+  "deletable": false,
+  "probably_nocollision": true,
+  "unknown_16": true,
+  "models_05": {"models": [{"type": 10, "values": [3230], "unktail": []}]},
+  "$fileid": 3141
+}
+,
+
+{
+  "deletable": false,
+  "probably_nocollision": true,
+  "unknown_16": true,
+  "models_05": {"models": [{"type": 10, "values": [3270], "unktail": []}]},
+  "$fileid": 3142
+}
+,
+
+{
+  "deletable": false,
+  "probably_nocollision": true,
+  "unknown_16": true,
+  "models_05": {"models": [{"type": 10, "values": [3259], "unktail": []}]},
+  "$fileid": 3143
+}
+,
+
+{
+  "mirror": true,
+  "deletable": false,
+  "mapscene": 22,
+  "models": [{"values": [3256], "type": 0}],
+  "$fileid": 3144
+}
+,
+
+{
+  "mirror": true,
+  "deletable": false,
+  "mapscene": 22,
+  "models": [{"values": [3275], "type": 0}],
+  "$fileid": 3145
+}
+,
+
+{
+  "ambient": 15,
+  "contrast": 15,
+  "deletable": false,
+  "wallkit_related_1C": 32,
+  "models": [{"values": [3297], "type": 0}, {"values": [3298], "type": 9}],
+  "$fileid": 3146
+}
+,
+
+{
+  "ambient": 15,
+  "contrast": 15,
+  "deletable": false,
+  "models_05": {"models": [{"type": 10, "values": [3273], "unktail": []}]},
+  "$fileid": 3147
+}
+,
+
+{
+  "ambient": 15,
+  "contrast": 15,
+  "deletable": false,
+  "models_05": {"models": [{"type": 10, "values": [3263], "unktail": []}]},
+  "$fileid": 3148
+}
+,
+
+{
+  "ambient": 15,
+  "contrast": 15,
+  "mirror": true,
+  "deletable": false,
+  "models_05": {"models": [{"type": 10, "values": [3263], "unktail": []}]},
+  "$fileid": 3149
+}
+,
+
+{
+  "ambient": 15,
+  "contrast": 15,
+  "deletable": false,
+  "models_05": {"models": [{"type": 10, "values": [3264], "unktail": []}]},
+  "$fileid": 3150
+}
+,
+
+{
+  "ambient": 15,
+  "contrast": 15,
+  "mirror": true,
+  "deletable": false,
+  "models_05": {"models": [{"type": 10, "values": [3264], "unktail": []}]},
+  "$fileid": 3151
+}
+,
+
+{
+  "ambient": 15,
+  "contrast": 15,
+  "deletable": false,
+  "wallkit_related_1C": 32,
+  "models": [
+    {"values": [3220], "type": 0},
+    {"values": [3221], "type": 1},
+    {"values": [3222], "type": 2},
+    {"values": [3223], "type": 3}
+  ],
+  "$fileid": 3152
+}
+,
+
+{
+  "ambient": 15,
+  "contrast": 15,
+  "deletable": false,
+  "wallkit_related_1C": 32,
+  "models": [{"values": [3255], "type": 0}],
+  "$fileid": 3153
+}
+,
+
+{
+  "ambient": 15,
+  "contrast": 15,
+  "deletable": false,
+  "models": [{"values": [3254], "type": 0}],
+  "$fileid": 3154
+}
+,
+
+{
+  "ambient": 15,
+  "contrast": 15,
+  "mirror": true,
+  "deletable": false,
+  "models": [{"values": [3254], "type": 0}],
+  "$fileid": 3155
+}
+,
+
+{
+  "ambient": 15,
+  "contrast": 15,
+  "deletable": false,
+  "maybe_allows_lineofsight": true,
+  "models": [{"values": [3228], "type": 0}],
+  "$fileid": 3156
+}
+,
+
+{
+  "ambient": 15,
+  "contrast": 15,
+  "mirror": true,
+  "deletable": false,
+  "maybe_allows_lineofsight": true,
+  "models": [{"values": [3228], "type": 0}],
+  "$fileid": 3157
+}
+,
+
+{
+  "ambient": 15,
+  "contrast": 15,
+  "deletable": false,
+  "models_05": {"models": [{"type": 10, "values": [3284], "unktail": []}]},
+  "$fileid": 3158
+}
+,
+
+{
+  "length": 2,
+  "ambient": 15,
+  "contrast": 15,
+  "color_replacements": [[33, 37970], [8770, 43067]],
+  "models_05": {"models": [{"type": 10, "values": [1256], "unktail": []}]},
+  "name": "Bed",
+  "$fileid": 3159
+}
+,
+
+{
+  "ambient": 15,
+  "contrast": 15,
+  "deletable": false,
+  "maybe_allows_lineofsight": true,
+  "models": [{"values": [3315], "type": 0}],
+  "$fileid": 3160
+}
+,
+
+{
+  "mirror": true,
+  "ambient": 15,
+  "contrast": 15,
+  "deletable": false,
+  "maybe_allows_lineofsight": true,
+  "models": [{"values": [3315], "type": 0}],
+  "$fileid": 3161
+}
+,
+
+{
+  "ambient": 15,
+  "contrast": 15,
+  "deletable": false,
+  "maybe_allows_lineofsight": true,
+  "models": [{"values": [3252], "type": 0}],
+  "$fileid": 3162
+}
+,
+
+{
+  "probably_nocollision": true,
+  "deletable": false,
+  "models_05": {"models": [{"type": 10, "values": [3308], "unktail": []}]},
+  "$fileid": 3163
+}
+,
+
+{
+  "mirror": true,
+  "probably_nocollision": true,
+  "deletable": false,
+  "models_05": {"models": [{"type": 10, "values": [3308], "unktail": []}]},
+  "$fileid": 3164
+}
+,
+
+{
+  "width": 2,
+  "length": 3,
+  "probably_morphFloor": true,
+  "unknown_16": true,
+  "deletable": false,
+  "models_05": {"models": [{"type": 10, "values": [3262], "unktail": []}]},
+  "$fileid": 3165
+}
+,
+
+{
+  "width": 2,
+  "length": 3,
+  "probably_morphFloor": true,
+  "unknown_16": true,
+  "mirror": true,
+  "deletable": false,
+  "models_05": {"models": [{"type": 10, "values": [3262], "unktail": []}]},
+  "$fileid": 3166
+}
+,
+
+{
+  "ambient": 15,
+  "contrast": 15,
+  "deletable": false,
+  "models": [
+    {"values": [3312], "type": 0},
+    {"values": [3313], "type": 2},
+    {"values": [3310], "type": 22}
+  ],
+  "$fileid": 3167
+}
+,
+
+{
+  "ambient": 15,
+  "contrast": 15,
+  "deletable": false,
+  "models": [{"values": [3316], "type": 0}, {"values": [3317], "type": 1}],
+  "$fileid": 3168
+}
+,
+
+{
+  "probably_morphFloor": true,
+  "deletable": false,
+  "unknown_5A": true,
+  "color_replacements": [[4892, 6466], [4899, 6602], [5921, 6470]],
+  "models": [{"values": [1124], "type": 22}],
+  "$fileid": 3169
+}
+,
+
+{
+  "probably_morphFloor": true,
+  "deletable": false,
+  "unknown_5A": true,
+  "color_replacements": [[4892, 6466], [4899, 6602], [5921, 6470]],
+  "models": [{"values": [1139], "type": 22}],
+  "$fileid": 3170
+}
+,
+
+{
+  "probably_morphFloor": true,
+  "deletable": false,
+  "unknown_5A": true,
+  "color_replacements": [[4892, 6466], [4899, 6602], [5921, 6470]],
+  "models": [{"values": [1032], "type": 22}],
+  "$fileid": 3171
+}
+,
+
+{
+  "probably_morphFloor": true,
+  "deletable": false,
+  "color_replacements": [[4892, 6466], [4899, 6602], [5921, 6470]],
+  "models": [{"values": [1124], "type": 22}],
+  "$fileid": 3172
+}
+,
+
+{
+  "probably_morphFloor": true,
+  "deletable": false,
+  "color_replacements": [[4892, 6466], [4899, 6602], [5921, 6470]],
+  "models": [{"values": [1139], "type": 22}],
+  "$fileid": 3173
+}
+,
+
+{
+  "probably_morphFloor": true,
+  "deletable": false,
+  "color_replacements": [[4892, 6466], [4899, 6602], [5921, 6470]],
+  "models": [{"values": [1032], "type": 22}],
+  "$fileid": 3174
+}
+,
+
+{
+  "ambient": 15,
+  "contrast": 15,
+  "deletable": false,
+  "models": [{"values": [3301], "type": 22}],
+  "$fileid": 3175
+}
+,
+
+{
+  "ambient": 15,
+  "contrast": 15,
+  "deletable": false,
+  "models": [{"values": [3272], "type": 22}],
+  "$fileid": 3176
+}
+,
+
+{
+  "ambient": 15,
+  "contrast": 15,
+  "deletable": false,
+  "models": [{"values": [3244], "type": 0}],
+  "$fileid": 3177
+}
+,
+
+{
+  "ambient": 15,
+  "contrast": 15,
+  "mirror": true,
+  "deletable": false,
+  "models": [{"values": [3244], "type": 0}],
+  "$fileid": 3178
+}
+,
+
+{
+  "ambient": 15,
+  "contrast": 15,
+  "deletable": false,
+  "models": [{"values": [3292], "type": 0}],
+  "$fileid": 3179
+}
+,
+
+{
+  "ambient": 15,
+  "contrast": 15,
+  "mirror": true,
+  "deletable": false,
+  "models": [{"values": [3292], "type": 0}],
+  "$fileid": 3180
+}
+,
+
+{"deletable": false, "models": [{"values": [3281], "type": 0}], "$fileid": 3181}
+,
+
+{
+  "ambient": 15,
+  "contrast": 15,
+  "deletable": true,
+  "maybe_allows_lineofsight": true,
+  "color_replacements": [[4886, 99], [5908, 103]],
+  "models_05": {"models": [{"type": 10, "values": [1170], "unktail": []}]},
+  "name": "Chair",
+  "$fileid": 3182
+}
+,
+
+{
+  "deletable": true,
+  "ambient": 15,
+  "contrast": 15,
+  "color_replacements": [[7700, 103], [7952, 99], [8076, 94]],
+  "models_05": {"models": [{"type": 10, "values": [2133], "unktail": []}]},
+  "name": "Hospital shelves",
+  "$fileid": 3183
+}
+,
+
+{
+  "deletable": true,
+  "ambient": 15,
+  "contrast": 15,
+  "color_replacements": [[7700, 103], [7952, 99], [8076, 94]],
+  "models_05": {"models": [{"type": 10, "values": [2134], "unktail": []}]},
+  "name": "Hospital shelves",
+  "$fileid": 3184
+}
+,
+
+{
+  "deletable": true,
+  "ambient": 15,
+  "contrast": 15,
+  "color_replacements": [[7700, 103], [7952, 99], [8076, 94]],
+  "models_05": {"models": [{"type": 10, "values": [2135], "unktail": []}]},
+  "name": "Hospital shelves",
+  "$fileid": 3185
+}
+,
+
+{
+  "length": 2,
+  "deletable": true,
+  "models_05": {"models": [{"type": 10, "values": [3289], "unktail": []}]},
+  "name": "Operating Table",
+  "$fileid": 3186
+}
+,
+
+{
+  "length": 2,
+  "deletable": true,
+  "models_05": {"models": [{"type": 10, "values": [3248], "unktail": []}]},
+  "name": "Operating Table",
+  "$fileid": 3187
+}
+,
+
+{"deletable": false, "models": [{"values": [3237], "type": 0}], "$fileid": 3188}
+,
+
+{"deletable": false, "models": [{"values": [3311], "type": 0}], "$fileid": 3189}
+,
+
+{
+  "actions_0": "Open",
+  "dummy_45": 13,
+  "ambient": 15,
+  "contrast": 15,
+  "scaleX": 100,
+  "scaleY": 100,
+  "scaleZ": 100,
+  "deletable": true,
+  "color_replacements": [[5786, 99], [7954, 86], [2452, 70]],
+  "models_05": {"models": [{"type": 10, "values": [1155], "unktail": []}]},
+  "name": "Drawers",
+  "$fileid": 3190
+}
+,
+
+{
+  "actions_2": "Shut",
+  "dummy_45": 13,
+  "ambient": 15,
+  "contrast": 15,
+  "scaleX": 100,
+  "scaleY": 100,
+  "scaleZ": 100,
+  "deletable": true,
+  "color_replacements": [[5786, 99], [7954, 86], [2452, 70]],
+  "models_05": {"models": [{"type": 10, "values": [1236], "unktail": []}]},
+  "name": "Drawers",
+  "$fileid": 3191
+}
+,
+
+{
+  "width": 2,
+  "length": 3,
+  "ambient": 50,
+  "contrast": 50,
+  "actions_0": "View",
+  "deletable": true,
+  "models_05": {"models": [{"type": 10, "values": [3293], "unktail": []}]},
+  "name": "Scoreboard",
+  "$fileid": 3192
+}
+,
+
+{
+  "actions_0": "Open",
+  "dummy_45": 14,
+  "models_05": {"models": [{"type": 10, "values": [1249], "unktail": []}]},
+  "name": "Closed bank chest",
+  "$fileid": 3193
+}
+,
+
+{
+  "actions_1": "Bank",
+  "actions_2": "Shut",
+  "dummy_45": 14,
+  "models_05": {"models": [{"type": 10, "values": [1226], "unktail": []}]},
+  "name": "Bank chest",
+  "$fileid": 3194
+}
+,
+
+{
+  "actions_0": "Buy",
+  "models_05": {"models": [{"type": 10, "values": [3247], "unktail": []}]},
+  "name": "Crate",
+  "$fileid": 3195
+}
+,
+
+{
+  "color_replacements": [[45, 5433]],
+  "models_05": {"models": [{"type": 10, "values": [3271], "unktail": []}]},
+  "name": "Damaged armour",
+  "$fileid": 3196
+}
+,
+
+{
+  "actions_0": "Open",
+  "deletable": true,
+  "maybe_allows_lineofsight": true,
+  "color_replacements": [[6040, 6689]],
+  "models": [
+    {"values": [966], "type": 0},
+    {"values": [967], "type": 1},
+    {"values": [968], "type": 9}
+  ],
+  "name": "Gate",
+  "$fileid": 3197
+}
+,
+
+{
+  "mirror": true,
+  "actions_0": "Open",
+  "deletable": true,
+  "maybe_allows_lineofsight": true,
+  "color_replacements": [[6040, 6689]],
+  "models": [
+    {"values": [966], "type": 0},
+    {"values": [967], "type": 1},
+    {"values": [968], "type": 9}
+  ],
+  "name": "Gate",
+  "$fileid": 3198
+}
+,
+
+{
+  "width": 3,
+  "length": 3,
+  "models_05": {"models": [{"type": 10, "values": [4409], "unktail": []}]},
+  "name": "Bed",
+  "$fileid": 3199
+}
+,
+
+{
+  "unknown_16": true,
+  "unknown_49": true,
+  "mapscene": 46,
+  "deletable": false,
+  "color_replacements": [[6932, 5404], [6684, 6697]],
+  "material_replacements": [[63, 384], [75, 384]],
+  "models": [{"values": [4408], "type": 22}],
+  "$fileid": 3200
+}
+,
+
+{
+  "mapscene": 48,
+  "unknown_49": true,
+  "models": [{"values": [596], "type": 22}],
+  "$fileid": 3201
+}
+,
+
+{"mapscene": 49, "models": [{"values": [596], "type": 22}], "$fileid": 3202}
+,
+
+{
+  "actions_0": "Forfeit",
+  "unknown_49": true,
+  "unknown_16": true,
+  "maybe_allows_lineofsight": true,
+  "models_05": {"models": [{"type": 10, "values": [3253], "unktail": []}]},
+  "name": "Trapdoor",
+  "$fileid": 3203
+}
+,
+
+{
+  "unknown_16": true,
+  "probably_morphFloor": true,
+  "models": [{"values": [3225], "type": 22}],
+  "$fileid": 3204
+}
+,
+
+{
+  "deletable": true,
+  "actions_0": "Climb-down",
+  "mapscene": 7,
+  "unknown_16": true,
+  "models_05": {"models": [{"type": 10, "values": [3336], "unktail": []}]},
+  "name": "Ladder",
+  "$fileid": 3205
+}
+,
+
+{
+  "models_05": {"models": [{"type": 10, "values": [3337], "unktail": []}]},
+  "name": "Barrel",
+  "$fileid": 3206
+}
+,
+
+{
+  "deletable": false,
+  "models_05": {"models": [{"type": 10, "values": [3344], "unktail": []}]},
+  "$fileid": 3207
+}
+,
+
+{
+  "unknown_16": true,
+  "deletable": false,
+  "color_replacements": [[7496, 6344]],
+  "models": [
+    {"values": [3738], "type": 12},
+    {"values": [3745], "type": 13},
+    {"values": [3739], "type": 14},
+    {"values": [3740], "type": 16},
+    {"values": [3741], "type": 17}
+  ],
+  "$fileid": 3208
+}
+,
+
+{
+  "deletable": true,
+  "actions_0": "Push",
+  "unknown_4B": 0,
+  "color_replacements": [[24, 9098], [20, 7050]],
+  "material_replacements": [[2, 23]],
+  "models": [{"values": [3367], "type": 0}],
+  "name": "Odd looking wall",
+  "$fileid": 3209
+}
+,
+
+{
+  "deletable": true,
+  "unknown_4B": 0,
+  "color_replacements": [[24, 9098], [20, 7050]],
+  "material_replacements": [[2, 23]],
+  "models": [{"values": [3366], "type": 0}],
+  "name": "Odd looking wall",
+  "$fileid": 3210
+}
+,
+
+{
+  "deletable": true,
+  "actions_0": "Push",
+  "unknown_4B": 0,
+  "color_replacements": [[24, 9098], [20, 7050]],
+  "material_replacements": [[2, 23]],
+  "models": [{"values": [3369], "type": 0}],
+  "name": "Odd looking wall",
+  "$fileid": 3211
+}
+,
+
+{
+  "deletable": true,
+  "unknown_4B": 0,
+  "color_replacements": [[24, 9098], [20, 7050]],
+  "material_replacements": [[2, 23]],
+  "models": [{"values": [3368], "type": 0}],
+  "name": "Odd looking wall",
+  "$fileid": 3212
+}
+,
+
+{
+  "unknown_16": true,
+  "probably_morphFloor": true,
+  "deletable": false,
+  "material_replacements": [[70, 418]],
+  "models_05": {"models": [{"type": 10, "values": [834], "unktail": []}]},
+  "$fileid": 3213
+}
+,
+
+{
+  "width": 3,
+  "length": 2,
+  "ambient": 25,
+  "contrast": 15,
+  "actions_0": "Leave",
+  "probably_morphFloor": true,
+  "color_replacements": [
+    [0, 6244],
+    [902, 6357],
+    [2952, 6337],
+    [5002, 6440],
+    [6028, 6804]
+  ],
+  "models_05": {"models": [{"type": 10, "values": [37404], "unktail": []}]},
+  "name": "Underground pass exit",
+  "$fileid": 3214
+}
+,
+
+{
+  "deletable": false,
+  "models": [{"values": [1749], "type": 22}],
+  "$fileid": 3215
+}
+,
+
+{
+  "unknown_49": true,
+  "deletable": true,
+  "models_05": {"models": [{"type": 10, "values": [1757], "unktail": []}]},
+  "name": "Mud",
+  "$fileid": 3216
+}
+,
+
+{
+  "actions_0": "Enter",
+  "unknown_16": true,
+  "probably_morphFloor": true,
+  "color_replacements": [
+    [6689, 7952],
+    [6808, 8844],
+    [7056, 7690],
+    [6028, 8070]
+  ],
+  "models": [{"values": [37653], "type": 0}],
+  "name": "Cave",
+  "$fileid": 3217
+}
+,
+
+{
+  "ambient": 25,
+  "contrast": 15,
+  "unknown_16": true,
+  "probably_morphFloor": true,
+  "actions_0": "Pass-through",
+  "models": [{"values": [37392], "type": 0}],
+  "name": "Tunnel",
+  "$fileid": 3218
+}
+,
+
+{
+  "ambient": 25,
+  "contrast": 15,
+  "unknown_16": true,
+  "probably_morphFloor": true,
+  "mirror": true,
+  "actions_0": "Pass-through",
+  "models": [{"values": [37392], "type": 0}],
+  "name": "Tunnel",
+  "$fileid": 3219
+}
+,
+
+{
+  "width": 2,
+  "actions_0": "Open",
+  "ambient": 25,
+  "contrast": 15,
+  "unknown_16": true,
+  "probably_morphFloor": true,
+  "maybe_blocks_movement": true,
+  "color_replacements": [
+    [21530, 7054],
+    [21534, 6930],
+    [21539, 6806],
+    [21543, 6682],
+    [21547, 6558]
+  ],
+  "models_05": {"models": [{"type": 10, "values": [37419], "unktail": []}]},
+  "name": "Door",
+  "$fileid": 3220
+}
+,
+
+{
+  "mirror": true,
+  "width": 2,
+  "actions_0": "Open",
+  "ambient": 25,
+  "contrast": 15,
+  "unknown_16": true,
+  "probably_morphFloor": true,
+  "maybe_blocks_movement": true,
+  "color_replacements": [
+    [21530, 7054],
+    [21534, 6930],
+    [21539, 6806],
+    [21543, 6682],
+    [21547, 6558]
+  ],
+  "models_05": {"models": [{"type": 10, "values": [37419], "unktail": []}]},
+  "name": "Door",
+  "$fileid": 3221
+}
+,
+
+{
+  "unknown_16": true,
+  "probably_morphFloor": true,
+  "actions_0": "Descend",
+  "color_replacements": [
+    [6689, 7952],
+    [6808, 8844],
+    [7056, 7690],
+    [6028, 8070]
+  ],
+  "models_05": {"models": [{"type": 10, "values": [833], "unktail": []}]},
+  "name": "Cave Stairs",
+  "$fileid": 3222
+}
+,
+
+{
+  "ambient": 25,
+  "contrast": 15,
+  "unknown_16": true,
+  "probably_morphFloor": true,
+  "actions_0": "Ascend",
+  "color_replacements": [
+    [6689, 7952],
+    [6808, 8844],
+    [7056, 7690],
+    [6028, 8070]
+  ],
+  "models_05": {"models": [{"type": 10, "values": [37634], "unktail": []}]},
+  "name": "Cave Stairs",
+  "$fileid": 3223
+}
+,
+
+{
+  "ambient": 25,
+  "contrast": 15,
+  "actions_0": "Enter",
+  "unknown_16": true,
+  "probably_morphFloor": true,
+  "models_05": {"models": [{"type": 10, "values": [37653], "unktail": []}]},
+  "name": "Cave",
+  "$fileid": 3224
+}
+,
+
+{
+  "probably_nocollision": true,
+  "mirror": true,
+  "unknown_49": true,
+  "ambient": 20,
+  "models": [{"values": [37517], "type": 22}],
+  "$fileid": 3225
+}
+,
+
+{
+  "probably_nocollision": true,
+  "unknown_49": true,
+  "ambient": 20,
+  "unknown_16": true,
+  "models": [{"values": [37517], "type": 22}],
+  "$fileid": 3226
+}
+,
+
+{
+  "length": 2,
+  "width": 2,
+  "probably_nocollision": true,
+  "unknown_16": true,
+  "color_replacements": [[5916, 8076]],
+  "models_05": {"models": [{"type": 10, "values": [722], "unktail": []}]},
+  "name": "Trap",
+  "$fileid": 3227
+}
+,
+
+{
+  "length": 3,
+  "models_05": {"models": [{"type": 10, "values": [2325], "unktail": []}]},
+  "name": "Trap",
+  "$fileid": 3228
+}
+,
+
+{
+  "length": 2,
+  "models_05": {"models": [{"type": 10, "values": [2324], "unktail": []}]},
+  "name": "Trap",
+  "$fileid": 3229
+}
+,
+
+{
+  "probably_morphFloor": true,
+  "probably_nocollision": true,
+  "actions_0": "Search",
+  "color_replacements": [[53, 6798]],
+  "models_05": {"models": [{"type": 10, "values": [37416], "unktail": []}]},
+  "name": "Flat rock",
+  "$fileid": 3230
+}
+,
+
+{
+  "unknown_16": true,
+  "probably_morphFloor": true,
+  "probably_nocollision": true,
+  "deletable": true,
+  "models": [{"values": [1135], "type": 22}],
+  "name": "Plank",
+  "$fileid": 3231
+}
+,
+
+{
+  "width": 3,
+  "probably_morphFloor": true,
+  "probably_nocollision": true,
+  "models_05": {"models": [{"type": 10, "values": [37429], "unktail": []}]},
+  "name": "Stalagmites",
+  "$fileid": 3232
+}
+,
+
+{
+  "models_05": {"models": [{"type": 10, "values": [2327], "unktail": []}]},
+  "name": "Trap",
+  "$fileid": 3233
+}
+,
+
+{
+  "ambient": 25,
+  "contrast": 15,
+  "width": 2,
+  "probably_morphFloor": true,
+  "probably_nocollision": true,
+  "actions_0": "Search",
+  "color_replacements": [
+    [21530, 7054],
+    [21534, 6930],
+    [21539, 6806],
+    [21543, 6682],
+    [21547, 6558],
+    [8478, 6563]
+  ],
+  "models_05": {"models": [{"type": 10, "values": [37607], "unktail": []}]},
+  "name": "Odd markings",
+  "$fileid": 3234
+}
+,
+
+{
+  "actions_0": "Squeeze-through",
+  "ambient": 25,
+  "contrast": 15,
+  "color_replacements": [
+    [21530, 7054],
+    [21534, 6930],
+    [21539, 6806],
+    [21543, 6682],
+    [21547, 6558]
+  ],
+  "models_05": {"models": [{"type": 10, "values": [37216], "unktail": []}]},
+  "name": "Obstacle pipe",
+  "$fileid": 3235
+}
+,
+
+{
+  "actions_0": "Squeeze-through",
+  "ambient": 25,
+  "contrast": 15,
+  "color_replacements": [
+    [21530, 7054],
+    [21534, 6930],
+    [21539, 6806],
+    [21543, 6682],
+    [21547, 6558]
+  ],
+  "models_05": {"models": [{"type": 10, "values": [37273], "unktail": []}]},
+  "name": "Obstacle pipe",
+  "$fileid": 3236
+}
+,
+
+{
+  "actions_0": "Squeeze-through",
+  "ambient": 25,
+  "contrast": 15,
+  "color_replacements": [
+    [21530, 7054],
+    [21534, 6930],
+    [21539, 6806],
+    [21543, 6682],
+    [21547, 6558]
+  ],
+  "models_05": {"models": [{"type": 10, "values": [37273], "unktail": []}]},
+  "name": "Obstacle pipe",
+  "$fileid": 3237
+}
+,
+
+{
+  "actions_0": "Cross",
+  "unknown_49": true,
+  "mapscene": 43,
+  "unknown_16": true,
+  "probably_morphFloor": true,
+  "maybe_blocks_movement": true,
+  "color_replacements": [[6554, 6806], [6550, 6930], [6674, 7054]],
+  "models": [{"values": [36963], "type": 22}],
+  "name": "Ledge",
+  "$fileid": 3238
+}
+,
+
+{
+  "length": 2,
+  "width": 2,
+  "deletable": true,
+  "maybe_allows_lineofsight": true,
+  "models_05": {"models": [{"type": 10, "values": [2293], "unktail": []}]},
+  "name": "Bridge",
+  "$fileid": 3239
+}
+,
+
+{
+  "length": 4,
+  "width": 2,
+  "probably_animation": 474,
+  "deletable": true,
+  "models_05": {"models": [{"type": 10, "values": [2292], "unktail": []}]},
+  "name": "Bridge",
+  "$fileid": 3240
+}
+,
+
+{
+  "actions_0": "Pull",
+  "models_05": {"models": [{"type": 10, "values": [1774], "unktail": []}]},
+  "name": "Lever",
+  "$fileid": 3241
+}
+,
+
+{
+  "models_05": {"models": [{"type": 10, "values": [1796], "unktail": []}]},
+  "name": "Lever",
+  "$fileid": 3242
+}
+,
+
+{
+  "width": 4,
+  "length": 4,
+  "unknown_16": true,
+  "models_05": {"models": [{"type": 10, "values": [715], "unktail": []}]},
+  "name": "Platform",
+  "$fileid": 3243
+}
+,
+
+{
+  "width": 3,
+  "length": 3,
+  "unknown_16": true,
+  "probably_morphFloor": true,
+  "color_replacements": [[6689, 7952]],
+  "models_05": {"models": [{"type": 10, "values": [742], "unktail": []}]},
+  "name": "Platform",
+  "$fileid": 3244
+}
+,
+
+{
+  "width": 3,
+  "length": 3,
+  "unknown_16": true,
+  "probably_morphFloor": true,
+  "color_replacements": [[6689, 7952]],
+  "models_05": {"models": [{"type": 10, "values": [757], "unktail": []}]},
+  "name": "Platform",
+  "$fileid": 3245
+}
+,
+
+{
+  "width": 2,
+  "length": 2,
+  "unknown_16": true,
+  "color_replacements": [[5916, 7952]],
+  "models_05": {"models": [{"type": 10, "values": [721], "unktail": []}]},
+  "name": "Platform",
+  "$fileid": 3246
+}
+,
+
+{
+  "probably_morphFloor": true,
+  "unknown_16": true,
+  "color_replacements": [[6689, 7952]],
+  "models_05": {"models": [{"type": 10, "values": [697], "unktail": []}]},
+  "name": "Bridge",
+  "$fileid": 3247
+}
+,
+
+{
+  "probably_morphFloor": true,
+  "unknown_16": true,
+  "color_replacements": [[6689, 7952]],
+  "models_05": {"models": [{"type": 10, "values": [699], "unktail": []}]},
+  "name": "Bridge",
+  "$fileid": 3248
+}
+,
+
+{
+  "probably_morphFloor": true,
+  "unknown_16": true,
+  "color_replacements": [[6689, 7952]],
+  "models_05": {"models": [{"type": 10, "values": [700], "unktail": []}]},
+  "name": "Bridge",
+  "$fileid": 3249
+}
+,
+
+{
+  "probably_morphFloor": true,
+  "unknown_16": true,
+  "models_05": {"models": [{"type": 10, "values": [756], "unktail": []}]},
+  "name": "Bridge",
+  "$fileid": 3250
+}
+,
+
+{
+  "width": 2,
+  "length": 2,
+  "unknown_16": true,
+  "deletable": false,
+  "color_replacements": [[6689, 7952]],
+  "models_05": {"models": [{"type": 10, "values": [718], "unktail": []}]},
+  "$fileid": 3251
+}
+,
+
+{
+  "width": 2,
+  "length": 2,
+  "unknown_16": true,
+  "mirror": true,
+  "deletable": false,
+  "color_replacements": [[6689, 7952]],
+  "models_05": {"models": [{"type": 10, "values": [718], "unktail": []}]},
+  "$fileid": 3252
+}
+,
+
+{
+  "unknown_16": true,
+  "deletable": false,
+  "color_replacements": [[6689, 7952]],
+  "models_05": {"models": [{"type": 10, "values": [754], "unktail": []}]},
+  "$fileid": 3253
+}
+,
+
+{
+  "length": 3,
+  "probably_morphFloor": true,
+  "deletable": true,
+  "actions_0": "Cross",
+  "color_replacements": [[6689, 7952]],
+  "models_05": {"models": [{"type": 10, "values": [751], "unktail": []}]},
+  "name": "Bridge",
+  "$fileid": 3254
+}
+,
+
+{
+  "length": 3,
+  "probably_morphFloor": true,
+  "deletable": true,
+  "actions_0": "Cross",
+  "color_replacements": [[6689, 7952]],
+  "models_05": {"models": [{"type": 10, "values": [752], "unktail": []}]},
+  "name": "Bridge",
+  "$fileid": 3255
+}
+,
+
+{
+  "width": 2,
+  "length": 2,
+  "deletable": false,
+  "models_05": {"models": [{"type": 10, "values": [719], "unktail": []}]},
+  "$fileid": 3256
+}
+,
+
+{
+  "width": 2,
+  "length": 2,
+  "color_replacements": [
+    [7952, 8070],
+    [6798, 6020],
+    [5772, 898],
+    [3594, 0],
+    [3974, 0],
+    [900, 0]
+  ],
+  "models_05": {"models": [{"type": 10, "values": [686], "unktail": []}]},
+  "name": "Platform",
+  "$fileid": 3257
+}
+,
+
+{
+  "width": 2,
+  "length": 2,
+  "unknown_16": true,
+  "color_replacements": [[5916, 7952]],
+  "models_05": {"models": [{"type": 10, "values": [762], "unktail": []}]},
+  "name": "Bridge",
+  "$fileid": 3258
+}
+,
+
+{
+  "width": 2,
+  "length": 3,
+  "unknown_16": true,
+  "color_replacements": [[5916, 7952]],
+  "models_05": {"models": [{"type": 10, "values": [735], "unktail": []}]},
+  "name": "Bridge",
+  "$fileid": 3259
+}
+,
+
+{
+  "width": 2,
+  "length": 3,
+  "unknown_16": true,
+  "mirror": true,
+  "color_replacements": [[5916, 7952]],
+  "models_05": {"models": [{"type": 10, "values": [735], "unktail": []}]},
+  "name": "Bridge",
+  "$fileid": 3260
+}
+,
+
+{
+  "unknown_16": true,
+  "probably_morphFloor": true,
+  "deletable": false,
+  "models_05": {"models": [{"type": 10, "values": [756], "unktail": []}]},
+  "$fileid": 3261
+}
+,
+
+{
+  "mapscene": 43,
+  "unknown_49": true,
+  "models": [{"values": [596], "type": 22}],
+  "$fileid": 3262
+}
+,
+
+{
+  "probably_animation": 480,
+  "actions_0": "Cross",
+  "is_members": true,
+  "models_05": {"models": [{"type": 10, "values": [2259], "unktail": []}]},
+  "name": "Swamp",
+  "$fileid": 3263
+}
+,
+
+{
+  "unknown_16": true,
+  "probably_morphFloor": true,
+  "deletable": false,
+  "material_replacements": [[560, 72]],
+  "models_05": {"models": [{"type": 10, "values": [823], "unktail": []}]},
+  "$fileid": 3264
+}
+,
+
+{
+  "unknown_16": true,
+  "width": 2,
+  "length": 2,
+  "mapscene": 11,
+  "ambient": 25,
+  "contrast": 15,
+  "actions_0": "Climb",
+  "models_05": {"models": [{"type": 10, "values": [37252], "unktail": []}]},
+  "name": "Pile of rocks",
+  "$fileid": 3265
+}
+,
+
+{
+  "actions_0": "Pick-lock",
+  "actions_1": "Search",
+  "models": [{"values": [27252], "type": 0}],
+  "name": "Cage",
+  "$fileid": 3266
+}
+,
+
+{
+  "ambient": 25,
+  "contrast": 15,
+  "actions_1": "Search",
+  "models": [{"values": [37534], "type": 0}, {"values": [37724], "type": 3}],
+  "name": "Cage",
+  "$fileid": 3267
+}
+,
+
+{
+  "actions_0": "Pick-lock",
+  "actions_1": "Search",
+  "models": [{"values": [27252], "type": 0}],
+  "name": "Cage",
+  "$fileid": 3268
+}
+,
+
+{
+  "deletable": false,
+  "models": [{"values": [27252], "type": 0}],
+  "$fileid": 3269
+}
+,
+
+{
+  "deletable": true,
+  "actions_0": "Open",
+  "actions_1": "Knock",
+  "models": [{"values": [9476], "type": 0}, {"values": [9477], "type": 9}],
+  "name": "Door",
+  "$fileid": 3270
+}
+,
+
+{
+  "deletable": true,
+  "actions_0": "Close",
+  "models": [{"values": [9476], "type": 0}, {"values": [9477], "type": 9}],
+  "name": "Door",
+  "$fileid": 3271
+}
+,
+
+{
+  "actions_0": "Open",
+  "models_05": {"models": [{"type": 10, "values": [1249], "unktail": []}]},
+  "name": "Chest",
+  "$fileid": 3272
+}
+,
+
+{
+  "actions_0": "Search",
+  "models_05": {"models": [{"type": 10, "values": [1226], "unktail": []}]},
+  "name": "Chest",
+  "$fileid": 3273
+}
+,
+
+{
+  "actions_0": "Open",
+  "models_05": {"models": [{"type": 10, "values": [1249], "unktail": []}]},
+  "name": "Chest",
+  "$fileid": 3274
+}
+,
+
+{
+  "unknown_16": true,
+  "deletable": false,
+  "mapscene": 43,
+  "ambient": 25,
+  "contrast": 10,
+  "maybe_allows_lineofsight": true,
+  "color_replacements": [[6554, 6806], [6550, 6930], [6674, 7054]],
+  "models_05": {"models": [{"type": 10, "values": [37499], "unktail": []}]},
+  "$fileid": 3275
+}
+,
+
+{
+  "unknown_16": true,
+  "deletable": true,
+  "actions_0": "Cross",
+  "mapscene": 43,
+  "maybe_blocks_movement": true,
+  "maybe_allows_lineofsight": true,
+  "color_replacements": [[6689, 7952]],
+  "models": [{"values": [3156], "type": 22}],
+  "name": "Stone bridge",
+  "$fileid": 3276
+}
+,
+
+{
+  "unknown_16": true,
+  "deletable": false,
+  "mapscene": 43,
+  "ambient": 25,
+  "contrast": 10,
+  "maybe_allows_lineofsight": true,
+  "color_replacements": [[6554, 6806], [6550, 6930], [6674, 7054]],
+  "models_05": {"models": [{"type": 10, "values": [37421], "unktail": []}]},
+  "$fileid": 3277
+}
+,
+
+{
+  "deletable": false,
+  "unknown_16": true,
+  "probably_morphFloor": true,
+  "mapscene": 43,
+  "ambient": 25,
+  "contrast": 10,
+  "maybe_allows_lineofsight": true,
+  "color_replacements": [[6554, 6806], [6550, 6930], [6674, 7054]],
+  "models_05": {"models": [{"type": 10, "values": [37285], "unktail": []}]},
+  "$fileid": 3278
+}
+,
+
+{
+  "deletable": false,
+  "unknown_16": true,
+  "mapscene": 43,
+  "ambient": 25,
+  "contrast": 10,
+  "maybe_allows_lineofsight": true,
+  "color_replacements": [[6554, 6806], [6550, 6930], [6674, 7054]],
+  "models_05": {"models": [{"type": 10, "values": [37196], "unktail": []}]},
+  "$fileid": 3279
+}
+,
+
+{
+  "deletable": false,
+  "unknown_16": true,
+  "mapscene": 43,
+  "maybe_allows_lineofsight": true,
+  "color_replacements": [[6689, 7952]],
+  "models_05": {"models": [{"type": 10, "values": [683], "unktail": []}]},
+  "$fileid": 3280
+}
+,
+
+{
+  "unknown_16": true,
+  "deletable": false,
+  "maybe_allows_lineofsight": true,
+  "color_replacements": [[6689, 7952]],
+  "models": [{"values": [736], "type": 10}, {"values": [716], "type": 1}],
+  "$fileid": 3281
+}
+,
+
+{
+  "unknown_16": true,
+  "deletable": false,
+  "maybe_allows_lineofsight": true,
+  "color_replacements": [[6689, 7952]],
+  "models_05": {"models": [{"type": 10, "values": [737], "unktail": []}]},
+  "$fileid": 3282
+}
+,
+
+{
+  "unknown_16": true,
+  "deletable": false,
+  "maybe_allows_lineofsight": true,
+  "color_replacements": [[6689, 7952]],
+  "models": [
+    {"values": [739], "type": 10},
+    {"values": [745], "type": 1},
+    {"values": [746], "type": 2},
+    {"values": [747], "type": 3}
+  ],
+  "$fileid": 3283
+}
+,
+
+{
+  "unknown_16": true,
+  "deletable": false,
+  "maybe_allows_lineofsight": true,
+  "color_replacements": [[6689, 7952]],
+  "models_05": {"models": [{"type": 10, "values": [740], "unktail": []}]},
+  "$fileid": 3284
+}
+,
+
+{
+  "unknown_16": true,
+  "deletable": false,
+  "maybe_allows_lineofsight": true,
+  "color_replacements": [[6689, 7952]],
+  "models_05": {"models": [{"type": 10, "values": [716], "unktail": []}]},
+  "$fileid": 3285
+}
+,
+
+{
+  "unknown_16": true,
+  "deletable": false,
+  "maybe_allows_lineofsight": true,
+  "color_replacements": [[6689, 7952]],
+  "models_05": {"models": [{"type": 10, "values": [745], "unktail": []}]},
+  "$fileid": 3286
+}
+,
+
+{
+  "unknown_16": true,
+  "deletable": false,
+  "maybe_allows_lineofsight": true,
+  "color_replacements": [[6689, 7952]],
+  "models_05": {"models": [{"type": 10, "values": [746], "unktail": []}]},
+  "$fileid": 3287
+}
+,
+
+{
+  "unknown_16": true,
+  "deletable": false,
+  "ambient": 25,
+  "contrast": 10,
+  "maybe_allows_lineofsight": true,
+  "color_replacements": [[6554, 6806], [6550, 6930], [6674, 7054]],
+  "models_05": {"models": [{"type": 10, "values": [37468], "unktail": []}]},
+  "$fileid": 3288
+}
+,
+
+{
+  "unknown_49": true,
+  "unknown_16": true,
+  "probably_morphFloor": true,
+  "mapscene": 43,
+  "color_replacements": [[6689, 7952]],
+  "models": [{"values": [706], "type": 22}],
+  "$fileid": 3289
+}
+,
+
+{
+  "maybe_blocks_movement": true,
+  "deletable": false,
+  "color_replacements": [[8720, 37], [9106, 45], [9114, 56]],
+  "models_05": {"models": [{"type": 10, "values": [37485], "unktail": []}]},
+  "$fileid": 3290
+}
+,
+
+{
+  "maybe_blocks_movement": true,
+  "deletable": false,
+  "models_05": {"models": [{"type": 10, "values": [37396], "unktail": []}]},
+  "$fileid": 3291
+}
+,
+
+{
+  "maybe_blocks_movement": true,
+  "deletable": false,
+  "color_replacements": [[8720, 37], [9106, 45], [9114, 56]],
+  "models_05": {"models": [{"type": 10, "values": [37297], "unktail": []}]},
+  "$fileid": 3292
+}
+,
+
+{
+  "unknown_49": true,
+  "models": [
+    {"values": [703], "type": 0},
+    {"values": [704], "type": 1},
+    {"values": [705], "type": 2}
+  ],
+  "$fileid": 3293
+}
+,
+
+{
+  "width": 2,
+  "length": 3,
+  "probably_morphFloor": true,
+  "ambient": 25,
+  "contrast": 15,
+  "light_source_related_4E": {"maybe_color": 2210, "maybe_radius": 3},
+  "probably_animation": 477,
+  "models_05": {"models": [{"type": 10, "values": [35875], "unktail": []}]},
+  "name": "Furnace",
+  "$fileid": 3294
+}
+,
+
+{
+  "actions_0": "Read",
+  "models_05": {"models": [{"type": 10, "values": [37373], "unktail": []}]},
+  "name": "Stone tablet",
+  "$fileid": 3295
+}
+,
+
+{
+  "actions_0": "Read",
+  "models_05": {"models": [{"type": 10, "values": [37373], "unktail": []}]},
+  "name": "Stone tablet",
+  "$fileid": 3296
+}
+,
+
+{
+  "actions_0": "Read",
+  "models_05": {"models": [{"type": 10, "values": [37373], "unktail": []}]},
+  "name": "Stone tablet",
+  "$fileid": 3297
+}
+,
+
+{
+  "actions_0": "Read",
+  "models_05": {"models": [{"type": 10, "values": [37373], "unktail": []}]},
+  "name": "Stone tablet",
+  "$fileid": 3298
+}
+,
+
+{
+  "actions_0": "Read",
+  "models_05": {"models": [{"type": 10, "values": [37373], "unktail": []}]},
+  "name": "Stone tablet",
+  "$fileid": 3299
+}
+,
+
+{
+  "models_05": {"models": [{"type": 10, "values": [37373], "unktail": []}]},
+  "name": "Stone tablet",
+  "$fileid": 3300
+}
+,
+
+{
+  "actions_0": "Read",
+  "models_05": {"models": [{"type": 10, "values": [37373], "unktail": []}]},
+  "name": "Stone tablet",
+  "$fileid": 3301
+}
+,
+
+{
+  "actions_0": "Read",
+  "models_05": {"models": [{"type": 10, "values": [37373], "unktail": []}]},
+  "name": "Stone tablet",
+  "$fileid": 3302
+}
+,
+
+{
+  "width": 2,
+  "ambient": 25,
+  "contrast": 15,
+  "models_05": {"models": [{"type": 10, "values": [36328], "unktail": []}]},
+  "name": "Portcullis",
+  "$fileid": 3303
+}
+,
+
+{
+  "unknown_16": true,
+  "models_05": {"models": [{"type": 10, "values": [758], "unktail": []}]},
+  "name": "Portcullis",
+  "$fileid": 3304
+}
+,
+
+{
+  "width": 2,
+  "length": 2,
+  "actions_0": "Search",
+  "color_replacements": [
+    [3247, 7700],
+    [3243, 7952],
+    [3239, 6798],
+    [3230, 5772],
+    [3350, 3594]
+  ],
+  "models_05": {"models": [{"type": 10, "values": [695], "unktail": []}]},
+  "name": "Well",
+  "$fileid": 3305
+}
+,
+
+{
+  "unknown_16": true,
+  "ambient": 25,
+  "contrast": 15,
+  "color_replacements": [
+    [21530, 7054],
+    [21534, 6808],
+    [21539, 6806],
+    [21543, 6682],
+    [21547, 6558]
+  ],
+  "models": [{"values": [36327], "type": 0}],
+  "$fileid": 3306
+}
+,
+
+{
+  "length": 2,
+  "ambient": 15,
+  "contrast": 10,
+  "actions_0": "Climb",
+  "models_05": {"models": [{"type": 10, "values": [37488], "unktail": []}]},
+  "name": "Rockpile",
+  "$fileid": 3307
+}
+,
+
+{
+  "width": 4,
+  "length": 3,
+  "actions_0": "Search",
+  "models_05": {"models": [{"type": 10, "values": [37729], "unktail": []}]},
+  "name": "Smashed cage",
+  "$fileid": 3308
+}
+,
+
+{
+  "ambient": 25,
+  "contrast": 15,
+  "probably_morphFloor": true,
+  "actions_0": "Climb-over",
+  "color_replacements": [
+    [30, 6930],
+    [35, 7054],
+    [39, 6930],
+    [43, 6806],
+    [47, 6682],
+    [51, 6558]
+  ],
+  "models_05": {"models": [{"type": 10, "values": [11799], "unktail": []}]},
+  "name": "Rockslide",
+  "$fileid": 3309
+}
+,
+
+{
+  "deletable": false,
+  "unknown_16": true,
+  "probably_morphFloor": true,
+  "models_05": {"models": [{"type": 10, "values": [802], "unktail": []}]},
+  "$fileid": 3310
+}
+,
+
+{
+  "deletable": false,
+  "unknown_16": true,
+  "probably_morphFloor": true,
+  "models_05": {"models": [{"type": 10, "values": [803], "unktail": []}]},
+  "$fileid": 3311
+}
+,
+
+{
+  "deletable": false,
+  "unknown_16": true,
+  "probably_morphFloor": true,
+  "mirror": true,
+  "models_05": {"models": [{"type": 10, "values": [803], "unktail": []}]},
+  "$fileid": 3312
+}
+,
+
+{
+  "deletable": false,
+  "unknown_16": true,
+  "probably_morphFloor": true,
+  "models_05": {"models": [{"type": 10, "values": [804], "unktail": []}]},
+  "$fileid": 3313
+}
+,
+
+{
+  "deletable": false,
+  "unknown_16": true,
+  "probably_morphFloor": true,
+  "models_05": {"models": [{"type": 10, "values": [806], "unktail": []}]},
+  "$fileid": 3314
+}
+,
+
+{
+  "deletable": false,
+  "unknown_16": true,
+  "probably_morphFloor": true,
+  "models_05": {"models": [{"type": 10, "values": [807], "unktail": []}]},
+  "$fileid": 3315
+}
+,
+
+{
+  "deletable": false,
+  "unknown_16": true,
+  "probably_morphFloor": true,
+  "models_05": {"models": [{"type": 10, "values": [808], "unktail": []}]},
+  "$fileid": 3316
+}
+,
+
+{
+  "deletable": false,
+  "unknown_16": true,
+  "probably_morphFloor": true,
+  "models_05": {"models": [{"type": 10, "values": [809], "unktail": []}]},
+  "$fileid": 3317
+}
+,
+
+{
+  "deletable": false,
+  "unknown_16": true,
+  "probably_morphFloor": true,
+  "mirror": true,
+  "models_05": {"models": [{"type": 10, "values": [809], "unktail": []}]},
+  "$fileid": 3318
+}
+,
+
+{
+  "deletable": false,
+  "unknown_16": true,
+  "probably_morphFloor": true,
+  "models_05": {"models": [{"type": 10, "values": [810], "unktail": []}]},
+  "$fileid": 3319
+}
+,
+
+{
+  "deletable": false,
+  "unknown_16": true,
+  "probably_morphFloor": true,
+  "models_05": {"models": [{"type": 10, "values": [811], "unktail": []}]},
+  "$fileid": 3320
+}
+,
+
+{
+  "deletable": false,
+  "unknown_16": true,
+  "probably_morphFloor": true,
+  "models_05": {"models": [{"type": 10, "values": [777], "unktail": []}]},
+  "$fileid": 3321
+}
+,
+
+{
+  "deletable": false,
+  "probably_morphFloor": true,
+  "unknown_16": true,
+  "ambient": 15,
+  "contrast": 15,
+  "models_05": {"models": [{"type": 10, "values": [37129], "unktail": []}]},
+  "$fileid": 3322
+}
+,
+
+{
+  "deletable": false,
+  "probably_morphFloor": true,
+  "unknown_16": true,
+  "ambient": 15,
+  "contrast": 15,
+  "models_05": {"models": [{"type": 10, "values": [36988], "unktail": []}]},
+  "$fileid": 3323
+}
+,
+
+{
+  "deletable": false,
+  "probably_morphFloor": true,
+  "unknown_16": true,
+  "ambient": 15,
+  "contrast": 15,
+  "models_05": {"models": [{"type": 10, "values": [37011], "unktail": []}]},
+  "$fileid": 3324
+}
+,
+
+{
+  "deletable": false,
+  "width": 2,
+  "length": 2,
+  "probably_morphFloor": true,
+  "unknown_16": true,
+  "color_replacements": [[6689, 7952]],
+  "models_05": {"models": [{"type": 10, "values": [688], "unktail": []}]},
+  "$fileid": 3325
+}
+,
+
+{
+  "length": 3,
+  "unknown_16": true,
+  "deletable": false,
+  "models_05": {"models": [{"type": 10, "values": [26396], "unktail": []}]},
+  "$fileid": 3326
+}
+,
+
+{
+  "length": 3,
+  "unknown_16": true,
+  "mirror": true,
+  "models_05": {"models": [{"type": 10, "values": [26396], "unktail": []}]},
+  "name": "Eerie statue",
+  "$fileid": 3327
+}]}

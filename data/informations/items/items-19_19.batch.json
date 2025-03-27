@@ -1,0 +1,4115 @@
+{"$schema":".schema-items_batch.json","files":[
+
+{
+  "members": true,
+  "value": 85000,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 6706, "type": 0},
+  "femaleModels_0": {"id": 6706, "type": 0},
+  "modelTranslate_0": -4,
+  "modelTranslate_1": -19,
+  "model_zoom": 1550,
+  "rotation_1": 116,
+  "rotation_0": 224,
+  "baseModel": 6590,
+  "color_replacements": [
+    [14503, 10512],
+    [14499, 10508],
+    [14494, 10760],
+    [14490, 11140]
+  ],
+  "name": "Ahrim's staff 50",
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 4864
+}
+,
+
+{
+  "members": true,
+  "value": 85000,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 6706, "type": 0},
+  "femaleModels_0": {"id": 6706, "type": 0},
+  "modelTranslate_0": -4,
+  "modelTranslate_1": -19,
+  "model_zoom": 1550,
+  "rotation_1": 116,
+  "rotation_0": 224,
+  "baseModel": 6590,
+  "color_replacements": [
+    [14503, 10512],
+    [14499, 10508],
+    [14494, 10760],
+    [14490, 11140]
+  ],
+  "name": "Ahrim's staff 25",
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 4865
+}
+,
+
+{
+  "members": true,
+  "value": 85000,
+  "maleModels_0": {"id": 6706, "type": 0},
+  "femaleModels_0": {"id": 6706, "type": 0},
+  "modelTranslate_0": -4,
+  "modelTranslate_1": -19,
+  "model_zoom": 1550,
+  "rotation_1": 116,
+  "rotation_0": 224,
+  "baseModel": 6835,
+  "tradeable": true,
+  "color_replacements": [
+    [14503, 10512],
+    [14499, 10508],
+    [14494, 10760],
+    [14490, 11140]
+  ],
+  "name": "Ahrim's staff 0",
+  "female_translate": [3, 245, 6],
+  "noteData": 4867,
+  "nullopt": true,
+  "$fileid": 4866
+}
+,
+
+{"noteData": 4866, "noteTemplate": 799, "nullopt": true, "$fileid": 4867}
+,
+
+{
+  "members": true,
+  "value": 50000,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 6669, "type": 0},
+  "maleModels_1": 170,
+  "femaleModels_0": {"id": 6697, "type": 0},
+  "femaleModels_1": 348,
+  "modelTranslate_1": 3,
+  "model_zoom": 1250,
+  "rotation_0": 468,
+  "baseModel": 6578,
+  "color_replacements": [[8741, 10512], [14490, 10512]],
+  "name": "Ahrim's top 100",
+  "nullopt": true,
+  "$fileid": 4868
+}
+,
+
+{
+  "members": true,
+  "value": 50000,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 6669, "type": 0},
+  "maleModels_1": 170,
+  "femaleModels_0": {"id": 6697, "type": 0},
+  "femaleModels_1": 348,
+  "modelTranslate_1": 3,
+  "model_zoom": 1250,
+  "rotation_0": 468,
+  "baseModel": 6578,
+  "color_replacements": [[8741, 10512], [14490, 10512]],
+  "name": "Ahrim's top 75",
+  "nullopt": true,
+  "$fileid": 4869
+}
+,
+
+{
+  "members": true,
+  "value": 50000,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 6669, "type": 0},
+  "maleModels_1": 170,
+  "femaleModels_0": {"id": 6697, "type": 0},
+  "femaleModels_1": 348,
+  "modelTranslate_1": 3,
+  "model_zoom": 1250,
+  "rotation_0": 468,
+  "baseModel": 6578,
+  "color_replacements": [[8741, 10512], [14490, 10512]],
+  "name": "Ahrim's top 50",
+  "nullopt": true,
+  "$fileid": 4870
+}
+,
+
+{
+  "members": true,
+  "value": 50000,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 6669, "type": 0},
+  "maleModels_1": 170,
+  "femaleModels_0": {"id": 6697, "type": 0},
+  "femaleModels_1": 348,
+  "modelTranslate_1": 3,
+  "model_zoom": 1250,
+  "rotation_0": 468,
+  "baseModel": 6578,
+  "color_replacements": [[8741, 10512], [14490, 10512]],
+  "name": "Ahrim's top 25",
+  "nullopt": true,
+  "$fileid": 4871
+}
+,
+
+{
+  "members": true,
+  "value": 50000,
+  "maleModels_0": {"id": 6669, "type": 0},
+  "maleModels_1": 170,
+  "femaleModels_0": {"id": 6697, "type": 0},
+  "femaleModels_1": 348,
+  "modelTranslate_1": 3,
+  "model_zoom": 1250,
+  "rotation_0": 468,
+  "baseModel": 6823,
+  "tradeable": true,
+  "color_replacements": [[8741, 10512], [14490, 10512]],
+  "name": "Ahrim's top 0",
+  "noteData": 4873,
+  "nullopt": true,
+  "$fileid": 4872
+}
+,
+
+{"noteData": 4872, "noteTemplate": 799, "nullopt": true, "$fileid": 4873}
+,
+
+{
+  "members": true,
+  "value": 47000,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 6659, "type": 0},
+  "femaleModels_0": {"id": 40595, "type": 0},
+  "modelTranslate_1": -4,
+  "model_zoom": 1730,
+  "rotation_0": 504,
+  "baseModel": 6577,
+  "color_replacements": [[14490, 10512], [45468, 43840]],
+  "name": "Ahrim's skirt 100",
+  "nullopt": true,
+  "$fileid": 4874
+}
+,
+
+{
+  "members": true,
+  "value": 47000,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 6659, "type": 0},
+  "femaleModels_0": {"id": 40595, "type": 0},
+  "modelTranslate_1": -4,
+  "model_zoom": 1730,
+  "rotation_0": 504,
+  "baseModel": 6577,
+  "color_replacements": [[14490, 10512], [45468, 43840]],
+  "name": "Ahrim's skirt 75",
+  "nullopt": true,
+  "$fileid": 4875
+}
+,
+
+{
+  "members": true,
+  "value": 47000,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 6659, "type": 0},
+  "femaleModels_0": {"id": 40595, "type": 0},
+  "modelTranslate_1": -4,
+  "model_zoom": 1730,
+  "rotation_0": 504,
+  "baseModel": 6577,
+  "color_replacements": [[14490, 10512], [45468, 43840]],
+  "name": "Ahrim's skirt 50",
+  "nullopt": true,
+  "$fileid": 4876
+}
+,
+
+{
+  "members": true,
+  "value": 47000,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 6659, "type": 0},
+  "femaleModels_0": {"id": 40595, "type": 0},
+  "modelTranslate_1": -4,
+  "model_zoom": 1730,
+  "rotation_0": 504,
+  "baseModel": 6577,
+  "color_replacements": [[14490, 10512], [45468, 43840]],
+  "name": "Ahrim's skirt 25",
+  "nullopt": true,
+  "$fileid": 4877
+}
+,
+
+{
+  "members": true,
+  "value": 47000,
+  "maleModels_0": {"id": 6659, "type": 0},
+  "femaleModels_0": {"id": 40595, "type": 0},
+  "modelTranslate_1": -4,
+  "model_zoom": 1730,
+  "rotation_0": 504,
+  "baseModel": 6822,
+  "tradeable": true,
+  "color_replacements": [[14490, 10512], [45468, 43840]],
+  "name": "Ahrim's skirt 0",
+  "noteData": 4879,
+  "nullopt": true,
+  "$fileid": 4878
+}
+,
+
+{"noteData": 4878, "noteTemplate": 799, "nullopt": true, "$fileid": 4879}
+,
+
+{
+  "members": true,
+  "value": 103000,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 6651, "type": 0},
+  "femaleModels_0": {"id": 6686, "type": 0},
+  "maleHeads_0": 39969,
+  "femaleHeads_0": 38950,
+  "baseModel": 6580,
+  "modelTranslate_0": 5,
+  "modelTranslate_1": -8,
+  "model_zoom": 660,
+  "rotation_1": 128,
+  "rotation_0": 96,
+  "color_replacements": [[10394, 10388], [10388, 10508]],
+  "name": "Dharok's helm 100",
+  "nullopt": true,
+  "$fileid": 4880
+}
+,
+
+{
+  "members": true,
+  "value": 103000,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 6651, "type": 0},
+  "femaleModels_0": {"id": 6686, "type": 0},
+  "maleHeads_0": 39969,
+  "femaleHeads_0": 38950,
+  "baseModel": 6580,
+  "modelTranslate_0": 5,
+  "modelTranslate_1": -8,
+  "model_zoom": 660,
+  "rotation_1": 128,
+  "rotation_0": 96,
+  "color_replacements": [[10394, 10388], [10388, 10508]],
+  "name": "Dharok's helm 75",
+  "nullopt": true,
+  "$fileid": 4881
+}
+,
+
+{
+  "members": true,
+  "value": 103000,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 6651, "type": 0},
+  "femaleModels_0": {"id": 6686, "type": 0},
+  "maleHeads_0": 39969,
+  "femaleHeads_0": 38950,
+  "baseModel": 6580,
+  "modelTranslate_0": 5,
+  "modelTranslate_1": -8,
+  "model_zoom": 660,
+  "rotation_1": 128,
+  "rotation_0": 96,
+  "color_replacements": [[10394, 10388], [10388, 10508]],
+  "name": "Dharok's helm 50",
+  "nullopt": true,
+  "$fileid": 4882
+}
+,
+
+{
+  "members": true,
+  "value": 103000,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 6651, "type": 0},
+  "femaleModels_0": {"id": 6686, "type": 0},
+  "maleHeads_0": 39969,
+  "femaleHeads_0": 38950,
+  "baseModel": 6580,
+  "modelTranslate_0": 5,
+  "modelTranslate_1": -8,
+  "model_zoom": 660,
+  "rotation_1": 128,
+  "rotation_0": 96,
+  "color_replacements": [[10394, 10388], [10388, 10508]],
+  "name": "Dharok's helm 25",
+  "nullopt": true,
+  "$fileid": 4883
+}
+,
+
+{
+  "members": true,
+  "value": 103000,
+  "maleModels_0": {"id": 6651, "type": 0},
+  "femaleModels_0": {"id": 6686, "type": 0},
+  "maleHeads_0": 39969,
+  "femaleHeads_0": 38950,
+  "baseModel": 6825,
+  "modelTranslate_0": 5,
+  "modelTranslate_1": -8,
+  "model_zoom": 660,
+  "rotation_1": 128,
+  "rotation_0": 96,
+  "tradeable": true,
+  "color_replacements": [[10394, 10388], [10388, 10508]],
+  "name": "Dharok's helm 0",
+  "noteData": 4885,
+  "nullopt": true,
+  "$fileid": 4884
+}
+,
+
+{"noteData": 4884, "noteTemplate": 799, "nullopt": true, "$fileid": 4885}
+,
+
+{
+  "members": true,
+  "value": 208000,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 6702, "type": 0},
+  "femaleModels_0": {"id": 6702, "type": 0},
+  "baseModel": 6579,
+  "modelTranslate_1": 51,
+  "model_zoom": 1710,
+  "rotation_1": 2004,
+  "rotation_0": 280,
+  "name": "Dharok's axe 100",
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 4886
+}
+,
+
+{
+  "members": true,
+  "value": 208000,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 6702, "type": 0},
+  "femaleModels_0": {"id": 6702, "type": 0},
+  "baseModel": 6579,
+  "modelTranslate_1": 51,
+  "model_zoom": 1710,
+  "rotation_1": 2004,
+  "rotation_0": 280,
+  "name": "Dharok's axe 75",
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 4887
+}
+,
+
+{
+  "members": true,
+  "value": 208000,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 6702, "type": 0},
+  "femaleModels_0": {"id": 6702, "type": 0},
+  "baseModel": 6579,
+  "modelTranslate_1": 51,
+  "model_zoom": 1710,
+  "rotation_1": 2004,
+  "rotation_0": 280,
+  "name": "Dharok's axe 50",
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 4888
+}
+,
+
+{
+  "members": true,
+  "value": 208000,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 6702, "type": 0},
+  "femaleModels_0": {"id": 6702, "type": 0},
+  "baseModel": 6579,
+  "modelTranslate_1": 51,
+  "model_zoom": 1710,
+  "rotation_1": 2004,
+  "rotation_0": 280,
+  "name": "Dharok's axe 25",
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 4889
+}
+,
+
+{
+  "members": true,
+  "value": 208000,
+  "maleModels_0": {"id": 6702, "type": 0},
+  "femaleModels_0": {"id": 6702, "type": 0},
+  "baseModel": 6824,
+  "modelTranslate_1": 51,
+  "model_zoom": 1710,
+  "rotation_1": 2004,
+  "rotation_0": 280,
+  "tradeable": true,
+  "name": "Dharok's axe 0",
+  "female_translate": [3, 245, 6],
+  "noteData": 4891,
+  "nullopt": true,
+  "$fileid": 4890
+}
+,
+
+{"noteData": 4890, "noteTemplate": 799, "nullopt": true, "$fileid": 4891}
+,
+
+{
+  "members": true,
+  "value": 280000,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 6670, "type": 0},
+  "maleModels_1": 6639,
+  "femaleModels_0": {"id": 6698, "type": 0},
+  "femaleModels_1": 6681,
+  "baseModel": 6582,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": 4,
+  "model_zoom": 1260,
+  "rotation_0": 464,
+  "color_replacements": [[10394, 10388], [10291, 10508]],
+  "name": "Dharok's body 100",
+  "nullopt": true,
+  "$fileid": 4892
+}
+,
+
+{
+  "members": true,
+  "value": 280000,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 6670, "type": 0},
+  "maleModels_1": 6639,
+  "femaleModels_0": {"id": 6698, "type": 0},
+  "femaleModels_1": 6681,
+  "baseModel": 6582,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": 4,
+  "model_zoom": 1260,
+  "rotation_0": 464,
+  "color_replacements": [[10394, 10388], [10291, 10508]],
+  "name": "Dharok's body 75",
+  "nullopt": true,
+  "$fileid": 4893
+}
+,
+
+{
+  "members": true,
+  "value": 280000,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 6670, "type": 0},
+  "maleModels_1": 6639,
+  "femaleModels_0": {"id": 6698, "type": 0},
+  "femaleModels_1": 6681,
+  "baseModel": 6582,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": 4,
+  "model_zoom": 1260,
+  "rotation_0": 464,
+  "color_replacements": [[10394, 10388], [10291, 10508]],
+  "name": "Dharok's body 50",
+  "nullopt": true,
+  "$fileid": 4894
+}
+,
+
+{
+  "members": true,
+  "value": 280000,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 6670, "type": 0},
+  "maleModels_1": 6639,
+  "femaleModels_0": {"id": 6698, "type": 0},
+  "femaleModels_1": 6681,
+  "baseModel": 6582,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": 4,
+  "model_zoom": 1260,
+  "rotation_0": 464,
+  "color_replacements": [[10394, 10388], [10291, 10508]],
+  "name": "Dharok's body 25",
+  "nullopt": true,
+  "$fileid": 4895
+}
+,
+
+{
+  "members": true,
+  "value": 280000,
+  "maleModels_0": {"id": 6670, "type": 0},
+  "maleModels_1": 6639,
+  "femaleModels_0": {"id": 6698, "type": 0},
+  "femaleModels_1": 6681,
+  "baseModel": 6827,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": 4,
+  "model_zoom": 1260,
+  "rotation_0": 464,
+  "tradeable": true,
+  "color_replacements": [[10394, 10388], [10291, 10508]],
+  "name": "Dharok's body 0",
+  "noteData": 4897,
+  "nullopt": true,
+  "$fileid": 4896
+}
+,
+
+{"noteData": 4896, "noteTemplate": 799, "nullopt": true, "$fileid": 4897}
+,
+
+{
+  "members": true,
+  "value": 275000,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 6660, "type": 0},
+  "femaleModels_0": {"id": 6692, "type": 0},
+  "baseModel": 6581,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": 1,
+  "model_zoom": 1660,
+  "rotation_0": 456,
+  "color_replacements": [[10394, 10512], [10388, 10760]],
+  "name": "Dharok's legs 100",
+  "nullopt": true,
+  "$fileid": 4898
+}
+,
+
+{
+  "members": true,
+  "value": 275000,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 6660, "type": 0},
+  "femaleModels_0": {"id": 6692, "type": 0},
+  "baseModel": 6581,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": 1,
+  "model_zoom": 1660,
+  "rotation_0": 456,
+  "color_replacements": [[10394, 10512], [10388, 10760]],
+  "name": "Dharok's legs 75",
+  "nullopt": true,
+  "$fileid": 4899
+}
+,
+
+{
+  "members": true,
+  "value": 275000,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 6660, "type": 0},
+  "femaleModels_0": {"id": 6692, "type": 0},
+  "baseModel": 6581,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": 1,
+  "model_zoom": 1660,
+  "rotation_0": 456,
+  "color_replacements": [[10394, 10512], [10388, 10760]],
+  "name": "Dharok's legs 50",
+  "nullopt": true,
+  "$fileid": 4900
+}
+,
+
+{
+  "members": true,
+  "value": 275000,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 6660, "type": 0},
+  "femaleModels_0": {"id": 6692, "type": 0},
+  "baseModel": 6581,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": 1,
+  "model_zoom": 1660,
+  "rotation_0": 456,
+  "color_replacements": [[10394, 10512], [10388, 10760]],
+  "name": "Dharok's legs 25",
+  "nullopt": true,
+  "$fileid": 4901
+}
+,
+
+{
+  "members": true,
+  "value": 275000,
+  "maleModels_0": {"id": 6660, "type": 0},
+  "femaleModels_0": {"id": 6692, "type": 0},
+  "baseModel": 6826,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": 1,
+  "model_zoom": 1660,
+  "rotation_0": 456,
+  "tradeable": true,
+  "color_replacements": [[10394, 10512], [10388, 10760]],
+  "name": "Dharok's legs 0",
+  "noteData": 4903,
+  "nullopt": true,
+  "$fileid": 4902
+}
+,
+
+{"noteData": 4902, "noteTemplate": 799, "nullopt": true, "$fileid": 4903}
+,
+
+{
+  "members": true,
+  "value": 103000,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 6653, "type": 0},
+  "femaleModels_0": {"id": 6687, "type": 0},
+  "maleHeads_0": 39782,
+  "femaleHeads_0": 38962,
+  "baseModel": 6583,
+  "modelTranslate_0": 17,
+  "model_zoom": 860,
+  "rotation_1": 188,
+  "rotation_0": 2012,
+  "color_replacements": [[10394, 10388], [6020, 11140]],
+  "name": "Guthan's helm 100",
+  "nullopt": true,
+  "$fileid": 4904
+}
+,
+
+{
+  "members": true,
+  "value": 103000,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 6653, "type": 0},
+  "femaleModels_0": {"id": 6687, "type": 0},
+  "maleHeads_0": 39782,
+  "femaleHeads_0": 38962,
+  "baseModel": 6583,
+  "modelTranslate_0": 17,
+  "model_zoom": 860,
+  "rotation_1": 188,
+  "rotation_0": 2012,
+  "color_replacements": [[10394, 10388], [6020, 11140]],
+  "name": "Guthan's helm 75",
+  "nullopt": true,
+  "$fileid": 4905
+}
+,
+
+{
+  "members": true,
+  "value": 103000,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 6653, "type": 0},
+  "femaleModels_0": {"id": 6687, "type": 0},
+  "maleHeads_0": 39782,
+  "femaleHeads_0": 38962,
+  "baseModel": 6583,
+  "modelTranslate_0": 17,
+  "model_zoom": 860,
+  "rotation_1": 188,
+  "rotation_0": 2012,
+  "color_replacements": [[10394, 10388], [6020, 11140]],
+  "name": "Guthan's helm 50",
+  "nullopt": true,
+  "$fileid": 4906
+}
+,
+
+{
+  "members": true,
+  "value": 103000,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 6653, "type": 0},
+  "femaleModels_0": {"id": 6687, "type": 0},
+  "maleHeads_0": 39782,
+  "femaleHeads_0": 38962,
+  "baseModel": 6583,
+  "modelTranslate_0": 17,
+  "model_zoom": 860,
+  "rotation_1": 188,
+  "rotation_0": 2012,
+  "color_replacements": [[10394, 10388], [6020, 11140]],
+  "name": "Guthan's helm 25",
+  "nullopt": true,
+  "$fileid": 4907
+}
+,
+
+{
+  "members": true,
+  "value": 103000,
+  "maleModels_0": {"id": 6653, "type": 0},
+  "femaleModels_0": {"id": 6687, "type": 0},
+  "maleHeads_0": 39782,
+  "femaleHeads_0": 38962,
+  "baseModel": 6828,
+  "modelTranslate_0": 17,
+  "model_zoom": 860,
+  "rotation_1": 188,
+  "rotation_0": 2012,
+  "tradeable": true,
+  "color_replacements": [[10394, 10388], [6020, 11140]],
+  "name": "Guthan's helm 0",
+  "noteData": 4909,
+  "nullopt": true,
+  "$fileid": 4908
+}
+,
+
+{"noteData": 4908, "noteTemplate": 799, "nullopt": true, "$fileid": 4909}
+,
+
+{
+  "members": true,
+  "value": 100000,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 6709, "type": 0},
+  "femaleModels_0": {"id": 6709, "type": 0},
+  "modelTranslate_0": -2,
+  "modelTranslate_1": -16,
+  "model_zoom": 1470,
+  "rotation_1": 116,
+  "rotation_0": 176,
+  "baseModel": 6598,
+  "color_replacements": [
+    [14511, 10512],
+    [14503, 10508],
+    [14494, 10760],
+    [21555, 21543],
+    [21563, 21551]
+  ],
+  "name": "Guthan's spear 100",
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 4910
+}
+,
+
+{
+  "members": true,
+  "value": 100000,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 6709, "type": 0},
+  "femaleModels_0": {"id": 6709, "type": 0},
+  "modelTranslate_0": -2,
+  "modelTranslate_1": -16,
+  "model_zoom": 1470,
+  "rotation_1": 116,
+  "rotation_0": 176,
+  "baseModel": 6598,
+  "color_replacements": [
+    [14511, 10512],
+    [14503, 10508],
+    [14494, 10760],
+    [21555, 21543],
+    [21563, 21551]
+  ],
+  "name": "Guthan's spear 75",
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 4911
+}
+,
+
+{
+  "members": true,
+  "value": 100000,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 6709, "type": 0},
+  "femaleModels_0": {"id": 6709, "type": 0},
+  "modelTranslate_0": -2,
+  "modelTranslate_1": -16,
+  "model_zoom": 1470,
+  "rotation_1": 116,
+  "rotation_0": 176,
+  "baseModel": 6598,
+  "color_replacements": [
+    [14511, 10512],
+    [14503, 10508],
+    [14494, 10760],
+    [21555, 21543],
+    [21563, 21551]
+  ],
+  "name": "Guthan's spear 50",
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 4912
+}
+,
+
+{
+  "members": true,
+  "value": 100000,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 6709, "type": 0},
+  "femaleModels_0": {"id": 6709, "type": 0},
+  "modelTranslate_0": -2,
+  "modelTranslate_1": -16,
+  "model_zoom": 1470,
+  "rotation_1": 116,
+  "rotation_0": 176,
+  "baseModel": 6598,
+  "color_replacements": [
+    [14511, 10512],
+    [14503, 10508],
+    [14494, 10760],
+    [21555, 21543],
+    [21563, 21551]
+  ],
+  "name": "Guthan's spear 25",
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 4913
+}
+,
+
+{
+  "members": true,
+  "value": 100000,
+  "maleModels_0": {"id": 6709, "type": 0},
+  "femaleModels_0": {"id": 6709, "type": 0},
+  "modelTranslate_0": -2,
+  "modelTranslate_1": -16,
+  "model_zoom": 1470,
+  "rotation_1": 116,
+  "rotation_0": 176,
+  "baseModel": 6843,
+  "tradeable": true,
+  "color_replacements": [
+    [14511, 10512],
+    [14503, 10508],
+    [14494, 10760],
+    [21555, 21543],
+    [21563, 21551]
+  ],
+  "name": "Guthan's spear 0",
+  "female_translate": [3, 245, 6],
+  "noteData": 4915,
+  "nullopt": true,
+  "$fileid": 4914
+}
+,
+
+{"noteData": 4914, "noteTemplate": 799, "nullopt": true, "$fileid": 4915}
+,
+
+{
+  "members": true,
+  "value": 280000,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 6672, "type": 0},
+  "maleModels_1": 6641,
+  "femaleModels_0": {"id": 6699, "type": 0},
+  "femaleModels_1": 6682,
+  "baseModel": 6586,
+  "modelTranslate_1": 8,
+  "model_zoom": 960,
+  "rotation_0": 412,
+  "color_replacements": [[10394, 10388], [10291, 10508]],
+  "name": "Guthan's body 100",
+  "nullopt": true,
+  "$fileid": 4916
+}
+,
+
+{
+  "members": true,
+  "value": 280000,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 6672, "type": 0},
+  "maleModels_1": 6641,
+  "femaleModels_0": {"id": 6699, "type": 0},
+  "femaleModels_1": 6682,
+  "baseModel": 6586,
+  "modelTranslate_1": 8,
+  "model_zoom": 960,
+  "rotation_0": 412,
+  "color_replacements": [[10394, 10388], [10291, 10508]],
+  "name": "Guthan's body 75",
+  "nullopt": true,
+  "$fileid": 4917
+}
+,
+
+{
+  "members": true,
+  "value": 280000,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 6672, "type": 0},
+  "maleModels_1": 6641,
+  "femaleModels_0": {"id": 6699, "type": 0},
+  "femaleModels_1": 6682,
+  "baseModel": 6586,
+  "modelTranslate_1": 8,
+  "model_zoom": 960,
+  "rotation_0": 412,
+  "color_replacements": [[10394, 10388], [10291, 10508]],
+  "name": "Guthan's body 50",
+  "nullopt": true,
+  "$fileid": 4918
+}
+,
+
+{
+  "members": true,
+  "value": 280000,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 6672, "type": 0},
+  "maleModels_1": 6641,
+  "femaleModels_0": {"id": 6699, "type": 0},
+  "femaleModels_1": 6682,
+  "baseModel": 6586,
+  "modelTranslate_1": 8,
+  "model_zoom": 960,
+  "rotation_0": 412,
+  "color_replacements": [[10394, 10388], [10291, 10508]],
+  "name": "Guthan's body 25",
+  "nullopt": true,
+  "$fileid": 4919
+}
+,
+
+{
+  "members": true,
+  "value": 280000,
+  "maleModels_0": {"id": 6672, "type": 0},
+  "maleModels_1": 6641,
+  "femaleModels_0": {"id": 6699, "type": 0},
+  "femaleModels_1": 6682,
+  "baseModel": 6831,
+  "modelTranslate_1": 8,
+  "model_zoom": 960,
+  "rotation_0": 412,
+  "tradeable": true,
+  "color_replacements": [[10394, 10388], [10291, 10508]],
+  "name": "Guthan's body 0",
+  "noteData": 4921,
+  "nullopt": true,
+  "$fileid": 4920
+}
+,
+
+{"noteData": 4920, "noteTemplate": 799, "nullopt": true, "$fileid": 4921}
+,
+
+{
+  "members": true,
+  "value": 275000,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 6665, "type": 0},
+  "femaleModels_0": {"id": 40596, "type": 0},
+  "baseModel": 6593,
+  "modelTranslate_1": 1,
+  "model_zoom": 1720,
+  "rotation_0": 468,
+  "color_replacements": [[10407, 10512], [10394, 10508], [10388, 10760]],
+  "name": "Guthan's skirt 100",
+  "nullopt": true,
+  "$fileid": 4922
+}
+,
+
+{
+  "members": true,
+  "value": 275000,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 6665, "type": 0},
+  "femaleModels_0": {"id": 40596, "type": 0},
+  "baseModel": 6593,
+  "modelTranslate_1": 1,
+  "model_zoom": 1720,
+  "rotation_0": 468,
+  "color_replacements": [[10407, 10512], [10394, 10508], [10388, 10760]],
+  "name": "Guthan's skirt 75",
+  "nullopt": true,
+  "$fileid": 4923
+}
+,
+
+{
+  "members": true,
+  "value": 275000,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 6665, "type": 0},
+  "femaleModels_0": {"id": 40596, "type": 0},
+  "baseModel": 6593,
+  "modelTranslate_1": 1,
+  "model_zoom": 1720,
+  "rotation_0": 468,
+  "color_replacements": [[10407, 10512], [10394, 10508], [10388, 10760]],
+  "name": "Guthan's skirt 50",
+  "nullopt": true,
+  "$fileid": 4924
+}
+,
+
+{
+  "members": true,
+  "value": 275000,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 6665, "type": 0},
+  "femaleModels_0": {"id": 40596, "type": 0},
+  "baseModel": 6593,
+  "modelTranslate_1": 1,
+  "model_zoom": 1720,
+  "rotation_0": 468,
+  "color_replacements": [[10407, 10512], [10394, 10508], [10388, 10760]],
+  "name": "Guthan's skirt 25",
+  "nullopt": true,
+  "$fileid": 4925
+}
+,
+
+{
+  "members": true,
+  "value": 275000,
+  "maleModels_0": {"id": 6665, "type": 0},
+  "femaleModels_0": {"id": 40596, "type": 0},
+  "baseModel": 6838,
+  "modelTranslate_1": 1,
+  "model_zoom": 1720,
+  "rotation_0": 468,
+  "tradeable": true,
+  "color_replacements": [[10407, 10512], [10394, 10508], [10388, 10760]],
+  "name": "Guthan's skirt 0",
+  "noteData": 4927,
+  "nullopt": true,
+  "$fileid": 4926
+}
+,
+
+{"noteData": 4926, "noteTemplate": 799, "nullopt": true, "$fileid": 4927}
+,
+
+{
+  "members": true,
+  "value": 13000,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 6655, "type": 0},
+  "femaleModels_0": {"id": 6688, "type": 0},
+  "maleHeads_0": 39872,
+  "femaleHeads_0": 38983,
+  "modelTranslate_0": -1,
+  "modelTranslate_1": -3,
+  "model_zoom": 690,
+  "rotation_0": 144,
+  "baseModel": 6587,
+  "color_replacements": [
+    [10394, 10388],
+    [10388, 10512],
+    [10514, 10508],
+    [10638, 10760],
+    [10762, 11140]
+  ],
+  "name": "Karil's coif 100",
+  "nullopt": true,
+  "$fileid": 4928
+}
+,
+
+{
+  "members": true,
+  "value": 13000,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 6655, "type": 0},
+  "femaleModels_0": {"id": 6688, "type": 0},
+  "maleHeads_0": 39872,
+  "femaleHeads_0": 38983,
+  "modelTranslate_0": -1,
+  "modelTranslate_1": -3,
+  "model_zoom": 690,
+  "rotation_0": 144,
+  "baseModel": 6587,
+  "color_replacements": [
+    [10394, 10388],
+    [10388, 10512],
+    [10514, 10508],
+    [10638, 10760],
+    [10762, 11140]
+  ],
+  "name": "Karil's coif 75",
+  "nullopt": true,
+  "$fileid": 4929
+}
+,
+
+{
+  "members": true,
+  "value": 13000,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 6655, "type": 0},
+  "femaleModels_0": {"id": 6688, "type": 0},
+  "maleHeads_0": 39872,
+  "femaleHeads_0": 38983,
+  "modelTranslate_0": -1,
+  "modelTranslate_1": -3,
+  "model_zoom": 690,
+  "rotation_0": 144,
+  "baseModel": 6587,
+  "color_replacements": [
+    [10394, 10388],
+    [10388, 10512],
+    [10514, 10508],
+    [10638, 10760],
+    [10762, 11140]
+  ],
+  "name": "Karil's coif 50",
+  "nullopt": true,
+  "$fileid": 4930
+}
+,
+
+{
+  "members": true,
+  "value": 13000,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 6655, "type": 0},
+  "femaleModels_0": {"id": 6688, "type": 0},
+  "maleHeads_0": 39872,
+  "femaleHeads_0": 38983,
+  "modelTranslate_0": -1,
+  "modelTranslate_1": -3,
+  "model_zoom": 690,
+  "rotation_0": 144,
+  "baseModel": 6587,
+  "color_replacements": [
+    [10394, 10388],
+    [10388, 10512],
+    [10514, 10508],
+    [10638, 10760],
+    [10762, 11140]
+  ],
+  "name": "Karil's coif 25",
+  "nullopt": true,
+  "$fileid": 4931
+}
+,
+
+{
+  "members": true,
+  "value": 13000,
+  "maleModels_0": {"id": 6655, "type": 0},
+  "femaleModels_0": {"id": 6688, "type": 0},
+  "maleHeads_0": 39872,
+  "femaleHeads_0": 38983,
+  "modelTranslate_0": -1,
+  "modelTranslate_1": -3,
+  "model_zoom": 690,
+  "rotation_0": 144,
+  "baseModel": 6832,
+  "tradeable": true,
+  "color_replacements": [
+    [10394, 10388],
+    [10388, 10512],
+    [10514, 10508],
+    [10638, 10760],
+    [10762, 11140]
+  ],
+  "name": "Karil's coif 0",
+  "noteData": 4933,
+  "nullopt": true,
+  "$fileid": 4932
+}
+,
+
+{"noteData": 4932, "noteTemplate": 799, "nullopt": true, "$fileid": 4933}
+,
+
+{
+  "members": true,
+  "value": 160000,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 6712, "type": 0},
+  "femaleModels_0": {"id": 6712, "type": 0},
+  "modelTranslate_0": -4,
+  "modelTranslate_1": 39,
+  "model_zoom": 1160,
+  "rotation_1": 888,
+  "rotation_0": 288,
+  "baseModel": 6604,
+  "color_replacements": [
+    [10529, 10388],
+    [8602, 10512],
+    [10520, 10508],
+    [8722, 10760]
+  ],
+  "name": "Karil's x-bow 100",
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 4934
+}
+,
+
+{
+  "members": true,
+  "value": 160000,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 6712, "type": 0},
+  "femaleModels_0": {"id": 6712, "type": 0},
+  "modelTranslate_0": -4,
+  "modelTranslate_1": 39,
+  "model_zoom": 1160,
+  "rotation_1": 888,
+  "rotation_0": 288,
+  "baseModel": 6604,
+  "color_replacements": [
+    [10529, 10388],
+    [8602, 10512],
+    [10520, 10508],
+    [8722, 10760]
+  ],
+  "name": "Karil's x-bow 75",
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 4935
+}
+,
+
+{
+  "members": true,
+  "value": 160000,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 6712, "type": 0},
+  "femaleModels_0": {"id": 6712, "type": 0},
+  "modelTranslate_0": -4,
+  "modelTranslate_1": 39,
+  "model_zoom": 1160,
+  "rotation_1": 888,
+  "rotation_0": 288,
+  "baseModel": 6604,
+  "color_replacements": [
+    [10529, 10388],
+    [8602, 10512],
+    [10520, 10508],
+    [8722, 10760]
+  ],
+  "name": "Karil's x-bow 50",
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 4936
+}
+,
+
+{
+  "members": true,
+  "value": 160000,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 6712, "type": 0},
+  "femaleModels_0": {"id": 6712, "type": 0},
+  "modelTranslate_0": -4,
+  "modelTranslate_1": 39,
+  "model_zoom": 1160,
+  "rotation_1": 888,
+  "rotation_0": 288,
+  "baseModel": 6604,
+  "color_replacements": [
+    [10529, 10388],
+    [8602, 10512],
+    [10520, 10508],
+    [8722, 10760]
+  ],
+  "name": "Karil's x-bow 25",
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 4937
+}
+,
+
+{
+  "members": true,
+  "value": 160000,
+  "maleModels_0": {"id": 6712, "type": 0},
+  "femaleModels_0": {"id": 6712, "type": 0},
+  "modelTranslate_0": -4,
+  "modelTranslate_1": 39,
+  "model_zoom": 1160,
+  "rotation_1": 888,
+  "rotation_0": 288,
+  "baseModel": 6845,
+  "tradeable": true,
+  "color_replacements": [
+    [10529, 10388],
+    [8602, 10512],
+    [10520, 10508],
+    [8722, 10760]
+  ],
+  "name": "Karil's x-bow 0",
+  "female_translate": [3, 245, 6],
+  "noteData": 4939,
+  "nullopt": true,
+  "$fileid": 4938
+}
+,
+
+{"noteData": 4938, "noteTemplate": 799, "nullopt": true, "$fileid": 4939}
+,
+
+{
+  "members": true,
+  "value": 50000,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 6674, "type": 0},
+  "maleModels_1": 6643,
+  "femaleModels_0": {"id": 6700, "type": 0},
+  "femaleModels_1": 6683,
+  "modelTranslate_0": 3,
+  "model_zoom": 1380,
+  "rotation_0": 556,
+  "baseModel": 6588,
+  "color_replacements": [
+    [10413, 7510],
+    [10520, 10388],
+    [10644, 10512],
+    [10768, 10508],
+    [908, 10760]
+  ],
+  "name": "Karil's top 100",
+  "nullopt": true,
+  "$fileid": 4940
+}
+,
+
+{
+  "members": true,
+  "value": 50000,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 6674, "type": 0},
+  "maleModels_1": 6643,
+  "femaleModels_0": {"id": 6700, "type": 0},
+  "femaleModels_1": 6683,
+  "modelTranslate_0": 3,
+  "model_zoom": 1380,
+  "rotation_0": 556,
+  "baseModel": 6588,
+  "color_replacements": [
+    [10413, 7510],
+    [10520, 10388],
+    [10644, 10512],
+    [10768, 10508],
+    [908, 10760]
+  ],
+  "name": "Karil's top 75",
+  "nullopt": true,
+  "$fileid": 4941
+}
+,
+
+{
+  "members": true,
+  "value": 50000,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 6674, "type": 0},
+  "maleModels_1": 6643,
+  "femaleModels_0": {"id": 6700, "type": 0},
+  "femaleModels_1": 6683,
+  "modelTranslate_0": 3,
+  "model_zoom": 1380,
+  "rotation_0": 556,
+  "baseModel": 6588,
+  "color_replacements": [
+    [10413, 7510],
+    [10520, 10388],
+    [10644, 10512],
+    [10768, 10508],
+    [908, 10760]
+  ],
+  "name": "Karil's top 50",
+  "nullopt": true,
+  "$fileid": 4942
+}
+,
+
+{
+  "members": true,
+  "value": 50000,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 6674, "type": 0},
+  "maleModels_1": 6643,
+  "femaleModels_0": {"id": 6700, "type": 0},
+  "femaleModels_1": 6683,
+  "modelTranslate_0": 3,
+  "model_zoom": 1380,
+  "rotation_0": 556,
+  "baseModel": 6588,
+  "color_replacements": [
+    [10413, 7510],
+    [10520, 10388],
+    [10644, 10512],
+    [10768, 10508],
+    [908, 10760]
+  ],
+  "name": "Karil's top 25",
+  "nullopt": true,
+  "$fileid": 4943
+}
+,
+
+{
+  "members": true,
+  "value": 50000,
+  "maleModels_0": {"id": 6674, "type": 0},
+  "maleModels_1": 6643,
+  "femaleModels_0": {"id": 6700, "type": 0},
+  "femaleModels_1": 6683,
+  "modelTranslate_0": 3,
+  "model_zoom": 1380,
+  "rotation_0": 556,
+  "baseModel": 6833,
+  "tradeable": true,
+  "color_replacements": [
+    [10413, 7510],
+    [10520, 10388],
+    [10644, 10512],
+    [10768, 10508],
+    [908, 10760]
+  ],
+  "name": "Karil's top 0",
+  "noteData": 4945,
+  "nullopt": true,
+  "$fileid": 4944
+}
+,
+
+{"noteData": 4944, "noteTemplate": 799, "nullopt": true, "$fileid": 4945}
+,
+
+{
+  "members": true,
+  "value": 47000,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 6664, "type": 0},
+  "femaleModels_0": {"id": 6694, "type": 0},
+  "model_zoom": 1120,
+  "rotation_0": 512,
+  "baseModel": 6589,
+  "color_replacements": [
+    [10413, 10438],
+    [14490, 10388],
+    [10520, 10512],
+    [10644, 10508],
+    [10768, 10760],
+    [10892, 11140]
+  ],
+  "name": "Karil's skirt 100",
+  "nullopt": true,
+  "$fileid": 4946
+}
+,
+
+{
+  "members": true,
+  "value": 47000,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 6664, "type": 0},
+  "femaleModels_0": {"id": 6694, "type": 0},
+  "model_zoom": 1120,
+  "rotation_0": 512,
+  "baseModel": 6589,
+  "color_replacements": [
+    [10413, 10438],
+    [14490, 10388],
+    [10520, 10512],
+    [10644, 10508],
+    [10768, 10760],
+    [10892, 11140]
+  ],
+  "name": "Karil's skirt 75",
+  "nullopt": true,
+  "$fileid": 4947
+}
+,
+
+{
+  "members": true,
+  "value": 47000,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 6664, "type": 0},
+  "femaleModels_0": {"id": 6694, "type": 0},
+  "model_zoom": 1120,
+  "rotation_0": 512,
+  "baseModel": 6589,
+  "color_replacements": [
+    [10413, 10438],
+    [14490, 10388],
+    [10520, 10512],
+    [10644, 10508],
+    [10768, 10760],
+    [10892, 11140]
+  ],
+  "name": "Karil's skirt 50",
+  "nullopt": true,
+  "$fileid": 4948
+}
+,
+
+{
+  "members": true,
+  "value": 47000,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 6664, "type": 0},
+  "femaleModels_0": {"id": 6694, "type": 0},
+  "model_zoom": 1120,
+  "rotation_0": 512,
+  "baseModel": 6589,
+  "color_replacements": [
+    [10413, 10438],
+    [14490, 10388],
+    [10520, 10512],
+    [10644, 10508],
+    [10768, 10760],
+    [10892, 11140]
+  ],
+  "name": "Karil's skirt 25",
+  "nullopt": true,
+  "$fileid": 4949
+}
+,
+
+{
+  "members": true,
+  "value": 47000,
+  "maleModels_0": {"id": 6664, "type": 0},
+  "femaleModels_0": {"id": 6694, "type": 0},
+  "model_zoom": 1120,
+  "rotation_0": 512,
+  "baseModel": 6834,
+  "tradeable": true,
+  "color_replacements": [
+    [10413, 10438],
+    [14490, 10388],
+    [10520, 10512],
+    [10644, 10508],
+    [10768, 10760],
+    [10892, 11140]
+  ],
+  "name": "Karil's skirt 0",
+  "noteData": 4951,
+  "nullopt": true,
+  "$fileid": 4950
+}
+,
+
+{"noteData": 4950, "noteTemplate": 799, "nullopt": true, "$fileid": 4951}
+,
+
+{
+  "members": true,
+  "value": 103000,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 6656, "type": 0},
+  "femaleModels_0": {"id": 6689, "type": 0},
+  "maleHeads_0": 39896,
+  "femaleHeads_0": 38922,
+  "baseModel": 6592,
+  "modelTranslate_0": 11,
+  "model_zoom": 660,
+  "rotation_1": 212,
+  "color_replacements": [[10394, 10388], [6020, 11140]],
+  "name": "Torag's helm 100",
+  "nullopt": true,
+  "$fileid": 4952
+}
+,
+
+{
+  "members": true,
+  "value": 103000,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 6656, "type": 0},
+  "femaleModels_0": {"id": 6689, "type": 0},
+  "maleHeads_0": 39896,
+  "femaleHeads_0": 38922,
+  "baseModel": 6592,
+  "modelTranslate_0": 11,
+  "model_zoom": 660,
+  "rotation_1": 212,
+  "color_replacements": [[10394, 10388], [6020, 11140]],
+  "name": "Torag's helm 75",
+  "nullopt": true,
+  "$fileid": 4953
+}
+,
+
+{
+  "members": true,
+  "value": 103000,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 6656, "type": 0},
+  "femaleModels_0": {"id": 6689, "type": 0},
+  "maleHeads_0": 39896,
+  "femaleHeads_0": 38922,
+  "baseModel": 6592,
+  "modelTranslate_0": 11,
+  "model_zoom": 660,
+  "rotation_1": 212,
+  "color_replacements": [[10394, 10388], [6020, 11140]],
+  "name": "Torag's helm 50",
+  "nullopt": true,
+  "$fileid": 4954
+}
+,
+
+{
+  "members": true,
+  "value": 103000,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 6656, "type": 0},
+  "femaleModels_0": {"id": 6689, "type": 0},
+  "maleHeads_0": 39896,
+  "femaleHeads_0": 38922,
+  "baseModel": 6592,
+  "modelTranslate_0": 11,
+  "model_zoom": 660,
+  "rotation_1": 212,
+  "color_replacements": [[10394, 10388], [6020, 11140]],
+  "name": "Torag's helm 25",
+  "nullopt": true,
+  "$fileid": 4955
+}
+,
+
+{
+  "members": true,
+  "value": 103000,
+  "maleModels_0": {"id": 6656, "type": 0},
+  "femaleModels_0": {"id": 6689, "type": 0},
+  "maleHeads_0": 39896,
+  "femaleHeads_0": 38922,
+  "baseModel": 6837,
+  "modelTranslate_0": 11,
+  "model_zoom": 660,
+  "rotation_1": 212,
+  "tradeable": true,
+  "color_replacements": [[10394, 10388], [6020, 11140]],
+  "name": "Torag's helm 0",
+  "noteData": 4957,
+  "nullopt": true,
+  "$fileid": 4956
+}
+,
+
+{"noteData": 4956, "noteTemplate": 799, "nullopt": true, "$fileid": 4957}
+,
+
+{
+  "members": true,
+  "value": 160000,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 6707, "type": 0},
+  "femaleModels_0": {"id": 40282, "type": 0},
+  "femaleModels_1": 40306,
+  "baseModel": 6591,
+  "modelTranslate_0": -16,
+  "modelTranslate_1": -9,
+  "model_zoom": 1620,
+  "rotation_1": 1212,
+  "rotation_0": 272,
+  "name": "Torag's hammer 100",
+  "nullopt": true,
+  "$fileid": 4958
+}
+,
+
+{
+  "members": true,
+  "value": 160000,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 6707, "type": 0},
+  "femaleModels_0": {"id": 40282, "type": 0},
+  "femaleModels_1": 40306,
+  "baseModel": 6591,
+  "modelTranslate_0": -16,
+  "modelTranslate_1": -9,
+  "model_zoom": 1620,
+  "rotation_1": 1212,
+  "rotation_0": 272,
+  "name": "Torag's hammer 75",
+  "nullopt": true,
+  "$fileid": 4959
+}
+,
+
+{
+  "members": true,
+  "value": 160000,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 6707, "type": 0},
+  "femaleModels_0": {"id": 40282, "type": 0},
+  "femaleModels_1": 40306,
+  "baseModel": 6591,
+  "modelTranslate_0": -16,
+  "modelTranslate_1": -9,
+  "model_zoom": 1620,
+  "rotation_1": 1212,
+  "rotation_0": 272,
+  "name": "Torag's hammer 50",
+  "nullopt": true,
+  "$fileid": 4960
+}
+,
+
+{
+  "members": true,
+  "value": 160000,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 6707, "type": 0},
+  "femaleModels_0": {"id": 40282, "type": 0},
+  "femaleModels_1": 40306,
+  "baseModel": 6591,
+  "modelTranslate_0": -16,
+  "modelTranslate_1": -9,
+  "model_zoom": 1620,
+  "rotation_1": 1212,
+  "rotation_0": 272,
+  "name": "Torag's hammer 25",
+  "nullopt": true,
+  "$fileid": 4961
+}
+,
+
+{
+  "members": true,
+  "value": 160000,
+  "maleModels_0": {"id": 6707, "type": 0},
+  "femaleModels_0": {"id": 40282, "type": 0},
+  "femaleModels_1": 40306,
+  "baseModel": 6836,
+  "modelTranslate_0": -16,
+  "modelTranslate_1": -9,
+  "model_zoom": 1620,
+  "rotation_1": 1212,
+  "rotation_0": 272,
+  "tradeable": true,
+  "name": "Torag's hammer 0",
+  "noteData": 4963,
+  "nullopt": true,
+  "$fileid": 4962
+}
+,
+
+{"noteData": 4962, "noteTemplate": 799, "nullopt": true, "$fileid": 4963}
+,
+
+{
+  "members": true,
+  "value": 280000,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 6676, "type": 0},
+  "maleModels_1": 6644,
+  "femaleModels_0": {"id": 6701, "type": 0},
+  "femaleModels_1": 6684,
+  "baseModel": 6594,
+  "modelTranslate_0": 2,
+  "model_zoom": 1310,
+  "rotation_0": 432,
+  "color_replacements": [[10394, 10388], [10291, 10508]],
+  "name": "Torag's body 100",
+  "nullopt": true,
+  "$fileid": 4964
+}
+,
+
+{
+  "members": true,
+  "value": 280000,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 6676, "type": 0},
+  "maleModels_1": 6644,
+  "femaleModels_0": {"id": 6701, "type": 0},
+  "femaleModels_1": 6684,
+  "baseModel": 6594,
+  "modelTranslate_0": 2,
+  "model_zoom": 1310,
+  "rotation_0": 432,
+  "color_replacements": [[10394, 10388], [10291, 10508]],
+  "name": "Torag's body 75",
+  "nullopt": true,
+  "$fileid": 4965
+}
+,
+
+{
+  "members": true,
+  "value": 280000,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 6676, "type": 0},
+  "maleModels_1": 6644,
+  "femaleModels_0": {"id": 6701, "type": 0},
+  "femaleModels_1": 6684,
+  "baseModel": 6594,
+  "modelTranslate_0": 2,
+  "model_zoom": 1310,
+  "rotation_0": 432,
+  "color_replacements": [[10394, 10388], [10291, 10508]],
+  "name": "Torag's body 50",
+  "nullopt": true,
+  "$fileid": 4966
+}
+,
+
+{
+  "members": true,
+  "value": 280000,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 6676, "type": 0},
+  "maleModels_1": 6644,
+  "femaleModels_0": {"id": 6701, "type": 0},
+  "femaleModels_1": 6684,
+  "baseModel": 6594,
+  "modelTranslate_0": 2,
+  "model_zoom": 1310,
+  "rotation_0": 432,
+  "color_replacements": [[10394, 10388], [10291, 10508]],
+  "name": "Torag's body 25",
+  "nullopt": true,
+  "$fileid": 4967
+}
+,
+
+{
+  "members": true,
+  "value": 280000,
+  "maleModels_0": {"id": 6676, "type": 0},
+  "maleModels_1": 6644,
+  "femaleModels_0": {"id": 6701, "type": 0},
+  "femaleModels_1": 6684,
+  "baseModel": 6839,
+  "modelTranslate_0": 2,
+  "model_zoom": 1310,
+  "rotation_0": 432,
+  "tradeable": true,
+  "color_replacements": [[10394, 10388], [10291, 10508]],
+  "name": "Torag's body 0",
+  "noteData": 4969,
+  "nullopt": true,
+  "$fileid": 4968
+}
+,
+
+{"noteData": 4968, "noteTemplate": 799, "nullopt": true, "$fileid": 4969}
+,
+
+{
+  "members": true,
+  "value": 275000,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 6662, "type": 0},
+  "femaleModels_0": {"id": 6693, "type": 0},
+  "baseModel": 6584,
+  "modelTranslate_1": 1,
+  "model_zoom": 1720,
+  "rotation_0": 468,
+  "color_replacements": [[10394, 10388]],
+  "name": "Torag's legs 100",
+  "nullopt": true,
+  "$fileid": 4970
+}
+,
+
+{
+  "members": true,
+  "value": 275000,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 6662, "type": 0},
+  "femaleModels_0": {"id": 6693, "type": 0},
+  "baseModel": 6584,
+  "modelTranslate_1": 1,
+  "model_zoom": 1720,
+  "rotation_0": 468,
+  "color_replacements": [[10394, 10388]],
+  "name": "Torag's legs 75",
+  "nullopt": true,
+  "$fileid": 4971
+}
+,
+
+{
+  "members": true,
+  "value": 275000,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 6662, "type": 0},
+  "femaleModels_0": {"id": 6693, "type": 0},
+  "baseModel": 6584,
+  "modelTranslate_1": 1,
+  "model_zoom": 1720,
+  "rotation_0": 468,
+  "color_replacements": [[10394, 10388]],
+  "name": "Torag's legs 50",
+  "nullopt": true,
+  "$fileid": 4972
+}
+,
+
+{
+  "members": true,
+  "value": 275000,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 6662, "type": 0},
+  "femaleModels_0": {"id": 6693, "type": 0},
+  "baseModel": 6584,
+  "modelTranslate_1": 1,
+  "model_zoom": 1720,
+  "rotation_0": 468,
+  "color_replacements": [[10394, 10388]],
+  "name": "Torag's legs 25",
+  "nullopt": true,
+  "$fileid": 4973
+}
+,
+
+{
+  "members": true,
+  "value": 275000,
+  "maleModels_0": {"id": 6662, "type": 0},
+  "femaleModels_0": {"id": 6693, "type": 0},
+  "baseModel": 6829,
+  "modelTranslate_1": 1,
+  "model_zoom": 1720,
+  "rotation_0": 468,
+  "tradeable": true,
+  "color_replacements": [[10394, 10388]],
+  "name": "Torag's legs 0",
+  "noteData": 4975,
+  "nullopt": true,
+  "$fileid": 4974
+}
+,
+
+{"noteData": 4974, "noteTemplate": 799, "nullopt": true, "$fileid": 4975}
+,
+
+{
+  "members": true,
+  "value": 103000,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 6658, "type": 0},
+  "femaleModels_0": {"id": 6690, "type": 0},
+  "maleHeads_0": 39735,
+  "femaleHeads_0": 39735,
+  "modelTranslate_0": 5,
+  "modelTranslate_1": 1,
+  "model_zoom": 810,
+  "rotation_1": 208,
+  "rotation_0": 28,
+  "baseModel": 6597,
+  "color_replacements": [
+    [10411, 10388],
+    [10403, 10512],
+    [10394, 10508],
+    [10518, 10760],
+    [10514, 11140],
+    [10638, 11138]
+  ],
+  "name": "Verac's helm 100",
+  "nullopt": true,
+  "$fileid": 4976
+}
+,
+
+{
+  "members": true,
+  "value": 103000,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 6658, "type": 0},
+  "femaleModels_0": {"id": 6690, "type": 0},
+  "maleHeads_0": 39735,
+  "femaleHeads_0": 39735,
+  "modelTranslate_0": 5,
+  "modelTranslate_1": 1,
+  "model_zoom": 810,
+  "rotation_1": 208,
+  "rotation_0": 28,
+  "baseModel": 6597,
+  "color_replacements": [
+    [10411, 10388],
+    [10403, 10512],
+    [10394, 10508],
+    [10518, 10760],
+    [10514, 11140],
+    [10638, 11138]
+  ],
+  "name": "Verac's helm 75",
+  "nullopt": true,
+  "$fileid": 4977
+}
+,
+
+{
+  "members": true,
+  "value": 103000,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 6658, "type": 0},
+  "femaleModels_0": {"id": 6690, "type": 0},
+  "maleHeads_0": 39735,
+  "femaleHeads_0": 39735,
+  "modelTranslate_0": 5,
+  "modelTranslate_1": 1,
+  "model_zoom": 810,
+  "rotation_1": 208,
+  "rotation_0": 28,
+  "baseModel": 6597,
+  "color_replacements": [
+    [10411, 10388],
+    [10403, 10512],
+    [10394, 10508],
+    [10518, 10760],
+    [10514, 11140],
+    [10638, 11138]
+  ],
+  "name": "Verac's helm 50",
+  "nullopt": true,
+  "$fileid": 4978
+}
+,
+
+{
+  "members": true,
+  "value": 103000,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 6658, "type": 0},
+  "femaleModels_0": {"id": 6690, "type": 0},
+  "maleHeads_0": 39735,
+  "femaleHeads_0": 39735,
+  "modelTranslate_0": 5,
+  "modelTranslate_1": 1,
+  "model_zoom": 810,
+  "rotation_1": 208,
+  "rotation_0": 28,
+  "baseModel": 6597,
+  "color_replacements": [
+    [10411, 10388],
+    [10403, 10512],
+    [10394, 10508],
+    [10518, 10760],
+    [10514, 11140],
+    [10638, 11138]
+  ],
+  "name": "Verac's helm 25",
+  "nullopt": true,
+  "$fileid": 4979
+}
+,
+
+{
+  "members": true,
+  "value": 103000,
+  "maleModels_0": {"id": 6658, "type": 0},
+  "femaleModels_0": {"id": 6690, "type": 0},
+  "maleHeads_0": 39735,
+  "femaleHeads_0": 39735,
+  "modelTranslate_0": 5,
+  "modelTranslate_1": 1,
+  "model_zoom": 810,
+  "rotation_1": 208,
+  "rotation_0": 28,
+  "baseModel": 6842,
+  "tradeable": true,
+  "color_replacements": [
+    [10411, 10388],
+    [10403, 10512],
+    [10394, 10508],
+    [10518, 10760],
+    [10514, 11140],
+    [10638, 11138]
+  ],
+  "name": "Verac's helm 0",
+  "noteData": 4981,
+  "nullopt": true,
+  "$fileid": 4980
+}
+,
+
+{"noteData": 4980, "noteTemplate": 799, "nullopt": true, "$fileid": 4981}
+,
+
+{
+  "members": true,
+  "value": 160000,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 6704, "type": 0},
+  "femaleModels_0": {"id": 6704, "type": 0},
+  "baseModel": 6585,
+  "modelTranslate_1": 32,
+  "model_zoom": 1440,
+  "rotation_1": 352,
+  "rotation_0": 272,
+  "name": "Verac's flail 100",
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 4982
+}
+,
+
+{
+  "members": true,
+  "value": 160000,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 6704, "type": 0},
+  "femaleModels_0": {"id": 6704, "type": 0},
+  "baseModel": 6585,
+  "modelTranslate_1": 32,
+  "model_zoom": 1440,
+  "rotation_1": 352,
+  "rotation_0": 272,
+  "name": "Verac's flail 75",
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 4983
+}
+,
+
+{
+  "members": true,
+  "value": 160000,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 6704, "type": 0},
+  "femaleModels_0": {"id": 6704, "type": 0},
+  "baseModel": 6585,
+  "modelTranslate_1": 32,
+  "model_zoom": 1440,
+  "rotation_1": 352,
+  "rotation_0": 272,
+  "name": "Verac's flail 50",
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 4984
+}
+,
+
+{
+  "members": true,
+  "value": 160000,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 6704, "type": 0},
+  "femaleModels_0": {"id": 6704, "type": 0},
+  "baseModel": 6585,
+  "modelTranslate_1": 32,
+  "model_zoom": 1440,
+  "rotation_1": 352,
+  "rotation_0": 272,
+  "name": "Verac's flail 25",
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 4985
+}
+,
+
+{
+  "members": true,
+  "value": 160000,
+  "maleModels_0": {"id": 6704, "type": 0},
+  "femaleModels_0": {"id": 6704, "type": 0},
+  "baseModel": 6830,
+  "modelTranslate_1": 32,
+  "model_zoom": 1440,
+  "rotation_1": 352,
+  "rotation_0": 272,
+  "tradeable": true,
+  "name": "Verac's flail 0",
+  "female_translate": [3, 245, 6],
+  "noteData": 4987,
+  "nullopt": true,
+  "$fileid": 4986
+}
+,
+
+{"noteData": 4986, "noteTemplate": 799, "nullopt": true, "$fileid": 4987}
+,
+
+{
+  "members": true,
+  "value": 280000,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 315, "type": 0},
+  "maleModels_1": 6646,
+  "femaleModels_0": {"id": 478, "type": 0},
+  "femaleModels_1": 6685,
+  "modelTranslate_0": 3,
+  "modelTranslate_1": 1,
+  "model_zoom": 1210,
+  "rotation_1": 36,
+  "rotation_0": 464,
+  "baseModel": 6596,
+  "color_replacements": [
+    [10394, 10388],
+    [10518, 10512],
+    [10388, 10508],
+    [10514, 10760],
+    [10508, 11140]
+  ],
+  "name": "Verac's top 100",
+  "nullopt": true,
+  "$fileid": 4988
+}
+,
+
+{
+  "members": true,
+  "value": 280000,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 315, "type": 0},
+  "maleModels_1": 6646,
+  "femaleModels_0": {"id": 478, "type": 0},
+  "femaleModels_1": 6685,
+  "modelTranslate_0": 3,
+  "modelTranslate_1": 1,
+  "model_zoom": 1210,
+  "rotation_1": 36,
+  "rotation_0": 464,
+  "baseModel": 6596,
+  "color_replacements": [
+    [10394, 10388],
+    [10518, 10512],
+    [10388, 10508],
+    [10514, 10760],
+    [10508, 11140]
+  ],
+  "name": "Verac's top 75",
+  "nullopt": true,
+  "$fileid": 4989
+}
+,
+
+{
+  "members": true,
+  "value": 280000,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 315, "type": 0},
+  "maleModels_1": 6646,
+  "femaleModels_0": {"id": 478, "type": 0},
+  "femaleModels_1": 6685,
+  "modelTranslate_0": 3,
+  "modelTranslate_1": 1,
+  "model_zoom": 1210,
+  "rotation_1": 36,
+  "rotation_0": 464,
+  "baseModel": 6596,
+  "color_replacements": [
+    [10394, 10388],
+    [10518, 10512],
+    [10388, 10508],
+    [10514, 10760],
+    [10508, 11140]
+  ],
+  "name": "Verac's top 50",
+  "nullopt": true,
+  "$fileid": 4990
+}
+,
+
+{
+  "members": true,
+  "value": 280000,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 315, "type": 0},
+  "maleModels_1": 6646,
+  "femaleModels_0": {"id": 478, "type": 0},
+  "femaleModels_1": 6685,
+  "modelTranslate_0": 3,
+  "modelTranslate_1": 1,
+  "model_zoom": 1210,
+  "rotation_1": 36,
+  "rotation_0": 464,
+  "baseModel": 6596,
+  "color_replacements": [
+    [10394, 10388],
+    [10518, 10512],
+    [10388, 10508],
+    [10514, 10760],
+    [10508, 11140]
+  ],
+  "name": "Verac's top 25",
+  "nullopt": true,
+  "$fileid": 4991
+}
+,
+
+{
+  "members": true,
+  "value": 280000,
+  "maleModels_0": {"id": 315, "type": 0},
+  "maleModels_1": 6646,
+  "femaleModels_0": {"id": 478, "type": 0},
+  "femaleModels_1": 6685,
+  "modelTranslate_0": 3,
+  "modelTranslate_1": 1,
+  "model_zoom": 1210,
+  "rotation_1": 36,
+  "rotation_0": 464,
+  "baseModel": 6841,
+  "tradeable": true,
+  "color_replacements": [
+    [10394, 10388],
+    [10518, 10512],
+    [10388, 10508],
+    [10514, 10760],
+    [10508, 11140]
+  ],
+  "name": "Verac's top 0",
+  "noteData": 4993,
+  "nullopt": true,
+  "$fileid": 4992
+}
+,
+
+{"noteData": 4992, "noteTemplate": 799, "nullopt": true, "$fileid": 4993}
+,
+
+{
+  "members": true,
+  "value": 275000,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 6667, "type": 0},
+  "femaleModels_0": {"id": 6696, "type": 0},
+  "modelTranslate_0": -1,
+  "modelTranslate_1": -1,
+  "model_zoom": 1060,
+  "rotation_0": 504,
+  "baseModel": 6595,
+  "color_replacements": [[10398, 10388], [10518, 10512], [10638, 10508]],
+  "name": "Verac's skirt 100",
+  "nullopt": true,
+  "$fileid": 4994
+}
+,
+
+{
+  "members": true,
+  "value": 275000,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 6667, "type": 0},
+  "femaleModels_0": {"id": 6696, "type": 0},
+  "modelTranslate_0": -1,
+  "modelTranslate_1": -1,
+  "model_zoom": 1060,
+  "rotation_0": 504,
+  "baseModel": 6595,
+  "color_replacements": [[10398, 10388], [10518, 10512], [10638, 10508]],
+  "name": "Verac's skirt 75",
+  "nullopt": true,
+  "$fileid": 4995
+}
+,
+
+{
+  "members": true,
+  "value": 275000,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 6667, "type": 0},
+  "femaleModels_0": {"id": 6696, "type": 0},
+  "modelTranslate_0": -1,
+  "modelTranslate_1": -1,
+  "model_zoom": 1060,
+  "rotation_0": 504,
+  "baseModel": 6595,
+  "color_replacements": [[10398, 10388], [10518, 10512], [10638, 10508]],
+  "name": "Verac's skirt 50",
+  "nullopt": true,
+  "$fileid": 4996
+}
+,
+
+{
+  "members": true,
+  "value": 275000,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 6667, "type": 0},
+  "femaleModels_0": {"id": 6696, "type": 0},
+  "modelTranslate_0": -1,
+  "modelTranslate_1": -1,
+  "model_zoom": 1060,
+  "rotation_0": 504,
+  "baseModel": 6595,
+  "color_replacements": [[10398, 10388], [10518, 10512], [10638, 10508]],
+  "name": "Verac's skirt 25",
+  "nullopt": true,
+  "$fileid": 4997
+}
+,
+
+{
+  "members": true,
+  "value": 275000,
+  "maleModels_0": {"id": 6667, "type": 0},
+  "femaleModels_0": {"id": 6696, "type": 0},
+  "modelTranslate_0": -1,
+  "modelTranslate_1": -1,
+  "model_zoom": 1060,
+  "rotation_0": 504,
+  "baseModel": 6840,
+  "tradeable": true,
+  "color_replacements": [[10398, 10388], [10518, 10512], [10638, 10508]],
+  "name": "Verac's skirt 0",
+  "noteData": 4999,
+  "nullopt": true,
+  "$fileid": 4998
+}
+,
+
+{"noteData": 4998, "noteTemplate": 799, "nullopt": true, "$fileid": 4999}
+,
+
+{
+  "baseModel": 3374,
+  "modelTranslate_0": 1,
+  "model_zoom": 1010,
+  "rotation_1": 672,
+  "rotation_0": 360,
+  "dummyItem": 2,
+  "nullopt": true,
+  "$fileid": 5000
+}
+,
+
+{
+  "baseModel": 6856,
+  "members": true,
+  "modelTranslate_0": -11,
+  "modelTranslate_1": 42,
+  "model_zoom": 1440,
+  "rotation_1": 352,
+  "rotation_0": 296,
+  "value": 15,
+  "tradeable": true,
+  "name": "Raw cave eel",
+  "noteData": 5005,
+  "nullopt": true,
+  "$fileid": 5001
+}
+,
+
+{
+  "baseModel": 6856,
+  "members": true,
+  "modelTranslate_0": -11,
+  "modelTranslate_1": 42,
+  "model_zoom": 1440,
+  "rotation_1": 352,
+  "rotation_0": 296,
+  "value": 0,
+  "color_replacements": [[8485, 8724], [14622, 3226], [12589, 9754]],
+  "name": "Burnt cave eel",
+  "noteData": 5006,
+  "nullopt": true,
+  "$fileid": 5002
+}
+,
+
+{
+  "baseModel": 6856,
+  "members": true,
+  "modelTranslate_0": -11,
+  "modelTranslate_1": 42,
+  "model_zoom": 1440,
+  "rotation_1": 352,
+  "rotation_0": 296,
+  "widget_actions_0": "Eat",
+  "value": 15,
+  "tradeable": true,
+  "color_replacements": [
+    [8485, 8088],
+    [14622, 6032],
+    [8386, 57],
+    [12589, 2960]
+  ],
+  "name": "Cave eel",
+  "noteData": 5007,
+  "nullopt": true,
+  "$fileid": 5003
+}
+,
+
+{
+  "baseModel": 6855,
+  "members": true,
+  "modelTranslate_0": -3,
+  "rotation_1": 1956,
+  "rotation_0": 304,
+  "widget_actions_0": "Eat",
+  "value": 5,
+  "name": "Frog spawn",
+  "nullopt": true,
+  "$fileid": 5004
+}
+,
+
+{"noteData": 5001, "noteTemplate": 799, "nullopt": true, "$fileid": 5005}
+,
+
+{"noteData": 5002, "noteTemplate": 799, "nullopt": true, "$fileid": 5006}
+,
+
+{"noteData": 5003, "noteTemplate": 799, "nullopt": true, "$fileid": 5007}
+,
+
+{
+  "baseModel": 6874,
+  "members": true,
+  "model_zoom": 690,
+  "rotation_1": 2024,
+  "rotation_0": 504,
+  "value": 1,
+  "widget_actions_0": "Look-at",
+  "name": "Brooch",
+  "nullopt": true,
+  "$fileid": 5008
+}
+,
+
+{
+  "baseModel": 6965,
+  "modelTranslate_1": 26,
+  "model_zoom": 750,
+  "rotation_1": 124,
+  "rotation_0": 276,
+  "widget_actions_0": "Read",
+  "members": true,
+  "value": 1,
+  "name": "Goblin symbol book",
+  "nullopt": true,
+  "$fileid": 5009
+}
+,
+
+{
+  "baseModel": 2372,
+  "modelTranslate_0": -3,
+  "modelTranslate_1": 5,
+  "model_zoom": 700,
+  "rotation_1": 20,
+  "rotation_0": 328,
+  "members": true,
+  "name": "Key",
+  "nullopt": true,
+  "$fileid": 5010
+}
+,
+
+{
+  "baseModel": 6877,
+  "members": true,
+  "modelTranslate_0": 8,
+  "modelTranslate_1": 17,
+  "model_zoom": 1690,
+  "rotation_1": 2020,
+  "rotation_0": 296,
+  "value": 1,
+  "name": "Silverware",
+  "nullopt": true,
+  "$fileid": 5011
+}
+,
+
+{
+  "members": true,
+  "value": 1,
+  "baseModel": 2774,
+  "modelTranslate_0": -1,
+  "modelTranslate_1": 56,
+  "model_zoom": 990,
+  "rotation_1": 1716,
+  "rotation_0": 264,
+  "name": "Peace treaty",
+  "nullopt": true,
+  "$fileid": 5012
+}
+,
+
+{
+  "baseModel": 6876,
+  "maleModels_0": {"id": 6958, "type": 0},
+  "femaleModels_0": {"id": 6960, "type": 0},
+  "maleHeads_0": 39487,
+  "femaleHeads_0": 38825,
+  "modelTranslate_0": -5,
+  "modelTranslate_1": -2,
+  "model_zoom": 730,
+  "rotation_1": 1880,
+  "rotation_0": 4,
+  "value": 600,
+  "members": true,
+  "widget_actions_1": "Wear",
+  "widget_actions_2": "Extinguish",
+  "name": "Mining helmet",
+  "nullopt": true,
+  "$fileid": 5013
+}
+,
+
+{
+  "value": 900,
+  "baseModel": 6875,
+  "maleModels_0": {"id": 6959, "type": 0},
+  "femaleModels_0": {"id": 6961, "type": 0},
+  "maleHeads_0": 39487,
+  "maleHeads_1": 39991,
+  "femaleHeads_0": 38825,
+  "femaleHeads_1": 39101,
+  "modelTranslate_0": -5,
+  "modelTranslate_1": -2,
+  "model_zoom": 730,
+  "rotation_1": 1880,
+  "rotation_0": 4,
+  "members": true,
+  "widget_actions_1": "Wear",
+  "tradeable": true,
+  "name": "Mining helmet",
+  "noteData": 5015,
+  "nullopt": true,
+  "$fileid": 5014
+}
+,
+
+{"noteData": 5014, "noteTemplate": 799, "nullopt": true, "$fileid": 5015}
+,
+
+{
+  "baseModel": 6873,
+  "maleModels_0": {"id": 6964, "type": 0},
+  "femaleModels_0": {"id": 6964, "type": 0},
+  "members": true,
+  "value": 600,
+  "modelTranslate_0": -1,
+  "model_zoom": 2160,
+  "rotation_1": 512,
+  "rotation_0": 424,
+  "widget_actions_1": "Wield",
+  "tradeable": true,
+  "name": "Bone spear",
+  "female_translate": [3, 245, 6],
+  "noteData": 5017,
+  "nullopt": true,
+  "$fileid": 5016
+}
+,
+
+{"noteData": 5016, "noteTemplate": 799, "nullopt": true, "$fileid": 5017}
+,
+
+{
+  "baseModel": 6872,
+  "maleModels_0": {"id": 6963, "type": 0},
+  "femaleModels_0": {"id": 6963, "type": 0},
+  "members": true,
+  "value": 600,
+  "modelTranslate_0": 14,
+  "model_zoom": 1770,
+  "rotation_1": 464,
+  "rotation_0": 500,
+  "widget_actions_1": "Wield",
+  "tradeable": true,
+  "name": "Bone club",
+  "female_translate": [3, 245, 6],
+  "noteData": 5019,
+  "nullopt": true,
+  "$fileid": 5018
+}
+,
+
+{"noteData": 5018, "noteTemplate": 799, "nullopt": true, "$fileid": 5019}
+,
+
+{
+  "baseModel": 7085,
+  "model_zoom": 990,
+  "rotation_1": 56,
+  "rotation_0": 468,
+  "members": true,
+  "name": "Minecart ticket",
+  "nullopt": true,
+  "$fileid": 5020
+}
+,
+
+{
+  "baseModel": 7085,
+  "model_zoom": 990,
+  "rotation_1": 56,
+  "rotation_0": 468,
+  "members": true,
+  "color_replacements": [[10562, 10436]],
+  "name": "Minecart ticket",
+  "nullopt": true,
+  "$fileid": 5021
+}
+,
+
+{
+  "baseModel": 7085,
+  "model_zoom": 990,
+  "rotation_1": 56,
+  "rotation_0": 468,
+  "members": true,
+  "color_replacements": [[10562, 10458]],
+  "name": "Minecart ticket",
+  "nullopt": true,
+  "$fileid": 5022
+}
+,
+
+{
+  "baseModel": 7085,
+  "model_zoom": 990,
+  "rotation_1": 56,
+  "rotation_0": 468,
+  "members": true,
+  "color_replacements": [[10562, 10460]],
+  "name": "Minecart ticket",
+  "nullopt": true,
+  "$fileid": 5023
+}
+,
+
+{
+  "value": 650,
+  "baseModel": 7077,
+  "model_zoom": 810,
+  "rotation_0": 444,
+  "members": true,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 7003, "type": 0},
+  "maleModels_1": 6999,
+  "femaleModels_0": {"id": 7009, "type": 0},
+  "femaleModels_1": 7005,
+  "tradeable": true,
+  "color_replacements": [[9529, 10130]],
+  "name": "Woven top",
+  "noteData": 5025,
+  "nullopt": true,
+  "$fileid": 5024
+}
+,
+
+{"noteData": 5024, "noteTemplate": 799, "nullopt": true, "$fileid": 5025}
+,
+
+{
+  "value": 812,
+  "baseModel": 7077,
+  "model_zoom": 810,
+  "rotation_0": 444,
+  "members": true,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 7003, "type": 0},
+  "maleModels_1": 6999,
+  "femaleModels_0": {"id": 7009, "type": 0},
+  "femaleModels_1": 7005,
+  "tradeable": true,
+  "color_replacements": [[9529, 7616]],
+  "name": "Woven top",
+  "noteData": 5027,
+  "nullopt": true,
+  "$fileid": 5026
+}
+,
+
+{"noteData": 5026, "noteTemplate": 799, "nullopt": true, "$fileid": 5027}
+,
+
+{
+  "value": 845,
+  "baseModel": 7077,
+  "model_zoom": 810,
+  "rotation_0": 444,
+  "members": true,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 7003, "type": 0},
+  "maleModels_1": 6999,
+  "femaleModels_0": {"id": 7009, "type": 0},
+  "femaleModels_1": 7005,
+  "tradeable": true,
+  "color_replacements": [[9529, 43827]],
+  "name": "Woven top",
+  "noteData": 5029,
+  "nullopt": true,
+  "$fileid": 5028
+}
+,
+
+{"noteData": 5028, "noteTemplate": 799, "nullopt": true, "$fileid": 5029}
+,
+
+{
+  "value": 585,
+  "baseModel": 7078,
+  "modelTranslate_1": 1,
+  "model_zoom": 790,
+  "rotation_0": 512,
+  "members": true,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 7004, "type": 0},
+  "maleModels_1": 6999,
+  "femaleModels_0": {"id": 7010, "type": 0},
+  "femaleModels_1": 7005,
+  "tradeable": true,
+  "color_replacements": [[9529, 10130]],
+  "name": "Shirt",
+  "noteData": 5031,
+  "nullopt": true,
+  "$fileid": 5030
+}
+,
+
+{"noteData": 5030, "noteTemplate": 799, "nullopt": true, "$fileid": 5031}
+,
+
+{
+  "value": 780,
+  "baseModel": 7078,
+  "modelTranslate_1": 1,
+  "model_zoom": 790,
+  "rotation_0": 512,
+  "members": true,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 7004, "type": 0},
+  "maleModels_1": 6999,
+  "femaleModels_0": {"id": 7010, "type": 0},
+  "femaleModels_1": 7005,
+  "tradeable": true,
+  "color_replacements": [[9529, 7616]],
+  "name": "Shirt",
+  "noteData": 5033,
+  "nullopt": true,
+  "$fileid": 5032
+}
+,
+
+{"noteData": 5032, "noteTemplate": 799, "nullopt": true, "$fileid": 5033}
+,
+
+{
+  "value": 812,
+  "baseModel": 7078,
+  "modelTranslate_1": 1,
+  "model_zoom": 790,
+  "rotation_0": 512,
+  "members": true,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 7004, "type": 0},
+  "maleModels_1": 6999,
+  "femaleModels_0": {"id": 7010, "type": 0},
+  "femaleModels_1": 7005,
+  "tradeable": true,
+  "color_replacements": [[9529, 61871]],
+  "name": "Shirt",
+  "noteData": 5035,
+  "nullopt": true,
+  "$fileid": 5034
+}
+,
+
+{"noteData": 5034, "noteTemplate": 799, "nullopt": true, "$fileid": 5035}
+,
+
+{
+  "value": 715,
+  "baseModel": 7081,
+  "members": true,
+  "modelTranslate_1": 2,
+  "model_zoom": 980,
+  "rotation_0": 500,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 7002, "type": 0},
+  "femaleModels_0": {"id": 7008, "type": 0},
+  "tradeable": true,
+  "color_replacements": [[9529, 10130]],
+  "name": "Trousers",
+  "noteData": 5037,
+  "nullopt": true,
+  "$fileid": 5036
+}
+,
+
+{"noteData": 5036, "noteTemplate": 799, "nullopt": true, "$fileid": 5037}
+,
+
+{
+  "value": 910,
+  "baseModel": 7081,
+  "members": true,
+  "modelTranslate_1": 2,
+  "model_zoom": 980,
+  "rotation_0": 500,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 7002, "type": 0},
+  "femaleModels_0": {"id": 7008, "type": 0},
+  "tradeable": true,
+  "color_replacements": [[9529, 61871]],
+  "name": "Trousers",
+  "noteData": 5039,
+  "nullopt": true,
+  "$fileid": 5038
+}
+,
+
+{"noteData": 5038, "noteTemplate": 799, "nullopt": true, "$fileid": 5039}
+,
+
+{
+  "value": 975,
+  "baseModel": 7081,
+  "members": true,
+  "modelTranslate_1": 2,
+  "model_zoom": 980,
+  "rotation_0": 500,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 7002, "type": 0},
+  "femaleModels_0": {"id": 7008, "type": 0},
+  "tradeable": true,
+  "color_replacements": [[9529, 43827]],
+  "name": "Trousers",
+  "noteData": 5041,
+  "nullopt": true,
+  "$fileid": 5040
+}
+,
+
+{"noteData": 5040, "noteTemplate": 799, "nullopt": true, "$fileid": 5041}
+,
+
+{
+  "value": 364,
+  "baseModel": 7079,
+  "members": true,
+  "modelTranslate_0": 1,
+  "model_zoom": 730,
+  "rotation_1": 68,
+  "rotation_0": 584,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 7000, "type": 0},
+  "femaleModels_0": {"id": 7006, "type": 0},
+  "tradeable": true,
+  "color_replacements": [[9529, 10130]],
+  "name": "Shorts",
+  "noteData": 5043,
+  "nullopt": true,
+  "$fileid": 5042
+}
+,
+
+{"noteData": 5042, "noteTemplate": 799, "nullopt": true, "$fileid": 5043}
+,
+
+{
+  "value": 468,
+  "baseModel": 7079,
+  "members": true,
+  "modelTranslate_0": 1,
+  "model_zoom": 730,
+  "rotation_1": 68,
+  "rotation_0": 584,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 7000, "type": 0},
+  "femaleModels_0": {"id": 7006, "type": 0},
+  "tradeable": true,
+  "color_replacements": [[9529, 7616]],
+  "name": "Shorts",
+  "noteData": 5045,
+  "nullopt": true,
+  "$fileid": 5044
+}
+,
+
+{"noteData": 5044, "noteTemplate": 799, "nullopt": true, "$fileid": 5045}
+,
+
+{
+  "value": 507,
+  "baseModel": 7079,
+  "members": true,
+  "modelTranslate_0": 1,
+  "model_zoom": 730,
+  "rotation_1": 68,
+  "rotation_0": 584,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 7000, "type": 0},
+  "femaleModels_0": {"id": 7006, "type": 0},
+  "tradeable": true,
+  "color_replacements": [[9529, 43827]],
+  "name": "Shorts",
+  "noteData": 5047,
+  "nullopt": true,
+  "$fileid": 5046
+}
+,
+
+{"noteData": 5046, "noteTemplate": 799, "nullopt": true, "$fileid": 5047}
+,
+
+{
+  "value": 455,
+  "baseModel": 7080,
+  "members": true,
+  "model_zoom": 890,
+  "rotation_1": 4,
+  "rotation_0": 584,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 7001, "type": 0},
+  "femaleModels_0": {"id": 7007, "type": 0},
+  "tradeable": true,
+  "color_replacements": [[9529, 10130]],
+  "name": "Skirt",
+  "noteData": 5049,
+  "nullopt": true,
+  "$fileid": 5048
+}
+,
+
+{"noteData": 5048, "noteTemplate": 799, "nullopt": true, "$fileid": 5049}
+,
+
+{
+  "value": 715,
+  "baseModel": 7080,
+  "members": true,
+  "model_zoom": 890,
+  "rotation_1": 4,
+  "rotation_0": 584,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 7001, "type": 0},
+  "femaleModels_0": {"id": 7007, "type": 0},
+  "tradeable": true,
+  "color_replacements": [[9529, 61871], [926, 61132]],
+  "name": "Skirt",
+  "noteData": 5051,
+  "nullopt": true,
+  "$fileid": 5050
+}
+,
+
+{"noteData": 5050, "noteTemplate": 799, "nullopt": true, "$fileid": 5051}
+,
+
+{
+  "value": 812,
+  "baseModel": 7080,
+  "members": true,
+  "model_zoom": 890,
+  "rotation_1": 4,
+  "rotation_0": 584,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 7001, "type": 0},
+  "femaleModels_0": {"id": 7007, "type": 0},
+  "tradeable": true,
+  "color_replacements": [[9529, 43827], [926, 40497]],
+  "name": "Skirt",
+  "noteData": 5053,
+  "nullopt": true,
+  "$fileid": 5052
+}
+,
+
+{"noteData": 5052, "noteTemplate": 799, "nullopt": true, "$fileid": 5053}
+,
+
+{
+  "modelTranslate_0": -21,
+  "modelTranslate_1": -46,
+  "model_zoom": 4240,
+  "rotation_1": 1788,
+  "rotation_2": 12,
+  "rotation_0": 116,
+  "baseModel": 7019,
+  "name": "Dwarf",
+  "noteData": 5055,
+  "nullopt": true,
+  "$fileid": 5054
+}
+,
+
+{"noteData": 5054, "noteTemplate": 799, "nullopt": true, "$fileid": 5055}
+,
+
+{
+  "baseModel": 5836,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": 7,
+  "model_zoom": 1470,
+  "rotation_1": 1852,
+  "rotation_0": 356,
+  "members": true,
+  "widget_actions_0": "Wield",
+  "name": "Dwarven battleaxe",
+  "nullopt": true,
+  "$fileid": 5056
+}
+,
+
+{
+  "baseModel": 5838,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": 7,
+  "model_zoom": 1470,
+  "rotation_1": 1852,
+  "rotation_0": 356,
+  "members": true,
+  "widget_actions_0": "Wield",
+  "name": "Dwarven battleaxe",
+  "nullopt": true,
+  "$fileid": 5057
+}
+,
+
+{
+  "baseModel": 5837,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": 7,
+  "model_zoom": 1470,
+  "rotation_1": 1852,
+  "rotation_0": 356,
+  "members": true,
+  "widget_actions_0": "Wield",
+  "name": "Dwarven battleaxe",
+  "nullopt": true,
+  "$fileid": 5058
+}
+,
+
+{
+  "baseModel": 5835,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": 7,
+  "model_zoom": 1470,
+  "rotation_1": 1852,
+  "rotation_0": 356,
+  "members": true,
+  "widget_actions_0": "Wield",
+  "name": "Dwarven battleaxe",
+  "nullopt": true,
+  "$fileid": 5059
+}
+,
+
+{
+  "baseModel": 7011,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": 7,
+  "model_zoom": 1470,
+  "rotation_1": 1852,
+  "rotation_0": 356,
+  "members": true,
+  "maleModels_0": {"id": 7011, "type": 0},
+  "femaleModels_0": {"id": 7011, "type": 0},
+  "name": "Dwarven battleaxe",
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 5060
+}
+,
+
+{
+  "baseModel": 7012,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": 7,
+  "model_zoom": 1470,
+  "rotation_1": 1852,
+  "rotation_0": 356,
+  "members": true,
+  "maleModels_0": {"id": 7012, "type": 0},
+  "femaleModels_0": {"id": 7012, "type": 0},
+  "name": "Dwarven battleaxe",
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 5061
+}
+,
+
+{
+  "baseModel": 7082,
+  "modelTranslate_0": -3,
+  "modelTranslate_1": -5,
+  "model_zoom": 630,
+  "rotation_1": 212,
+  "rotation_0": 100,
+  "members": true,
+  "widget_actions_0": "Wear",
+  "name": "Left boot",
+  "nullopt": true,
+  "$fileid": 5062
+}
+,
+
+{
+  "baseModel": 7084,
+  "modelTranslate_0": 7,
+  "modelTranslate_1": -5,
+  "model_zoom": 640,
+  "rotation_1": 1904,
+  "rotation_0": 108,
+  "members": true,
+  "widget_actions_0": "Wear",
+  "name": "Right boot",
+  "nullopt": true,
+  "$fileid": 5063
+}
+,
+
+{
+  "baseModel": 7083,
+  "modelTranslate_0": 2,
+  "modelTranslate_1": -5,
+  "model_zoom": 740,
+  "rotation_1": 1976,
+  "rotation_0": 152,
+  "members": true,
+  "widget_actions_0": "Wear",
+  "name": "Exquisite boots",
+  "nullopt": true,
+  "$fileid": 5064
+}
+,
+
+{
+  "baseModel": 2543,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": -21,
+  "model_zoom": 830,
+  "rotation_1": 116,
+  "rotation_0": 244,
+  "members": true,
+  "color_replacements": [
+    [11177, 46651],
+    [5018, 41920],
+    [61, 46651],
+    [10351, 18601]
+  ],
+  "name": "Book on costumes",
+  "nullopt": true,
+  "$fileid": 5065
+}
+,
+
+{
+  "baseModel": 5842,
+  "modelTranslate_0": 3,
+  "modelTranslate_1": -1,
+  "model_zoom": 970,
+  "rotation_1": 24,
+  "rotation_2": 136,
+  "rotation_0": 512,
+  "members": true,
+  "widget_actions_0": "Read",
+  "name": "Meeting notes",
+  "nullopt": true,
+  "$fileid": 5066
+}
+,
+
+{
+  "baseModel": 7076,
+  "modelTranslate_1": 5,
+  "model_zoom": 890,
+  "rotation_0": 540,
+  "members": true,
+  "widget_actions_0": "Wear",
+  "color_replacements": [[61, 9635]],
+  "name": "Exquisite clothes",
+  "nullopt": true,
+  "$fileid": 5067
+}
+,
+
+{
+  "baseModel": 40669,
+  "dummyItem": 1,
+  "modelTranslate_0": 41,
+  "modelTranslate_1": -100,
+  "model_zoom": 7140,
+  "rotation_1": 1895,
+  "color_replacements": [
+    [8741, 12583],
+    [25238, 5400],
+    [6798, 7465],
+    [9096, 5400],
+    [54397, 8497]
+  ],
+  "name": "Master farmer",
+  "nullopt": true,
+  "$fileid": 5068
+}
+,
+
+{
+  "dummyItem": 2,
+  "widget_actions_0": "Wear",
+  "value": 1,
+  "baseModel": 2521,
+  "modelTranslate_1": 1,
+  "model_zoom": 1940,
+  "rotation_0": 572,
+  "color_replacements": [[25238, 62928]],
+  "nullopt": true,
+  "$fileid": 5069
+}
+,
+
+{
+  "baseModel": 7173,
+  "modelTranslate_0": 2,
+  "model_zoom": 1100,
+  "rotation_1": 60,
+  "rotation_0": 172,
+  "members": true,
+  "widget_actions_0": "Search",
+  "color_replacements": [[43484, 984]],
+  "name": "Bird's nest",
+  "nullopt": true,
+  "$fileid": 5070
+}
+,
+
+{
+  "baseModel": 7173,
+  "modelTranslate_0": 2,
+  "model_zoom": 1100,
+  "rotation_1": 60,
+  "rotation_0": 172,
+  "members": true,
+  "widget_actions_0": "Search",
+  "color_replacements": [[43484, 20948]],
+  "name": "Bird's nest",
+  "nullopt": true,
+  "$fileid": 5071
+}
+,
+
+{
+  "baseModel": 7173,
+  "modelTranslate_0": 2,
+  "model_zoom": 1100,
+  "rotation_1": 60,
+  "rotation_0": 172,
+  "members": true,
+  "widget_actions_0": "Search",
+  "name": "Bird's nest",
+  "nullopt": true,
+  "$fileid": 5072
+}
+,
+
+{
+  "baseModel": 7175,
+  "modelTranslate_0": 2,
+  "model_zoom": 1100,
+  "rotation_1": 60,
+  "rotation_0": 172,
+  "members": true,
+  "widget_actions_0": "Search",
+  "name": "Bird's nest",
+  "nullopt": true,
+  "$fileid": 5073
+}
+,
+
+{
+  "baseModel": 7174,
+  "modelTranslate_0": 2,
+  "model_zoom": 1100,
+  "rotation_1": 60,
+  "rotation_0": 172,
+  "members": true,
+  "widget_actions_0": "Search",
+  "name": "Bird's nest",
+  "nullopt": true,
+  "$fileid": 5074
+}
+,
+
+{
+  "baseModel": 7172,
+  "modelTranslate_0": 2,
+  "model_zoom": 1100,
+  "rotation_1": 60,
+  "rotation_0": 172,
+  "members": true,
+  "name": "Bird's nest",
+  "nullopt": true,
+  "$fileid": 5075
+}
+,
+
+{
+  "baseModel": 7171,
+  "model_zoom": 650,
+  "rotation_1": 16,
+  "rotation_0": 76,
+  "members": true,
+  "color_replacements": [[476, 984]],
+  "name": "Bird's egg",
+  "nullopt": true,
+  "$fileid": 5076
+}
+,
+
+{
+  "baseModel": 7171,
+  "model_zoom": 650,
+  "rotation_1": 16,
+  "rotation_0": 76,
+  "members": true,
+  "color_replacements": [[476, 43484]],
+  "name": "Bird's egg",
+  "nullopt": true,
+  "$fileid": 5077
+}
+,
+
+{
+  "baseModel": 7171,
+  "model_zoom": 650,
+  "rotation_1": 16,
+  "rotation_0": 76,
+  "members": true,
+  "color_replacements": [[476, 20948]],
+  "name": "Bird's egg",
+  "nullopt": true,
+  "$fileid": 5078
+}
+,
+
+{
+  "baseModel": 7369,
+  "dummyItem": 2,
+  "modelTranslate_0": -5,
+  "modelTranslate_1": 2,
+  "model_zoom": 2290,
+  "rotation_0": 588,
+  "nullopt": true,
+  "$fileid": 5079
+}
+,
+
+{
+  "baseModel": 7131,
+  "dummyItem": 2,
+  "modelTranslate_0": -5,
+  "modelTranslate_1": 2,
+  "model_zoom": 2290,
+  "rotation_0": 588,
+  "nullopt": true,
+  "$fileid": 5080
+}
+,
+
+{
+  "dummyItem": 2,
+  "widget_actions_0": "Wear",
+  "value": 1,
+  "baseModel": 2521,
+  "modelTranslate_1": 1,
+  "model_zoom": 1940,
+  "rotation_0": 572,
+  "color_replacements": [[25238, 62928]],
+  "nullopt": true,
+  "$fileid": 5081
+}
+,
+
+{
+  "baseModel": 7136,
+  "dummyItem": 2,
+  "modelTranslate_0": -5,
+  "modelTranslate_1": 2,
+  "model_zoom": 2290,
+  "rotation_0": 588,
+  "nullopt": true,
+  "$fileid": 5082
+}
+,
+
+{
+  "dummyItem": 2,
+  "widget_actions_0": "Wear",
+  "value": 1,
+  "baseModel": 2521,
+  "modelTranslate_1": 1,
+  "model_zoom": 1940,
+  "rotation_0": 572,
+  "color_replacements": [[25238, 62928]],
+  "nullopt": true,
+  "$fileid": 5083
+}
+,
+
+{
+  "baseModel": 7134,
+  "dummyItem": 2,
+  "modelTranslate_0": -5,
+  "modelTranslate_1": 2,
+  "model_zoom": 2290,
+  "rotation_0": 588,
+  "nullopt": true,
+  "$fileid": 5084
+}
+,
+
+{
+  "dummyItem": 2,
+  "widget_actions_0": "Wear",
+  "value": 1,
+  "baseModel": 2521,
+  "modelTranslate_1": 1,
+  "model_zoom": 1940,
+  "rotation_0": 572,
+  "color_replacements": [[25238, 62928]],
+  "nullopt": true,
+  "$fileid": 5085
+}
+,
+
+{
+  "baseModel": 7130,
+  "dummyItem": 2,
+  "modelTranslate_0": -5,
+  "modelTranslate_1": 2,
+  "model_zoom": 2290,
+  "rotation_0": 588,
+  "nullopt": true,
+  "$fileid": 5086
+}
+,
+
+{
+  "dummyItem": 2,
+  "widget_actions_0": "Wear",
+  "value": 1,
+  "baseModel": 2521,
+  "modelTranslate_1": 1,
+  "model_zoom": 1940,
+  "rotation_0": 572,
+  "color_replacements": [[25238, 62928]],
+  "nullopt": true,
+  "$fileid": 5087
+}
+,
+
+{
+  "baseModel": 7133,
+  "dummyItem": 2,
+  "modelTranslate_0": -5,
+  "modelTranslate_1": 2,
+  "model_zoom": 2290,
+  "rotation_0": 588,
+  "nullopt": true,
+  "$fileid": 5088
+}
+,
+
+{
+  "dummyItem": 2,
+  "widget_actions_0": "Wear",
+  "value": 1,
+  "baseModel": 2521,
+  "modelTranslate_1": 1,
+  "model_zoom": 1940,
+  "rotation_0": 572,
+  "color_replacements": [[25238, 62928]],
+  "nullopt": true,
+  "$fileid": 5089
+}
+,
+
+{
+  "baseModel": 7132,
+  "dummyItem": 2,
+  "modelTranslate_0": -5,
+  "modelTranslate_1": 2,
+  "model_zoom": 2290,
+  "rotation_0": 588,
+  "nullopt": true,
+  "$fileid": 5090
+}
+,
+
+{
+  "dummyItem": 2,
+  "widget_actions_0": "Wear",
+  "value": 1,
+  "baseModel": 2521,
+  "modelTranslate_1": 1,
+  "model_zoom": 1940,
+  "rotation_0": 572,
+  "color_replacements": [[25238, 62928]],
+  "nullopt": true,
+  "$fileid": 5091
+}
+,
+
+{
+  "baseModel": 7137,
+  "dummyItem": 2,
+  "modelTranslate_0": -5,
+  "modelTranslate_1": 2,
+  "model_zoom": 2290,
+  "rotation_0": 588,
+  "nullopt": true,
+  "$fileid": 5092
+}
+,
+
+{
+  "dummyItem": 2,
+  "widget_actions_0": "Wear",
+  "value": 1,
+  "baseModel": 2521,
+  "modelTranslate_1": 1,
+  "model_zoom": 1940,
+  "rotation_0": 572,
+  "color_replacements": [[25238, 62928]],
+  "nullopt": true,
+  "$fileid": 5093
+}
+,
+
+{
+  "baseModel": 7135,
+  "dummyItem": 2,
+  "modelTranslate_0": -5,
+  "modelTranslate_1": 2,
+  "model_zoom": 2290,
+  "rotation_0": 588,
+  "nullopt": true,
+  "$fileid": 5094
+}
+,
+
+{
+  "dummyItem": 2,
+  "widget_actions_0": "Wear",
+  "value": 1,
+  "baseModel": 2521,
+  "modelTranslate_1": 1,
+  "model_zoom": 1940,
+  "rotation_0": 572,
+  "color_replacements": [[25238, 62928]],
+  "nullopt": true,
+  "$fileid": 5095
+}
+,
+
+{
+  "baseModel": 7238,
+  "modelTranslate_0": 3,
+  "model_zoom": 730,
+  "rotation_1": 1996,
+  "rotation_0": 272,
+  "members": true,
+  "stackable_1": true,
+  "stack_info_0": [5131, 2],
+  "stack_info_1": [5132, 3],
+  "stack_info_2": [5133, 4],
+  "stack_info_3": [5134, 5],
+  "value": 84,
+  "tradeable": true,
+  "name": "Marigold seed",
+  "nullopt": true,
+  "$fileid": 5096
+}
+,
+
+{
+  "baseModel": 7295,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": -56,
+  "model_zoom": 1110,
+  "rotation_1": 1932,
+  "rotation_0": 232,
+  "members": true,
+  "stackable_1": true,
+  "stack_info_0": [5135, 2],
+  "stack_info_1": [5136, 3],
+  "stack_info_2": [5137, 4],
+  "stack_info_3": [5138, 5],
+  "value": 98,
+  "tradeable": true,
+  "name": "Rosemary seed",
+  "nullopt": true,
+  "$fileid": 5097
+}
+,
+
+{
+  "baseModel": 7249,
+  "modelTranslate_0": -1,
+  "modelTranslate_1": 93,
+  "model_zoom": 650,
+  "rotation_1": 124,
+  "rotation_0": 260,
+  "members": true,
+  "stackable_1": true,
+  "stack_info_0": [5196, 2],
+  "stack_info_1": [5197, 3],
+  "stack_info_2": [5198, 4],
+  "stack_info_3": [5199, 5],
+  "value": 11,
+  "tradeable": true,
+  "name": "Nasturtium seed",
+  "nullopt": true,
+  "$fileid": 5098
+}
+,
+
+{
+  "baseModel": 7347,
+  "modelTranslate_0": -5,
+  "modelTranslate_1": 6,
+  "model_zoom": 1030,
+  "rotation_1": 136,
+  "rotation_0": 324,
+  "members": true,
+  "stackable_1": true,
+  "stack_info_0": [5200, 2],
+  "stack_info_1": [5201, 3],
+  "stack_info_2": [5202, 4],
+  "stack_info_3": [5203, 5],
+  "value": 11,
+  "tradeable": true,
+  "name": "Woad seed",
+  "nullopt": true,
+  "$fileid": 5099
+}
+,
+
+{
+  "baseModel": 7222,
+  "modelTranslate_1": 28,
+  "model_zoom": 680,
+  "rotation_1": 144,
+  "rotation_0": 256,
+  "members": true,
+  "stack_info_0": [5268, 2],
+  "stack_info_1": [5269, 3],
+  "stack_info_2": [5270, 4],
+  "stack_info_3": [5271, 5],
+  "stackable_1": true,
+  "value": 12,
+  "tradeable": true,
+  "name": "Limpwurt seed",
+  "nullopt": true,
+  "$fileid": 5100
+}
+,
+
+{
+  "baseModel": 7289,
+  "modelTranslate_0": -1,
+  "modelTranslate_1": -20,
+  "model_zoom": 1040,
+  "rotation_1": 2036,
+  "rotation_0": 240,
+  "members": true,
+  "stackable_1": true,
+  "stack_info_0": [5204, 2],
+  "stack_info_1": [5205, 3],
+  "stack_info_2": [5206, 4],
+  "stack_info_3": [5207, 5],
+  "value": 4,
+  "tradeable": true,
+  "name": "Redberry seed",
+  "nullopt": true,
+  "$fileid": 5101
+}
+,
+
+{
+  "baseModel": 7289,
+  "modelTranslate_0": -1,
+  "modelTranslate_1": -20,
+  "model_zoom": 1040,
+  "rotation_1": 2036,
+  "rotation_0": 240,
+  "members": true,
+  "stackable_1": true,
+  "stack_info_0": [5208, 2],
+  "stack_info_1": [5209, 3],
+  "stack_info_2": [5210, 4],
+  "stack_info_3": [5211, 5],
+  "value": 9,
+  "tradeable": true,
+  "color_replacements": [[431, 54577]],
+  "name": "Cadavaberry seed",
+  "nullopt": true,
+  "$fileid": 5102
+}
+,
+
+{
+  "baseModel": 7289,
+  "modelTranslate_0": -1,
+  "modelTranslate_1": -20,
+  "model_zoom": 1040,
+  "rotation_1": 2036,
+  "rotation_0": 240,
+  "members": true,
+  "stackable_1": true,
+  "stack_info_0": [5212, 2],
+  "stack_info_1": [5213, 3],
+  "stack_info_2": [5214, 4],
+  "stack_info_3": [5215, 5],
+  "value": 25,
+  "tradeable": true,
+  "color_replacements": [[431, 43179]],
+  "name": "Dwellberry seed",
+  "nullopt": true,
+  "$fileid": 5103
+}
+,
+
+{
+  "baseModel": 7289,
+  "modelTranslate_0": -1,
+  "modelTranslate_1": -20,
+  "model_zoom": 1040,
+  "rotation_1": 2036,
+  "rotation_0": 240,
+  "members": true,
+  "stackable_1": true,
+  "stack_info_0": [5216, 2],
+  "stack_info_1": [5217, 3],
+  "stack_info_2": [5218, 4],
+  "stack_info_3": [5219, 5],
+  "value": 60,
+  "tradeable": true,
+  "color_replacements": [[431, 11579]],
+  "name": "Jangerberry seed",
+  "nullopt": true,
+  "$fileid": 5104
+}
+,
+
+{
+  "baseModel": 7289,
+  "modelTranslate_0": -1,
+  "modelTranslate_1": -20,
+  "model_zoom": 1040,
+  "rotation_1": 2036,
+  "rotation_0": 240,
+  "members": true,
+  "stackable_1": true,
+  "stack_info_0": [5220, 2],
+  "stack_info_1": [5221, 3],
+  "stack_info_2": [5222, 4],
+  "stack_info_3": [5223, 5],
+  "value": 133,
+  "tradeable": true,
+  "color_replacements": [[431, 90]],
+  "name": "Whiteberry seed",
+  "nullopt": true,
+  "$fileid": 5105
+}
+,
+
+{
+  "baseModel": 7289,
+  "modelTranslate_0": -1,
+  "modelTranslate_1": -20,
+  "model_zoom": 1040,
+  "rotation_1": 2036,
+  "rotation_0": 240,
+  "members": true,
+  "stackable_1": true,
+  "stack_info_0": [5220, 2],
+  "stack_info_1": [5221, 3],
+  "stack_info_2": [5222, 4],
+  "stack_info_3": [5223, 5],
+  "value": 166,
+  "tradeable": true,
+  "color_replacements": [[431, 90]],
+  "name": "Poison ivy seed",
+  "nullopt": true,
+  "$fileid": 5106
+}
+,
+
+{
+  "dummyItem": 2,
+  "baseModel": 7359,
+  "modelTranslate_0": -6,
+  "modelTranslate_1": -3,
+  "model_zoom": 1040,
+  "rotation_1": 68,
+  "rotation_0": 236,
+  "stackable_1": true,
+  "nullopt": true,
+  "$fileid": 5107
+}
+,
+
+{
+  "dummyItem": 2,
+  "baseModel": 7360,
+  "modelTranslate_0": -6,
+  "modelTranslate_1": -3,
+  "model_zoom": 1040,
+  "rotation_1": 68,
+  "rotation_0": 236,
+  "stackable_1": true,
+  "nullopt": true,
+  "$fileid": 5108
+}
+,
+
+{
+  "dummyItem": 2,
+  "baseModel": 7361,
+  "modelTranslate_0": -6,
+  "modelTranslate_1": -3,
+  "model_zoom": 1040,
+  "rotation_1": 68,
+  "rotation_0": 236,
+  "stackable_1": true,
+  "nullopt": true,
+  "$fileid": 5109
+}
+,
+
+{
+  "dummyItem": 2,
+  "baseModel": 7362,
+  "modelTranslate_0": -6,
+  "modelTranslate_1": -3,
+  "model_zoom": 1040,
+  "rotation_1": 68,
+  "rotation_0": 236,
+  "stackable_1": true,
+  "nullopt": true,
+  "$fileid": 5110
+}
+,
+
+{
+  "dummyItem": 2,
+  "baseModel": 7139,
+  "modelTranslate_0": -8,
+  "modelTranslate_1": 7,
+  "model_zoom": 1260,
+  "rotation_1": 2008,
+  "rotation_0": 280,
+  "stackable_1": true,
+  "nullopt": true,
+  "$fileid": 5111
+}
+,
+
+{
+  "dummyItem": 2,
+  "baseModel": 7140,
+  "modelTranslate_0": -8,
+  "modelTranslate_1": 7,
+  "model_zoom": 1260,
+  "rotation_1": 2008,
+  "rotation_0": 280,
+  "stackable_1": true,
+  "nullopt": true,
+  "$fileid": 5112
+}
+,
+
+{
+  "dummyItem": 2,
+  "baseModel": 7141,
+  "modelTranslate_0": -8,
+  "modelTranslate_1": 7,
+  "model_zoom": 1260,
+  "rotation_1": 2008,
+  "rotation_0": 280,
+  "stackable_1": true,
+  "nullopt": true,
+  "$fileid": 5113
+}
+,
+
+{
+  "dummyItem": 2,
+  "baseModel": 7142,
+  "modelTranslate_0": -8,
+  "modelTranslate_1": 7,
+  "model_zoom": 1260,
+  "rotation_1": 2008,
+  "rotation_0": 280,
+  "stackable_1": true,
+  "nullopt": true,
+  "$fileid": 5114
+}
+,
+
+{
+  "dummyItem": 2,
+  "baseModel": 7343,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": 37,
+  "model_zoom": 1000,
+  "rotation_1": 20,
+  "rotation_0": 284,
+  "stackable_1": true,
+  "nullopt": true,
+  "$fileid": 5115
+}
+,
+
+{
+  "dummyItem": 2,
+  "baseModel": 7344,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": 37,
+  "model_zoom": 1000,
+  "rotation_1": 20,
+  "rotation_0": 284,
+  "stackable_1": true,
+  "nullopt": true,
+  "$fileid": 5116
+}
+,
+
+{
+  "dummyItem": 2,
+  "baseModel": 7345,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": 37,
+  "model_zoom": 1000,
+  "rotation_1": 20,
+  "rotation_0": 284,
+  "stackable_1": true,
+  "nullopt": true,
+  "$fileid": 5117
+}
+,
+
+{
+  "dummyItem": 2,
+  "baseModel": 7346,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": 37,
+  "model_zoom": 1000,
+  "rotation_1": 20,
+  "rotation_0": 284,
+  "stackable_1": true,
+  "nullopt": true,
+  "$fileid": 5118
+}
+,
+
+{
+  "dummyItem": 2,
+  "baseModel": 7233,
+  "modelTranslate_1": 3,
+  "model_zoom": 1380,
+  "rotation_1": 2036,
+  "rotation_0": 556,
+  "stackable_1": true,
+  "nullopt": true,
+  "$fileid": 5119
+}]}

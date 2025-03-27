@@ -1,0 +1,3334 @@
+{"$schema":".schema-items_batch.json","files":[
+
+{
+  "baseModel": 28984,
+  "modelTranslate_1": -3,
+  "model_zoom": 1503,
+  "rotation_1": 2012,
+  "rotation_0": 104,
+  "contrast": 15,
+  "ambiance": 15,
+  "members": true,
+  "ground_actions_4": "Destroy",
+  "name": "Potted root",
+  "nullopt": true,
+  "$fileid": 11776
+}
+,
+
+{
+  "baseModel": 5641,
+  "modelTranslate_1": -3,
+  "model_zoom": 1104,
+  "rotation_1": 2012,
+  "rotation_0": 104,
+  "members": true,
+  "widget_actions_4": "Destroy",
+  "name": "Sealed pot",
+  "nullopt": true,
+  "$fileid": 11777
+}
+,
+
+{
+  "baseModel": 28989,
+  "modelTranslate_0": -5,
+  "modelTranslate_1": 5,
+  "model_zoom": 740,
+  "rotation_1": 899,
+  "rotation_0": 346,
+  "contrast": 25,
+  "ambiance": 40,
+  "members": true,
+  "widget_actions_4": "Destroy",
+  "name": "Jade vine seed",
+  "nullopt": true,
+  "$fileid": 11778
+}
+,
+
+{
+  "baseModel": 28939,
+  "modelTranslate_0": -16,
+  "model_zoom": 4304,
+  "rotation_1": 815,
+  "rotation_0": 519,
+  "contrast": 15,
+  "ambiance": 15,
+  "dummyItem": 2,
+  "members": true,
+  "nullopt": true,
+  "$fileid": 11779
+}
+,
+
+{
+  "baseModel": 29178,
+  "value": 1,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": -21,
+  "model_zoom": 1086,
+  "rotation_1": 80,
+  "rotation_0": 244,
+  "ambiance": 40,
+  "widget_actions_0": "Read",
+  "widget_actions_4": "Destroy",
+  "name": "The grim reaper's diary",
+  "extra": [{"prop": 59, "intvalue": 1, "stringvalue": null}],
+  "nullopt": true,
+  "$fileid": 11780
+}
+,
+
+{
+  "baseModel": 2786,
+  "modelTranslate_1": 7,
+  "model_zoom": 1370,
+  "rotation_0": 536,
+  "value": 5,
+  "widget_actions_4": "Destroy",
+  "color_replacements": [[8741, 0]],
+  "name": "Grim's robe",
+  "extra": [{"prop": 59, "intvalue": 1, "stringvalue": null}],
+  "nullopt": true,
+  "$fileid": 11781
+}
+,
+
+{
+  "baseModel": 2600,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": 7,
+  "model_zoom": 1040,
+  "rotation_1": 120,
+  "rotation_0": 380,
+  "widget_actions_4": "Destroy",
+  "color_replacements": [[10351, 6356]],
+  "name": "Last will and testament",
+  "extra": [{"prop": 59, "intvalue": 1, "stringvalue": null}],
+  "nullopt": true,
+  "$fileid": 11782
+}
+,
+
+{
+  "baseModel": 2674,
+  "modelTranslate_0": 2,
+  "model_zoom": 1410,
+  "rotation_1": 368,
+  "rotation_0": 400,
+  "widget_actions_4": "Destroy",
+  "name": "Human bones",
+  "extra": [{"prop": 59, "intvalue": 1, "stringvalue": null}],
+  "nullopt": true,
+  "$fileid": 11783
+}
+,
+
+{
+  "baseModel": 14992,
+  "modelTranslate_0": -1,
+  "modelTranslate_1": -10,
+  "model_zoom": 530,
+  "rotation_1": 64,
+  "rotation_2": 1996,
+  "rotation_0": 160,
+  "widget_actions_4": "Destroy",
+  "name": "Servant's skull",
+  "extra": [{"prop": 59, "intvalue": 1, "stringvalue": null}],
+  "nullopt": true,
+  "$fileid": 11784
+}
+,
+
+{
+  "baseModel": 29177,
+  "modelTranslate_1": -36,
+  "model_zoom": 540,
+  "rotation_1": 1342,
+  "rotation_0": 242,
+  "widget_actions_4": "Destroy",
+  "name": "Hourglass",
+  "extra": [{"prop": 59, "intvalue": 1, "stringvalue": null}],
+  "nullopt": true,
+  "$fileid": 11785
+}
+,
+
+{
+  "baseModel": 29180,
+  "modelTranslate_0": -7,
+  "modelTranslate_1": 4,
+  "model_zoom": 984,
+  "rotation_1": 950,
+  "rotation_2": 69,
+  "rotation_0": 554,
+  "widget_actions_4": "Destroy",
+  "name": "Scythe sharpener",
+  "extra": [{"prop": 59, "intvalue": 1, "stringvalue": null}],
+  "nullopt": true,
+  "$fileid": 11786
+}
+,
+
+{
+  "baseModel": 29176,
+  "modelTranslate_0": -22,
+  "modelTranslate_1": -19,
+  "model_zoom": 400,
+  "rotation_1": 124,
+  "rotation_2": 1826,
+  "rotation_0": 277,
+  "widget_actions_4": "Destroy",
+  "name": "Human eye",
+  "extra": [{"prop": 59, "intvalue": 1, "stringvalue": null}],
+  "nullopt": true,
+  "$fileid": 11787
+}
+,
+
+{
+  "baseModel": 2789,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1996,
+  "rotation_0": 84,
+  "widget_actions_4": "Destroy",
+  "color_replacements": [[61, 33296]],
+  "name": "'voice of doom' potion",
+  "extra": [{"prop": 59, "intvalue": 1, "stringvalue": null}],
+  "nullopt": true,
+  "$fileid": 11788
+}
+,
+
+{
+  "baseModel": 29179,
+  "maleModels_0": {"id": 29186, "type": 0},
+  "femaleModels_0": {"id": 29185, "type": 0},
+  "maleHeads_0": 40009,
+  "femaleHeads_0": 40009,
+  "widget_actions_1": "Wear",
+  "modelTranslate_1": -26,
+  "model_zoom": 1762,
+  "rotation_1": 1010,
+  "rotation_2": 14,
+  "rotation_0": 2047,
+  "widget_actions_4": "Destroy",
+  "name": "Grim reaper hood",
+  "nullopt": true,
+  "$fileid": 11789
+}
+,
+
+{
+  "baseModel": 29179,
+  "maleModels_0": {"id": 29186, "type": 0},
+  "femaleModels_0": {"id": 29185, "type": 0},
+  "maleHeads_0": 40009,
+  "femaleHeads_0": 40009,
+  "widget_actions_1": "Wear",
+  "modelTranslate_0": 3,
+  "modelTranslate_1": -26,
+  "model_zoom": 1762,
+  "rotation_1": 858,
+  "rotation_0": 2047,
+  "widget_actions_4": "Destroy",
+  "dummyItem": 1,
+  "name": "Grim reaper hood",
+  "nullopt": true,
+  "$fileid": 11790
+}
+,
+
+{
+  "baseModel": 24514,
+  "value": 40,
+  "modelTranslate_0": -1,
+  "model_zoom": 1244,
+  "rotation_0": 611,
+  "widget_actions_1": "Wear",
+  "members": true,
+  "color_replacements": [[6798, 127], [6550, 127]],
+  "name": "White goblin mail",
+  "nullopt": true,
+  "$fileid": 11791
+}
+,
+
+{
+  "baseModel": 15496,
+  "members": true,
+  "value": 1,
+  "modelTranslate_0": -18,
+  "modelTranslate_1": -20,
+  "model_zoom": 3024,
+  "rotation_1": 84,
+  "rotation_0": 78,
+  "name": "Grubfoot",
+  "nullopt": true,
+  "$fileid": 11792
+}
+,
+
+{
+  "baseModel": 15496,
+  "members": true,
+  "value": 1,
+  "modelTranslate_0": -18,
+  "modelTranslate_1": -20,
+  "model_zoom": 3024,
+  "rotation_1": 84,
+  "rotation_0": 78,
+  "name": "Zanik",
+  "nullopt": true,
+  "$fileid": 11793
+}
+,
+
+{
+  "baseModel": 23620,
+  "modelTranslate_0": 1,
+  "model_zoom": 848,
+  "rotation_1": 1688,
+  "rotation_0": 138,
+  "contrast": 15,
+  "ambiance": 15,
+  "members": true,
+  "widget_actions_0": "Break",
+  "value": 20,
+  "stackable_1": true,
+  "color_replacements": [[59870, 13109], [38868, 12994]],
+  "name": "Plain of mud sphere",
+  "nullopt": true,
+  "$fileid": 11794
+}
+,
+
+{
+  "baseModel": 29285,
+  "modelTranslate_0": 4,
+  "modelTranslate_1": 15,
+  "model_zoom": 728,
+  "rotation_1": 828,
+  "rotation_0": 443,
+  "ambiance": 25,
+  "members": true,
+  "widget_actions_4": "Destroy",
+  "value": 1,
+  "name": "Ekeleshuun key",
+  "nullopt": true,
+  "$fileid": 11795
+}
+,
+
+{
+  "baseModel": 29274,
+  "modelTranslate_0": 7,
+  "modelTranslate_1": 5,
+  "model_zoom": 915,
+  "rotation_1": 722,
+  "rotation_0": 393,
+  "ambiance": 25,
+  "members": true,
+  "widget_actions_4": "Destroy",
+  "value": 1,
+  "name": "Narogoshuun key",
+  "nullopt": true,
+  "$fileid": 11796
+}
+,
+
+{
+  "baseModel": 29277,
+  "modelTranslate_0": 5,
+  "modelTranslate_1": 12,
+  "model_zoom": 791,
+  "rotation_1": 678,
+  "rotation_0": 405,
+  "ambiance": 25,
+  "members": true,
+  "widget_actions_4": "Destroy",
+  "value": 1,
+  "name": "Huzamogaarb key",
+  "nullopt": true,
+  "$fileid": 11797
+}
+,
+
+{
+  "baseModel": 29278,
+  "modelTranslate_0": 4,
+  "modelTranslate_1": 4,
+  "model_zoom": 900,
+  "rotation_1": 609,
+  "rotation_0": 564,
+  "ambiance": 25,
+  "members": true,
+  "widget_actions_4": "Destroy",
+  "value": 1,
+  "name": "Saragorgak key",
+  "nullopt": true,
+  "$fileid": 11798
+}
+,
+
+{
+  "baseModel": 29287,
+  "modelTranslate_0": 3,
+  "modelTranslate_1": 7,
+  "model_zoom": 570,
+  "rotation_1": 573,
+  "rotation_0": 345,
+  "ambiance": 25,
+  "members": true,
+  "widget_actions_4": "Destroy",
+  "value": 1,
+  "name": "Horogothgar key",
+  "nullopt": true,
+  "$fileid": 11799
+}
+,
+
+{
+  "baseModel": 29281,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": 11,
+  "model_zoom": 934,
+  "rotation_1": 555,
+  "rotation_0": 411,
+  "ambiance": 25,
+  "members": true,
+  "widget_actions_4": "Destroy",
+  "value": 1,
+  "name": "Yurkolgokh key",
+  "nullopt": true,
+  "$fileid": 11800
+}
+,
+
+{"baseModel": 29261, "dummyItem": 2, "nullopt": true, "$fileid": 11801}
+,
+
+{
+  "baseModel": 29288,
+  "modelTranslate_0": 4,
+  "modelTranslate_1": 7,
+  "model_zoom": 972,
+  "rotation_1": 162,
+  "rotation_0": 408,
+  "ambiance": 25,
+  "members": true,
+  "widget_actions_0": "Bury",
+  "value": 1,
+  "name": "Snothead's bone",
+  "nullopt": true,
+  "$fileid": 11802
+}
+,
+
+{
+  "baseModel": 29283,
+  "modelTranslate_0": 4,
+  "modelTranslate_1": 7,
+  "model_zoom": 972,
+  "rotation_1": 162,
+  "rotation_0": 408,
+  "ambiance": 25,
+  "members": true,
+  "widget_actions_0": "Bury",
+  "value": 1,
+  "name": "Snailfeet's bone",
+  "nullopt": true,
+  "$fileid": 11803
+}
+,
+
+{
+  "baseModel": 29282,
+  "modelTranslate_0": 4,
+  "modelTranslate_1": 7,
+  "model_zoom": 972,
+  "rotation_1": 162,
+  "rotation_0": 408,
+  "ambiance": 25,
+  "members": true,
+  "widget_actions_0": "Bury",
+  "value": 1,
+  "name": "Mosschin's bone",
+  "nullopt": true,
+  "$fileid": 11804
+}
+,
+
+{
+  "baseModel": 29273,
+  "modelTranslate_0": 4,
+  "modelTranslate_1": 7,
+  "model_zoom": 972,
+  "rotation_1": 162,
+  "rotation_0": 408,
+  "ambiance": 25,
+  "members": true,
+  "widget_actions_0": "Bury",
+  "value": 1,
+  "name": "Redeyes's bone",
+  "nullopt": true,
+  "$fileid": 11805
+}
+,
+
+{
+  "baseModel": 29279,
+  "modelTranslate_0": 4,
+  "modelTranslate_1": 7,
+  "model_zoom": 972,
+  "rotation_1": 162,
+  "rotation_0": 408,
+  "ambiance": 25,
+  "members": true,
+  "widget_actions_0": "Bury",
+  "value": 1,
+  "name": "Strongbones's bone",
+  "nullopt": true,
+  "$fileid": 11806
+}
+,
+
+{
+  "baseModel": 29286,
+  "members": true,
+  "ambiance": 20,
+  "modelTranslate_0": -5,
+  "modelTranslate_1": 14,
+  "model_zoom": 848,
+  "rotation_1": 180,
+  "rotation_0": 332,
+  "value": 10,
+  "name": "Pharmakos berries",
+  "nullopt": true,
+  "$fileid": 11807
+}
+,
+
+{
+  "baseModel": 29272,
+  "modelTranslate_0": 4,
+  "modelTranslate_1": -26,
+  "model_zoom": 919,
+  "rotation_1": 1618,
+  "rotation_0": 194,
+  "members": true,
+  "value": 20,
+  "name": "Whitefish",
+  "nullopt": true,
+  "$fileid": 11808
+}
+,
+
+{
+  "widget_actions_0": "Drink",
+  "baseModel": 29280,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1996,
+  "rotation_0": 84,
+  "value": 14,
+  "widget_actions_3": "Empty",
+  "maleModels_0": {"id": 29235, "type": 0},
+  "femaleModels_0": {"id": 29235, "type": 0},
+  "members": true,
+  "color_replacements": [[61, 10913]],
+  "name": "Goblin potion (4)",
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 11809
+}
+,
+
+{
+  "baseModel": 29275,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1996,
+  "rotation_0": 84,
+  "value": 13,
+  "widget_actions_0": "Drink",
+  "widget_actions_3": "Empty",
+  "members": true,
+  "color_replacements": [[61, 10913]],
+  "name": "Goblin potion (3)",
+  "nullopt": true,
+  "$fileid": 11810
+}
+,
+
+{
+  "baseModel": 29284,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1996,
+  "rotation_0": 84,
+  "value": 13,
+  "widget_actions_0": "Drink",
+  "widget_actions_3": "Empty",
+  "members": true,
+  "color_replacements": [[61, 10913]],
+  "name": "Goblin potion (2)",
+  "nullopt": true,
+  "$fileid": 11811
+}
+,
+
+{
+  "baseModel": 29276,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1996,
+  "rotation_0": 84,
+  "value": 13,
+  "widget_actions_0": "Drink",
+  "widget_actions_3": "Empty",
+  "members": true,
+  "color_replacements": [[61, 10913]],
+  "name": "Goblin potion (1)",
+  "nullopt": true,
+  "$fileid": 11812
+}
+,
+
+{
+  "baseModel": 2742,
+  "value": 0,
+  "name": "Tinderbox",
+  "nullopt": true,
+  "$fileid": 11813
+}
+,
+
+{
+  "value": 20,
+  "baseModel": 30054,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -22,
+  "model_zoom": 2414,
+  "rotation_1": 1795,
+  "rotation_0": 199,
+  "ambiance": 25,
+  "contrast": 25,
+  "tradeable": true,
+  "name": "Bronze armour set (l)",
+  "noteData": 11815,
+  "nullopt": true,
+  "$fileid": 11814
+}
+,
+
+{"noteData": 11814, "noteTemplate": 799, "nullopt": true, "$fileid": 11815}
+,
+
+{
+  "value": 20,
+  "baseModel": 30056,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -22,
+  "model_zoom": 2414,
+  "rotation_1": 1795,
+  "rotation_0": 199,
+  "ambiance": 25,
+  "contrast": 25,
+  "tradeable": true,
+  "name": "Bronze armour set (sk)",
+  "noteData": 11817,
+  "nullopt": true,
+  "$fileid": 11816
+}
+,
+
+{"noteData": 11816, "noteTemplate": 799, "nullopt": true, "$fileid": 11817}
+,
+
+{
+  "value": 20,
+  "baseModel": 30054,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -22,
+  "model_zoom": 2414,
+  "rotation_1": 1795,
+  "rotation_0": 199,
+  "ambiance": 25,
+  "contrast": 25,
+  "tradeable": true,
+  "color_replacements": [[5652, 33]],
+  "name": "Iron armour set (l)",
+  "noteData": 11819,
+  "nullopt": true,
+  "$fileid": 11818
+}
+,
+
+{"noteData": 11818, "noteTemplate": 799, "nullopt": true, "$fileid": 11819}
+,
+
+{
+  "value": 20,
+  "baseModel": 30056,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -22,
+  "model_zoom": 2414,
+  "rotation_1": 1795,
+  "rotation_0": 199,
+  "ambiance": 25,
+  "contrast": 25,
+  "tradeable": true,
+  "color_replacements": [[5652, 33]],
+  "name": "Iron armour set (sk)",
+  "noteData": 11821,
+  "nullopt": true,
+  "$fileid": 11820
+}
+,
+
+{"noteData": 11820, "noteTemplate": 799, "nullopt": true, "$fileid": 11821}
+,
+
+{
+  "value": 20,
+  "baseModel": 30054,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -22,
+  "model_zoom": 2414,
+  "rotation_1": 1795,
+  "rotation_0": 199,
+  "ambiance": 25,
+  "contrast": 25,
+  "tradeable": true,
+  "color_replacements": [[5652, 33]],
+  "name": "Steel armour set (l)",
+  "noteData": 11823,
+  "nullopt": true,
+  "$fileid": 11822
+}
+,
+
+{"noteData": 11822, "noteTemplate": 799, "nullopt": true, "$fileid": 11823}
+,
+
+{
+  "value": 20,
+  "baseModel": 30056,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -22,
+  "model_zoom": 2414,
+  "rotation_1": 1795,
+  "rotation_0": 199,
+  "ambiance": 25,
+  "contrast": 25,
+  "tradeable": true,
+  "color_replacements": [[5652, 33]],
+  "name": "Steel armour set (sk)",
+  "noteData": 11825,
+  "nullopt": true,
+  "$fileid": 11824
+}
+,
+
+{"noteData": 11824, "noteTemplate": 799, "nullopt": true, "$fileid": 11825}
+,
+
+{
+  "value": 20,
+  "baseModel": 30054,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -22,
+  "model_zoom": 2414,
+  "rotation_1": 1795,
+  "rotation_0": 199,
+  "ambiance": 25,
+  "contrast": 25,
+  "tradeable": true,
+  "color_replacements": [[5652, 8]],
+  "name": "Black armour set (l)",
+  "noteData": 11827,
+  "nullopt": true,
+  "$fileid": 11826
+}
+,
+
+{"noteData": 11826, "noteTemplate": 799, "nullopt": true, "$fileid": 11827}
+,
+
+{
+  "value": 20,
+  "baseModel": 30056,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -22,
+  "model_zoom": 2414,
+  "rotation_1": 1795,
+  "rotation_0": 199,
+  "ambiance": 25,
+  "contrast": 25,
+  "tradeable": true,
+  "color_replacements": [[5652, 8]],
+  "name": "Black armour set (sk)",
+  "noteData": 11829,
+  "nullopt": true,
+  "$fileid": 11828
+}
+,
+
+{"noteData": 11828, "noteTemplate": 799, "nullopt": true, "$fileid": 11829}
+,
+
+{
+  "value": 20,
+  "baseModel": 30054,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -22,
+  "model_zoom": 2414,
+  "rotation_1": 1795,
+  "rotation_0": 199,
+  "ambiance": 25,
+  "contrast": 25,
+  "tradeable": true,
+  "color_replacements": [[5652, 43297]],
+  "name": "Mithril armour set (l)",
+  "noteData": 11831,
+  "nullopt": true,
+  "$fileid": 11830
+}
+,
+
+{"noteData": 11830, "noteTemplate": 799, "nullopt": true, "$fileid": 11831}
+,
+
+{
+  "value": 20,
+  "baseModel": 30056,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -22,
+  "model_zoom": 2414,
+  "rotation_1": 1795,
+  "rotation_0": 199,
+  "ambiance": 25,
+  "contrast": 25,
+  "tradeable": true,
+  "color_replacements": [[5652, 43297]],
+  "name": "Mithril armour set (sk)",
+  "noteData": 11833,
+  "nullopt": true,
+  "$fileid": 11832
+}
+,
+
+{"noteData": 11832, "noteTemplate": 799, "nullopt": true, "$fileid": 11833}
+,
+
+{
+  "value": 20,
+  "baseModel": 30054,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -22,
+  "model_zoom": 2414,
+  "rotation_1": 1795,
+  "rotation_0": 199,
+  "ambiance": 25,
+  "contrast": 25,
+  "tradeable": true,
+  "color_replacements": [[5652, 21662]],
+  "name": "Adamant armour set (l)",
+  "noteData": 11835,
+  "nullopt": true,
+  "$fileid": 11834
+}
+,
+
+{"noteData": 11834, "noteTemplate": 799, "nullopt": true, "$fileid": 11835}
+,
+
+{
+  "value": 20,
+  "baseModel": 30056,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -22,
+  "model_zoom": 2414,
+  "rotation_1": 1795,
+  "rotation_0": 199,
+  "ambiance": 25,
+  "contrast": 25,
+  "tradeable": true,
+  "color_replacements": [[5652, 21662]],
+  "name": "Adamant armour set (sk)",
+  "noteData": 11837,
+  "nullopt": true,
+  "$fileid": 11836
+}
+,
+
+{"noteData": 11836, "noteTemplate": 799, "nullopt": true, "$fileid": 11837}
+,
+
+{
+  "value": 20,
+  "baseModel": 30054,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -22,
+  "model_zoom": 2414,
+  "rotation_1": 1795,
+  "rotation_0": 199,
+  "ambiance": 25,
+  "contrast": 25,
+  "tradeable": true,
+  "color_replacements": [[5652, 36133]],
+  "name": "Rune armour set (l)",
+  "noteData": 11839,
+  "nullopt": true,
+  "$fileid": 11838
+}
+,
+
+{"noteData": 11838, "noteTemplate": 799, "nullopt": true, "$fileid": 11839}
+,
+
+{
+  "value": 20,
+  "baseModel": 30056,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -22,
+  "model_zoom": 2414,
+  "rotation_1": 1795,
+  "rotation_0": 199,
+  "ambiance": 25,
+  "contrast": 25,
+  "tradeable": true,
+  "color_replacements": [[5652, 36133]],
+  "name": "Rune armour set (sk)",
+  "noteData": 11841,
+  "nullopt": true,
+  "$fileid": 11840
+}
+,
+
+{"noteData": 11840, "noteTemplate": 799, "nullopt": true, "$fileid": 11841}
+,
+
+{
+  "value": 20,
+  "baseModel": 30027,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -22,
+  "model_zoom": 2414,
+  "rotation_1": 1795,
+  "rotation_0": 199,
+  "ambiance": 25,
+  "contrast": 25,
+  "members": true,
+  "tradeable": true,
+  "name": "Dragon chain armour set (l)",
+  "noteData": 11843,
+  "nullopt": true,
+  "$fileid": 11842
+}
+,
+
+{"noteData": 11842, "noteTemplate": 799, "nullopt": true, "$fileid": 11843}
+,
+
+{
+  "value": 20,
+  "baseModel": 30027,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -22,
+  "model_zoom": 2414,
+  "rotation_1": 1795,
+  "rotation_0": 199,
+  "ambiance": 25,
+  "contrast": 25,
+  "members": true,
+  "tradeable": true,
+  "name": "Dragon chain armour set (sk)",
+  "noteData": 11845,
+  "nullopt": true,
+  "$fileid": 11844
+}
+,
+
+{"noteData": 11844, "noteTemplate": 799, "nullopt": true, "$fileid": 11845}
+,
+
+{
+  "value": 20,
+  "baseModel": 30041,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -22,
+  "model_zoom": 2414,
+  "rotation_1": 1795,
+  "rotation_0": 199,
+  "ambiance": 25,
+  "contrast": 25,
+  "members": true,
+  "tradeable": true,
+  "name": "Barrows - ahrim's set",
+  "noteData": 11847,
+  "nullopt": true,
+  "$fileid": 11846
+}
+,
+
+{"noteData": 11846, "noteTemplate": 799, "nullopt": true, "$fileid": 11847}
+,
+
+{
+  "value": 20,
+  "baseModel": 30051,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -22,
+  "model_zoom": 2414,
+  "rotation_1": 1795,
+  "rotation_0": 199,
+  "ambiance": 25,
+  "contrast": 25,
+  "members": true,
+  "tradeable": true,
+  "name": "Barrows - dharok's set",
+  "noteData": 11849,
+  "nullopt": true,
+  "$fileid": 11848
+}
+,
+
+{"noteData": 11848, "noteTemplate": 799, "nullopt": true, "$fileid": 11849}
+,
+
+{
+  "value": 20,
+  "baseModel": 30052,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -22,
+  "model_zoom": 2414,
+  "rotation_1": 1795,
+  "rotation_0": 199,
+  "ambiance": 25,
+  "contrast": 25,
+  "members": true,
+  "tradeable": true,
+  "name": "Barrows - guthan's set",
+  "noteData": 11851,
+  "nullopt": true,
+  "$fileid": 11850
+}
+,
+
+{"noteData": 11850, "noteTemplate": 799, "nullopt": true, "$fileid": 11851}
+,
+
+{
+  "value": 20,
+  "baseModel": 30050,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -22,
+  "model_zoom": 2414,
+  "rotation_1": 1795,
+  "rotation_0": 199,
+  "ambiance": 25,
+  "contrast": 25,
+  "members": true,
+  "tradeable": true,
+  "name": "Barrows - karil's set",
+  "noteData": 11853,
+  "nullopt": true,
+  "$fileid": 11852
+}
+,
+
+{"noteData": 11852, "noteTemplate": 799, "nullopt": true, "$fileid": 11853}
+,
+
+{
+  "value": 20,
+  "baseModel": 30042,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -22,
+  "model_zoom": 2414,
+  "rotation_1": 1795,
+  "rotation_0": 199,
+  "ambiance": 25,
+  "contrast": 25,
+  "members": true,
+  "tradeable": true,
+  "name": "Barrows - torag's set",
+  "noteData": 11855,
+  "nullopt": true,
+  "$fileid": 11854
+}
+,
+
+{"noteData": 11854, "noteTemplate": 799, "nullopt": true, "$fileid": 11855}
+,
+
+{
+  "value": 20,
+  "baseModel": 30032,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -22,
+  "model_zoom": 2414,
+  "rotation_1": 1795,
+  "rotation_0": 199,
+  "ambiance": 25,
+  "contrast": 25,
+  "members": true,
+  "tradeable": true,
+  "name": "Barrows - verac's set",
+  "noteData": 11857,
+  "nullopt": true,
+  "$fileid": 11856
+}
+,
+
+{"noteData": 11856, "noteTemplate": 799, "nullopt": true, "$fileid": 11857}
+,
+
+{
+  "value": 20,
+  "baseModel": 30030,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -22,
+  "model_zoom": 2414,
+  "rotation_1": 1795,
+  "rotation_0": 199,
+  "ambiance": 25,
+  "contrast": 25,
+  "members": true,
+  "tradeable": true,
+  "name": "Third age melee set",
+  "noteData": 11859,
+  "nullopt": true,
+  "$fileid": 11858
+}
+,
+
+{"noteData": 11858, "noteTemplate": 799, "nullopt": true, "$fileid": 11859}
+,
+
+{
+  "value": 20,
+  "baseModel": 30031,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -22,
+  "model_zoom": 2414,
+  "rotation_1": 1795,
+  "rotation_0": 199,
+  "ambiance": 25,
+  "contrast": 25,
+  "members": true,
+  "tradeable": true,
+  "name": "Third age ranger set",
+  "noteData": 11861,
+  "nullopt": true,
+  "$fileid": 11860
+}
+,
+
+{"noteData": 11860, "noteTemplate": 799, "nullopt": true, "$fileid": 11861}
+,
+
+{
+  "value": 20,
+  "baseModel": 30038,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -22,
+  "model_zoom": 2414,
+  "rotation_1": 1795,
+  "rotation_0": 199,
+  "ambiance": 25,
+  "contrast": 25,
+  "members": true,
+  "tradeable": true,
+  "name": "Third age mage set",
+  "noteData": 11863,
+  "nullopt": true,
+  "$fileid": 11862
+}
+,
+
+{"noteData": 11862, "noteTemplate": 799, "nullopt": true, "$fileid": 11863}
+,
+
+{
+  "value": 20,
+  "baseModel": 30045,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -22,
+  "model_zoom": 2414,
+  "rotation_1": 1795,
+  "rotation_0": 199,
+  "ambiance": 25,
+  "contrast": 25,
+  "tradeable": true,
+  "name": "Green dragonhide set",
+  "noteData": 11865,
+  "nullopt": true,
+  "$fileid": 11864
+}
+,
+
+{"noteData": 11864, "noteTemplate": 799, "nullopt": true, "$fileid": 11865}
+,
+
+{
+  "value": 20,
+  "baseModel": 30045,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -22,
+  "model_zoom": 2414,
+  "rotation_1": 1795,
+  "rotation_0": 199,
+  "ambiance": 25,
+  "contrast": 25,
+  "members": true,
+  "tradeable": true,
+  "color_replacements": [[22416, 43288], [22424, 43177]],
+  "name": "Blue dragonhide set",
+  "noteData": 11867,
+  "nullopt": true,
+  "$fileid": 11866
+}
+,
+
+{"noteData": 11866, "noteTemplate": 799, "nullopt": true, "$fileid": 11867}
+,
+
+{
+  "value": 20,
+  "baseModel": 30045,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -22,
+  "model_zoom": 2414,
+  "rotation_1": 1795,
+  "rotation_0": 199,
+  "ambiance": 25,
+  "contrast": 25,
+  "members": true,
+  "tradeable": true,
+  "color_replacements": [[22416, 912], [22424, 540]],
+  "name": "Red dragonhide set",
+  "noteData": 11869,
+  "nullopt": true,
+  "$fileid": 11868
+}
+,
+
+{"noteData": 11868, "noteTemplate": 799, "nullopt": true, "$fileid": 11869}
+,
+
+{
+  "value": 20,
+  "baseModel": 30045,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -22,
+  "model_zoom": 2414,
+  "rotation_1": 1795,
+  "rotation_0": 199,
+  "ambiance": 25,
+  "contrast": 25,
+  "members": true,
+  "tradeable": true,
+  "color_replacements": [[22416, 4], [22424, 16]],
+  "name": "Black dragonhide set",
+  "noteData": 11871,
+  "nullopt": true,
+  "$fileid": 11870
+}
+,
+
+{"noteData": 11870, "noteTemplate": 799, "nullopt": true, "$fileid": 11871}
+,
+
+{
+  "value": 20,
+  "baseModel": 30057,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -22,
+  "model_zoom": 2414,
+  "rotation_1": 1795,
+  "rotation_0": 199,
+  "ambiance": 25,
+  "contrast": 25,
+  "members": true,
+  "tradeable": true,
+  "name": "Mystic robes set",
+  "noteData": 11873,
+  "nullopt": true,
+  "$fileid": 11872
+}
+,
+
+{"noteData": 11872, "noteTemplate": 799, "nullopt": true, "$fileid": 11873}
+,
+
+{
+  "value": 20,
+  "baseModel": 30026,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -22,
+  "model_zoom": 2414,
+  "rotation_1": 1795,
+  "rotation_0": 199,
+  "ambiance": 25,
+  "contrast": 25,
+  "members": true,
+  "tradeable": true,
+  "name": "Infinity robes set",
+  "noteData": 11875,
+  "nullopt": true,
+  "$fileid": 11874
+}
+,
+
+{"noteData": 11874, "noteTemplate": 799, "nullopt": true, "$fileid": 11875}
+,
+
+{
+  "value": 20,
+  "baseModel": 30035,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -22,
+  "model_zoom": 2414,
+  "rotation_1": 1795,
+  "rotation_0": 199,
+  "ambiance": 25,
+  "contrast": 25,
+  "members": true,
+  "tradeable": true,
+  "name": "Splitbark armour set",
+  "noteData": 11877,
+  "nullopt": true,
+  "$fileid": 11876
+}
+,
+
+{"noteData": 11876, "noteTemplate": 799, "nullopt": true, "$fileid": 11877}
+,
+
+{
+  "value": 20,
+  "baseModel": 30025,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -22,
+  "model_zoom": 2414,
+  "rotation_1": 1795,
+  "rotation_0": 199,
+  "ambiance": 25,
+  "contrast": 25,
+  "tradeable": true,
+  "name": "Black trimmed armour set (l)",
+  "noteData": 11879,
+  "nullopt": true,
+  "$fileid": 11878
+}
+,
+
+{"noteData": 11878, "noteTemplate": 799, "nullopt": true, "$fileid": 11879}
+,
+
+{
+  "value": 20,
+  "baseModel": 30049,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -22,
+  "model_zoom": 2414,
+  "rotation_1": 1795,
+  "rotation_0": 199,
+  "ambiance": 25,
+  "contrast": 25,
+  "tradeable": true,
+  "name": "Black trimmed armour set (sk)",
+  "noteData": 11881,
+  "nullopt": true,
+  "$fileid": 11880
+}
+,
+
+{"noteData": 11880, "noteTemplate": 799, "nullopt": true, "$fileid": 11881}
+,
+
+{
+  "value": 20,
+  "baseModel": 30025,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -22,
+  "model_zoom": 2414,
+  "rotation_1": 1795,
+  "rotation_0": 199,
+  "ambiance": 25,
+  "contrast": 25,
+  "tradeable": true,
+  "color_replacements": [[8, 8], [0, 0], [24, 7114]],
+  "name": "Black gold-trimmed armour set (l)",
+  "noteData": 11883,
+  "nullopt": true,
+  "$fileid": 11882
+}
+,
+
+{"noteData": 11882, "noteTemplate": 799, "nullopt": true, "$fileid": 11883}
+,
+
+{
+  "value": 20,
+  "baseModel": 30049,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -22,
+  "model_zoom": 2414,
+  "rotation_1": 1795,
+  "rotation_0": 199,
+  "ambiance": 25,
+  "contrast": 25,
+  "tradeable": true,
+  "color_replacements": [[8, 8], [0, 0], [24, 7114]],
+  "name": "Black gold-trimmed armour set (sk)",
+  "noteData": 11885,
+  "nullopt": true,
+  "$fileid": 11884
+}
+,
+
+{"noteData": 11884, "noteTemplate": 799, "nullopt": true, "$fileid": 11885}
+,
+
+{
+  "value": 20,
+  "baseModel": 30025,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -22,
+  "model_zoom": 2414,
+  "rotation_1": 1795,
+  "rotation_0": 199,
+  "ambiance": 25,
+  "contrast": 25,
+  "tradeable": true,
+  "color_replacements": [[8, 21662], [0, 21776], [24, 14515]],
+  "name": "Adamant trimmed armour set (l)",
+  "noteData": 11887,
+  "nullopt": true,
+  "$fileid": 11886
+}
+,
+
+{"noteData": 11886, "noteTemplate": 799, "nullopt": true, "$fileid": 11887}
+,
+
+{
+  "value": 20,
+  "baseModel": 30049,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -22,
+  "model_zoom": 2414,
+  "rotation_1": 1795,
+  "rotation_0": 199,
+  "ambiance": 25,
+  "contrast": 25,
+  "tradeable": true,
+  "color_replacements": [[8, 21662], [0, 21776], [24, 14515]],
+  "name": "Adamant trimmed armour set (sk)",
+  "noteData": 11889,
+  "nullopt": true,
+  "$fileid": 11888
+}
+,
+
+{"noteData": 11888, "noteTemplate": 799, "nullopt": true, "$fileid": 11889}
+,
+
+{
+  "value": 20,
+  "baseModel": 30025,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -22,
+  "model_zoom": 2414,
+  "rotation_1": 1795,
+  "rotation_0": 199,
+  "ambiance": 25,
+  "contrast": 25,
+  "tradeable": true,
+  "color_replacements": [[8, 21662], [0, 21776], [24, 7114]],
+  "name": "Adamant gold-trimmed armour set (l)",
+  "noteData": 11891,
+  "nullopt": true,
+  "$fileid": 11890
+}
+,
+
+{"noteData": 11890, "noteTemplate": 799, "nullopt": true, "$fileid": 11891}
+,
+
+{
+  "value": 20,
+  "baseModel": 30049,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -22,
+  "model_zoom": 2414,
+  "rotation_1": 1795,
+  "rotation_0": 199,
+  "ambiance": 25,
+  "contrast": 25,
+  "tradeable": true,
+  "color_replacements": [[8, 21662], [0, 21776], [24, 7114]],
+  "name": "Adamant gold-trimmed armour set (sk)",
+  "noteData": 11893,
+  "nullopt": true,
+  "$fileid": 11892
+}
+,
+
+{"noteData": 11892, "noteTemplate": 799, "nullopt": true, "$fileid": 11893}
+,
+
+{
+  "value": 20,
+  "baseModel": 30025,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -22,
+  "model_zoom": 2414,
+  "rotation_1": 1795,
+  "rotation_0": 199,
+  "ambiance": 25,
+  "contrast": 25,
+  "tradeable": true,
+  "color_replacements": [[8, 36133], [0, 37270], [24, 38226]],
+  "name": "Rune trimmed armour set (l)",
+  "noteData": 11895,
+  "nullopt": true,
+  "$fileid": 11894
+}
+,
+
+{"noteData": 11894, "noteTemplate": 799, "nullopt": true, "$fileid": 11895}
+,
+
+{
+  "value": 20,
+  "baseModel": 30049,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -22,
+  "model_zoom": 2414,
+  "rotation_1": 1795,
+  "rotation_0": 199,
+  "ambiance": 25,
+  "contrast": 25,
+  "tradeable": true,
+  "color_replacements": [[8, 36133], [0, 37270], [24, 38226]],
+  "name": "Rune trimmed armour set (sk)",
+  "noteData": 11897,
+  "nullopt": true,
+  "$fileid": 11896
+}
+,
+
+{"noteData": 11896, "noteTemplate": 799, "nullopt": true, "$fileid": 11897}
+,
+
+{
+  "value": 20,
+  "baseModel": 30025,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -22,
+  "model_zoom": 2414,
+  "rotation_1": 1795,
+  "rotation_0": 199,
+  "ambiance": 25,
+  "contrast": 25,
+  "tradeable": true,
+  "color_replacements": [[8, 36133], [0, 37270], [24, 7114]],
+  "name": "Rune gold-trimmed armour set (l)",
+  "noteData": 11899,
+  "nullopt": true,
+  "$fileid": 11898
+}
+,
+
+{"noteData": 11898, "noteTemplate": 799, "nullopt": true, "$fileid": 11899}
+,
+
+{
+  "value": 20,
+  "baseModel": 30049,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -22,
+  "model_zoom": 2414,
+  "rotation_1": 1795,
+  "rotation_0": 199,
+  "ambiance": 25,
+  "contrast": 25,
+  "tradeable": true,
+  "color_replacements": [[8, 36133], [0, 37270], [24, 7114]],
+  "name": "Rune gold-trimmed armour set (sk)",
+  "noteData": 11901,
+  "nullopt": true,
+  "$fileid": 11900
+}
+,
+
+{"noteData": 11900, "noteTemplate": 799, "nullopt": true, "$fileid": 11901}
+,
+
+{
+  "value": 20,
+  "baseModel": 30029,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -22,
+  "model_zoom": 2414,
+  "rotation_1": 1795,
+  "rotation_0": 199,
+  "ambiance": 25,
+  "contrast": 25,
+  "members": true,
+  "tradeable": true,
+  "name": "Enchanted set",
+  "noteData": 11903,
+  "nullopt": true,
+  "$fileid": 11902
+}
+,
+
+{"noteData": 11902, "noteTemplate": 799, "nullopt": true, "$fileid": 11903}
+,
+
+{
+  "value": 20,
+  "baseModel": 30043,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -22,
+  "model_zoom": 2414,
+  "rotation_1": 1795,
+  "rotation_0": 199,
+  "ambiance": 25,
+  "contrast": 25,
+  "tradeable": true,
+  "name": "Trimmed blue wizard set",
+  "noteData": 11905,
+  "nullopt": true,
+  "$fileid": 11904
+}
+,
+
+{"noteData": 11904, "noteTemplate": 799, "nullopt": true, "$fileid": 11905}
+,
+
+{
+  "value": 20,
+  "baseModel": 30043,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -22,
+  "model_zoom": 2414,
+  "rotation_1": 1795,
+  "rotation_0": 199,
+  "ambiance": 25,
+  "contrast": 25,
+  "tradeable": true,
+  "color_replacements": [[4, 7114]],
+  "name": "Gold-trimmed blue wizard set",
+  "noteData": 11907,
+  "nullopt": true,
+  "$fileid": 11906
+}
+,
+
+{"noteData": 11906, "noteTemplate": 799, "nullopt": true, "$fileid": 11907}
+,
+
+{
+  "value": 20,
+  "baseModel": 30040,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -22,
+  "model_zoom": 2414,
+  "rotation_1": 1795,
+  "rotation_0": 199,
+  "ambiance": 25,
+  "contrast": 25,
+  "tradeable": true,
+  "name": "Trimmed leather armour set",
+  "noteData": 11909,
+  "nullopt": true,
+  "$fileid": 11908
+}
+,
+
+{"noteData": 11908, "noteTemplate": 799, "nullopt": true, "$fileid": 11909}
+,
+
+{
+  "value": 20,
+  "baseModel": 30040,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -22,
+  "model_zoom": 2414,
+  "rotation_1": 1795,
+  "rotation_0": 199,
+  "ambiance": 25,
+  "contrast": 25,
+  "tradeable": true,
+  "color_replacements": [[6020, 7114]],
+  "name": "Gold-trimmed leather armour set",
+  "noteData": 11911,
+  "nullopt": true,
+  "$fileid": 11910
+}
+,
+
+{"noteData": 11910, "noteTemplate": 799, "nullopt": true, "$fileid": 11911}
+,
+
+{
+  "value": 20,
+  "baseModel": 30044,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -22,
+  "model_zoom": 2414,
+  "rotation_1": 1795,
+  "rotation_0": 199,
+  "ambiance": 25,
+  "contrast": 25,
+  "tradeable": true,
+  "name": "Green d'hide trimmed set",
+  "noteData": 11913,
+  "nullopt": true,
+  "$fileid": 11912
+}
+,
+
+{"noteData": 11912, "noteTemplate": 799, "nullopt": true, "$fileid": 11913}
+,
+
+{
+  "value": 20,
+  "baseModel": 30044,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -22,
+  "model_zoom": 2414,
+  "rotation_1": 1795,
+  "rotation_0": 199,
+  "ambiance": 25,
+  "contrast": 25,
+  "tradeable": true,
+  "color_replacements": [[21406, 7114]],
+  "name": "Green d'hide gold-trimmed set",
+  "noteData": 11915,
+  "nullopt": true,
+  "$fileid": 11914
+}
+,
+
+{"noteData": 11914, "noteTemplate": 799, "nullopt": true, "$fileid": 11915}
+,
+
+{
+  "value": 20,
+  "baseModel": 30044,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -22,
+  "model_zoom": 2414,
+  "rotation_1": 1795,
+  "rotation_0": 199,
+  "ambiance": 25,
+  "contrast": 25,
+  "members": true,
+  "tradeable": true,
+  "color_replacements": [[22416, 43288], [22424, 43177], [21406, 43218]],
+  "name": "Blue d'hide trimmed set",
+  "noteData": 11917,
+  "nullopt": true,
+  "$fileid": 11916
+}
+,
+
+{"noteData": 11916, "noteTemplate": 799, "nullopt": true, "$fileid": 11917}
+,
+
+{
+  "value": 20,
+  "baseModel": 30044,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -22,
+  "model_zoom": 2414,
+  "rotation_1": 1795,
+  "rotation_0": 199,
+  "ambiance": 25,
+  "contrast": 25,
+  "members": true,
+  "tradeable": true,
+  "color_replacements": [[22416, 43288], [22424, 43177], [21406, 7114]],
+  "name": "Blue d'hide gold-trimmed set",
+  "noteData": 11919,
+  "nullopt": true,
+  "$fileid": 11918
+}
+,
+
+{"noteData": 11918, "noteTemplate": 799, "nullopt": true, "$fileid": 11919}
+,
+
+{
+  "value": 20,
+  "baseModel": 30055,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -22,
+  "model_zoom": 2414,
+  "rotation_1": 1795,
+  "rotation_0": 199,
+  "ambiance": 25,
+  "contrast": 25,
+  "members": true,
+  "tradeable": true,
+  "name": "Green d'hide blessed set",
+  "noteData": 11921,
+  "nullopt": true,
+  "$fileid": 11920
+}
+,
+
+{"noteData": 11920, "noteTemplate": 799, "nullopt": true, "$fileid": 11921}
+,
+
+{
+  "value": 20,
+  "baseModel": 30039,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -22,
+  "model_zoom": 2414,
+  "rotation_1": 1795,
+  "rotation_0": 199,
+  "ambiance": 25,
+  "contrast": 25,
+  "members": true,
+  "tradeable": true,
+  "name": "Blue d'hide blessed set",
+  "noteData": 11923,
+  "nullopt": true,
+  "$fileid": 11922
+}
+,
+
+{"noteData": 11922, "noteTemplate": 799, "nullopt": true, "$fileid": 11923}
+,
+
+{
+  "value": 20,
+  "baseModel": 30024,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -22,
+  "model_zoom": 2414,
+  "rotation_1": 1795,
+  "rotation_0": 199,
+  "ambiance": 25,
+  "contrast": 25,
+  "members": true,
+  "tradeable": true,
+  "name": "Red d'hide blessed set",
+  "noteData": 11925,
+  "nullopt": true,
+  "$fileid": 11924
+}
+,
+
+{"noteData": 11924, "noteTemplate": 799, "nullopt": true, "$fileid": 11925}
+,
+
+{
+  "value": 20,
+  "baseModel": 30034,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -22,
+  "model_zoom": 2414,
+  "rotation_1": 1795,
+  "rotation_0": 199,
+  "ambiance": 25,
+  "contrast": 25,
+  "tradeable": true,
+  "name": "Guthix armour set (l)",
+  "noteData": 11927,
+  "nullopt": true,
+  "$fileid": 11926
+}
+,
+
+{"noteData": 11926, "noteTemplate": 799, "nullopt": true, "$fileid": 11927}
+,
+
+{
+  "value": 20,
+  "baseModel": 30023,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -22,
+  "model_zoom": 2414,
+  "rotation_1": 1795,
+  "rotation_0": 199,
+  "ambiance": 25,
+  "contrast": 25,
+  "tradeable": true,
+  "name": "Saradomin armour set (l)",
+  "noteData": 11929,
+  "nullopt": true,
+  "$fileid": 11928
+}
+,
+
+{"noteData": 11928, "noteTemplate": 799, "nullopt": true, "$fileid": 11929}
+,
+
+{
+  "value": 20,
+  "baseModel": 30037,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -22,
+  "model_zoom": 2414,
+  "rotation_1": 1795,
+  "rotation_0": 199,
+  "ambiance": 25,
+  "contrast": 25,
+  "tradeable": true,
+  "name": "Zamorak armour set (l)",
+  "noteData": 11931,
+  "nullopt": true,
+  "$fileid": 11930
+}
+,
+
+{"noteData": 11930, "noteTemplate": 799, "nullopt": true, "$fileid": 11931}
+,
+
+{
+  "value": 20,
+  "baseModel": 30048,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -22,
+  "model_zoom": 2414,
+  "rotation_1": 1795,
+  "rotation_0": 199,
+  "ambiance": 25,
+  "contrast": 25,
+  "tradeable": true,
+  "name": "Guthix armour set (sk)",
+  "noteData": 11933,
+  "nullopt": true,
+  "$fileid": 11932
+}
+,
+
+{"noteData": 11932, "noteTemplate": 799, "nullopt": true, "$fileid": 11933}
+,
+
+{
+  "value": 20,
+  "baseModel": 30036,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -22,
+  "model_zoom": 2414,
+  "rotation_1": 1795,
+  "rotation_0": 199,
+  "ambiance": 25,
+  "contrast": 25,
+  "tradeable": true,
+  "name": "Saradomin armour set (sk)",
+  "noteData": 11935,
+  "nullopt": true,
+  "$fileid": 11934
+}
+,
+
+{"noteData": 11934, "noteTemplate": 799, "nullopt": true, "$fileid": 11935}
+,
+
+{
+  "value": 20,
+  "baseModel": 30033,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -22,
+  "model_zoom": 2414,
+  "rotation_1": 1795,
+  "rotation_0": 199,
+  "ambiance": 25,
+  "contrast": 25,
+  "tradeable": true,
+  "name": "Zamorak armour set (sk)",
+  "noteData": 11937,
+  "nullopt": true,
+  "$fileid": 11936
+}
+,
+
+{"noteData": 11936, "noteTemplate": 799, "nullopt": true, "$fileid": 11937}
+,
+
+{
+  "value": 20,
+  "baseModel": 30025,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -22,
+  "model_zoom": 2414,
+  "rotation_1": 1795,
+  "rotation_0": 199,
+  "ambiance": 25,
+  "contrast": 25,
+  "members": true,
+  "tradeable": true,
+  "color_replacements": [[8, 7114], [0, 7097], [24, 6057]],
+  "name": "Gilded armour set (l)",
+  "noteData": 11939,
+  "nullopt": true,
+  "$fileid": 11938
+}
+,
+
+{"noteData": 11938, "noteTemplate": 799, "nullopt": true, "$fileid": 11939}
+,
+
+{
+  "value": 20,
+  "baseModel": 30049,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -22,
+  "model_zoom": 2414,
+  "rotation_1": 1795,
+  "rotation_0": 199,
+  "ambiance": 25,
+  "contrast": 25,
+  "members": true,
+  "tradeable": true,
+  "color_replacements": [[8, 7114], [0, 7097], [24, 6057]],
+  "name": "Gilded armour set (sk)",
+  "noteData": 11941,
+  "nullopt": true,
+  "$fileid": 11940
+}
+,
+
+{"noteData": 11940, "noteTemplate": 799, "nullopt": true, "$fileid": 11941}
+,
+
+{
+  "value": 20,
+  "baseModel": 30028,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -22,
+  "model_zoom": 2414,
+  "rotation_1": 1795,
+  "rotation_0": 199,
+  "ambiance": 25,
+  "contrast": 25,
+  "members": true,
+  "tradeable": true,
+  "name": "Rockshell armour set",
+  "noteData": 11943,
+  "nullopt": true,
+  "$fileid": 11942
+}
+,
+
+{"noteData": 11942, "noteTemplate": 799, "nullopt": true, "$fileid": 11943}
+,
+
+{
+  "value": 20,
+  "baseModel": 30053,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -22,
+  "model_zoom": 2414,
+  "rotation_1": 1795,
+  "rotation_0": 199,
+  "ambiance": 25,
+  "contrast": 25,
+  "members": true,
+  "tradeable": true,
+  "name": "Spined armour set",
+  "noteData": 11945,
+  "nullopt": true,
+  "$fileid": 11944
+}
+,
+
+{"noteData": 11944, "noteTemplate": 799, "nullopt": true, "$fileid": 11945}
+,
+
+{
+  "value": 20,
+  "baseModel": 30047,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -22,
+  "model_zoom": 2414,
+  "rotation_1": 1795,
+  "rotation_0": 199,
+  "ambiance": 25,
+  "contrast": 25,
+  "members": true,
+  "tradeable": true,
+  "name": "Skeletal armour set",
+  "noteData": 11947,
+  "nullopt": true,
+  "$fileid": 11946
+}
+,
+
+{"noteData": 11946, "noteTemplate": 799, "nullopt": true, "$fileid": 11947}
+,
+
+{
+  "dummyItem": 2,
+  "baseModel": 30228,
+  "model_zoom": 2281,
+  "ambiance": 5,
+  "nullopt": true,
+  "$fileid": 11948
+}
+,
+
+{
+  "baseModel": 30309,
+  "modelTranslate_1": -1,
+  "model_zoom": 400,
+  "rotation_1": 269,
+  "rotation_0": 96,
+  "contrast": 15,
+  "ambiance": 15,
+  "maleModels_0": {"id": 30274, "type": 0},
+  "femaleModels_0": {"id": 30274, "type": 0},
+  "widget_actions_0": "Shake",
+  "widget_actions_4": "Destroy",
+  "dummyItem": 1,
+  "name": "Snow globe",
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 11949
+}
+,
+
+{
+  "baseModel": 30309,
+  "modelTranslate_1": -1,
+  "model_zoom": 400,
+  "rotation_1": 269,
+  "rotation_0": 96,
+  "contrast": 15,
+  "ambiance": 15,
+  "maleModels_0": {"id": 30274, "type": 0},
+  "femaleModels_0": {"id": 30274, "type": 0},
+  "widget_actions_0": "Shake",
+  "widget_actions_4": "Destroy",
+  "name": "Snow globe",
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 11950
+}
+,
+
+{
+  "baseModel": 30315,
+  "model_zoom": 1360,
+  "rotation_1": 18,
+  "rotation_0": 243,
+  "contrast": 15,
+  "ambiance": 15,
+  "maleModels_0": {"id": 30273, "type": 0},
+  "femaleModels_0": {"id": 30273, "type": 0},
+  "widget_actions_1": "Wield",
+  "name": "Snowball",
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 11951
+}
+,
+
+{
+  "baseModel": 30313,
+  "modelTranslate_0": 4,
+  "modelTranslate_1": 3,
+  "model_zoom": 1827,
+  "rotation_1": 1553,
+  "rotation_0": 1733,
+  "contrast": 15,
+  "ambiance": 15,
+  "widget_actions_4": "Destroy",
+  "name": "Ice sword",
+  "extra": [{"prop": 59, "intvalue": 1, "stringvalue": null}],
+  "nullopt": true,
+  "$fileid": 11952
+}
+,
+
+{
+  "baseModel": 30316,
+  "modelTranslate_0": 3,
+  "modelTranslate_1": 24,
+  "model_zoom": 1872,
+  "rotation_1": 1457,
+  "rotation_2": 954,
+  "rotation_0": 339,
+  "contrast": 15,
+  "ambiance": 15,
+  "widget_actions_4": "Destroy",
+  "name": "Winter staff",
+  "extra": [{"prop": 59, "intvalue": 1, "stringvalue": null}],
+  "nullopt": true,
+  "$fileid": 11953
+}
+,
+
+{
+  "baseModel": 30314,
+  "modelTranslate_0": -1,
+  "modelTranslate_1": 1,
+  "model_zoom": 2086,
+  "rotation_1": 1120,
+  "rotation_0": 1697,
+  "contrast": 15,
+  "ambiance": 15,
+  "widget_actions_4": "Destroy",
+  "name": "Holly bow",
+  "extra": [{"prop": 59, "intvalue": 1, "stringvalue": null}],
+  "nullopt": true,
+  "$fileid": 11954
+}
+,
+
+{
+  "baseModel": 30312,
+  "modelTranslate_0": -1,
+  "model_zoom": 1488,
+  "rotation_1": 2024,
+  "rotation_0": 150,
+  "contrast": 15,
+  "ambiance": 15,
+  "widget_actions_4": "Destroy",
+  "name": "Barbarian snowman hat",
+  "extra": [{"prop": 59, "intvalue": 1, "stringvalue": null}],
+  "nullopt": true,
+  "$fileid": 11955
+}
+,
+
+{
+  "baseModel": 30308,
+  "modelTranslate_0": 7,
+  "modelTranslate_1": -26,
+  "model_zoom": 1872,
+  "rotation_1": 39,
+  "rotation_0": 159,
+  "contrast": 15,
+  "ambiance": 15,
+  "widget_actions_4": "Destroy",
+  "name": "Dragon snowman hat",
+  "extra": [{"prop": 59, "intvalue": 1, "stringvalue": null}],
+  "nullopt": true,
+  "$fileid": 11956
+}
+,
+
+{
+  "baseModel": 30310,
+  "modelTranslate_0": 5,
+  "modelTranslate_1": -1,
+  "model_zoom": 1488,
+  "rotation_1": 1942,
+  "rotation_2": 41,
+  "rotation_0": 1890,
+  "contrast": 15,
+  "ambiance": 15,
+  "widget_actions_4": "Destroy",
+  "name": "Dwarf snowman hat",
+  "extra": [{"prop": 59, "intvalue": 1, "stringvalue": null}],
+  "nullopt": true,
+  "$fileid": 11957
+}
+,
+
+{
+  "baseModel": 30311,
+  "modelTranslate_0": 9,
+  "modelTranslate_1": 12,
+  "model_zoom": 1744,
+  "rotation_1": 1835,
+  "rotation_0": 279,
+  "contrast": 15,
+  "ambiance": 15,
+  "widget_actions_4": "Destroy",
+  "name": "Pirate snowman hat",
+  "extra": [{"prop": 59, "intvalue": 1, "stringvalue": null}],
+  "nullopt": true,
+  "$fileid": 11958
+}
+,
+
+{
+  "baseModel": 30307,
+  "modelTranslate_1": 1,
+  "model_zoom": 1872,
+  "rotation_1": 1964,
+  "rotation_0": 216,
+  "contrast": 15,
+  "ambiance": 15,
+  "widget_actions_4": "Destroy",
+  "name": "Snowman top hat",
+  "extra": [{"prop": 59, "intvalue": 1, "stringvalue": null}],
+  "nullopt": true,
+  "$fileid": 11959
+}
+,
+
+{
+  "value": 20,
+  "baseModel": 30057,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -22,
+  "model_zoom": 2414,
+  "rotation_1": 1795,
+  "rotation_0": 199,
+  "ambiance": 25,
+  "contrast": 25,
+  "members": true,
+  "tradeable": true,
+  "color_replacements": [[40384, 103], [40045, 8138]],
+  "name": "Light mystic robes set",
+  "noteData": 11961,
+  "nullopt": true,
+  "$fileid": 11960
+}
+,
+
+{"noteData": 11960, "noteTemplate": 799, "nullopt": true, "$fileid": 11961}
+,
+
+{
+  "value": 20,
+  "baseModel": 30057,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -22,
+  "model_zoom": 2414,
+  "rotation_1": 1795,
+  "rotation_0": 199,
+  "ambiance": 25,
+  "contrast": 25,
+  "members": true,
+  "tradeable": true,
+  "color_replacements": [[40384, 148], [40045, 924]],
+  "name": "Dark mystic robes set",
+  "noteData": 11963,
+  "nullopt": true,
+  "$fileid": 11962
+}
+,
+
+{"noteData": 11962, "noteTemplate": 799, "nullopt": true, "$fileid": 11963}
+,
+
+{
+  "baseModel": 30384,
+  "members": true,
+  "ambiance": 25,
+  "modelTranslate_0": -5,
+  "modelTranslate_1": 1,
+  "model_zoom": 663,
+  "rotation_1": 1673,
+  "rotation_0": 2033,
+  "color_replacements": [
+    [21706, 43053],
+    [21702, 43049],
+    [21693, 43045],
+    [21685, 43169]
+  ],
+  "name": "Raven egg",
+  "nullopt": true,
+  "$fileid": 11964
+}
+,
+
+{
+  "baseModel": 30384,
+  "members": true,
+  "ambiance": 25,
+  "modelTranslate_0": -5,
+  "modelTranslate_1": 1,
+  "model_zoom": 663,
+  "rotation_1": 1673,
+  "rotation_0": 2033,
+  "color_replacements": [
+    [21706, 8530],
+    [21702, 7502],
+    [21693, 7498],
+    [21685, 8518]
+  ],
+  "name": "Vulture egg",
+  "nullopt": true,
+  "$fileid": 11965
+}
+,
+
+{
+  "baseModel": 7173,
+  "modelTranslate_0": 2,
+  "model_zoom": 1100,
+  "rotation_1": 60,
+  "rotation_0": 172,
+  "members": true,
+  "widget_actions_0": "Search",
+  "color_replacements": [[43484, 43045]],
+  "name": "Bird's nest",
+  "nullopt": true,
+  "$fileid": 11966
+}
+,
+
+{
+  "value": 20,
+  "baseModel": 30385,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -22,
+  "model_zoom": 2414,
+  "rotation_1": 1795,
+  "rotation_0": 199,
+  "ambiance": 25,
+  "contrast": 25,
+  "members": true,
+  "tradeable": true,
+  "name": "Dwarf cannon set",
+  "noteData": 11968,
+  "nullopt": true,
+  "$fileid": 11967
+}
+,
+
+{"noteData": 11967, "noteTemplate": 799, "nullopt": true, "$fileid": 11968}
+,
+
+{
+  "baseModel": 30865,
+  "widget_actions_1": "Wear",
+  "widget_actions_3": "Check-charges",
+  "widget_actions_4": "Destroy",
+  "modelTranslate_1": -34,
+  "model_zoom": 465,
+  "rotation_0": 221,
+  "maleModels_0": {"id": 30856, "type": 0},
+  "femaleModels_0": {"id": 30858, "type": 0},
+  "maleHeads_0": 39558,
+  "femaleHeads_0": 38808,
+  "members": true,
+  "value": 100,
+  "name": "Enchanted water tiara",
+  "nullopt": true,
+  "$fileid": 11969
+}
+,
+
+{
+  "baseModel": 30863,
+  "model_zoom": 2640,
+  "rotation_1": 1910,
+  "rotation_0": 153,
+  "contrast": 15,
+  "ambiance": 15,
+  "members": true,
+  "widget_actions_4": "Destroy",
+  "name": "Smelly crate",
+  "nullopt": true,
+  "$fileid": 11970
+}
+,
+
+{
+  "baseModel": 30863,
+  "model_zoom": 2640,
+  "rotation_1": 1910,
+  "rotation_0": 153,
+  "contrast": 15,
+  "ambiance": 15,
+  "members": true,
+  "widget_actions_0": "Empty",
+  "widget_actions_4": "Destroy",
+  "name": "Full crate",
+  "nullopt": true,
+  "$fileid": 11971
+}
+,
+
+{
+  "baseModel": 5256,
+  "model_zoom": 2640,
+  "rotation_1": 1910,
+  "rotation_0": 153,
+  "contrast": 15,
+  "ambiance": 15,
+  "members": true,
+  "widget_actions_4": "Destroy",
+  "name": "Empty crate",
+  "nullopt": true,
+  "$fileid": 11972
+}
+,
+
+{
+  "baseModel": 2794,
+  "model_zoom": 976,
+  "rotation_1": 1976,
+  "rotation_0": 438,
+  "contrast": 15,
+  "ambiance": 15,
+  "members": true,
+  "widget_actions_0": "Read",
+  "widget_actions_4": "Destroy",
+  "color_replacements": [[5018, 40094]],
+  "name": "Scabaras research",
+  "nullopt": true,
+  "$fileid": 11973
+}
+,
+
+{
+  "baseModel": 30866,
+  "modelTranslate_1": 7,
+  "model_zoom": 720,
+  "rotation_1": 1976,
+  "rotation_0": 366,
+  "contrast": 15,
+  "ambiance": 15,
+  "members": true,
+  "widget_actions_4": "Destroy",
+  "name": "Artefact receipt",
+  "nullopt": true,
+  "$fileid": 11974
+}
+,
+
+{
+  "baseModel": 30866,
+  "modelTranslate_1": 7,
+  "model_zoom": 720,
+  "rotation_1": 1976,
+  "rotation_0": 366,
+  "contrast": 15,
+  "ambiance": 15,
+  "members": true,
+  "widget_actions_4": "Destroy",
+  "widget_actions_0": "Copy to log",
+  "name": "Scabarite notes",
+  "nullopt": true,
+  "$fileid": 11975
+}
+,
+
+{
+  "baseModel": 30866,
+  "modelTranslate_1": 1,
+  "model_zoom": 592,
+  "rotation_1": 83,
+  "rotation_0": 681,
+  "contrast": 15,
+  "ambiance": 15,
+  "members": true,
+  "widget_actions_4": "Destroy",
+  "widget_actions_0": "Copy to log",
+  "name": "Scabarite notes",
+  "nullopt": true,
+  "$fileid": 11976
+}
+,
+
+{
+  "baseModel": 30866,
+  "modelTranslate_1": 7,
+  "model_zoom": 720,
+  "rotation_1": 1976,
+  "rotation_0": 366,
+  "contrast": 15,
+  "ambiance": 15,
+  "members": true,
+  "widget_actions_4": "Destroy",
+  "widget_actions_0": "Copy to log",
+  "name": "Scabarite notes",
+  "nullopt": true,
+  "$fileid": 11977
+}
+,
+
+{
+  "baseModel": 30866,
+  "modelTranslate_1": 1,
+  "model_zoom": 592,
+  "rotation_1": 83,
+  "rotation_0": 681,
+  "contrast": 15,
+  "ambiance": 15,
+  "members": true,
+  "widget_actions_4": "Destroy",
+  "widget_actions_0": "Copy to log",
+  "name": "Scabarite notes",
+  "nullopt": true,
+  "$fileid": 11978
+}
+,
+
+{
+  "baseModel": 30866,
+  "modelTranslate_1": 7,
+  "model_zoom": 720,
+  "rotation_1": 1976,
+  "rotation_0": 366,
+  "contrast": 15,
+  "ambiance": 15,
+  "members": true,
+  "widget_actions_4": "Destroy",
+  "widget_actions_0": "Copy to log",
+  "name": "Scabarite notes",
+  "nullopt": true,
+  "$fileid": 11979
+}
+,
+
+{
+  "baseModel": 30866,
+  "modelTranslate_1": 1,
+  "model_zoom": 592,
+  "rotation_1": 83,
+  "rotation_0": 681,
+  "contrast": 15,
+  "ambiance": 15,
+  "members": true,
+  "widget_actions_4": "Destroy",
+  "widget_actions_0": "Copy to log",
+  "name": "Scabarite notes",
+  "nullopt": true,
+  "$fileid": 11980
+}
+,
+
+{
+  "baseModel": 30866,
+  "modelTranslate_1": 7,
+  "model_zoom": 720,
+  "rotation_1": 1976,
+  "rotation_0": 366,
+  "contrast": 15,
+  "ambiance": 15,
+  "members": true,
+  "widget_actions_4": "Destroy",
+  "widget_actions_0": "Copy to log",
+  "name": "Scabarite notes",
+  "nullopt": true,
+  "$fileid": 11981
+}
+,
+
+{
+  "baseModel": 30866,
+  "modelTranslate_1": 1,
+  "model_zoom": 592,
+  "rotation_1": 83,
+  "rotation_0": 681,
+  "contrast": 15,
+  "ambiance": 15,
+  "members": true,
+  "widget_actions_4": "Destroy",
+  "widget_actions_0": "Copy to log",
+  "name": "Scabarite notes",
+  "nullopt": true,
+  "$fileid": 11982
+}
+,
+
+{
+  "baseModel": 30866,
+  "modelTranslate_1": 7,
+  "model_zoom": 720,
+  "rotation_1": 1976,
+  "rotation_0": 366,
+  "contrast": 15,
+  "ambiance": 15,
+  "members": true,
+  "widget_actions_4": "Destroy",
+  "widget_actions_0": "Copy to log",
+  "name": "Scabarite notes",
+  "nullopt": true,
+  "$fileid": 11983
+}
+,
+
+{
+  "baseModel": 30866,
+  "modelTranslate_1": 1,
+  "model_zoom": 592,
+  "rotation_1": 83,
+  "rotation_0": 681,
+  "contrast": 15,
+  "ambiance": 15,
+  "members": true,
+  "widget_actions_4": "Destroy",
+  "widget_actions_0": "Copy to log",
+  "name": "Scabarite notes",
+  "nullopt": true,
+  "$fileid": 11984
+}
+,
+
+{
+  "baseModel": 30866,
+  "modelTranslate_1": 7,
+  "model_zoom": 720,
+  "rotation_1": 1976,
+  "rotation_0": 366,
+  "contrast": 15,
+  "ambiance": 15,
+  "members": true,
+  "widget_actions_4": "Destroy",
+  "widget_actions_0": "Copy to log",
+  "name": "Scabarite notes",
+  "nullopt": true,
+  "$fileid": 11985
+}
+,
+
+{
+  "baseModel": 30866,
+  "modelTranslate_1": 1,
+  "model_zoom": 592,
+  "rotation_1": 83,
+  "rotation_0": 681,
+  "contrast": 15,
+  "ambiance": 15,
+  "members": true,
+  "widget_actions_4": "Destroy",
+  "widget_actions_0": "Copy to log",
+  "name": "Scabarite notes",
+  "nullopt": true,
+  "$fileid": 11986
+}
+,
+
+{
+  "baseModel": 30866,
+  "modelTranslate_1": 7,
+  "model_zoom": 720,
+  "rotation_1": 1976,
+  "rotation_0": 366,
+  "contrast": 15,
+  "ambiance": 15,
+  "members": true,
+  "widget_actions_4": "Destroy",
+  "widget_actions_0": "Copy to log",
+  "name": "Scabarite notes",
+  "nullopt": true,
+  "$fileid": 11987
+}
+,
+
+{
+  "baseModel": 30866,
+  "modelTranslate_1": 1,
+  "model_zoom": 592,
+  "rotation_1": 83,
+  "rotation_0": 681,
+  "contrast": 15,
+  "ambiance": 15,
+  "members": true,
+  "widget_actions_4": "Destroy",
+  "widget_actions_0": "Copy to log",
+  "name": "Scabarite notes",
+  "nullopt": true,
+  "$fileid": 11988
+}
+,
+
+{
+  "baseModel": 30866,
+  "modelTranslate_1": 7,
+  "model_zoom": 720,
+  "rotation_1": 1976,
+  "rotation_0": 366,
+  "contrast": 15,
+  "ambiance": 15,
+  "members": true,
+  "widget_actions_4": "Destroy",
+  "widget_actions_0": "Copy to log",
+  "name": "Scabarite notes",
+  "nullopt": true,
+  "$fileid": 11989
+}
+,
+
+{
+  "baseModel": 30866,
+  "modelTranslate_1": 1,
+  "model_zoom": 592,
+  "rotation_1": 83,
+  "rotation_0": 681,
+  "contrast": 15,
+  "ambiance": 15,
+  "members": true,
+  "widget_actions_4": "Destroy",
+  "widget_actions_0": "Copy to log",
+  "name": "Scabarite notes",
+  "nullopt": true,
+  "$fileid": 11990
+}
+,
+
+{
+  "baseModel": 30866,
+  "modelTranslate_1": 7,
+  "model_zoom": 720,
+  "rotation_1": 1976,
+  "rotation_0": 366,
+  "contrast": 15,
+  "ambiance": 15,
+  "members": true,
+  "widget_actions_4": "Destroy",
+  "widget_actions_0": "Copy to log",
+  "name": "Scabarite notes",
+  "nullopt": true,
+  "$fileid": 11991
+}
+,
+
+{
+  "baseModel": 30866,
+  "modelTranslate_1": 1,
+  "model_zoom": 592,
+  "rotation_1": 83,
+  "rotation_0": 681,
+  "contrast": 15,
+  "ambiance": 15,
+  "members": true,
+  "widget_actions_4": "Destroy",
+  "widget_actions_0": "Copy to log",
+  "name": "Scabarite notes",
+  "nullopt": true,
+  "$fileid": 11992
+}
+,
+
+{
+  "baseModel": 30866,
+  "modelTranslate_1": 7,
+  "model_zoom": 720,
+  "rotation_1": 1976,
+  "rotation_0": 366,
+  "contrast": 15,
+  "ambiance": 15,
+  "members": true,
+  "widget_actions_4": "Destroy",
+  "widget_actions_0": "Copy to log",
+  "name": "Scabarite notes",
+  "nullopt": true,
+  "$fileid": 11993
+}
+,
+
+{
+  "baseModel": 30862,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": 4,
+  "model_zoom": 1049,
+  "rotation_2": 2047,
+  "rotation_0": 387,
+  "contrast": 15,
+  "ambiance": 15,
+  "members": true,
+  "widget_actions_4": "Destroy",
+  "name": "Scabarite key",
+  "nullopt": true,
+  "$fileid": 11994
+}
+,
+
+{
+  "baseModel": 2672,
+  "modelTranslate_1": -36,
+  "model_zoom": 789,
+  "rotation_1": 1203,
+  "rotation_0": 277,
+  "contrast": 15,
+  "ambiance": 15,
+  "members": true,
+  "widget_actions_4": "Destroy",
+  "color_replacements": [
+    [11200, 12581],
+    [6036, 13194],
+    [74, 9517],
+    [103, 9521],
+    [37, 9511]
+  ],
+  "name": "Oxidised dagger",
+  "nullopt": true,
+  "$fileid": 11995
+}
+,
+
+{
+  "baseModel": 2833,
+  "modelTranslate_1": -11,
+  "model_zoom": 720,
+  "rotation_1": 1985,
+  "rotation_0": 156,
+  "contrast": 15,
+  "ambiance": 15,
+  "members": true,
+  "widget_actions_4": "Destroy",
+  "color_replacements": [[61, 9511], [926, 13194]],
+  "name": "Oxidised medium helm",
+  "nullopt": true,
+  "$fileid": 11996
+}
+,
+
+{
+  "baseModel": 30867,
+  "modelTranslate_1": 5,
+  "model_zoom": 1232,
+  "rotation_1": 1403,
+  "rotation_0": 622,
+  "contrast": 15,
+  "ambiance": 15,
+  "members": true,
+  "widget_actions_4": "Destroy",
+  "name": "Oxidised sword",
+  "nullopt": true,
+  "$fileid": 11997
+}
+,
+
+{
+  "baseModel": 2373,
+  "model_zoom": 1488,
+  "rotation_1": 719,
+  "rotation_0": 443,
+  "contrast": 15,
+  "ambiance": 15,
+  "members": true,
+  "widget_actions_4": "Destroy",
+  "color_replacements": [[61, 9511], [9152, 12581], [6032, 13194]],
+  "name": "Oxidised scimitar",
+  "nullopt": true,
+  "$fileid": 11998
+}
+,
+
+{
+  "baseModel": 2602,
+  "modelTranslate_0": -15,
+  "modelTranslate_1": 5,
+  "model_zoom": 1503,
+  "rotation_1": 1411,
+  "rotation_2": 97,
+  "rotation_0": 429,
+  "contrast": 15,
+  "ambiance": 15,
+  "members": true,
+  "widget_actions_4": "Destroy",
+  "color_replacements": [[61, 9511], [11200, 12581], [5010, 13194]],
+  "name": "Oxidised longsword",
+  "nullopt": true,
+  "$fileid": 11999
+}
+,
+
+{
+  "baseModel": 2813,
+  "modelTranslate_1": 3,
+  "model_zoom": 720,
+  "rotation_1": 2003,
+  "rotation_0": 39,
+  "contrast": 15,
+  "ambiance": 15,
+  "members": true,
+  "widget_actions_4": "Destroy",
+  "color_replacements": [[61, 9511], [926, 13194]],
+  "name": "Oxidised full helm",
+  "nullopt": true,
+  "$fileid": 12000
+}
+,
+
+{
+  "baseModel": 2720,
+  "modelTranslate_1": 22,
+  "model_zoom": 2086,
+  "rotation_1": 78,
+  "rotation_0": 390,
+  "contrast": 15,
+  "ambiance": 15,
+  "members": true,
+  "widget_actions_4": "Destroy",
+  "color_replacements": [[57, 8728], [7054, 13194], [61, 9511]],
+  "name": "Oxidised square shield",
+  "nullopt": true,
+  "$fileid": 12001
+}
+,
+
+{
+  "baseModel": 2439,
+  "modelTranslate_1": 3,
+  "model_zoom": 1104,
+  "rotation_1": 72,
+  "rotation_0": 543,
+  "contrast": 15,
+  "ambiance": 15,
+  "members": true,
+  "widget_actions_4": "Destroy",
+  "color_replacements": [[16, 13194], [33, 9878], [24, 9100]],
+  "name": "Oxidised chainbody",
+  "nullopt": true,
+  "$fileid": 12002
+}
+,
+
+{
+  "baseModel": 2339,
+  "modelTranslate_0": -5,
+  "modelTranslate_1": -7,
+  "model_zoom": 1872,
+  "rotation_1": 1098,
+  "rotation_0": 408,
+  "contrast": 15,
+  "ambiance": 15,
+  "members": true,
+  "widget_actions_4": "Destroy",
+  "color_replacements": [[61, 8609], [7054, 13194]],
+  "name": "Oxidised kiteshield",
+  "nullopt": true,
+  "$fileid": 12003
+}
+,
+
+{
+  "baseModel": 2754,
+  "modelTranslate_0": -5,
+  "rotation_1": 1463,
+  "rotation_0": 373,
+  "contrast": 15,
+  "ambiance": 15,
+  "members": true,
+  "widget_actions_4": "Destroy",
+  "color_replacements": [[61, 8609], [7110, 12581], [6550, 13194]],
+  "name": "Oxidised two-handed sword",
+  "nullopt": true,
+  "$fileid": 12004
+}
+,
+
+{
+  "baseModel": 8759,
+  "modelTranslate_0": 4,
+  "modelTranslate_1": 8,
+  "model_zoom": 1616,
+  "rotation_1": 263,
+  "rotation_0": 456,
+  "contrast": 15,
+  "ambiance": 15,
+  "members": true,
+  "widget_actions_4": "Destroy",
+  "color_replacements": [[10266, 11148], [10258, 13194]],
+  "name": "Oxidised platelegs",
+  "nullopt": true,
+  "$fileid": 12005
+}
+,
+
+{
+  "baseModel": 2542,
+  "modelTranslate_0": 5,
+  "modelTranslate_1": 7,
+  "model_zoom": 1360,
+  "rotation_1": 2042,
+  "rotation_0": 513,
+  "contrast": 15,
+  "ambiance": 15,
+  "members": true,
+  "widget_actions_4": "Destroy",
+  "color_replacements": [[61, 8609], [25238, 12581], [15242, 13194]],
+  "name": "Oxidised plateskirt",
+  "nullopt": true,
+  "$fileid": 12006
+}
+,
+
+{
+  "baseModel": 30651,
+  "members": true,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": 3,
+  "model_zoom": 1049,
+  "rotation_1": 1033,
+  "rotation_0": 545,
+  "ambiance": 25,
+  "value": 724,
+  "widget_actions_3": "Summon",
+  "tradeable": true,
+  "name": "Spirit terrorbird pouch",
+  "noteData": 12008,
+  "nullopt": true,
+  "$fileid": 12007
+}
+,
+
+{"noteData": 12007, "noteTemplate": 799, "nullopt": true, "$fileid": 12008}
+,
+
+{
+  "baseModel": 30676,
+  "value": 599,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": 3,
+  "model_zoom": 1049,
+  "rotation_1": 1033,
+  "rotation_0": 545,
+  "ambiance": 25,
+  "members": true,
+  "widget_actions_3": "Summon",
+  "tradeable": true,
+  "name": "Granite crab pouch",
+  "noteData": 12010,
+  "nullopt": true,
+  "$fileid": 12009
+}
+,
+
+{"noteData": 12009, "noteTemplate": 799, "nullopt": true, "$fileid": 12010}
+,
+
+{
+  "baseModel": 30716,
+  "members": true,
+  "value": 4624,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": 3,
+  "model_zoom": 1049,
+  "rotation_1": 1033,
+  "rotation_0": 545,
+  "ambiance": 25,
+  "widget_actions_3": "Summon",
+  "tradeable": true,
+  "name": "Praying mantis pouch",
+  "noteData": 12012,
+  "nullopt": true,
+  "$fileid": 12011
+}
+,
+
+{"noteData": 12011, "noteTemplate": 799, "nullopt": true, "$fileid": 12012}
+,
+
+{
+  "baseModel": 30622,
+  "members": true,
+  "value": 3524,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": 3,
+  "model_zoom": 1049,
+  "rotation_1": 1033,
+  "rotation_0": 545,
+  "ambiance": 25,
+  "widget_actions_3": "Summon",
+  "tradeable": true,
+  "name": "Giant ent pouch",
+  "noteData": 12014,
+  "nullopt": true,
+  "$fileid": 12013
+}
+,
+
+{"noteData": 12013, "noteTemplate": 799, "nullopt": true, "$fileid": 12014}
+,
+
+{
+  "baseModel": 30779,
+  "members": true,
+  "value": 3324,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": 3,
+  "model_zoom": 1049,
+  "rotation_1": 1033,
+  "rotation_0": 545,
+  "ambiance": 25,
+  "widget_actions_3": "Summon",
+  "tradeable": true,
+  "name": "Spirit cobra pouch",
+  "noteData": 12016,
+  "nullopt": true,
+  "$fileid": 12015
+}
+,
+
+{"noteData": 12015, "noteTemplate": 799, "nullopt": true, "$fileid": 12016}
+,
+
+{
+  "baseModel": 30604,
+  "members": true,
+  "value": 449,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": 3,
+  "model_zoom": 1049,
+  "rotation_1": 1033,
+  "rotation_0": 545,
+  "ambiance": 25,
+  "widget_actions_3": "Summon",
+  "tradeable": true,
+  "name": "Spirit dagannoth pouch",
+  "noteData": 12018,
+  "nullopt": true,
+  "$fileid": 12017
+}
+,
+
+{"noteData": 12017, "noteTemplate": 799, "nullopt": true, "$fileid": 12018}
+,
+
+{
+  "baseModel": 30670,
+  "members": true,
+  "value": 649,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": 3,
+  "model_zoom": 1049,
+  "rotation_1": 1033,
+  "rotation_0": 545,
+  "ambiance": 25,
+  "widget_actions_3": "Summon",
+  "tradeable": true,
+  "name": "Thorny snail pouch",
+  "noteData": 12020,
+  "nullopt": true,
+  "$fileid": 12019
+}
+,
+
+{"noteData": 12019, "noteTemplate": 799, "nullopt": true, "$fileid": 12020}
+,
+
+{
+  "baseModel": 30812,
+  "members": true,
+  "value": 2224,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": 3,
+  "model_zoom": 1049,
+  "rotation_1": 1033,
+  "rotation_0": 545,
+  "ambiance": 25,
+  "widget_actions_3": "Summon",
+  "tradeable": true,
+  "name": "Beaver pouch",
+  "noteData": 12022,
+  "nullopt": true,
+  "$fileid": 12021
+}
+,
+
+{"noteData": 12021, "noteTemplate": 799, "nullopt": true, "$fileid": 12022}
+,
+
+{
+  "baseModel": 30842,
+  "members": true,
+  "value": 4024,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": 3,
+  "model_zoom": 1049,
+  "rotation_1": 1033,
+  "rotation_0": 545,
+  "ambiance": 25,
+  "widget_actions_3": "Summon",
+  "tradeable": true,
+  "name": "Karam. overlord pouch",
+  "noteData": 12024,
+  "nullopt": true,
+  "$fileid": 12023
+}
+,
+
+{"noteData": 12023, "noteTemplate": 799, "nullopt": true, "$fileid": 12024}
+,
+
+{
+  "baseModel": 30625,
+  "members": true,
+  "value": 3624,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": 3,
+  "model_zoom": 1049,
+  "rotation_1": 1033,
+  "rotation_0": 545,
+  "ambiance": 25,
+  "widget_actions_3": "Summon",
+  "tradeable": true,
+  "name": "Hydra pouch",
+  "noteData": 12026,
+  "nullopt": true,
+  "$fileid": 12025
+}
+,
+
+{"noteData": 12025, "noteTemplate": 799, "nullopt": true, "$fileid": 12026}
+,
+
+{
+  "baseModel": 30847,
+  "members": true,
+  "value": 4199,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": 3,
+  "model_zoom": 1049,
+  "rotation_1": 1033,
+  "rotation_0": 545,
+  "ambiance": 25,
+  "widget_actions_3": "Summon",
+  "tradeable": true,
+  "name": "Spirit jelly pouch",
+  "noteData": 12028,
+  "nullopt": true,
+  "$fileid": 12027
+}
+,
+
+{"noteData": 12027, "noteTemplate": 799, "nullopt": true, "$fileid": 12028}
+,
+
+{
+  "baseModel": 30635,
+  "members": true,
+  "value": 3174,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": 3,
+  "model_zoom": 1049,
+  "rotation_1": 1033,
+  "rotation_0": 545,
+  "ambiance": 25,
+  "widget_actions_3": "Summon",
+  "tradeable": true,
+  "name": "Bunyip pouch",
+  "noteData": 12030,
+  "nullopt": true,
+  "$fileid": 12029
+}
+,
+
+{"noteData": 12029, "noteTemplate": 799, "nullopt": true, "$fileid": 12030}
+,
+
+{
+  "baseModel": 30819,
+  "members": true,
+  "value": 449,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": 3,
+  "model_zoom": 1049,
+  "rotation_1": 1033,
+  "rotation_0": 545,
+  "ambiance": 25,
+  "widget_actions_3": "Summon",
+  "tradeable": true,
+  "name": "War tortoise pouch",
+  "noteData": 12032,
+  "nullopt": true,
+  "$fileid": 12031
+}]}

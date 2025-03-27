@@ -1,0 +1,2310 @@
+{"$schema":".schema-quickchatcats_batch.json","files":[
+
+{
+  "text": "Group events",
+  "subcategories": [
+    {"id": 1, "hotkey": 111},
+    {"id": 2, "hotkey": 98},
+    {"id": 11, "hotkey": 99},
+    {"id": 35, "hotkey": 102},
+    {"id": 45, "hotkey": 113},
+    {"id": 49, "hotkey": 115}
+  ],
+  "lines": [{"id": 242, "hotkey": 0}],
+  "$fileid": 0
+}
+,
+
+{
+  "text": "Organising",
+  "subcategories": [{"id": 126, "hotkey": 109}],
+  "lines": [
+    {"id": 243, "hotkey": 0},
+    {"id": 244, "hotkey": 0},
+    {"id": 245, "hotkey": 0},
+    {"id": 246, "hotkey": 0},
+    {"id": 783, "hotkey": 0},
+    {"id": 784, "hotkey": 0},
+    {"id": 785, "hotkey": 0},
+    {"id": 247, "hotkey": 0}
+  ],
+  "$fileid": 1
+}
+,
+
+{
+  "text": "Group fighting",
+  "subcategories": [
+    {"id": 3, "hotkey": 100},
+    {"id": 6, "hotkey": 102},
+    {"id": 7, "hotkey": 103},
+    {"id": 10, "hotkey": 107},
+    {"id": 127, "hotkey": 98}
+  ],
+  "$fileid": 2
+}
+,
+
+{
+  "text": "Waterbirth Island",
+  "subcategories": [{"id": 4, "hotkey": 100}, {"id": 5, "hotkey": 107}],
+  "$fileid": 3
+}
+,
+
+{
+  "text": "Waterbirth Dungeon",
+  "lines": [
+    {"id": 251, "hotkey": 0},
+    {"id": 252, "hotkey": 0},
+    {"id": 253, "hotkey": 0},
+    {"id": 254, "hotkey": 0},
+    {"id": 255, "hotkey": 0},
+    {"id": 256, "hotkey": 0},
+    {"id": 257, "hotkey": 0},
+    {"id": 258, "hotkey": 0}
+  ],
+  "$fileid": 4
+}
+,
+
+{
+  "text": "Dagannoth Kings",
+  "lines": [
+    {"id": 259, "hotkey": 0},
+    {"id": 260, "hotkey": 0},
+    {"id": 261, "hotkey": 0},
+    {"id": 262, "hotkey": 0},
+    {"id": 263, "hotkey": 0},
+    {"id": 264, "hotkey": 0},
+    {"id": 786, "hotkey": 0}
+  ],
+  "$fileid": 5
+}
+,
+
+{
+  "text": "Falador Mole Lair",
+  "lines": [
+    {"id": 265, "hotkey": 0},
+    {"id": 266, "hotkey": 0},
+    {"id": 267, "hotkey": 0},
+    {"id": 268, "hotkey": 0},
+    {"id": 269, "hotkey": 0},
+    {"id": 270, "hotkey": 0},
+    {"id": 271, "hotkey": 0},
+    {"id": 272, "hotkey": 0}
+  ],
+  "$fileid": 6
+}
+,
+
+{
+  "text": "God Wars Dungeon",
+  "subcategories": [{"id": 8, "hotkey": 107}, {"id": 9, "hotkey": 98}],
+  "$fileid": 7
+}
+,
+
+{
+  "text": "God Wars kill counts",
+  "lines": [
+    {"id": 273, "hotkey": 0},
+    {"id": 274, "hotkey": 0},
+    {"id": 275, "hotkey": 0},
+    {"id": 276, "hotkey": 0},
+    {"id": 277, "hotkey": 0},
+    {"id": 278, "hotkey": 0},
+    {"id": 279, "hotkey": 0},
+    {"id": 280, "hotkey": 0}
+  ],
+  "$fileid": 8
+}
+,
+
+{
+  "text": "God Wars bosses",
+  "lines": [
+    {"id": 281, "hotkey": 0},
+    {"id": 282, "hotkey": 0},
+    {"id": 283, "hotkey": 0},
+    {"id": 284, "hotkey": 0},
+    {"id": 285, "hotkey": 0},
+    {"id": 286, "hotkey": 0},
+    {"id": 788, "hotkey": 0},
+    {"id": 790, "hotkey": 0}
+  ],
+  "$fileid": 9
+}
+,
+
+{
+  "text": "Kalphite Lair",
+  "lines": [
+    {"id": 287, "hotkey": 0},
+    {"id": 288, "hotkey": 0},
+    {"id": 289, "hotkey": 0},
+    {"id": 290, "hotkey": 0},
+    {"id": 264, "hotkey": 0}
+  ],
+  "$fileid": 10
+}
+,
+
+{
+  "text": "Combat minigames",
+  "subcategories": [
+    {"id": 12, "hotkey": 98},
+    {"id": 129, "hotkey": 104},
+    {"id": 15, "hotkey": 99},
+    {"id": 20, "hotkey": 119},
+    {"id": 23, "hotkey": 100},
+    {"id": 26, "hotkey": 102},
+    {"id": 30, "hotkey": 112},
+    {"id": 34, "hotkey": 116},
+    {"id": 121, "hotkey": 115}
+  ],
+  "$fileid": 11
+}
+,
+
+{
+  "text": "Barbarian Assault",
+  "subcategories": [{"id": 13, "hotkey": 108}, {"id": 14, "hotkey": 103}],
+  "$fileid": 12
+}
+,
+
+{
+  "text": "Barbarian Assault lobby",
+  "lines": [
+    {"id": 291, "hotkey": 0},
+    {"id": 292, "hotkey": 0},
+    {"id": 293, "hotkey": 0},
+    {"id": 294, "hotkey": 0},
+    {"id": 295, "hotkey": 0},
+    {"id": 296, "hotkey": 0},
+    {"id": 297, "hotkey": 0}
+  ],
+  "$fileid": 13
+}
+,
+
+{
+  "text": "Barbarian Assault game",
+  "subcategories": [{"id": 128, "hotkey": 109}],
+  "lines": [
+    {"id": 298, "hotkey": 0},
+    {"id": 299, "hotkey": 0},
+    {"id": 300, "hotkey": 0},
+    {"id": 301, "hotkey": 0},
+    {"id": 302, "hotkey": 0},
+    {"id": 791, "hotkey": 0},
+    {"id": 795, "hotkey": 0},
+    {"id": 799, "hotkey": 0}
+  ],
+  "$fileid": 14
+}
+,
+
+{
+  "text": "Castle Wars",
+  "subcategories": [
+    {"id": 16, "hotkey": 108},
+    {"id": 17, "hotkey": 103},
+    {"id": 18, "hotkey": 116},
+    {"id": 19, "hotkey": 111}
+  ],
+  "$fileid": 15
+}
+,
+
+{
+  "text": "Castle Wars lobby",
+  "lines": [
+    {"id": 304, "hotkey": 0},
+    {"id": 305, "hotkey": 0},
+    {"id": 306, "hotkey": 0},
+    {"id": 307, "hotkey": 0},
+    {"id": 308, "hotkey": 0}
+  ],
+  "$fileid": 16
+}
+,
+
+{
+  "text": "Castle Wars game",
+  "lines": [
+    {"id": 309, "hotkey": 0},
+    {"id": 310, "hotkey": 0},
+    {"id": 312, "hotkey": 0},
+    {"id": 311, "hotkey": 0}
+  ],
+  "$fileid": 17
+}
+,
+
+{
+  "text": "Castle Wars tactics",
+  "lines": [
+    {"id": 313, "hotkey": 0},
+    {"id": 314, "hotkey": 0},
+    {"id": 315, "hotkey": 0},
+    {"id": 316, "hotkey": 0},
+    {"id": 317, "hotkey": 0},
+    {"id": 318, "hotkey": 0},
+    {"id": 319, "hotkey": 0},
+    {"id": 320, "hotkey": 0}
+  ],
+  "$fileid": 18
+}
+,
+
+{
+  "text": "Locations",
+  "lines": [
+    {"id": 321, "hotkey": 0},
+    {"id": 322, "hotkey": 0},
+    {"id": 323, "hotkey": 0},
+    {"id": 325, "hotkey": 0},
+    {"id": 326, "hotkey": 0},
+    {"id": 324, "hotkey": 0}
+  ],
+  "$fileid": 19
+}
+,
+
+{
+  "text": "Clan Wars",
+  "subcategories": [
+    {"id": 119, "hotkey": 115},
+    {"id": 21, "hotkey": 111},
+    {"id": 22, "hotkey": 100}
+  ],
+  "lines": [
+    {"id": 836, "hotkey": 0},
+    {"id": 504, "hotkey": 0},
+    {"id": 329, "hotkey": 0},
+    {"id": 328, "hotkey": 0},
+    {"id": 327, "hotkey": 0}
+  ],
+  "$fileid": 20
+}
+,
+
+{
+  "text": "Clan Wars offence",
+  "lines": [
+    {"id": 330, "hotkey": 0},
+    {"id": 331, "hotkey": 0},
+    {"id": 332, "hotkey": 0},
+    {"id": 333, "hotkey": 0},
+    {"id": 334, "hotkey": 0},
+    {"id": 838, "hotkey": 0},
+    {"id": 839, "hotkey": 0}
+  ],
+  "$fileid": 21
+}
+,
+
+{
+  "text": "Clan Wars defence",
+  "lines": [
+    {"id": 335, "hotkey": 0},
+    {"id": 336, "hotkey": 0},
+    {"id": 337, "hotkey": 0},
+    {"id": 338, "hotkey": 0},
+    {"id": 339, "hotkey": 0},
+    {"id": 340, "hotkey": 0},
+    {"id": 837, "hotkey": 0}
+  ],
+  "$fileid": 22
+}
+,
+
+{
+  "text": "Duel Arena",
+  "subcategories": [{"id": 24, "hotkey": 108}, {"id": 25, "hotkey": 103}],
+  "$fileid": 23
+}
+,
+
+{
+  "text": "Duel Arena lobby",
+  "lines": [
+    {"id": 341, "hotkey": 0},
+    {"id": 342, "hotkey": 0},
+    {"id": 343, "hotkey": 0},
+    {"id": 344, "hotkey": 0},
+    {"id": 345, "hotkey": 0},
+    {"id": 346, "hotkey": 0},
+    {"id": 347, "hotkey": 0},
+    {"id": 348, "hotkey": 0}
+  ],
+  "$fileid": 24
+}
+,
+
+{
+  "text": "Duelling",
+  "lines": [
+    {"id": 349, "hotkey": 0},
+    {"id": 350, "hotkey": 0},
+    {"id": 351, "hotkey": 0},
+    {"id": 352, "hotkey": 0},
+    {"id": 211, "hotkey": 0}
+  ],
+  "$fileid": 25
+}
+,
+
+{
+  "text": "Fist of Guthix",
+  "subcategories": [
+    {"id": 27, "hotkey": 99},
+    {"id": 28, "hotkey": 100},
+    {"id": 29, "hotkey": 114}
+  ],
+  "$fileid": 26
+}
+,
+
+{
+  "text": "Fist of Guthix lobby",
+  "lines": [
+    {"id": 353, "hotkey": 0},
+    {"id": 354, "hotkey": 0},
+    {"id": 355, "hotkey": 0},
+    {"id": 356, "hotkey": 0}
+  ],
+  "$fileid": 27
+}
+,
+
+{
+  "text": "Fist of Guthix hunted",
+  "lines": [
+    {"id": 357, "hotkey": 0},
+    {"id": 358, "hotkey": 0},
+    {"id": 359, "hotkey": 0},
+    {"id": 360, "hotkey": 0},
+    {"id": 361, "hotkey": 0}
+  ],
+  "$fileid": 28
+}
+,
+
+{
+  "text": "Fist of Guthix hunter",
+  "lines": [
+    {"id": 231, "hotkey": 0},
+    {"id": 362, "hotkey": 0},
+    {"id": 363, "hotkey": 0}
+  ],
+  "$fileid": 29
+}
+,
+
+{
+  "text": "Pest Control",
+  "subcategories": [
+    {"id": 31, "hotkey": 98},
+    {"id": 32, "hotkey": 103},
+    {"id": 33, "hotkey": 112}
+  ],
+  "$fileid": 30
+}
+,
+
+{
+  "text": "Pest Control landers",
+  "lines": [
+    {"id": 364, "hotkey": 0},
+    {"id": 365, "hotkey": 0},
+    {"id": 366, "hotkey": 0},
+    {"id": 367, "hotkey": 0},
+    {"id": 368, "hotkey": 0},
+    {"id": 369, "hotkey": 0},
+    {"id": 813, "hotkey": 0}
+  ],
+  "$fileid": 31
+}
+,
+
+{
+  "text": "Pest Control game",
+  "lines": [
+    {"id": 370, "hotkey": 0},
+    {"id": 371, "hotkey": 0},
+    {"id": 372, "hotkey": 0},
+    {"id": 373, "hotkey": 0},
+    {"id": 374, "hotkey": 0},
+    {"id": 375, "hotkey": 0},
+    {"id": 376, "hotkey": 0},
+    {"id": 377, "hotkey": 0}
+  ],
+  "$fileid": 32
+}
+,
+
+{
+  "text": "Pest Control pests",
+  "lines": [
+    {"id": 378, "hotkey": 0},
+    {"id": 379, "hotkey": 0},
+    {"id": 380, "hotkey": 0},
+    {"id": 381, "hotkey": 0},
+    {"id": 382, "hotkey": 0},
+    {"id": 383, "hotkey": 0},
+    {"id": 384, "hotkey": 0}
+  ],
+  "$fileid": 33
+}
+,
+
+{
+  "text": "Fight Pits",
+  "lines": [
+    {"id": 204, "hotkey": 0},
+    {"id": 385, "hotkey": 0},
+    {"id": 386, "hotkey": 0},
+    {"id": 387, "hotkey": 0},
+    {"id": 388, "hotkey": 0},
+    {"id": 389, "hotkey": 0},
+    {"id": 390, "hotkey": 0}
+  ],
+  "$fileid": 34
+}
+,
+
+{
+  "text": "Fun stuff",
+  "subcategories": [
+    {"id": 36, "hotkey": 98},
+    {"id": 37, "hotkey": 104},
+    {"id": 42, "hotkey": 103},
+    {"id": 43, "hotkey": 112},
+    {"id": 44, "hotkey": 116},
+    {"id": 132, "hotkey": 100}
+  ],
+  "$fileid": 35
+}
+,
+
+{
+  "text": "Games Room games",
+  "lines": [
+    {"id": 391, "hotkey": 0},
+    {"id": 392, "hotkey": 0},
+    {"id": 393, "hotkey": 0},
+    {"id": 815, "hotkey": 0},
+    {"id": 816, "hotkey": 0},
+    {"id": 817, "hotkey": 0},
+    {"id": 201, "hotkey": 0}
+  ],
+  "$fileid": 36
+}
+,
+
+{
+  "text": "Player-owned houses",
+  "subcategories": [
+    {"id": 38, "hotkey": 97},
+    {"id": 39, "hotkey": 103},
+    {"id": 40, "hotkey": 99},
+    {"id": 41, "hotkey": 100}
+  ],
+  "$fileid": 37
+}
+,
+
+{
+  "text": "POH general",
+  "lines": [
+    {"id": 394, "hotkey": 0},
+    {"id": 395, "hotkey": 0},
+    {"id": 396, "hotkey": 0},
+    {"id": 397, "hotkey": 0},
+    {"id": 398, "hotkey": 0},
+    {"id": 399, "hotkey": 0},
+    {"id": 400, "hotkey": 0},
+    {"id": 401, "hotkey": 0},
+    {"id": 818, "hotkey": 0},
+    {"id": 819, "hotkey": 0}
+  ],
+  "$fileid": 38
+}
+,
+
+{
+  "text": "POH games room",
+  "lines": [
+    {"id": 402, "hotkey": 0},
+    {"id": 403, "hotkey": 0},
+    {"id": 404, "hotkey": 0},
+    {"id": 405, "hotkey": 0},
+    {"id": 406, "hotkey": 0},
+    {"id": 407, "hotkey": 0},
+    {"id": 408, "hotkey": 0}
+  ],
+  "$fileid": 39
+}
+,
+
+{
+  "text": "POH combat room",
+  "lines": [
+    {"id": 409, "hotkey": 0},
+    {"id": 410, "hotkey": 0},
+    {"id": 411, "hotkey": 0},
+    {"id": 412, "hotkey": 0},
+    {"id": 413, "hotkey": 0}
+  ],
+  "$fileid": 40
+}
+,
+
+{
+  "text": "POH dungeon",
+  "lines": [
+    {"id": 414, "hotkey": 0},
+    {"id": 415, "hotkey": 0},
+    {"id": 416, "hotkey": 0},
+    {"id": 417, "hotkey": 0},
+    {"id": 418, "hotkey": 0}
+  ],
+  "$fileid": 41
+}
+,
+
+{
+  "text": "Gnome Ball",
+  "lines": [
+    {"id": 419, "hotkey": 0},
+    {"id": 420, "hotkey": 0},
+    {"id": 421, "hotkey": 0},
+    {"id": 422, "hotkey": 0}
+  ],
+  "$fileid": 42
+}
+,
+
+{
+  "text": "Falador Party Room",
+  "lines": [
+    {"id": 423, "hotkey": 0},
+    {"id": 424, "hotkey": 0},
+    {"id": 425, "hotkey": 0},
+    {"id": 426, "hotkey": 0},
+    {"id": 427, "hotkey": 0},
+    {"id": 428, "hotkey": 0},
+    {"id": 429, "hotkey": 0},
+    {"id": 430, "hotkey": 0}
+  ],
+  "$fileid": 43
+}
+,
+
+{
+  "text": "Treasure Trails",
+  "lines": [
+    {"id": 431, "hotkey": 0},
+    {"id": 428, "hotkey": 0},
+    {"id": 427, "hotkey": 0}
+  ],
+  "$fileid": 44
+}
+,
+
+{
+  "text": "Quests",
+  "subcategories": [
+    {"id": 46, "hotkey": 103},
+    {"id": 47, "hotkey": 104},
+    {"id": 48, "hotkey": 115}
+  ],
+  "$fileid": 45
+}
+,
+
+{
+  "text": "Gangs",
+  "lines": [
+    {"id": 432, "hotkey": 0},
+    {"id": 433, "hotkey": 0},
+    {"id": 434, "hotkey": 0},
+    {"id": 435, "hotkey": 0}
+  ],
+  "$fileid": 46
+}
+,
+
+{
+  "text": "Heroes' Quest",
+  "lines": [
+    {"id": 436, "hotkey": 0},
+    {"id": 437, "hotkey": 0},
+    {"id": 438, "hotkey": 0},
+    {"id": 439, "hotkey": 0},
+    {"id": 440, "hotkey": 0},
+    {"id": 441, "hotkey": 0},
+    {"id": 442, "hotkey": 0},
+    {"id": 443, "hotkey": 0}
+  ],
+  "$fileid": 47
+}
+,
+
+{
+  "text": "Shield of Arrav",
+  "lines": [
+    {"id": 444, "hotkey": 0},
+    {"id": 446, "hotkey": 0},
+    {"id": 442, "hotkey": 0},
+    {"id": 443, "hotkey": 0}
+  ],
+  "$fileid": 48
+}
+,
+
+{
+  "text": "Skill-based minigames",
+  "subcategories": [
+    {"id": 50, "hotkey": 98},
+    {"id": 51, "hotkey": 102},
+    {"id": 52, "hotkey": 115},
+    {"id": 53, "hotkey": 116},
+    {"id": 118, "hotkey": 111},
+    {"id": 121, "hotkey": 99}
+  ],
+  "$fileid": 49
+}
+,
+
+{
+  "text": "Blast Furnace",
+  "lines": [
+    {"id": 447, "hotkey": 0},
+    {"id": 448, "hotkey": 0},
+    {"id": 449, "hotkey": 0},
+    {"id": 450, "hotkey": 0},
+    {"id": 451, "hotkey": 0},
+    {"id": 452, "hotkey": 0},
+    {"id": 453, "hotkey": 0},
+    {"id": 454, "hotkey": 0}
+  ],
+  "$fileid": 50
+}
+,
+
+{
+  "text": "Fishing Trawler",
+  "lines": [
+    {"id": 455, "hotkey": 0},
+    {"id": 456, "hotkey": 0},
+    {"id": 457, "hotkey": 0},
+    {"id": 458, "hotkey": 0},
+    {"id": 459, "hotkey": 0}
+  ],
+  "$fileid": 51
+}
+,
+
+{
+  "text": "Shades of Mort'ton",
+  "lines": [
+    {"id": 460, "hotkey": 0},
+    {"id": 461, "hotkey": 0},
+    {"id": 462, "hotkey": 0},
+    {"id": 463, "hotkey": 0},
+    {"id": 464, "hotkey": 0},
+    {"id": 465, "hotkey": 0}
+  ],
+  "$fileid": 52
+}
+,
+
+{
+  "text": "Trouble Brewing",
+  "subcategories": [
+    {"id": 54, "hotkey": 108},
+    {"id": 55, "hotkey": 109},
+    {"id": 56, "hotkey": 115},
+    {"id": 57, "hotkey": 114}
+  ],
+  "$fileid": 53
+}
+,
+
+{
+  "text": "Trouble Brewing lobby",
+  "lines": [{"id": 466, "hotkey": 0}, {"id": 467, "hotkey": 0}],
+  "$fileid": 54
+}
+,
+
+{
+  "text": "Making rum",
+  "lines": [
+    {"id": 468, "hotkey": 0},
+    {"id": 469, "hotkey": 0},
+    {"id": 470, "hotkey": 0},
+    {"id": 471, "hotkey": 0},
+    {"id": 472, "hotkey": 0},
+    {"id": 473, "hotkey": 0},
+    {"id": 474, "hotkey": 0}
+  ],
+  "$fileid": 55
+}
+,
+
+{
+  "text": "Sabotage",
+  "lines": [
+    {"id": 475, "hotkey": 0},
+    {"id": 476, "hotkey": 0},
+    {"id": 477, "hotkey": 0},
+    {"id": 478, "hotkey": 0}
+  ],
+  "$fileid": 56
+}
+,
+
+{
+  "text": "Repair",
+  "lines": [
+    {"id": 479, "hotkey": 0},
+    {"id": 480, "hotkey": 0},
+    {"id": 481, "hotkey": 0},
+    {"id": 482, "hotkey": 0}
+  ],
+  "$fileid": 57
+}
+,
+
+{
+  "text": "General",
+  "subcategories": [
+    {"id": 59, "hotkey": 114},
+    {"id": 60, "hotkey": 104},
+    {"id": 61, "hotkey": 103},
+    {"id": 62, "hotkey": 99},
+    {"id": 64, "hotkey": 115},
+    {"id": 63, "hotkey": 109},
+    {"id": 65, "hotkey": 98},
+    {"id": 157, "hotkey": 112},
+    {"id": 69, "hotkey": 111},
+    {"id": 70, "hotkey": 101},
+    {"id": 71, "hotkey": 100},
+    {"id": 74, "hotkey": 97},
+    {"id": 152, "hotkey": 110},
+    {"id": 156, "hotkey": 113}
+  ],
+  "lines": [{"id": 759, "hotkey": 0}],
+  "$fileid": 58
+}
+,
+
+{
+  "text": "Responses",
+  "subcategories": [{"id": 135, "hotkey": 109}],
+  "lines": [
+    {"id": 153, "hotkey": 0},
+    {"id": 154, "hotkey": 0},
+    {"id": 661, "hotkey": 0},
+    {"id": 156, "hotkey": 0},
+    {"id": 157, "hotkey": 0},
+    {"id": 158, "hotkey": 0},
+    {"id": 159, "hotkey": 0},
+    {"id": 160, "hotkey": 0},
+    {"id": 155, "hotkey": 0}
+  ],
+  "$fileid": 59
+}
+,
+
+{
+  "text": "Hello",
+  "subcategories": [{"id": 137, "hotkey": 109}],
+  "lines": [
+    {"id": 147, "hotkey": 0},
+    {"id": 148, "hotkey": 0},
+    {"id": 149, "hotkey": 0},
+    {"id": 150, "hotkey": 0},
+    {"id": 151, "hotkey": 0},
+    {"id": 642, "hotkey": 0},
+    {"id": 643, "hotkey": 0},
+    {"id": 644, "hotkey": 0},
+    {"id": 645, "hotkey": 0}
+  ],
+  "$fileid": 60
+}
+,
+
+{
+  "text": "Goodbye",
+  "subcategories": [{"id": 140, "hotkey": 109}],
+  "lines": [
+    {"id": 161, "hotkey": 0},
+    {"id": 162, "hotkey": 0},
+    {"id": 163, "hotkey": 0},
+    {"id": 164, "hotkey": 0},
+    {"id": 165, "hotkey": 0},
+    {"id": 166, "hotkey": 0},
+    {"id": 670, "hotkey": 0},
+    {"id": 671, "hotkey": 0},
+    {"id": 672, "hotkey": 0}
+  ],
+  "$fileid": 61
+}
+,
+
+{
+  "text": "Comments",
+  "subcategories": [
+    {"id": 141, "hotkey": 103},
+    {"id": 142, "hotkey": 101},
+    {"id": 143, "hotkey": 108},
+    {"id": 144, "hotkey": 114}
+  ],
+  "$fileid": 62
+}
+,
+
+{
+  "text": "Mood",
+  "lines": [
+    {"id": 177, "hotkey": 0},
+    {"id": 178, "hotkey": 0},
+    {"id": 179, "hotkey": 0},
+    {"id": 180, "hotkey": 0},
+    {"id": 181, "hotkey": 0},
+    {"id": 182, "hotkey": 0},
+    {"id": 175, "hotkey": 0},
+    {"id": 176, "hotkey": 0}
+  ],
+  "$fileid": 63
+}
+,
+
+{
+  "text": "Smilies",
+  "subcategories": [{"id": 145, "hotkey": 109}],
+  "lines": [
+    {"id": 183, "hotkey": 0},
+    {"id": 184, "hotkey": 0},
+    {"id": 185, "hotkey": 0},
+    {"id": 186, "hotkey": 0},
+    {"id": 187, "hotkey": 0},
+    {"id": 188, "hotkey": 0},
+    {"id": 189, "hotkey": 0}
+  ],
+  "$fileid": 64
+}
+,
+
+{
+  "text": "Banter",
+  "subcategories": [
+    {"id": 66, "hotkey": 98},
+    {"id": 67, "hotkey": 116},
+    {"id": 68, "hotkey": 114}
+  ],
+  "$fileid": 65
+}
+,
+
+{
+  "text": "Basics",
+  "lines": [
+    {"id": 191, "hotkey": 0},
+    {"id": 192, "hotkey": 0},
+    {"id": 193, "hotkey": 0},
+    {"id": 194, "hotkey": 0},
+    {"id": 195, "hotkey": 0},
+    {"id": 196, "hotkey": 0}
+  ],
+  "$fileid": 66
+}
+,
+
+{
+  "text": "Taunts",
+  "subcategories": [{"id": 146, "hotkey": 109}],
+  "lines": [
+    {"id": 197, "hotkey": 0},
+    {"id": 198, "hotkey": 0},
+    {"id": 199, "hotkey": 0},
+    {"id": 200, "hotkey": 0},
+    {"id": 201, "hotkey": 0},
+    {"id": 202, "hotkey": 0}
+  ],
+  "$fileid": 67
+}
+,
+
+{
+  "text": "Ripostes",
+  "lines": [
+    {"id": 203, "hotkey": 0},
+    {"id": 204, "hotkey": 0},
+    {"id": 205, "hotkey": 0},
+    {"id": 206, "hotkey": 0},
+    {"id": 207, "hotkey": 0},
+    {"id": 208, "hotkey": 0}
+  ],
+  "$fileid": 68
+}
+,
+
+{
+  "text": "Compliments",
+  "subcategories": [{"id": 147, "hotkey": 103}, {"id": 148, "hotkey": 105}],
+  "$fileid": 69
+}
+,
+
+{
+  "text": "Help",
+  "subcategories": [{"id": 149, "hotkey": 103}, {"id": 150, "hotkey": 115}],
+  "$fileid": 70
+}
+,
+
+{
+  "text": "Directions",
+  "subcategories": [{"id": 72, "hotkey": 113}, {"id": 73, "hotkey": 115}],
+  "$fileid": 71
+}
+,
+
+{
+  "text": "Queries",
+  "lines": [
+    {"id": 224, "hotkey": 0},
+    {"id": 225, "hotkey": 0},
+    {"id": 229, "hotkey": 0},
+    {"id": 231, "hotkey": 0},
+    {"id": 232, "hotkey": 0},
+    {"id": 704, "hotkey": 0},
+    {"id": 705, "hotkey": 0}
+  ],
+  "$fileid": 72
+}
+,
+
+{
+  "text": "Statements",
+  "lines": [
+    {"id": 233, "hotkey": 0},
+    {"id": 226, "hotkey": 0},
+    {"id": 227, "hotkey": 0},
+    {"id": 230, "hotkey": 0},
+    {"id": 234, "hotkey": 0},
+    {"id": 228, "hotkey": 0}
+  ],
+  "$fileid": 73
+}
+,
+
+{
+  "text": "Activities",
+  "subcategories": [{"id": 151, "hotkey": 109}],
+  "lines": [
+    {"id": 235, "hotkey": 0},
+    {"id": 236, "hotkey": 0},
+    {"id": 237, "hotkey": 0},
+    {"id": 238, "hotkey": 0},
+    {"id": 239, "hotkey": 0},
+    {"id": 240, "hotkey": 0},
+    {"id": 547, "hotkey": 0},
+    {"id": 709, "hotkey": 0},
+    {"id": 710, "hotkey": 0}
+  ],
+  "$fileid": 74
+}
+,
+
+{
+  "text": "Trade/Items",
+  "subcategories": [
+    {"id": 76, "hotkey": 116},
+    {"id": 80, "hotkey": 105},
+    {"id": 116, "hotkey": 108}
+  ],
+  "$fileid": 75
+}
+,
+
+{
+  "text": "Trade",
+  "subcategories": [
+    {"id": 77, "hotkey": 98},
+    {"id": 78, "hotkey": 115},
+    {"id": 79, "hotkey": 114}
+  ],
+  "$fileid": 76
+}
+,
+
+{
+  "text": "Buying",
+  "lines": [
+    {"id": 483, "hotkey": 0},
+    {"id": 484, "hotkey": 0},
+    {"id": 485, "hotkey": 0},
+    {"id": 486, "hotkey": 0},
+    {"id": 487, "hotkey": 0},
+    {"id": 861, "hotkey": 0},
+    {"id": 862, "hotkey": 0},
+    {"id": 860, "hotkey": 0}
+  ],
+  "$fileid": 77
+}
+,
+
+{
+  "text": "Selling",
+  "lines": [
+    {"id": 488, "hotkey": 0},
+    {"id": 489, "hotkey": 0},
+    {"id": 490, "hotkey": 0},
+    {"id": 491, "hotkey": 0},
+    {"id": 492, "hotkey": 0},
+    {"id": 859, "hotkey": 0},
+    {"id": 860, "hotkey": 0},
+    {"id": 493, "hotkey": 0}
+  ],
+  "$fileid": 78
+}
+,
+
+{
+  "text": "Bartering",
+  "lines": [
+    {"id": 494, "hotkey": 0},
+    {"id": 495, "hotkey": 0},
+    {"id": 496, "hotkey": 0},
+    {"id": 497, "hotkey": 0},
+    {"id": 498, "hotkey": 0},
+    {"id": 499, "hotkey": 0}
+  ],
+  "$fileid": 79
+}
+,
+
+{
+  "text": "Items",
+  "lines": [
+    {"id": 500, "hotkey": 0},
+    {"id": 501, "hotkey": 0},
+    {"id": 503, "hotkey": 0},
+    {"id": 504, "hotkey": 0},
+    {"id": 505, "hotkey": 0},
+    {"id": 506, "hotkey": 0},
+    {"id": 229, "hotkey": 0}
+  ],
+  "$fileid": 80
+}
+,
+
+{
+  "text": "Clans",
+  "subcategories": [
+    {"id": 82, "hotkey": 113},
+    {"id": 83, "hotkey": 115},
+    {"id": 84, "hotkey": 112}
+  ],
+  "$fileid": 81
+}
+,
+
+{
+  "text": "Queries",
+  "lines": [
+    {"id": 524, "hotkey": 0},
+    {"id": 525, "hotkey": 0},
+    {"id": 526, "hotkey": 0},
+    {"id": 527, "hotkey": 0}
+  ],
+  "$fileid": 82
+}
+,
+
+{
+  "text": "Statements",
+  "lines": [
+    {"id": 528, "hotkey": 0},
+    {"id": 529, "hotkey": 0},
+    {"id": 866, "hotkey": 0}
+  ],
+  "$fileid": 83
+}
+,
+
+{
+  "text": "Preparation",
+  "lines": [
+    {"id": 530, "hotkey": 0},
+    {"id": 531, "hotkey": 0},
+    {"id": 532, "hotkey": 0},
+    {"id": 533, "hotkey": 0},
+    {"id": 534, "hotkey": 0},
+    {"id": 535, "hotkey": 0},
+    {"id": 536, "hotkey": 0},
+    {"id": 537, "hotkey": 0}
+  ],
+  "$fileid": 84
+}
+,
+
+{
+  "text": "Quick Chat",
+  "subcategories": [
+    {"id": 58, "hotkey": 103},
+    {"id": 75, "hotkey": 116},
+    {"id": 91, "hotkey": 115},
+    {"id": 0, "hotkey": 101},
+    {"id": 81, "hotkey": 99},
+    {"id": 86, "hotkey": 109}
+  ],
+  "$fileid": 85
+}
+,
+
+{
+  "text": "Inter-game",
+  "subcategories": [
+    {"id": 87, "hotkey": 102},
+    {"id": 89, "hotkey": 114},
+    {"id": 162, "hotkey": 119}
+  ],
+  "$fileid": 86
+}
+,
+
+{
+  "text": "FunOrb",
+  "subcategories": [{"id": 88, "hotkey": 103}],
+  "lines": [
+    {"id": 511, "hotkey": 0},
+    {"id": 512, "hotkey": 0},
+    {"id": 513, "hotkey": 0},
+    {"id": 514, "hotkey": 0},
+    {"id": 515, "hotkey": 0}
+  ],
+  "$fileid": 87
+}
+,
+
+{
+  "text": "Games",
+  "lines": [
+    {"id": 507, "hotkey": 0},
+    {"id": 508, "hotkey": 0},
+    {"id": 509, "hotkey": 0},
+    {"id": 510, "hotkey": 0},
+    {"id": 585, "hotkey": 0},
+    {"id": 586, "hotkey": 0},
+    {"id": 587, "hotkey": 0},
+    {"id": 588, "hotkey": 0}
+  ],
+  "$fileid": 88
+}
+,
+
+{
+  "text": "RuneScape",
+  "subcategories": [{"id": 90, "hotkey": 103}],
+  "lines": [{"id": 516, "hotkey": 0}, {"id": 517, "hotkey": 0}],
+  "$fileid": 89
+}
+,
+
+{
+  "text": "Mini-games",
+  "lines": [
+    {"id": 518, "hotkey": 0},
+    {"id": 519, "hotkey": 0},
+    {"id": 520, "hotkey": 0},
+    {"id": 521, "hotkey": 0},
+    {"id": 522, "hotkey": 0},
+    {"id": 523, "hotkey": 0},
+    {"id": 840, "hotkey": 0}
+  ],
+  "$fileid": 90
+}
+,
+
+{
+  "text": "Skills",
+  "subcategories": [
+    {"id": 92, "hotkey": 97},
+    {"id": 93, "hotkey": 122},
+    {"id": 94, "hotkey": 99},
+    {"id": 95, "hotkey": 118},
+    {"id": 96, "hotkey": 120},
+    {"id": 97, "hotkey": 100},
+    {"id": 98, "hotkey": 102},
+    {"id": 99, "hotkey": 112},
+    {"id": 100, "hotkey": 119},
+    {"id": 101, "hotkey": 101},
+    {"id": 102, "hotkey": 104},
+    {"id": 103, "hotkey": 108},
+    {"id": 104, "hotkey": 117},
+    {"id": 105, "hotkey": 109},
+    {"id": 106, "hotkey": 105},
+    {"id": 107, "hotkey": 121},
+    {"id": 109, "hotkey": 114},
+    {"id": 108, "hotkey": 110},
+    {"id": 110, "hotkey": 115},
+    {"id": 111, "hotkey": 98},
+    {"id": 112, "hotkey": 103},
+    {"id": 113, "hotkey": 111},
+    {"id": 114, "hotkey": 116},
+    {"id": 115, "hotkey": 106}
+  ],
+  "$fileid": 91
+}
+,
+
+{
+  "text": "Agility",
+  "lines": [
+    {"id": 0, "hotkey": 0},
+    {"id": 1, "hotkey": 0},
+    {"id": 2, "hotkey": 0},
+    {"id": 3, "hotkey": 0},
+    {"id": 4, "hotkey": 0},
+    {"id": 5, "hotkey": 0},
+    {"id": 6, "hotkey": 0},
+    {"id": 615, "hotkey": 0}
+  ],
+  "$fileid": 92
+}
+,
+
+{
+  "text": "Attack",
+  "lines": [
+    {"id": 7, "hotkey": 0},
+    {"id": 8, "hotkey": 0},
+    {"id": 9, "hotkey": 0},
+    {"id": 10, "hotkey": 0},
+    {"id": 11, "hotkey": 0},
+    {"id": 616, "hotkey": 0}
+  ],
+  "$fileid": 93
+}
+,
+
+{
+  "text": "Construction",
+  "lines": [
+    {"id": 12, "hotkey": 0},
+    {"id": 13, "hotkey": 0},
+    {"id": 14, "hotkey": 0},
+    {"id": 617, "hotkey": 0}
+  ],
+  "$fileid": 94
+}
+,
+
+{
+  "text": "Cooking",
+  "lines": [
+    {"id": 15, "hotkey": 0},
+    {"id": 16, "hotkey": 0},
+    {"id": 17, "hotkey": 0},
+    {"id": 18, "hotkey": 0},
+    {"id": 19, "hotkey": 0},
+    {"id": 20, "hotkey": 0},
+    {"id": 21, "hotkey": 0},
+    {"id": 618, "hotkey": 0}
+  ],
+  "$fileid": 95
+}
+,
+
+{
+  "text": "Crafting",
+  "lines": [
+    {"id": 22, "hotkey": 0},
+    {"id": 23, "hotkey": 0},
+    {"id": 24, "hotkey": 0},
+    {"id": 25, "hotkey": 0},
+    {"id": 26, "hotkey": 0},
+    {"id": 27, "hotkey": 0},
+    {"id": 28, "hotkey": 0},
+    {"id": 619, "hotkey": 0}
+  ],
+  "$fileid": 96
+}
+,
+
+{
+  "text": "Defence",
+  "lines": [
+    {"id": 29, "hotkey": 0},
+    {"id": 30, "hotkey": 0},
+    {"id": 31, "hotkey": 0},
+    {"id": 32, "hotkey": 0},
+    {"id": 11, "hotkey": 0},
+    {"id": 620, "hotkey": 0}
+  ],
+  "$fileid": 97
+}
+,
+
+{
+  "text": "Farming",
+  "lines": [
+    {"id": 33, "hotkey": 0},
+    {"id": 34, "hotkey": 0},
+    {"id": 35, "hotkey": 0},
+    {"id": 36, "hotkey": 0},
+    {"id": 37, "hotkey": 0},
+    {"id": 38, "hotkey": 0},
+    {"id": 39, "hotkey": 0},
+    {"id": 621, "hotkey": 0}
+  ],
+  "$fileid": 98
+}
+,
+
+{
+  "text": "Firemaking",
+  "lines": [
+    {"id": 40, "hotkey": 0},
+    {"id": 41, "hotkey": 0},
+    {"id": 42, "hotkey": 0},
+    {"id": 43, "hotkey": 0},
+    {"id": 44, "hotkey": 0},
+    {"id": 45, "hotkey": 0},
+    {"id": 622, "hotkey": 0}
+  ],
+  "$fileid": 99
+}
+,
+
+{
+  "text": "Fishing",
+  "lines": [
+    {"id": 46, "hotkey": 0},
+    {"id": 47, "hotkey": 0},
+    {"id": 48, "hotkey": 0},
+    {"id": 49, "hotkey": 0},
+    {"id": 50, "hotkey": 0},
+    {"id": 51, "hotkey": 0},
+    {"id": 623, "hotkey": 0},
+    {"id": 53, "hotkey": 0},
+    {"id": 52, "hotkey": 0}
+  ],
+  "$fileid": 100
+}
+,
+
+{
+  "text": "Fletching",
+  "lines": [
+    {"id": 54, "hotkey": 0},
+    {"id": 55, "hotkey": 0},
+    {"id": 56, "hotkey": 0},
+    {"id": 57, "hotkey": 0},
+    {"id": 58, "hotkey": 0},
+    {"id": 59, "hotkey": 0},
+    {"id": 60, "hotkey": 0},
+    {"id": 624, "hotkey": 0}
+  ],
+  "$fileid": 101
+}
+,
+
+{
+  "text": "Herblore",
+  "lines": [
+    {"id": 61, "hotkey": 0},
+    {"id": 62, "hotkey": 0},
+    {"id": 63, "hotkey": 0},
+    {"id": 64, "hotkey": 0},
+    {"id": 65, "hotkey": 0},
+    {"id": 66, "hotkey": 0},
+    {"id": 67, "hotkey": 0},
+    {"id": 625, "hotkey": 0},
+    {"id": 68, "hotkey": 0}
+  ],
+  "$fileid": 102
+}
+,
+
+{
+  "text": "Hitpoints",
+  "lines": [
+    {"id": 69, "hotkey": 0},
+    {"id": 70, "hotkey": 0},
+    {"id": 71, "hotkey": 0},
+    {"id": 72, "hotkey": 0},
+    {"id": 11, "hotkey": 0},
+    {"id": 626, "hotkey": 0}
+  ],
+  "$fileid": 103
+}
+,
+
+{
+  "text": "Hunter",
+  "lines": [
+    {"id": 73, "hotkey": 0},
+    {"id": 74, "hotkey": 0},
+    {"id": 75, "hotkey": 0},
+    {"id": 76, "hotkey": 0},
+    {"id": 77, "hotkey": 0},
+    {"id": 627, "hotkey": 0}
+  ],
+  "$fileid": 104
+}
+,
+
+{
+  "text": "Magic",
+  "lines": [
+    {"id": 134, "hotkey": 0},
+    {"id": 135, "hotkey": 0},
+    {"id": 136, "hotkey": 0},
+    {"id": 137, "hotkey": 0},
+    {"id": 138, "hotkey": 0},
+    {"id": 139, "hotkey": 0},
+    {"id": 140, "hotkey": 0},
+    {"id": 639, "hotkey": 0}
+  ],
+  "$fileid": 105
+}
+,
+
+{
+  "text": "Mining",
+  "lines": [
+    {"id": 126, "hotkey": 0},
+    {"id": 127, "hotkey": 0},
+    {"id": 128, "hotkey": 0},
+    {"id": 129, "hotkey": 0},
+    {"id": 130, "hotkey": 0},
+    {"id": 131, "hotkey": 0},
+    {"id": 132, "hotkey": 0},
+    {"id": 638, "hotkey": 0},
+    {"id": 133, "hotkey": 0}
+  ],
+  "$fileid": 106
+}
+,
+
+{
+  "text": "Prayer",
+  "lines": [
+    {"id": 119, "hotkey": 0},
+    {"id": 120, "hotkey": 0},
+    {"id": 121, "hotkey": 0},
+    {"id": 122, "hotkey": 0},
+    {"id": 123, "hotkey": 0},
+    {"id": 124, "hotkey": 0},
+    {"id": 125, "hotkey": 0},
+    {"id": 637, "hotkey": 0}
+  ],
+  "$fileid": 107
+}
+,
+
+{
+  "text": "Runecrafting",
+  "lines": [
+    {"id": 110, "hotkey": 0},
+    {"id": 111, "hotkey": 0},
+    {"id": 112, "hotkey": 0},
+    {"id": 113, "hotkey": 0},
+    {"id": 114, "hotkey": 0},
+    {"id": 635, "hotkey": 0}
+  ],
+  "$fileid": 108
+}
+,
+
+{
+  "text": "Ranged",
+  "lines": [
+    {"id": 115, "hotkey": 0},
+    {"id": 116, "hotkey": 0},
+    {"id": 117, "hotkey": 0},
+    {"id": 118, "hotkey": 0},
+    {"id": 636, "hotkey": 0}
+  ],
+  "$fileid": 109
+}
+,
+
+{
+  "text": "Slayer",
+  "lines": [
+    {"id": 102, "hotkey": 0},
+    {"id": 103, "hotkey": 0},
+    {"id": 104, "hotkey": 0},
+    {"id": 105, "hotkey": 0},
+    {"id": 106, "hotkey": 0},
+    {"id": 632, "hotkey": 0},
+    {"id": 633, "hotkey": 0},
+    {"id": 634, "hotkey": 0}
+  ],
+  "$fileid": 110
+}
+,
+
+{
+  "text": "Smithing",
+  "lines": [
+    {"id": 95, "hotkey": 0},
+    {"id": 96, "hotkey": 0},
+    {"id": 97, "hotkey": 0},
+    {"id": 98, "hotkey": 0},
+    {"id": 99, "hotkey": 0},
+    {"id": 100, "hotkey": 0},
+    {"id": 101, "hotkey": 0},
+    {"id": 631, "hotkey": 0}
+  ],
+  "$fileid": 111
+}
+,
+
+{
+  "text": "Strength",
+  "lines": [
+    {"id": 91, "hotkey": 0},
+    {"id": 92, "hotkey": 0},
+    {"id": 93, "hotkey": 0},
+    {"id": 94, "hotkey": 0},
+    {"id": 11, "hotkey": 0},
+    {"id": 630, "hotkey": 0}
+  ],
+  "$fileid": 112
+}
+,
+
+{
+  "text": "Summoning",
+  "lines": [
+    {"id": 84, "hotkey": 0},
+    {"id": 85, "hotkey": 0},
+    {"id": 86, "hotkey": 0},
+    {"id": 87, "hotkey": 0},
+    {"id": 88, "hotkey": 0},
+    {"id": 89, "hotkey": 0},
+    {"id": 90, "hotkey": 0},
+    {"id": 629, "hotkey": 0}
+  ],
+  "$fileid": 113
+}
+,
+
+{
+  "text": "Thieving",
+  "lines": [
+    {"id": 78, "hotkey": 0},
+    {"id": 79, "hotkey": 0},
+    {"id": 80, "hotkey": 0},
+    {"id": 81, "hotkey": 0},
+    {"id": 82, "hotkey": 0},
+    {"id": 83, "hotkey": 0},
+    {"id": 628, "hotkey": 0}
+  ],
+  "$fileid": 114
+}
+,
+
+{
+  "text": "Woodcutting",
+  "lines": [
+    {"id": 141, "hotkey": 0},
+    {"id": 142, "hotkey": 0},
+    {"id": 143, "hotkey": 0},
+    {"id": 144, "hotkey": 0},
+    {"id": 145, "hotkey": 0},
+    {"id": 146, "hotkey": 0},
+    {"id": 640, "hotkey": 0}
+  ],
+  "$fileid": 115
+}
+,
+
+{
+  "text": "Item Lending",
+  "lines": [
+    {"id": 502, "hotkey": 0},
+    {"id": 108, "hotkey": 0},
+    {"id": 544, "hotkey": 0},
+    {"id": 545, "hotkey": 0}
+  ],
+  "$fileid": 116
+}
+,
+
+{
+  "text": "The Great Orb Project",
+  "subcategories": [{"id": 133, "hotkey": 109}],
+  "lines": [
+    {"id": 109, "hotkey": 0},
+    {"id": 548, "hotkey": 0},
+    {"id": 549, "hotkey": 0},
+    {"id": 550, "hotkey": 0},
+    {"id": 551, "hotkey": 0},
+    {"id": 552, "hotkey": 0},
+    {"id": 110, "hotkey": 0},
+    {"id": 111, "hotkey": 0}
+  ],
+  "$fileid": 117
+}
+,
+
+{
+  "text": "Runecrafting Guild",
+  "subcategories": [{"id": 134, "hotkey": 109}],
+  "lines": [
+    {"id": 553, "hotkey": 0},
+    {"id": 554, "hotkey": 0},
+    {"id": 555, "hotkey": 0},
+    {"id": 556, "hotkey": 0},
+    {"id": 557, "hotkey": 0},
+    {"id": 558, "hotkey": 0},
+    {"id": 829, "hotkey": 0},
+    {"id": 830, "hotkey": 0}
+  ],
+  "$fileid": 118
+}
+,
+
+{
+  "text": "Clan Wars setup",
+  "subcategories": [{"id": 120, "hotkey": 99}, {"id": 130, "hotkey": 109}],
+  "lines": [
+    {"id": 841, "hotkey": 0},
+    {"id": 842, "hotkey": 0},
+    {"id": 562, "hotkey": 0},
+    {"id": 563, "hotkey": 0},
+    {"id": 564, "hotkey": 0},
+    {"id": 565, "hotkey": 0},
+    {"id": 566, "hotkey": 0}
+  ],
+  "$fileid": 119
+}
+,
+
+{
+  "text": "Clan Wars combat options",
+  "subcategories": [{"id": 131, "hotkey": 109}],
+  "lines": [
+    {"id": 569, "hotkey": 0},
+    {"id": 570, "hotkey": 0},
+    {"id": 571, "hotkey": 0},
+    {"id": 572, "hotkey": 0},
+    {"id": 573, "hotkey": 0},
+    {"id": 574, "hotkey": 0},
+    {"id": 575, "hotkey": 0},
+    {"id": 576, "hotkey": 0},
+    {"id": 577, "hotkey": 0}
+  ],
+  "$fileid": 120
+}
+,
+
+{
+  "text": "Stealing Creation",
+  "subcategories": [{"id": 123, "hotkey": 108}, {"id": 122, "hotkey": 103}],
+  "$fileid": 121
+}
+,
+
+{
+  "text": "Stealing Creation game",
+  "lines": [
+    {"id": 589, "hotkey": 0},
+    {"id": 590, "hotkey": 0},
+    {"id": 591, "hotkey": 0},
+    {"id": 592, "hotkey": 0},
+    {"id": 593, "hotkey": 0},
+    {"id": 595, "hotkey": 0},
+    {"id": 594, "hotkey": 0},
+    {"id": 596, "hotkey": 0},
+    {"id": 597, "hotkey": 0}
+  ],
+  "$fileid": 122
+}
+,
+
+{
+  "text": "Stealing Creation lobby",
+  "subcategories": [
+    {"id": 124, "hotkey": 99},
+    {"id": 125, "hotkey": 115},
+    {"id": 163, "hotkey": 112}
+  ],
+  "$fileid": 123
+}
+,
+
+{
+  "text": "Clans",
+  "lines": [
+    {"id": 524, "hotkey": 0},
+    {"id": 598, "hotkey": 0},
+    {"id": 599, "hotkey": 0},
+    {"id": 600, "hotkey": 0},
+    {"id": 601, "hotkey": 0},
+    {"id": 602, "hotkey": 0}
+  ],
+  "$fileid": 124
+}
+,
+
+{
+  "text": "Skills",
+  "lines": [
+    {"id": 602, "hotkey": 0},
+    {"id": 603, "hotkey": 0},
+    {"id": 604, "hotkey": 0},
+    {"id": 605, "hotkey": 0},
+    {"id": 606, "hotkey": 0},
+    {"id": 607, "hotkey": 0},
+    {"id": 608, "hotkey": 0},
+    {"id": 609, "hotkey": 0}
+  ],
+  "$fileid": 125
+}
+,
+
+{
+  "text": "More ways to organise",
+  "lines": [
+    {"id": 248, "hotkey": 0},
+    {"id": 249, "hotkey": 0},
+    {"id": 250, "hotkey": 0}
+  ],
+  "$fileid": 126
+}
+,
+
+{
+  "text": "King Black Dragon",
+  "lines": [
+    {"id": 851, "hotkey": 0},
+    {"id": 852, "hotkey": 0},
+    {"id": 853, "hotkey": 0},
+    {"id": 854, "hotkey": 0},
+    {"id": 855, "hotkey": 0},
+    {"id": 856, "hotkey": 0},
+    {"id": 857, "hotkey": 0},
+    {"id": 858, "hotkey": 0}
+  ],
+  "$fileid": 127
+}
+,
+
+{
+  "text": "More Barbarian Assault",
+  "lines": [
+    {"id": 803, "hotkey": 0},
+    {"id": 804, "hotkey": 0},
+    {"id": 805, "hotkey": 0},
+    {"id": 806, "hotkey": 0},
+    {"id": 807, "hotkey": 0},
+    {"id": 808, "hotkey": 0}
+  ],
+  "$fileid": 128
+}
+,
+
+{
+  "text": "Bounty Hunter game",
+  "lines": [
+    {"id": 843, "hotkey": 0},
+    {"id": 844, "hotkey": 0},
+    {"id": 845, "hotkey": 0},
+    {"id": 846, "hotkey": 0},
+    {"id": 847, "hotkey": 0},
+    {"id": 848, "hotkey": 0},
+    {"id": 849, "hotkey": 0},
+    {"id": 850, "hotkey": 0}
+  ],
+  "$fileid": 129
+}
+,
+
+{
+  "text": "More Clan Wars setup",
+  "lines": [{"id": 567, "hotkey": 0}, {"id": 568, "hotkey": 0}],
+  "$fileid": 130
+}
+,
+
+{
+  "text": "More combat options",
+  "lines": [
+    {"id": 578, "hotkey": 0},
+    {"id": 579, "hotkey": 0},
+    {"id": 580, "hotkey": 0},
+    {"id": 581, "hotkey": 0},
+    {"id": 582, "hotkey": 0},
+    {"id": 583, "hotkey": 0},
+    {"id": 584, "hotkey": 0}
+  ],
+  "$fileid": 131
+}
+,
+
+{
+  "text": "Distractions and Diversions",
+  "lines": [
+    {"id": 820, "hotkey": 0},
+    {"id": 821, "hotkey": 0},
+    {"id": 822, "hotkey": 0},
+    {"id": 823, "hotkey": 0},
+    {"id": 824, "hotkey": 0},
+    {"id": 825, "hotkey": 0}
+  ],
+  "$fileid": 132
+}
+,
+
+{
+  "text": "More Great Orb Project",
+  "lines": [
+    {"id": 831, "hotkey": 0},
+    {"id": 832, "hotkey": 0},
+    {"id": 833, "hotkey": 0},
+    {"id": 834, "hotkey": 0},
+    {"id": 835, "hotkey": 0}
+  ],
+  "$fileid": 133
+}
+,
+
+{
+  "text": "More Runecrafting Guild",
+  "lines": [
+    {"id": 550, "hotkey": 0},
+    {"id": 559, "hotkey": 0},
+    {"id": 560, "hotkey": 0},
+    {"id": 110, "hotkey": 0},
+    {"id": 111, "hotkey": 0}
+  ],
+  "$fileid": 134
+}
+,
+
+{
+  "text": "More responses",
+  "subcategories": [{"id": 136, "hotkey": 109}],
+  "lines": [
+    {"id": 662, "hotkey": 0},
+    {"id": 663, "hotkey": 0},
+    {"id": 664, "hotkey": 0},
+    {"id": 173, "hotkey": 0},
+    {"id": 665, "hotkey": 0},
+    {"id": 666, "hotkey": 0},
+    {"id": 667, "hotkey": 0},
+    {"id": 668, "hotkey": 0}
+  ],
+  "$fileid": 135
+}
+,
+
+{
+  "text": "Even more responses",
+  "lines": [
+    {"id": 669, "hotkey": 0},
+    {"id": 172, "hotkey": 0},
+    {"id": 733, "hotkey": 0},
+    {"id": 734, "hotkey": 0}
+  ],
+  "$fileid": 136
+}
+,
+
+{
+  "text": "More greetings",
+  "subcategories": [{"id": 138, "hotkey": 115}],
+  "lines": [
+    {"id": 646, "hotkey": 0},
+    {"id": 647, "hotkey": 0},
+    {"id": 648, "hotkey": 0},
+    {"id": 649, "hotkey": 0}
+  ],
+  "$fileid": 137
+}
+,
+
+{
+  "text": "Seasonal Greetings",
+  "subcategories": [{"id": 139, "hotkey": 109}],
+  "lines": [
+    {"id": 641, "hotkey": 0},
+    {"id": 650, "hotkey": 0},
+    {"id": 651, "hotkey": 0},
+    {"id": 652, "hotkey": 0},
+    {"id": 653, "hotkey": 0},
+    {"id": 654, "hotkey": 0},
+    {"id": 655, "hotkey": 0},
+    {"id": 656, "hotkey": 0},
+    {"id": 657, "hotkey": 0}
+  ],
+  "$fileid": 138
+}
+,
+
+{
+  "text": "More Seasonal Greetings",
+  "lines": [
+    {"id": 658, "hotkey": 0},
+    {"id": 659, "hotkey": 0},
+    {"id": 660, "hotkey": 0}
+  ],
+  "$fileid": 139
+}
+,
+
+{
+  "text": "More goodbyes",
+  "lines": [
+    {"id": 673, "hotkey": 0},
+    {"id": 674, "hotkey": 0},
+    {"id": 675, "hotkey": 0}
+  ],
+  "$fileid": 140
+}
+,
+
+{
+  "text": "General Comments",
+  "lines": [
+    {"id": 168, "hotkey": 0},
+    {"id": 169, "hotkey": 0},
+    {"id": 174, "hotkey": 0},
+    {"id": 172, "hotkey": 0},
+    {"id": 241, "hotkey": 0},
+    {"id": 752, "hotkey": 0}
+  ],
+  "$fileid": 141
+}
+,
+
+{
+  "text": "Exclamations",
+  "lines": [
+    {"id": 173, "hotkey": 0},
+    {"id": 733, "hotkey": 0},
+    {"id": 734, "hotkey": 0},
+    {"id": 735, "hotkey": 0},
+    {"id": 736, "hotkey": 0},
+    {"id": 737, "hotkey": 0},
+    {"id": 738, "hotkey": 0},
+    {"id": 739, "hotkey": 0},
+    {"id": 740, "hotkey": 0}
+  ],
+  "$fileid": 142
+}
+,
+
+{
+  "text": "Laughs",
+  "lines": [
+    {"id": 722, "hotkey": 0},
+    {"id": 728, "hotkey": 0},
+    {"id": 727, "hotkey": 0},
+    {"id": 741, "hotkey": 0},
+    {"id": 742, "hotkey": 0},
+    {"id": 743, "hotkey": 0},
+    {"id": 744, "hotkey": 0},
+    {"id": 745, "hotkey": 0},
+    {"id": 746, "hotkey": 0}
+  ],
+  "$fileid": 143
+}
+,
+
+{
+  "text": "Requests",
+  "lines": [
+    {"id": 167, "hotkey": 0},
+    {"id": 170, "hotkey": 0},
+    {"id": 171, "hotkey": 0},
+    {"id": 700, "hotkey": 0},
+    {"id": 747, "hotkey": 0},
+    {"id": 748, "hotkey": 0},
+    {"id": 749, "hotkey": 0},
+    {"id": 750, "hotkey": 0},
+    {"id": 751, "hotkey": 0}
+  ],
+  "$fileid": 144
+}
+,
+
+{
+  "text": "More Smilies",
+  "lines": [
+    {"id": 190, "hotkey": 0},
+    {"id": 677, "hotkey": 0},
+    {"id": 678, "hotkey": 0},
+    {"id": 679, "hotkey": 0},
+    {"id": 680, "hotkey": 0},
+    {"id": 681, "hotkey": 0}
+  ],
+  "$fileid": 145
+}
+,
+
+{
+  "text": "More Taunts",
+  "lines": [
+    {"id": 204, "hotkey": 0},
+    {"id": 205, "hotkey": 0},
+    {"id": 683, "hotkey": 0},
+    {"id": 684, "hotkey": 0},
+    {"id": 685, "hotkey": 0},
+    {"id": 686, "hotkey": 0},
+    {"id": 687, "hotkey": 0},
+    {"id": 688, "hotkey": 0}
+  ],
+  "$fileid": 146
+}
+,
+
+{
+  "text": "General compliments",
+  "lines": [
+    {"id": 210, "hotkey": 0},
+    {"id": 211, "hotkey": 0},
+    {"id": 215, "hotkey": 0},
+    {"id": 216, "hotkey": 0},
+    {"id": 214, "hotkey": 0},
+    {"id": 693, "hotkey": 0},
+    {"id": 694, "hotkey": 0},
+    {"id": 695, "hotkey": 0},
+    {"id": 195, "hotkey": 0},
+    {"id": 696, "hotkey": 0}
+  ],
+  "$fileid": 147
+}
+,
+
+{
+  "text": "I like your...",
+  "lines": [
+    {"id": 209, "hotkey": 0},
+    {"id": 212, "hotkey": 0},
+    {"id": 213, "hotkey": 0},
+    {"id": 689, "hotkey": 0},
+    {"id": 690, "hotkey": 0},
+    {"id": 691, "hotkey": 0},
+    {"id": 692, "hotkey": 0}
+  ],
+  "$fileid": 148
+}
+,
+
+{
+  "text": "General Help",
+  "lines": [
+    {"id": 217, "hotkey": 0},
+    {"id": 699, "hotkey": 0},
+    {"id": 700, "hotkey": 0},
+    {"id": 701, "hotkey": 0},
+    {"id": 218, "hotkey": 0},
+    {"id": 702, "hotkey": 0},
+    {"id": 703, "hotkey": 0}
+  ],
+  "$fileid": 149
+}
+,
+
+{
+  "text": "Specific Help",
+  "lines": [
+    {"id": 219, "hotkey": 0},
+    {"id": 220, "hotkey": 0},
+    {"id": 221, "hotkey": 0},
+    {"id": 222, "hotkey": 0},
+    {"id": 223, "hotkey": 0},
+    {"id": 697, "hotkey": 0},
+    {"id": 698, "hotkey": 0}
+  ],
+  "$fileid": 150
+}
+,
+
+{
+  "text": "More activities",
+  "lines": [
+    {"id": 711, "hotkey": 0},
+    {"id": 712, "hotkey": 0},
+    {"id": 713, "hotkey": 0}
+  ],
+  "$fileid": 151
+}
+,
+
+{
+  "text": "Internet speak",
+  "subcategories": [
+    {"id": 153, "hotkey": 97},
+    {"id": 154, "hotkey": 106},
+    {"id": 155, "hotkey": 113}
+  ],
+  "$fileid": 152
+}
+,
+
+{
+  "text": "A through I",
+  "lines": [
+    {"id": 714, "hotkey": 0},
+    {"id": 715, "hotkey": 0},
+    {"id": 716, "hotkey": 0},
+    {"id": 717, "hotkey": 0},
+    {"id": 718, "hotkey": 0},
+    {"id": 719, "hotkey": 0}
+  ],
+  "$fileid": 153
+}
+,
+
+{
+  "text": "J through P",
+  "lines": [
+    {"id": 720, "hotkey": 0},
+    {"id": 721, "hotkey": 0},
+    {"id": 722, "hotkey": 0},
+    {"id": 723, "hotkey": 0},
+    {"id": 724, "hotkey": 0},
+    {"id": 725, "hotkey": 0},
+    {"id": 726, "hotkey": 0}
+  ],
+  "$fileid": 154
+}
+,
+
+{
+  "text": "Q through Z",
+  "lines": [
+    {"id": 727, "hotkey": 0},
+    {"id": 728, "hotkey": 0},
+    {"id": 729, "hotkey": 0},
+    {"id": 730, "hotkey": 0},
+    {"id": 731, "hotkey": 0},
+    {"id": 732, "hotkey": 0}
+  ],
+  "$fileid": 155
+}
+,
+
+{
+  "text": "Quick Chat",
+  "lines": [
+    {"id": 753, "hotkey": 0},
+    {"id": 754, "hotkey": 0},
+    {"id": 755, "hotkey": 0},
+    {"id": 756, "hotkey": 0},
+    {"id": 757, "hotkey": 0},
+    {"id": 758, "hotkey": 0}
+  ],
+  "$fileid": 156
+}
+,
+
+{
+  "text": "Player vs Player",
+  "subcategories": [
+    {"id": 158, "hotkey": 103},
+    {"id": 67, "hotkey": 116},
+    {"id": 159, "hotkey": 115},
+    {"id": 160, "hotkey": 118},
+    {"id": 161, "hotkey": 100}
+  ],
+  "$fileid": 157
+}
+,
+
+{
+  "text": "General",
+  "lines": [
+    {"id": 816, "hotkey": 0},
+    {"id": 193, "hotkey": 0},
+    {"id": 195, "hotkey": 0},
+    {"id": 194, "hotkey": 0},
+    {"id": 196, "hotkey": 0},
+    {"id": 839, "hotkey": 0},
+    {"id": 329, "hotkey": 0},
+    {"id": 682, "hotkey": 0}
+  ],
+  "$fileid": 158
+}
+,
+
+{
+  "text": "Scared",
+  "lines": [
+    {"id": 760, "hotkey": 0},
+    {"id": 761, "hotkey": 0},
+    {"id": 762, "hotkey": 0},
+    {"id": 763, "hotkey": 0},
+    {"id": 764, "hotkey": 0},
+    {"id": 765, "hotkey": 0},
+    {"id": 766, "hotkey": 0}
+  ],
+  "$fileid": 159
+}
+,
+
+{
+  "text": "Victory",
+  "lines": [
+    {"id": 767, "hotkey": 0},
+    {"id": 191, "hotkey": 0},
+    {"id": 768, "hotkey": 0},
+    {"id": 769, "hotkey": 0},
+    {"id": 770, "hotkey": 0},
+    {"id": 771, "hotkey": 0},
+    {"id": 772, "hotkey": 0},
+    {"id": 773, "hotkey": 0}
+  ],
+  "$fileid": 160
+}
+,
+
+{
+  "text": "Defeat",
+  "lines": [
+    {"id": 774, "hotkey": 0},
+    {"id": 775, "hotkey": 0},
+    {"id": 776, "hotkey": 0},
+    {"id": 777, "hotkey": 0},
+    {"id": 778, "hotkey": 0},
+    {"id": 779, "hotkey": 0},
+    {"id": 780, "hotkey": 0},
+    {"id": 781, "hotkey": 0}
+  ],
+  "$fileid": 161
+}
+,
+
+{
+  "text": "Website",
+  "lines": [
+    {"id": 863, "hotkey": 0},
+    {"id": 864, "hotkey": 0},
+    {"id": 865, "hotkey": 0}
+  ],
+  "$fileid": 162
+}
+,
+
+{
+  "text": "Points",
+  "lines": [{"id": 303, "hotkey": 0}, {"id": 611, "hotkey": 0}],
+  "$fileid": 163
+}]}

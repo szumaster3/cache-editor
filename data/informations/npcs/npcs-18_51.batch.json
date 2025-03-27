@@ -1,0 +1,1951 @@
+{"$schema":".schema-npcs_batch.json","files":[
+
+{
+  "animation_group": 47,
+  "boundSize": 1,
+  "unknown_63": true,
+  "combat": 0,
+  "actions_0": "Talk-to",
+  "actions_2": "Exchange",
+  "actions_3": "History",
+  "actions_4": "Sets",
+  "name": "Grand Exchange clerk",
+  "models": [29890, 29887],
+  "headModels": [39131],
+  "movementCapabilities": 1,
+  "$fileid": 6528
+}
+,
+
+{
+  "animation_group": 47,
+  "boundSize": 1,
+  "unknown_63": true,
+  "combat": 0,
+  "actions_0": "Talk-to",
+  "actions_2": "Exchange",
+  "actions_3": "History",
+  "actions_4": "Sets",
+  "name": "Grand Exchange clerk",
+  "models": [29890, 29889],
+  "headModels": [39112],
+  "movementCapabilities": 1,
+  "$fileid": 6529
+}
+,
+
+{
+  "animation_group": 47,
+  "boundSize": 1,
+  "unknown_63": true,
+  "combat": 0,
+  "actions_0": "Talk-to",
+  "actions_2": "Exchange",
+  "actions_3": "History",
+  "actions_4": "Sets",
+  "material_replacements": [[250, 272]],
+  "name": "Grand Exchange clerk",
+  "models": [29908, 29904],
+  "headModels": [40033],
+  "movementCapabilities": 1,
+  "$fileid": 6530
+}
+,
+
+{
+  "animation_group": 47,
+  "boundSize": 1,
+  "unknown_63": true,
+  "combat": 0,
+  "actions_0": "Talk-to",
+  "actions_2": "Exchange",
+  "actions_3": "History",
+  "actions_4": "Sets",
+  "material_replacements": [[250, 272]],
+  "name": "Grand Exchange clerk",
+  "models": [29908, 29903],
+  "headModels": [39713],
+  "movementCapabilities": 1,
+  "$fileid": 6531
+}
+,
+
+{
+  "animation_group": 47,
+  "boundSize": 1,
+  "unknown_63": true,
+  "combat": 0,
+  "actions_0": "Talk-to",
+  "actions_2": "Bank",
+  "actions_3": "Collect",
+  "color_replacements": [
+    [43528, 10275],
+    [47502, 10279],
+    [49420, 10283],
+    [47382, 10287],
+    [47262, 10291],
+    [47267, 10295]
+  ],
+  "material_replacements": [[272, 273], [273, 257], [247, 426]],
+  "name": "Banker",
+  "models": [29890, 29888],
+  "headModels": [39055],
+  "movementCapabilities": 1,
+  "$fileid": 6532
+}
+,
+
+{
+  "animation_group": 47,
+  "boundSize": 1,
+  "unknown_63": true,
+  "combat": 0,
+  "actions_0": "Talk-to",
+  "actions_2": "Bank",
+  "actions_3": "Collect",
+  "color_replacements": [
+    [43528, 10275],
+    [47502, 10279],
+    [49420, 10283],
+    [47382, 10287],
+    [47262, 10291],
+    [47267, 10295]
+  ],
+  "material_replacements": [[272, 273], [273, 257]],
+  "name": "Banker",
+  "models": [29890, 29886],
+  "headModels": [38937],
+  "movementCapabilities": 1,
+  "$fileid": 6533
+}
+,
+
+{
+  "animation_group": 47,
+  "boundSize": 1,
+  "unknown_63": true,
+  "combat": 0,
+  "actions_0": "Talk-to",
+  "actions_2": "Bank",
+  "actions_3": "Collect",
+  "color_replacements": [
+    [43528, 10275],
+    [47502, 10279],
+    [49420, 10283],
+    [47382, 10287],
+    [47262, 10291],
+    [47267, 10295]
+  ],
+  "name": "Banker",
+  "models": [29908, 29904],
+  "headModels": [40033],
+  "movementCapabilities": 1,
+  "$fileid": 6534
+}
+,
+
+{
+  "animation_group": 47,
+  "boundSize": 1,
+  "unknown_63": true,
+  "combat": 0,
+  "actions_0": "Talk-to",
+  "actions_2": "Bank",
+  "actions_3": "Collect",
+  "color_replacements": [
+    [43528, 10275],
+    [47502, 10279],
+    [49420, 10283],
+    [47382, 10287],
+    [47262, 10291],
+    [47267, 10295]
+  ],
+  "name": "Banker",
+  "models": [29908, 29905],
+  "headModels": [39651],
+  "movementCapabilities": 1,
+  "$fileid": 6535
+}
+,
+
+{
+  "animation_group": 388,
+  "ambience": 20,
+  "modelContract": 10,
+  "unknown_67": 0,
+  "combat": 0,
+  "actions_0": "Talk-to",
+  "unknown_63": true,
+  "color_replacements": [[25238, 33030], [12, 33030], [1808, 920]],
+  "name": "Registrar 5",
+  "models": [25655, 215, 246, 10305, 14372, 254, 12082],
+  "headModels": [39466, 39836, 39223],
+  "movementCapabilities": 1,
+  "$fileid": 6536
+}
+,
+
+{
+  "animation_group": 353,
+  "actions_0": "Talk-to",
+  "ambience": 25,
+  "modelContract": 25,
+  "combat": 0,
+  "unknown_63": true,
+  "name": "Mandrith",
+  "models": [30182],
+  "headModels": [40667],
+  "movementCapabilities": 3,
+  "$fileid": 6537
+}
+,
+
+{
+  "animation_group": 26,
+  "boundSize": 1,
+  "ambience": 25,
+  "modelContract": 25,
+  "scaleXZ": 120,
+  "scaleY": 120,
+  "actions_0": "Talk-to",
+  "actions_2": "Bank",
+  "actions_3": "Collect",
+  "combat": 0,
+  "unknown_63": true,
+  "name": "Banker",
+  "models": [33303, 20862, 33301],
+  "headModels": [39933, 39344],
+  "movementCapabilities": 3,
+  "$fileid": 6538
+}
+,
+
+{
+  "animation_group": 93,
+  "combat": 0,
+  "ambience": 25,
+  "modelContract": 25,
+  "actions_0": "Talk-to",
+  "color_replacements": [[8741, 39], [25238, 47], [6798, 70], [103, 57]],
+  "material_replacements": [[228, 426]],
+  "name": "Charley the Cleaner",
+  "models": [210, 27140, 10984, 15412, 10980, 10218, 25689, 271, 8919],
+  "headModels": [39600, 39202],
+  "movementCapabilities": 3,
+  "$fileid": 6539
+}
+,
+
+{
+  "animation_group": 93,
+  "combat": 0,
+  "ambience": 25,
+  "modelContract": 25,
+  "actions_0": "Talk-to",
+  "color_replacements": [[8741, 39], [25238, 47], [6798, 70], [103, 57]],
+  "material_replacements": [[228, 426]],
+  "name": "Scotty the Cleaner",
+  "models": [210, 27140, 10984, 15412, 10980, 10218, 25689, 271, 8919],
+  "headModels": [39600, 39202],
+  "movementCapabilities": 3,
+  "$fileid": 6540
+}
+,
+
+{
+  "animation_group": 93,
+  "combat": 0,
+  "ambience": 25,
+  "modelContract": 25,
+  "actions_0": "Talk-to",
+  "color_replacements": [[8741, 39], [25238, 47], [6798, 70], [103, 57]],
+  "material_replacements": [[228, 426]],
+  "name": "Sanchez the Cleaner",
+  "models": [210, 27140, 10984, 15412, 10980, 10218, 25689, 271, 8919],
+  "headModels": [39600, 39202],
+  "movementCapabilities": 3,
+  "$fileid": 6541
+}
+,
+
+{
+  "animation_group": 217,
+  "actions_0": "Talk-to",
+  "combat": 0,
+  "unknown_63": true,
+  "ambience": 20,
+  "modelContract": 15,
+  "ambient_sound": {
+    "unk1": 5092,
+    "unk2": 5092,
+    "unk3": 5092,
+    "unk4": 5092,
+    "unk45": 2
+  },
+  "name": "Summer Bonde",
+  "models": [41141],
+  "headModels": [40928],
+  "movementCapabilities": 3,
+  "$fileid": 6542
+}
+,
+
+{
+  "drawMapDot": false,
+  "animateIdle": false,
+  "combat": 0,
+  "name": "",
+  "models": [6318],
+  "movementCapabilities": 1,
+  "$fileid": 6543
+}
+,
+
+{
+  "drawMapDot": false,
+  "animateIdle": false,
+  "combat": 0,
+  "name": "",
+  "models": [6318],
+  "movementCapabilities": 1,
+  "$fileid": 6544
+}
+,
+
+{
+  "unknown_6B": false,
+  "animateIdle": false,
+  "combat": 1,
+  "models": [6318],
+  "movementCapabilities": 1,
+  "$fileid": 6545
+}
+,
+
+{
+  "unknown_6B": false,
+  "animateIdle": false,
+  "combat": 1,
+  "models": [6318],
+  "movementCapabilities": 2,
+  "$fileid": 6546
+}
+,
+
+{
+  "unknown_6B": false,
+  "animateIdle": false,
+  "combat": 1,
+  "models": [6318],
+  "movementCapabilities": 2,
+  "$fileid": 6547
+}
+,
+
+{
+  "unknown_6B": false,
+  "animateIdle": false,
+  "combat": 1,
+  "models": [6318],
+  "movementCapabilities": 2,
+  "$fileid": 6548
+}
+,
+
+{
+  "unknown_6B": false,
+  "animateIdle": false,
+  "combat": 1,
+  "models": [6318],
+  "movementCapabilities": 2,
+  "$fileid": 6549
+}
+,
+
+{
+  "unknown_6B": false,
+  "animateIdle": false,
+  "combat": 1,
+  "models": [6318],
+  "movementCapabilities": 2,
+  "$fileid": 6550
+}
+,
+
+{
+  "unknown_6B": false,
+  "animateIdle": false,
+  "combat": 1,
+  "models": [6318],
+  "movementCapabilities": 2,
+  "$fileid": 6551
+}
+,
+
+{
+  "unknown_6B": false,
+  "animateIdle": false,
+  "combat": 1,
+  "models": [6318],
+  "movementCapabilities": 2,
+  "$fileid": 6552
+}
+,
+
+{
+  "unknown_6B": false,
+  "animateIdle": false,
+  "combat": 1,
+  "models": [6318],
+  "movementCapabilities": 2,
+  "$fileid": 6553
+}
+,
+
+{
+  "unknown_6B": false,
+  "animateIdle": false,
+  "combat": 1,
+  "models": [6318],
+  "movementCapabilities": 2,
+  "$fileid": 6554
+}
+,
+
+{
+  "unknown_6B": false,
+  "animateIdle": false,
+  "combat": 1,
+  "models": [6318],
+  "movementCapabilities": 2,
+  "$fileid": 6555
+}
+,
+
+{
+  "unknown_6B": false,
+  "animateIdle": false,
+  "combat": 1,
+  "models": [6318],
+  "movementCapabilities": 2,
+  "$fileid": 6556
+}
+,
+
+{
+  "unknown_6B": false,
+  "animateIdle": false,
+  "combat": 1,
+  "models": [6318],
+  "movementCapabilities": 2,
+  "$fileid": 6557
+}
+,
+
+{
+  "unknown_6B": false,
+  "animateIdle": false,
+  "combat": 1,
+  "models": [6318],
+  "movementCapabilities": 2,
+  "$fileid": 6558
+}
+,
+
+{
+  "unknown_6B": false,
+  "animateIdle": false,
+  "combat": 1,
+  "models": [6318],
+  "movementCapabilities": 2,
+  "$fileid": 6559
+}
+,
+
+{
+  "unknown_6B": false,
+  "animateIdle": false,
+  "combat": 1,
+  "models": [6318],
+  "movementCapabilities": 2,
+  "$fileid": 6560
+}
+,
+
+{
+  "unknown_6B": false,
+  "animateIdle": false,
+  "combat": 1,
+  "models": [6318],
+  "movementCapabilities": 3,
+  "$fileid": 6561
+}
+,
+
+{
+  "unknown_6B": false,
+  "animateIdle": false,
+  "combat": 1,
+  "models": [6318],
+  "movementCapabilities": 2,
+  "$fileid": 6562
+}
+,
+
+{
+  "unknown_6B": false,
+  "animateIdle": false,
+  "combat": 1,
+  "models": [6318],
+  "movementCapabilities": 2,
+  "$fileid": 6563
+}
+,
+
+{
+  "unknown_6B": false,
+  "animateIdle": false,
+  "combat": 1,
+  "models": [6318],
+  "movementCapabilities": 3,
+  "$fileid": 6564
+}
+,
+
+{
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 20,
+  "drawMapDot": false,
+  "combat": 0,
+  "actions_0": "Read",
+  "actions_3": "Bless",
+  "actions_4": "Demolish",
+  "name": "Grave marker",
+  "models": [30231],
+  "headModels": [30231],
+  "movementCapabilities": 1,
+  "$fileid": 6565
+}
+,
+
+{
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 20,
+  "drawMapDot": false,
+  "unknown_63": true,
+  "combat": 0,
+  "actions_0": "Read",
+  "actions_2": "Repair",
+  "actions_3": "Bless",
+  "actions_4": "Demolish",
+  "name": "Broken grave marker",
+  "models": [30226],
+  "movementCapabilities": 1,
+  "$fileid": 6566
+}
+,
+
+{
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 20,
+  "drawMapDot": false,
+  "unknown_63": true,
+  "combat": 0,
+  "actions_0": "Read",
+  "actions_2": "Repair",
+  "actions_3": "Bless",
+  "actions_4": "Demolish",
+  "name": "Collapsing grave marker",
+  "models": [30203],
+  "movementCapabilities": 1,
+  "$fileid": 6567
+}
+,
+
+{
+  "animation_group": 304,
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 20,
+  "combat": 0,
+  "drawMapDot": false,
+  "actions_0": "Read",
+  "actions_3": "Bless",
+  "actions_4": "Demolish",
+  "name": "Grave marker",
+  "models": [30192],
+  "headModels": [30192],
+  "movementCapabilities": 1,
+  "$fileid": 6568
+}
+,
+
+{
+  "animation_group": 304,
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 20,
+  "unknown_63": true,
+  "combat": 0,
+  "drawMapDot": false,
+  "actions_0": "Read",
+  "actions_2": "Repair",
+  "actions_3": "Bless",
+  "actions_4": "Demolish",
+  "name": "Broken grave marker",
+  "models": [30193],
+  "movementCapabilities": 1,
+  "$fileid": 6569
+}
+,
+
+{
+  "animation_group": 304,
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 20,
+  "unknown_63": true,
+  "combat": 0,
+  "drawMapDot": false,
+  "actions_0": "Read",
+  "actions_2": "Repair",
+  "actions_3": "Bless",
+  "actions_4": "Demolish",
+  "name": "Collapsing grave marker",
+  "models": [30191],
+  "movementCapabilities": 1,
+  "$fileid": 6570
+}
+,
+
+{
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 20,
+  "combat": 0,
+  "drawMapDot": false,
+  "actions_0": "Read",
+  "actions_3": "Bless",
+  "actions_4": "Demolish",
+  "color_replacements": [[10322, 10314]],
+  "name": "Gravestone",
+  "models": [30228],
+  "headModels": [30228],
+  "movementCapabilities": 1,
+  "$fileid": 6571
+}
+,
+
+{
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 20,
+  "unknown_63": true,
+  "combat": 0,
+  "drawMapDot": false,
+  "actions_0": "Read",
+  "actions_2": "Repair",
+  "actions_3": "Bless",
+  "actions_4": "Demolish",
+  "color_replacements": [[10322, 10314]],
+  "name": "Broken gravestone",
+  "models": [30223],
+  "movementCapabilities": 1,
+  "$fileid": 6572
+}
+,
+
+{
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 20,
+  "unknown_63": true,
+  "combat": 0,
+  "drawMapDot": false,
+  "actions_0": "Read",
+  "actions_2": "Repair",
+  "actions_3": "Bless",
+  "actions_4": "Demolish",
+  "color_replacements": [[10322, 10314]],
+  "name": "Collapsing gravestone",
+  "models": [30220],
+  "movementCapabilities": 1,
+  "$fileid": 6573
+}
+,
+
+{
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 20,
+  "combat": 0,
+  "drawMapDot": false,
+  "actions_0": "Read",
+  "actions_3": "Bless",
+  "actions_4": "Demolish",
+  "color_replacements": [[10322, 10314]],
+  "name": "Gravestone",
+  "models": [30222],
+  "headModels": [30222],
+  "movementCapabilities": 1,
+  "$fileid": 6574
+}
+,
+
+{
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 20,
+  "unknown_63": true,
+  "combat": 0,
+  "drawMapDot": false,
+  "actions_0": "Read",
+  "actions_2": "Repair",
+  "actions_3": "Bless",
+  "actions_4": "Demolish",
+  "color_replacements": [[10322, 10314]],
+  "name": "Broken gravestone",
+  "models": [30207],
+  "movementCapabilities": 1,
+  "$fileid": 6575
+}
+,
+
+{
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 20,
+  "unknown_63": true,
+  "combat": 0,
+  "drawMapDot": false,
+  "actions_0": "Read",
+  "actions_2": "Repair",
+  "actions_3": "Bless",
+  "actions_4": "Demolish",
+  "color_replacements": [[10322, 10314]],
+  "name": "Collapsing gravestone",
+  "models": [30232],
+  "movementCapabilities": 1,
+  "$fileid": 6576
+}
+,
+
+{
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 20,
+  "combat": 0,
+  "drawMapDot": false,
+  "actions_0": "Read",
+  "actions_3": "Bless",
+  "actions_4": "Demolish",
+  "color_replacements": [[10322, 10314]],
+  "name": "Gravestone",
+  "models": [30217],
+  "headModels": [30217],
+  "movementCapabilities": 1,
+  "$fileid": 6577
+}
+,
+
+{
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 20,
+  "unknown_63": true,
+  "combat": 0,
+  "drawMapDot": false,
+  "actions_0": "Read",
+  "actions_2": "Repair",
+  "actions_3": "Bless",
+  "actions_4": "Demolish",
+  "color_replacements": [[10322, 10314]],
+  "name": "Broken gravestone",
+  "models": [30201],
+  "movementCapabilities": 1,
+  "$fileid": 6578
+}
+,
+
+{
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 20,
+  "unknown_63": true,
+  "combat": 0,
+  "drawMapDot": false,
+  "actions_0": "Read",
+  "actions_2": "Repair",
+  "actions_3": "Bless",
+  "actions_4": "Demolish",
+  "color_replacements": [[10322, 10314]],
+  "name": "Collapsing gravestone",
+  "models": [30230],
+  "movementCapabilities": 1,
+  "$fileid": 6579
+}
+,
+
+{
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 20,
+  "combat": 0,
+  "drawMapDot": false,
+  "actions_0": "Read",
+  "actions_3": "Bless",
+  "actions_4": "Demolish",
+  "color_replacements": [[10322, 10314]],
+  "name": "Stele",
+  "models": [30211],
+  "headModels": [30211],
+  "movementCapabilities": 1,
+  "$fileid": 6580
+}
+,
+
+{
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 20,
+  "unknown_63": true,
+  "combat": 0,
+  "drawMapDot": false,
+  "actions_0": "Read",
+  "actions_2": "Repair",
+  "actions_3": "Bless",
+  "actions_4": "Demolish",
+  "color_replacements": [[10322, 10314]],
+  "name": "Broken stele",
+  "models": [30195],
+  "movementCapabilities": 1,
+  "$fileid": 6581
+}
+,
+
+{
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 20,
+  "unknown_63": true,
+  "combat": 0,
+  "drawMapDot": false,
+  "actions_0": "Read",
+  "actions_2": "Repair",
+  "actions_3": "Bless",
+  "actions_4": "Demolish",
+  "color_replacements": [[10322, 10314]],
+  "name": "Collapsing stele",
+  "models": [30206],
+  "movementCapabilities": 1,
+  "$fileid": 6582
+}
+,
+
+{
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 20,
+  "combat": 0,
+  "drawMapDot": false,
+  "actions_0": "Read",
+  "actions_3": "Bless",
+  "actions_4": "Demolish",
+  "color_replacements": [[10322, 10314]],
+  "name": "Saradomin symbol",
+  "models": [30200, 30227],
+  "headModels": [30190],
+  "movementCapabilities": 1,
+  "$fileid": 6583
+}
+,
+
+{
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 20,
+  "unknown_63": true,
+  "combat": 0,
+  "drawMapDot": false,
+  "actions_0": "Read",
+  "actions_2": "Repair",
+  "actions_3": "Bless",
+  "actions_4": "Demolish",
+  "color_replacements": [[10322, 10314]],
+  "name": "Broken Saradomin symbol",
+  "models": [30221, 30219],
+  "movementCapabilities": 1,
+  "$fileid": 6584
+}
+,
+
+{
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 20,
+  "unknown_63": true,
+  "combat": 0,
+  "drawMapDot": false,
+  "actions_0": "Read",
+  "actions_2": "Repair",
+  "actions_3": "Bless",
+  "actions_4": "Demolish",
+  "color_replacements": [[10322, 10314]],
+  "name": "Collapsing Saradomin symbol",
+  "models": [30210, 30214],
+  "movementCapabilities": 1,
+  "$fileid": 6585
+}
+,
+
+{
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 20,
+  "combat": 0,
+  "drawMapDot": false,
+  "actions_0": "Read",
+  "actions_3": "Bless",
+  "actions_4": "Demolish",
+  "color_replacements": [[10322, 10314]],
+  "name": "Zamorak symbol",
+  "models": [30200, 30224],
+  "headModels": [30186],
+  "movementCapabilities": 1,
+  "$fileid": 6586
+}
+,
+
+{
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 20,
+  "unknown_63": true,
+  "combat": 0,
+  "drawMapDot": false,
+  "actions_0": "Read",
+  "actions_2": "Repair",
+  "actions_3": "Bless",
+  "actions_4": "Demolish",
+  "color_replacements": [[10322, 10314]],
+  "name": "Broken Zamorak symbol",
+  "models": [30221, 30213],
+  "movementCapabilities": 1,
+  "$fileid": 6587
+}
+,
+
+{
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 20,
+  "unknown_63": true,
+  "combat": 0,
+  "drawMapDot": false,
+  "actions_0": "Read",
+  "actions_2": "Repair",
+  "actions_3": "Bless",
+  "actions_4": "Demolish",
+  "color_replacements": [[10322, 10314]],
+  "name": "Collapsing Zamorak symbol",
+  "models": [30210, 30218],
+  "movementCapabilities": 1,
+  "$fileid": 6588
+}
+,
+
+{
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 20,
+  "combat": 0,
+  "drawMapDot": false,
+  "actions_0": "Read",
+  "actions_3": "Bless",
+  "actions_4": "Demolish",
+  "color_replacements": [[10322, 10314]],
+  "name": "Guthix symbol",
+  "models": [30200, 30216],
+  "headModels": [30185],
+  "movementCapabilities": 1,
+  "$fileid": 6589
+}
+,
+
+{
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 20,
+  "unknown_63": true,
+  "combat": 0,
+  "drawMapDot": false,
+  "actions_0": "Read",
+  "actions_2": "Repair",
+  "actions_3": "Bless",
+  "actions_4": "Demolish",
+  "color_replacements": [[10322, 10314]],
+  "name": "Broken Guthix symbol",
+  "models": [30221, 30205],
+  "movementCapabilities": 1,
+  "$fileid": 6590
+}
+,
+
+{
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 20,
+  "unknown_63": true,
+  "combat": 0,
+  "drawMapDot": false,
+  "actions_0": "Read",
+  "actions_2": "Repair",
+  "actions_3": "Bless",
+  "actions_4": "Demolish",
+  "color_replacements": [[10322, 10314]],
+  "name": "Collapsing Guthix symbol",
+  "models": [30210, 30204],
+  "movementCapabilities": 1,
+  "$fileid": 6591
+}
+,
+
+{
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 20,
+  "combat": 0,
+  "drawMapDot": false,
+  "actions_0": "Read",
+  "actions_3": "Bless",
+  "actions_4": "Demolish",
+  "color_replacements": [[10322, 10314]],
+  "name": "Bandos symbol",
+  "models": [30200, 30209],
+  "headModels": [30189],
+  "movementCapabilities": 1,
+  "$fileid": 6592
+}
+,
+
+{
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 20,
+  "unknown_63": true,
+  "combat": 0,
+  "drawMapDot": false,
+  "actions_0": "Read",
+  "actions_2": "Repair",
+  "actions_3": "Bless",
+  "actions_4": "Demolish",
+  "color_replacements": [[10322, 10314]],
+  "name": "Broken Bandos symbol",
+  "models": [30221, 30208],
+  "movementCapabilities": 1,
+  "$fileid": 6593
+}
+,
+
+{
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 20,
+  "unknown_63": true,
+  "combat": 0,
+  "drawMapDot": false,
+  "actions_0": "Read",
+  "actions_2": "Repair",
+  "actions_3": "Bless",
+  "actions_4": "Demolish",
+  "color_replacements": [[10322, 10314]],
+  "name": "Collapsing Bandos symbol",
+  "models": [30210, 30202],
+  "movementCapabilities": 1,
+  "$fileid": 6594
+}
+,
+
+{
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 20,
+  "combat": 0,
+  "drawMapDot": false,
+  "actions_0": "Read",
+  "actions_3": "Bless",
+  "actions_4": "Demolish",
+  "color_replacements": [[10322, 10314]],
+  "name": "Armadyl symbol",
+  "models": [30200, 30197],
+  "headModels": [30188],
+  "movementCapabilities": 1,
+  "$fileid": 6595
+}
+,
+
+{
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 20,
+  "unknown_63": true,
+  "combat": 0,
+  "drawMapDot": false,
+  "actions_0": "Read",
+  "actions_2": "Repair",
+  "actions_3": "Bless",
+  "actions_4": "Demolish",
+  "color_replacements": [[10322, 10314]],
+  "name": "Broken Armadyl symbol",
+  "models": [30221, 30212],
+  "movementCapabilities": 1,
+  "$fileid": 6596
+}
+,
+
+{
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 20,
+  "unknown_63": true,
+  "combat": 0,
+  "drawMapDot": false,
+  "actions_0": "Read",
+  "actions_2": "Repair",
+  "actions_3": "Bless",
+  "actions_4": "Demolish",
+  "color_replacements": [[10322, 10314]],
+  "name": "Collapsing Armadyl symbol",
+  "models": [30210, 30199],
+  "movementCapabilities": 1,
+  "$fileid": 6597
+}
+,
+
+{
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 20,
+  "combat": 0,
+  "drawMapDot": false,
+  "actions_0": "Read",
+  "actions_3": "Bless",
+  "actions_4": "Demolish",
+  "color_replacements": [[10322, 10314]],
+  "name": "Memorial stone",
+  "models": [30200, 30198],
+  "headModels": [30187],
+  "movementCapabilities": 1,
+  "$fileid": 6598
+}
+,
+
+{
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 20,
+  "unknown_63": true,
+  "combat": 0,
+  "drawMapDot": false,
+  "actions_0": "Read",
+  "actions_2": "Repair",
+  "actions_3": "Bless",
+  "actions_4": "Demolish",
+  "color_replacements": [[10322, 10314]],
+  "name": "Broken memorial stone",
+  "models": [30221, 30229],
+  "movementCapabilities": 1,
+  "$fileid": 6599
+}
+,
+
+{
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 20,
+  "unknown_63": true,
+  "combat": 0,
+  "drawMapDot": false,
+  "actions_0": "Read",
+  "actions_2": "Repair",
+  "actions_3": "Bless",
+  "actions_4": "Demolish",
+  "color_replacements": [[10322, 10314]],
+  "name": "Collapsing memorial stone",
+  "models": [30210, 30225],
+  "movementCapabilities": 1,
+  "$fileid": 6600
+}
+,
+
+{
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 20,
+  "combat": 0,
+  "drawMapDot": false,
+  "actions_0": "Read",
+  "actions_3": "Bless",
+  "actions_4": "Demolish",
+  "color_replacements": [[10322, 10314]],
+  "name": "Memorial stone",
+  "models": [30196],
+  "headModels": [30196],
+  "movementCapabilities": 1,
+  "$fileid": 6601
+}
+,
+
+{
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 20,
+  "unknown_63": true,
+  "combat": 0,
+  "drawMapDot": false,
+  "actions_0": "Read",
+  "actions_2": "Repair",
+  "actions_3": "Bless",
+  "actions_4": "Demolish",
+  "color_replacements": [[10322, 10314]],
+  "name": "Broken memorial stone",
+  "models": [30215],
+  "movementCapabilities": 1,
+  "$fileid": 6602
+}
+,
+
+{
+  "boundSize": 1,
+  "modelContract": 10,
+  "ambience": 20,
+  "unknown_63": true,
+  "combat": 0,
+  "drawMapDot": false,
+  "actions_0": "Read",
+  "actions_2": "Repair",
+  "actions_3": "Bless",
+  "actions_4": "Demolish",
+  "color_replacements": [[10322, 10314]],
+  "name": "Collapsing memorial stone",
+  "models": [30194],
+  "movementCapabilities": 1,
+  "$fileid": 6603
+}
+,
+
+{
+  "animation_group": 570,
+  "actions_1": "Attack",
+  "animateIdle": false,
+  "unknown_63": true,
+  "combat": 7,
+  "name": "Revenant imp",
+  "models": [30255],
+  "movementCapabilities": 2,
+  "$fileid": 6604
+}
+,
+
+{
+  "animation_group": 567,
+  "ambience": 20,
+  "actions_1": "Attack",
+  "animateIdle": false,
+  "unknown_63": true,
+  "combat": 15,
+  "name": "Revenant goblin",
+  "models": [30245, 30243, 30250, 30249, 30238],
+  "movementCapabilities": 2,
+  "$fileid": 6605
+}
+,
+
+{
+  "animation_group": 573,
+  "ambience": 60,
+  "modelContract": 60,
+  "actions_1": "Attack",
+  "animateIdle": false,
+  "unknown_63": true,
+  "combat": 45,
+  "name": "Revenant icefiend",
+  "models": [33841],
+  "movementCapabilities": 2,
+  "$fileid": 6606
+}
+,
+
+{
+  "animation_group": 575,
+  "actions_1": "Attack",
+  "animateIdle": false,
+  "unknown_63": true,
+  "combat": 75,
+  "name": "Revenant werewolf",
+  "models": [30237],
+  "movementCapabilities": 2,
+  "$fileid": 6607
+}
+,
+
+{
+  "animation_group": 569,
+  "actions_1": "Attack",
+  "animateIdle": false,
+  "unknown_63": true,
+  "combat": 60,
+  "name": "Revenant hobgoblin",
+  "models": [30258],
+  "movementCapabilities": 2,
+  "$fileid": 6608
+}
+,
+
+{
+  "animation_group": 575,
+  "actions_1": "Attack",
+  "animateIdle": false,
+  "unknown_63": true,
+  "combat": 75,
+  "name": "Revenant werewolf",
+  "models": [30237],
+  "movementCapabilities": 2,
+  "$fileid": 6609
+}
+,
+
+{
+  "animation_group": 572,
+  "actions_1": "Attack",
+  "animateIdle": false,
+  "unknown_63": true,
+  "combat": 105,
+  "name": "Revenant ork",
+  "models": [30251],
+  "movementCapabilities": 2,
+  "$fileid": 6610
+}
+,
+
+{
+  "animation_group": 564,
+  "ambience": 25,
+  "actions_1": "Attack",
+  "animateIdle": false,
+  "unknown_63": true,
+  "combat": 126,
+  "name": "Revenant knight",
+  "models": [30235],
+  "movementCapabilities": 2,
+  "$fileid": 6611
+}
+,
+
+{
+  "animation_group": 567,
+  "ambience": 20,
+  "actions_1": "Attack",
+  "animateIdle": false,
+  "unknown_63": true,
+  "combat": 30,
+  "name": "Revenant goblin",
+  "models": [30245, 30242, 30250, 30248, 30238],
+  "movementCapabilities": 2,
+  "$fileid": 6612
+}
+,
+
+{
+  "animation_group": 574,
+  "actions_1": "Attack",
+  "animateIdle": false,
+  "unknown_63": true,
+  "combat": 68,
+  "name": "Revenant vampire",
+  "models": [30254],
+  "movementCapabilities": 2,
+  "$fileid": 6613
+}
+,
+
+{
+  "animation_group": 575,
+  "actions_1": "Attack",
+  "animateIdle": false,
+  "unknown_63": true,
+  "combat": 75,
+  "name": "Revenant werewolf",
+  "models": [30237],
+  "movementCapabilities": 2,
+  "$fileid": 6614
+}
+,
+
+{
+  "animation_group": 572,
+  "actions_1": "Attack",
+  "animateIdle": false,
+  "unknown_63": true,
+  "combat": 105,
+  "name": "Revenant ork",
+  "models": [30251],
+  "movementCapabilities": 2,
+  "$fileid": 6615
+}
+,
+
+{
+  "animation_group": 567,
+  "ambience": 20,
+  "actions_1": "Attack",
+  "animateIdle": false,
+  "unknown_63": true,
+  "combat": 15,
+  "name": "Revenant goblin",
+  "models": [30245, 30243, 30250, 30249, 30238],
+  "movementCapabilities": 2,
+  "$fileid": 6616
+}
+,
+
+{
+  "animation_group": 575,
+  "actions_1": "Attack",
+  "animateIdle": false,
+  "unknown_63": true,
+  "combat": 75,
+  "name": "Revenant werewolf",
+  "models": [30237],
+  "movementCapabilities": 2,
+  "$fileid": 6617
+}
+,
+
+{
+  "animation_group": 572,
+  "actions_1": "Attack",
+  "animateIdle": false,
+  "unknown_63": true,
+  "combat": 105,
+  "name": "Revenant ork",
+  "models": [30251],
+  "movementCapabilities": 2,
+  "$fileid": 6618
+}
+,
+
+{
+  "animation_group": 564,
+  "ambience": 25,
+  "actions_1": "Attack",
+  "animateIdle": false,
+  "unknown_63": true,
+  "combat": 126,
+  "name": "Revenant knight",
+  "models": [30235],
+  "movementCapabilities": 2,
+  "$fileid": 6619
+}
+,
+
+{
+  "animation_group": 567,
+  "ambience": 20,
+  "actions_1": "Attack",
+  "animateIdle": false,
+  "unknown_63": true,
+  "combat": 22,
+  "name": "Revenant goblin",
+  "models": [30246, 30243, 30250, 30248, 30238],
+  "movementCapabilities": 2,
+  "$fileid": 6620
+}
+,
+
+{
+  "animation_group": 573,
+  "ambience": 60,
+  "modelContract": 60,
+  "actions_1": "Attack",
+  "animateIdle": false,
+  "unknown_63": true,
+  "combat": 45,
+  "name": "Revenant icefiend",
+  "models": [33841],
+  "movementCapabilities": 2,
+  "$fileid": 6621
+}
+,
+
+{
+  "animation_group": 573,
+  "ambience": 60,
+  "modelContract": 60,
+  "actions_1": "Attack",
+  "animateIdle": false,
+  "unknown_63": true,
+  "combat": 52,
+  "name": "Revenant pyrefiend",
+  "models": [30257],
+  "movementCapabilities": 2,
+  "$fileid": 6622
+}
+,
+
+{
+  "animation_group": 574,
+  "actions_1": "Attack",
+  "animateIdle": false,
+  "unknown_63": true,
+  "combat": 68,
+  "name": "Revenant vampire",
+  "models": [30254],
+  "movementCapabilities": 2,
+  "$fileid": 6623
+}
+,
+
+{
+  "animation_group": 572,
+  "actions_1": "Attack",
+  "animateIdle": false,
+  "unknown_63": true,
+  "combat": 105,
+  "name": "Revenant ork",
+  "models": [30251],
+  "movementCapabilities": 2,
+  "$fileid": 6624
+}
+,
+
+{
+  "animation_group": 575,
+  "actions_1": "Attack",
+  "animateIdle": false,
+  "unknown_63": true,
+  "combat": 75,
+  "name": "Revenant werewolf",
+  "models": [30237],
+  "movementCapabilities": 2,
+  "$fileid": 6625
+}
+,
+
+{
+  "animation_group": 572,
+  "actions_1": "Attack",
+  "animateIdle": false,
+  "unknown_63": true,
+  "combat": 105,
+  "name": "Revenant ork",
+  "models": [30251],
+  "movementCapabilities": 2,
+  "$fileid": 6626
+}
+,
+
+{
+  "animation_group": 564,
+  "ambience": 25,
+  "actions_1": "Attack",
+  "animateIdle": false,
+  "unknown_63": true,
+  "combat": 126,
+  "name": "Revenant knight",
+  "models": [30235],
+  "movementCapabilities": 2,
+  "$fileid": 6627
+}
+,
+
+{
+  "animation_group": 573,
+  "ambience": 60,
+  "modelContract": 60,
+  "actions_1": "Attack",
+  "animateIdle": false,
+  "unknown_63": true,
+  "combat": 45,
+  "name": "Revenant icefiend",
+  "models": [33841],
+  "movementCapabilities": 2,
+  "$fileid": 6628
+}
+,
+
+{
+  "animation_group": 572,
+  "actions_1": "Attack",
+  "animateIdle": false,
+  "unknown_63": true,
+  "combat": 105,
+  "name": "Revenant ork",
+  "models": [30251],
+  "movementCapabilities": 2,
+  "$fileid": 6629
+}
+,
+
+{
+  "animation_group": 564,
+  "ambience": 25,
+  "actions_1": "Attack",
+  "animateIdle": false,
+  "unknown_63": true,
+  "combat": 126,
+  "name": "Revenant knight",
+  "models": [30235],
+  "movementCapabilities": 2,
+  "$fileid": 6630
+}
+,
+
+{
+  "animation_group": 573,
+  "ambience": 60,
+  "modelContract": 60,
+  "actions_1": "Attack",
+  "animateIdle": false,
+  "unknown_63": true,
+  "combat": 52,
+  "name": "Revenant pyrefiend",
+  "models": [30257],
+  "movementCapabilities": 2,
+  "$fileid": 6631
+}
+,
+
+{
+  "animation_group": 575,
+  "actions_1": "Attack",
+  "animateIdle": false,
+  "unknown_63": true,
+  "combat": 75,
+  "name": "Revenant werewolf",
+  "models": [30237],
+  "movementCapabilities": 2,
+  "$fileid": 6632
+}
+,
+
+{
+  "animation_group": 572,
+  "actions_1": "Attack",
+  "animateIdle": false,
+  "unknown_63": true,
+  "combat": 105,
+  "name": "Revenant ork",
+  "models": [30251],
+  "movementCapabilities": 2,
+  "$fileid": 6633
+}
+,
+
+{
+  "animation_group": 564,
+  "ambience": 25,
+  "actions_1": "Attack",
+  "animateIdle": false,
+  "unknown_63": true,
+  "combat": 126,
+  "name": "Revenant knight",
+  "models": [30235],
+  "movementCapabilities": 2,
+  "$fileid": 6634
+}
+,
+
+{
+  "animation_group": 570,
+  "actions_1": "Attack",
+  "animateIdle": false,
+  "unknown_63": true,
+  "combat": 7,
+  "name": "Revenant imp",
+  "models": [30255],
+  "movementCapabilities": 3,
+  "$fileid": 6635
+}
+,
+
+{
+  "animation_group": 567,
+  "ambience": 20,
+  "actions_1": "Attack",
+  "animateIdle": false,
+  "unknown_63": true,
+  "combat": 15,
+  "name": "Revenant goblin",
+  "models": [30245, 30243, 30250, 30249, 30238],
+  "movementCapabilities": 3,
+  "$fileid": 6636
+}
+,
+
+{
+  "animation_group": 567,
+  "ambience": 20,
+  "actions_1": "Attack",
+  "animateIdle": false,
+  "unknown_63": true,
+  "combat": 22,
+  "name": "Revenant goblin",
+  "models": [30246, 30243, 30250, 30248, 30238],
+  "movementCapabilities": 3,
+  "$fileid": 6637
+}
+,
+
+{
+  "animation_group": 567,
+  "ambience": 20,
+  "actions_1": "Attack",
+  "animateIdle": false,
+  "unknown_63": true,
+  "combat": 30,
+  "name": "Revenant goblin",
+  "models": [30245, 30242, 30250, 30248, 30238],
+  "movementCapabilities": 3,
+  "$fileid": 6638
+}
+,
+
+{
+  "animation_group": 567,
+  "ambience": 20,
+  "actions_1": "Attack",
+  "animateIdle": false,
+  "unknown_63": true,
+  "combat": 37,
+  "name": "Revenant goblin",
+  "models": [30244, 30241, 30250, 30247, 30240],
+  "movementCapabilities": 3,
+  "$fileid": 6639
+}
+,
+
+{
+  "animation_group": 573,
+  "ambience": 60,
+  "modelContract": 60,
+  "actions_1": "Attack",
+  "animateIdle": false,
+  "unknown_63": true,
+  "combat": 45,
+  "name": "Revenant icefiend",
+  "models": [33841],
+  "movementCapabilities": 3,
+  "$fileid": 6640
+}
+,
+
+{
+  "animation_group": 573,
+  "ambience": 60,
+  "modelContract": 60,
+  "actions_1": "Attack",
+  "animateIdle": false,
+  "unknown_63": true,
+  "combat": 52,
+  "name": "Revenant pyrefiend",
+  "models": [30257],
+  "movementCapabilities": 3,
+  "$fileid": 6641
+}
+,
+
+{
+  "animation_group": 569,
+  "actions_1": "Attack",
+  "animateIdle": false,
+  "unknown_63": true,
+  "combat": 60,
+  "name": "Revenant hobgoblin",
+  "models": [30258],
+  "movementCapabilities": 3,
+  "$fileid": 6642
+}
+,
+
+{
+  "animation_group": 574,
+  "actions_1": "Attack",
+  "animateIdle": false,
+  "unknown_63": true,
+  "combat": 68,
+  "name": "Revenant vampire",
+  "models": [30254],
+  "movementCapabilities": 3,
+  "$fileid": 6643
+}
+,
+
+{
+  "animation_group": 575,
+  "actions_1": "Attack",
+  "animateIdle": false,
+  "unknown_63": true,
+  "combat": 75,
+  "name": "Revenant werewolf",
+  "models": [30237],
+  "movementCapabilities": 3,
+  "$fileid": 6644
+}
+,
+
+{
+  "animation_group": 565,
+  "boundSize": 2,
+  "actions_1": "Attack",
+  "animateIdle": false,
+  "unknown_63": true,
+  "combat": 82,
+  "name": "Revenant cyclops",
+  "models": [30259],
+  "movementCapabilities": 3,
+  "$fileid": 6645
+}
+,
+
+{
+  "animation_group": 568,
+  "boundSize": 2,
+  "scaleXZ": 90,
+  "scaleY": 90,
+  "actions_1": "Attack",
+  "animateIdle": false,
+  "unknown_63": true,
+  "combat": 90,
+  "name": "Revenant hellhound",
+  "models": [30252],
+  "movementCapabilities": 3,
+  "$fileid": 6646
+}
+,
+
+{
+  "animation_group": 571,
+  "boundSize": 2,
+  "scaleXZ": 86,
+  "scaleY": 86,
+  "actions_1": "Attack",
+  "animateIdle": false,
+  "unknown_63": true,
+  "combat": 98,
+  "name": "Revenant demon",
+  "models": [30236],
+  "movementCapabilities": 3,
+  "$fileid": 6647
+}
+,
+
+{
+  "animation_group": 572,
+  "actions_1": "Attack",
+  "animateIdle": false,
+  "unknown_63": true,
+  "combat": 105,
+  "name": "Revenant ork",
+  "models": [30251],
+  "movementCapabilities": 3,
+  "$fileid": 6648
+}
+,
+
+{
+  "animation_group": 566,
+  "boundSize": 3,
+  "actions_1": "Attack",
+  "animateIdle": false,
+  "unknown_63": true,
+  "combat": 120,
+  "name": "Revenant dark beast",
+  "models": [30253],
+  "movementCapabilities": 3,
+  "$fileid": 6649
+}
+,
+
+{
+  "animation_group": 564,
+  "ambience": 25,
+  "actions_1": "Attack",
+  "animateIdle": false,
+  "unknown_63": true,
+  "combat": 126,
+  "name": "Revenant knight",
+  "models": [30235],
+  "movementCapabilities": 3,
+  "$fileid": 6650
+}
+,
+
+{
+  "animation_group": 567,
+  "ambience": 20,
+  "actions_1": "Attack",
+  "animateIdle": false,
+  "unknown_63": true,
+  "combat": 22,
+  "name": "Revenant goblin",
+  "models": [30246, 30243, 30250, 30248, 30238],
+  "movementCapabilities": 2,
+  "$fileid": 6651
+}
+,
+
+{
+  "animation_group": 574,
+  "actions_1": "Attack",
+  "animateIdle": false,
+  "unknown_63": true,
+  "combat": 68,
+  "name": "Revenant vampire",
+  "models": [30254],
+  "movementCapabilities": 2,
+  "$fileid": 6652
+}
+,
+
+{
+  "animation_group": 572,
+  "actions_1": "Attack",
+  "animateIdle": false,
+  "unknown_63": true,
+  "combat": 105,
+  "name": "Revenant ork",
+  "models": [30251],
+  "movementCapabilities": 2,
+  "$fileid": 6653
+}
+,
+
+{
+  "animation_group": 564,
+  "ambience": 25,
+  "actions_1": "Attack",
+  "animateIdle": false,
+  "unknown_63": true,
+  "combat": 126,
+  "name": "Revenant knight",
+  "models": [30235],
+  "movementCapabilities": 2,
+  "$fileid": 6654
+}
+,
+
+{
+  "animation_group": 570,
+  "actions_1": "Attack",
+  "animateIdle": false,
+  "unknown_63": true,
+  "combat": 7,
+  "name": "Revenant imp",
+  "models": [30255],
+  "movementCapabilities": 2,
+  "$fileid": 6655
+}]}

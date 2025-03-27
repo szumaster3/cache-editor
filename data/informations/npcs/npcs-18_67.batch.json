@@ -1,0 +1,298 @@
+{"$schema":".schema-npcs_batch.json","files":[
+
+{
+  "animation_group": 16,
+  "boundSize": 2,
+  "unknown_63": true,
+  "drawMapDot": false,
+  "modelContract": 15,
+  "ambience": 32,
+  "actions_0": "Interact",
+  "actions_1": "Attack",
+  "actions_4": "Ash-blast",
+  "combat": 124,
+  "name": "Phoenix",
+  "models": [45411],
+  "headModels": [45305],
+  "movementCapabilities": 1,
+  "$fileid": 8576
+}
+,
+
+{
+  "animation_group": 22,
+  "drawMapDot": false,
+  "combat": 0,
+  "boundSize": 1,
+  "ambience": 25,
+  "modelContract": 15,
+  "scaleXZ": 64,
+  "scaleY": 64,
+  "actions_0": "Pick-up",
+  "actions_3": "Talk-to",
+  "name": "Phoenix eggling",
+  "models": [45428],
+  "headModels": [45307],
+  "movementCapabilities": 3,
+  "$fileid": 8577
+}
+,
+
+{
+  "animation_group": 21,
+  "drawMapDot": false,
+  "combat": 0,
+  "boundSize": 1,
+  "ambience": 25,
+  "modelContract": 15,
+  "scaleXZ": 64,
+  "scaleY": 64,
+  "actions_0": "Pick-up",
+  "actions_3": "Talk-to",
+  "name": "Phoenix eggling",
+  "models": [45429],
+  "headModels": [45306],
+  "movementCapabilities": 3,
+  "$fileid": 8578
+}
+,
+
+{
+  "animation_group": 198,
+  "combat": 0,
+  "boundSize": 1,
+  "unknown_63": true,
+  "morphs_1": {"unk1": 377946111, "unk2": [8555], "unk3": 560756483},
+  "$fileid": 8579
+}
+,
+
+{
+  "animation_group": 23,
+  "ambience": 25,
+  "scaleXZ": 60,
+  "scaleY": 60,
+  "actions_0": "Talk-to",
+  "combat": 0,
+  "color_replacements": [[36021, 21923], [36141, 21918], [36133, 22042]],
+  "name": "Karma the chameleon",
+  "models": [30533],
+  "headModels": [31265],
+  "movementCapabilities": 3,
+  "$fileid": 8580
+}
+,
+
+{
+  "animation_group": 23,
+  "ambience": 25,
+  "scaleXZ": 60,
+  "scaleY": 60,
+  "actions_0": "Talk-to",
+  "combat": 0,
+  "color_replacements": [
+    [21799, 35],
+    [21805, 39],
+    [19761, 43],
+    [18900, 59],
+    [18764, 55]
+  ],
+  "name": "Karma the chameleon",
+  "models": [30533],
+  "headModels": [31265],
+  "movementCapabilities": 3,
+  "$fileid": 8581
+}
+,
+
+{
+  "animation_group": 23,
+  "ambience": 25,
+  "scaleXZ": 60,
+  "scaleY": 60,
+  "actions_0": "Talk-to",
+  "combat": 0,
+  "color_replacements": [
+    [36021, 29084],
+    [36141, 29208],
+    [36133, 29204],
+    [19761, 26929],
+    [21805, 26925],
+    [21799, 26921]
+  ],
+  "name": "Karma the chameleon",
+  "models": [30533],
+  "headModels": [31265],
+  "movementCapabilities": 3,
+  "$fileid": 8582
+}
+,
+
+{
+  "animation_group": 23,
+  "ambience": 25,
+  "scaleXZ": 60,
+  "scaleY": 60,
+  "actions_0": "Talk-to",
+  "combat": 0,
+  "color_replacements": [
+    [21799, 9552],
+    [21805, 9556],
+    [19761, 9560],
+    [36133, 9436],
+    [36141, 9313],
+    [36021, 9445]
+  ],
+  "name": "Karma the chameleon",
+  "models": [30533],
+  "headModels": [31265],
+  "movementCapabilities": 3,
+  "$fileid": 8583
+}
+,
+
+{
+  "animation_group": 23,
+  "ambience": 25,
+  "scaleXZ": 60,
+  "scaleY": 60,
+  "actions_0": "Talk-to",
+  "combat": 0,
+  "color_replacements": [
+    [21799, 6798],
+    [21805, 6674],
+    [19761, 6550],
+    [18764, 6327],
+    [18900, 6323]
+  ],
+  "name": "Karma the chameleon",
+  "models": [30533],
+  "headModels": [31265],
+  "movementCapabilities": 3,
+  "$fileid": 8584
+}
+,
+
+{
+  "animation_group": 23,
+  "ambience": 25,
+  "scaleXZ": 60,
+  "scaleY": 60,
+  "actions_0": "Talk-to",
+  "combat": 0,
+  "color_replacements": [
+    [21799, 10357],
+    [21805, 10361],
+    [19761, 10365],
+    [18764, 43123],
+    [18900, 43119]
+  ],
+  "name": "Karma the chameleon",
+  "models": [30533],
+  "headModels": [31265],
+  "movementCapabilities": 3,
+  "$fileid": 8585
+}
+,
+
+{
+  "animation_group": 23,
+  "ambience": 25,
+  "scaleXZ": 60,
+  "scaleY": 60,
+  "actions_0": "Talk-to",
+  "combat": 0,
+  "color_replacements": [
+    [18900, 962],
+    [18764, 955],
+    [19761, 36114],
+    [21805, 36238],
+    [21799, 36362]
+  ],
+  "name": "Karma the chameleon",
+  "models": [30533],
+  "headModels": [31265],
+  "movementCapabilities": 3,
+  "$fileid": 8586
+}
+,
+
+{
+  "animation_group": 23,
+  "ambience": 25,
+  "scaleXZ": 60,
+  "scaleY": 60,
+  "actions_0": "Talk-to",
+  "combat": 0,
+  "color_replacements": [
+    [18900, 27881],
+    [18764, 27877],
+    [36133, 27873],
+    [19761, 35503],
+    [21805, 35499],
+    [21799, 35623]
+  ],
+  "name": "Karma the chameleon",
+  "models": [30533],
+  "headModels": [31265],
+  "movementCapabilities": 3,
+  "$fileid": 8587
+}
+,
+
+{
+  "animation_group": 23,
+  "ambience": 25,
+  "scaleXZ": 60,
+  "scaleY": 60,
+  "actions_0": "Talk-to",
+  "combat": 0,
+  "color_replacements": [
+    [36021, 63952],
+    [36141, 63946],
+    [36133, 62775],
+    [19761, 8140],
+    [21805, 8132],
+    [21799, 7108]
+  ],
+  "name": "Karma the chameleon",
+  "models": [30533],
+  "headModels": [31265],
+  "movementCapabilities": 3,
+  "$fileid": 8588
+}
+,
+
+{
+  "animation_group": 23,
+  "ambience": 25,
+  "scaleXZ": 60,
+  "scaleY": 60,
+  "actions_0": "Talk-to",
+  "combat": 0,
+  "color_replacements": [
+    [18900, 64026],
+    [18764, 64150],
+    [19761, 3767],
+    [21805, 3889],
+    [21799, 2609]
+  ],
+  "name": "Karma the chameleon",
+  "models": [30533],
+  "headModels": [31265],
+  "movementCapabilities": 3,
+  "$fileid": 8589
+}
+,
+
+{
+  "animation_group": 1425,
+  "boundSize": 1,
+  "combat": 0,
+  "actions_0": "Talk",
+  "name": "Geoffrey",
+  "models": [40336, 40358, 28794, 40370, 40344, 28804, 40319],
+  "headModels": [39932],
+  "movementCapabilities": 3,
+  "$fileid": 8590
+}]}

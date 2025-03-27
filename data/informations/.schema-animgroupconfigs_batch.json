@@ -1,0 +1,353 @@
+{
+  "type": "object",
+  "properties": {
+    "files": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "baseAnims": {
+            "oneOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "idle": {
+                    "anyOf": [
+                      {"type": "number", "maximum": 2147483647, "minimum": -1},
+                      {"type": "number", "maximum": 65535, "minimum": 0}
+                    ]
+                  },
+                  "walk": {
+                    "anyOf": [
+                      {"type": "number", "maximum": 2147483647, "minimum": -1},
+                      {"type": "number", "maximum": 65535, "minimum": 0}
+                    ]
+                  }
+                },
+                "required": ["idle", "walk"]
+              },
+              {"type": "null"}
+            ]
+          },
+          "unknown_02": {
+            "oneOf": [
+              {
+                "anyOf": [
+                  {"type": "number", "maximum": 2147483647, "minimum": -1},
+                  {"type": "number", "maximum": 65535, "minimum": 0}
+                ]
+              },
+              {"type": "null"}
+            ]
+          },
+          "unknown_03": {
+            "oneOf": [
+              {
+                "anyOf": [
+                  {"type": "number", "maximum": 2147483647, "minimum": -1},
+                  {"type": "number", "maximum": 65535, "minimum": 0}
+                ]
+              },
+              {"type": "null"}
+            ]
+          },
+          "unknown_05": {
+            "oneOf": [
+              {
+                "anyOf": [
+                  {"type": "number", "maximum": 2147483647, "minimum": -1},
+                  {"type": "number", "maximum": 65535, "minimum": 0}
+                ]
+              },
+              {"type": "null"}
+            ]
+          },
+          "unknown_04": {
+            "oneOf": [
+              {
+                "anyOf": [
+                  {"type": "number", "maximum": 2147483647, "minimum": -1},
+                  {"type": "number", "maximum": 65535, "minimum": 0}
+                ]
+              },
+              {"type": "null"}
+            ]
+          },
+          "run": {
+            "oneOf": [
+              {
+                "anyOf": [
+                  {"type": "number", "maximum": 2147483647, "minimum": -1},
+                  {"type": "number", "maximum": 65535, "minimum": 0}
+                ]
+              },
+              {"type": "null"}
+            ]
+          },
+          "unknown_07": {
+            "oneOf": [
+              {
+                "anyOf": [
+                  {"type": "number", "maximum": 2147483647, "minimum": -1},
+                  {"type": "number", "maximum": 65535, "minimum": 0}
+                ]
+              },
+              {"type": "null"}
+            ]
+          },
+          "unknown_08": {
+            "oneOf": [
+              {
+                "anyOf": [
+                  {"type": "number", "maximum": 2147483647, "minimum": -1},
+                  {"type": "number", "maximum": 65535, "minimum": 0}
+                ]
+              },
+              {"type": "null"}
+            ]
+          },
+          "unknown_09": {
+            "oneOf": [
+              {
+                "anyOf": [
+                  {"type": "number", "maximum": 2147483647, "minimum": -1},
+                  {"type": "number", "maximum": 65535, "minimum": 0}
+                ]
+              },
+              {"type": "null"}
+            ]
+          },
+          "unknown_1a": {
+            "oneOf": [
+              {
+                "type": "array",
+                "items": [
+                  {"type": "number", "maximum": 255, "minimum": 0},
+                  {"type": "number", "maximum": 255, "minimum": 0}
+                ],
+                "minItems": 2,
+                "maxItems": 2
+              },
+              {"type": "null"}
+            ]
+          },
+          "unknown_1b": {
+            "oneOf": [
+              {
+                "anyOf": [
+                  {"type": "number", "maximum": 2147483647, "minimum": -1},
+                  {"type": "number", "maximum": 65535, "minimum": 0}
+                ]
+              },
+              {"type": "null"}
+            ]
+          },
+          "unknown_26": {
+            "oneOf": [
+              {
+                "anyOf": [
+                  {"type": "number", "maximum": 2147483647, "minimum": -1},
+                  {"type": "number", "maximum": 65535, "minimum": 0}
+                ]
+              },
+              {"type": "null"}
+            ]
+          },
+          "unknown_27": {
+            "oneOf": [
+              {
+                "anyOf": [
+                  {"type": "number", "maximum": 2147483647, "minimum": -1},
+                  {"type": "number", "maximum": 65535, "minimum": 0}
+                ]
+              },
+              {"type": "null"}
+            ]
+          },
+          "unknown_28": {
+            "oneOf": [
+              {
+                "anyOf": [
+                  {"type": "number", "maximum": 2147483647, "minimum": -1},
+                  {"type": "number", "maximum": 65535, "minimum": 0}
+                ]
+              },
+              {"type": "null"}
+            ]
+          },
+          "unknown_29": {
+            "oneOf": [
+              {
+                "anyOf": [
+                  {"type": "number", "maximum": 2147483647, "minimum": -1},
+                  {"type": "number", "maximum": 65535, "minimum": 0}
+                ]
+              },
+              {"type": "null"}
+            ]
+          },
+          "unknown_2a": {
+            "oneOf": [
+              {
+                "anyOf": [
+                  {"type": "number", "maximum": 2147483647, "minimum": -1},
+                  {"type": "number", "maximum": 65535, "minimum": 0}
+                ]
+              },
+              {"type": "null"}
+            ]
+          },
+          "unknown_2b": {
+            "oneOf": [
+              {
+                "anyOf": [
+                  {"type": "number", "maximum": 2147483647, "minimum": -1},
+                  {"type": "number", "maximum": 65535, "minimum": 0}
+                ]
+              },
+              {"type": "null"}
+            ]
+          },
+          "unknown_2c": {
+            "oneOf": [
+              {
+                "anyOf": [
+                  {"type": "number", "maximum": 2147483647, "minimum": -1},
+                  {"type": "number", "maximum": 65535, "minimum": 0}
+                ]
+              },
+              {"type": "null"}
+            ]
+          },
+          "unknown_2d": {
+            "oneOf": [
+              {
+                "anyOf": [
+                  {"type": "number", "maximum": 2147483647, "minimum": -1},
+                  {"type": "number", "maximum": 65535, "minimum": 0}
+                ]
+              },
+              {"type": "null"}
+            ]
+          },
+          "unknown_2e": {
+            "oneOf": [
+              {
+                "anyOf": [
+                  {"type": "number", "maximum": 2147483647, "minimum": -1},
+                  {"type": "number", "maximum": 65535, "minimum": 0}
+                ]
+              },
+              {"type": "null"}
+            ]
+          },
+          "unknown_2f": {
+            "oneOf": [
+              {
+                "anyOf": [
+                  {"type": "number", "maximum": 2147483647, "minimum": -1},
+                  {"type": "number", "maximum": 65535, "minimum": 0}
+                ]
+              },
+              {"type": "null"}
+            ]
+          },
+          "unknown_30": {
+            "oneOf": [
+              {
+                "anyOf": [
+                  {"type": "number", "maximum": 2147483647, "minimum": -1},
+                  {"type": "number", "maximum": 65535, "minimum": 0}
+                ]
+              },
+              {"type": "null"}
+            ]
+          },
+          "unknown_31": {
+            "oneOf": [
+              {
+                "anyOf": [
+                  {"type": "number", "maximum": 2147483647, "minimum": -1},
+                  {"type": "number", "maximum": 65535, "minimum": 0}
+                ]
+              },
+              {"type": "null"}
+            ]
+          },
+          "unknown_32": {
+            "oneOf": [
+              {
+                "anyOf": [
+                  {"type": "number", "maximum": 2147483647, "minimum": -1},
+                  {"type": "number", "maximum": 65535, "minimum": 0}
+                ]
+              },
+              {"type": "null"}
+            ]
+          },
+          "unknown_33": {
+            "oneOf": [
+              {
+                "anyOf": [
+                  {"type": "number", "maximum": 2147483647, "minimum": -1},
+                  {"type": "number", "maximum": 65535, "minimum": 0}
+                ]
+              },
+              {"type": "null"}
+            ]
+          },
+          "idleVariations": {
+            "oneOf": [
+              {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "animid": {
+                      "anyOf": [
+                        {
+                          "type": "number",
+                          "maximum": 2147483647,
+                          "minimum": -1
+                        },
+                        {"type": "number", "maximum": 65535, "minimum": 0}
+                      ]
+                    },
+                    "probably_chance": {
+                      "type": "number",
+                      "maximum": 255,
+                      "minimum": 0
+                    },
+                    "always0": {
+                      "anyOf": [
+                        {"type": "number", "maximum": 255, "minimum": 0},
+                        {"const": 0}
+                      ]
+                    }
+                  },
+                  "required": ["animid", "probably_chance", "always0"]
+                }
+              },
+              {"type": "null"}
+            ]
+          },
+          "unknown_35": {"oneOf": [{"const": true}, {"type": "null"}]},
+          "unknown_36": {
+            "oneOf": [
+              {
+                "type": "array",
+                "items": [
+                  {"type": "number", "maximum": 255, "minimum": 0},
+                  {"type": "number", "maximum": 255, "minimum": 0}
+                ],
+                "minItems": 2,
+                "maxItems": 2
+              },
+              {"type": "null"}
+            ]
+          }
+        }
+      }
+    }
+  }
+}

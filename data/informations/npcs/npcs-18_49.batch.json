@@ -1,0 +1,2139 @@
+{"$schema":".schema-npcs_batch.json","files":[
+
+{
+  "animation_group": 104,
+  "boundSize": 1,
+  "actions_1": "Attack",
+  "unknown_63": true,
+  "combat": 107,
+  "name": "Ork",
+  "models": [27787, 27786],
+  "movementCapabilities": 3,
+  "$fileid": 6272
+}
+,
+
+{
+  "animation_group": 104,
+  "boundSize": 1,
+  "actions_1": "Attack",
+  "unknown_63": true,
+  "combat": 107,
+  "color_replacements": [
+    [10520, 7322],
+    [10644, 7446],
+    [10892, 7566],
+    [10301, 8406],
+    [10297, 7378],
+    [10289, 8398]
+  ],
+  "name": "Ork",
+  "models": [27783, 27786],
+  "movementCapabilities": 3,
+  "$fileid": 6273
+}
+,
+
+{
+  "animation_group": 104,
+  "boundSize": 1,
+  "actions_1": "Attack",
+  "unknown_63": true,
+  "combat": 107,
+  "color_replacements": [[10520, 10508], [10644, 10760], [10892, 17284]],
+  "name": "Ork",
+  "models": [27787, 27782],
+  "movementCapabilities": 3,
+  "$fileid": 6274
+}
+,
+
+{
+  "animation_group": 88,
+  "boundSize": 1,
+  "scaleXZ": 140,
+  "scaleY": 140,
+  "actions_1": "Attack",
+  "unknown_63": true,
+  "combat": 47,
+  "color_replacements": [
+    [5549, 7335],
+    [5673, 7331],
+    [5793, 7326],
+    [7731, 57],
+    [3982, 22406],
+    [3858, 25478]
+  ],
+  "name": "Hobgoblin",
+  "models": [10334],
+  "movementCapabilities": 3,
+  "$fileid": 6275
+}
+,
+
+{
+  "animation_group": 104,
+  "boundSize": 1,
+  "actions_1": "Attack",
+  "unknown_63": true,
+  "combat": 115,
+  "name": "Spiritual ranger",
+  "models": [27784, 28267, 16317],
+  "movementCapabilities": 3,
+  "$fileid": 6276
+}
+,
+
+{
+  "animation_group": 104,
+  "boundSize": 1,
+  "actions_1": "Attack",
+  "unknown_63": true,
+  "combat": 134,
+  "name": "Spiritual warrior",
+  "models": [27790],
+  "movementCapabilities": 3,
+  "$fileid": 6277
+}
+,
+
+{
+  "animation_group": 104,
+  "boundSize": 1,
+  "actions_1": "Attack",
+  "unknown_63": true,
+  "combat": 121,
+  "name": "Spiritual mage",
+  "models": [27788],
+  "movementCapabilities": 3,
+  "$fileid": 6278
+}
+,
+
+{
+  "animation_group": 86,
+  "actions_1": "Attack",
+  "ambience": 20,
+  "unknown_63": true,
+  "combat": 17,
+  "name": "Goblin",
+  "models": [27802, 27796, 27811, 27799, 27808, 27806, 24498],
+  "movementCapabilities": 3,
+  "$fileid": 6279
+}
+,
+
+{
+  "animation_group": 86,
+  "actions_1": "Attack",
+  "ambience": 20,
+  "unknown_63": true,
+  "combat": 12,
+  "color_replacements": [
+    [5177, 4283],
+    [5169, 4275],
+    [5165, 4271],
+    [10401, 16553],
+    [10396, 16549]
+  ],
+  "name": "Goblin",
+  "models": [27804, 27797, 27810, 27799, 27808, 27805, 24505],
+  "movementCapabilities": 3,
+  "$fileid": 6280
+}
+,
+
+{
+  "animation_group": 199,
+  "ambience": 20,
+  "actions_1": "Attack",
+  "unknown_63": true,
+  "combat": 12,
+  "color_replacements": [
+    [5177, 8379],
+    [5169, 8371],
+    [5165, 8367],
+    [10401, 3239],
+    [10396, 3235]
+  ],
+  "name": "Goblin",
+  "models": [27803, 27798, 27809, 27800, 27808, 27807, 27801],
+  "movementCapabilities": 3,
+  "$fileid": 6281
+}
+,
+
+{
+  "animation_group": 87,
+  "actions_1": "Attack",
+  "ambience": 20,
+  "unknown_63": true,
+  "combat": 15,
+  "color_replacements": [
+    [5177, 10295],
+    [5169, 10415],
+    [5165, 10411],
+    [10401, 32803],
+    [10396, 32798]
+  ],
+  "name": "Goblin",
+  "models": [27803, 27798, 27809, 27800, 27808, 27807, 24507],
+  "movementCapabilities": 3,
+  "$fileid": 6282
+}
+,
+
+{
+  "animation_group": 86,
+  "actions_1": "Attack",
+  "ambience": 20,
+  "unknown_63": true,
+  "combat": 13,
+  "color_replacements": [
+    [5177, 5276],
+    [5169, 5272],
+    [5165, 5268],
+    [10401, 7690],
+    [10396, 8070]
+  ],
+  "name": "Goblin",
+  "models": [27804, 27797, 27810, 27799, 27808, 27806, 24502],
+  "movementCapabilities": 3,
+  "$fileid": 6283
+}
+,
+
+{
+  "boundSize": 2,
+  "unknown_6B": false,
+  "combat": 0,
+  "animateIdle": false,
+  "models": [6318],
+  "movementCapabilities": 3,
+  "$fileid": 6284
+}
+,
+
+{
+  "animation_group": 1226,
+  "boundSize": 2,
+  "modelContract": 15,
+  "ambience": 15,
+  "actions_1": "Attack",
+  "unknown_63": true,
+  "combat": 81,
+  "name": "Warped terrorbird",
+  "models": [28333, 28338, 28334, 28335],
+  "movementCapabilities": 3,
+  "$fileid": 6285
+}
+,
+
+{
+  "animation_group": 1226,
+  "boundSize": 2,
+  "modelContract": 15,
+  "ambience": 15,
+  "actions_1": "Attack",
+  "unknown_63": true,
+  "combat": 81,
+  "name": "Warped terrorbird",
+  "models": [28331, 28337, 28334, 28335],
+  "movementCapabilities": 3,
+  "$fileid": 6286
+}
+,
+
+{
+  "animation_group": 1226,
+  "boundSize": 2,
+  "modelContract": 15,
+  "ambience": 15,
+  "actions_1": "Attack",
+  "unknown_63": true,
+  "combat": 81,
+  "name": "Warped terrorbird",
+  "models": [28332, 28340, 28334, 28336],
+  "movementCapabilities": 3,
+  "$fileid": 6287
+}
+,
+
+{
+  "animation_group": 1226,
+  "boundSize": 2,
+  "modelContract": 15,
+  "ambience": 15,
+  "actions_1": "Attack",
+  "unknown_63": true,
+  "combat": 81,
+  "name": "Warped terrorbird",
+  "models": [28332, 28341, 28334, 28335],
+  "movementCapabilities": 3,
+  "$fileid": 6288
+}
+,
+
+{
+  "animation_group": 1226,
+  "boundSize": 2,
+  "modelContract": 15,
+  "ambience": 15,
+  "actions_1": "Attack",
+  "unknown_63": true,
+  "combat": 81,
+  "name": "Warped terrorbird",
+  "models": [28331, 28339, 28334, 28336],
+  "movementCapabilities": 3,
+  "$fileid": 6289
+}
+,
+
+{
+  "animation_group": 1226,
+  "boundSize": 2,
+  "modelContract": 15,
+  "ambience": 15,
+  "actions_1": "Attack",
+  "unknown_63": true,
+  "combat": 81,
+  "name": "Warped terrorbird",
+  "models": [28333, 28338, 28334, 28335],
+  "movementCapabilities": 3,
+  "$fileid": 6290
+}
+,
+
+{
+  "animation_group": 1226,
+  "boundSize": 2,
+  "modelContract": 15,
+  "ambience": 15,
+  "actions_1": "Attack",
+  "unknown_63": true,
+  "combat": 81,
+  "name": "Warped terrorbird",
+  "models": [28332, 28337, 28334, 28335],
+  "movementCapabilities": 3,
+  "$fileid": 6291
+}
+,
+
+{
+  "animation_group": 1226,
+  "boundSize": 2,
+  "modelContract": 15,
+  "ambience": 15,
+  "actions_1": "Attack",
+  "unknown_63": true,
+  "combat": 81,
+  "name": "Warped terrorbird",
+  "models": [28331, 28340, 28334, 28336],
+  "movementCapabilities": 3,
+  "$fileid": 6292
+}
+,
+
+{
+  "animation_group": 1226,
+  "boundSize": 2,
+  "modelContract": 15,
+  "ambience": 15,
+  "actions_1": "Attack",
+  "unknown_63": true,
+  "combat": 143,
+  "name": "Warped terrorbird",
+  "models": [28331, 28340, 28334, 28336],
+  "movementCapabilities": 3,
+  "$fileid": 6293
+}
+,
+
+{
+  "animation_group": 1226,
+  "boundSize": 2,
+  "modelContract": 15,
+  "ambience": 15,
+  "actions_1": "Attack",
+  "unknown_63": true,
+  "combat": 143,
+  "name": "Warped terrorbird",
+  "models": [28333, 28337, 28334, 28335],
+  "movementCapabilities": 3,
+  "$fileid": 6294
+}
+,
+
+{
+  "animation_group": 1226,
+  "boundSize": 2,
+  "modelContract": 15,
+  "ambience": 15,
+  "actions_1": "Attack",
+  "unknown_63": true,
+  "combat": 143,
+  "name": "Warped terrorbird",
+  "models": [28332, 28338, 28334, 28335],
+  "movementCapabilities": 3,
+  "$fileid": 6295
+}
+,
+
+{
+  "animation_group": 1227,
+  "boundSize": 3,
+  "modelContract": 15,
+  "ambience": 15,
+  "actions_1": "Attack",
+  "combat": 96,
+  "name": "Warped tortoise",
+  "models": [28345],
+  "movementCapabilities": 3,
+  "$fileid": 6296
+}
+,
+
+{
+  "animation_group": 1227,
+  "boundSize": 3,
+  "modelContract": 15,
+  "ambience": 15,
+  "actions_1": "Attack",
+  "combat": 96,
+  "color_replacements": [
+    [11152, 10396],
+    [11148, 10392],
+    [11144, 10392],
+    [9521, 8483],
+    [9533, 8367],
+    [9538, 8371]
+  ],
+  "name": "Warped tortoise",
+  "models": [28345],
+  "movementCapabilities": 3,
+  "$fileid": 6297
+}
+,
+
+{
+  "animation_group": 4,
+  "actions_0": "Talk-to",
+  "combat": 0,
+  "unknown_63": true,
+  "color_replacements": [
+    [25238, 5652],
+    [8741, 5652],
+    [6798, 6854],
+    [54397, 4769],
+    [43072, 4550]
+  ],
+  "material_replacements": [[252, 258], [228, 426]],
+  "name": "Jeffery",
+  "models": [215, 246, 305, 25856, 19329, 19332, 12138, 181],
+  "headModels": [39836, 39223],
+  "movementCapabilities": 3,
+  "$fileid": 6298
+}
+,
+
+{
+  "boundSize": 2,
+  "combat": 0,
+  "unknown_63": true,
+  "drawMapDot": false,
+  "unknown_67": 0,
+  "actions_0": "Push",
+  "name": "Big monolith",
+  "models": [28343],
+  "movementCapabilities": 1,
+  "$fileid": 6299
+}
+,
+
+{
+  "boundSize": 1,
+  "combat": 0,
+  "unknown_63": true,
+  "drawMapDot": false,
+  "unknown_67": 0,
+  "actions_0": "Push",
+  "name": "Small monolith",
+  "models": [28344],
+  "movementCapabilities": 1,
+  "$fileid": 6300
+}
+,
+
+{
+  "combat": 0,
+  "name": "Cute creature",
+  "models": [16956, 16954],
+  "movementCapabilities": 3,
+  "$fileid": 6301
+}
+,
+
+{
+  "actions_1": "Attack",
+  "combat": 0,
+  "name": "Evil creature",
+  "models": [16957, 16955],
+  "movementCapabilities": 3,
+  "$fileid": 6302
+}
+,
+
+{
+  "animation_group": 108,
+  "combat": 0,
+  "color_replacements": [[22426, 37793], [278, 37793]],
+  "name": "Yewnock the engineer",
+  "models": [28304, 28306, 28305],
+  "headModels": [16979],
+  "movementCapabilities": 1,
+  "$fileid": 6303
+}
+,
+
+{
+  "animation_group": 108,
+  "combat": 0,
+  "color_replacements": [[22424, 45588], [11162, 32906]],
+  "name": "Bolrie",
+  "models": [28301, 2909, 28307],
+  "headModels": [16978],
+  "movementCapabilities": 1,
+  "$fileid": 6304
+}
+,
+
+{
+  "animation_group": 108,
+  "boundSize": 1,
+  "combat": 0,
+  "unknown_63": true,
+  "color_replacements": [
+    [28434, 4911],
+    [22426, 4899],
+    [4539, 4506],
+    [26710, 4899],
+    [5223, 74],
+    [4550, 4387]
+  ],
+  "name": "Hazelmere",
+  "models": [17023, 17001, 2917, 17022, 28298],
+  "headModels": [16967, 16981],
+  "movementCapabilities": 3,
+  "$fileid": 6305
+}
+,
+
+{
+  "animation_group": 108,
+  "combat": 0,
+  "color_replacements": [[22424, 45588], [11162, 32906]],
+  "name": "Bolrie",
+  "models": [28303, 2909, 28307],
+  "movementCapabilities": 1,
+  "$fileid": 6306
+}
+,
+
+{
+  "animation_group": 108,
+  "boundSize": 1,
+  "combat": 0,
+  "color_replacements": [
+    [22426, 64404],
+    [28434, 60308],
+    [26710, 912],
+    [32943, 3369],
+    [32935, 3365],
+    [32926, 3489]
+  ],
+  "name": "Advisor",
+  "models": [17024, 17002, 17274],
+  "headModels": [16978],
+  "movementCapabilities": 3,
+  "$fileid": 6307
+}
+,
+
+{
+  "animation_group": 108,
+  "combat": 0,
+  "color_replacements": [[926, 37], [43941, 910], [22426, 0]],
+  "name": "King Argenthorg",
+  "models": [28299, 16985, 14805, 17033],
+  "headModels": [28311],
+  "movementCapabilities": 1,
+  "$fileid": 6308
+}
+,
+
+{
+  "animation_group": 108,
+  "combat": 0,
+  "color_replacements": [[926, 37], [43941, 910], [22426, 0]],
+  "name": "Prince Argenthorg",
+  "models": [28302, 16985, 14805, 17033],
+  "headModels": [28311],
+  "movementCapabilities": 1,
+  "$fileid": 6309
+}
+,
+
+{
+  "animation_group": 239,
+  "combat": 0,
+  "morphs_1": {"unk1": 164167679, "unk2": [6311, 6312], "unk3": 128284419},
+  "$fileid": 6310
+}
+,
+
+{
+  "combat": 0,
+  "name": "Cute creature",
+  "models": [16956, 16954],
+  "movementCapabilities": 3,
+  "$fileid": 6311
+}
+,
+
+{
+  "actions_1": "Attack",
+  "combat": 0,
+  "name": "Evil creature",
+  "models": [16957, 16955],
+  "movementCapabilities": 3,
+  "$fileid": 6312
+}
+,
+
+{
+  "animation_group": 1223,
+  "boundSize": 2,
+  "modelContract": 15,
+  "ambience": 15,
+  "combat": 0,
+  "name": "Terrorbird servant",
+  "models": [28346],
+  "movementCapabilities": 3,
+  "$fileid": 6313
+}
+,
+
+{
+  "animation_group": 1223,
+  "boundSize": 2,
+  "modelContract": 15,
+  "ambience": 15,
+  "combat": 0,
+  "name": "Guard no. 21",
+  "models": [28346],
+  "headModels": [28312],
+  "movementCapabilities": 1,
+  "$fileid": 6314
+}
+,
+
+{
+  "animation_group": 1224,
+  "boundSize": 2,
+  "modelContract": 15,
+  "ambience": 15,
+  "combat": 0,
+  "name": "Guard no. 72",
+  "models": [28346],
+  "headModels": [28312],
+  "movementCapabilities": 1,
+  "$fileid": 6315
+}
+,
+
+{
+  "animation_group": 1225,
+  "boundSize": 2,
+  "modelContract": 15,
+  "ambience": 15,
+  "combat": 0,
+  "name": "Guard no. 21",
+  "models": [28346],
+  "headModels": [28312],
+  "movementCapabilities": 1,
+  "$fileid": 6316
+}
+,
+
+{
+  "animation_group": 1225,
+  "boundSize": 2,
+  "modelContract": 15,
+  "ambience": 15,
+  "combat": 0,
+  "name": "Guard no. 72",
+  "models": [28346],
+  "headModels": [28312],
+  "movementCapabilities": 1,
+  "$fileid": 6317
+}
+,
+
+{
+  "animation_group": 108,
+  "actions_0": "Talk-to",
+  "combat": 0,
+  "unknown_63": true,
+  "color_replacements": [
+    [22040, 32910],
+    [22426, 36015],
+    [5202, 21534],
+    [22292, 37925],
+    [21795, 32827],
+    [10407, 32805]
+  ],
+  "name": "Longramble",
+  "models": [17013, 14177, 2917, 14824],
+  "headModels": [16972],
+  "movementCapabilities": 3,
+  "$fileid": 6318
+}
+,
+
+{
+  "unknown_6B": false,
+  "combat": 0,
+  "models": [6318],
+  "movementCapabilities": 3,
+  "$fileid": 6319
+}
+,
+
+{
+  "boundSize": 2,
+  "unknown_67": 0,
+  "drawMapDot": false,
+  "unknown_63": true,
+  "combat": 0,
+  "name": "Spirit tree",
+  "models": [8110],
+  "headModels": [28552],
+  "movementCapabilities": 1,
+  "$fileid": 6320
+}
+,
+
+{
+  "boundSize": 2,
+  "unknown_67": 0,
+  "drawMapDot": false,
+  "unknown_63": true,
+  "combat": 0,
+  "name": "Spirit tree",
+  "models": [8110],
+  "headModels": [28553],
+  "movementCapabilities": 1,
+  "$fileid": 6321
+}
+,
+
+{
+  "animation_group": 1226,
+  "boundSize": 2,
+  "modelContract": 15,
+  "ambience": 15,
+  "actions_1": "Attack",
+  "unknown_63": true,
+  "combat": 81,
+  "color_replacements": [
+    [32819, 13477],
+    [32939, 13485],
+    [54321, 21549],
+    [9445, 7514],
+    [9436, 6608],
+    [8394, 7616]
+  ],
+  "name": "Warped terrorbird",
+  "models": [28333, 28338, 28334, 28335],
+  "movementCapabilities": 3,
+  "$fileid": 6322
+}
+,
+
+{
+  "animation_group": 1226,
+  "boundSize": 2,
+  "modelContract": 15,
+  "ambience": 15,
+  "actions_1": "Attack",
+  "unknown_63": true,
+  "combat": 81,
+  "color_replacements": [
+    [32819, 13477],
+    [32939, 13485],
+    [54321, 21549],
+    [9445, 7514],
+    [9436, 6608],
+    [8394, 7616]
+  ],
+  "name": "Warped terrorbird",
+  "models": [28331, 28337, 28334, 28335],
+  "movementCapabilities": 3,
+  "$fileid": 6323
+}
+,
+
+{
+  "animation_group": 1226,
+  "boundSize": 2,
+  "modelContract": 15,
+  "ambience": 15,
+  "actions_1": "Attack",
+  "unknown_63": true,
+  "combat": 81,
+  "color_replacements": [
+    [32819, 13477],
+    [32939, 13485],
+    [54321, 21549],
+    [9445, 7514],
+    [9436, 6608],
+    [8394, 7616]
+  ],
+  "name": "Warped terrorbird",
+  "models": [28332, 28340, 28334, 28336],
+  "movementCapabilities": 3,
+  "$fileid": 6324
+}
+,
+
+{
+  "animation_group": 1226,
+  "boundSize": 2,
+  "modelContract": 15,
+  "ambience": 15,
+  "actions_1": "Attack",
+  "unknown_63": true,
+  "combat": 81,
+  "color_replacements": [
+    [32819, 13477],
+    [32939, 13485],
+    [54321, 21549],
+    [9445, 7514],
+    [9436, 6608],
+    [8394, 7616]
+  ],
+  "name": "Warped terrorbird",
+  "models": [28332, 28341, 28334, 28335],
+  "movementCapabilities": 3,
+  "$fileid": 6325
+}
+,
+
+{
+  "animation_group": 1226,
+  "boundSize": 2,
+  "modelContract": 15,
+  "ambience": 15,
+  "actions_1": "Attack",
+  "unknown_63": true,
+  "combat": 81,
+  "color_replacements": [
+    [32819, 13477],
+    [32939, 13485],
+    [54321, 21549],
+    [9445, 7514],
+    [9436, 6608],
+    [8394, 7616]
+  ],
+  "name": "Warped terrorbird",
+  "models": [28331, 28339, 28334, 28336],
+  "movementCapabilities": 3,
+  "$fileid": 6326
+}
+,
+
+{
+  "animation_group": 1226,
+  "boundSize": 2,
+  "modelContract": 15,
+  "ambience": 15,
+  "actions_1": "Attack",
+  "unknown_63": true,
+  "combat": 81,
+  "color_replacements": [
+    [32819, 13477],
+    [32939, 13485],
+    [54321, 21549],
+    [9445, 7514],
+    [9436, 6608],
+    [8394, 7616]
+  ],
+  "name": "Warped terrorbird",
+  "models": [28333, 28338, 28334, 28335],
+  "movementCapabilities": 3,
+  "$fileid": 6327
+}
+,
+
+{
+  "animation_group": 1226,
+  "boundSize": 2,
+  "modelContract": 15,
+  "ambience": 15,
+  "actions_1": "Attack",
+  "unknown_63": true,
+  "combat": 81,
+  "color_replacements": [
+    [32819, 13477],
+    [32939, 13485],
+    [54321, 21549],
+    [9445, 7514],
+    [9436, 6608],
+    [8394, 7616]
+  ],
+  "name": "Warped terrorbird",
+  "models": [28332, 28337, 28334, 28335],
+  "movementCapabilities": 3,
+  "$fileid": 6328
+}
+,
+
+{
+  "animation_group": 1226,
+  "boundSize": 2,
+  "modelContract": 15,
+  "ambience": 15,
+  "actions_1": "Attack",
+  "unknown_63": true,
+  "combat": 81,
+  "color_replacements": [
+    [32819, 13477],
+    [32939, 13485],
+    [54321, 21549],
+    [9445, 7514],
+    [9436, 6608],
+    [8394, 7616]
+  ],
+  "name": "Warped terrorbird",
+  "models": [28331, 28340, 28334, 28336],
+  "movementCapabilities": 3,
+  "$fileid": 6329
+}
+,
+
+{
+  "animation_group": 1226,
+  "boundSize": 2,
+  "modelContract": 15,
+  "ambience": 15,
+  "actions_1": "Attack",
+  "unknown_63": true,
+  "combat": 143,
+  "color_replacements": [
+    [32819, 13477],
+    [32939, 13485],
+    [54321, 21549],
+    [9445, 7514],
+    [9436, 6608],
+    [8394, 7616]
+  ],
+  "name": "Warped terrorbird",
+  "models": [28331, 28340, 28334, 28336],
+  "movementCapabilities": 3,
+  "$fileid": 6330
+}
+,
+
+{
+  "animation_group": 1226,
+  "boundSize": 2,
+  "modelContract": 15,
+  "ambience": 15,
+  "actions_1": "Attack",
+  "unknown_63": true,
+  "combat": 143,
+  "color_replacements": [
+    [32819, 13477],
+    [32939, 13485],
+    [54321, 21549],
+    [9445, 7514],
+    [9436, 6608],
+    [8394, 7616]
+  ],
+  "name": "Warped terrorbird",
+  "models": [28333, 28337, 28334, 28335],
+  "movementCapabilities": 3,
+  "$fileid": 6331
+}
+,
+
+{
+  "animation_group": 1226,
+  "boundSize": 2,
+  "modelContract": 15,
+  "ambience": 15,
+  "actions_1": "Attack",
+  "unknown_63": true,
+  "combat": 143,
+  "color_replacements": [
+    [32819, 13477],
+    [32939, 13485],
+    [54321, 21549],
+    [9445, 7514],
+    [9436, 6608],
+    [8394, 7616]
+  ],
+  "name": "Warped terrorbird",
+  "models": [28332, 28338, 28334, 28335],
+  "movementCapabilities": 3,
+  "$fileid": 6332
+}
+,
+
+{
+  "animation_group": 239,
+  "combat": 0,
+  "morphs_1": {"unk1": 260440063, "unk2": [65535, 6311], "unk3": 413693699},
+  "$fileid": 6333
+}
+,
+
+{
+  "animation_group": 165,
+  "boundSize": 1,
+  "combat": 0,
+  "actions_0": "Talk-to",
+  "color_replacements": [[25104, 12950], [24856, 12826], [8596, 8609]],
+  "name": "Child",
+  "models": [28604, 28645, 28661, 28611, 28613, 28675],
+  "headModels": [28688],
+  "movementCapabilities": 3,
+  "$fileid": 6334
+}
+,
+
+{
+  "animation_group": 165,
+  "boundSize": 1,
+  "combat": 0,
+  "actions_0": "Talk-to",
+  "color_replacements": [[8483, 10293], [278, 38040], [158, 38044]],
+  "name": "Child",
+  "models": [28609, 28630, 28662, 28611, 28621, 28674],
+  "headModels": [28684],
+  "movementCapabilities": 3,
+  "$fileid": 6335
+}
+,
+
+{
+  "animation_group": 165,
+  "boundSize": 1,
+  "combat": 0,
+  "actions_0": "Talk-to",
+  "name": "Child",
+  "models": [28604, 28630, 28661, 28611, 28612, 28675],
+  "headModels": [28688],
+  "movementCapabilities": 3,
+  "$fileid": 6336
+}
+,
+
+{
+  "animation_group": 165,
+  "boundSize": 1,
+  "combat": 0,
+  "actions_0": "Talk-to",
+  "color_replacements": [
+    [10442, 33040],
+    [10429, 32920],
+    [10434, 32916],
+    [10438, 33040],
+    [8596, 6817]
+  ],
+  "name": "Child",
+  "models": [28608, 28641, 28650, 28611, 28616, 28671],
+  "headModels": [28694],
+  "movementCapabilities": 3,
+  "$fileid": 6337
+}
+,
+
+{
+  "animation_group": 165,
+  "boundSize": 1,
+  "combat": 0,
+  "actions_0": "Talk-to",
+  "color_replacements": [[24856, 3346], [25104, 3350], [8596, 16]],
+  "name": "Child",
+  "models": [28605, 28637, 28663, 28611, 28623, 28668],
+  "headModels": [28682],
+  "movementCapabilities": 3,
+  "$fileid": 6338
+}
+,
+
+{
+  "animation_group": 165,
+  "boundSize": 1,
+  "combat": 0,
+  "actions_0": "Talk-to",
+  "color_replacements": [
+    [24856, 5002],
+    [25104, 2952],
+    [24865, 4750],
+    [8483, 16673]
+  ],
+  "name": "Child",
+  "models": [28607, 28648, 28654, 28611, 28622, 28668],
+  "headModels": [28695],
+  "movementCapabilities": 3,
+  "$fileid": 6339
+}
+,
+
+{
+  "animation_group": 165,
+  "boundSize": 1,
+  "combat": 0,
+  "actions_0": "Talk-to",
+  "color_replacements": [
+    [4434, 4645],
+    [25104, 12950],
+    [24856, 12826],
+    [8596, 16]
+  ],
+  "name": "Child",
+  "models": [28604, 28645, 28661, 28611, 28613, 28675],
+  "headModels": [28689],
+  "movementCapabilities": 3,
+  "$fileid": 6340
+}
+,
+
+{
+  "animation_group": 165,
+  "boundSize": 1,
+  "combat": 0,
+  "actions_0": "Talk-to",
+  "color_replacements": [
+    [4434, 4645],
+    [8596, 21522],
+    [8483, 10293],
+    [278, 38040],
+    [158, 38044]
+  ],
+  "name": "Child",
+  "models": [28609, 28630, 28662, 28611, 28621, 28674],
+  "headModels": [28690],
+  "movementCapabilities": 3,
+  "$fileid": 6341
+}
+,
+
+{
+  "animation_group": 165,
+  "boundSize": 1,
+  "combat": 0,
+  "actions_0": "Talk-to",
+  "color_replacements": [[4434, 4645], [8596, 16]],
+  "name": "Child",
+  "models": [28604, 28630, 28661, 28611, 28612, 28675],
+  "headModels": [28689],
+  "movementCapabilities": 3,
+  "$fileid": 6342
+}
+,
+
+{
+  "animation_group": 165,
+  "boundSize": 1,
+  "combat": 0,
+  "actions_0": "Talk-to",
+  "color_replacements": [
+    [4434, 4645],
+    [10442, 33040],
+    [10429, 32920],
+    [10434, 32916],
+    [10438, 33040],
+    [8596, 16]
+  ],
+  "name": "Child",
+  "models": [28608, 28641, 28650, 28611, 28616, 28671],
+  "headModels": [28685],
+  "movementCapabilities": 3,
+  "$fileid": 6343
+}
+,
+
+{
+  "animation_group": 165,
+  "boundSize": 1,
+  "combat": 0,
+  "actions_0": "Talk-to",
+  "color_replacements": [
+    [4434, 4645],
+    [24856, 3346],
+    [25104, 3350],
+    [8596, 16]
+  ],
+  "name": "Child",
+  "models": [28605, 28637, 28663, 28611, 28623, 28668],
+  "headModels": [28681],
+  "movementCapabilities": 3,
+  "$fileid": 6344
+}
+,
+
+{
+  "animation_group": 165,
+  "boundSize": 1,
+  "combat": 0,
+  "actions_0": "Talk-to",
+  "color_replacements": [
+    [4434, 4645],
+    [8596, 16],
+    [24856, 2962],
+    [25104, 1936],
+    [24865, 2838]
+  ],
+  "name": "Child",
+  "models": [28607, 28648, 28654, 28611, 28622, 28668],
+  "headModels": [28697],
+  "movementCapabilities": 3,
+  "$fileid": 6345
+}
+,
+
+{
+  "animation_group": 35,
+  "boundSize": 1,
+  "actions_0": "Talk-to",
+  "actions_1": "Attack",
+  "combat": 23,
+  "name": "Pirate",
+  "models": [28783, 28796, 28750, 28758, 28777, 28804, 28764],
+  "headModels": [39767, 39259],
+  "movementCapabilities": 3,
+  "$fileid": 6346
+}
+,
+
+{
+  "animation_group": 35,
+  "boundSize": 1,
+  "actions_0": "Talk-to",
+  "actions_1": "Attack",
+  "combat": 23,
+  "name": "Pirate",
+  "models": [28790, 28799, 28749, 28758, 28772, 28810, 28763],
+  "headModels": [39941, 38097, 39482],
+  "movementCapabilities": 3,
+  "$fileid": 6347
+}
+,
+
+{
+  "animation_group": 40,
+  "boundSize": 1,
+  "actions_0": "Talk-to",
+  "actions_1": "Attack",
+  "combat": 23,
+  "material_replacements": [[255, 292], [251, 277]],
+  "name": "Pirate",
+  "models": [28785, 28792, 28755, 28758, 28769, 28808, 28759],
+  "headModels": [39696, 39553],
+  "movementCapabilities": 3,
+  "$fileid": 6348
+}
+,
+
+{
+  "animation_group": 35,
+  "boundSize": 1,
+  "actions_0": "Talk-to",
+  "actions_1": "Attack",
+  "combat": 23,
+  "name": "Pirate",
+  "models": [28781, 28794, 28752, 28758, 28771, 28807, 28764],
+  "headModels": [39974, 39424],
+  "movementCapabilities": 3,
+  "$fileid": 6349
+}
+,
+
+{
+  "animation_group": 35,
+  "boundSize": 1,
+  "actions_0": "Talk-to",
+  "actions_1": "Attack",
+  "combat": 23,
+  "name": "Pirate",
+  "models": [28838, 28842, 28824, 28826, 28837, 28846, 28831],
+  "headModels": [39111],
+  "movementCapabilities": 3,
+  "$fileid": 6350
+}
+,
+
+{
+  "animation_group": 35,
+  "boundSize": 1,
+  "actions_1": "Attack",
+  "combat": 26,
+  "name": "Pirate",
+  "models": [28779, 28795, 28751, 28756, 28768, 28807],
+  "headModels": [39941, 39399, 39240],
+  "movementCapabilities": 3,
+  "$fileid": 6351
+}
+,
+
+{
+  "animation_group": 35,
+  "boundSize": 1,
+  "actions_1": "Attack",
+  "combat": 26,
+  "name": "Pirate",
+  "models": [28784, 28801, 28748, 28758, 28775, 28810, 28764],
+  "headModels": [39224, 39800],
+  "movementCapabilities": 3,
+  "$fileid": 6352
+}
+,
+
+{
+  "animation_group": 35,
+  "boundSize": 1,
+  "actions_1": "Attack",
+  "combat": 26,
+  "color_replacements": [[6798, 6312]],
+  "material_replacements": [[262, 253]],
+  "name": "Pirate",
+  "models": [28782, 28793, 28751, 28758, 28770, 28805, 28762],
+  "headModels": [39941, 39399, 39180],
+  "movementCapabilities": 3,
+  "$fileid": 6353
+}
+,
+
+{
+  "animation_group": 35,
+  "boundSize": 1,
+  "actions_1": "Attack",
+  "combat": 26,
+  "name": "Pirate",
+  "models": [28787, 28800, 28754, 28758, 28768, 28807, 28763],
+  "headModels": [39785, 39313],
+  "movementCapabilities": 3,
+  "$fileid": 6354
+}
+,
+
+{
+  "animation_group": 35,
+  "boundSize": 1,
+  "actions_1": "Attack",
+  "combat": 26,
+  "name": "Pirate",
+  "models": [28778, 28791, 28755, 28758, 28766, 28804, 28765],
+  "movementCapabilities": 3,
+  "$fileid": 6355
+}
+,
+
+{
+  "animation_group": 35,
+  "boundSize": 1,
+  "actions_1": "Attack",
+  "combat": 26,
+  "name": "Pirate",
+  "models": [28839, 28845, 28824, 28851, 28836, 28852, 28829],
+  "headModels": [39111],
+  "movementCapabilities": 3,
+  "$fileid": 6356
+}
+,
+
+{
+  "animation_group": 165,
+  "boundSize": 1,
+  "actions_0": "Talk-to",
+  "combat": 0,
+  "unknown_63": true,
+  "color_replacements": [[4434, 4645], [8596, 3974]],
+  "name": "Street urchin",
+  "models": [28604, 28644, 28655, 28610, 28626, 28672, 28665],
+  "headModels": [28689],
+  "movementCapabilities": 3,
+  "$fileid": 6357
+}
+,
+
+{
+  "animation_group": 165,
+  "boundSize": 1,
+  "actions_0": "Talk-to",
+  "combat": 0,
+  "unknown_63": true,
+  "color_replacements": [[4434, 4645], [8596, 3974]],
+  "name": "Street urchin",
+  "models": [28602, 28628, 28649, 28610, 28620, 28672],
+  "headModels": [28696],
+  "movementCapabilities": 3,
+  "$fileid": 6358
+}
+,
+
+{
+  "animation_group": 165,
+  "boundSize": 1,
+  "actions_0": "Talk-to",
+  "combat": 0,
+  "unknown_63": true,
+  "color_replacements": [[4434, 4645], [8596, 3974]],
+  "name": "Street urchin",
+  "models": [28605, 28632, 28659, 28610, 28614, 28672],
+  "headModels": [28681],
+  "movementCapabilities": 3,
+  "$fileid": 6359
+}
+,
+
+{
+  "animation_group": 165,
+  "boundSize": 1,
+  "actions_0": "Talk-to",
+  "combat": 0,
+  "unknown_63": true,
+  "color_replacements": [
+    [4434, 4645],
+    [43177, 7227],
+    [43063, 7223],
+    [43160, 7219],
+    [8596, 8844],
+    [8596, 3974]
+  ],
+  "name": "Street urchin",
+  "models": [28605, 28632, 28659, 28610, 28614, 28672],
+  "headModels": [28681],
+  "movementCapabilities": 3,
+  "$fileid": 6360
+}
+,
+
+{
+  "animation_group": 165,
+  "boundSize": 1,
+  "actions_0": "Talk-to",
+  "combat": 0,
+  "unknown_63": true,
+  "color_replacements": [
+    [4434, 4645],
+    [8596, 3974],
+    [10353, 10582],
+    [8299, 10582]
+  ],
+  "name": "Street urchin",
+  "models": [28609, 28635, 28655, 28610, 28626, 28672],
+  "headModels": [28690],
+  "movementCapabilities": 3,
+  "$fileid": 6361
+}
+,
+
+{
+  "animation_group": 26,
+  "boundSize": 1,
+  "scaleXZ": 120,
+  "scaleY": 120,
+  "actions_0": "Talk-to",
+  "actions_2": "Bank",
+  "actions_3": "Collect",
+  "combat": 0,
+  "unknown_63": true,
+  "name": "Eniola",
+  "models": [33302, 20862, 33300],
+  "headModels": [39857, 39344],
+  "movementCapabilities": 3,
+  "$fileid": 6362
+}
+,
+
+{
+  "animation_group": 4,
+  "unknown_63": true,
+  "actions_1": "Attack",
+  "combat": 84,
+  "color_replacements": [
+    [6589, 918],
+    [5568, 918],
+    [5537, 801],
+    [10394, 918],
+    [6674, 784],
+    [4626, 801]
+  ],
+  "material_replacements": [
+    [369, 291],
+    [247, 249],
+    [248, 303],
+    [327, 302],
+    [228, 249],
+    [255, 291]
+  ],
+  "name": "Zamorak warrior",
+  "models": [6653, 4117, 151, 14847, 10318, 12848, 4116, 185],
+  "movementCapabilities": 3,
+  "$fileid": 6363
+}
+,
+
+{
+  "animation_group": 4,
+  "unknown_63": true,
+  "actions_1": "Attack",
+  "combat": 85,
+  "color_replacements": [
+    [10266, 792],
+    [10277, 786],
+    [10279, 792],
+    [10283, 792],
+    [10275, 786],
+    [6554, 152]
+  ],
+  "material_replacements": [[139, 291]],
+  "name": "Zamorak warrior",
+  "models": [8747, 246, 8732, 8726, 564, 565, 10362, 28864],
+  "movementCapabilities": 3,
+  "$fileid": 6364
+}
+,
+
+{
+  "animation_group": 4,
+  "unknown_63": true,
+  "actions_1": "Attack",
+  "combat": 81,
+  "color_replacements": [
+    [8741, 914],
+    [25238, 912],
+    [37283, 786],
+    [78, 904],
+    [37394, 784],
+    [36145, 914]
+  ],
+  "material_replacements": [[257, 254], [253, 258], [252, 254]],
+  "name": "Zamorak ranger",
+  "models": [226, 10561, 14461, 28855, 167, 176, 512, 254, 7121],
+  "movementCapabilities": 3,
+  "$fileid": 6365
+}
+,
+
+{
+  "animation_group": 4,
+  "unknown_63": true,
+  "actions_1": "Attack",
+  "combat": 82,
+  "color_replacements": [
+    [8741, 788],
+    [10363, 912],
+    [26, 920],
+    [25238, 906],
+    [7281, 920],
+    [28318, 906]
+  ],
+  "material_replacements": [[253, 258], [252, 254], [268, 258], [251, 258]],
+  "name": "Zamorak ranger",
+  "models": [208, 11190, 5222, 28855, 28863, 176, 563, 254, 7121],
+  "movementCapabilities": 3,
+  "$fileid": 6366
+}
+,
+
+{
+  "animation_group": 4,
+  "unknown_63": true,
+  "actions_1": "Attack",
+  "combat": 84,
+  "color_replacements": [
+    [24, 801],
+    [16, 65428],
+    [8, 788],
+    [920, 906],
+    [28, 119],
+    [12, 65428]
+  ],
+  "material_replacements": [[250, 253], [273, 252]],
+  "name": "Zamorak mage",
+  "models": [9981, 250, 25676, 23916, 176, 23934, 181],
+  "movementCapabilities": 3,
+  "$fileid": 6367
+}
+,
+
+{
+  "animation_group": 4,
+  "unknown_63": true,
+  "actions_1": "Attack",
+  "combat": 82,
+  "color_replacements": [
+    [28, 910],
+    [33, 914],
+    [37, 916],
+    [41, 916],
+    [45, 922],
+    [49, 910]
+  ],
+  "material_replacements": [[359, 252], [256, 253]],
+  "name": "Zamorak mage",
+  "models": [230, 251, 23943, 23915, 176, 23933, 181],
+  "movementCapabilities": 3,
+  "$fileid": 6368
+}
+,
+
+{
+  "animation_group": 656,
+  "scaleXZ": 108,
+  "scaleY": 108,
+  "actions_1": "Attack",
+  "combat": 37,
+  "color_replacements": [
+    [13743, 5045],
+    [15655, 4011],
+    [15774, 1955],
+    [16022, 926],
+    [17292, 918]
+  ],
+  "name": "Cave lizard",
+  "models": [28856],
+  "movementCapabilities": 3,
+  "$fileid": 6369
+}
+,
+
+{
+  "animation_group": 4,
+  "boundSize": 1,
+  "combat": 0,
+  "actions_0": "Talk-to",
+  "color_replacements": [[25238, 687], [8741, 687], [10413, 677], [10524, 943]],
+  "material_replacements": [[254, 252]],
+  "name": "Mage of Zamorak",
+  "models": [230, 246, 8927, 23916, 176, 23934, 181],
+  "headModels": [39630],
+  "movementCapabilities": 3,
+  "$fileid": 6370
+}
+,
+
+{
+  "animation_group": 4,
+  "boundSize": 1,
+  "actions_1": "Attack",
+  "combat": 19,
+  "color_replacements": [
+    [0, 790],
+    [7566, 790],
+    [16, 931],
+    [25238, 931],
+    [20, 786],
+    [7446, 914]
+  ],
+  "material_replacements": [[263, 252], [250, 256], [273, 359]],
+  "name": "Zamorak crafter",
+  "models": [13335, 18096, 18076, 176, 3329, 19943],
+  "movementCapabilities": 2,
+  "$fileid": 6371
+}
+,
+
+{
+  "animation_group": 4,
+  "boundSize": 1,
+  "actions_1": "Attack",
+  "combat": 19,
+  "color_replacements": [
+    [0, 790],
+    [7566, 790],
+    [16, 931],
+    [25238, 931],
+    [20, 786],
+    [7446, 914]
+  ],
+  "material_replacements": [[202, 250], [250, 256], [273, 359]],
+  "name": "Zamorak crafter",
+  "models": [13335, 18096, 18076, 176, 3329, 19943],
+  "movementCapabilities": 2,
+  "$fileid": 6372
+}
+,
+
+{
+  "animation_group": 1108,
+  "combat": 0,
+  "boundSize": 1,
+  "actions_0": "Talk-to",
+  "name": "Kennith",
+  "models": [28601],
+  "headModels": [28688],
+  "movementCapabilities": 3,
+  "$fileid": 6373
+}
+,
+
+{
+  "animation_group": 801,
+  "boundSize": 1,
+  "combat": 44,
+  "name": "Guard dog",
+  "models": [26255],
+  "movementCapabilities": 3,
+  "$fileid": 6374
+}
+,
+
+{
+  "animation_group": 4,
+  "combat": 0,
+  "boundSize": 1,
+  "unknown_67": 0,
+  "unknown_63": true,
+  "color_replacements": [[6798, 119], [123, 38831]],
+  "name": "Wizard Cromperty",
+  "models": [202, 215, 246, 20405, 3189, 20395, 176, 20403, 181],
+  "headModels": [39836, 39400, 39223],
+  "movementCapabilities": 1,
+  "$fileid": 6375
+}
+,
+
+{
+  "animation_group": 17,
+  "boundSize": 1,
+  "actions_1": "Attack",
+  "combat": 40,
+  "color_replacements": [
+    [33728, 11160],
+    [56256, 11024],
+    [22443, 11156],
+    [50099, 10908],
+    [960, 11169]
+  ],
+  "name": "Jungle spider",
+  "models": [20315, 20313],
+  "movementCapabilities": 3,
+  "$fileid": 6376
+}
+,
+
+{
+  "animation_group": 17,
+  "boundSize": 1,
+  "actions_1": "Attack",
+  "combat": 40,
+  "color_replacements": [
+    [33728, 11160],
+    [56256, 11024],
+    [22443, 11156],
+    [50099, 7855],
+    [960, 11169]
+  ],
+  "name": "Jungle spider",
+  "models": [20315, 20313],
+  "movementCapabilities": 3,
+  "$fileid": 6377
+}
+,
+
+{
+  "animation_group": 85,
+  "ambience": 20,
+  "actions_1": "Attack",
+  "combat": 70,
+  "color_replacements": [
+    [11852, 10353],
+    [9802, 10345],
+    [39364, 11951],
+    [39355, 12071],
+    [13768, 6073]
+  ],
+  "name": "Tenacious toucan",
+  "models": [26847],
+  "movementCapabilities": 3,
+  "$fileid": 6378
+}
+,
+
+{
+  "animation_group": 803,
+  "boundSize": 1,
+  "modelContract": 20,
+  "ambience": 20,
+  "actions_1": "Attack",
+  "combat": 40,
+  "name": "Giant ant worker",
+  "models": [28974],
+  "movementCapabilities": 3,
+  "$fileid": 6379
+}
+,
+
+{
+  "animation_group": 803,
+  "boundSize": 1,
+  "modelContract": 20,
+  "ambience": 20,
+  "actions_1": "Attack",
+  "combat": 58,
+  "name": "Giant ant soldier",
+  "models": [28975],
+  "movementCapabilities": 3,
+  "$fileid": 6380
+}
+,
+
+{
+  "animation_group": 805,
+  "boundSize": 1,
+  "modelContract": 20,
+  "ambience": 20,
+  "actions_1": "Attack",
+  "combat": 66,
+  "name": "Giant wasp",
+  "models": [28980, 28979],
+  "movementCapabilities": 3,
+  "$fileid": 6381
+}
+,
+
+{
+  "animation_group": 83,
+  "ambience": 20,
+  "actions_1": "Attack",
+  "combat": 66,
+  "color_replacements": [
+    [34987, 693],
+    [29865, 813],
+    [24865, 9026],
+    [17566, 38835],
+    [24741, 7993],
+    [19639, 573]
+  ],
+  "name": "Pernicious parrot",
+  "models": [26849],
+  "movementCapabilities": 3,
+  "$fileid": 6382
+}
+,
+
+{
+  "animation_group": 805,
+  "boundSize": 1,
+  "modelContract": 20,
+  "ambience": 20,
+  "actions_1": "Attack",
+  "combat": 66,
+  "name": "Giant wasp",
+  "models": [28980, 28979],
+  "movementCapabilities": 3,
+  "$fileid": 6383
+}
+,
+
+{
+  "animation_group": 264,
+  "boundSize": 5,
+  "unknown_67": 1024,
+  "combat": 0,
+  "color_replacements": [
+    [10357, 7223],
+    [5543, 7333],
+    [5667, 8481],
+    [6697, 7452],
+    [6573, 8472],
+    [5551, 6798]
+  ],
+  "name": "Karamjan Jungle Eagle",
+  "models": [5727, 5729],
+  "movementCapabilities": 1,
+  "$fileid": 6384
+}
+,
+
+{
+  "animation_group": 286,
+  "boundSize": 3,
+  "unknown_63": true,
+  "combat": 0,
+  "color_replacements": [
+    [10357, 7223],
+    [5543, 7333],
+    [5667, 8481],
+    [6697, 7452],
+    [6573, 8472],
+    [5551, 6798]
+  ],
+  "name": "Karamjan Jungle eagle",
+  "models": [19380],
+  "movementCapabilities": 3,
+  "$fileid": 6385
+}
+,
+
+{
+  "animation_group": 4,
+  "unknown_63": true,
+  "combat": 1,
+  "morphs_1": {"unk1": 265879551, "unk2": [65535], "unk3": 417822467},
+  "$fileid": 6386
+}
+,
+
+{
+  "animation_group": 286,
+  "boundSize": 3,
+  "unknown_63": true,
+  "combat": 0,
+  "color_replacements": [
+    [10357, 7223],
+    [5543, 7333],
+    [5667, 8481],
+    [6697, 7452],
+    [6573, 8472],
+    [5551, 6798]
+  ],
+  "morphs_1": {
+    "unk1": 182255615,
+    "unk2": [
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535
+    ],
+    "unk3": 418477827
+  },
+  "$fileid": 6387
+}
+,
+
+{
+  "animation_group": 4,
+  "boundSize": 1,
+  "actions_0": "Talk-to",
+  "actions_1": "Attack",
+  "actions_2": "Pickpocket",
+  "actions_3": "Lure",
+  "actions_4": "Knock-Out",
+  "combat": 41,
+  "color_replacements": [[8741, 10351], [4550, 5555]],
+  "material_replacements": [[255, 258], [228, 426]],
+  "name": "Bandit",
+  "models": [6086, 6087, 292, 173, 6090, 181, 176, 6099, 523],
+  "headModels": [39799, 39490, 39182],
+  "movementCapabilities": 3,
+  "$fileid": 6388
+}
+,
+
+{
+  "combat": 1,
+  "name": "Gargoyle",
+  "models": [29188],
+  "headModels": [29182],
+  "movementCapabilities": 3,
+  "$fileid": 6389
+}
+,
+
+{
+  "animation_group": 617,
+  "combat": 0,
+  "boundSize": 2,
+  "unknown_67": 0,
+  "unknown_63": true,
+  "actions_0": "Talk-to",
+  "name": "Grim Reaper",
+  "models": [29188, 29187],
+  "headModels": [29183],
+  "movementCapabilities": 1,
+  "$fileid": 6390
+}
+,
+
+{
+  "animation_group": 108,
+  "boundSize": 1,
+  "combat": 0,
+  "color_replacements": [[7322, 14610], [6439, 14499]],
+  "name": "Glough",
+  "models": [17025, 14809, 16988],
+  "headModels": [22],
+  "movementCapabilities": 1,
+  "$fileid": 6391
+}
+,
+
+{
+  "animation_group": 214,
+  "actions_0": "Talk-to",
+  "combat": 0,
+  "actions_2": "Buy-sphere",
+  "color_replacements": [
+    [5549, 78],
+    [5673, 74],
+    [5793, 70],
+    [8485, 7326],
+    [8609, 7322]
+  ],
+  "name": "Oldak",
+  "models": [23671, 23707, 23629],
+  "headModels": [23250],
+  "movementCapabilities": 3,
+  "$fileid": 6392
+}
+,
+
+{
+  "animation_group": 214,
+  "boundSize": 1,
+  "actions_0": "Talk-to",
+  "combat": 0,
+  "unknown_63": true,
+  "name": "Zanik",
+  "models": [23638, 23693],
+  "headModels": [23243, 15561],
+  "movementCapabilities": 3,
+  "$fileid": 6393
+}
+,
+
+{
+  "animation_group": 214,
+  "unknown_63": true,
+  "combat": 1,
+  "morphs_1": {"unk1": 269221887, "unk2": [65535], "unk3": 419002115},
+  "$fileid": 6394
+}
+,
+
+{
+  "animation_group": 214,
+  "boundSize": 1,
+  "actions_0": "Talk-to",
+  "combat": 0,
+  "unknown_63": true,
+  "name": "Zanik",
+  "models": [23638, 23693],
+  "headModels": [23243, 15561],
+  "movementCapabilities": 2,
+  "$fileid": 6395
+}
+,
+
+{
+  "animation_group": 214,
+  "unknown_63": true,
+  "combat": 1,
+  "morphs_1": {
+    "unk1": 269090815,
+    "unk2": [65535, 65535, 65535, 65535, 65535, 65535, 65535, 6393],
+    "unk3": 419002115
+  },
+  "$fileid": 6396
+}
+,
+
+{
+  "animation_group": 214,
+  "boundSize": 1,
+  "combat": 0,
+  "unknown_63": true,
+  "name": "Zanik",
+  "models": [23638, 23693],
+  "headModels": [23243, 15561],
+  "movementCapabilities": 3,
+  "$fileid": 6397
+}
+,
+
+{
+  "animation_group": 214,
+  "unknown_63": true,
+  "combat": 1,
+  "morphs_1": {
+    "unk1": 269090815,
+    "unk2": [
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      6393
+    ],
+    "unk3": 419002115
+  },
+  "$fileid": 6398
+}
+,
+
+{
+  "animation_group": 214,
+  "boundSize": 1,
+  "actions_0": "Talk-to",
+  "combat": 0,
+  "unknown_63": true,
+  "name": "Zanik",
+  "models": [23638, 23693],
+  "headModels": [23243, 15561],
+  "movementCapabilities": 1,
+  "$fileid": 6399
+}]}

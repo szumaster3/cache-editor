@@ -1,0 +1,144 @@
+{
+  "type": "object",
+  "properties": {
+    "files": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "key_type1": {
+            "oneOf": [
+              {"type": "number", "maximum": 255, "minimum": 0},
+              {"type": "null"}
+            ]
+          },
+          "value_type1": {
+            "oneOf": [
+              {"type": "number", "maximum": 255, "minimum": 0},
+              {"type": "null"}
+            ]
+          },
+          "key_type2": {
+            "oneOf": [
+              {"type": "number", "maximum": 255, "minimum": 0},
+              {"type": "null"}
+            ]
+          },
+          "value_type2": {
+            "oneOf": [
+              {"type": "number", "maximum": 255, "minimum": 0},
+              {"type": "null"}
+            ]
+          },
+          "stringValue": {"oneOf": [{"type": "string"}, {"type": "null"}]},
+          "intValue": {
+            "oneOf": [
+              {"type": "number", "maximum": 2147483647, "minimum": -2147483648},
+              {"type": "null"}
+            ]
+          },
+          "stringArrayValue1": {
+            "oneOf": [
+              {
+                "type": "array",
+                "items": {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "number",
+                      "maximum": 2147483647,
+                      "minimum": -2147483648
+                    },
+                    {"type": "string"}
+                  ],
+                  "minItems": 2,
+                  "maxItems": 2
+                }
+              },
+              {"type": "null"}
+            ]
+          },
+          "intArrayValue1": {
+            "oneOf": [
+              {
+                "type": "array",
+                "items": {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "number",
+                      "maximum": 2147483647,
+                      "minimum": -2147483648
+                    },
+                    {
+                      "type": "number",
+                      "maximum": 2147483647,
+                      "minimum": -2147483648
+                    }
+                  ],
+                  "minItems": 2,
+                  "maxItems": 2
+                }
+              },
+              {"type": "null"}
+            ]
+          },
+          "stringArrayValue2": {
+            "oneOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "max": {"type": "number", "maximum": 65535, "minimum": 0},
+                  "values": {
+                    "type": "array",
+                    "items": {
+                      "type": "array",
+                      "items": [
+                        {"type": "number", "maximum": 65535, "minimum": 0},
+                        {"type": "string"}
+                      ],
+                      "minItems": 2,
+                      "maxItems": 2
+                    }
+                  }
+                },
+                "required": ["max", "values"]
+              },
+              {"type": "null"}
+            ]
+          },
+          "intArrayValue2": {
+            "oneOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "max": {"type": "number", "maximum": 65535, "minimum": 0},
+                  "values": {
+                    "type": "array",
+                    "items": {
+                      "type": "array",
+                      "items": [
+                        {"type": "number", "maximum": 65535, "minimum": 0},
+                        {
+                          "type": "number",
+                          "maximum": 2147483647,
+                          "minimum": -2147483648
+                        }
+                      ],
+                      "minItems": 2,
+                      "maxItems": 2
+                    }
+                  }
+                },
+                "required": ["max", "values"]
+              },
+              {"type": "null"}
+            ]
+          },
+          "unknown_83": {"oneOf": [{"const": true}, {"type": "null"}]},
+          "unknown_d1": {"oneOf": [{"const": true}, {"type": "null"}]}
+        }
+      }
+    }
+  }
+}

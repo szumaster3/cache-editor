@@ -1,0 +1,81 @@
+{
+  "type": "object",
+  "properties": {
+    "files": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "cachemajors": {
+            "anyOf": [
+              {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "minor": {"type": "integer"},
+                    "crc": {
+                      "type": "number",
+                      "maximum": 4294967295,
+                      "minimum": 0
+                    },
+                    "version": {
+                      "type": "number",
+                      "maximum": 4294967295,
+                      "minimum": 0
+                    },
+                    "subindexcount": {
+                      "anyOf": [
+                        {"type": "number", "maximum": 4294967295, "minimum": 0},
+                        {"const": 0}
+                      ]
+                    },
+                    "integer_10": {
+                      "anyOf": [
+                        {"type": "number", "maximum": 4294967295, "minimum": 0},
+                        {"const": 0}
+                      ]
+                    },
+                    "maybe_checksum1": {"type": "string"}
+                  },
+                  "required": [
+                    "minor",
+                    "crc",
+                    "version",
+                    "subindexcount",
+                    "integer_10",
+                    "maybe_checksum1"
+                  ]
+                }
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "minor": {"type": "integer"},
+                    "crc": {
+                      "type": "number",
+                      "maximum": 4294967295,
+                      "minimum": 0
+                    },
+                    "version": {
+                      "anyOf": [
+                        {"type": "number", "maximum": 4294967295, "minimum": 0},
+                        {"const": 0}
+                      ]
+                    },
+                    "subindexcount": {"const": 0}
+                  },
+                  "required": ["minor", "crc", "version", "subindexcount"]
+                }
+              }
+            ]
+          },
+          "maybe_proper_checksum": {"type": "string"}
+        },
+        "required": ["cachemajors", "maybe_proper_checksum"]
+      }
+    }
+  }
+}

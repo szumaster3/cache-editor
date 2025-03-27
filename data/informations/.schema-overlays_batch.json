@@ -1,0 +1,92 @@
+{
+  "type": "object",
+  "properties": {
+    "files": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "color": {
+            "oneOf": [
+              {
+                "type": "array",
+                "items": {"type": "number", "maximum": 255, "minimum": 0}
+              },
+              {"type": "null"}
+            ]
+          },
+          "materialbyte": {
+            "oneOf": [
+              {"type": "number", "maximum": 255, "minimum": 0},
+              {"type": "null"}
+            ]
+          },
+          "material": {
+            "oneOf": [
+              {
+                "anyOf": [
+                  {"type": "number", "maximum": 65535, "minimum": 0},
+                  {"const": 0}
+                ]
+              },
+              {"type": "null"}
+            ]
+          },
+          "unknown_0x05": {"oneOf": [{"const": true}, {"type": "null"}]},
+          "name": {"oneOf": [{"type": "string"}, {"type": "null"}]},
+          "secondary_colour": {
+            "oneOf": [
+              {
+                "type": "array",
+                "items": {"type": "number", "maximum": 255, "minimum": 0}
+              },
+              {"type": "null"}
+            ]
+          },
+          "unknown_0x08": {"oneOf": [{"const": true}, {"type": "null"}]},
+          "material_tiling": {
+            "oneOf": [
+              {"type": "number", "maximum": 65535, "minimum": 0},
+              {"type": "null"}
+            ]
+          },
+          "unknown_0x0A": {"oneOf": [{"const": true}, {"type": "null"}]},
+          "bleedpriority": {
+            "oneOf": [
+              {"type": "number", "maximum": 255, "minimum": 0},
+              {"type": "null"}
+            ]
+          },
+          "bleedToUnderlay": {"oneOf": [{"const": true}, {"type": "null"}]},
+          "tertiary_colour": {
+            "oneOf": [
+              {
+                "type": "array",
+                "items": {"type": "number", "maximum": 255, "minimum": 0}
+              },
+              {"type": "null"}
+            ]
+          },
+          "unknown_0x0E": {
+            "oneOf": [
+              {"type": "number", "maximum": 255, "minimum": 0},
+              {"type": "null"}
+            ]
+          },
+          "unknown_0x0F": {
+            "oneOf": [
+              {"type": "number", "maximum": 65535, "minimum": 0},
+              {"type": "null"}
+            ]
+          },
+          "unknown_0x10": {
+            "oneOf": [
+              {"type": "number", "maximum": 255, "minimum": 0},
+              {"type": "null"}
+            ]
+          }
+        }
+      }
+    }
+  }
+}

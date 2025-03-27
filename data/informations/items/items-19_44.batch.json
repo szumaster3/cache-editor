@@ -1,0 +1,3352 @@
+{"$schema":".schema-items_batch.json","files":[
+
+{
+  "baseModel": 26304,
+  "modelTranslate_1": 1,
+  "model_zoom": 528,
+  "rotation_1": 1577,
+  "rotation_2": 2006,
+  "rotation_0": 138,
+  "value": 10,
+  "members": true,
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "name": "Anchovy oil",
+  "noteData": 11265,
+  "nullopt": true,
+  "$fileid": 11264
+}
+,
+
+{"noteData": 11264, "noteTemplate": 799, "nullopt": true, "$fileid": 11265}
+,
+
+{
+  "baseModel": 26305,
+  "modelTranslate_0": 3,
+  "modelTranslate_1": 1,
+  "model_zoom": 530,
+  "rotation_1": 664,
+  "rotation_2": 1992,
+  "rotation_0": 152,
+  "value": 5,
+  "members": true,
+  "stackable_1": true,
+  "tradeable": true,
+  "name": "Anchovy paste",
+  "nullopt": true,
+  "$fileid": 11266
+}
+,
+
+{
+  "baseModel": 26329,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": 3,
+  "model_zoom": 854,
+  "rotation_1": 1591,
+  "rotation_2": 41,
+  "rotation_0": 1757,
+  "members": true,
+  "name": "Picture",
+  "nullopt": true,
+  "$fileid": 11267
+}
+,
+
+{
+  "baseModel": 26327,
+  "modelTranslate_0": -7,
+  "modelTranslate_1": 1,
+  "model_zoom": 1440,
+  "rotation_1": 1956,
+  "rotation_0": 152,
+  "ambiance": 60,
+  "members": true,
+  "value": 1000,
+  "name": "Picture",
+  "nullopt": true,
+  "$fileid": 11268
+}
+,
+
+{
+  "baseModel": 26325,
+  "modelTranslate_0": 13,
+  "modelTranslate_1": 60,
+  "model_zoom": 590,
+  "rotation_1": 1756,
+  "rotation_0": 280,
+  "value": 1,
+  "members": true,
+  "name": "Picture",
+  "noteData": 11270,
+  "nullopt": true,
+  "$fileid": 11269
+}
+,
+
+{"noteData": 11269, "noteTemplate": 799, "nullopt": true, "$fileid": 11270}
+,
+
+{
+  "baseModel": 26331,
+  "modelTranslate_1": 1,
+  "model_zoom": 528,
+  "rotation_1": 1452,
+  "rotation_2": 2006,
+  "rotation_0": 138,
+  "value": 50,
+  "widget_actions_3": "Empty",
+  "members": true,
+  "name": "Picture",
+  "noteData": 11272,
+  "nullopt": true,
+  "$fileid": 11271
+}
+,
+
+{"noteData": 11271, "noteTemplate": 799, "nullopt": true, "$fileid": 11272}
+,
+
+{
+  "baseModel": 2774,
+  "value": 3,
+  "members": true,
+  "modelTranslate_0": -1,
+  "modelTranslate_1": 56,
+  "model_zoom": 990,
+  "rotation_1": 1716,
+  "rotation_0": 264,
+  "widget_actions_0": "Toggle-view",
+  "widget_actions_4": "Destroy",
+  "color_replacements": [
+    [5452, 8373],
+    [5440, 8493],
+    [5427, 8485],
+    [1938, 41612]
+  ],
+  "name": "Impling scroll",
+  "nullopt": true,
+  "$fileid": 11273
+}
+,
+
+{
+  "value": 75,
+  "baseModel": 2786,
+  "members": true,
+  "modelTranslate_1": 7,
+  "model_zoom": 1370,
+  "rotation_0": 536,
+  "maleModels_0": {"id": 292, "type": 0},
+  "maleModels_1": 170,
+  "femaleModels_0": {"id": 470, "type": 0},
+  "femaleModels_1": 348,
+  "widget_actions_1": "Wear",
+  "dummyItem": 1,
+  "color_replacements": [[8741, 61347]],
+  "name": "Ham shirt",
+  "nullopt": true,
+  "$fileid": 11274
+}
+,
+
+{"noteData": 9418, "noteTemplate": 799, "nullopt": true, "$fileid": 11275}
+,
+
+{"noteData": 9419, "noteTemplate": 799, "nullopt": true, "$fileid": 11276}
+,
+
+{
+  "baseModel": 26452,
+  "members": true,
+  "maleModels_0": {"id": 26415, "type": 0},
+  "femaleModels_0": {"id": 26429, "type": 0},
+  "widget_actions_1": "Wear",
+  "maleHeads_0": 39750,
+  "femaleHeads_0": 39087,
+  "modelTranslate_1": -9,
+  "model_zoom": 724,
+  "rotation_0": 111,
+  "value": 200,
+  "dummyItem": 1,
+  "name": "Cavalier mask",
+  "nullopt": true,
+  "$fileid": 11277
+}
+,
+
+{
+  "baseModel": 26453,
+  "members": true,
+  "maleModels_0": {"id": 26414, "type": 0},
+  "femaleModels_0": {"id": 26428, "type": 0},
+  "widget_actions_1": "Wear",
+  "maleHeads_0": 39637,
+  "femaleHeads_0": 39637,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": -24,
+  "model_zoom": 596,
+  "rotation_0": 194,
+  "value": 80,
+  "dummyItem": 1,
+  "name": "Beret mask",
+  "nullopt": true,
+  "$fileid": 11278
+}
+,
+
+{
+  "baseModel": 26451,
+  "modelTranslate_0": -3,
+  "modelTranslate_1": 3,
+  "model_zoom": 1697,
+  "rotation_1": 870,
+  "rotation_0": 315,
+  "maleModels_0": {"id": 26608, "type": 0},
+  "femaleModels_0": {"id": 26608, "type": 0},
+  "widget_actions_4": "Destroy",
+  "name": "Elvarg's head",
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 11279
+}
+,
+
+{
+  "baseModel": 26452,
+  "members": true,
+  "maleModels_0": {"id": 26415, "type": 0},
+  "femaleModels_0": {"id": 26429, "type": 0},
+  "maleModels_1": 215,
+  "femaleModels_1": 391,
+  "widget_actions_1": "Wear",
+  "maleHeads_0": 39750,
+  "femaleHeads_0": 39087,
+  "maleHeads_1": 39991,
+  "femaleHeads_1": 39101,
+  "modelTranslate_1": -9,
+  "model_zoom": 724,
+  "rotation_0": 111,
+  "value": 200,
+  "tradeable": true,
+  "color_replacements": [[43146, 8]],
+  "name": "Cavalier and mask",
+  "noteData": 11281,
+  "loanId": 13763,
+  "nullopt": true,
+  "$fileid": 11280
+}
+,
+
+{"noteData": 11280, "noteTemplate": 799, "nullopt": true, "$fileid": 11281}
+,
+
+{
+  "baseModel": 26453,
+  "members": true,
+  "maleModels_0": {"id": 26414, "type": 0},
+  "femaleModels_0": {"id": 26428, "type": 0},
+  "widget_actions_1": "Wear",
+  "maleHeads_0": 39637,
+  "femaleHeads_0": 39043,
+  "modelTranslate_0": 3,
+  "modelTranslate_1": -38,
+  "model_zoom": 724,
+  "rotation_1": 111,
+  "rotation_0": 221,
+  "value": 80,
+  "color_replacements": [[43146, 8]],
+  "name": "Beret and mask",
+  "nullopt": true,
+  "$fileid": 11282
+}
+,
+
+{
+  "value": 2000000,
+  "baseModel": 26457,
+  "model_zoom": 2022,
+  "rotation_1": 123,
+  "rotation_0": 540,
+  "contrast": 15,
+  "ambiance": 15,
+  "maleModels_0": {"id": 26423, "type": 0},
+  "femaleModels_0": {"id": 26423, "type": 0},
+  "widget_actions_1": "Wield",
+  "widget_actions_2": "Inspect",
+  "widget_actions_3": "Empty",
+  "members": true,
+  "name": "Dragonfire shield",
+  "female_translate": [253, 245, 6],
+  "nullopt": true,
+  "$fileid": 11283
+}
+,
+
+{
+  "value": 2000000,
+  "baseModel": 26457,
+  "model_zoom": 2022,
+  "rotation_1": 123,
+  "rotation_0": 540,
+  "contrast": 15,
+  "ambiance": 15,
+  "maleModels_0": {"id": 26423, "type": 0},
+  "femaleModels_0": {"id": 26423, "type": 0},
+  "widget_actions_1": "Wield",
+  "widget_actions_2": "Inspect",
+  "members": true,
+  "tradeable": true,
+  "name": "Dragonfire shield",
+  "female_translate": [253, 245, 6],
+  "noteData": 11285,
+  "nullopt": true,
+  "$fileid": 11284
+}
+,
+
+{"noteData": 11284, "noteTemplate": 799, "nullopt": true, "$fileid": 11285}
+,
+
+{
+  "value": 750000,
+  "baseModel": 26456,
+  "modelTranslate_0": -5,
+  "modelTranslate_1": -5,
+  "model_zoom": 1697,
+  "rotation_1": 152,
+  "rotation_2": 2047,
+  "rotation_0": 567,
+  "members": true,
+  "tradeable": true,
+  "name": "Draconic visage",
+  "noteData": 11287,
+  "nullopt": true,
+  "$fileid": 11286
+}
+,
+
+{"noteData": 11286, "noteTemplate": 799, "nullopt": true, "$fileid": 11287}
+,
+
+{
+  "baseModel": 2789,
+  "maleModels_0": {"id": 26829, "type": 0},
+  "femaleModels_0": {"id": 26829, "type": 0},
+  "value": 40,
+  "members": true,
+  "widget_actions_3": "Empty",
+  "dummyItem": 2,
+  "color_replacements": [[61, 11080]],
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 11288
+}
+,
+
+{
+  "baseModel": 2789,
+  "maleModels_0": {"id": 26647, "type": 0},
+  "femaleModels_0": {"id": 26647, "type": 0},
+  "value": 40,
+  "members": true,
+  "widget_actions_3": "Empty",
+  "dummyItem": 2,
+  "color_replacements": [[61, 11080]],
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 11289
+}
+,
+
+{
+  "baseModel": 2789,
+  "maleModels_0": {"id": 26647, "type": 0},
+  "femaleModels_0": {"id": 26647, "type": 0},
+  "value": 40,
+  "members": true,
+  "widget_actions_3": "Empty",
+  "dummyItem": 2,
+  "color_replacements": [[61, 33608]],
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 11290
+}
+,
+
+{
+  "baseModel": 2789,
+  "maleModels_0": {"id": 26647, "type": 0},
+  "femaleModels_0": {"id": 26647, "type": 0},
+  "value": 40,
+  "members": true,
+  "widget_actions_3": "Empty",
+  "dummyItem": 2,
+  "color_replacements": [[61, 840]],
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 11291
+}
+,
+
+{
+  "baseModel": 2789,
+  "maleModels_0": {"id": 26647, "type": 0},
+  "femaleModels_0": {"id": 26647, "type": 0},
+  "value": 40,
+  "members": true,
+  "widget_actions_3": "Empty",
+  "dummyItem": 2,
+  "color_replacements": [[61, 22344]],
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 11292
+}
+,
+
+{
+  "baseModel": 2789,
+  "maleModels_0": {"id": 26647, "type": 0},
+  "femaleModels_0": {"id": 26647, "type": 0},
+  "value": 40,
+  "members": true,
+  "widget_actions_3": "Empty",
+  "dummyItem": 2,
+  "color_replacements": [[61, 28488]],
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 11293
+}
+,
+
+{
+  "baseModel": 2789,
+  "maleModels_0": {"id": 26647, "type": 0},
+  "femaleModels_0": {"id": 26647, "type": 0},
+  "value": 40,
+  "members": true,
+  "widget_actions_3": "Empty",
+  "dummyItem": 2,
+  "color_replacements": [[61, 43848]],
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 11294
+}
+,
+
+{
+  "baseModel": 2789,
+  "maleModels_0": {"id": 26647, "type": 0},
+  "femaleModels_0": {"id": 26647, "type": 0},
+  "value": 40,
+  "members": true,
+  "widget_actions_3": "Empty",
+  "dummyItem": 2,
+  "color_replacements": [[61, 24]],
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 11295
+}
+,
+
+{
+  "baseModel": 2789,
+  "maleModels_0": {"id": 26647, "type": 0},
+  "femaleModels_0": {"id": 26647, "type": 0},
+  "value": 40,
+  "members": true,
+  "widget_actions_3": "Empty",
+  "dummyItem": 2,
+  "color_replacements": [[61, 119]],
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 11296
+}
+,
+
+{
+  "baseModel": 2789,
+  "maleModels_0": {"id": 26647, "type": 0},
+  "femaleModels_0": {"id": 26647, "type": 0},
+  "value": 40,
+  "members": true,
+  "widget_actions_3": "Empty",
+  "dummyItem": 2,
+  "color_replacements": [[61, 8008]],
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 11297
+}
+,
+
+{
+  "baseModel": 2789,
+  "maleModels_0": {"id": 26647, "type": 0},
+  "femaleModels_0": {"id": 26647, "type": 0},
+  "value": 40,
+  "members": true,
+  "widget_actions_3": "Empty",
+  "dummyItem": 2,
+  "color_replacements": [[61, 18372]],
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 11298
+}
+,
+
+{
+  "baseModel": 2789,
+  "maleModels_0": {"id": 26647, "type": 0},
+  "femaleModels_0": {"id": 26647, "type": 0},
+  "value": 40,
+  "members": true,
+  "widget_actions_3": "Empty",
+  "dummyItem": 2,
+  "color_replacements": [[61, 62404]],
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 11299
+}
+,
+
+{
+  "baseModel": 2789,
+  "maleModels_0": {"id": 26647, "type": 0},
+  "femaleModels_0": {"id": 26647, "type": 0},
+  "value": 40,
+  "members": true,
+  "widget_actions_3": "Empty",
+  "dummyItem": 2,
+  "color_replacements": [[61, 39876]],
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 11300
+}
+,
+
+{
+  "baseModel": 2789,
+  "maleModels_0": {"id": 26647, "type": 0},
+  "femaleModels_0": {"id": 26647, "type": 0},
+  "value": 40,
+  "members": true,
+  "widget_actions_3": "Empty",
+  "dummyItem": 2,
+  "color_replacements": [[61, 25026]],
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 11301
+}
+,
+
+{
+  "baseModel": 2789,
+  "maleModels_0": {"id": 26647, "type": 0},
+  "femaleModels_0": {"id": 26647, "type": 0},
+  "value": 40,
+  "members": true,
+  "widget_actions_3": "Empty",
+  "dummyItem": 2,
+  "color_replacements": [[61, 51109]],
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 11302
+}
+,
+
+{
+  "baseModel": 2789,
+  "maleModels_0": {"id": 26647, "type": 0},
+  "femaleModels_0": {"id": 26647, "type": 0},
+  "value": 40,
+  "members": true,
+  "widget_actions_3": "Empty",
+  "dummyItem": 2,
+  "color_replacements": [[61, 6868]],
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 11303
+}
+,
+
+{
+  "baseModel": 2789,
+  "maleModels_0": {"id": 26647, "type": 0},
+  "femaleModels_0": {"id": 26647, "type": 0},
+  "value": 40,
+  "members": true,
+  "widget_actions_3": "Empty",
+  "dummyItem": 2,
+  "color_replacements": [[61, 33682]],
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 11304
+}
+,
+
+{
+  "baseModel": 2789,
+  "maleModels_0": {"id": 26647, "type": 0},
+  "femaleModels_0": {"id": 26647, "type": 0},
+  "value": 40,
+  "members": true,
+  "widget_actions_3": "Empty",
+  "dummyItem": 2,
+  "color_replacements": [[61, 9096]],
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 11305
+}
+,
+
+{
+  "baseModel": 2562,
+  "maleModels_0": {"id": 26650, "type": 0},
+  "femaleModels_0": {"id": 26650, "type": 0},
+  "dummyItem": 2,
+  "color_replacements": [[6674, 41282]],
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 11306
+}
+,
+
+{
+  "baseModel": 2562,
+  "maleModels_0": {"id": 26650, "type": 0},
+  "femaleModels_0": {"id": 26650, "type": 0},
+  "dummyItem": 2,
+  "color_replacements": [[6674, 6049]],
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 11307
+}
+,
+
+{
+  "baseModel": 2562,
+  "maleModels_0": {"id": 26650, "type": 0},
+  "femaleModels_0": {"id": 26650, "type": 0},
+  "dummyItem": 2,
+  "color_replacements": [[6674, 8111]],
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 11308
+}
+,
+
+{
+  "baseModel": 2562,
+  "maleModels_0": {"id": 26650, "type": 0},
+  "femaleModels_0": {"id": 26650, "type": 0},
+  "dummyItem": 2,
+  "color_replacements": [[6674, 9903]],
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 11309
+}
+,
+
+{
+  "baseModel": 2562,
+  "maleModels_0": {"id": 26650, "type": 0},
+  "femaleModels_0": {"id": 26650, "type": 0},
+  "dummyItem": 2,
+  "color_replacements": [[6674, 2250]],
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 11310
+}
+,
+
+{
+  "baseModel": 2562,
+  "maleModels_0": {"id": 26650, "type": 0},
+  "femaleModels_0": {"id": 26650, "type": 0},
+  "dummyItem": 2,
+  "color_replacements": [[6674, 9135]],
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 11311
+}
+,
+
+{
+  "baseModel": 2562,
+  "maleModels_0": {"id": 26650, "type": 0},
+  "femaleModels_0": {"id": 26650, "type": 0},
+  "dummyItem": 2,
+  "color_replacements": [[6674, 31516]],
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 11312
+}
+,
+
+{
+  "baseModel": 2562,
+  "maleModels_0": {"id": 26654, "type": 0},
+  "femaleModels_0": {"id": 26654, "type": 0},
+  "dummyItem": 2,
+  "color_replacements": [[6674, 6049]],
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 11313
+}
+,
+
+{
+  "baseModel": 2562,
+  "maleModels_0": {"id": 26654, "type": 0},
+  "femaleModels_0": {"id": 26654, "type": 0},
+  "dummyItem": 2,
+  "color_replacements": [[6674, 8111]],
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 11314
+}
+,
+
+{
+  "baseModel": 2562,
+  "maleModels_0": {"id": 26654, "type": 0},
+  "femaleModels_0": {"id": 26654, "type": 0},
+  "dummyItem": 2,
+  "color_replacements": [[6674, 9903]],
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 11315
+}
+,
+
+{
+  "baseModel": 2562,
+  "maleModels_0": {"id": 26654, "type": 0},
+  "femaleModels_0": {"id": 26654, "type": 0},
+  "dummyItem": 2,
+  "color_replacements": [[6674, 2250]],
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 11316
+}
+,
+
+{
+  "baseModel": 2562,
+  "maleModels_0": {"id": 26654, "type": 0},
+  "femaleModels_0": {"id": 26654, "type": 0},
+  "dummyItem": 2,
+  "color_replacements": [[6674, 9135]],
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 11317
+}
+,
+
+{
+  "baseModel": 2562,
+  "maleModels_0": {"id": 26654, "type": 0},
+  "femaleModels_0": {"id": 26654, "type": 0},
+  "dummyItem": 2,
+  "color_replacements": [[6674, 31516]],
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 11318
+}
+,
+
+{
+  "baseModel": 2562,
+  "maleModels_0": {"id": 26655, "type": 0},
+  "femaleModels_0": {"id": 26655, "type": 0},
+  "dummyItem": 2,
+  "color_replacements": [[6674, 6049]],
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 11319
+}
+,
+
+{
+  "baseModel": 26652,
+  "value": 3,
+  "maleModels_0": {"id": 26652, "type": 0},
+  "femaleModels_0": {"id": 26652, "type": 0},
+  "dummyItem": 2,
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 11320
+}
+,
+
+{
+  "baseModel": 26651,
+  "value": 3,
+  "maleModels_0": {"id": 26651, "type": 0},
+  "femaleModels_0": {"id": 26651, "type": 0},
+  "dummyItem": 2,
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 11321
+}
+,
+
+{
+  "baseModel": 26657,
+  "value": 3,
+  "maleModels_0": {"id": 26657, "type": 0},
+  "femaleModels_0": {"id": 26657, "type": 0},
+  "dummyItem": 2,
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 11322
+}
+,
+
+{
+  "baseModel": 26664,
+  "modelTranslate_0": -8,
+  "modelTranslate_1": 7,
+  "model_zoom": 1308,
+  "rotation_1": 207,
+  "rotation_0": 622,
+  "maleModels_0": {"id": 26649, "type": 0},
+  "femaleModels_0": {"id": 26649, "type": 0},
+  "members": true,
+  "value": 1,
+  "name": "Barbarian rod",
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 11323
+}
+,
+
+{
+  "baseModel": 26666,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": 15,
+  "model_zoom": 530,
+  "rotation_1": 2024,
+  "rotation_0": 318,
+  "members": true,
+  "widget_actions_0": "Eat",
+  "value": 20,
+  "tradeable": true,
+  "name": "Roe",
+  "noteData": 11325,
+  "nullopt": true,
+  "$fileid": 11324
+}
+,
+
+{"noteData": 11324, "noteTemplate": 799, "nullopt": true, "$fileid": 11325}
+,
+
+{
+  "baseModel": 26666,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": 15,
+  "model_zoom": 530,
+  "rotation_1": 2024,
+  "rotation_0": 318,
+  "members": true,
+  "widget_actions_0": "Eat",
+  "value": 50,
+  "tradeable": true,
+  "color_replacements": [
+    [5584, 74],
+    [4544, 55],
+    [6067, 5392],
+    [5027, 5640],
+    [5020, 6020]
+  ],
+  "name": "Caviar",
+  "noteData": 11327,
+  "nullopt": true,
+  "$fileid": 11326
+}
+,
+
+{"noteData": 11326, "noteTemplate": 799, "nullopt": true, "$fileid": 11327}
+,
+
+{
+  "baseModel": 26663,
+  "modelTranslate_0": -1,
+  "modelTranslate_1": 1,
+  "model_zoom": 1308,
+  "rotation_1": 1881,
+  "rotation_0": 500,
+  "members": true,
+  "value": 25,
+  "tradeable": true,
+  "name": "Leaping trout",
+  "noteData": 11329,
+  "nullopt": true,
+  "$fileid": 11328
+}
+,
+
+{"noteData": 11328, "noteTemplate": 799, "nullopt": true, "$fileid": 11329}
+,
+
+{
+  "baseModel": 26672,
+  "modelTranslate_0": -5,
+  "model_zoom": 1762,
+  "rotation_1": 1978,
+  "rotation_0": 500,
+  "members": true,
+  "value": 50,
+  "tradeable": true,
+  "name": "Leaping salmon",
+  "noteData": 11331,
+  "nullopt": true,
+  "$fileid": 11330
+}
+,
+
+{"noteData": 11330, "noteTemplate": 799, "nullopt": true, "$fileid": 11331}
+,
+
+{
+  "baseModel": 26668,
+  "modelTranslate_0": -4,
+  "modelTranslate_1": 3,
+  "model_zoom": 1568,
+  "rotation_1": 1560,
+  "rotation_0": 600,
+  "members": true,
+  "value": 75,
+  "tradeable": true,
+  "name": "Leaping sturgeon",
+  "noteData": 11333,
+  "nullopt": true,
+  "$fileid": 11332
+}
+,
+
+{"noteData": 11332, "noteTemplate": 799, "nullopt": true, "$fileid": 11333}
+,
+
+{
+  "baseModel": 26673,
+  "modelTranslate_0": 7,
+  "modelTranslate_1": -16,
+  "model_zoom": 984,
+  "rotation_1": 1770,
+  "rotation_2": 124,
+  "rotation_0": 111,
+  "members": true,
+  "stackable_1": true,
+  "value": 1,
+  "tradeable": true,
+  "name": "Fish offcuts",
+  "nullopt": true,
+  "$fileid": 11334
+}
+,
+
+{
+  "baseModel": 26662,
+  "maleModels_0": {"id": 26632, "type": 0},
+  "femaleModels_0": {"id": 26658, "type": 0},
+  "maleHeads_0": 39894,
+  "femaleHeads_0": 39894,
+  "members": true,
+  "widget_actions_1": "Wear",
+  "modelTranslate_0": -1,
+  "model_zoom": 789,
+  "rotation_1": 123,
+  "rotation_0": 135,
+  "value": 150000,
+  "tradeable": true,
+  "name": "Dragon full helm",
+  "noteData": 11336,
+  "loanId": 13449,
+  "nullopt": true,
+  "$fileid": 11335
+}
+,
+
+{"noteData": 11335, "noteTemplate": 799, "nullopt": true, "$fileid": 11336}
+,
+
+{
+  "baseModel": 26670,
+  "members": true,
+  "value": 1000,
+  "modelTranslate_0": 8,
+  "modelTranslate_1": -1,
+  "model_zoom": 1488,
+  "rotation_1": 651,
+  "rotation_0": 498,
+  "widget_actions_4": "Destroy",
+  "name": "Mangled bones",
+  "nullopt": true,
+  "$fileid": 11337
+}
+,
+
+{
+  "baseModel": 26670,
+  "members": true,
+  "value": 3500,
+  "modelTranslate_0": 8,
+  "modelTranslate_1": -1,
+  "model_zoom": 1488,
+  "rotation_1": 651,
+  "rotation_0": 498,
+  "widget_actions_4": "Destroy",
+  "name": "Chewed bones",
+  "nullopt": true,
+  "$fileid": 11338
+}
+,
+
+{
+  "value": 0,
+  "baseModel": 6743,
+  "members": true,
+  "modelTranslate_1": 26,
+  "model_zoom": 750,
+  "rotation_1": 124,
+  "rotation_0": 276,
+  "widget_actions_0": "Read",
+  "widget_actions_4": "Destroy",
+  "color_replacements": [[10351, 86], [9152, 2328], [2991, 3491], [5018, 2838]],
+  "name": "My notes",
+  "nullopt": true,
+  "$fileid": 11339
+}
+,
+
+{
+  "value": 0,
+  "baseModel": 6743,
+  "members": true,
+  "modelTranslate_1": 26,
+  "model_zoom": 750,
+  "rotation_1": 124,
+  "rotation_0": 276,
+  "widget_actions_0": "Read",
+  "widget_actions_4": "Destroy",
+  "color_replacements": [
+    [9152, 32798],
+    [5018, 32790],
+    [2991, 32906],
+    [10351, 10467]
+  ],
+  "name": "Barbarian skills",
+  "nullopt": true,
+  "$fileid": 11340
+}
+,
+
+{
+  "members": true,
+  "baseModel": 26671,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": 5,
+  "model_zoom": 680,
+  "rotation_1": 80,
+  "rotation_0": 400,
+  "value": 0,
+  "widget_actions_0": "Copy to log",
+  "widget_actions_4": "Destroy",
+  "name": "Ancient page",
+  "nullopt": true,
+  "$fileid": 11341
+}
+,
+
+{
+  "members": true,
+  "baseModel": 26667,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": 5,
+  "model_zoom": 680,
+  "rotation_1": 80,
+  "rotation_0": 400,
+  "value": 0,
+  "widget_actions_0": "Copy to log",
+  "widget_actions_4": "Destroy",
+  "name": "Ancient page",
+  "nullopt": true,
+  "$fileid": 11342
+}
+,
+
+{
+  "members": true,
+  "baseModel": 26671,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": 5,
+  "model_zoom": 680,
+  "rotation_1": 80,
+  "rotation_0": 400,
+  "value": 0,
+  "widget_actions_0": "Copy to log",
+  "widget_actions_4": "Destroy",
+  "name": "Ancient page",
+  "nullopt": true,
+  "$fileid": 11343
+}
+,
+
+{
+  "members": true,
+  "baseModel": 26667,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": 5,
+  "model_zoom": 680,
+  "rotation_1": 80,
+  "rotation_0": 400,
+  "value": 0,
+  "widget_actions_0": "Copy to log",
+  "widget_actions_4": "Destroy",
+  "name": "Ancient page",
+  "nullopt": true,
+  "$fileid": 11344
+}
+,
+
+{
+  "members": true,
+  "baseModel": 26671,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": 5,
+  "model_zoom": 680,
+  "rotation_1": 80,
+  "rotation_0": 400,
+  "value": 0,
+  "widget_actions_0": "Copy to log",
+  "widget_actions_4": "Destroy",
+  "name": "Ancient page",
+  "nullopt": true,
+  "$fileid": 11345
+}
+,
+
+{
+  "members": true,
+  "baseModel": 26667,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": 5,
+  "model_zoom": 680,
+  "rotation_1": 80,
+  "rotation_0": 400,
+  "value": 0,
+  "widget_actions_0": "Copy to log",
+  "widget_actions_4": "Destroy",
+  "name": "Ancient page",
+  "nullopt": true,
+  "$fileid": 11346
+}
+,
+
+{
+  "members": true,
+  "baseModel": 26671,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": 5,
+  "model_zoom": 680,
+  "rotation_1": 80,
+  "rotation_0": 400,
+  "value": 0,
+  "widget_actions_0": "Copy to log",
+  "widget_actions_4": "Destroy",
+  "name": "Ancient page",
+  "nullopt": true,
+  "$fileid": 11347
+}
+,
+
+{
+  "members": true,
+  "baseModel": 26667,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": 5,
+  "model_zoom": 680,
+  "rotation_1": 80,
+  "rotation_0": 400,
+  "value": 0,
+  "widget_actions_0": "Copy to log",
+  "widget_actions_4": "Destroy",
+  "name": "Ancient page",
+  "nullopt": true,
+  "$fileid": 11348
+}
+,
+
+{
+  "members": true,
+  "baseModel": 26671,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": 5,
+  "model_zoom": 680,
+  "rotation_1": 80,
+  "rotation_0": 400,
+  "value": 0,
+  "widget_actions_0": "Copy to log",
+  "widget_actions_4": "Destroy",
+  "name": "Ancient page",
+  "nullopt": true,
+  "$fileid": 11349
+}
+,
+
+{
+  "members": true,
+  "baseModel": 26667,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": 5,
+  "model_zoom": 680,
+  "rotation_1": 80,
+  "rotation_0": 400,
+  "value": 0,
+  "widget_actions_0": "Copy to log",
+  "widget_actions_4": "Destroy",
+  "name": "Ancient page",
+  "nullopt": true,
+  "$fileid": 11350
+}
+,
+
+{
+  "members": true,
+  "baseModel": 26671,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": 5,
+  "model_zoom": 680,
+  "rotation_1": 80,
+  "rotation_0": 400,
+  "value": 0,
+  "widget_actions_0": "Copy to log",
+  "widget_actions_4": "Destroy",
+  "name": "Ancient page",
+  "nullopt": true,
+  "$fileid": 11351
+}
+,
+
+{
+  "members": true,
+  "baseModel": 26667,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": 5,
+  "model_zoom": 680,
+  "rotation_1": 80,
+  "rotation_0": 400,
+  "value": 0,
+  "widget_actions_0": "Copy to log",
+  "widget_actions_4": "Destroy",
+  "name": "Ancient page",
+  "nullopt": true,
+  "$fileid": 11352
+}
+,
+
+{
+  "members": true,
+  "baseModel": 26671,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": 5,
+  "model_zoom": 680,
+  "rotation_1": 80,
+  "rotation_0": 400,
+  "value": 0,
+  "widget_actions_0": "Copy to log",
+  "widget_actions_4": "Destroy",
+  "name": "Ancient page",
+  "nullopt": true,
+  "$fileid": 11353
+}
+,
+
+{
+  "members": true,
+  "baseModel": 26667,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": 5,
+  "model_zoom": 680,
+  "rotation_1": 80,
+  "rotation_0": 400,
+  "value": 0,
+  "widget_actions_0": "Copy to log",
+  "widget_actions_4": "Destroy",
+  "name": "Ancient page",
+  "nullopt": true,
+  "$fileid": 11354
+}
+,
+
+{
+  "members": true,
+  "baseModel": 26671,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": 5,
+  "model_zoom": 680,
+  "rotation_1": 80,
+  "rotation_0": 400,
+  "value": 0,
+  "widget_actions_0": "Copy to log",
+  "widget_actions_4": "Destroy",
+  "name": "Ancient page",
+  "nullopt": true,
+  "$fileid": 11355
+}
+,
+
+{
+  "members": true,
+  "baseModel": 26667,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": 5,
+  "model_zoom": 680,
+  "rotation_1": 80,
+  "rotation_0": 400,
+  "value": 0,
+  "widget_actions_0": "Copy to log",
+  "widget_actions_4": "Destroy",
+  "name": "Ancient page",
+  "nullopt": true,
+  "$fileid": 11356
+}
+,
+
+{
+  "members": true,
+  "baseModel": 26671,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": 5,
+  "model_zoom": 680,
+  "rotation_1": 80,
+  "rotation_0": 400,
+  "value": 0,
+  "widget_actions_0": "Copy to log",
+  "widget_actions_4": "Destroy",
+  "name": "Ancient page",
+  "nullopt": true,
+  "$fileid": 11357
+}
+,
+
+{
+  "members": true,
+  "baseModel": 26667,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": 5,
+  "model_zoom": 680,
+  "rotation_1": 80,
+  "rotation_0": 400,
+  "value": 0,
+  "widget_actions_0": "Copy to log",
+  "widget_actions_4": "Destroy",
+  "name": "Ancient page",
+  "nullopt": true,
+  "$fileid": 11358
+}
+,
+
+{
+  "members": true,
+  "baseModel": 26671,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": 5,
+  "model_zoom": 680,
+  "rotation_1": 80,
+  "rotation_0": 400,
+  "value": 0,
+  "widget_actions_0": "Copy to log",
+  "widget_actions_4": "Destroy",
+  "name": "Ancient page",
+  "nullopt": true,
+  "$fileid": 11359
+}
+,
+
+{
+  "members": true,
+  "baseModel": 26667,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": 5,
+  "model_zoom": 680,
+  "rotation_1": 80,
+  "rotation_0": 400,
+  "value": 0,
+  "widget_actions_0": "Copy to log",
+  "widget_actions_4": "Destroy",
+  "name": "Ancient page",
+  "nullopt": true,
+  "$fileid": 11360
+}
+,
+
+{
+  "members": true,
+  "baseModel": 26671,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": 5,
+  "model_zoom": 680,
+  "rotation_1": 80,
+  "rotation_0": 400,
+  "value": 0,
+  "widget_actions_0": "Copy to log",
+  "widget_actions_4": "Destroy",
+  "name": "Ancient page",
+  "nullopt": true,
+  "$fileid": 11361
+}
+,
+
+{
+  "members": true,
+  "baseModel": 26667,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": 5,
+  "model_zoom": 680,
+  "rotation_1": 80,
+  "rotation_0": 400,
+  "value": 0,
+  "widget_actions_0": "Copy to log",
+  "widget_actions_4": "Destroy",
+  "name": "Ancient page",
+  "nullopt": true,
+  "$fileid": 11362
+}
+,
+
+{
+  "members": true,
+  "baseModel": 26671,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": 5,
+  "model_zoom": 680,
+  "rotation_1": 80,
+  "rotation_0": 400,
+  "value": 0,
+  "widget_actions_0": "Copy to log",
+  "widget_actions_4": "Destroy",
+  "name": "Ancient page",
+  "nullopt": true,
+  "$fileid": 11363
+}
+,
+
+{
+  "members": true,
+  "baseModel": 26667,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": 5,
+  "model_zoom": 680,
+  "rotation_1": 80,
+  "rotation_0": 400,
+  "value": 0,
+  "widget_actions_0": "Copy to log",
+  "widget_actions_4": "Destroy",
+  "name": "Ancient page",
+  "nullopt": true,
+  "$fileid": 11364
+}
+,
+
+{
+  "members": true,
+  "baseModel": 26671,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": 5,
+  "model_zoom": 680,
+  "rotation_1": 80,
+  "rotation_0": 400,
+  "value": 0,
+  "widget_actions_0": "Copy to log",
+  "widget_actions_4": "Destroy",
+  "name": "Ancient page",
+  "nullopt": true,
+  "$fileid": 11365
+}
+,
+
+{
+  "members": true,
+  "baseModel": 26667,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": 5,
+  "model_zoom": 680,
+  "rotation_1": 80,
+  "rotation_0": 400,
+  "value": 0,
+  "widget_actions_0": "Copy to log",
+  "widget_actions_4": "Destroy",
+  "name": "Ancient page",
+  "nullopt": true,
+  "$fileid": 11366
+}
+,
+
+{
+  "members": true,
+  "value": 26,
+  "baseModel": 26665,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 26653, "type": 0},
+  "femaleModels_0": {"id": 26653, "type": 0},
+  "modelTranslate_0": 5,
+  "modelTranslate_1": -4,
+  "model_zoom": 1762,
+  "rotation_1": 1923,
+  "rotation_2": 318,
+  "rotation_0": 2047,
+  "tradeable": true,
+  "color_replacements": [[72, 6439], [59, 6558], [33, 6806], [5652, 2576]],
+  "name": "Bronze hasta",
+  "female_translate": [3, 245, 6],
+  "noteData": 11368,
+  "nullopt": true,
+  "$fileid": 11367
+}
+,
+
+{"noteData": 11367, "noteTemplate": 799, "nullopt": true, "$fileid": 11368}
+,
+
+{
+  "members": true,
+  "value": 91,
+  "baseModel": 26665,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 26653, "type": 0},
+  "femaleModels_0": {"id": 26653, "type": 0},
+  "modelTranslate_0": 5,
+  "modelTranslate_1": -4,
+  "model_zoom": 1762,
+  "rotation_1": 1923,
+  "rotation_2": 318,
+  "rotation_0": 2047,
+  "tradeable": true,
+  "color_replacements": [[72, 49], [59, 41], [5652, 2576]],
+  "name": "Iron hasta",
+  "female_translate": [3, 245, 6],
+  "noteData": 11370,
+  "nullopt": true,
+  "$fileid": 11369
+}
+,
+
+{"noteData": 11369, "noteTemplate": 799, "nullopt": true, "$fileid": 11370}
+,
+
+{
+  "members": true,
+  "value": 325,
+  "baseModel": 26665,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 26653, "type": 0},
+  "femaleModels_0": {"id": 26653, "type": 0},
+  "modelTranslate_0": 5,
+  "modelTranslate_1": -4,
+  "model_zoom": 1762,
+  "rotation_1": 1923,
+  "rotation_2": 318,
+  "rotation_0": 2047,
+  "tradeable": true,
+  "color_replacements": [[72, 70], [59, 53], [33, 61], [5652, 2576]],
+  "name": "Steel hasta",
+  "female_translate": [3, 245, 6],
+  "noteData": 11372,
+  "nullopt": true,
+  "$fileid": 11371
+}
+,
+
+{"noteData": 11371, "noteTemplate": 799, "nullopt": true, "$fileid": 11372}
+,
+
+{
+  "members": true,
+  "value": 845,
+  "baseModel": 26665,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 26653, "type": 0},
+  "femaleModels_0": {"id": 26653, "type": 0},
+  "modelTranslate_0": 5,
+  "modelTranslate_1": -4,
+  "model_zoom": 1762,
+  "rotation_1": 1923,
+  "rotation_2": 318,
+  "rotation_0": 2047,
+  "tradeable": true,
+  "color_replacements": [[72, 43185], [59, 43177], [33, 43297], [5652, 2576]],
+  "name": "Mithril hasta",
+  "female_translate": [3, 245, 6],
+  "noteData": 11374,
+  "nullopt": true,
+  "$fileid": 11373
+}
+,
+
+{"noteData": 11373, "noteTemplate": 799, "nullopt": true, "$fileid": 11374}
+,
+
+{
+  "members": true,
+  "value": 2080,
+  "baseModel": 26665,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 26653, "type": 0},
+  "femaleModels_0": {"id": 26653, "type": 0},
+  "modelTranslate_0": 5,
+  "modelTranslate_1": -4,
+  "model_zoom": 1762,
+  "rotation_1": 1923,
+  "rotation_2": 318,
+  "rotation_0": 2047,
+  "tradeable": true,
+  "color_replacements": [[72, 21675], [59, 21662], [33, 21782], [5652, 3226]],
+  "name": "Adamant hasta",
+  "female_translate": [3, 245, 6],
+  "noteData": 11376,
+  "nullopt": true,
+  "$fileid": 11375
+}
+,
+
+{"noteData": 11375, "noteTemplate": 799, "nullopt": true, "$fileid": 11376}
+,
+
+{
+  "members": true,
+  "value": 20800,
+  "baseModel": 26665,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 26653, "type": 0},
+  "femaleModels_0": {"id": 26653, "type": 0},
+  "modelTranslate_0": 5,
+  "modelTranslate_1": -4,
+  "model_zoom": 1762,
+  "rotation_1": 1923,
+  "rotation_2": 318,
+  "rotation_0": 2047,
+  "tradeable": true,
+  "color_replacements": [[72, 36021], [59, 36137], [33, 36252], [5652, 2576]],
+  "name": "Rune hasta",
+  "female_translate": [3, 245, 6],
+  "noteData": 11378,
+  "nullopt": true,
+  "$fileid": 11377
+}
+,
+
+{"noteData": 11377, "noteTemplate": 799, "nullopt": true, "$fileid": 11378}
+,
+
+{
+  "members": true,
+  "value": 26,
+  "baseModel": 26669,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 26656, "type": 0},
+  "femaleModels_0": {"id": 26656, "type": 0},
+  "modelTranslate_0": 5,
+  "modelTranslate_1": -4,
+  "model_zoom": 1762,
+  "rotation_1": 1923,
+  "rotation_2": 318,
+  "rotation_0": 2047,
+  "tradeable": true,
+  "color_replacements": [[72, 6439], [59, 6558], [33, 6806], [5652, 2576]],
+  "name": "Bronze hasta(p)",
+  "female_translate": [3, 245, 6],
+  "noteData": 11380,
+  "nullopt": true,
+  "$fileid": 11379
+}
+,
+
+{"noteData": 11379, "noteTemplate": 799, "nullopt": true, "$fileid": 11380}
+,
+
+{
+  "members": true,
+  "value": 26,
+  "baseModel": 26669,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 26656, "type": 0},
+  "femaleModels_0": {"id": 26656, "type": 0},
+  "modelTranslate_0": 5,
+  "modelTranslate_1": -4,
+  "model_zoom": 1762,
+  "rotation_1": 1923,
+  "rotation_2": 318,
+  "rotation_0": 2047,
+  "color_replacements": [[72, 6439], [59, 6558], [33, 6806], [5652, 2576]],
+  "name": "Bronze hasta(kp)",
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 11381
+}
+,
+
+{
+  "members": true,
+  "value": 26,
+  "baseModel": 26669,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 26656, "type": 0},
+  "femaleModels_0": {"id": 26656, "type": 0},
+  "modelTranslate_0": 5,
+  "modelTranslate_1": -4,
+  "model_zoom": 1762,
+  "rotation_1": 1923,
+  "rotation_2": 318,
+  "rotation_0": 2047,
+  "tradeable": true,
+  "color_replacements": [[72, 6439], [59, 6558], [33, 6806], [5652, 2576]],
+  "name": "Bronze hasta(p+)",
+  "female_translate": [3, 245, 6],
+  "noteData": 11383,
+  "nullopt": true,
+  "$fileid": 11382
+}
+,
+
+{"noteData": 11382, "noteTemplate": 799, "nullopt": true, "$fileid": 11383}
+,
+
+{
+  "members": true,
+  "value": 26,
+  "baseModel": 26669,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 26656, "type": 0},
+  "femaleModels_0": {"id": 26656, "type": 0},
+  "modelTranslate_0": 5,
+  "modelTranslate_1": -4,
+  "model_zoom": 1762,
+  "rotation_1": 1923,
+  "rotation_2": 318,
+  "rotation_0": 2047,
+  "tradeable": true,
+  "color_replacements": [[72, 6439], [59, 6558], [33, 6806], [5652, 2576]],
+  "name": "Bronze hasta(p++)",
+  "female_translate": [3, 245, 6],
+  "noteData": 11385,
+  "nullopt": true,
+  "$fileid": 11384
+}
+,
+
+{"noteData": 11384, "noteTemplate": 799, "nullopt": true, "$fileid": 11385}
+,
+
+{
+  "members": true,
+  "value": 91,
+  "baseModel": 26669,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 26656, "type": 0},
+  "femaleModels_0": {"id": 26656, "type": 0},
+  "modelTranslate_0": 5,
+  "modelTranslate_1": -4,
+  "model_zoom": 1762,
+  "rotation_1": 1923,
+  "rotation_2": 318,
+  "rotation_0": 2047,
+  "tradeable": true,
+  "color_replacements": [[72, 49], [59, 41], [5652, 2576]],
+  "name": "Iron hasta(p)",
+  "female_translate": [3, 245, 6],
+  "noteData": 11387,
+  "nullopt": true,
+  "$fileid": 11386
+}
+,
+
+{"noteData": 11386, "noteTemplate": 799, "nullopt": true, "$fileid": 11387}
+,
+
+{
+  "members": true,
+  "value": 91,
+  "baseModel": 26669,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 26656, "type": 0},
+  "femaleModels_0": {"id": 26656, "type": 0},
+  "modelTranslate_0": 5,
+  "modelTranslate_1": -4,
+  "model_zoom": 1762,
+  "rotation_1": 1923,
+  "rotation_2": 318,
+  "rotation_0": 2047,
+  "color_replacements": [[72, 49], [59, 41], [5652, 2576]],
+  "name": "Iron hasta(kp)",
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 11388
+}
+,
+
+{
+  "members": true,
+  "value": 91,
+  "baseModel": 26669,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 26656, "type": 0},
+  "femaleModels_0": {"id": 26656, "type": 0},
+  "modelTranslate_0": 5,
+  "modelTranslate_1": -4,
+  "model_zoom": 1762,
+  "rotation_1": 1923,
+  "rotation_2": 318,
+  "rotation_0": 2047,
+  "tradeable": true,
+  "color_replacements": [[72, 49], [59, 41], [5652, 2576]],
+  "name": "Iron hasta(p+)",
+  "female_translate": [3, 245, 6],
+  "noteData": 11390,
+  "nullopt": true,
+  "$fileid": 11389
+}
+,
+
+{"noteData": 11389, "noteTemplate": 799, "nullopt": true, "$fileid": 11390}
+,
+
+{
+  "members": true,
+  "value": 91,
+  "baseModel": 26669,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 26656, "type": 0},
+  "femaleModels_0": {"id": 26656, "type": 0},
+  "modelTranslate_0": 5,
+  "modelTranslate_1": -4,
+  "model_zoom": 1762,
+  "rotation_1": 1923,
+  "rotation_2": 318,
+  "rotation_0": 2047,
+  "tradeable": true,
+  "color_replacements": [[72, 49], [59, 41], [5652, 2576]],
+  "name": "Iron hasta(p++)",
+  "female_translate": [3, 245, 6],
+  "noteData": 11392,
+  "nullopt": true,
+  "$fileid": 11391
+}
+,
+
+{"noteData": 11391, "noteTemplate": 799, "nullopt": true, "$fileid": 11392}
+,
+
+{
+  "members": true,
+  "value": 325,
+  "baseModel": 26669,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 26656, "type": 0},
+  "femaleModels_0": {"id": 26656, "type": 0},
+  "modelTranslate_0": 5,
+  "modelTranslate_1": -4,
+  "model_zoom": 1762,
+  "rotation_1": 1923,
+  "rotation_2": 318,
+  "rotation_0": 2047,
+  "tradeable": true,
+  "color_replacements": [[72, 70], [59, 53], [33, 61], [5652, 2576]],
+  "name": "Steel hasta(p)",
+  "female_translate": [3, 245, 6],
+  "noteData": 11394,
+  "nullopt": true,
+  "$fileid": 11393
+}
+,
+
+{"noteData": 11393, "noteTemplate": 799, "nullopt": true, "$fileid": 11394}
+,
+
+{
+  "members": true,
+  "value": 325,
+  "baseModel": 26669,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 26656, "type": 0},
+  "femaleModels_0": {"id": 26656, "type": 0},
+  "modelTranslate_0": 5,
+  "modelTranslate_1": -4,
+  "model_zoom": 1762,
+  "rotation_1": 1923,
+  "rotation_2": 318,
+  "rotation_0": 2047,
+  "color_replacements": [[72, 70], [59, 53], [33, 61], [5652, 2576]],
+  "name": "Steel hasta(kp)",
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 11395
+}
+,
+
+{
+  "members": true,
+  "value": 325,
+  "baseModel": 26669,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 26656, "type": 0},
+  "femaleModels_0": {"id": 26656, "type": 0},
+  "modelTranslate_0": 5,
+  "modelTranslate_1": -4,
+  "model_zoom": 1762,
+  "rotation_1": 1923,
+  "rotation_2": 318,
+  "rotation_0": 2047,
+  "tradeable": true,
+  "color_replacements": [[72, 70], [59, 53], [33, 61], [5652, 2576]],
+  "name": "Steel hasta(p+)",
+  "female_translate": [3, 245, 6],
+  "noteData": 11397,
+  "nullopt": true,
+  "$fileid": 11396
+}
+,
+
+{"noteData": 11396, "noteTemplate": 799, "nullopt": true, "$fileid": 11397}
+,
+
+{
+  "members": true,
+  "value": 325,
+  "baseModel": 26669,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 26656, "type": 0},
+  "femaleModels_0": {"id": 26656, "type": 0},
+  "modelTranslate_0": 5,
+  "modelTranslate_1": -4,
+  "model_zoom": 1762,
+  "rotation_1": 1923,
+  "rotation_2": 318,
+  "rotation_0": 2047,
+  "tradeable": true,
+  "color_replacements": [[72, 70], [59, 53], [33, 61], [5652, 2576]],
+  "name": "Steel hasta(p++)",
+  "female_translate": [3, 245, 6],
+  "noteData": 11399,
+  "nullopt": true,
+  "$fileid": 11398
+}
+,
+
+{"noteData": 11398, "noteTemplate": 799, "nullopt": true, "$fileid": 11399}
+,
+
+{
+  "members": true,
+  "value": 845,
+  "baseModel": 26669,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 26656, "type": 0},
+  "femaleModels_0": {"id": 26656, "type": 0},
+  "modelTranslate_0": 5,
+  "modelTranslate_1": -4,
+  "model_zoom": 1762,
+  "rotation_1": 1923,
+  "rotation_2": 318,
+  "rotation_0": 2047,
+  "tradeable": true,
+  "color_replacements": [[72, 43185], [59, 43177], [33, 43297], [5652, 2576]],
+  "name": "Mithril hasta(p)",
+  "female_translate": [3, 245, 6],
+  "noteData": 11401,
+  "nullopt": true,
+  "$fileid": 11400
+}
+,
+
+{"noteData": 11400, "noteTemplate": 799, "nullopt": true, "$fileid": 11401}
+,
+
+{
+  "members": true,
+  "value": 845,
+  "baseModel": 26669,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 26656, "type": 0},
+  "femaleModels_0": {"id": 26656, "type": 0},
+  "modelTranslate_0": 5,
+  "modelTranslate_1": -4,
+  "model_zoom": 1762,
+  "rotation_1": 1923,
+  "rotation_2": 318,
+  "rotation_0": 2047,
+  "color_replacements": [[72, 43185], [59, 43177], [33, 43297], [5652, 2576]],
+  "name": "Mithril hasta(kp)",
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 11402
+}
+,
+
+{
+  "members": true,
+  "value": 845,
+  "baseModel": 26669,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 26656, "type": 0},
+  "femaleModels_0": {"id": 26656, "type": 0},
+  "modelTranslate_0": 5,
+  "modelTranslate_1": -4,
+  "model_zoom": 1762,
+  "rotation_1": 1923,
+  "rotation_2": 318,
+  "rotation_0": 2047,
+  "tradeable": true,
+  "color_replacements": [[72, 43185], [59, 43177], [33, 43297], [5652, 2576]],
+  "name": "Mithril hasta(p+)",
+  "female_translate": [3, 245, 6],
+  "noteData": 11404,
+  "nullopt": true,
+  "$fileid": 11403
+}
+,
+
+{"noteData": 11403, "noteTemplate": 799, "nullopt": true, "$fileid": 11404}
+,
+
+{
+  "members": true,
+  "value": 845,
+  "baseModel": 26669,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 26656, "type": 0},
+  "femaleModels_0": {"id": 26656, "type": 0},
+  "modelTranslate_0": 5,
+  "modelTranslate_1": -4,
+  "model_zoom": 1762,
+  "rotation_1": 1923,
+  "rotation_2": 318,
+  "rotation_0": 2047,
+  "tradeable": true,
+  "color_replacements": [[72, 43185], [59, 43177], [33, 43297], [5652, 2576]],
+  "name": "Mithril hasta(p++)",
+  "female_translate": [3, 245, 6],
+  "noteData": 11406,
+  "nullopt": true,
+  "$fileid": 11405
+}
+,
+
+{"noteData": 11405, "noteTemplate": 799, "nullopt": true, "$fileid": 11406}
+,
+
+{
+  "members": true,
+  "value": 2080,
+  "baseModel": 26669,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 26656, "type": 0},
+  "femaleModels_0": {"id": 26656, "type": 0},
+  "modelTranslate_0": 5,
+  "modelTranslate_1": -4,
+  "model_zoom": 1762,
+  "rotation_1": 1923,
+  "rotation_2": 318,
+  "rotation_0": 2047,
+  "tradeable": true,
+  "color_replacements": [[72, 21675], [59, 21662], [33, 21782], [5652, 3226]],
+  "name": "Adamant hasta(p)",
+  "female_translate": [3, 245, 6],
+  "noteData": 11408,
+  "nullopt": true,
+  "$fileid": 11407
+}
+,
+
+{"noteData": 11407, "noteTemplate": 799, "nullopt": true, "$fileid": 11408}
+,
+
+{
+  "members": true,
+  "value": 2080,
+  "baseModel": 26669,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 26656, "type": 0},
+  "femaleModels_0": {"id": 26656, "type": 0},
+  "modelTranslate_0": 5,
+  "modelTranslate_1": -4,
+  "model_zoom": 1762,
+  "rotation_1": 1923,
+  "rotation_2": 318,
+  "rotation_0": 2047,
+  "color_replacements": [[72, 21675], [59, 21662], [33, 21782], [5652, 3226]],
+  "name": "Adamant hasta(kp)",
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 11409
+}
+,
+
+{
+  "members": true,
+  "value": 2080,
+  "baseModel": 26669,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 26656, "type": 0},
+  "femaleModels_0": {"id": 26656, "type": 0},
+  "modelTranslate_0": 5,
+  "modelTranslate_1": -4,
+  "model_zoom": 1762,
+  "rotation_1": 1923,
+  "rotation_2": 318,
+  "rotation_0": 2047,
+  "tradeable": true,
+  "color_replacements": [[72, 21675], [59, 21662], [33, 21782], [5652, 3226]],
+  "name": "Adamant hasta(p+)",
+  "female_translate": [3, 245, 6],
+  "noteData": 11411,
+  "nullopt": true,
+  "$fileid": 11410
+}
+,
+
+{"noteData": 11410, "noteTemplate": 799, "nullopt": true, "$fileid": 11411}
+,
+
+{
+  "members": true,
+  "value": 2080,
+  "baseModel": 26669,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 26656, "type": 0},
+  "femaleModels_0": {"id": 26656, "type": 0},
+  "modelTranslate_0": 5,
+  "modelTranslate_1": -4,
+  "model_zoom": 1762,
+  "rotation_1": 1923,
+  "rotation_2": 318,
+  "rotation_0": 2047,
+  "tradeable": true,
+  "color_replacements": [[72, 21675], [59, 21662], [33, 21782], [5652, 3226]],
+  "name": "Adamant hasta(p++)",
+  "female_translate": [3, 245, 6],
+  "noteData": 11413,
+  "nullopt": true,
+  "$fileid": 11412
+}
+,
+
+{"noteData": 11412, "noteTemplate": 799, "nullopt": true, "$fileid": 11413}
+,
+
+{
+  "members": true,
+  "value": 20800,
+  "baseModel": 26669,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 26656, "type": 0},
+  "femaleModels_0": {"id": 26656, "type": 0},
+  "modelTranslate_0": 5,
+  "modelTranslate_1": -4,
+  "model_zoom": 1762,
+  "rotation_1": 1923,
+  "rotation_2": 318,
+  "rotation_0": 2047,
+  "tradeable": true,
+  "color_replacements": [[72, 36021], [59, 36137], [33, 36252], [5652, 2576]],
+  "name": "Rune hasta(p)",
+  "female_translate": [3, 245, 6],
+  "noteData": 11415,
+  "nullopt": true,
+  "$fileid": 11414
+}
+,
+
+{"noteData": 11414, "noteTemplate": 799, "nullopt": true, "$fileid": 11415}
+,
+
+{
+  "members": true,
+  "value": 20800,
+  "baseModel": 26669,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 26656, "type": 0},
+  "femaleModels_0": {"id": 26656, "type": 0},
+  "modelTranslate_0": 5,
+  "modelTranslate_1": -4,
+  "model_zoom": 1762,
+  "rotation_1": 1923,
+  "rotation_2": 318,
+  "rotation_0": 2047,
+  "color_replacements": [[72, 36021], [59, 36137], [33, 36252], [5652, 2576]],
+  "name": "Rune hasta(kp)",
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 11416
+}
+,
+
+{
+  "members": true,
+  "value": 20800,
+  "baseModel": 26669,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 26656, "type": 0},
+  "femaleModels_0": {"id": 26656, "type": 0},
+  "modelTranslate_0": 5,
+  "modelTranslate_1": -4,
+  "model_zoom": 1762,
+  "rotation_1": 1923,
+  "rotation_2": 318,
+  "rotation_0": 2047,
+  "tradeable": true,
+  "color_replacements": [[72, 36021], [59, 36137], [33, 36252], [5652, 2576]],
+  "name": "Rune hasta(p+)",
+  "female_translate": [3, 245, 6],
+  "noteData": 11418,
+  "nullopt": true,
+  "$fileid": 11417
+}
+,
+
+{"noteData": 11417, "noteTemplate": 799, "nullopt": true, "$fileid": 11418}
+,
+
+{
+  "members": true,
+  "value": 20800,
+  "baseModel": 26669,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 26656, "type": 0},
+  "femaleModels_0": {"id": 26656, "type": 0},
+  "modelTranslate_0": 5,
+  "modelTranslate_1": -4,
+  "model_zoom": 1762,
+  "rotation_1": 1923,
+  "rotation_2": 318,
+  "rotation_0": 2047,
+  "tradeable": true,
+  "color_replacements": [[72, 36021], [59, 36137], [33, 36252], [5652, 2576]],
+  "name": "Rune hasta(p++)",
+  "female_translate": [3, 245, 6],
+  "noteData": 11420,
+  "nullopt": true,
+  "$fileid": 11419
+}
+,
+
+{"noteData": 11419, "noteTemplate": 799, "nullopt": true, "$fileid": 11420}
+,
+
+{
+  "dummyItem": 2,
+  "baseModel": 26665,
+  "rotation_1": 923,
+  "rotation_2": 318,
+  "rotation_0": 500,
+  "model_zoom": 2100,
+  "color_replacements": [[72, 6439], [59, 6558], [33, 6806], [5652, 2576]],
+  "nullopt": true,
+  "$fileid": 11421
+}
+,
+
+{
+  "dummyItem": 2,
+  "baseModel": 26665,
+  "rotation_1": 923,
+  "rotation_2": 318,
+  "rotation_0": 500,
+  "model_zoom": 2100,
+  "color_replacements": [[72, 49], [59, 41], [5652, 2576]],
+  "nullopt": true,
+  "$fileid": 11422
+}
+,
+
+{
+  "dummyItem": 2,
+  "rotation_1": 923,
+  "rotation_2": 318,
+  "rotation_0": 500,
+  "model_zoom": 2100,
+  "baseModel": 26665,
+  "color_replacements": [[72, 70], [59, 53], [33, 61], [5652, 2576]],
+  "nullopt": true,
+  "$fileid": 11423
+}
+,
+
+{
+  "dummyItem": 2,
+  "baseModel": 26665,
+  "rotation_1": 923,
+  "rotation_2": 318,
+  "rotation_0": 500,
+  "model_zoom": 2100,
+  "color_replacements": [[72, 43185], [59, 43177], [33, 43297], [5652, 2576]],
+  "nullopt": true,
+  "$fileid": 11424
+}
+,
+
+{
+  "dummyItem": 2,
+  "baseModel": 26665,
+  "rotation_1": 923,
+  "rotation_2": 318,
+  "rotation_0": 500,
+  "model_zoom": 2100,
+  "color_replacements": [[72, 21675], [59, 21662], [33, 21782], [5652, 3226]],
+  "nullopt": true,
+  "$fileid": 11425
+}
+,
+
+{
+  "dummyItem": 2,
+  "baseModel": 26665,
+  "rotation_1": 923,
+  "rotation_2": 318,
+  "rotation_0": 500,
+  "model_zoom": 2100,
+  "color_replacements": [[72, 36021], [59, 36137], [33, 36252], [5652, 2576]],
+  "nullopt": true,
+  "$fileid": 11426
+}
+,
+
+{
+  "baseModel": 26825,
+  "members": true,
+  "value": 3,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1812,
+  "rotation_0": 81,
+  "name": "Fish vial",
+  "nullopt": true,
+  "$fileid": 11427
+}
+,
+
+{
+  "baseModel": 26826,
+  "members": true,
+  "value": 3,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1812,
+  "rotation_0": 81,
+  "name": "Fish vial",
+  "nullopt": true,
+  "$fileid": 11428
+}
+,
+
+{
+  "baseModel": 26826,
+  "widget_actions_0": "Drink",
+  "widget_actions_3": "Empty",
+  "members": true,
+  "value": 9,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1812,
+  "rotation_0": 81,
+  "tradeable": true,
+  "color_replacements": [[6953, 34621], [7077, 33591], [7073, 33715]],
+  "name": "Attack mix(2)",
+  "noteData": 11430,
+  "nullopt": true,
+  "$fileid": 11429
+}
+,
+
+{"noteData": 11429, "noteTemplate": 799, "nullopt": true, "$fileid": 11430}
+,
+
+{
+  "baseModel": 26825,
+  "widget_actions_0": "Drink",
+  "widget_actions_3": "Empty",
+  "members": true,
+  "value": 6,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1812,
+  "rotation_0": 81,
+  "tradeable": true,
+  "color_replacements": [[6953, 34621], [7077, 33591], [7073, 33715]],
+  "name": "Attack mix(1)",
+  "noteData": 11432,
+  "nullopt": true,
+  "$fileid": 11431
+}
+,
+
+{"noteData": 11431, "noteTemplate": 799, "nullopt": true, "$fileid": 11432}
+,
+
+{
+  "baseModel": 26826,
+  "members": true,
+  "value": 216,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1812,
+  "rotation_0": 81,
+  "widget_actions_0": "Drink",
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[6953, 18376], [7077, 18374], [7073, 18372]],
+  "name": "Antipoison mix(2)",
+  "noteData": 11434,
+  "nullopt": true,
+  "$fileid": 11433
+}
+,
+
+{"noteData": 11433, "noteTemplate": 799, "nullopt": true, "$fileid": 11434}
+,
+
+{
+  "baseModel": 26825,
+  "members": true,
+  "value": 144,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1812,
+  "rotation_0": 81,
+  "widget_actions_0": "Drink",
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[6953, 18376], [7077, 18374], [7073, 18372]],
+  "name": "Antipoison mix(1)",
+  "noteData": 11436,
+  "nullopt": true,
+  "$fileid": 11435
+}
+,
+
+{"noteData": 11435, "noteTemplate": 799, "nullopt": true, "$fileid": 11436}
+,
+
+{
+  "baseModel": 26826,
+  "members": true,
+  "value": 150,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1812,
+  "rotation_0": 81,
+  "widget_actions_0": "Drink",
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[6953, 4682], [7077, 4550], [7073, 4546]],
+  "name": "Relicym's mix(2)",
+  "noteData": 11438,
+  "nullopt": true,
+  "$fileid": 11437
+}
+,
+
+{"noteData": 11437, "noteTemplate": 799, "nullopt": true, "$fileid": 11438}
+,
+
+{
+  "baseModel": 26825,
+  "members": true,
+  "value": 75,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1812,
+  "rotation_0": 81,
+  "widget_actions_0": "Drink",
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[6953, 4682], [7077, 4550], [7073, 4546]],
+  "name": "Relicym's mix(1)",
+  "noteData": 11440,
+  "nullopt": true,
+  "$fileid": 11439
+}
+,
+
+{"noteData": 11439, "noteTemplate": 799, "nullopt": true, "$fileid": 11440}
+,
+
+{
+  "baseModel": 26825,
+  "members": true,
+  "value": 11,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1812,
+  "rotation_0": 81,
+  "widget_actions_0": "Drink",
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[6953, 11212], [7077, 11080], [7073, 11076]],
+  "name": "Strength mix(1)",
+  "noteData": 11442,
+  "nullopt": true,
+  "$fileid": 11441
+}
+,
+
+{"noteData": 11441, "noteTemplate": 799, "nullopt": true, "$fileid": 11442}
+,
+
+{
+  "baseModel": 26826,
+  "members": true,
+  "value": 13,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1812,
+  "rotation_0": 81,
+  "widget_actions_0": "Drink",
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[6953, 11212], [7077, 11080], [7073, 11076]],
+  "name": "Strength mix(2)",
+  "noteData": 11444,
+  "nullopt": true,
+  "$fileid": 11443
+}
+,
+
+{"noteData": 11443, "noteTemplate": 799, "nullopt": true, "$fileid": 11444}
+,
+
+{
+  "baseModel": 26826,
+  "members": true,
+  "value": 105,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1812,
+  "rotation_0": 81,
+  "widget_actions_0": "Drink",
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[6953, 18882], [7077, 18877], [7073, 18873]],
+  "name": "Combat mix(2)",
+  "noteData": 11446,
+  "nullopt": true,
+  "$fileid": 11445
+}
+,
+
+{"noteData": 11445, "noteTemplate": 799, "nullopt": true, "$fileid": 11446}
+,
+
+{
+  "baseModel": 26825,
+  "members": true,
+  "value": 52,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1812,
+  "rotation_0": 81,
+  "widget_actions_0": "Drink",
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[6953, 18882], [7077, 18877], [7073, 18873]],
+  "name": "Combat mix(1)",
+  "noteData": 11448,
+  "nullopt": true,
+  "$fileid": 11447
+}
+,
+
+{"noteData": 11447, "noteTemplate": 799, "nullopt": true, "$fileid": 11448}
+,
+
+{
+  "baseModel": 26826,
+  "members": true,
+  "value": 66,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1812,
+  "rotation_0": 81,
+  "widget_actions_0": "Drink",
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[6953, 972], [7077, 840], [7073, 836]],
+  "name": "Restore mix(2)",
+  "noteData": 11450,
+  "nullopt": true,
+  "$fileid": 11449
+}
+,
+
+{"noteData": 11449, "noteTemplate": 799, "nullopt": true, "$fileid": 11450}
+,
+
+{
+  "baseModel": 26825,
+  "members": true,
+  "value": 44,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1812,
+  "rotation_0": 81,
+  "widget_actions_0": "Drink",
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[6953, 972], [7077, 840], [7073, 836]],
+  "name": "Restore mix(1)",
+  "noteData": 11452,
+  "nullopt": true,
+  "$fileid": 11451
+}
+,
+
+{"noteData": 11451, "noteTemplate": 799, "nullopt": true, "$fileid": 11452}
+,
+
+{
+  "baseModel": 26826,
+  "members": true,
+  "value": 72,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1812,
+  "rotation_0": 81,
+  "widget_actions_0": "Drink",
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[6953, 63933], [7077, 63929], [7073, 63925]],
+  "name": "Energy mix(2)",
+  "noteData": 11454,
+  "nullopt": true,
+  "$fileid": 11453
+}
+,
+
+{"noteData": 11453, "noteTemplate": 799, "nullopt": true, "$fileid": 11454}
+,
+
+{
+  "baseModel": 26825,
+  "members": true,
+  "value": 36,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1812,
+  "rotation_0": 81,
+  "widget_actions_0": "Drink",
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[6953, 63933], [7077, 63929], [7073, 63925]],
+  "name": "Energy mix(1)",
+  "noteData": 11456,
+  "nullopt": true,
+  "$fileid": 11455
+}
+,
+
+{"noteData": 11455, "noteTemplate": 799, "nullopt": true, "$fileid": 11456}
+,
+
+{
+  "baseModel": 26826,
+  "members": true,
+  "value": 90,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1812,
+  "rotation_0": 81,
+  "widget_actions_0": "Drink",
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[6953, 22476], [7077, 22344], [7073, 22340]],
+  "name": "Defence mix(2)",
+  "noteData": 11458,
+  "nullopt": true,
+  "$fileid": 11457
+}
+,
+
+{"noteData": 11457, "noteTemplate": 799, "nullopt": true, "$fileid": 11458}
+,
+
+{
+  "baseModel": 26825,
+  "members": true,
+  "value": 60,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1812,
+  "rotation_0": 81,
+  "widget_actions_0": "Drink",
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[6953, 22476], [7077, 22344], [7073, 22340]],
+  "name": "Defence mix(1)",
+  "noteData": 11460,
+  "nullopt": true,
+  "$fileid": 11459
+}
+,
+
+{"noteData": 11459, "noteTemplate": 799, "nullopt": true, "$fileid": 11460}
+,
+
+{
+  "baseModel": 26826,
+  "members": true,
+  "value": 100,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1812,
+  "rotation_0": 81,
+  "widget_actions_0": "Drink",
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[6953, 12195], [7077, 13217], [7073, 13214]],
+  "name": "Agility mix(2)",
+  "noteData": 11462,
+  "nullopt": true,
+  "$fileid": 11461
+}
+,
+
+{"noteData": 11461, "noteTemplate": 799, "nullopt": true, "$fileid": 11462}
+,
+
+{
+  "baseModel": 26825,
+  "members": true,
+  "value": 50,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1812,
+  "rotation_0": 81,
+  "widget_actions_0": "Drink",
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[6953, 12195], [7077, 13217], [7073, 13214]],
+  "name": "Agility mix(1)",
+  "noteData": 11464,
+  "nullopt": true,
+  "$fileid": 11463
+}
+,
+
+{"noteData": 11463, "noteTemplate": 799, "nullopt": true, "$fileid": 11464}
+,
+
+{
+  "baseModel": 26826,
+  "members": true,
+  "value": 114,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1812,
+  "rotation_0": 81,
+  "widget_actions_0": "Drink",
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[6953, 28620], [7077, 28488], [7073, 28484]],
+  "name": "Prayer mix(2)",
+  "noteData": 11466,
+  "nullopt": true,
+  "$fileid": 11465
+}
+,
+
+{"noteData": 11465, "noteTemplate": 799, "nullopt": true, "$fileid": 11466}
+,
+
+{
+  "baseModel": 26825,
+  "members": true,
+  "value": 76,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1812,
+  "rotation_0": 81,
+  "widget_actions_0": "Drink",
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[6953, 28620], [7077, 28488], [7073, 28484]],
+  "name": "Prayer mix(1)",
+  "noteData": 11468,
+  "nullopt": true,
+  "$fileid": 11467
+}
+,
+
+{"noteData": 11467, "noteTemplate": 799, "nullopt": true, "$fileid": 11468}
+,
+
+{
+  "baseModel": 26826,
+  "members": true,
+  "value": 135,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1812,
+  "rotation_0": 81,
+  "widget_actions_0": "Drink",
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[6953, 43980], [7077, 43848], [7073, 43844]],
+  "name": "Superattack mix(2)",
+  "noteData": 11470,
+  "nullopt": true,
+  "$fileid": 11469
+}
+,
+
+{"noteData": 11469, "noteTemplate": 799, "nullopt": true, "$fileid": 11470}
+,
+
+{
+  "baseModel": 26825,
+  "members": true,
+  "value": 90,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1812,
+  "rotation_0": 81,
+  "widget_actions_0": "Drink",
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[6953, 43980], [7077, 43848], [7073, 43844]],
+  "name": "Superattack mix(1)",
+  "noteData": 11472,
+  "nullopt": true,
+  "$fileid": 11471
+}
+,
+
+{"noteData": 11471, "noteTemplate": 799, "nullopt": true, "$fileid": 11472}
+,
+
+{
+  "baseModel": 26826,
+  "members": true,
+  "value": 216,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1812,
+  "rotation_0": 81,
+  "widget_actions_0": "Drink",
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[6953, 60207], [7077, 60333], [7073, 61355]],
+  "name": "Anti-p supermix(2)",
+  "noteData": 11474,
+  "nullopt": true,
+  "$fileid": 11473
+}
+,
+
+{"noteData": 11473, "noteTemplate": 799, "nullopt": true, "$fileid": 11474}
+,
+
+{
+  "baseModel": 26825,
+  "members": true,
+  "value": 144,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1812,
+  "rotation_0": 81,
+  "widget_actions_0": "Drink",
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[6953, 60207], [7077, 60333], [7073, 61355]],
+  "name": "Anti-p supermix(1)",
+  "noteData": 11476,
+  "nullopt": true,
+  "$fileid": 11475
+}
+,
+
+{"noteData": 11475, "noteTemplate": 799, "nullopt": true, "$fileid": 11476}
+,
+
+{
+  "baseModel": 26826,
+  "members": true,
+  "value": 150,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1812,
+  "rotation_0": 81,
+  "widget_actions_0": "Drink",
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[6953, 21530], [7077, 21526], [7073, 21522]],
+  "name": "Fishing mix(2)",
+  "noteData": 11478,
+  "nullopt": true,
+  "$fileid": 11477
+}
+,
+
+{"noteData": 11477, "noteTemplate": 799, "nullopt": true, "$fileid": 11478}
+,
+
+{
+  "baseModel": 26825,
+  "members": true,
+  "value": 100,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1812,
+  "rotation_0": 81,
+  "widget_actions_0": "Drink",
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[6953, 21530], [7077, 21526], [7073, 21522]],
+  "name": "Fishing mix(1)",
+  "noteData": 11480,
+  "nullopt": true,
+  "$fileid": 11479
+}
+,
+
+{"noteData": 11479, "noteTemplate": 799, "nullopt": true, "$fileid": 11480}
+,
+
+{
+  "baseModel": 26826,
+  "members": true,
+  "value": 160,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1812,
+  "rotation_0": 81,
+  "widget_actions_0": "Drink",
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[6953, 57917], [7077, 57913], [7073, 57909]],
+  "name": "Sup. energy mix(2)",
+  "noteData": 11482,
+  "nullopt": true,
+  "$fileid": 11481
+}
+,
+
+{"noteData": 11481, "noteTemplate": 799, "nullopt": true, "$fileid": 11482}
+,
+
+{
+  "baseModel": 26825,
+  "members": true,
+  "value": 90,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1812,
+  "rotation_0": 81,
+  "widget_actions_0": "Drink",
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[6953, 57917], [7077, 57913], [7073, 57909]],
+  "name": "Sup. energy mix(1)",
+  "noteData": 11484,
+  "nullopt": true,
+  "$fileid": 11483
+}
+,
+
+{"noteData": 11483, "noteTemplate": 799, "nullopt": true, "$fileid": 11484}
+,
+
+{
+  "baseModel": 26826,
+  "members": true,
+  "value": 165,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1812,
+  "rotation_0": 81,
+  "widget_actions_0": "Drink",
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[6953, 32883], [7077, 32879], [7073, 32875]],
+  "name": "Sup. str. mix(2)",
+  "noteData": 11486,
+  "nullopt": true,
+  "$fileid": 11485
+}
+,
+
+{"noteData": 11485, "noteTemplate": 799, "nullopt": true, "$fileid": 11486}
+,
+
+{
+  "baseModel": 26825,
+  "members": true,
+  "value": 110,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1812,
+  "rotation_0": 81,
+  "widget_actions_0": "Drink",
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[6953, 32883], [7077, 32879], [7073, 32875]],
+  "name": "Sup. str. mix(1)",
+  "noteData": 11488,
+  "nullopt": true,
+  "$fileid": 11487
+}
+,
+
+{"noteData": 11487, "noteTemplate": 799, "nullopt": true, "$fileid": 11488}
+,
+
+{
+  "baseModel": 26826,
+  "members": true,
+  "value": 180,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1812,
+  "rotation_0": 81,
+  "widget_actions_0": "Drink",
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[6953, 5068], [7077, 5064], [7073, 4932]],
+  "name": "Magic ess. mix(2)",
+  "noteData": 11490,
+  "nullopt": true,
+  "$fileid": 11489
+}
+,
+
+{"noteData": 11489, "noteTemplate": 799, "nullopt": true, "$fileid": 11490}
+,
+
+{
+  "baseModel": 26825,
+  "members": true,
+  "value": 130,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1812,
+  "rotation_0": 81,
+  "widget_actions_0": "Drink",
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[6953, 5068], [7077, 5064], [7073, 4932]],
+  "name": "Magic ess. mix(1)",
+  "noteData": 11492,
+  "nullopt": true,
+  "$fileid": 11491
+}
+,
+
+{"noteData": 11491, "noteTemplate": 799, "nullopt": true, "$fileid": 11492}
+,
+
+{
+  "baseModel": 26826,
+  "members": true,
+  "value": 180,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1812,
+  "rotation_0": 81,
+  "widget_actions_0": "Drink",
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[6953, 62131], [7077, 62127], [7073, 62251]],
+  "name": "Sup. restore mix(2)",
+  "noteData": 11494,
+  "nullopt": true,
+  "$fileid": 11493
+}
+,
+
+{"noteData": 11493, "noteTemplate": 799, "nullopt": true, "$fileid": 11494}
+,
+
+{
+  "baseModel": 26825,
+  "members": true,
+  "value": 120,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1812,
+  "rotation_0": 81,
+  "widget_actions_0": "Drink",
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[6953, 62131], [7077, 62127], [7073, 62251]],
+  "name": "Sup. restore mix(1)",
+  "noteData": 11496,
+  "nullopt": true,
+  "$fileid": 11495
+}
+,
+
+{"noteData": 11495, "noteTemplate": 799, "nullopt": true, "$fileid": 11496}
+,
+
+{
+  "baseModel": 26826,
+  "members": true,
+  "value": 198,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1812,
+  "rotation_0": 81,
+  "widget_actions_0": "Drink",
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[6953, 8140], [7077, 8008], [7073, 8004]],
+  "name": "Sup. def. mix(2)",
+  "noteData": 11498,
+  "nullopt": true,
+  "$fileid": 11497
+}
+,
+
+{"noteData": 11497, "noteTemplate": 799, "nullopt": true, "$fileid": 11498}
+,
+
+{
+  "baseModel": 26825,
+  "members": true,
+  "value": 132,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1812,
+  "rotation_0": 81,
+  "widget_actions_0": "Drink",
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[6953, 8140], [7077, 8008], [7073, 8004]],
+  "name": "Sup. def. mix(1)",
+  "noteData": 11500,
+  "nullopt": true,
+  "$fileid": 11499
+}
+,
+
+{"noteData": 11499, "noteTemplate": 799, "nullopt": true, "$fileid": 11500}
+,
+
+{
+  "baseModel": 26826,
+  "members": true,
+  "value": 216,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1812,
+  "rotation_0": 81,
+  "widget_actions_0": "Drink",
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[6953, 10415], [7077, 10411], [7073, 10535]],
+  "name": "Antidote+ mix(2)",
+  "noteData": 11502,
+  "nullopt": true,
+  "$fileid": 11501
+}
+,
+
+{"noteData": 11501, "noteTemplate": 799, "nullopt": true, "$fileid": 11502}
+,
+
+{
+  "baseModel": 26825,
+  "members": true,
+  "value": 144,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1812,
+  "rotation_0": 81,
+  "widget_actions_0": "Drink",
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[6953, 10415], [7077, 10411], [7073, 10535]],
+  "name": "Antidote+ mix(1)",
+  "noteData": 11504,
+  "nullopt": true,
+  "$fileid": 11503
+}
+,
+
+{"noteData": 11503, "noteTemplate": 799, "nullopt": true, "$fileid": 11504}
+,
+
+{
+  "baseModel": 26826,
+  "members": true,
+  "value": 198,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1812,
+  "rotation_0": 81,
+  "widget_actions_0": "Drink",
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[6953, 51109], [7077, 51105], [7073, 50076]],
+  "name": "Antifire mix(2)",
+  "noteData": 11506,
+  "nullopt": true,
+  "$fileid": 11505
+}
+,
+
+{"noteData": 11505, "noteTemplate": 799, "nullopt": true, "$fileid": 11506}
+,
+
+{
+  "baseModel": 26825,
+  "members": true,
+  "value": 132,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1812,
+  "rotation_0": 81,
+  "widget_actions_0": "Drink",
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[6953, 51109], [7077, 51105], [7073, 50076]],
+  "name": "Antifire mix(1)",
+  "noteData": 11508,
+  "nullopt": true,
+  "$fileid": 11507
+}
+,
+
+{"noteData": 11507, "noteTemplate": 799, "nullopt": true, "$fileid": 11508}
+,
+
+{
+  "baseModel": 26826,
+  "members": true,
+  "value": 216,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1812,
+  "rotation_0": 81,
+  "widget_actions_0": "Drink",
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[6953, 36812], [7077, 36680], [7073, 36676]],
+  "name": "Ranging mix(2)",
+  "noteData": 11510,
+  "nullopt": true,
+  "$fileid": 11509
+}
+,
+
+{"noteData": 11509, "noteTemplate": 799, "nullopt": true, "$fileid": 11510}
+,
+
+{
+  "baseModel": 26825,
+  "members": true,
+  "value": 144,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1812,
+  "rotation_0": 81,
+  "widget_actions_0": "Drink",
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[6953, 36812], [7077, 36680], [7073, 36676]],
+  "name": "Ranging mix(1)",
+  "noteData": 11512,
+  "nullopt": true,
+  "$fileid": 11511
+}
+,
+
+{"noteData": 11511, "noteTemplate": 799, "nullopt": true, "$fileid": 11512}
+,
+
+{
+  "baseModel": 26826,
+  "members": true,
+  "value": 200,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1812,
+  "rotation_0": 81,
+  "widget_actions_0": "Drink",
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[6953, 37444], [7077, 37440], [7073, 37435]],
+  "name": "Magic mix(2)",
+  "noteData": 11514,
+  "nullopt": true,
+  "$fileid": 11513
+}
+,
+
+{"noteData": 11513, "noteTemplate": 799, "nullopt": true, "$fileid": 11514}
+,
+
+{
+  "baseModel": 26825,
+  "members": true,
+  "value": 150,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1812,
+  "rotation_0": 81,
+  "widget_actions_0": "Drink",
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[6953, 37444], [7077, 37440], [7073, 37435]],
+  "name": "Magic mix(1)",
+  "noteData": 11516,
+  "nullopt": true,
+  "$fileid": 11515
+}
+,
+
+{"noteData": 11515, "noteTemplate": 799, "nullopt": true, "$fileid": 11516}
+,
+
+{
+  "baseModel": 26826,
+  "members": true,
+  "value": 9,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1812,
+  "rotation_0": 81,
+  "widget_actions_0": "Drink",
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[6953, 33558], [7077, 33682], [7073, 33680]],
+  "name": "Hunting mix(2)",
+  "noteData": 11518,
+  "nullopt": true,
+  "$fileid": 11517
+}
+,
+
+{"noteData": 11517, "noteTemplate": 799, "nullopt": true, "$fileid": 11518}
+,
+
+{
+  "baseModel": 26825,
+  "members": true,
+  "value": 6,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1812,
+  "rotation_0": 81,
+  "widget_actions_0": "Drink",
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[6953, 33558], [7077, 33682], [7073, 33680]],
+  "name": "Hunting mix(1)",
+  "noteData": 11520,
+  "nullopt": true,
+  "$fileid": 11519
+}]}

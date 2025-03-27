@@ -1,0 +1,3717 @@
+{"$schema":".schema-items_batch.json","files":[
+
+{
+  "value": 3,
+  "widget_actions_0": "Eat",
+  "baseModel": 2822,
+  "modelTranslate_0": 4,
+  "modelTranslate_1": 1,
+  "model_zoom": 700,
+  "rotation_1": 1844,
+  "rotation_2": 176,
+  "rotation_0": 1876,
+  "members": true,
+  "tradeable": true,
+  "color_replacements": [[9104, 951]],
+  "name": "Super kebab",
+  "noteData": 4609,
+  "nullopt": true,
+  "$fileid": 4608
+}
+,
+
+{"noteData": 4608, "noteTemplate": 799, "nullopt": true, "$fileid": 4609}
+,
+
+{
+  "baseModel": 6059,
+  "modelTranslate_1": -1,
+  "model_zoom": 540,
+  "rotation_1": 1472,
+  "rotation_0": 48,
+  "members": true,
+  "name": "Red hot sauce",
+  "nullopt": true,
+  "$fileid": 4610
+}
+,
+
+{
+  "baseModel": 6052,
+  "widget_actions_1": "Wear",
+  "members": true,
+  "modelTranslate_1": -32,
+  "model_zoom": 780,
+  "rotation_1": 2044,
+  "rotation_0": 296,
+  "maleModels_0": {"id": 230, "type": 0},
+  "maleModels_1": 188,
+  "maleModels_2": 6088,
+  "femaleModels_0": {"id": 403, "type": 0},
+  "femaleModels_1": 364,
+  "femaleModels_2": 6096,
+  "maleHeads_0": 39187,
+  "maleHeads_1": 39630,
+  "femaleHeads_0": 39173,
+  "femaleHeads_1": 39170,
+  "name": "Desert disguise",
+  "nullopt": true,
+  "$fileid": 4611
+}
+,
+
+{"noteData": 4600, "noteTemplate": 799, "nullopt": true, "$fileid": 4612}
+,
+
+{
+  "value": 75,
+  "widget_actions_0": "Spin",
+  "baseModel": 6138,
+  "maleModels_0": {"id": 6136, "type": 0},
+  "femaleModels_0": {"id": 45446, "type": 0},
+  "modelTranslate_0": -1,
+  "modelTranslate_1": 6,
+  "model_zoom": 1040,
+  "rotation_1": 80,
+  "rotation_0": 444,
+  "color_replacements": [[86, 111], [78, 103]],
+  "name": "Spinning plate",
+  "male_translate": [0, 3, 0],
+  "nullopt": true,
+  "$fileid": 4613
+}
+,
+
+{
+  "value": 0,
+  "baseModel": 6139,
+  "maleModels_0": {"id": 6137, "type": 0},
+  "femaleModels_0": {"id": 6137, "type": 0},
+  "modelTranslate_1": 6,
+  "model_zoom": 1110,
+  "rotation_1": 1980,
+  "rotation_0": 404,
+  "color_replacements": [[86, 111], [78, 103]],
+  "name": "Broken plate",
+  "male_translate": [0, 3, 0],
+  "female_translate": [0, 3, 0],
+  "nullopt": true,
+  "$fileid": 4614
+}
+,
+
+{
+  "value": 1,
+  "members": true,
+  "widget_actions_0": "Read",
+  "baseModel": 4508,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": 5,
+  "model_zoom": 680,
+  "rotation_1": 80,
+  "rotation_0": 400,
+  "color_replacements": [
+    [90, 10341],
+    [86, 10337],
+    [82, 10332],
+    [78, 10456],
+    [74, 10452]
+  ],
+  "name": "Letter",
+  "nullopt": true,
+  "$fileid": 4615
+}
+,
+
+{
+  "baseModel": 2543,
+  "widget_actions_0": "Read",
+  "members": true,
+  "value": 2,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": -21,
+  "model_zoom": 830,
+  "rotation_1": 116,
+  "rotation_0": 244,
+  "color_replacements": [[5018, 8384], [11177, 61], [10351, 9694]],
+  "name": "Varmen's notes",
+  "nullopt": true,
+  "$fileid": 4616
+}
+,
+
+{
+  "members": true,
+  "value": 1,
+  "baseModel": 2372,
+  "modelTranslate_0": -3,
+  "modelTranslate_1": 5,
+  "model_zoom": 700,
+  "rotation_1": 20,
+  "rotation_0": 328,
+  "color_replacements": [[8128, 10297]],
+  "name": "Display cabinet key",
+  "nullopt": true,
+  "$fileid": 4617
+}
+,
+
+{
+  "members": true,
+  "value": 2,
+  "baseModel": 6155,
+  "modelTranslate_1": 2,
+  "model_zoom": 1560,
+  "rotation_1": 200,
+  "rotation_0": 1996,
+  "name": "Statuette",
+  "nullopt": true,
+  "$fileid": 4618
+}
+,
+
+{
+  "members": true,
+  "modelTranslate_0": -1,
+  "modelTranslate_1": 2,
+  "model_zoom": 770,
+  "rotation_0": 416,
+  "baseModel": 6152,
+  "value": 1,
+  "color_replacements": [[8128, 43076]],
+  "name": "Strange implement",
+  "nullopt": true,
+  "$fileid": 4619
+}
+,
+
+{
+  "baseModel": 6151,
+  "modelTranslate_0": -6,
+  "modelTranslate_1": -1,
+  "model_zoom": 1370,
+  "rotation_1": 1928,
+  "rotation_2": 2028,
+  "rotation_0": 1992,
+  "members": true,
+  "value": 1,
+  "widget_actions_0": "Eat",
+  "color_replacements": [[6261, 10442], [5351, 10553]],
+  "name": "Black mushroom",
+  "nullopt": true,
+  "$fileid": 4620
+}
+,
+
+{
+  "value": 1,
+  "baseModel": 40622,
+  "members": true,
+  "modelTranslate_0": -2,
+  "modelTranslate_1": 24,
+  "model_zoom": 650,
+  "rotation_1": 300,
+  "rotation_0": 316,
+  "name": "Phoenix feather",
+  "nullopt": true,
+  "$fileid": 4621
+}
+,
+
+{
+  "members": true,
+  "value": 1,
+  "baseModel": 2789,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1996,
+  "rotation_0": 84,
+  "widget_actions_3": "Empty",
+  "color_replacements": [[61, 18]],
+  "name": "Black mushroom ink",
+  "nullopt": true,
+  "$fileid": 4622
+}
+,
+
+{
+  "members": true,
+  "modelTranslate_0": -2,
+  "modelTranslate_1": 24,
+  "model_zoom": 650,
+  "rotation_1": 300,
+  "rotation_0": 316,
+  "value": 1,
+  "baseModel": 40623,
+  "name": "Phoenix quill pen",
+  "nullopt": true,
+  "$fileid": 4623
+}
+,
+
+{
+  "baseModel": 2838,
+  "model_zoom": 940,
+  "rotation_1": 112,
+  "rotation_0": 248,
+  "members": true,
+  "value": 1,
+  "name": "Golem program",
+  "nullopt": true,
+  "$fileid": 4624
+}
+,
+
+{
+  "baseModel": 39834,
+  "dummyItem": 1,
+  "modelTranslate_0": 41,
+  "modelTranslate_1": -100,
+  "model_zoom": 7140,
+  "rotation_1": 1895,
+  "color_replacements": [
+    [4550, 4647],
+    [25238, 127],
+    [6798, 10508],
+    [8741, 127],
+    [7700, 926],
+    [11200, 926]
+  ],
+  "name": "Bandit",
+  "nullopt": true,
+  "$fileid": 4625
+}
+,
+
+{
+  "dummyItem": 2,
+  "widget_actions_0": "Wear",
+  "value": 1,
+  "baseModel": 2521,
+  "modelTranslate_1": 1,
+  "model_zoom": 1940,
+  "rotation_0": 572,
+  "color_replacements": [[25238, 62928]],
+  "nullopt": true,
+  "$fileid": 4626
+}
+,
+
+{
+  "value": 650,
+  "widget_actions_0": "Drink",
+  "members": true,
+  "baseModel": 2491,
+  "modelTranslate_0": -3,
+  "modelTranslate_1": 2,
+  "model_zoom": 660,
+  "rotation_1": 1904,
+  "rotation_0": 140,
+  "tradeable": true,
+  "color_replacements": [[7091, 3637], [7116, 3637]],
+  "name": "Bandit's brew",
+  "noteData": 4628,
+  "nullopt": true,
+  "$fileid": 4627
+}
+,
+
+{"noteData": 4627, "noteTemplate": 799, "nullopt": true, "$fileid": 4628}
+,
+
+{
+  "baseModel": 3374,
+  "modelTranslate_0": 1,
+  "model_zoom": 1010,
+  "rotation_1": 672,
+  "rotation_0": 360,
+  "dummyItem": 2,
+  "nullopt": true,
+  "$fileid": 4629
+}
+,
+
+{
+  "baseModel": 3374,
+  "modelTranslate_0": 1,
+  "model_zoom": 1010,
+  "rotation_1": 672,
+  "rotation_0": 360,
+  "dummyItem": 2,
+  "nullopt": true,
+  "$fileid": 4630
+}
+,
+
+{
+  "baseModel": 3374,
+  "modelTranslate_0": 1,
+  "model_zoom": 1010,
+  "rotation_1": 672,
+  "rotation_0": 360,
+  "dummyItem": 2,
+  "nullopt": true,
+  "$fileid": 4631
+}
+,
+
+{
+  "baseModel": 3374,
+  "modelTranslate_0": 1,
+  "model_zoom": 1010,
+  "rotation_1": 672,
+  "rotation_0": 360,
+  "dummyItem": 2,
+  "nullopt": true,
+  "$fileid": 4632
+}
+,
+
+{
+  "baseModel": 3374,
+  "modelTranslate_0": 1,
+  "model_zoom": 1010,
+  "rotation_1": 672,
+  "rotation_0": 360,
+  "dummyItem": 2,
+  "nullopt": true,
+  "$fileid": 4633
+}
+,
+
+{
+  "baseModel": 3374,
+  "modelTranslate_0": 1,
+  "model_zoom": 1010,
+  "rotation_1": 672,
+  "rotation_0": 360,
+  "dummyItem": 2,
+  "nullopt": true,
+  "$fileid": 4634
+}
+,
+
+{
+  "baseModel": 3374,
+  "modelTranslate_0": 1,
+  "model_zoom": 1010,
+  "rotation_1": 672,
+  "rotation_0": 360,
+  "dummyItem": 2,
+  "nullopt": true,
+  "$fileid": 4635
+}
+,
+
+{
+  "baseModel": 3374,
+  "modelTranslate_0": 1,
+  "model_zoom": 1010,
+  "rotation_1": 672,
+  "rotation_0": 360,
+  "dummyItem": 2,
+  "nullopt": true,
+  "$fileid": 4636
+}
+,
+
+{
+  "baseModel": 3374,
+  "modelTranslate_0": 1,
+  "model_zoom": 1010,
+  "rotation_1": 672,
+  "rotation_0": 360,
+  "dummyItem": 2,
+  "nullopt": true,
+  "$fileid": 4637
+}
+,
+
+{
+  "baseModel": 3374,
+  "modelTranslate_0": 1,
+  "model_zoom": 1010,
+  "rotation_1": 672,
+  "rotation_0": 360,
+  "dummyItem": 2,
+  "nullopt": true,
+  "$fileid": 4638
+}
+,
+
+{
+  "baseModel": 3374,
+  "modelTranslate_0": 1,
+  "model_zoom": 1010,
+  "rotation_1": 672,
+  "rotation_0": 360,
+  "dummyItem": 2,
+  "nullopt": true,
+  "$fileid": 4639
+}
+,
+
+{
+  "baseModel": 3374,
+  "modelTranslate_0": 1,
+  "model_zoom": 1010,
+  "rotation_1": 672,
+  "rotation_0": 360,
+  "dummyItem": 2,
+  "nullopt": true,
+  "$fileid": 4640
+}
+,
+
+{
+  "baseModel": 3374,
+  "modelTranslate_0": 1,
+  "model_zoom": 1010,
+  "rotation_1": 672,
+  "rotation_0": 360,
+  "dummyItem": 2,
+  "nullopt": true,
+  "$fileid": 4641
+}
+,
+
+{
+  "baseModel": 3374,
+  "modelTranslate_0": 1,
+  "model_zoom": 1010,
+  "rotation_1": 672,
+  "rotation_0": 360,
+  "dummyItem": 2,
+  "nullopt": true,
+  "$fileid": 4642
+}
+,
+
+{
+  "baseModel": 3374,
+  "modelTranslate_0": 1,
+  "model_zoom": 1010,
+  "rotation_1": 672,
+  "rotation_0": 360,
+  "dummyItem": 2,
+  "nullopt": true,
+  "$fileid": 4643
+}
+,
+
+{
+  "baseModel": 3374,
+  "modelTranslate_0": 1,
+  "model_zoom": 1010,
+  "rotation_1": 672,
+  "rotation_0": 360,
+  "dummyItem": 2,
+  "nullopt": true,
+  "$fileid": 4644
+}
+,
+
+{
+  "baseModel": 3374,
+  "modelTranslate_0": 1,
+  "model_zoom": 1010,
+  "rotation_1": 672,
+  "rotation_0": 360,
+  "dummyItem": 2,
+  "nullopt": true,
+  "$fileid": 4645
+}
+,
+
+{
+  "baseModel": 3374,
+  "modelTranslate_0": 1,
+  "model_zoom": 1010,
+  "rotation_1": 672,
+  "rotation_0": 360,
+  "dummyItem": 2,
+  "nullopt": true,
+  "$fileid": 4646
+}
+,
+
+{
+  "baseModel": 3374,
+  "modelTranslate_0": 1,
+  "model_zoom": 1010,
+  "rotation_1": 672,
+  "rotation_0": 360,
+  "dummyItem": 2,
+  "nullopt": true,
+  "$fileid": 4647
+}
+,
+
+{
+  "baseModel": 3374,
+  "modelTranslate_0": 1,
+  "model_zoom": 1010,
+  "rotation_1": 672,
+  "rotation_0": 360,
+  "dummyItem": 2,
+  "nullopt": true,
+  "$fileid": 4648
+}
+,
+
+{
+  "baseModel": 3374,
+  "modelTranslate_0": 1,
+  "model_zoom": 1010,
+  "rotation_1": 672,
+  "rotation_0": 360,
+  "dummyItem": 2,
+  "nullopt": true,
+  "$fileid": 4649
+}
+,
+
+{
+  "baseModel": 3374,
+  "modelTranslate_0": 1,
+  "model_zoom": 1010,
+  "rotation_1": 672,
+  "rotation_0": 360,
+  "dummyItem": 2,
+  "nullopt": true,
+  "$fileid": 4650
+}
+,
+
+{
+  "baseModel": 3374,
+  "modelTranslate_0": 1,
+  "model_zoom": 1010,
+  "rotation_1": 672,
+  "rotation_0": 360,
+  "dummyItem": 2,
+  "nullopt": true,
+  "$fileid": 4651
+}
+,
+
+{
+  "baseModel": 3374,
+  "modelTranslate_0": 1,
+  "model_zoom": 1010,
+  "rotation_1": 672,
+  "rotation_0": 360,
+  "dummyItem": 2,
+  "nullopt": true,
+  "$fileid": 4652
+}
+,
+
+{
+  "baseModel": 6291,
+  "ground_actions_2": "Study",
+  "members": true,
+  "value": 250,
+  "name": "Fire",
+  "nullopt": true,
+  "$fileid": 4653
+}
+,
+
+{
+  "baseModel": 2774,
+  "modelTranslate_0": -1,
+  "modelTranslate_1": 56,
+  "model_zoom": 990,
+  "rotation_1": 1716,
+  "rotation_0": 264,
+  "members": true,
+  "value": 250,
+  "color_replacements": [[5452, 9552], [5440, 9412], [5427, 9527]],
+  "name": "Etchings",
+  "nullopt": true,
+  "$fileid": 4654
+}
+,
+
+{
+  "widget_actions_0": "Read",
+  "members": true,
+  "baseModel": 2794,
+  "model_zoom": 840,
+  "rotation_1": 152,
+  "rotation_0": 256,
+  "value": 250,
+  "color_replacements": [[5018, 542], [10351, 10465]],
+  "name": "Translation",
+  "nullopt": true,
+  "$fileid": 4655
+}
+,
+
+{
+  "baseModel": 2372,
+  "modelTranslate_0": -3,
+  "modelTranslate_1": 5,
+  "model_zoom": 700,
+  "rotation_1": 20,
+  "rotation_0": 328,
+  "members": true,
+  "value": 250,
+  "color_replacements": [[8128, 5553]],
+  "name": "Warm key",
+  "nullopt": true,
+  "$fileid": 4656
+}
+,
+
+{
+  "members": true,
+  "value": 350,
+  "baseModel": 2784,
+  "modelTranslate_0": 3,
+  "modelTranslate_1": -35,
+  "model_zoom": 830,
+  "rotation_1": 180,
+  "rotation_2": 2024,
+  "rotation_0": 268,
+  "widget_actions_1": "Wear",
+  "color_replacements": [[127, 12209]],
+  "name": "Ring of visibility",
+  "nullopt": true,
+  "$fileid": 4657
+}
+,
+
+{
+  "members": true,
+  "baseModel": 2345,
+  "modelTranslate_0": -1,
+  "modelTranslate_1": 2,
+  "model_zoom": 990,
+  "rotation_1": 8,
+  "rotation_0": 112,
+  "value": 250,
+  "color_replacements": [
+    [4775, 82],
+    [4894, 70],
+    [5016, 61],
+    [3988, 53],
+    [1936, 41]
+  ],
+  "name": "Silver pot",
+  "nullopt": true,
+  "$fileid": 4658
+}
+,
+
+{
+  "members": true,
+  "baseModel": 2345,
+  "modelTranslate_0": -1,
+  "modelTranslate_1": 2,
+  "model_zoom": 990,
+  "rotation_1": 8,
+  "rotation_0": 112,
+  "value": 250,
+  "color_replacements": [
+    [4775, 82],
+    [4894, 70],
+    [5016, 61],
+    [3988, 53],
+    [1936, 41]
+  ],
+  "name": "Blessed pot",
+  "nullopt": true,
+  "$fileid": 4659
+}
+,
+
+{
+  "members": true,
+  "baseModel": 6347,
+  "modelTranslate_0": -1,
+  "modelTranslate_1": 2,
+  "model_zoom": 990,
+  "rotation_1": 8,
+  "rotation_0": 112,
+  "value": 250,
+  "name": "Silver pot",
+  "nullopt": true,
+  "$fileid": 4660
+}
+,
+
+{
+  "members": true,
+  "baseModel": 6347,
+  "modelTranslate_0": -1,
+  "modelTranslate_1": 2,
+  "model_zoom": 990,
+  "rotation_1": 8,
+  "rotation_0": 112,
+  "value": 250,
+  "name": "Blessed pot",
+  "nullopt": true,
+  "$fileid": 4661
+}
+,
+
+{
+  "members": true,
+  "baseModel": 6347,
+  "modelTranslate_0": -1,
+  "modelTranslate_1": 2,
+  "model_zoom": 990,
+  "rotation_1": 8,
+  "rotation_0": 112,
+  "value": 250,
+  "name": "Silver pot",
+  "nullopt": true,
+  "$fileid": 4662
+}
+,
+
+{
+  "members": true,
+  "baseModel": 6347,
+  "modelTranslate_0": -1,
+  "modelTranslate_1": 2,
+  "model_zoom": 990,
+  "rotation_1": 8,
+  "rotation_0": 112,
+  "value": 250,
+  "name": "Blessed pot",
+  "nullopt": true,
+  "$fileid": 4663
+}
+,
+
+{
+  "members": true,
+  "baseModel": 6347,
+  "modelTranslate_0": -1,
+  "modelTranslate_1": 2,
+  "model_zoom": 990,
+  "rotation_1": 8,
+  "rotation_0": 112,
+  "value": 250,
+  "name": "Silver pot",
+  "nullopt": true,
+  "$fileid": 4664
+}
+,
+
+{
+  "members": true,
+  "baseModel": 6347,
+  "modelTranslate_0": -1,
+  "modelTranslate_1": 2,
+  "model_zoom": 990,
+  "rotation_1": 8,
+  "rotation_0": 112,
+  "value": 250,
+  "name": "Blessed pot",
+  "nullopt": true,
+  "$fileid": 4665
+}
+,
+
+{
+  "members": true,
+  "baseModel": 6347,
+  "modelTranslate_0": -1,
+  "modelTranslate_1": 2,
+  "model_zoom": 990,
+  "rotation_1": 8,
+  "rotation_0": 112,
+  "value": 250,
+  "name": "Silver pot",
+  "nullopt": true,
+  "$fileid": 4666
+}
+,
+
+{
+  "members": true,
+  "baseModel": 6347,
+  "modelTranslate_0": -1,
+  "modelTranslate_1": 2,
+  "model_zoom": 990,
+  "rotation_1": 8,
+  "rotation_0": 112,
+  "value": 250,
+  "name": "Blessed pot",
+  "nullopt": true,
+  "$fileid": 4667
+}
+,
+
+{
+  "baseModel": 2742,
+  "modelTranslate_0": -6,
+  "model_zoom": 1210,
+  "rotation_1": 1892,
+  "rotation_0": 264,
+  "members": true,
+  "value": 10,
+  "color_replacements": [[82, 10330]],
+  "name": "Garlic powder",
+  "nullopt": true,
+  "$fileid": 4668
+}
+,
+
+{
+  "baseModel": 2742,
+  "value": 0,
+  "name": "Tinderbox",
+  "nullopt": true,
+  "$fileid": 4669
+}
+,
+
+{
+  "members": true,
+  "baseModel": 2586,
+  "modelTranslate_0": -5,
+  "modelTranslate_1": 7,
+  "model_zoom": 780,
+  "rotation_1": 220,
+  "rotation_2": 1860,
+  "rotation_0": 368,
+  "value": 250,
+  "name": "Blood diamond",
+  "nullopt": true,
+  "$fileid": 4670
+}
+,
+
+{
+  "baseModel": 2586,
+  "members": true,
+  "modelTranslate_0": -5,
+  "modelTranslate_1": 7,
+  "model_zoom": 780,
+  "rotation_1": 220,
+  "rotation_2": 1860,
+  "rotation_0": 368,
+  "value": 250,
+  "color_replacements": [[931, 41189], [918, 38872], [478, 127]],
+  "name": "Ice diamond",
+  "nullopt": true,
+  "$fileid": 4671
+}
+,
+
+{
+  "members": true,
+  "baseModel": 2586,
+  "modelTranslate_0": -5,
+  "modelTranslate_1": 7,
+  "model_zoom": 780,
+  "rotation_1": 220,
+  "rotation_2": 1860,
+  "rotation_0": 368,
+  "value": 250,
+  "color_replacements": [[931, 41], [918, 10262], [478, 70]],
+  "name": "Smoke diamond",
+  "nullopt": true,
+  "$fileid": 4672
+}
+,
+
+{
+  "members": true,
+  "baseModel": 2586,
+  "modelTranslate_0": -5,
+  "modelTranslate_1": 7,
+  "model_zoom": 780,
+  "rotation_1": 220,
+  "rotation_2": 1860,
+  "rotation_0": 368,
+  "value": 250,
+  "color_replacements": [[931, 28], [918, 16], [478, 32852]],
+  "name": "Shadow diamond",
+  "nullopt": true,
+  "$fileid": 4673
+}
+,
+
+{
+  "members": true,
+  "baseModel": 6290,
+  "modelTranslate_1": -5,
+  "model_zoom": 1020,
+  "rotation_0": 540,
+  "value": 250,
+  "name": "Gilded cross",
+  "nullopt": true,
+  "$fileid": 4674
+}
+,
+
+{
+  "members": true,
+  "baseModel": 6235,
+  "modelTranslate_0": -5,
+  "modelTranslate_1": 2,
+  "model_zoom": 1490,
+  "rotation_1": 1400,
+  "rotation_0": 148,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 6232, "type": 0},
+  "femaleModels_0": {"id": 6232, "type": 0},
+  "value": 100000,
+  "tradeable": true,
+  "name": "Ancient staff",
+  "female_translate": [3, 245, 6],
+  "noteData": 4676,
+  "loanId": 13406,
+  "nullopt": true,
+  "$fileid": 4675
+}
+,
+
+{"noteData": 4675, "noteTemplate": 799, "nullopt": true, "$fileid": 4676}
+,
+
+{
+  "baseModel": 6440,
+  "modelTranslate_1": -10,
+  "model_zoom": 400,
+  "rotation_0": 220,
+  "maleModels_0": {"id": 6469, "type": 0},
+  "femaleModels_0": {"id": 42302, "type": 0},
+  "widget_actions_1": "Wear",
+  "members": true,
+  "name": "Catspeak amulet",
+  "nullopt": true,
+  "$fileid": 4677
+}
+,
+
+{
+  "members": true,
+  "baseModel": 6445,
+  "modelTranslate_1": -6,
+  "model_zoom": 1210,
+  "rotation_1": 1760,
+  "rotation_0": 136,
+  "ground_actions_2": "Take",
+  "name": "Canopic jar",
+  "extra": [{"prop": 59, "intvalue": 1, "stringvalue": null}],
+  "nullopt": true,
+  "$fileid": 4678
+}
+,
+
+{
+  "members": true,
+  "baseModel": 6443,
+  "modelTranslate_1": -6,
+  "model_zoom": 1210,
+  "rotation_1": 1760,
+  "rotation_0": 136,
+  "ground_actions_2": "Take",
+  "name": "Canopic jar",
+  "extra": [{"prop": 59, "intvalue": 1, "stringvalue": null}],
+  "nullopt": true,
+  "$fileid": 4679
+}
+,
+
+{
+  "members": true,
+  "baseModel": 6446,
+  "modelTranslate_1": -6,
+  "model_zoom": 1210,
+  "rotation_1": 1760,
+  "rotation_0": 136,
+  "ground_actions_2": "Take",
+  "name": "Canopic jar",
+  "extra": [{"prop": 59, "intvalue": 1, "stringvalue": null}],
+  "nullopt": true,
+  "$fileid": 4680
+}
+,
+
+{
+  "members": true,
+  "baseModel": 6444,
+  "modelTranslate_1": -6,
+  "model_zoom": 1210,
+  "rotation_1": 1760,
+  "rotation_0": 136,
+  "ground_actions_2": "Take",
+  "name": "Canopic jar",
+  "extra": [{"prop": 59, "intvalue": 1, "stringvalue": null}],
+  "nullopt": true,
+  "$fileid": 4681
+}
+,
+
+{
+  "members": true,
+  "baseModel": 6441,
+  "modelTranslate_0": 3,
+  "modelTranslate_1": 4,
+  "model_zoom": 460,
+  "rotation_1": 1116,
+  "rotation_0": 1584,
+  "name": "Holy symbol",
+  "extra": [{"prop": 59, "intvalue": 1, "stringvalue": null}],
+  "nullopt": true,
+  "$fileid": 4682
+}
+,
+
+{
+  "members": true,
+  "baseModel": 6442,
+  "modelTranslate_1": -3,
+  "model_zoom": 430,
+  "rotation_1": 164,
+  "rotation_0": 424,
+  "name": "Unholy symbol",
+  "extra": [{"prop": 59, "intvalue": 1, "stringvalue": null}],
+  "nullopt": true,
+  "$fileid": 4683
+}
+,
+
+{
+  "members": true,
+  "baseModel": 2725,
+  "modelTranslate_0": 4,
+  "modelTranslate_1": 13,
+  "model_zoom": 1420,
+  "rotation_1": 1240,
+  "rotation_0": 536,
+  "value": 30,
+  "color_replacements": [[7390, 6352]],
+  "name": "Linen",
+  "nullopt": true,
+  "$fileid": 4684
+}
+,
+
+{
+  "baseModel": 2742,
+  "value": 0,
+  "name": "Picture",
+  "nullopt": true,
+  "$fileid": 4685
+}
+,
+
+{
+  "baseModel": 2633,
+  "value": 0,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": -21,
+  "model_zoom": 830,
+  "rotation_1": 116,
+  "rotation_0": 244,
+  "members": true,
+  "widget_actions_0": "Read",
+  "color_replacements": [
+    [5018, 6435],
+    [10351, 9445],
+    [11177, 10388],
+    [61, 10388]
+  ],
+  "name": "Embalming manual",
+  "nullopt": true,
+  "$fileid": 4686
+}
+,
+
+{
+  "baseModel": 2504,
+  "modelTranslate_1": -18,
+  "model_zoom": 1020,
+  "rotation_1": 1660,
+  "rotation_0": 204,
+  "widget_actions_3": "Empty",
+  "members": true,
+  "value": 30,
+  "color_replacements": [[39834, 5027]],
+  "name": "Bucket of sap",
+  "nullopt": true,
+  "$fileid": 4687
+}
+,
+
+{
+  "baseModel": 2742,
+  "value": 0,
+  "name": "Tinderbox",
+  "nullopt": true,
+  "$fileid": 4688
+}
+,
+
+{
+  "value": 20,
+  "baseModel": 2742,
+  "modelTranslate_0": -6,
+  "model_zoom": 1210,
+  "rotation_1": 1892,
+  "rotation_0": 264,
+  "members": true,
+  "color_replacements": [[82, 111]],
+  "name": "Pile of salt",
+  "nullopt": true,
+  "$fileid": 4689
+}
+,
+
+{
+  "baseModel": 2742,
+  "value": 0,
+  "name": "Tinderbox",
+  "nullopt": true,
+  "$fileid": 4690
+}
+,
+
+{
+  "members": true,
+  "baseModel": 6502,
+  "modelTranslate_0": -7,
+  "model_zoom": 970,
+  "rotation_1": 284,
+  "name": "Sphinx's token",
+  "nullopt": true,
+  "$fileid": 4691
+}
+,
+
+{
+  "baseModel": 2746,
+  "maleModels_0": {"id": 532, "type": 0},
+  "femaleModels_0": {"id": 532, "type": 0},
+  "model_zoom": 940,
+  "rotation_1": 112,
+  "rotation_0": 248,
+  "members": true,
+  "color_replacements": [[5351, 11072]],
+  "name": "Gold leaf",
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 4692
+}
+,
+
+{
+  "value": 6,
+  "baseModel": 2504,
+  "modelTranslate_1": -18,
+  "model_zoom": 1020,
+  "rotation_1": 1660,
+  "rotation_0": 204,
+  "widget_actions_3": "Empty",
+  "members": true,
+  "name": "Full bucket",
+  "nullopt": true,
+  "$fileid": 4693
+}
+,
+
+{
+  "modelTranslate_1": 1,
+  "model_zoom": 740,
+  "rotation_1": 1012,
+  "rotation_0": 528,
+  "stackable_1": true,
+  "value": 20,
+  "baseModel": 7521,
+  "ambiance": 30,
+  "members": true,
+  "tradeable": true,
+  "name": "Steam rune",
+  "nullopt": true,
+  "$fileid": 4694
+}
+,
+
+{
+  "stackable_1": true,
+  "value": 20,
+  "baseModel": 7517,
+  "modelTranslate_1": 1,
+  "model_zoom": 740,
+  "rotation_1": 1012,
+  "rotation_0": 528,
+  "ambiance": 30,
+  "members": true,
+  "tradeable": true,
+  "name": "Mist rune",
+  "nullopt": true,
+  "$fileid": 4695
+}
+,
+
+{
+  "stackable_1": true,
+  "value": 20,
+  "baseModel": 7514,
+  "modelTranslate_1": 1,
+  "model_zoom": 740,
+  "rotation_1": 1012,
+  "rotation_0": 528,
+  "ambiance": 30,
+  "members": true,
+  "tradeable": true,
+  "name": "Dust rune",
+  "nullopt": true,
+  "$fileid": 4696
+}
+,
+
+{
+  "stackable_1": true,
+  "value": 20,
+  "baseModel": 7520,
+  "modelTranslate_1": 1,
+  "model_zoom": 740,
+  "rotation_1": 1012,
+  "rotation_0": 528,
+  "ambiance": 30,
+  "members": true,
+  "tradeable": true,
+  "name": "Smoke rune",
+  "nullopt": true,
+  "$fileid": 4697
+}
+,
+
+{
+  "stackable_1": true,
+  "value": 20,
+  "modelTranslate_1": 1,
+  "model_zoom": 740,
+  "rotation_1": 1012,
+  "rotation_0": 528,
+  "baseModel": 7518,
+  "ambiance": 30,
+  "members": true,
+  "tradeable": true,
+  "name": "Mud rune",
+  "nullopt": true,
+  "$fileid": 4698
+}
+,
+
+{
+  "stackable_1": true,
+  "value": 20,
+  "baseModel": 7516,
+  "modelTranslate_1": 1,
+  "model_zoom": 740,
+  "rotation_1": 1012,
+  "rotation_0": 528,
+  "ambiance": 30,
+  "members": true,
+  "tradeable": true,
+  "name": "Lava rune",
+  "nullopt": true,
+  "$fileid": 4699
+}
+,
+
+{
+  "baseModel": 5742,
+  "model_zoom": 1190,
+  "rotation_1": 120,
+  "rotation_0": 28,
+  "value": 600,
+  "members": true,
+  "color_replacements": [[41193, 43951]],
+  "name": "Sapphire lantern",
+  "nullopt": true,
+  "$fileid": 4700
+}
+,
+
+{
+  "baseModel": 5742,
+  "model_zoom": 1190,
+  "rotation_1": 120,
+  "rotation_0": 28,
+  "value": 600,
+  "members": true,
+  "color_replacements": [[41193, 43951]],
+  "name": "Sapphire lantern",
+  "nullopt": true,
+  "$fileid": 4701
+}
+,
+
+{
+  "baseModel": 5741,
+  "model_zoom": 1190,
+  "rotation_1": 120,
+  "rotation_0": 28,
+  "value": 600,
+  "members": true,
+  "widget_actions_0": "Extinguish",
+  "color_replacements": [[8146, 41938], [8419, 41938]],
+  "name": "Sapphire lantern",
+  "nullopt": true,
+  "$fileid": 4702
+}
+,
+
+{
+  "baseModel": 2528,
+  "modelTranslate_0": -5,
+  "modelTranslate_1": 7,
+  "model_zoom": 780,
+  "rotation_1": 220,
+  "rotation_2": 1860,
+  "rotation_0": 368,
+  "members": true,
+  "value": 1,
+  "color_replacements": [[61, 43069]],
+  "name": "Magic stone",
+  "nullopt": true,
+  "$fileid": 4703
+}
+,
+
+{
+  "baseModel": 3897,
+  "maleModels_0": {"id": 6543, "type": 0},
+  "femaleModels_0": {"id": 6543, "type": 0},
+  "members": true,
+  "modelTranslate_0": 1,
+  "model_zoom": 660,
+  "rotation_1": 68,
+  "rotation_0": 184,
+  "value": 1,
+  "name": "Stone bowl",
+  "male_translate": [0, 3, 0],
+  "female_translate": [3, 241, 0],
+  "nullopt": true,
+  "$fileid": 4704
+}
+,
+
+{
+  "dummyItem": 2,
+  "baseModel": 6743,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": -21,
+  "model_zoom": 830,
+  "rotation_1": 116,
+  "rotation_0": 244,
+  "maleModels_0": {"id": 6711, "type": 0},
+  "femaleModels_0": {"id": 6711, "type": 0},
+  "color_replacements": [[5018, 18721], [61, 7952], [11177, 7952]],
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 4705
+}
+,
+
+{
+  "dummyItem": 2,
+  "widget_actions_0": "Wear",
+  "value": 1,
+  "baseModel": 2521,
+  "modelTranslate_1": 1,
+  "model_zoom": 1940,
+  "rotation_0": 572,
+  "color_replacements": [[25238, 62928]],
+  "nullopt": true,
+  "$fileid": 4706
+}
+,
+
+{
+  "baseModel": 6743,
+  "value": 5,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": -21,
+  "model_zoom": 830,
+  "rotation_1": 116,
+  "rotation_0": 244,
+  "members": true,
+  "widget_actions_0": "Read",
+  "color_replacements": [
+    [2991, 12818],
+    [9152, 12579],
+    [5018, 12818],
+    [10351, 18665]
+  ],
+  "name": "Crumbling tome",
+  "nullopt": true,
+  "$fileid": 4707
+}
+,
+
+{
+  "members": true,
+  "value": 13000,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 5430, "type": 0},
+  "femaleModels_0": {"id": 5435, "type": 0},
+  "maleHeads_0": 38094,
+  "femaleHeads_0": 39128,
+  "model_zoom": 730,
+  "rotation_1": 2036,
+  "baseModel": 5419,
+  "tradeable": true,
+  "color_replacements": [[8741, 10512]],
+  "name": "Ahrim's hood",
+  "noteData": 4709,
+  "nullopt": true,
+  "$fileid": 4708
+}
+,
+
+{"noteData": 4708, "noteTemplate": 799, "nullopt": true, "$fileid": 4709}
+,
+
+{
+  "members": true,
+  "value": 85000,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 6706, "type": 0},
+  "femaleModels_0": {"id": 23175, "type": 0},
+  "modelTranslate_0": -4,
+  "modelTranslate_1": -19,
+  "model_zoom": 1550,
+  "rotation_1": 116,
+  "rotation_0": 224,
+  "baseModel": 6590,
+  "tradeable": true,
+  "color_replacements": [
+    [14503, 10512],
+    [14499, 10508],
+    [14494, 10760],
+    [14490, 11140]
+  ],
+  "name": "Ahrim's staff",
+  "female_translate": [3, 245, 6],
+  "noteData": 4711,
+  "nullopt": true,
+  "$fileid": 4710
+}
+,
+
+{"noteData": 4710, "noteTemplate": 799, "nullopt": true, "$fileid": 4711}
+,
+
+{
+  "members": true,
+  "value": 50000,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 6669, "type": 0},
+  "maleModels_1": 170,
+  "femaleModels_0": {"id": 6697, "type": 0},
+  "femaleModels_1": 348,
+  "modelTranslate_1": 3,
+  "model_zoom": 1250,
+  "rotation_0": 468,
+  "baseModel": 6578,
+  "tradeable": true,
+  "color_replacements": [[8741, 10512], [14490, 10512]],
+  "name": "Ahrim's robetop",
+  "noteData": 4713,
+  "nullopt": true,
+  "$fileid": 4712
+}
+,
+
+{"noteData": 4712, "noteTemplate": 799, "nullopt": true, "$fileid": 4713}
+,
+
+{
+  "members": true,
+  "value": 47000,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 6659, "type": 0},
+  "femaleModels_0": {"id": 40595, "type": 0},
+  "modelTranslate_1": -4,
+  "model_zoom": 1730,
+  "rotation_0": 504,
+  "baseModel": 6577,
+  "tradeable": true,
+  "color_replacements": [[14490, 10512], [45468, 43840]],
+  "name": "Ahrim's robeskirt",
+  "noteData": 4715,
+  "nullopt": true,
+  "$fileid": 4714
+}
+,
+
+{"noteData": 4714, "noteTemplate": 799, "nullopt": true, "$fileid": 4715}
+,
+
+{
+  "members": true,
+  "value": 103000,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 6651, "type": 0},
+  "femaleModels_0": {"id": 6686, "type": 0},
+  "maleHeads_0": 39969,
+  "femaleHeads_0": 38950,
+  "baseModel": 6580,
+  "modelTranslate_0": 5,
+  "modelTranslate_1": -8,
+  "model_zoom": 660,
+  "rotation_1": 128,
+  "rotation_0": 96,
+  "tradeable": true,
+  "color_replacements": [[10394, 10388], [10388, 10508]],
+  "name": "Dharok's helm",
+  "noteData": 4717,
+  "nullopt": true,
+  "$fileid": 4716
+}
+,
+
+{"noteData": 4716, "noteTemplate": 799, "nullopt": true, "$fileid": 4717}
+,
+
+{
+  "members": true,
+  "value": 208000,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 6702, "type": 0},
+  "femaleModels_0": {"id": 6702, "type": 0},
+  "baseModel": 6579,
+  "modelTranslate_1": 51,
+  "model_zoom": 1710,
+  "rotation_1": 2004,
+  "rotation_0": 280,
+  "tradeable": true,
+  "name": "Dharok's greataxe",
+  "female_translate": [3, 245, 6],
+  "noteData": 4719,
+  "nullopt": true,
+  "$fileid": 4718
+}
+,
+
+{"noteData": 4718, "noteTemplate": 799, "nullopt": true, "$fileid": 4719}
+,
+
+{
+  "members": true,
+  "value": 280000,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 6670, "type": 0},
+  "maleModels_1": 6639,
+  "femaleModels_0": {"id": 6698, "type": 0},
+  "femaleModels_1": 6681,
+  "baseModel": 6582,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": 4,
+  "model_zoom": 1260,
+  "rotation_0": 464,
+  "tradeable": true,
+  "color_replacements": [[10394, 10388], [10291, 10508]],
+  "name": "Dharok's platebody",
+  "noteData": 4721,
+  "nullopt": true,
+  "$fileid": 4720
+}
+,
+
+{"noteData": 4720, "noteTemplate": 799, "nullopt": true, "$fileid": 4721}
+,
+
+{
+  "members": true,
+  "value": 275000,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 6660, "type": 0},
+  "femaleModels_0": {"id": 6692, "type": 0},
+  "baseModel": 6581,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": 1,
+  "model_zoom": 1660,
+  "rotation_0": 456,
+  "tradeable": true,
+  "color_replacements": [[10394, 10512], [10388, 10760]],
+  "name": "Dharok's platelegs",
+  "noteData": 4723,
+  "nullopt": true,
+  "$fileid": 4722
+}
+,
+
+{"noteData": 4722, "noteTemplate": 799, "nullopt": true, "$fileid": 4723}
+,
+
+{
+  "members": true,
+  "value": 103000,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 6653, "type": 0},
+  "femaleModels_0": {"id": 6687, "type": 0},
+  "maleHeads_0": 39782,
+  "femaleHeads_0": 38962,
+  "baseModel": 6583,
+  "modelTranslate_0": 17,
+  "model_zoom": 860,
+  "rotation_1": 188,
+  "rotation_0": 2012,
+  "tradeable": true,
+  "color_replacements": [[10394, 10388], [6020, 11140]],
+  "name": "Guthan's helm",
+  "noteData": 4725,
+  "nullopt": true,
+  "$fileid": 4724
+}
+,
+
+{"noteData": 4724, "noteTemplate": 799, "nullopt": true, "$fileid": 4725}
+,
+
+{
+  "members": true,
+  "value": 100000,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 6709, "type": 0},
+  "femaleModels_0": {"id": 6709, "type": 0},
+  "modelTranslate_0": -2,
+  "modelTranslate_1": -16,
+  "model_zoom": 1470,
+  "rotation_1": 116,
+  "rotation_0": 176,
+  "baseModel": 6598,
+  "tradeable": true,
+  "color_replacements": [
+    [14511, 10512],
+    [14503, 10508],
+    [14494, 10760],
+    [21555, 21543],
+    [21563, 21551]
+  ],
+  "name": "Guthan's warspear",
+  "female_translate": [3, 245, 6],
+  "noteData": 4727,
+  "nullopt": true,
+  "$fileid": 4726
+}
+,
+
+{"noteData": 4726, "noteTemplate": 799, "nullopt": true, "$fileid": 4727}
+,
+
+{
+  "members": true,
+  "value": 280000,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 6672, "type": 0},
+  "maleModels_1": 6641,
+  "femaleModels_0": {"id": 6699, "type": 0},
+  "femaleModels_1": 6682,
+  "baseModel": 6586,
+  "modelTranslate_1": 8,
+  "model_zoom": 960,
+  "rotation_0": 412,
+  "tradeable": true,
+  "color_replacements": [[10394, 10388], [10291, 10508]],
+  "name": "Guthan's platebody",
+  "noteData": 4729,
+  "nullopt": true,
+  "$fileid": 4728
+}
+,
+
+{"noteData": 4728, "noteTemplate": 799, "nullopt": true, "$fileid": 4729}
+,
+
+{
+  "members": true,
+  "value": 275000,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 6665, "type": 0},
+  "femaleModels_0": {"id": 40596, "type": 0},
+  "baseModel": 6593,
+  "modelTranslate_1": 1,
+  "model_zoom": 1720,
+  "rotation_0": 468,
+  "tradeable": true,
+  "color_replacements": [[10407, 10512], [10394, 10508], [10388, 10760]],
+  "name": "Guthan's chainskirt",
+  "noteData": 4731,
+  "nullopt": true,
+  "$fileid": 4730
+}
+,
+
+{"noteData": 4730, "noteTemplate": 799, "nullopt": true, "$fileid": 4731}
+,
+
+{
+  "members": true,
+  "value": 13000,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 6655, "type": 0},
+  "femaleModels_0": {"id": 6688, "type": 0},
+  "maleHeads_0": 39872,
+  "femaleHeads_0": 38983,
+  "modelTranslate_0": -1,
+  "modelTranslate_1": -3,
+  "model_zoom": 690,
+  "rotation_0": 144,
+  "baseModel": 6587,
+  "tradeable": true,
+  "color_replacements": [
+    [10394, 10388],
+    [10388, 10512],
+    [10514, 10508],
+    [10638, 10760],
+    [10762, 11140]
+  ],
+  "name": "Karil's coif",
+  "noteData": 4733,
+  "nullopt": true,
+  "$fileid": 4732
+}
+,
+
+{"noteData": 4732, "noteTemplate": 799, "nullopt": true, "$fileid": 4733}
+,
+
+{
+  "members": true,
+  "value": 160000,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 6712, "type": 0},
+  "femaleModels_0": {"id": 6712, "type": 0},
+  "modelTranslate_0": -4,
+  "modelTranslate_1": 39,
+  "model_zoom": 1160,
+  "rotation_1": 888,
+  "rotation_0": 288,
+  "baseModel": 6604,
+  "tradeable": true,
+  "color_replacements": [
+    [10529, 10388],
+    [8602, 10512],
+    [10520, 10508],
+    [8722, 10760]
+  ],
+  "name": "Karil's crossbow",
+  "female_translate": [3, 245, 6],
+  "noteData": 4735,
+  "nullopt": true,
+  "$fileid": 4734
+}
+,
+
+{"noteData": 4734, "noteTemplate": 799, "nullopt": true, "$fileid": 4735}
+,
+
+{
+  "members": true,
+  "value": 50000,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 6674, "type": 0},
+  "maleModels_1": 6643,
+  "femaleModels_0": {"id": 6700, "type": 0},
+  "femaleModels_1": 6683,
+  "modelTranslate_0": 3,
+  "model_zoom": 1380,
+  "rotation_0": 556,
+  "baseModel": 6588,
+  "tradeable": true,
+  "color_replacements": [
+    [10413, 7510],
+    [10520, 10388],
+    [10644, 10512],
+    [10768, 10508],
+    [908, 10760]
+  ],
+  "name": "Karil's leathertop",
+  "noteData": 4737,
+  "nullopt": true,
+  "$fileid": 4736
+}
+,
+
+{"noteData": 4736, "noteTemplate": 799, "nullopt": true, "$fileid": 4737}
+,
+
+{
+  "members": true,
+  "value": 47000,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 6664, "type": 0},
+  "femaleModels_0": {"id": 6694, "type": 0},
+  "model_zoom": 1120,
+  "rotation_0": 512,
+  "baseModel": 6589,
+  "tradeable": true,
+  "color_replacements": [
+    [10413, 10438],
+    [14490, 10388],
+    [10520, 10512],
+    [10644, 10508],
+    [10768, 10760],
+    [10892, 11140]
+  ],
+  "name": "Karil's leatherskirt",
+  "noteData": 4739,
+  "nullopt": true,
+  "$fileid": 4738
+}
+,
+
+{"noteData": 4738, "noteTemplate": 799, "nullopt": true, "$fileid": 4739}
+,
+
+{
+  "value": 420,
+  "baseModel": 6599,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": 1,
+  "model_zoom": 870,
+  "rotation_1": 1776,
+  "rotation_0": 72,
+  "widget_actions_1": "Wield",
+  "stackable_1": true,
+  "stack_info_0": [4741, 2],
+  "stack_info_1": [4742, 3],
+  "stack_info_2": [4743, 4],
+  "stack_info_3": [4744, 5],
+  "members": true,
+  "tradeable": true,
+  "color_replacements": [
+    [10529, 10388],
+    [8602, 10512],
+    [10520, 10508],
+    [8722, 10760]
+  ],
+  "name": "Bolt rack",
+  "nullopt": true,
+  "$fileid": 4740
+}
+,
+
+{
+  "baseModel": 6600,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": 1,
+  "model_zoom": 870,
+  "rotation_1": 1776,
+  "rotation_0": 72,
+  "stackable_1": true,
+  "dummyItem": 2,
+  "color_replacements": [
+    [10529, 10388],
+    [8602, 10512],
+    [10520, 10508],
+    [8722, 10760]
+  ],
+  "nullopt": true,
+  "$fileid": 4741
+}
+,
+
+{
+  "baseModel": 6601,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": 1,
+  "model_zoom": 870,
+  "rotation_1": 1776,
+  "rotation_0": 72,
+  "stackable_1": true,
+  "dummyItem": 2,
+  "color_replacements": [
+    [10529, 10388],
+    [8602, 10512],
+    [10520, 10508],
+    [8722, 10760]
+  ],
+  "nullopt": true,
+  "$fileid": 4742
+}
+,
+
+{
+  "baseModel": 6602,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": 1,
+  "model_zoom": 870,
+  "rotation_1": 1776,
+  "rotation_0": 72,
+  "stackable_1": true,
+  "dummyItem": 2,
+  "color_replacements": [
+    [10529, 10388],
+    [8602, 10512],
+    [10520, 10508],
+    [8722, 10760]
+  ],
+  "nullopt": true,
+  "$fileid": 4743
+}
+,
+
+{
+  "baseModel": 6603,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": 1,
+  "model_zoom": 870,
+  "rotation_1": 1776,
+  "rotation_0": 72,
+  "stackable_1": true,
+  "dummyItem": 2,
+  "color_replacements": [
+    [10529, 10388],
+    [8602, 10512],
+    [10520, 10508],
+    [8722, 10760]
+  ],
+  "nullopt": true,
+  "$fileid": 4744
+}
+,
+
+{
+  "members": true,
+  "value": 103000,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 6656, "type": 0},
+  "femaleModels_0": {"id": 6689, "type": 0},
+  "maleHeads_0": 39896,
+  "femaleHeads_0": 38922,
+  "baseModel": 6592,
+  "modelTranslate_0": 11,
+  "model_zoom": 660,
+  "rotation_1": 212,
+  "tradeable": true,
+  "color_replacements": [[10394, 10388], [6020, 11140]],
+  "name": "Torag's helm",
+  "noteData": 4746,
+  "nullopt": true,
+  "$fileid": 4745
+}
+,
+
+{"noteData": 4745, "noteTemplate": 799, "nullopt": true, "$fileid": 4746}
+,
+
+{
+  "members": true,
+  "value": 160000,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 6707, "type": 0},
+  "femaleModels_0": {"id": 40282, "type": 0},
+  "femaleModels_1": 40306,
+  "baseModel": 6591,
+  "modelTranslate_0": -16,
+  "modelTranslate_1": -9,
+  "model_zoom": 1620,
+  "rotation_1": 1212,
+  "rotation_0": 272,
+  "tradeable": true,
+  "name": "Torag's hammers",
+  "noteData": 4748,
+  "nullopt": true,
+  "$fileid": 4747
+}
+,
+
+{"noteData": 4747, "noteTemplate": 799, "nullopt": true, "$fileid": 4748}
+,
+
+{
+  "members": true,
+  "value": 280000,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 6676, "type": 0},
+  "maleModels_1": 6644,
+  "femaleModels_0": {"id": 6701, "type": 0},
+  "femaleModels_1": 6684,
+  "baseModel": 6594,
+  "modelTranslate_0": 2,
+  "model_zoom": 1310,
+  "rotation_0": 432,
+  "tradeable": true,
+  "color_replacements": [[10394, 10388], [10291, 10508]],
+  "name": "Torag's platebody",
+  "noteData": 4750,
+  "nullopt": true,
+  "$fileid": 4749
+}
+,
+
+{"noteData": 4749, "noteTemplate": 799, "nullopt": true, "$fileid": 4750}
+,
+
+{
+  "members": true,
+  "value": 275000,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 6662, "type": 0},
+  "femaleModels_0": {"id": 6693, "type": 0},
+  "baseModel": 6584,
+  "modelTranslate_1": 1,
+  "model_zoom": 1720,
+  "rotation_0": 468,
+  "tradeable": true,
+  "color_replacements": [[10394, 10388]],
+  "name": "Torag's platelegs",
+  "noteData": 4752,
+  "nullopt": true,
+  "$fileid": 4751
+}
+,
+
+{"noteData": 4751, "noteTemplate": 799, "nullopt": true, "$fileid": 4752}
+,
+
+{
+  "members": true,
+  "value": 103000,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 6658, "type": 0},
+  "femaleModels_0": {"id": 6690, "type": 0},
+  "maleHeads_0": 39735,
+  "femaleHeads_0": 39735,
+  "modelTranslate_0": 5,
+  "modelTranslate_1": 1,
+  "model_zoom": 810,
+  "rotation_1": 208,
+  "rotation_0": 28,
+  "baseModel": 6597,
+  "tradeable": true,
+  "color_replacements": [
+    [10411, 10388],
+    [10403, 10512],
+    [10394, 10508],
+    [10518, 10760],
+    [10514, 11140],
+    [10638, 11138]
+  ],
+  "name": "Verac's helm",
+  "noteData": 4754,
+  "nullopt": true,
+  "$fileid": 4753
+}
+,
+
+{"noteData": 4753, "noteTemplate": 799, "nullopt": true, "$fileid": 4754}
+,
+
+{
+  "members": true,
+  "value": 160000,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 6704, "type": 0},
+  "femaleModels_0": {"id": 6704, "type": 0},
+  "baseModel": 6585,
+  "modelTranslate_1": 32,
+  "model_zoom": 1440,
+  "rotation_1": 352,
+  "rotation_0": 272,
+  "tradeable": true,
+  "name": "Verac's flail",
+  "female_translate": [3, 245, 6],
+  "noteData": 4756,
+  "nullopt": true,
+  "$fileid": 4755
+}
+,
+
+{"noteData": 4755, "noteTemplate": 799, "nullopt": true, "$fileid": 4756}
+,
+
+{
+  "members": true,
+  "value": 280000,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 315, "type": 0},
+  "maleModels_1": 6646,
+  "femaleModels_0": {"id": 478, "type": 0},
+  "femaleModels_1": 6685,
+  "modelTranslate_0": 3,
+  "modelTranslate_1": 1,
+  "model_zoom": 1210,
+  "rotation_1": 36,
+  "rotation_0": 464,
+  "baseModel": 6596,
+  "tradeable": true,
+  "color_replacements": [
+    [10394, 10388],
+    [10518, 10512],
+    [10388, 10508],
+    [10514, 10760],
+    [10508, 11140]
+  ],
+  "name": "Verac's brassard",
+  "noteData": 4758,
+  "nullopt": true,
+  "$fileid": 4757
+}
+,
+
+{"noteData": 4757, "noteTemplate": 799, "nullopt": true, "$fileid": 4758}
+,
+
+{
+  "members": true,
+  "value": 275000,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 6667, "type": 0},
+  "femaleModels_0": {"id": 6696, "type": 0},
+  "modelTranslate_0": -1,
+  "modelTranslate_1": -1,
+  "model_zoom": 1060,
+  "rotation_0": 504,
+  "baseModel": 6595,
+  "tradeable": true,
+  "color_replacements": [[10398, 10388], [10518, 10512], [10638, 10508]],
+  "name": "Verac's plateskirt",
+  "noteData": 4760,
+  "nullopt": true,
+  "$fileid": 4759
+}
+,
+
+{"noteData": 4759, "noteTemplate": 799, "nullopt": true, "$fileid": 4760}
+,
+
+{
+  "baseModel": 6737,
+  "model_zoom": 400,
+  "rotation_1": 2023,
+  "rotation_0": 1942,
+  "dummyItem": 2,
+  "nullopt": true,
+  "$fileid": 4761
+}
+,
+
+{
+  "baseModel": 6737,
+  "model_zoom": 400,
+  "rotation_1": 2023,
+  "rotation_0": 1942,
+  "dummyItem": 2,
+  "color_replacements": [[62119, 27036], [61999, 26917], [59612, 22748]],
+  "nullopt": true,
+  "$fileid": 4762
+}
+,
+
+{
+  "baseModel": 6738,
+  "model_zoom": 400,
+  "rotation_1": 2023,
+  "rotation_0": 1942,
+  "dummyItem": 2,
+  "nullopt": true,
+  "$fileid": 4763
+}
+,
+
+{
+  "baseModel": 6738,
+  "model_zoom": 400,
+  "rotation_1": 18,
+  "rotation_0": 136,
+  "dummyItem": 2,
+  "color_replacements": [[62119, 27036], [61999, 26917], [59612, 22748]],
+  "nullopt": true,
+  "$fileid": 4764
+}
+,
+
+{
+  "baseModel": 6739,
+  "model_zoom": 400,
+  "rotation_1": 21,
+  "rotation_0": 249,
+  "dummyItem": 2,
+  "nullopt": true,
+  "$fileid": 4765
+}
+,
+
+{
+  "baseModel": 6739,
+  "model_zoom": 400,
+  "rotation_1": 21,
+  "rotation_0": 249,
+  "dummyItem": 2,
+  "color_replacements": [[62119, 27036], [61999, 26917], [59612, 22748]],
+  "nullopt": true,
+  "$fileid": 4766
+}
+,
+
+{
+  "baseModel": 6740,
+  "model_zoom": 400,
+  "rotation_1": 18,
+  "rotation_0": 136,
+  "dummyItem": 2,
+  "nullopt": true,
+  "$fileid": 4767
+}
+,
+
+{
+  "baseModel": 6740,
+  "model_zoom": 400,
+  "rotation_1": 18,
+  "rotation_0": 136,
+  "dummyItem": 2,
+  "color_replacements": [[62119, 27036], [61999, 26917], [59612, 22748]],
+  "nullopt": true,
+  "$fileid": 4768
+}
+,
+
+{
+  "baseModel": 6741,
+  "model_zoom": 400,
+  "rotation_1": 18,
+  "rotation_0": 136,
+  "dummyItem": 2,
+  "nullopt": true,
+  "$fileid": 4769
+}
+,
+
+{
+  "baseModel": 6741,
+  "model_zoom": 400,
+  "rotation_1": 18,
+  "rotation_0": 136,
+  "dummyItem": 2,
+  "color_replacements": [[62119, 27036], [61999, 26917], [59612, 22748]],
+  "nullopt": true,
+  "$fileid": 4770
+}
+,
+
+{
+  "baseModel": 6742,
+  "model_zoom": 400,
+  "rotation_1": 2023,
+  "rotation_0": 1942,
+  "dummyItem": 2,
+  "nullopt": true,
+  "$fileid": 4771
+}
+,
+
+{
+  "baseModel": 6742,
+  "model_zoom": 400,
+  "rotation_1": 2023,
+  "rotation_0": 1942,
+  "dummyItem": 2,
+  "color_replacements": [[62119, 27036], [61999, 26917], [59612, 22748]],
+  "nullopt": true,
+  "$fileid": 4772
+}
+,
+
+{
+  "baseModel": 6814,
+  "modelTranslate_1": -9,
+  "model_zoom": 1700,
+  "rotation_1": 116,
+  "rotation_0": 324,
+  "members": true,
+  "stackable_1": true,
+  "stack_info_0": [4774, 2],
+  "stack_info_1": [4775, 3],
+  "stack_info_2": [4776, 4],
+  "stack_info_3": [4777, 5],
+  "widget_actions_1": "Wield",
+  "value": 5,
+  "tradeable": true,
+  "color_replacements": [[4771, 7582], [926, 127], [61, 5652]],
+  "name": "Bronze brutal",
+  "nullopt": true,
+  "$fileid": 4773
+}
+,
+
+{
+  "baseModel": 6815,
+  "modelTranslate_1": -9,
+  "model_zoom": 1700,
+  "rotation_1": 116,
+  "rotation_0": 324,
+  "members": true,
+  "stackable_1": true,
+  "dummyItem": 2,
+  "color_replacements": [[4771, 7582], [926, 127], [61, 5652]],
+  "nullopt": true,
+  "$fileid": 4774
+}
+,
+
+{
+  "baseModel": 6816,
+  "modelTranslate_1": -9,
+  "model_zoom": 1700,
+  "rotation_1": 116,
+  "rotation_0": 324,
+  "members": true,
+  "stackable_1": true,
+  "dummyItem": 2,
+  "color_replacements": [[4771, 7582], [926, 127], [61, 5652]],
+  "nullopt": true,
+  "$fileid": 4775
+}
+,
+
+{
+  "baseModel": 6817,
+  "modelTranslate_1": -9,
+  "model_zoom": 1700,
+  "rotation_1": 116,
+  "rotation_0": 324,
+  "members": true,
+  "stackable_1": true,
+  "dummyItem": 2,
+  "color_replacements": [[4771, 7582], [926, 127], [61, 5652]],
+  "nullopt": true,
+  "$fileid": 4776
+}
+,
+
+{
+  "baseModel": 6818,
+  "modelTranslate_1": -9,
+  "model_zoom": 1700,
+  "rotation_1": 116,
+  "rotation_0": 324,
+  "members": true,
+  "stackable_1": true,
+  "dummyItem": 2,
+  "color_replacements": [[4771, 7582], [926, 127], [61, 5652]],
+  "nullopt": true,
+  "$fileid": 4777
+}
+,
+
+{
+  "baseModel": 6814,
+  "modelTranslate_1": -9,
+  "model_zoom": 1700,
+  "rotation_1": 116,
+  "rotation_0": 324,
+  "members": true,
+  "stackable_1": true,
+  "stack_info_0": [4779, 2],
+  "stack_info_1": [4780, 3],
+  "stack_info_2": [4781, 4],
+  "stack_info_3": [4782, 5],
+  "widget_actions_1": "Wield",
+  "value": 10,
+  "tradeable": true,
+  "color_replacements": [[4771, 7582], [926, 127], [61, 33]],
+  "name": "Iron brutal",
+  "nullopt": true,
+  "$fileid": 4778
+}
+,
+
+{
+  "baseModel": 6815,
+  "modelTranslate_1": -9,
+  "model_zoom": 1700,
+  "rotation_1": 116,
+  "rotation_0": 324,
+  "members": true,
+  "dummyItem": 2,
+  "stackable_1": true,
+  "color_replacements": [[4771, 7582], [926, 127], [61, 33]],
+  "nullopt": true,
+  "$fileid": 4779
+}
+,
+
+{
+  "baseModel": 6816,
+  "modelTranslate_1": -9,
+  "model_zoom": 1700,
+  "rotation_1": 116,
+  "rotation_0": 324,
+  "members": true,
+  "dummyItem": 2,
+  "stackable_1": true,
+  "color_replacements": [[4771, 7582], [926, 127], [61, 33]],
+  "nullopt": true,
+  "$fileid": 4780
+}
+,
+
+{
+  "baseModel": 6817,
+  "modelTranslate_1": -9,
+  "model_zoom": 1700,
+  "rotation_1": 116,
+  "rotation_0": 324,
+  "members": true,
+  "dummyItem": 2,
+  "stackable_1": true,
+  "color_replacements": [[4771, 7582], [926, 127], [61, 33]],
+  "nullopt": true,
+  "$fileid": 4781
+}
+,
+
+{
+  "baseModel": 6818,
+  "modelTranslate_1": -9,
+  "model_zoom": 1700,
+  "rotation_1": 116,
+  "rotation_0": 324,
+  "members": true,
+  "dummyItem": 2,
+  "stackable_1": true,
+  "color_replacements": [[4771, 7582], [926, 127], [61, 33]],
+  "nullopt": true,
+  "$fileid": 4782
+}
+,
+
+{
+  "baseModel": 6814,
+  "modelTranslate_1": -9,
+  "model_zoom": 1700,
+  "rotation_1": 116,
+  "rotation_0": 324,
+  "members": true,
+  "stackable_1": true,
+  "stack_info_0": [4784, 2],
+  "stack_info_1": [4785, 3],
+  "stack_info_2": [4786, 4],
+  "stack_info_3": [4787, 5],
+  "widget_actions_1": "Wield",
+  "value": 20,
+  "tradeable": true,
+  "color_replacements": [[4771, 7582], [926, 127]],
+  "name": "Steel brutal",
+  "nullopt": true,
+  "$fileid": 4783
+}
+,
+
+{
+  "baseModel": 6815,
+  "modelTranslate_1": -9,
+  "model_zoom": 1700,
+  "rotation_1": 116,
+  "rotation_0": 324,
+  "members": true,
+  "stackable_1": true,
+  "dummyItem": 2,
+  "color_replacements": [[4771, 7582], [926, 127]],
+  "nullopt": true,
+  "$fileid": 4784
+}
+,
+
+{
+  "baseModel": 6816,
+  "modelTranslate_1": -9,
+  "model_zoom": 1700,
+  "rotation_1": 116,
+  "rotation_0": 324,
+  "members": true,
+  "stackable_1": true,
+  "dummyItem": 2,
+  "color_replacements": [[4771, 7582], [926, 127]],
+  "nullopt": true,
+  "$fileid": 4785
+}
+,
+
+{
+  "baseModel": 6817,
+  "modelTranslate_1": -9,
+  "model_zoom": 1700,
+  "rotation_1": 116,
+  "rotation_0": 324,
+  "members": true,
+  "stackable_1": true,
+  "dummyItem": 2,
+  "color_replacements": [[4771, 7582], [926, 127]],
+  "nullopt": true,
+  "$fileid": 4786
+}
+,
+
+{
+  "baseModel": 6818,
+  "modelTranslate_1": -9,
+  "model_zoom": 1700,
+  "rotation_1": 116,
+  "rotation_0": 324,
+  "members": true,
+  "stackable_1": true,
+  "dummyItem": 2,
+  "color_replacements": [[4771, 7582], [926, 127]],
+  "nullopt": true,
+  "$fileid": 4787
+}
+,
+
+{
+  "baseModel": 6814,
+  "modelTranslate_1": -9,
+  "model_zoom": 1700,
+  "rotation_1": 116,
+  "rotation_0": 324,
+  "members": true,
+  "stackable_1": true,
+  "stack_info_0": [4789, 2],
+  "stack_info_1": [4790, 3],
+  "stack_info_2": [4791, 4],
+  "stack_info_3": [4792, 5],
+  "widget_actions_1": "Wield",
+  "value": 35,
+  "tradeable": true,
+  "color_replacements": [[4771, 7582], [926, 127], [61, 32906]],
+  "name": "Black brutal",
+  "nullopt": true,
+  "$fileid": 4788
+}
+,
+
+{
+  "baseModel": 6815,
+  "modelTranslate_1": -9,
+  "model_zoom": 1700,
+  "rotation_1": 116,
+  "rotation_0": 324,
+  "members": true,
+  "dummyItem": 2,
+  "stackable_1": true,
+  "color_replacements": [[4771, 7582], [926, 127], [61, 32906]],
+  "nullopt": true,
+  "$fileid": 4789
+}
+,
+
+{
+  "baseModel": 6816,
+  "modelTranslate_1": -9,
+  "model_zoom": 1700,
+  "rotation_1": 116,
+  "rotation_0": 324,
+  "members": true,
+  "dummyItem": 2,
+  "stackable_1": true,
+  "color_replacements": [[4771, 7582], [926, 127], [61, 32906]],
+  "nullopt": true,
+  "$fileid": 4790
+}
+,
+
+{
+  "baseModel": 6817,
+  "modelTranslate_1": -9,
+  "model_zoom": 1700,
+  "rotation_1": 116,
+  "rotation_0": 324,
+  "members": true,
+  "dummyItem": 2,
+  "stackable_1": true,
+  "color_replacements": [[4771, 7582], [926, 127], [61, 32906]],
+  "nullopt": true,
+  "$fileid": 4791
+}
+,
+
+{
+  "baseModel": 6818,
+  "modelTranslate_1": -9,
+  "model_zoom": 1700,
+  "rotation_1": 116,
+  "rotation_0": 324,
+  "members": true,
+  "dummyItem": 2,
+  "stackable_1": true,
+  "color_replacements": [[4771, 7582], [926, 127], [61, 32906]],
+  "nullopt": true,
+  "$fileid": 4792
+}
+,
+
+{
+  "baseModel": 6814,
+  "modelTranslate_1": -9,
+  "model_zoom": 1700,
+  "rotation_1": 116,
+  "rotation_0": 324,
+  "members": true,
+  "stackable_1": true,
+  "stack_info_0": [4794, 2],
+  "stack_info_1": [4795, 3],
+  "stack_info_2": [4796, 4],
+  "stack_info_3": [4797, 5],
+  "widget_actions_1": "Wield",
+  "value": 50,
+  "tradeable": true,
+  "color_replacements": [[4771, 7582], [926, 127], [61, 43297]],
+  "name": "Mithril brutal",
+  "nullopt": true,
+  "$fileid": 4793
+}
+,
+
+{
+  "baseModel": 6815,
+  "modelTranslate_1": -9,
+  "model_zoom": 1700,
+  "rotation_1": 116,
+  "rotation_0": 324,
+  "members": true,
+  "dummyItem": 2,
+  "stackable_1": true,
+  "color_replacements": [[4771, 7582], [926, 127], [61, 43297]],
+  "nullopt": true,
+  "$fileid": 4794
+}
+,
+
+{
+  "baseModel": 6816,
+  "modelTranslate_1": -9,
+  "model_zoom": 1700,
+  "rotation_1": 116,
+  "rotation_0": 324,
+  "members": true,
+  "dummyItem": 2,
+  "stackable_1": true,
+  "color_replacements": [[4771, 7582], [926, 127], [61, 43297]],
+  "nullopt": true,
+  "$fileid": 4795
+}
+,
+
+{
+  "baseModel": 6817,
+  "modelTranslate_1": -9,
+  "model_zoom": 1700,
+  "rotation_1": 116,
+  "rotation_0": 324,
+  "members": true,
+  "dummyItem": 2,
+  "stackable_1": true,
+  "color_replacements": [[4771, 7582], [926, 127], [61, 43297]],
+  "nullopt": true,
+  "$fileid": 4796
+}
+,
+
+{
+  "baseModel": 6818,
+  "modelTranslate_1": -9,
+  "model_zoom": 1700,
+  "rotation_1": 116,
+  "rotation_0": 324,
+  "members": true,
+  "dummyItem": 2,
+  "stackable_1": true,
+  "color_replacements": [[4771, 7582], [926, 127], [61, 43297]],
+  "nullopt": true,
+  "$fileid": 4797
+}
+,
+
+{
+  "baseModel": 6814,
+  "modelTranslate_1": -9,
+  "model_zoom": 1700,
+  "rotation_1": 116,
+  "rotation_0": 324,
+  "members": true,
+  "stackable_1": true,
+  "stack_info_0": [4799, 2],
+  "stack_info_1": [4800, 3],
+  "stack_info_2": [4801, 4],
+  "stack_info_3": [4802, 5],
+  "widget_actions_1": "Wield",
+  "value": 95,
+  "tradeable": true,
+  "color_replacements": [[4771, 7582], [926, 127], [61, 21662]],
+  "name": "Adamant brutal",
+  "nullopt": true,
+  "$fileid": 4798
+}
+,
+
+{
+  "baseModel": 6815,
+  "modelTranslate_1": -9,
+  "model_zoom": 1700,
+  "rotation_1": 116,
+  "rotation_0": 324,
+  "members": true,
+  "dummyItem": 2,
+  "stackable_1": true,
+  "color_replacements": [[4771, 7582], [926, 127], [61, 21662]],
+  "nullopt": true,
+  "$fileid": 4799
+}
+,
+
+{
+  "baseModel": 6816,
+  "modelTranslate_1": -9,
+  "model_zoom": 1700,
+  "rotation_1": 116,
+  "rotation_0": 324,
+  "members": true,
+  "dummyItem": 2,
+  "stackable_1": true,
+  "color_replacements": [[4771, 7582], [926, 127], [61, 21662]],
+  "nullopt": true,
+  "$fileid": 4800
+}
+,
+
+{
+  "baseModel": 6817,
+  "modelTranslate_1": -9,
+  "model_zoom": 1700,
+  "rotation_1": 116,
+  "rotation_0": 324,
+  "members": true,
+  "dummyItem": 2,
+  "stackable_1": true,
+  "color_replacements": [[4771, 7582], [926, 127], [61, 21662]],
+  "nullopt": true,
+  "$fileid": 4801
+}
+,
+
+{
+  "baseModel": 6818,
+  "modelTranslate_1": -9,
+  "model_zoom": 1700,
+  "rotation_1": 116,
+  "rotation_0": 324,
+  "members": true,
+  "dummyItem": 2,
+  "stackable_1": true,
+  "color_replacements": [[4771, 7582], [926, 127], [61, 21662]],
+  "nullopt": true,
+  "$fileid": 4802
+}
+,
+
+{
+  "baseModel": 6814,
+  "modelTranslate_1": -9,
+  "model_zoom": 1700,
+  "rotation_1": 116,
+  "rotation_0": 324,
+  "members": true,
+  "stackable_1": true,
+  "stack_info_0": [4804, 2],
+  "stack_info_1": [4805, 3],
+  "stack_info_2": [4806, 4],
+  "stack_info_3": [4807, 5],
+  "widget_actions_1": "Wield",
+  "value": 450,
+  "tradeable": true,
+  "color_replacements": [[4771, 7582], [926, 127], [61, 36133]],
+  "name": "Rune brutal",
+  "nullopt": true,
+  "$fileid": 4803
+}
+,
+
+{
+  "baseModel": 6815,
+  "modelTranslate_1": -9,
+  "model_zoom": 1700,
+  "rotation_1": 116,
+  "rotation_0": 324,
+  "members": true,
+  "dummyItem": 2,
+  "stackable_1": true,
+  "color_replacements": [[4771, 7582], [926, 127], [61, 36133]],
+  "nullopt": true,
+  "$fileid": 4804
+}
+,
+
+{
+  "baseModel": 6816,
+  "modelTranslate_1": -9,
+  "model_zoom": 1700,
+  "rotation_1": 116,
+  "rotation_0": 324,
+  "members": true,
+  "dummyItem": 2,
+  "stackable_1": true,
+  "color_replacements": [[4771, 7582], [926, 127], [61, 36133]],
+  "nullopt": true,
+  "$fileid": 4805
+}
+,
+
+{
+  "baseModel": 6817,
+  "modelTranslate_1": -9,
+  "model_zoom": 1700,
+  "rotation_1": 116,
+  "rotation_0": 324,
+  "members": true,
+  "dummyItem": 2,
+  "stackable_1": true,
+  "color_replacements": [[4771, 7582], [926, 127], [61, 36133]],
+  "nullopt": true,
+  "$fileid": 4806
+}
+,
+
+{
+  "baseModel": 6818,
+  "modelTranslate_1": -9,
+  "model_zoom": 1700,
+  "rotation_1": 116,
+  "rotation_0": 324,
+  "members": true,
+  "dummyItem": 2,
+  "stackable_1": true,
+  "color_replacements": [[4771, 7582], [926, 127], [61, 36133]],
+  "nullopt": true,
+  "$fileid": 4807
+}
+,
+
+{
+  "baseModel": 2586,
+  "modelTranslate_0": -2,
+  "modelTranslate_1": 7,
+  "model_zoom": 720,
+  "rotation_1": 1028,
+  "rotation_2": 988,
+  "rotation_0": 1484,
+  "members": true,
+  "widget_actions_0": "Look-at",
+  "color_replacements": [[478, 43080], [931, 43026], [918, 43906]],
+  "name": "Black prism",
+  "nullopt": true,
+  "$fileid": 4808
+}
+,
+
+{
+  "baseModel": 2838,
+  "members": true,
+  "maleModels_0": {"id": 532, "type": 0},
+  "femaleModels_0": {"id": 532, "type": 0},
+  "model_zoom": 940,
+  "rotation_1": 112,
+  "rotation_0": 248,
+  "widget_actions_0": "Read",
+  "color_replacements": [
+    [0, 37805],
+    [898, 18652],
+    [900, 123],
+    [902, 902],
+    [904, 904],
+    [5351, 123]
+  ],
+  "name": "Torn page",
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 4809
+}
+,
+
+{
+  "baseModel": 6778,
+  "modelTranslate_0": -2,
+  "modelTranslate_1": 31,
+  "rotation_1": 500,
+  "rotation_0": 340,
+  "widget_actions_0": "Open",
+  "members": true,
+  "name": "Ruined backpack",
+  "nullopt": true,
+  "$fileid": 4810
+}
+,
+
+{
+  "baseModel": 6776,
+  "modelTranslate_0": -9,
+  "modelTranslate_1": 2,
+  "model_zoom": 940,
+  "rotation_1": 2036,
+  "rotation_0": 128,
+  "members": true,
+  "widget_actions_0": "Look-at",
+  "name": "Dragon inn tankard",
+  "nullopt": true,
+  "$fileid": 4811
+}
+,
+
+{
+  "baseModel": 2768,
+  "modelTranslate_0": -2,
+  "modelTranslate_1": 3,
+  "rotation_1": 660,
+  "rotation_2": 4,
+  "rotation_0": 284,
+  "widget_actions_0": "Bury",
+  "members": true,
+  "tradeable": true,
+  "color_replacements": [[127, 8514]],
+  "name": "Zogre bones",
+  "noteData": 4813,
+  "nullopt": true,
+  "$fileid": 4812
+}
+,
+
+{"noteData": 4812, "noteTemplate": 799, "nullopt": true, "$fileid": 4813}
+,
+
+{
+  "baseModel": 2578,
+  "maleModels_0": {"id": 532, "type": 0},
+  "femaleModels_0": {"id": 532, "type": 0},
+  "modelTranslate_1": 4,
+  "model_zoom": 1690,
+  "rotation_1": 88,
+  "rotation_0": 508,
+  "members": true,
+  "color_replacements": [
+    [5353, 90],
+    [48359, 33],
+    [47331, 16],
+    [47582, 70],
+    [5720, 94],
+    [6042, 82]
+  ],
+  "name": "Sithik portrait",
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 4814
+}
+,
+
+{
+  "baseModel": 2578,
+  "maleModels_0": {"id": 532, "type": 0},
+  "femaleModels_0": {"id": 532, "type": 0},
+  "modelTranslate_1": 4,
+  "model_zoom": 1690,
+  "rotation_1": 88,
+  "rotation_0": 508,
+  "members": true,
+  "color_replacements": [
+    [5353, 33],
+    [48359, 90],
+    [47331, 16],
+    [47582, 70],
+    [5720, 82],
+    [6042, 74]
+  ],
+  "name": "Sithik portrait",
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 4815
+}
+,
+
+{
+  "baseModel": 2578,
+  "maleModels_0": {"id": 532, "type": 0},
+  "femaleModels_0": {"id": 532, "type": 0},
+  "modelTranslate_1": 4,
+  "model_zoom": 1690,
+  "rotation_1": 1972,
+  "rotation_0": 508,
+  "members": true,
+  "widget_actions_0": "Look-at",
+  "color_replacements": [
+    [5353, 90],
+    [48359, 33],
+    [47331, 16],
+    [47582, 70],
+    [5720, 94],
+    [6042, 82]
+  ],
+  "name": "Signed portrait",
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 4816
+}
+,
+
+{
+  "baseModel": 2543,
+  "maleModels_0": {"id": 556, "type": 0},
+  "femaleModels_0": {"id": 556, "type": 0},
+  "modelTranslate_0": 1,
+  "modelTranslate_1": -21,
+  "model_zoom": 830,
+  "rotation_1": 116,
+  "rotation_0": 244,
+  "widget_actions_0": "Read",
+  "members": true,
+  "color_replacements": [[11177, 11187], [5018, 7077], [61, 24109]],
+  "name": "Book of portraiture",
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 4817
+}
+,
+
+{
+  "baseModel": 6777,
+  "modelTranslate_0": 11,
+  "modelTranslate_1": -5,
+  "model_zoom": 1430,
+  "rotation_1": 88,
+  "rotation_0": 116,
+  "members": true,
+  "name": "Ogre artefact",
+  "nullopt": true,
+  "$fileid": 4818
+}
+,
+
+{
+  "baseModel": 2580,
+  "value": 7,
+  "modelTranslate_0": 3,
+  "modelTranslate_1": 4,
+  "model_zoom": 650,
+  "rotation_1": 1984,
+  "rotation_0": 308,
+  "members": true,
+  "stackable_1": true,
+  "tradeable": true,
+  "color_replacements": [[28, 5652]],
+  "name": "Bronze nails",
+  "nullopt": true,
+  "$fileid": 4819
+}
+,
+
+{
+  "baseModel": 2580,
+  "value": 33,
+  "modelTranslate_0": 3,
+  "modelTranslate_1": 4,
+  "model_zoom": 650,
+  "rotation_1": 1984,
+  "rotation_0": 308,
+  "members": true,
+  "stackable_1": true,
+  "tradeable": true,
+  "color_replacements": [[28, 20]],
+  "name": "Iron nails",
+  "nullopt": true,
+  "$fileid": 4820
+}
+,
+
+{
+  "baseModel": 2580,
+  "value": 12,
+  "modelTranslate_0": 3,
+  "modelTranslate_1": 4,
+  "model_zoom": 650,
+  "rotation_1": 1984,
+  "rotation_0": 308,
+  "members": true,
+  "stackable_1": true,
+  "tradeable": true,
+  "color_replacements": [[28, 32906]],
+  "name": "Black nails",
+  "nullopt": true,
+  "$fileid": 4821
+}
+,
+
+{
+  "baseModel": 2580,
+  "value": 18,
+  "modelTranslate_0": 3,
+  "modelTranslate_1": 4,
+  "model_zoom": 650,
+  "rotation_1": 1984,
+  "rotation_0": 308,
+  "members": true,
+  "stackable_1": true,
+  "tradeable": true,
+  "color_replacements": [[28, 43297]],
+  "name": "Mithril nails",
+  "nullopt": true,
+  "$fileid": 4822
+}
+,
+
+{
+  "baseModel": 2580,
+  "value": 45,
+  "modelTranslate_0": 3,
+  "modelTranslate_1": 4,
+  "model_zoom": 650,
+  "rotation_1": 1984,
+  "rotation_0": 308,
+  "members": true,
+  "stackable_1": true,
+  "tradeable": true,
+  "color_replacements": [[28, 21662]],
+  "name": "Adamantite nails",
+  "nullopt": true,
+  "$fileid": 4823
+}
+,
+
+{
+  "baseModel": 2580,
+  "value": 220,
+  "modelTranslate_0": 3,
+  "modelTranslate_1": 4,
+  "model_zoom": 650,
+  "rotation_1": 1984,
+  "rotation_0": 308,
+  "members": true,
+  "stackable_1": true,
+  "tradeable": true,
+  "color_replacements": [[28, 36133]],
+  "name": "Rune nails",
+  "nullopt": true,
+  "$fileid": 4824
+}
+,
+
+{
+  "baseModel": 6781,
+  "value": 90,
+  "model_zoom": 2070,
+  "rotation_1": 48,
+  "rotation_0": 232,
+  "members": true,
+  "tradeable": true,
+  "color_replacements": [[9538, 61]],
+  "name": "Unstrung comp bow",
+  "noteData": 4826,
+  "nullopt": true,
+  "$fileid": 4825
+}
+,
+
+{"noteData": 4825, "noteTemplate": 799, "nullopt": true, "$fileid": 4826}
+,
+
+{
+  "value": 180,
+  "baseModel": 6780,
+  "model_zoom": 2070,
+  "rotation_1": 48,
+  "rotation_0": 232,
+  "members": true,
+  "maleModels_0": {"id": 6813, "type": 0},
+  "femaleModels_0": {"id": 6813, "type": 0},
+  "widget_actions_1": "Wield",
+  "widget_actions_2": "Check kills",
+  "tradeable": true,
+  "name": "Comp ogre bow",
+  "female_translate": [3, 245, 6],
+  "noteData": 4828,
+  "nullopt": true,
+  "$fileid": 4827
+}
+,
+
+{"noteData": 4827, "noteTemplate": 799, "nullopt": true, "$fileid": 4828}
+,
+
+{
+  "baseModel": 2509,
+  "maleModels_0": {"id": 556, "type": 0},
+  "femaleModels_0": {"id": 556, "type": 0},
+  "modelTranslate_1": 13,
+  "model_zoom": 1220,
+  "rotation_1": 112,
+  "rotation_0": 292,
+  "widget_actions_0": "Read",
+  "members": true,
+  "color_replacements": [[5018, 60985]],
+  "name": "Book of 'h.a.m'",
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 4829
+}
+,
+
+{
+  "baseModel": 6779,
+  "modelTranslate_1": -17,
+  "rotation_1": 104,
+  "rotation_0": 224,
+  "widget_actions_0": "Bury",
+  "members": true,
+  "tradeable": true,
+  "color_replacements": [[9765, 8094], [7370, 7370]],
+  "name": "Fayrg bones",
+  "noteData": 4831,
+  "nullopt": true,
+  "$fileid": 4830
+}
+,
+
+{"noteData": 4830, "noteTemplate": 799, "nullopt": true, "$fileid": 4831}
+,
+
+{
+  "baseModel": 6779,
+  "modelTranslate_1": -17,
+  "rotation_1": 104,
+  "rotation_0": 224,
+  "widget_actions_0": "Bury",
+  "members": true,
+  "tradeable": true,
+  "color_replacements": [[920, 920], [7370, 13646]],
+  "name": "Raurg bones",
+  "noteData": 4833,
+  "nullopt": true,
+  "$fileid": 4832
+}
+,
+
+{"noteData": 4832, "noteTemplate": 799, "nullopt": true, "$fileid": 4833}
+,
+
+{
+  "baseModel": 6779,
+  "modelTranslate_1": -17,
+  "rotation_1": 104,
+  "rotation_0": 224,
+  "widget_actions_0": "Bury",
+  "members": true,
+  "tradeable": true,
+  "color_replacements": [[9765, 2964], [7370, 13107]],
+  "name": "Ourg bones",
+  "noteData": 4835,
+  "nullopt": true,
+  "$fileid": 4834
+}
+,
+
+{"noteData": 4834, "noteTemplate": 799, "nullopt": true, "$fileid": 4835}
+,
+
+{
+  "baseModel": 2705,
+  "model_zoom": 760,
+  "rotation_1": 1800,
+  "rotation_0": 44,
+  "members": true,
+  "color_replacements": [[61, 19641]],
+  "name": "Strange potion",
+  "nullopt": true,
+  "$fileid": 4836
+}
+,
+
+{
+  "baseModel": 2509,
+  "maleModels_0": {"id": 556, "type": 0},
+  "femaleModels_0": {"id": 556, "type": 0},
+  "modelTranslate_1": 13,
+  "model_zoom": 1220,
+  "rotation_1": 112,
+  "rotation_0": 292,
+  "widget_actions_0": "Read",
+  "members": true,
+  "color_replacements": [[5018, 24627], [11177, 7566], [61, 7566]],
+  "name": "Necromancy book",
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 4837
+}
+,
+
+{
+  "value": 10,
+  "baseModel": 2468,
+  "modelTranslate_0": -1,
+  "modelTranslate_1": -2,
+  "model_zoom": 500,
+  "rotation_1": 1980,
+  "rotation_0": 156,
+  "members": true,
+  "color_replacements": [[8101, 21793]],
+  "name": "Cup of tea",
+  "nullopt": true,
+  "$fileid": 4838
+}
+,
+
+{
+  "value": 1,
+  "members": true,
+  "baseModel": 6782,
+  "modelTranslate_0": -8,
+  "modelTranslate_1": -2,
+  "model_zoom": 860,
+  "rotation_1": 20,
+  "rotation_0": 460,
+  "color_replacements": [[57, 10169], [49, 12217]],
+  "name": "Ogre gate key",
+  "nullopt": true,
+  "$fileid": 4839
+}
+,
+
+{
+  "value": 5,
+  "baseModel": 2697,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1996,
+  "rotation_0": 84,
+  "members": true,
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[61, 5347]],
+  "name": "Rogue's purse potion(unf)",
+  "noteData": 4841,
+  "nullopt": true,
+  "$fileid": 4840
+}
+,
+
+{"noteData": 4840, "noteTemplate": 799, "nullopt": true, "$fileid": 4841}
+,
+
+{
+  "value": 225,
+  "baseModel": 2789,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1996,
+  "rotation_0": 84,
+  "members": true,
+  "widget_actions_0": "Drink",
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[61, 4550]],
+  "name": "Relicym's balm(4)",
+  "noteData": 4843,
+  "nullopt": true,
+  "$fileid": 4842
+}
+,
+
+{"noteData": 4842, "noteTemplate": 799, "nullopt": true, "$fileid": 4843}
+,
+
+{
+  "value": 200,
+  "baseModel": 2697,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1996,
+  "rotation_0": 84,
+  "members": true,
+  "widget_actions_0": "Drink",
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[61, 4550]],
+  "name": "Relicym's balm(3)",
+  "noteData": 4845,
+  "nullopt": true,
+  "$fileid": 4844
+}
+,
+
+{"noteData": 4844, "noteTemplate": 799, "nullopt": true, "$fileid": 4845}
+,
+
+{
+  "value": 150,
+  "baseModel": 2384,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1996,
+  "rotation_0": 84,
+  "members": true,
+  "widget_actions_0": "Drink",
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[61, 4550]],
+  "name": "Relicym's balm(2)",
+  "noteData": 4847,
+  "nullopt": true,
+  "$fileid": 4846
+}
+,
+
+{"noteData": 4846, "noteTemplate": 799, "nullopt": true, "$fileid": 4847}
+,
+
+{
+  "value": 75,
+  "baseModel": 2621,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1996,
+  "rotation_0": 84,
+  "members": true,
+  "widget_actions_0": "Drink",
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[61, 4550]],
+  "name": "Relicym's balm(1)",
+  "noteData": 4849,
+  "nullopt": true,
+  "$fileid": 4848
+}
+,
+
+{"noteData": 4848, "noteTemplate": 799, "nullopt": true, "$fileid": 4849}
+,
+
+{
+  "value": 100,
+  "members": true,
+  "baseModel": 6782,
+  "modelTranslate_0": -8,
+  "modelTranslate_1": -2,
+  "model_zoom": 860,
+  "rotation_1": 20,
+  "rotation_0": 460,
+  "tradeable": true,
+  "color_replacements": [[57, 9125], [49, 9125]],
+  "name": "Ogre coffin key",
+  "noteData": 4851,
+  "nullopt": true,
+  "$fileid": 4850
+}
+,
+
+{"noteData": 4850, "noteTemplate": 799, "nullopt": true, "$fileid": 4851}
+,
+
+{
+  "baseModel": 2406,
+  "modelTranslate_0": -1,
+  "modelTranslate_1": 2,
+  "model_zoom": 990,
+  "rotation_1": 8,
+  "rotation_0": 112,
+  "members": true,
+  "widget_actions_3": "Empty",
+  "color_replacements": [[127, 74]],
+  "name": "Bonemeal",
+  "nullopt": true,
+  "$fileid": 4852
+}
+,
+
+{
+  "baseModel": 2406,
+  "modelTranslate_0": -1,
+  "modelTranslate_1": 2,
+  "model_zoom": 990,
+  "rotation_1": 8,
+  "rotation_0": 112,
+  "members": true,
+  "widget_actions_3": "Empty",
+  "color_replacements": [[127, 74]],
+  "name": "Bonemeal",
+  "nullopt": true,
+  "$fileid": 4853
+}
+,
+
+{
+  "baseModel": 2406,
+  "modelTranslate_0": -1,
+  "modelTranslate_1": 2,
+  "model_zoom": 990,
+  "rotation_1": 8,
+  "rotation_0": 112,
+  "members": true,
+  "widget_actions_3": "Empty",
+  "color_replacements": [[127, 74]],
+  "name": "Bonemeal",
+  "nullopt": true,
+  "$fileid": 4854
+}
+,
+
+{
+  "baseModel": 2406,
+  "modelTranslate_0": -1,
+  "modelTranslate_1": 2,
+  "model_zoom": 990,
+  "rotation_1": 8,
+  "rotation_0": 112,
+  "members": true,
+  "widget_actions_3": "Empty",
+  "color_replacements": [[127, 74]],
+  "name": "Bonemeal",
+  "nullopt": true,
+  "$fileid": 4855
+}
+,
+
+{
+  "members": true,
+  "value": 13000,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 5430, "type": 0},
+  "femaleModels_0": {"id": 5435, "type": 0},
+  "maleHeads_0": 38093,
+  "femaleHeads_0": 39128,
+  "model_zoom": 730,
+  "rotation_1": 2036,
+  "baseModel": 5419,
+  "color_replacements": [[8741, 10512]],
+  "name": "Ahrim's hood 100",
+  "nullopt": true,
+  "$fileid": 4856
+}
+,
+
+{
+  "members": true,
+  "value": 13000,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 5430, "type": 0},
+  "femaleModels_0": {"id": 5435, "type": 0},
+  "maleHeads_0": 38093,
+  "femaleHeads_0": 39128,
+  "model_zoom": 730,
+  "rotation_1": 2036,
+  "baseModel": 5419,
+  "color_replacements": [[8741, 10512]],
+  "name": "Ahrim's hood 75",
+  "nullopt": true,
+  "$fileid": 4857
+}
+,
+
+{
+  "members": true,
+  "value": 13000,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 5430, "type": 0},
+  "femaleModels_0": {"id": 5435, "type": 0},
+  "maleHeads_0": 38093,
+  "femaleHeads_0": 39128,
+  "model_zoom": 730,
+  "rotation_1": 2036,
+  "baseModel": 5419,
+  "color_replacements": [[8741, 10512]],
+  "name": "Ahrim's hood 50",
+  "nullopt": true,
+  "$fileid": 4858
+}
+,
+
+{
+  "members": true,
+  "value": 13000,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 5430, "type": 0},
+  "femaleModels_0": {"id": 5435, "type": 0},
+  "maleHeads_0": 38093,
+  "femaleHeads_0": 39128,
+  "model_zoom": 730,
+  "rotation_1": 2036,
+  "baseModel": 5419,
+  "color_replacements": [[8741, 10512]],
+  "name": "Ahrim's hood 25",
+  "nullopt": true,
+  "$fileid": 4859
+}
+,
+
+{
+  "members": true,
+  "value": 13000,
+  "maleModels_0": {"id": 5430, "type": 0},
+  "femaleModels_0": {"id": 5435, "type": 0},
+  "maleHeads_0": 38093,
+  "femaleHeads_0": 39128,
+  "model_zoom": 730,
+  "rotation_1": 2036,
+  "baseModel": 6844,
+  "tradeable": true,
+  "color_replacements": [[8741, 10512]],
+  "name": "Ahrim's hood 0",
+  "noteData": 4861,
+  "nullopt": true,
+  "$fileid": 4860
+}
+,
+
+{"noteData": 4860, "noteTemplate": 799, "nullopt": true, "$fileid": 4861}
+,
+
+{
+  "members": true,
+  "value": 85000,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 6706, "type": 0},
+  "femaleModels_0": {"id": 6706, "type": 0},
+  "modelTranslate_0": -4,
+  "modelTranslate_1": -19,
+  "model_zoom": 1550,
+  "rotation_1": 116,
+  "rotation_0": 224,
+  "baseModel": 6590,
+  "color_replacements": [
+    [14503, 10512],
+    [14499, 10508],
+    [14494, 10760],
+    [14490, 11140]
+  ],
+  "name": "Ahrim's staff 100",
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 4862
+}
+,
+
+{
+  "members": true,
+  "value": 85000,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 6706, "type": 0},
+  "femaleModels_0": {"id": 6706, "type": 0},
+  "modelTranslate_0": -4,
+  "modelTranslate_1": -19,
+  "model_zoom": 1550,
+  "rotation_1": 116,
+  "rotation_0": 224,
+  "baseModel": 6590,
+  "color_replacements": [
+    [14503, 10512],
+    [14499, 10508],
+    [14494, 10760],
+    [14490, 11140]
+  ],
+  "name": "Ahrim's staff 75",
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 4863
+}]}

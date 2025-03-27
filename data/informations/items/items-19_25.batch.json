@@ -1,0 +1,3584 @@
+{"$schema":".schema-items_batch.json","files":[
+
+{
+  "baseModel": 8990,
+  "maleModels_0": {"id": 6130, "type": 0},
+  "femaleModels_0": {"id": 9021, "type": 0},
+  "maleHeads_0": 39591,
+  "femaleHeads_0": 39150,
+  "widget_actions_1": "Wear",
+  "modelTranslate_1": 6,
+  "model_zoom": 930,
+  "rotation_0": 588,
+  "members": true,
+  "value": 35,
+  "tradeable": true,
+  "color_replacements": [[49054, 64431]],
+  "name": "Menap headgear",
+  "noteData": 6401,
+  "nullopt": true,
+  "$fileid": 6400
+}
+,
+
+{"noteData": 6400, "noteTemplate": 799, "nullopt": true, "$fileid": 6401}
+,
+
+{
+  "baseModel": 8993,
+  "maleModels_0": {"id": 9018, "type": 0},
+  "maleModels_1": 151,
+  "femaleModels_0": {"id": 9026, "type": 0},
+  "femaleModels_1": 332,
+  "widget_actions_1": "Wear",
+  "modelTranslate_1": 2,
+  "model_zoom": 1050,
+  "rotation_1": 1024,
+  "rotation_0": 456,
+  "members": true,
+  "value": 20,
+  "tradeable": true,
+  "color_replacements": [[8741, 64431]],
+  "name": "Menaphite top",
+  "noteData": 6403,
+  "nullopt": true,
+  "$fileid": 6402
+}
+,
+
+{"noteData": 6402, "noteTemplate": 799, "nullopt": true, "$fileid": 6403}
+,
+
+{
+  "baseModel": 8991,
+  "maleModels_0": {"id": 6132, "type": 0},
+  "femaleModels_0": {"id": 9024, "type": 0},
+  "widget_actions_1": "Wear",
+  "modelTranslate_0": 4,
+  "modelTranslate_1": -23,
+  "model_zoom": 1360,
+  "rotation_0": 240,
+  "members": true,
+  "value": 40,
+  "tradeable": true,
+  "color_replacements": [
+    [61, 43453],
+    [8741, 64431],
+    [25238, 8138],
+    [49054, 64431],
+    [8741, 64431]
+  ],
+  "name": "Menaphite robe",
+  "noteData": 6405,
+  "nullopt": true,
+  "$fileid": 6404
+}
+,
+
+{"noteData": 6404, "noteTemplate": 799, "nullopt": true, "$fileid": 6405}
+,
+
+{
+  "baseModel": 2542,
+  "maleModels_0": {"id": 6133, "type": 0},
+  "femaleModels_0": {"id": 430, "type": 0},
+  "widget_actions_1": "Wear",
+  "modelTranslate_0": 5,
+  "modelTranslate_1": 5,
+  "model_zoom": 1100,
+  "rotation_0": 620,
+  "members": true,
+  "value": 20,
+  "tradeable": true,
+  "color_replacements": [
+    [61, 64431],
+    [8741, 64431],
+    [25238, 8138],
+    [49054, 64431]
+  ],
+  "name": "Menap action kilt",
+  "noteData": 6407,
+  "nullopt": true,
+  "$fileid": 6406
+}
+,
+
+{"noteData": 6406, "noteTemplate": 799, "nullopt": true, "$fileid": 6407}
+,
+
+{
+  "baseModel": 8995,
+  "maleModels_0": {"id": 8973, "type": 0},
+  "femaleModels_0": {"id": 8973, "type": 0},
+  "widget_actions_1": "Wield",
+  "modelTranslate_0": 6,
+  "model_zoom": 700,
+  "rotation_1": 468,
+  "rotation_0": 372,
+  "members": true,
+  "value": 400,
+  "tradeable": true,
+  "name": "Oak blackjack(o)",
+  "female_translate": [3, 245, 6],
+  "noteData": 6409,
+  "nullopt": true,
+  "$fileid": 6408
+}
+,
+
+{"noteData": 6408, "noteTemplate": 799, "nullopt": true, "$fileid": 6409}
+,
+
+{
+  "baseModel": 8996,
+  "maleModels_0": {"id": 8974, "type": 0},
+  "femaleModels_0": {"id": 8974, "type": 0},
+  "widget_actions_1": "Wield",
+  "modelTranslate_0": 6,
+  "model_zoom": 700,
+  "rotation_1": 468,
+  "rotation_0": 372,
+  "members": true,
+  "value": 400,
+  "tradeable": true,
+  "name": "Oak blackjack(d)",
+  "female_translate": [3, 245, 6],
+  "noteData": 6411,
+  "nullopt": true,
+  "$fileid": 6410
+}
+,
+
+{"noteData": 6410, "noteTemplate": 799, "nullopt": true, "$fileid": 6411}
+,
+
+{
+  "baseModel": 8995,
+  "maleModels_0": {"id": 8973, "type": 0},
+  "femaleModels_0": {"id": 8973, "type": 0},
+  "widget_actions_1": "Wield",
+  "modelTranslate_0": 6,
+  "model_zoom": 700,
+  "rotation_1": 468,
+  "rotation_0": 372,
+  "members": true,
+  "value": 800,
+  "tradeable": true,
+  "color_replacements": [[8111, 8101]],
+  "name": "Willow blackjack(o)",
+  "female_translate": [3, 245, 6],
+  "noteData": 6413,
+  "nullopt": true,
+  "$fileid": 6412
+}
+,
+
+{"noteData": 6412, "noteTemplate": 799, "nullopt": true, "$fileid": 6413}
+,
+
+{
+  "baseModel": 8996,
+  "maleModels_0": {"id": 8974, "type": 0},
+  "femaleModels_0": {"id": 8974, "type": 0},
+  "widget_actions_1": "Wield",
+  "modelTranslate_0": 6,
+  "model_zoom": 700,
+  "rotation_1": 468,
+  "rotation_0": 372,
+  "members": true,
+  "value": 800,
+  "tradeable": true,
+  "color_replacements": [[8111, 8101]],
+  "name": "Willow blackjack(d)",
+  "female_translate": [3, 245, 6],
+  "noteData": 6415,
+  "nullopt": true,
+  "$fileid": 6414
+}
+,
+
+{"noteData": 6414, "noteTemplate": 799, "nullopt": true, "$fileid": 6415}
+,
+
+{
+  "baseModel": 6103,
+  "maleModels_0": {"id": 6099, "type": 0},
+  "femaleModels_0": {"id": 6099, "type": 0},
+  "widget_actions_1": "Wield",
+  "modelTranslate_0": 6,
+  "model_zoom": 700,
+  "rotation_1": 468,
+  "rotation_0": 372,
+  "members": true,
+  "value": 1200,
+  "tradeable": true,
+  "color_replacements": [[8111, 5960]],
+  "name": "Maple blackjack",
+  "female_translate": [3, 245, 6],
+  "noteData": 6417,
+  "nullopt": true,
+  "$fileid": 6416
+}
+,
+
+{"noteData": 6416, "noteTemplate": 799, "nullopt": true, "$fileid": 6417}
+,
+
+{
+  "baseModel": 8995,
+  "maleModels_0": {"id": 8973, "type": 0},
+  "femaleModels_0": {"id": 8973, "type": 0},
+  "widget_actions_1": "Wield",
+  "modelTranslate_0": 6,
+  "model_zoom": 700,
+  "rotation_1": 468,
+  "rotation_0": 372,
+  "members": true,
+  "value": 1600,
+  "tradeable": true,
+  "color_replacements": [[8111, 5960]],
+  "name": "Maple blackjack(o)",
+  "female_translate": [3, 245, 6],
+  "noteData": 6419,
+  "nullopt": true,
+  "$fileid": 6418
+}
+,
+
+{"noteData": 6418, "noteTemplate": 799, "nullopt": true, "$fileid": 6419}
+,
+
+{
+  "baseModel": 8996,
+  "maleModels_0": {"id": 8974, "type": 0},
+  "femaleModels_0": {"id": 8974, "type": 0},
+  "widget_actions_1": "Wield",
+  "modelTranslate_0": 6,
+  "model_zoom": 700,
+  "rotation_1": 468,
+  "rotation_0": 372,
+  "members": true,
+  "value": 1600,
+  "tradeable": true,
+  "color_replacements": [[8111, 5960]],
+  "name": "Maple blackjack(d)",
+  "female_translate": [3, 245, 6],
+  "noteData": 6421,
+  "nullopt": true,
+  "$fileid": 6420
+}
+,
+
+{"noteData": 6420, "noteTemplate": 799, "nullopt": true, "$fileid": 6421}
+,
+
+{
+  "baseModel": 2405,
+  "modelTranslate_1": 1,
+  "model_zoom": 740,
+  "rotation_1": 1012,
+  "rotation_0": 528,
+  "ambiance": 30,
+  "name": "Air rune",
+  "noteData": 6423,
+  "nullopt": true,
+  "$fileid": 6422
+}
+,
+
+{"noteData": 6422, "noteTemplate": 799, "nullopt": true, "$fileid": 6423}
+,
+
+{
+  "baseModel": 2652,
+  "modelTranslate_1": 1,
+  "model_zoom": 740,
+  "rotation_1": 1012,
+  "rotation_0": 528,
+  "ambiance": 30,
+  "name": "Water rune",
+  "noteData": 6425,
+  "nullopt": true,
+  "$fileid": 6424
+}
+,
+
+{"noteData": 6424, "noteTemplate": 799, "nullopt": true, "$fileid": 6425}
+,
+
+{
+  "baseModel": 2737,
+  "modelTranslate_1": 1,
+  "model_zoom": 740,
+  "rotation_1": 1012,
+  "rotation_0": 528,
+  "ambiance": 30,
+  "name": "Earth rune",
+  "noteData": 6427,
+  "nullopt": true,
+  "$fileid": 6426
+}
+,
+
+{"noteData": 6426, "noteTemplate": 799, "nullopt": true, "$fileid": 6427}
+,
+
+{
+  "baseModel": 2399,
+  "modelTranslate_1": 1,
+  "model_zoom": 740,
+  "rotation_1": 1012,
+  "rotation_0": 528,
+  "ambiance": 30,
+  "name": "Fire rune",
+  "noteData": 6429,
+  "nullopt": true,
+  "$fileid": 6428
+}
+,
+
+{"noteData": 6428, "noteTemplate": 799, "nullopt": true, "$fileid": 6429}
+,
+
+{
+  "baseModel": 2707,
+  "modelTranslate_1": 1,
+  "model_zoom": 740,
+  "rotation_1": 1012,
+  "rotation_0": 528,
+  "ambiance": 30,
+  "name": "Chaos rune",
+  "noteData": 6431,
+  "nullopt": true,
+  "$fileid": 6430
+}
+,
+
+{"noteData": 6430, "noteTemplate": 799, "nullopt": true, "$fileid": 6431}
+,
+
+{
+  "baseModel": 2645,
+  "modelTranslate_1": 1,
+  "model_zoom": 740,
+  "rotation_1": 1012,
+  "rotation_0": 528,
+  "ambiance": 30,
+  "name": "Death rune",
+  "noteData": 6433,
+  "nullopt": true,
+  "$fileid": 6432
+}
+,
+
+{"noteData": 6432, "noteTemplate": 799, "nullopt": true, "$fileid": 6433}
+,
+
+{
+  "baseModel": 2382,
+  "modelTranslate_1": 1,
+  "model_zoom": 740,
+  "rotation_1": 1012,
+  "rotation_0": 528,
+  "ambiance": 30,
+  "name": "Law rune",
+  "noteData": 6435,
+  "nullopt": true,
+  "$fileid": 6434
+}
+,
+
+{"noteData": 6434, "noteTemplate": 799, "nullopt": true, "$fileid": 6435}
+,
+
+{
+  "baseModel": 2481,
+  "modelTranslate_1": 1,
+  "model_zoom": 740,
+  "rotation_1": 1012,
+  "rotation_0": 528,
+  "ambiance": 30,
+  "name": "Mind rune",
+  "noteData": 6437,
+  "nullopt": true,
+  "$fileid": 6436
+}
+,
+
+{"noteData": 6436, "noteTemplate": 799, "nullopt": true, "$fileid": 6437}
+,
+
+{
+  "baseModel": 2340,
+  "modelTranslate_1": 1,
+  "model_zoom": 740,
+  "rotation_1": 1012,
+  "rotation_0": 528,
+  "ambiance": 30,
+  "name": "Body rune",
+  "noteData": 6439,
+  "nullopt": true,
+  "$fileid": 6438
+}
+,
+
+{"noteData": 6438, "noteTemplate": 799, "nullopt": true, "$fileid": 6439}
+,
+
+{
+  "dummyItem": 2,
+  "baseModel": 9033,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -29,
+  "model_zoom": 1220,
+  "rotation_1": 100,
+  "rotation_0": 216,
+  "stackable_1": true,
+  "nullopt": true,
+  "$fileid": 6440
+}
+,
+
+{
+  "dummyItem": 2,
+  "baseModel": 9034,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -29,
+  "model_zoom": 1220,
+  "rotation_1": 100,
+  "rotation_0": 216,
+  "stackable_1": true,
+  "nullopt": true,
+  "$fileid": 6441
+}
+,
+
+{
+  "dummyItem": 2,
+  "baseModel": 9035,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -29,
+  "model_zoom": 1220,
+  "rotation_1": 100,
+  "rotation_0": 216,
+  "stackable_1": true,
+  "nullopt": true,
+  "$fileid": 6442
+}
+,
+
+{
+  "dummyItem": 2,
+  "baseModel": 2616,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -29,
+  "model_zoom": 1220,
+  "rotation_1": 100,
+  "rotation_0": 216,
+  "stackable_1": true,
+  "nullopt": true,
+  "$fileid": 6443
+}
+,
+
+{
+  "dummyItem": 2,
+  "baseModel": 9029,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -29,
+  "model_zoom": 1220,
+  "rotation_1": 100,
+  "rotation_0": 216,
+  "stackable_1": true,
+  "nullopt": true,
+  "$fileid": 6444
+}
+,
+
+{
+  "dummyItem": 2,
+  "baseModel": 9030,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -29,
+  "model_zoom": 1220,
+  "rotation_1": 100,
+  "rotation_0": 216,
+  "stackable_1": true,
+  "nullopt": true,
+  "$fileid": 6445
+}
+,
+
+{
+  "dummyItem": 2,
+  "baseModel": 9031,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -29,
+  "model_zoom": 1220,
+  "rotation_1": 100,
+  "rotation_0": 216,
+  "stackable_1": true,
+  "nullopt": true,
+  "$fileid": 6446
+}
+,
+
+{
+  "dummyItem": 2,
+  "baseModel": 2764,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -29,
+  "model_zoom": 1220,
+  "rotation_1": 100,
+  "rotation_0": 216,
+  "stackable_1": true,
+  "nullopt": true,
+  "$fileid": 6447
+}
+,
+
+{
+  "baseModel": 9100,
+  "maleModels_0": {"id": 9101, "type": 0},
+  "femaleModels_0": {"id": 9101, "type": 0},
+  "modelTranslate_0": -1,
+  "modelTranslate_1": 15,
+  "model_zoom": 1650,
+  "rotation_1": 1468,
+  "rotation_0": 304,
+  "value": 3,
+  "members": true,
+  "widget_actions_0": "Empty",
+  "color_replacements": [[61, 5181], [57, 5177], [70, 5190]],
+  "name": "Spadeful of coke",
+  "nullopt": true,
+  "$fileid": 6448
+}
+,
+
+{
+  "dummyItem": 2,
+  "maleModels_0": {"id": 9098, "type": 0},
+  "femaleModels_0": {"id": 9098, "type": 0},
+  "baseModel": 9098,
+  "members": true,
+  "nullopt": true,
+  "$fileid": 6449
+}
+,
+
+{
+  "dummyItem": 2,
+  "widget_actions_0": "Wear",
+  "value": 1,
+  "baseModel": 2521,
+  "modelTranslate_1": 1,
+  "model_zoom": 1940,
+  "rotation_0": 572,
+  "color_replacements": [[25238, 62928]],
+  "nullopt": true,
+  "$fileid": 6450
+}
+,
+
+{
+  "dummyItem": 2,
+  "maleModels_0": {"id": 9099, "type": 0},
+  "femaleModels_0": {"id": 9099, "type": 0},
+  "baseModel": 9099,
+  "members": true,
+  "nullopt": true,
+  "$fileid": 6451
+}
+,
+
+{
+  "dummyItem": 2,
+  "widget_actions_0": "Wear",
+  "value": 1,
+  "baseModel": 2521,
+  "modelTranslate_1": 1,
+  "model_zoom": 1940,
+  "rotation_0": 572,
+  "color_replacements": [[25238, 62928]],
+  "nullopt": true,
+  "$fileid": 6452
+}
+,
+
+{
+  "baseModel": 9116,
+  "modelTranslate_0": -8,
+  "modelTranslate_1": 7,
+  "model_zoom": 1260,
+  "rotation_1": 2008,
+  "rotation_0": 280,
+  "members": true,
+  "widget_actions_4": "Destroy",
+  "stackable_1": true,
+  "stack_info_0": [6480, 2],
+  "stack_info_1": [6481, 3],
+  "stack_info_2": [6482, 4],
+  "stack_info_3": [6483, 5],
+  "color_replacements": [[61879, 9445], [59738, 59503]],
+  "name": "White rose seed",
+  "nullopt": true,
+  "$fileid": 6453
+}
+,
+
+{
+  "baseModel": 9116,
+  "modelTranslate_0": -8,
+  "modelTranslate_1": 7,
+  "model_zoom": 1260,
+  "rotation_1": 2008,
+  "rotation_0": 280,
+  "members": true,
+  "widget_actions_4": "Destroy",
+  "stackable_1": true,
+  "stack_info_0": [6484, 2],
+  "stack_info_1": [6485, 3],
+  "stack_info_2": [6486, 4],
+  "stack_info_3": [6487, 5],
+  "color_replacements": [[59738, 1352], [61879, 1825]],
+  "name": "Red rose seed",
+  "nullopt": true,
+  "$fileid": 6454
+}
+,
+
+{
+  "baseModel": 9116,
+  "modelTranslate_0": -8,
+  "modelTranslate_1": 7,
+  "model_zoom": 1260,
+  "rotation_1": 2008,
+  "rotation_0": 280,
+  "members": true,
+  "widget_actions_4": "Destroy",
+  "stackable_1": true,
+  "stack_info_0": [6488, 2],
+  "stack_info_1": [6489, 3],
+  "stack_info_2": [6490, 4],
+  "stack_info_3": [6491, 5],
+  "name": "Pink rose seed",
+  "nullopt": true,
+  "$fileid": 6455
+}
+,
+
+{
+  "baseModel": 7154,
+  "modelTranslate_1": 6,
+  "model_zoom": 660,
+  "rotation_1": 1996,
+  "rotation_0": 276,
+  "members": true,
+  "widget_actions_4": "Destroy",
+  "stackable_1": true,
+  "stack_info_0": [6492, 2],
+  "stack_info_1": [6493, 3],
+  "stack_info_2": [6494, 4],
+  "stack_info_3": [6495, 5],
+  "color_replacements": [[6480, 17953], [6336, 14641]],
+  "name": "Vine seed",
+  "nullopt": true,
+  "$fileid": 6456
+}
+,
+
+{
+  "baseModel": 9116,
+  "modelTranslate_0": -8,
+  "modelTranslate_1": 7,
+  "model_zoom": 1260,
+  "rotation_1": 2008,
+  "rotation_0": 280,
+  "members": true,
+  "widget_actions_4": "Destroy",
+  "stackable_1": true,
+  "stack_info_0": [6496, 2],
+  "stack_info_1": [6497, 3],
+  "stack_info_2": [6498, 4],
+  "stack_info_3": [6499, 5],
+  "color_replacements": [[61879, 39892], [59738, 40642]],
+  "name": "Delphinium seed",
+  "nullopt": true,
+  "$fileid": 6457
+}
+,
+
+{
+  "baseModel": 9122,
+  "modelTranslate_0": -8,
+  "modelTranslate_1": 7,
+  "model_zoom": 1260,
+  "rotation_1": 2008,
+  "rotation_0": 280,
+  "members": true,
+  "widget_actions_4": "Destroy",
+  "stackable_1": true,
+  "stack_info_0": [6500, 2],
+  "stack_info_1": [6501, 3],
+  "stack_info_2": [6502, 4],
+  "stack_info_3": [6503, 5],
+  "color_replacements": [[37991, 59858], [37974, 61885], [15547, 15659]],
+  "name": "Orchid seed",
+  "nullopt": true,
+  "$fileid": 6458
+}
+,
+
+{
+  "baseModel": 9122,
+  "modelTranslate_0": -8,
+  "modelTranslate_1": 7,
+  "model_zoom": 1260,
+  "rotation_1": 2008,
+  "rotation_0": 280,
+  "members": true,
+  "widget_actions_4": "Destroy",
+  "stackable_1": true,
+  "stack_info_0": [6504, 2],
+  "stack_info_1": [6505, 3],
+  "stack_info_2": [6506, 4],
+  "stack_info_3": [6507, 5],
+  "color_replacements": [[37991, 10176], [37974, 9149], [15547, 15659]],
+  "name": "Orchid seed",
+  "nullopt": true,
+  "$fileid": 6459
+}
+,
+
+{
+  "baseModel": 9122,
+  "modelTranslate_0": -8,
+  "modelTranslate_1": 7,
+  "model_zoom": 1260,
+  "rotation_1": 2008,
+  "rotation_0": 280,
+  "members": true,
+  "widget_actions_4": "Destroy",
+  "stackable_1": true,
+  "stack_info_0": [6508, 2],
+  "stack_info_1": [6509, 3],
+  "stack_info_2": [6510, 4],
+  "stack_info_3": [6511, 5],
+  "name": "Snowdrop seed",
+  "nullopt": true,
+  "$fileid": 6460
+}
+,
+
+{
+  "baseModel": 9128,
+  "modelTranslate_0": -2,
+  "modelTranslate_1": 76,
+  "model_zoom": 500,
+  "rotation_1": 1912,
+  "rotation_0": 244,
+  "members": true,
+  "widget_actions_4": "Destroy",
+  "color_replacements": [
+    [21712, 2167],
+    [21714, 2159],
+    [21720, 2157],
+    [5338, 5198]
+  ],
+  "name": "White tree shoot",
+  "nullopt": true,
+  "$fileid": 6461
+}
+,
+
+{
+  "baseModel": 9115,
+  "model_zoom": 1630,
+  "rotation_1": 2032,
+  "rotation_0": 120,
+  "members": true,
+  "widget_actions_4": "Destroy",
+  "color_replacements": [
+    [6930, 7054],
+    [21712, 2167],
+    [21714, 2159],
+    [21720, 2157],
+    [5338, 5198]
+  ],
+  "name": "White tree shoot",
+  "nullopt": true,
+  "$fileid": 6462
+}
+,
+
+{
+  "baseModel": 9115,
+  "model_zoom": 1630,
+  "rotation_1": 2032,
+  "rotation_0": 120,
+  "members": true,
+  "widget_actions_4": "Destroy",
+  "color_replacements": [
+    [6930, 7054],
+    [21712, 2167],
+    [21714, 2159],
+    [21720, 2157],
+    [5338, 5198]
+  ],
+  "name": "White tree shoot",
+  "nullopt": true,
+  "$fileid": 6463
+}
+,
+
+{
+  "baseModel": 9114,
+  "model_zoom": 2120,
+  "rotation_1": 80,
+  "rotation_0": 160,
+  "members": true,
+  "widget_actions_4": "Destroy",
+  "color_replacements": [
+    [6930, 7054],
+    [21712, 2167],
+    [21714, 2159],
+    [21720, 2157],
+    [5338, 5198]
+  ],
+  "name": "White tree sapling",
+  "nullopt": true,
+  "$fileid": 6464
+}
+,
+
+{
+  "members": true,
+  "baseModel": 5163,
+  "widget_actions_1": "Wear",
+  "widget_actions_4": "Destroy",
+  "model_zoom": 350,
+  "rotation_0": 1436,
+  "color_replacements": [[6829, 8014], [10283, 5958]],
+  "name": "Ring of charos(a)",
+  "nullopt": true,
+  "$fileid": 6465
+}
+,
+
+{
+  "members": true,
+  "baseModel": 9121,
+  "modelTranslate_1": -20,
+  "model_zoom": 1730,
+  "rotation_1": 164,
+  "rotation_0": 180,
+  "name": "Rune shards",
+  "nullopt": true,
+  "$fileid": 6466
+}
+,
+
+{
+  "members": true,
+  "baseModel": 2742,
+  "modelTranslate_0": -6,
+  "model_zoom": 1210,
+  "rotation_1": 1892,
+  "rotation_0": 264,
+  "color_replacements": [[82, 5318]],
+  "name": "Rune dust",
+  "nullopt": true,
+  "$fileid": 6467
+}
+,
+
+{
+  "baseModel": 2789,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1996,
+  "rotation_0": 84,
+  "maleModels_0": {"id": 552, "type": 0},
+  "femaleModels_0": {"id": 552, "type": 0},
+  "members": true,
+  "color_replacements": [[61, 21803]],
+  "name": "Plant cure",
+  "nullopt": true,
+  "$fileid": 6468
+}
+,
+
+{
+  "baseModel": 9127,
+  "modelTranslate_1": -2,
+  "model_zoom": 730,
+  "rotation_1": 204,
+  "rotation_0": 204,
+  "widget_actions_0": "Eat",
+  "ambiance": 15,
+  "members": true,
+  "color_replacements": [[12506, 5351], [19639, 21714]],
+  "name": "White tree fruit",
+  "nullopt": true,
+  "$fileid": 6469
+}
+,
+
+{
+  "baseModel": 2789,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1996,
+  "rotation_0": 84,
+  "maleModels_0": {"id": 552, "type": 0},
+  "femaleModels_0": {"id": 552, "type": 0},
+  "members": true,
+  "value": 120,
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[61, 1325]],
+  "name": "Compost potion(4)",
+  "noteData": 6471,
+  "nullopt": true,
+  "$fileid": 6470
+}
+,
+
+{"noteData": 6470, "noteTemplate": 799, "nullopt": true, "$fileid": 6471}
+,
+
+{
+  "baseModel": 2697,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1996,
+  "rotation_0": 84,
+  "maleModels_0": {"id": 552, "type": 0},
+  "femaleModels_0": {"id": 552, "type": 0},
+  "members": true,
+  "value": 90,
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[61, 1325]],
+  "name": "Compost potion(3)",
+  "noteData": 6473,
+  "nullopt": true,
+  "$fileid": 6472
+}
+,
+
+{"noteData": 6472, "noteTemplate": 799, "nullopt": true, "$fileid": 6473}
+,
+
+{
+  "baseModel": 2384,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1996,
+  "rotation_0": 84,
+  "maleModels_0": {"id": 552, "type": 0},
+  "femaleModels_0": {"id": 552, "type": 0},
+  "members": true,
+  "value": 60,
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[61, 1325]],
+  "name": "Compost potion(2)",
+  "noteData": 6475,
+  "nullopt": true,
+  "$fileid": 6474
+}
+,
+
+{"noteData": 6474, "noteTemplate": 799, "nullopt": true, "$fileid": 6475}
+,
+
+{
+  "baseModel": 2621,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1996,
+  "rotation_0": 84,
+  "maleModels_0": {"id": 552, "type": 0},
+  "femaleModels_0": {"id": 552, "type": 0},
+  "members": true,
+  "value": 30,
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[61, 1325]],
+  "name": "Compost potion(1)",
+  "noteData": 6477,
+  "nullopt": true,
+  "$fileid": 6476
+}
+,
+
+{"noteData": 6476, "noteTemplate": 799, "nullopt": true, "$fileid": 6477}
+,
+
+{
+  "baseModel": 9225,
+  "modelTranslate_1": -2,
+  "model_zoom": 1890,
+  "rotation_1": 1596,
+  "rotation_0": 224,
+  "members": true,
+  "widget_actions_4": "Destroy",
+  "color_replacements": [
+    [8602, 8722],
+    [8478, 8598],
+    [8487, 8478],
+    [8363, 8483]
+  ],
+  "name": "Trolley",
+  "nullopt": true,
+  "$fileid": 6478
+}
+,
+
+{
+  "members": true,
+  "baseModel": 2838,
+  "widget_actions_0": "Read",
+  "modelTranslate_0": -3,
+  "modelTranslate_1": 5,
+  "model_zoom": 700,
+  "rotation_1": 20,
+  "rotation_0": 328,
+  "widget_actions_4": "Destroy",
+  "color_replacements": [[5351, 4267]],
+  "name": "List",
+  "nullopt": true,
+  "$fileid": 6479
+}
+,
+
+{
+  "dummyItem": 2,
+  "baseModel": 9117,
+  "modelTranslate_0": -8,
+  "modelTranslate_1": 7,
+  "model_zoom": 1260,
+  "rotation_1": 2008,
+  "rotation_0": 280,
+  "stackable_1": true,
+  "color_replacements": [[59738, 62561], [61879, 62790]],
+  "nullopt": true,
+  "$fileid": 6480
+}
+,
+
+{
+  "dummyItem": 2,
+  "baseModel": 9118,
+  "modelTranslate_0": -8,
+  "modelTranslate_1": 7,
+  "model_zoom": 1260,
+  "rotation_1": 2008,
+  "rotation_0": 280,
+  "stackable_1": true,
+  "color_replacements": [[59738, 62561], [61879, 62790]],
+  "nullopt": true,
+  "$fileid": 6481
+}
+,
+
+{
+  "dummyItem": 2,
+  "baseModel": 9119,
+  "modelTranslate_0": -8,
+  "modelTranslate_1": 7,
+  "model_zoom": 1260,
+  "rotation_1": 2008,
+  "rotation_0": 280,
+  "stackable_1": true,
+  "color_replacements": [[59738, 62561], [61879, 62790]],
+  "nullopt": true,
+  "$fileid": 6482
+}
+,
+
+{
+  "dummyItem": 2,
+  "baseModel": 9120,
+  "modelTranslate_0": -8,
+  "modelTranslate_1": 7,
+  "model_zoom": 1260,
+  "rotation_1": 2008,
+  "rotation_0": 280,
+  "stackable_1": true,
+  "color_replacements": [[59738, 62561], [61879, 62790]],
+  "nullopt": true,
+  "$fileid": 6483
+}
+,
+
+{
+  "dummyItem": 2,
+  "baseModel": 9117,
+  "modelTranslate_0": -8,
+  "modelTranslate_1": 7,
+  "model_zoom": 1260,
+  "rotation_1": 2008,
+  "rotation_0": 280,
+  "stackable_1": true,
+  "color_replacements": [[59738, 1352], [61879, 1825]],
+  "nullopt": true,
+  "$fileid": 6484
+}
+,
+
+{
+  "dummyItem": 2,
+  "baseModel": 9118,
+  "modelTranslate_0": -8,
+  "modelTranslate_1": 7,
+  "model_zoom": 1260,
+  "rotation_1": 2008,
+  "rotation_0": 280,
+  "stackable_1": true,
+  "color_replacements": [[59738, 1352], [61879, 1825]],
+  "nullopt": true,
+  "$fileid": 6485
+}
+,
+
+{
+  "dummyItem": 2,
+  "baseModel": 9119,
+  "modelTranslate_0": -8,
+  "modelTranslate_1": 7,
+  "model_zoom": 1260,
+  "rotation_1": 2008,
+  "rotation_0": 280,
+  "stackable_1": true,
+  "color_replacements": [[59738, 1352], [61879, 1825]],
+  "nullopt": true,
+  "$fileid": 6486
+}
+,
+
+{
+  "dummyItem": 2,
+  "baseModel": 9120,
+  "modelTranslate_0": -8,
+  "modelTranslate_1": 7,
+  "model_zoom": 1260,
+  "rotation_1": 2008,
+  "rotation_0": 280,
+  "stackable_1": true,
+  "color_replacements": [[59738, 1352], [61879, 1825]],
+  "nullopt": true,
+  "$fileid": 6487
+}
+,
+
+{
+  "dummyItem": 2,
+  "baseModel": 9117,
+  "modelTranslate_0": -8,
+  "modelTranslate_1": 7,
+  "model_zoom": 1260,
+  "rotation_1": 2008,
+  "rotation_0": 280,
+  "stackable_1": true,
+  "nullopt": true,
+  "$fileid": 6488
+}
+,
+
+{
+  "dummyItem": 2,
+  "baseModel": 9118,
+  "modelTranslate_0": -8,
+  "modelTranslate_1": 7,
+  "model_zoom": 1260,
+  "rotation_1": 2008,
+  "rotation_0": 280,
+  "stackable_1": true,
+  "nullopt": true,
+  "$fileid": 6489
+}
+,
+
+{
+  "dummyItem": 2,
+  "baseModel": 9119,
+  "modelTranslate_0": -8,
+  "modelTranslate_1": 7,
+  "model_zoom": 1260,
+  "rotation_1": 2008,
+  "rotation_0": 280,
+  "stackable_1": true,
+  "nullopt": true,
+  "$fileid": 6490
+}
+,
+
+{
+  "dummyItem": 2,
+  "baseModel": 9120,
+  "modelTranslate_0": -8,
+  "modelTranslate_1": 7,
+  "model_zoom": 1260,
+  "rotation_1": 2008,
+  "rotation_0": 280,
+  "stackable_1": true,
+  "nullopt": true,
+  "$fileid": 6491
+}
+,
+
+{
+  "dummyItem": 2,
+  "baseModel": 7155,
+  "modelTranslate_1": 6,
+  "model_zoom": 660,
+  "rotation_1": 1996,
+  "rotation_0": 276,
+  "stackable_1": true,
+  "color_replacements": [[6480, 17953], [6336, 14641]],
+  "nullopt": true,
+  "$fileid": 6492
+}
+,
+
+{
+  "dummyItem": 2,
+  "baseModel": 7156,
+  "modelTranslate_1": 6,
+  "model_zoom": 660,
+  "rotation_1": 1996,
+  "rotation_0": 276,
+  "stackable_1": true,
+  "color_replacements": [[6480, 17953], [6336, 14641]],
+  "nullopt": true,
+  "$fileid": 6493
+}
+,
+
+{
+  "dummyItem": 2,
+  "baseModel": 7157,
+  "modelTranslate_1": 6,
+  "model_zoom": 660,
+  "rotation_1": 1996,
+  "rotation_0": 276,
+  "stackable_1": true,
+  "color_replacements": [[6480, 17953], [6336, 14641]],
+  "nullopt": true,
+  "$fileid": 6494
+}
+,
+
+{
+  "dummyItem": 2,
+  "baseModel": 7158,
+  "modelTranslate_1": 6,
+  "model_zoom": 660,
+  "rotation_1": 1996,
+  "rotation_0": 276,
+  "stackable_1": true,
+  "color_replacements": [[6480, 17953], [6336, 14641]],
+  "nullopt": true,
+  "$fileid": 6495
+}
+,
+
+{
+  "dummyItem": 2,
+  "baseModel": 9117,
+  "modelTranslate_0": -8,
+  "modelTranslate_1": 7,
+  "model_zoom": 1260,
+  "rotation_1": 2008,
+  "rotation_0": 280,
+  "stackable_1": true,
+  "color_replacements": [[61879, 39892], [59738, 40642]],
+  "nullopt": true,
+  "$fileid": 6496
+}
+,
+
+{
+  "dummyItem": 2,
+  "baseModel": 9118,
+  "modelTranslate_0": -8,
+  "modelTranslate_1": 7,
+  "model_zoom": 1260,
+  "rotation_1": 2008,
+  "rotation_0": 280,
+  "stackable_1": true,
+  "color_replacements": [[61879, 39892], [59738, 40642]],
+  "nullopt": true,
+  "$fileid": 6497
+}
+,
+
+{
+  "dummyItem": 2,
+  "baseModel": 9119,
+  "modelTranslate_0": -8,
+  "modelTranslate_1": 7,
+  "model_zoom": 1260,
+  "rotation_1": 2008,
+  "rotation_0": 280,
+  "stackable_1": true,
+  "color_replacements": [[61879, 39892], [59738, 40642]],
+  "nullopt": true,
+  "$fileid": 6498
+}
+,
+
+{
+  "dummyItem": 2,
+  "baseModel": 9120,
+  "modelTranslate_0": -8,
+  "modelTranslate_1": 7,
+  "model_zoom": 1260,
+  "rotation_1": 2008,
+  "rotation_0": 280,
+  "stackable_1": true,
+  "color_replacements": [[61879, 39892], [59738, 40642]],
+  "nullopt": true,
+  "$fileid": 6499
+}
+,
+
+{
+  "dummyItem": 2,
+  "baseModel": 9123,
+  "modelTranslate_0": -8,
+  "modelTranslate_1": 7,
+  "model_zoom": 1260,
+  "rotation_1": 2008,
+  "rotation_0": 280,
+  "stackable_1": true,
+  "color_replacements": [[37991, 59858], [37974, 61885], [15547, 15659]],
+  "nullopt": true,
+  "$fileid": 6500
+}
+,
+
+{
+  "dummyItem": 2,
+  "baseModel": 9124,
+  "modelTranslate_0": -8,
+  "modelTranslate_1": 7,
+  "model_zoom": 1260,
+  "rotation_1": 2008,
+  "rotation_0": 280,
+  "stackable_1": true,
+  "color_replacements": [[37991, 59858], [37974, 61885], [15547, 15659]],
+  "nullopt": true,
+  "$fileid": 6501
+}
+,
+
+{
+  "dummyItem": 2,
+  "baseModel": 9125,
+  "modelTranslate_0": -8,
+  "modelTranslate_1": 7,
+  "model_zoom": 1260,
+  "rotation_1": 2008,
+  "rotation_0": 280,
+  "stackable_1": true,
+  "color_replacements": [[37991, 59858], [37974, 61885], [15547, 15659]],
+  "nullopt": true,
+  "$fileid": 6502
+}
+,
+
+{
+  "dummyItem": 2,
+  "baseModel": 9126,
+  "modelTranslate_0": -8,
+  "modelTranslate_1": 7,
+  "model_zoom": 1260,
+  "rotation_1": 2008,
+  "rotation_0": 280,
+  "stackable_1": true,
+  "color_replacements": [[37991, 59858], [37974, 61885], [15547, 15659]],
+  "nullopt": true,
+  "$fileid": 6503
+}
+,
+
+{
+  "dummyItem": 2,
+  "baseModel": 9123,
+  "modelTranslate_0": -8,
+  "modelTranslate_1": 7,
+  "model_zoom": 1260,
+  "rotation_1": 2008,
+  "rotation_0": 280,
+  "stackable_1": true,
+  "color_replacements": [[37991, 10176], [37974, 9149], [15547, 15659]],
+  "nullopt": true,
+  "$fileid": 6504
+}
+,
+
+{
+  "dummyItem": 2,
+  "baseModel": 9124,
+  "modelTranslate_0": -8,
+  "modelTranslate_1": 7,
+  "model_zoom": 1260,
+  "rotation_1": 2008,
+  "rotation_0": 280,
+  "stackable_1": true,
+  "color_replacements": [[37991, 10176], [37974, 9149], [15547, 15659]],
+  "nullopt": true,
+  "$fileid": 6505
+}
+,
+
+{
+  "dummyItem": 2,
+  "baseModel": 9125,
+  "modelTranslate_0": -8,
+  "modelTranslate_1": 7,
+  "model_zoom": 1260,
+  "rotation_1": 2008,
+  "rotation_0": 280,
+  "stackable_1": true,
+  "color_replacements": [[37991, 10176], [37974, 9149], [15547, 15659]],
+  "nullopt": true,
+  "$fileid": 6506
+}
+,
+
+{
+  "dummyItem": 2,
+  "baseModel": 9126,
+  "modelTranslate_0": -8,
+  "modelTranslate_1": 7,
+  "model_zoom": 1260,
+  "rotation_1": 2008,
+  "rotation_0": 280,
+  "stackable_1": true,
+  "color_replacements": [[37991, 10176], [37974, 9149], [15547, 15659]],
+  "nullopt": true,
+  "$fileid": 6507
+}
+,
+
+{
+  "dummyItem": 2,
+  "baseModel": 9123,
+  "modelTranslate_0": -8,
+  "modelTranslate_1": 7,
+  "model_zoom": 1260,
+  "rotation_1": 2008,
+  "rotation_0": 280,
+  "stackable_1": true,
+  "nullopt": true,
+  "$fileid": 6508
+}
+,
+
+{
+  "dummyItem": 2,
+  "baseModel": 9124,
+  "modelTranslate_0": -8,
+  "modelTranslate_1": 7,
+  "model_zoom": 1260,
+  "rotation_1": 2008,
+  "rotation_0": 280,
+  "stackable_1": true,
+  "nullopt": true,
+  "$fileid": 6509
+}
+,
+
+{
+  "dummyItem": 2,
+  "baseModel": 9125,
+  "modelTranslate_0": -8,
+  "modelTranslate_1": 7,
+  "model_zoom": 1260,
+  "rotation_1": 2008,
+  "rotation_0": 280,
+  "stackable_1": true,
+  "nullopt": true,
+  "$fileid": 6510
+}
+,
+
+{
+  "dummyItem": 2,
+  "baseModel": 9126,
+  "modelTranslate_0": -8,
+  "modelTranslate_1": 7,
+  "model_zoom": 1260,
+  "rotation_1": 2008,
+  "rotation_0": 280,
+  "stackable_1": true,
+  "nullopt": true,
+  "$fileid": 6511
+}
+,
+
+{
+  "baseModel": 4730,
+  "dummyItem": 2,
+  "members": true,
+  "nullopt": true,
+  "$fileid": 6512
+}
+,
+
+{
+  "baseModel": 2675,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": 7,
+  "model_zoom": 1040,
+  "rotation_1": 120,
+  "rotation_0": 380,
+  "dummyItem": 2,
+  "members": true,
+  "nullopt": true,
+  "$fileid": 6513
+}
+,
+
+{
+  "baseModel": 9245,
+  "modelTranslate_0": 4,
+  "modelTranslate_1": -6,
+  "model_zoom": 3310,
+  "dummyItem": 1,
+  "members": true,
+  "color_replacements": [[37824, 7104]],
+  "name": "Agility jump",
+  "nullopt": true,
+  "$fileid": 6514
+}
+,
+
+{
+  "baseModel": 9242,
+  "modelTranslate_1": -13,
+  "model_zoom": 2890,
+  "rotation_1": 184,
+  "rotation_0": 80,
+  "dummyItem": 1,
+  "members": true,
+  "color_replacements": [[37824, 7104]],
+  "name": "Agility balance",
+  "nullopt": true,
+  "$fileid": 6515
+}
+,
+
+{
+  "baseModel": 9244,
+  "modelTranslate_0": 28,
+  "modelTranslate_1": 38,
+  "model_zoom": 3100,
+  "dummyItem": 1,
+  "members": true,
+  "color_replacements": [[37824, 7104]],
+  "name": "Agility contortion",
+  "nullopt": true,
+  "$fileid": 6516
+}
+,
+
+{
+  "baseModel": 9243,
+  "model_zoom": 3200,
+  "dummyItem": 1,
+  "members": true,
+  "color_replacements": [[37824, 7104]],
+  "name": "Agility climb",
+  "nullopt": true,
+  "$fileid": 6517
+}
+,
+
+{
+  "baseModel": 9245,
+  "modelTranslate_0": 4,
+  "modelTranslate_1": -6,
+  "model_zoom": 3310,
+  "dummyItem": 1,
+  "members": true,
+  "color_replacements": [[37824, 17061]],
+  "name": "Agility jump",
+  "nullopt": true,
+  "$fileid": 6518
+}
+,
+
+{
+  "baseModel": 9242,
+  "modelTranslate_1": -13,
+  "model_zoom": 2890,
+  "rotation_1": 184,
+  "rotation_0": 80,
+  "dummyItem": 1,
+  "members": true,
+  "color_replacements": [[37824, 17061]],
+  "name": "Agility balance",
+  "nullopt": true,
+  "$fileid": 6519
+}
+,
+
+{
+  "baseModel": 9244,
+  "modelTranslate_0": 28,
+  "modelTranslate_1": 38,
+  "model_zoom": 3100,
+  "dummyItem": 1,
+  "members": true,
+  "color_replacements": [[37824, 17061]],
+  "name": "Agility contortion",
+  "nullopt": true,
+  "$fileid": 6520
+}
+,
+
+{
+  "baseModel": 9243,
+  "model_zoom": 3200,
+  "dummyItem": 1,
+  "members": true,
+  "color_replacements": [[37824, 17061]],
+  "name": "Agility climb",
+  "nullopt": true,
+  "$fileid": 6521
+}
+,
+
+{
+  "members": true,
+  "stackable_1": true,
+  "widget_actions_1": "Wield",
+  "baseModel": 9353,
+  "modelTranslate_0": 3,
+  "modelTranslate_1": -4,
+  "model_zoom": 890,
+  "rotation_1": 28,
+  "rotation_0": 408,
+  "contrast": 35,
+  "ambiance": 15,
+  "maleModels_0": {"id": 9346, "type": 0},
+  "femaleModels_0": {"id": 9346, "type": 0},
+  "value": 250,
+  "tradeable": true,
+  "name": "Toktz-xil-ul",
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 6522
+}
+,
+
+{
+  "members": true,
+  "widget_actions_1": "Wield",
+  "baseModel": 9356,
+  "modelTranslate_0": -3,
+  "modelTranslate_1": 9,
+  "model_zoom": 1320,
+  "rotation_1": 1612,
+  "rotation_0": 580,
+  "contrast": 35,
+  "ambiance": 15,
+  "maleModels_0": {"id": 9349, "type": 0},
+  "femaleModels_0": {"id": 9349, "type": 0},
+  "value": 40000,
+  "tradeable": true,
+  "name": "Toktz-xil-ak",
+  "female_translate": [3, 245, 6],
+  "noteData": 6535,
+  "nullopt": true,
+  "$fileid": 6523
+}
+,
+
+{
+  "members": true,
+  "widget_actions_1": "Wield",
+  "baseModel": 9354,
+  "modelTranslate_1": 3,
+  "model_zoom": 1200,
+  "rotation_1": 1836,
+  "rotation_0": 568,
+  "contrast": 35,
+  "ambiance": 15,
+  "maleModels_0": {"id": 9347, "type": 0},
+  "femaleModels_0": {"id": 9347, "type": 0},
+  "value": 45000,
+  "tradeable": true,
+  "name": "Toktz-ket-xil",
+  "female_translate": [253, 245, 6],
+  "noteData": 6536,
+  "nullopt": true,
+  "$fileid": 6524
+}
+,
+
+{
+  "members": true,
+  "widget_actions_1": "Wield",
+  "baseModel": 9350,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": 4,
+  "model_zoom": 920,
+  "rotation_1": 68,
+  "rotation_0": 548,
+  "contrast": 35,
+  "ambiance": 15,
+  "maleModels_0": {"id": 9343, "type": 0},
+  "femaleModels_0": {"id": 9343, "type": 0},
+  "value": 25000,
+  "tradeable": true,
+  "name": "Toktz-xil-ek",
+  "female_translate": [3, 245, 6],
+  "noteData": 6537,
+  "nullopt": true,
+  "$fileid": 6525
+}
+,
+
+{
+  "members": true,
+  "widget_actions_1": "Wield",
+  "baseModel": 9355,
+  "modelTranslate_1": 5,
+  "model_zoom": 2040,
+  "rotation_1": 2024,
+  "rotation_0": 332,
+  "contrast": 35,
+  "ambiance": 15,
+  "maleModels_0": {"id": 9348, "type": 0},
+  "femaleModels_0": {"id": 9348, "type": 0},
+  "value": 35000,
+  "tradeable": true,
+  "name": "Toktz-mej-tal",
+  "female_translate": [3, 245, 6],
+  "noteData": 6538,
+  "nullopt": true,
+  "$fileid": 6526
+}
+,
+
+{
+  "members": true,
+  "widget_actions_1": "Wield",
+  "baseModel": 9352,
+  "modelTranslate_1": 6,
+  "model_zoom": 840,
+  "rotation_1": 2028,
+  "rotation_0": 380,
+  "contrast": 35,
+  "ambiance": 15,
+  "maleModels_0": {"id": 9345, "type": 0},
+  "femaleModels_0": {"id": 9345, "type": 0},
+  "value": 30000,
+  "tradeable": true,
+  "name": "Tzhaar-ket-em",
+  "female_translate": [3, 245, 6],
+  "noteData": 6539,
+  "nullopt": true,
+  "$fileid": 6527
+}
+,
+
+{
+  "members": true,
+  "widget_actions_1": "Wield",
+  "baseModel": 9351,
+  "modelTranslate_0": 3,
+  "modelTranslate_1": -4,
+  "model_zoom": 1130,
+  "rotation_1": 952,
+  "rotation_0": 396,
+  "contrast": 35,
+  "ambiance": 15,
+  "maleModels_0": {"id": 9344, "type": 0},
+  "femaleModels_0": {"id": 9344, "type": 0},
+  "value": 50000,
+  "tradeable": true,
+  "name": "Tzhaar-ket-om",
+  "female_translate": [3, 245, 6],
+  "noteData": 6540,
+  "nullopt": true,
+  "$fileid": 6528
+}
+,
+
+{
+  "members": true,
+  "baseModel": 9252,
+  "modelTranslate_0": -3,
+  "modelTranslate_1": 7,
+  "model_zoom": 740,
+  "rotation_1": 180,
+  "rotation_0": 192,
+  "stackable_1": true,
+  "stack_info_0": [6530, 2],
+  "stack_info_1": [6531, 3],
+  "stack_info_2": [6532, 4],
+  "stack_info_3": [6533, 5],
+  "stack_info_4": [6534, 25],
+  "name": "Tokkul",
+  "nullopt": true,
+  "$fileid": 6529
+}
+,
+
+{
+  "baseModel": 9253,
+  "modelTranslate_0": -3,
+  "modelTranslate_1": 7,
+  "model_zoom": 740,
+  "rotation_1": 180,
+  "rotation_0": 192,
+  "stackable_1": true,
+  "dummyItem": 2,
+  "nullopt": true,
+  "$fileid": 6530
+}
+,
+
+{
+  "baseModel": 9255,
+  "modelTranslate_0": -3,
+  "modelTranslate_1": 7,
+  "model_zoom": 740,
+  "rotation_1": 180,
+  "rotation_0": 192,
+  "stackable_1": true,
+  "dummyItem": 2,
+  "nullopt": true,
+  "$fileid": 6531
+}
+,
+
+{
+  "baseModel": 9256,
+  "modelTranslate_0": -3,
+  "modelTranslate_1": 7,
+  "model_zoom": 740,
+  "rotation_1": 180,
+  "rotation_0": 192,
+  "stackable_1": true,
+  "dummyItem": 2,
+  "nullopt": true,
+  "$fileid": 6532
+}
+,
+
+{
+  "baseModel": 9257,
+  "modelTranslate_0": -3,
+  "modelTranslate_1": 7,
+  "model_zoom": 740,
+  "rotation_1": 180,
+  "rotation_0": 192,
+  "stackable_1": true,
+  "dummyItem": 2,
+  "nullopt": true,
+  "$fileid": 6533
+}
+,
+
+{
+  "baseModel": 9254,
+  "modelTranslate_0": -3,
+  "modelTranslate_1": 7,
+  "model_zoom": 740,
+  "rotation_1": 180,
+  "rotation_0": 192,
+  "stackable_1": true,
+  "dummyItem": 2,
+  "nullopt": true,
+  "$fileid": 6534
+}
+,
+
+{"noteData": 6523, "noteTemplate": 799, "nullopt": true, "$fileid": 6535}
+,
+
+{"noteData": 6524, "noteTemplate": 799, "nullopt": true, "$fileid": 6536}
+,
+
+{"noteData": 6525, "noteTemplate": 799, "nullopt": true, "$fileid": 6537}
+,
+
+{"noteData": 6526, "noteTemplate": 799, "nullopt": true, "$fileid": 6538}
+,
+
+{"noteData": 6527, "noteTemplate": 799, "nullopt": true, "$fileid": 6539}
+,
+
+{"noteData": 6528, "noteTemplate": 799, "nullopt": true, "$fileid": 6540}
+,
+
+{
+  "baseModel": 9391,
+  "modelTranslate_0": -5,
+  "modelTranslate_1": -2,
+  "model_zoom": 790,
+  "rotation_1": 1380,
+  "rotation_0": 120,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 9430, "type": 0},
+  "femaleModels_0": {"id": 9430, "type": 0},
+  "members": true,
+  "value": 1,
+  "widget_actions_4": "Destroy",
+  "name": "Mouse toy",
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 6541
+}
+,
+
+{
+  "value": 1,
+  "members": true,
+  "baseModel": 2426,
+  "modelTranslate_1": -14,
+  "model_zoom": 1180,
+  "rotation_1": 172,
+  "rotation_0": 160,
+  "widget_actions_0": "Open",
+  "widget_actions_4": "Destroy",
+  "name": "Present",
+  "nullopt": true,
+  "$fileid": 6542
+}
+,
+
+{
+  "baseModel": 3348,
+  "members": true,
+  "widget_actions_0": "Rub",
+  "widget_actions_4": "Destroy",
+  "modelTranslate_0": 2,
+  "modelTranslate_1": -2,
+  "model_zoom": 840,
+  "rotation_1": 228,
+  "rotation_0": 28,
+  "color_replacements": [[11191, 840], [11183, 563]],
+  "name": "Antique lamp",
+  "nullopt": true,
+  "$fileid": 6543
+}
+,
+
+{
+  "baseModel": 6440,
+  "modelTranslate_1": -10,
+  "model_zoom": 400,
+  "rotation_0": 220,
+  "maleModels_0": {"id": 6469, "type": 0},
+  "femaleModels_0": {"id": 6469, "type": 0},
+  "widget_actions_1": "Wear",
+  "widget_actions_2": "Open",
+  "widget_actions_4": "Destroy",
+  "members": true,
+  "value": 1,
+  "name": "Catspeak amulet(e)",
+  "female_translate": [0, 0, 4],
+  "nullopt": true,
+  "$fileid": 6544
+}
+,
+
+{
+  "members": true,
+  "baseModel": 2429,
+  "modelTranslate_1": 2,
+  "model_zoom": 760,
+  "rotation_1": 28,
+  "rotation_0": 552,
+  "widget_actions_0": "Read",
+  "value": 1,
+  "widget_actions_4": "Destroy",
+  "color_replacements": [[7516, 6744]],
+  "name": "Chores",
+  "nullopt": true,
+  "$fileid": 6545
+}
+,
+
+{
+  "members": true,
+  "baseModel": 2429,
+  "modelTranslate_1": 2,
+  "model_zoom": 760,
+  "rotation_1": 28,
+  "rotation_0": 552,
+  "widget_actions_0": "Read",
+  "value": 1,
+  "widget_actions_4": "Destroy",
+  "color_replacements": [[7516, 6744]],
+  "name": "Recipe",
+  "nullopt": true,
+  "$fileid": 6546
+}
+,
+
+{
+  "baseModel": 9384,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 9368, "type": 0},
+  "femaleModels_0": {"id": 9370, "type": 0},
+  "maleHeads_0": 39536,
+  "femaleHeads_0": 38820,
+  "members": true,
+  "value": 1,
+  "modelTranslate_1": -39,
+  "model_zoom": 490,
+  "rotation_1": 156,
+  "rotation_0": 236,
+  "widget_actions_4": "Destroy",
+  "name": "Doctors hat",
+  "nullopt": true,
+  "$fileid": 6547
+}
+,
+
+{
+  "baseModel": 9385,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 9369, "type": 0},
+  "femaleModels_0": {"id": 3191, "type": 0},
+  "maleHeads_0": 39353,
+  "femaleHeads_0": 38798,
+  "members": true,
+  "value": 1,
+  "model_zoom": 380,
+  "rotation_0": 2032,
+  "widget_actions_4": "Destroy",
+  "name": "Nurse hat",
+  "nullopt": true,
+  "$fileid": 6548
+}
+,
+
+{
+  "baseModel": 34089,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": -4,
+  "model_zoom": 400,
+  "rotation_1": 1868,
+  "rotation_0": 63,
+  "members": true,
+  "color_replacements": [
+    [4397, 74],
+    [4521, 70],
+    [4517, 66],
+    [4641, 0],
+    [10353, 57],
+    [10345, 53]
+  ],
+  "name": "Lazy cat",
+  "nullopt": true,
+  "$fileid": 6549
+}
+,
+
+{
+  "baseModel": 34088,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": -4,
+  "model_zoom": 400,
+  "rotation_1": 1868,
+  "rotation_0": 63,
+  "members": true,
+  "color_replacements": [
+    [3350, 16],
+    [3346, 12],
+    [4517, 61],
+    [4521, 66],
+    [10353, 82],
+    [10345, 78]
+  ],
+  "name": "Lazy cat",
+  "nullopt": true,
+  "$fileid": 6550
+}
+,
+
+{
+  "baseModel": 34103,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": -4,
+  "model_zoom": 400,
+  "rotation_1": 1868,
+  "rotation_0": 63,
+  "members": true,
+  "color_replacements": [
+    [5272, 4506],
+    [5276, 4502],
+    [47, 7461],
+    [43, 7585],
+    [39, 7580],
+    [10353, 7704]
+  ],
+  "name": "Lazy cat",
+  "nullopt": true,
+  "$fileid": 6551
+}
+,
+
+{
+  "baseModel": 34089,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": -4,
+  "model_zoom": 400,
+  "rotation_1": 1868,
+  "rotation_0": 63,
+  "members": true,
+  "color_replacements": [
+    [4397, 8],
+    [4521, 8],
+    [4517, 12],
+    [4641, 16],
+    [10353, 20],
+    [10345, 24]
+  ],
+  "name": "Lazy cat",
+  "nullopt": true,
+  "$fileid": 6552
+}
+,
+
+{
+  "baseModel": 34088,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": -4,
+  "model_zoom": 400,
+  "rotation_1": 1868,
+  "rotation_0": 63,
+  "members": true,
+  "color_replacements": [
+    [3350, 4502],
+    [3346, 4626],
+    [4521, 57],
+    [4517, 53],
+    [10353, 49],
+    [10345, 45]
+  ],
+  "name": "Lazy cat",
+  "nullopt": true,
+  "$fileid": 6553
+}
+,
+
+{
+  "baseModel": 34103,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": -4,
+  "model_zoom": 400,
+  "rotation_1": 1868,
+  "rotation_0": 63,
+  "members": true,
+  "color_replacements": [
+    [5276, 37925],
+    [5272, 38049],
+    [10353, 70],
+    [10345, 66]
+  ],
+  "name": "Lazy cat",
+  "nullopt": true,
+  "$fileid": 6554
+}
+,
+
+{
+  "baseModel": 34094,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": -9,
+  "model_zoom": 450,
+  "rotation_1": 1898,
+  "rotation_0": 93,
+  "members": true,
+  "color_replacements": [
+    [4397, 74],
+    [4521, 70],
+    [4517, 66],
+    [4641, 61],
+    [10353, 57],
+    [10345, 53]
+  ],
+  "name": "Wily cat",
+  "nullopt": true,
+  "$fileid": 6555
+}
+,
+
+{
+  "baseModel": 34095,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": -9,
+  "model_zoom": 450,
+  "rotation_1": 1898,
+  "rotation_0": 93,
+  "members": true,
+  "color_replacements": [
+    [3350, 16],
+    [3346, 12],
+    [4517, 61],
+    [4521, 66],
+    [10353, 82],
+    [10345, 78]
+  ],
+  "name": "Wily cat",
+  "nullopt": true,
+  "$fileid": 6556
+}
+,
+
+{
+  "baseModel": 34087,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": -9,
+  "model_zoom": 450,
+  "rotation_1": 1898,
+  "rotation_0": 93,
+  "members": true,
+  "color_replacements": [
+    [5272, 4506],
+    [5276, 4502],
+    [47, 7461],
+    [43, 7585],
+    [39, 7580],
+    [10353, 7704]
+  ],
+  "name": "Wily cat",
+  "nullopt": true,
+  "$fileid": 6557
+}
+,
+
+{
+  "baseModel": 34094,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": -9,
+  "model_zoom": 450,
+  "rotation_1": 1898,
+  "rotation_0": 93,
+  "members": true,
+  "color_replacements": [
+    [4397, 8],
+    [4521, 8],
+    [4517, 12],
+    [4641, 16],
+    [10353, 20],
+    [10345, 24]
+  ],
+  "name": "Wily cat",
+  "nullopt": true,
+  "$fileid": 6558
+}
+,
+
+{
+  "baseModel": 34095,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": -9,
+  "model_zoom": 450,
+  "rotation_1": 1898,
+  "rotation_0": 93,
+  "members": true,
+  "color_replacements": [
+    [3350, 4502],
+    [3346, 4626],
+    [4521, 57],
+    [4517, 53],
+    [10353, 49],
+    [10345, 45]
+  ],
+  "name": "Wily cat",
+  "nullopt": true,
+  "$fileid": 6559
+}
+,
+
+{
+  "baseModel": 34087,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": -9,
+  "model_zoom": 450,
+  "rotation_1": 1898,
+  "rotation_0": 93,
+  "members": true,
+  "color_replacements": [
+    [5276, 37925],
+    [5272, 38049],
+    [10353, 70],
+    [10345, 66]
+  ],
+  "name": "Wily cat",
+  "nullopt": true,
+  "$fileid": 6560
+}
+,
+
+{
+  "value": 2,
+  "baseModel": 2491,
+  "modelTranslate_0": -3,
+  "modelTranslate_1": 2,
+  "model_zoom": 660,
+  "rotation_1": 1904,
+  "rotation_0": 140,
+  "name": "Ahab's beer",
+  "nullopt": true,
+  "$fileid": 6561
+}
+,
+
+{
+  "value": 17000,
+  "baseModel": 9929,
+  "modelTranslate_0": -2,
+  "modelTranslate_1": -3,
+  "model_zoom": 1950,
+  "rotation_1": 560,
+  "rotation_0": 1816,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 9956, "type": 0},
+  "femaleModels_0": {"id": 9956, "type": 0},
+  "members": true,
+  "tradeable": true,
+  "name": "Mud battlestaff",
+  "female_translate": [3, 245, 6],
+  "noteData": 6726,
+  "nullopt": true,
+  "$fileid": 6562
+}
+,
+
+{
+  "value": 45000,
+  "baseModel": 9929,
+  "modelTranslate_0": -2,
+  "modelTranslate_1": -3,
+  "model_zoom": 1950,
+  "rotation_1": 560,
+  "rotation_0": 1816,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 9956, "type": 0},
+  "femaleModels_0": {"id": 9956, "type": 0},
+  "members": true,
+  "tradeable": true,
+  "name": "Mystic mud staff",
+  "female_translate": [3, 245, 6],
+  "noteData": 6727,
+  "nullopt": true,
+  "$fileid": 6563
+}
+,
+
+{
+  "baseModel": 1105,
+  "rotation_0": 68,
+  "dummyItem": 1,
+  "name": "Onyx ring",
+  "nullopt": true,
+  "$fileid": 6564
+}
+,
+
+{
+  "baseModel": 1105,
+  "rotation_1": 4,
+  "rotation_0": 20,
+  "dummyItem": 1,
+  "name": "Onyx necklace",
+  "nullopt": true,
+  "$fileid": 6565
+}
+,
+
+{
+  "baseModel": 1105,
+  "rotation_1": 4,
+  "rotation_0": 20,
+  "dummyItem": 1,
+  "name": "Onyx amulet",
+  "nullopt": true,
+  "$fileid": 6566
+}
+,
+
+{
+  "baseModel": 3374,
+  "modelTranslate_0": 1,
+  "model_zoom": 1010,
+  "rotation_1": 672,
+  "rotation_0": 360,
+  "dummyItem": 2,
+  "nullopt": true,
+  "$fileid": 6567
+}
+,
+
+{
+  "members": true,
+  "widget_actions_1": "Wear",
+  "value": 60000,
+  "baseModel": 9632,
+  "modelTranslate_0": 3,
+  "modelTranslate_1": 6,
+  "model_zoom": 2140,
+  "rotation_1": 948,
+  "rotation_0": 400,
+  "maleModels_0": {"id": 9639, "type": 0},
+  "femaleModels_0": {"id": 9641, "type": 0},
+  "tradeable": true,
+  "name": "Obsidian cape",
+  "noteData": 6569,
+  "loanId": 13443,
+  "nullopt": true,
+  "$fileid": 6568
+}
+,
+
+{"noteData": 6568, "noteTemplate": 799, "nullopt": true, "$fileid": 6569}
+,
+
+{
+  "members": true,
+  "widget_actions_1": "Wear",
+  "value": 60000,
+  "baseModel": 9631,
+  "modelTranslate_0": -4,
+  "model_zoom": 2086,
+  "rotation_1": 2031,
+  "rotation_0": 567,
+  "maleModels_0": {"id": 9638, "type": 0},
+  "femaleModels_0": {"id": 9640, "type": 0},
+  "name": "Fire cape",
+  "nullopt": true,
+  "$fileid": 6570
+}
+,
+
+{
+  "members": true,
+  "baseModel": 2528,
+  "modelTranslate_0": -5,
+  "modelTranslate_1": 7,
+  "model_zoom": 780,
+  "rotation_1": 220,
+  "rotation_2": 1860,
+  "rotation_0": 368,
+  "value": 300000,
+  "tradeable": true,
+  "color_replacements": [[61, 43528]],
+  "name": "Uncut onyx",
+  "noteData": 6572,
+  "nullopt": true,
+  "$fileid": 6571
+}
+,
+
+{"noteData": 6571, "noteTemplate": 799, "nullopt": true, "$fileid": 6572}
+,
+
+{
+  "members": true,
+  "baseModel": 2586,
+  "modelTranslate_0": -5,
+  "modelTranslate_1": 7,
+  "model_zoom": 780,
+  "rotation_1": 220,
+  "rotation_2": 1860,
+  "rotation_0": 368,
+  "maleModels_0": {"id": 516, "type": 0},
+  "femaleModels_0": {"id": 516, "type": 0},
+  "value": 300000,
+  "tradeable": true,
+  "color_replacements": [[918, 0], [931, 12], [478, 43053], [127, 0]],
+  "name": "Onyx",
+  "female_translate": [3, 245, 6],
+  "noteData": 6574,
+  "nullopt": true,
+  "$fileid": 6573
+}
+,
+
+{"noteData": 6573, "noteTemplate": 799, "nullopt": true, "$fileid": 6574}
+,
+
+{
+  "members": true,
+  "baseModel": 2677,
+  "modelTranslate_0": 3,
+  "modelTranslate_1": -35,
+  "model_zoom": 830,
+  "rotation_1": 180,
+  "rotation_2": 2024,
+  "rotation_0": 268,
+  "widget_actions_1": "Wear",
+  "value": 201000,
+  "tradeable": true,
+  "color_replacements": [[127, 43528], [82, 43297], [9152, 43045]],
+  "name": "Onyx ring",
+  "noteData": 6576,
+  "nullopt": true,
+  "$fileid": 6575
+}
+,
+
+{"noteData": 6575, "noteTemplate": 799, "nullopt": true, "$fileid": 6576}
+,
+
+{
+  "members": true,
+  "baseModel": 9635,
+  "modelTranslate_1": -16,
+  "model_zoom": 1020,
+  "rotation_1": 2020,
+  "rotation_0": 332,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 9643, "type": 0},
+  "femaleModels_0": {"id": 9645, "type": 0},
+  "value": 201000,
+  "tradeable": true,
+  "name": "Onyx necklace",
+  "noteData": 6578,
+  "nullopt": true,
+  "$fileid": 6577
+}
+,
+
+{"noteData": 6577, "noteTemplate": 799, "nullopt": true, "$fileid": 6578}
+,
+
+{
+  "members": true,
+  "baseModel": 9634,
+  "modelTranslate_0": 8,
+  "modelTranslate_1": 106,
+  "model_zoom": 370,
+  "rotation_1": 100,
+  "rotation_0": 304,
+  "value": 201000,
+  "tradeable": true,
+  "name": "Onyx amulet",
+  "noteData": 6580,
+  "nullopt": true,
+  "$fileid": 6579
+}
+,
+
+{"noteData": 6579, "noteTemplate": 799, "nullopt": true, "$fileid": 6580}
+,
+
+{
+  "members": true,
+  "baseModel": 9633,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": 16,
+  "model_zoom": 620,
+  "rotation_1": 68,
+  "rotation_0": 424,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 9642, "type": 0},
+  "femaleModels_0": {"id": 9644, "type": 0},
+  "value": 201000,
+  "tradeable": true,
+  "name": "Onyx amulet",
+  "noteData": 6582,
+  "nullopt": true,
+  "$fileid": 6581
+}
+,
+
+{"noteData": 6581, "noteTemplate": 799, "nullopt": true, "$fileid": 6582}
+,
+
+{
+  "members": true,
+  "baseModel": 2677,
+  "modelTranslate_0": 3,
+  "modelTranslate_1": -35,
+  "model_zoom": 830,
+  "rotation_1": 180,
+  "rotation_2": 2024,
+  "rotation_0": 268,
+  "widget_actions_1": "Wear",
+  "value": 202000,
+  "tradeable": true,
+  "color_replacements": [[9152, 43045], [82, 1709], [127, 43528]],
+  "name": "Ring of stone",
+  "noteData": 6584,
+  "nullopt": true,
+  "$fileid": 6583
+}
+,
+
+{"noteData": 6583, "noteTemplate": 799, "nullopt": true, "$fileid": 6584}
+,
+
+{
+  "members": true,
+  "baseModel": 9633,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": 16,
+  "model_zoom": 620,
+  "rotation_1": 68,
+  "rotation_0": 424,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 9642, "type": 0},
+  "femaleModels_0": {"id": 9644, "type": 0},
+  "value": 202000,
+  "tradeable": true,
+  "color_replacements": [[43074, 926], [43086, 1709]],
+  "name": "Amulet of fury",
+  "noteData": 6586,
+  "loanId": 13442,
+  "nullopt": true,
+  "$fileid": 6585
+}
+,
+
+{"noteData": 6585, "noteTemplate": 799, "nullopt": true, "$fileid": 6586}
+,
+
+{
+  "value": 360,
+  "baseModel": 3781,
+  "modelTranslate_0": -7,
+  "modelTranslate_1": -13,
+  "model_zoom": 630,
+  "rotation_1": 1340,
+  "rotation_0": 268,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 3780, "type": 0},
+  "femaleModels_0": {"id": 42331, "type": 0},
+  "members": true,
+  "tradeable": true,
+  "color_replacements": [[49, 99], [41, 90], [33, 82], [24, 74]],
+  "name": "White claws",
+  "noteData": 6588,
+  "nullopt": true,
+  "$fileid": 6587
+}
+,
+
+{"noteData": 6587, "noteTemplate": 799, "nullopt": true, "$fileid": 6588}
+,
+
+{
+  "value": 1248,
+  "baseModel": 2778,
+  "modelTranslate_0": -7,
+  "modelTranslate_1": -2,
+  "model_zoom": 1180,
+  "rotation_1": 1128,
+  "rotation_0": 420,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 550, "type": 0},
+  "femaleModels_0": {"id": 550, "type": 0},
+  "members": true,
+  "tradeable": true,
+  "color_replacements": [[61, 99]],
+  "name": "White battleaxe",
+  "female_translate": [3, 245, 6],
+  "noteData": 6590,
+  "nullopt": true,
+  "$fileid": 6589
+}
+,
+
+{"noteData": 6589, "noteTemplate": 799, "nullopt": true, "$fileid": 6590}
+,
+
+{
+  "baseModel": 2672,
+  "value": 240,
+  "modelTranslate_1": -4,
+  "model_zoom": 760,
+  "rotation_1": 1276,
+  "rotation_0": 472,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 533, "type": 0},
+  "femaleModels_0": {"id": 533, "type": 0},
+  "members": true,
+  "tradeable": true,
+  "color_replacements": [
+    [11200, 7110],
+    [6036, 6550],
+    [37, 74],
+    [74, 99],
+    [103, 115]
+  ],
+  "name": "White dagger",
+  "female_translate": [3, 245, 6],
+  "noteData": 6592,
+  "nullopt": true,
+  "$fileid": 6591
+}
+,
+
+{"noteData": 6591, "noteTemplate": 799, "nullopt": true, "$fileid": 6592}
+,
+
+{
+  "members": true,
+  "baseModel": 2478,
+  "value": 240,
+  "modelTranslate_1": -4,
+  "model_zoom": 760,
+  "rotation_1": 1276,
+  "rotation_0": 472,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 504, "type": 0},
+  "femaleModels_0": {"id": 504, "type": 0},
+  "tradeable": true,
+  "color_replacements": [
+    [11200, 7110],
+    [6036, 6550],
+    [37, 74],
+    [74, 99],
+    [103, 115]
+  ],
+  "name": "White dagger(p)",
+  "female_translate": [3, 245, 6],
+  "noteData": 6594,
+  "nullopt": true,
+  "$fileid": 6593
+}
+,
+
+{"noteData": 6593, "noteTemplate": 799, "nullopt": true, "$fileid": 6594}
+,
+
+{
+  "members": true,
+  "baseModel": 2478,
+  "value": 240,
+  "modelTranslate_1": -4,
+  "model_zoom": 760,
+  "rotation_1": 1276,
+  "rotation_0": 472,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 504, "type": 0},
+  "femaleModels_0": {"id": 504, "type": 0},
+  "tradeable": true,
+  "color_replacements": [
+    [11200, 7110],
+    [6036, 6550],
+    [37, 74],
+    [74, 99],
+    [103, 115]
+  ],
+  "name": "White dagger(p+)",
+  "female_translate": [3, 245, 6],
+  "noteData": 6596,
+  "nullopt": true,
+  "$fileid": 6595
+}
+,
+
+{"noteData": 6595, "noteTemplate": 799, "nullopt": true, "$fileid": 6596}
+,
+
+{
+  "members": true,
+  "baseModel": 2478,
+  "value": 240,
+  "modelTranslate_1": -4,
+  "model_zoom": 760,
+  "rotation_1": 1276,
+  "rotation_0": 472,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 504, "type": 0},
+  "femaleModels_0": {"id": 504, "type": 0},
+  "tradeable": true,
+  "color_replacements": [
+    [11200, 7110],
+    [6036, 6550],
+    [37, 74],
+    [74, 99],
+    [103, 115]
+  ],
+  "name": "White dagger(p++)",
+  "female_translate": [3, 245, 6],
+  "noteData": 6598,
+  "nullopt": true,
+  "$fileid": 6597
+}
+,
+
+{"noteData": 6597, "noteTemplate": 799, "nullopt": true, "$fileid": 6598}
+,
+
+{
+  "members": true,
+  "value": 1920,
+  "baseModel": 2791,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 555, "type": 0},
+  "femaleModels_0": {"id": 555, "type": 0},
+  "model_zoom": 2130,
+  "rotation_1": 48,
+  "rotation_0": 604,
+  "tradeable": true,
+  "color_replacements": [[61, 99], [33, 74]],
+  "name": "White halberd",
+  "female_translate": [3, 245, 6],
+  "noteData": 6600,
+  "nullopt": true,
+  "$fileid": 6599
+}
+,
+
+{"noteData": 6599, "noteTemplate": 799, "nullopt": true, "$fileid": 6600}
+,
+
+{
+  "value": 432,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 502, "type": 0},
+  "femaleModels_0": {"id": 502, "type": 0},
+  "baseModel": 2464,
+  "modelTranslate_1": -1,
+  "model_zoom": 1030,
+  "rotation_1": 1188,
+  "rotation_0": 392,
+  "members": true,
+  "tradeable": true,
+  "color_replacements": [[61, 99], [8722, 7073]],
+  "name": "White mace",
+  "female_translate": [3, 245, 6],
+  "noteData": 6602,
+  "nullopt": true,
+  "$fileid": 6601
+}
+,
+
+{"noteData": 6601, "noteTemplate": 799, "nullopt": true, "$fileid": 6602}
+,
+
+{
+  "value": 200,
+  "baseModel": 2810,
+  "modelTranslate_0": -5,
+  "modelTranslate_1": 2,
+  "model_zoom": 1490,
+  "rotation_1": 1400,
+  "rotation_0": 148,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 534, "type": 0},
+  "maleModels_1": 567,
+  "femaleModels_0": {"id": 534, "type": 0},
+  "femaleModels_1": 567,
+  "members": true,
+  "tradeable": true,
+  "color_replacements": [[61, 99], [7073, 99]],
+  "name": "White magic staff",
+  "female_translate": [3, 245, 6],
+  "noteData": 6604,
+  "nullopt": true,
+  "$fileid": 6603
+}
+,
+
+{"noteData": 6603, "noteTemplate": 799, "nullopt": true, "$fileid": 6604}
+,
+
+{
+  "value": 624,
+  "baseModel": 2604,
+  "modelTranslate_1": -3,
+  "model_zoom": 1040,
+  "rotation_1": 1156,
+  "rotation_0": 352,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 519, "type": 0},
+  "femaleModels_0": {"id": 519, "type": 0},
+  "members": true,
+  "tradeable": true,
+  "color_replacements": [[11200, 7110], [6036, 6550], [61, 99]],
+  "name": "White sword",
+  "female_translate": [3, 245, 6],
+  "noteData": 6606,
+  "nullopt": true,
+  "$fileid": 6605
+}
+,
+
+{"noteData": 6605, "noteTemplate": 799, "nullopt": true, "$fileid": 6606}
+,
+
+{
+  "value": 960,
+  "baseModel": 2602,
+  "modelTranslate_0": -13,
+  "modelTranslate_1": -2,
+  "model_zoom": 860,
+  "rotation_1": 1348,
+  "rotation_2": 96,
+  "rotation_0": 100,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 518, "type": 0},
+  "femaleModels_0": {"id": 518, "type": 0},
+  "members": true,
+  "tradeable": true,
+  "color_replacements": [[11200, 7110], [6036, 6550], [61, 99]],
+  "name": "White longsword",
+  "female_translate": [3, 245, 6],
+  "noteData": 6608,
+  "nullopt": true,
+  "$fileid": 6607
+}
+,
+
+{"noteData": 6607, "noteTemplate": 799, "nullopt": true, "$fileid": 6608}
+,
+
+{
+  "value": 1920,
+  "baseModel": 2754,
+  "modelTranslate_0": 3,
+  "modelTranslate_1": -9,
+  "model_zoom": 1380,
+  "rotation_1": 1396,
+  "rotation_0": 204,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 546, "type": 0},
+  "femaleModels_0": {"id": 546, "type": 0},
+  "members": true,
+  "tradeable": true,
+  "color_replacements": [[61, 99]],
+  "name": "White 2h sword",
+  "male_translate": [0, 2, 0],
+  "female_translate": [3, 245, 6],
+  "noteData": 6610,
+  "nullopt": true,
+  "$fileid": 6609
+}
+,
+
+{"noteData": 6609, "noteTemplate": 799, "nullopt": true, "$fileid": 6610}
+,
+
+{
+  "value": 768,
+  "baseModel": 2373,
+  "modelTranslate_0": -6,
+  "modelTranslate_1": 4,
+  "model_zoom": 1180,
+  "rotation_1": 1120,
+  "rotation_0": 300,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 490, "type": 0},
+  "femaleModels_0": {"id": 490, "type": 0},
+  "members": true,
+  "tradeable": true,
+  "color_replacements": [[61, 99]],
+  "name": "White scimitar",
+  "female_translate": [3, 245, 6],
+  "noteData": 6612,
+  "nullopt": true,
+  "$fileid": 6611
+}
+,
+
+{"noteData": 6611, "noteTemplate": 799, "nullopt": true, "$fileid": 6612}
+,
+
+{
+  "value": 980,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 542, "type": 0},
+  "femaleModels_0": {"id": 542, "type": 0},
+  "baseModel": 2731,
+  "modelTranslate_0": 3,
+  "modelTranslate_1": 3,
+  "model_zoom": 1050,
+  "rotation_1": 456,
+  "rotation_0": 344,
+  "members": true,
+  "tradeable": true,
+  "color_replacements": [[61, 99]],
+  "name": "White warhammer",
+  "female_translate": [3, 245, 6],
+  "noteData": 6614,
+  "nullopt": true,
+  "$fileid": 6613
+}
+,
+
+{"noteData": 6613, "noteTemplate": 799, "nullopt": true, "$fileid": 6614}
+,
+
+{
+  "members": true,
+  "value": 1440,
+  "baseModel": 2558,
+  "model_zoom": 1100,
+  "rotation_0": 576,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 301, "type": 0},
+  "femaleModels_0": {"id": 464, "type": 0},
+  "tradeable": true,
+  "color_replacements": [[33, 99], [49, 90], [41, 82]],
+  "name": "White chainbody",
+  "noteData": 6616,
+  "nullopt": true,
+  "$fileid": 6615
+}
+,
+
+{"noteData": 6615, "noteTemplate": 799, "nullopt": true, "$fileid": 6616}
+,
+
+{
+  "members": true,
+  "value": 3840,
+  "baseModel": 2605,
+  "modelTranslate_0": -1,
+  "model_zoom": 1250,
+  "rotation_0": 488,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 306, "type": 0},
+  "maleModels_1": 164,
+  "femaleModels_0": {"id": 468, "type": 0},
+  "femaleModels_1": 344,
+  "tradeable": true,
+  "color_replacements": [[24, 61], [61, 99], [41, 82]],
+  "name": "White platebody",
+  "noteData": 6618,
+  "nullopt": true,
+  "$fileid": 6617
+}
+,
+
+{"noteData": 6617, "noteTemplate": 799, "nullopt": true, "$fileid": 6618}
+,
+
+{
+  "value": 576,
+  "baseModel": 5037,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 4954, "type": 0},
+  "femaleModels_0": {"id": 5031, "type": 0},
+  "members": true,
+  "modelTranslate_0": 3,
+  "modelTranslate_1": -3,
+  "model_zoom": 770,
+  "rotation_1": 156,
+  "rotation_0": 164,
+  "tradeable": true,
+  "color_replacements": [[61, 82], [5400, 61], [5648, 99]],
+  "name": "White boots",
+  "noteData": 6620,
+  "nullopt": true,
+  "$fileid": 6619
+}
+,
+
+{"noteData": 6619, "noteTemplate": 799, "nullopt": true, "$fileid": 6620}
+,
+
+{
+  "members": true,
+  "value": 576,
+  "baseModel": 2833,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": -4,
+  "model_zoom": 640,
+  "rotation_1": 156,
+  "rotation_0": 108,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 219, "type": 0},
+  "femaleModels_0": {"id": 395, "type": 0},
+  "maleHeads_0": 38589,
+  "femaleHeads_0": 38586,
+  "tradeable": true,
+  "color_replacements": [[61, 99], [926, 8125]],
+  "name": "White med helm",
+  "noteData": 6622,
+  "nullopt": true,
+  "$fileid": 6621
+}
+,
+
+{"noteData": 6621, "noteTemplate": 799, "nullopt": true, "$fileid": 6622}
+,
+
+{
+  "members": true,
+  "value": 1056,
+  "baseModel": 2813,
+  "modelTranslate_0": -1,
+  "modelTranslate_1": 6,
+  "model_zoom": 800,
+  "rotation_1": 152,
+  "rotation_0": 160,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 218, "type": 0},
+  "femaleModels_0": {"id": 394, "type": 0},
+  "maleHeads_0": 40022,
+  "femaleHeads_0": 38894,
+  "tradeable": true,
+  "color_replacements": [[61, 99]],
+  "name": "White full helm",
+  "noteData": 6624,
+  "nullopt": true,
+  "$fileid": 6623
+}
+,
+
+{"noteData": 6623, "noteTemplate": 799, "nullopt": true, "$fileid": 6624}
+,
+
+{
+  "members": true,
+  "value": 1920,
+  "baseModel": 2582,
+  "modelTranslate_1": -8,
+  "model_zoom": 1740,
+  "rotation_0": 444,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 268, "type": 0},
+  "femaleModels_0": {"id": 432, "type": 0},
+  "tradeable": true,
+  "color_replacements": [[61, 99], [41, 82], [57, 99]],
+  "name": "White platelegs",
+  "noteData": 6626,
+  "nullopt": true,
+  "$fileid": 6625
+}
+,
+
+{"noteData": 6625, "noteTemplate": 799, "nullopt": true, "$fileid": 6626}
+,
+
+{
+  "members": true,
+  "value": 1920,
+  "baseModel": 2542,
+  "modelTranslate_0": 5,
+  "modelTranslate_1": 5,
+  "model_zoom": 1100,
+  "rotation_0": 620,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 266, "type": 0},
+  "femaleModels_0": {"id": 430, "type": 0},
+  "tradeable": true,
+  "color_replacements": [[61, 99], [25238, 82], [15242, 99]],
+  "name": "White plateskirt",
+  "noteData": 6628,
+  "nullopt": true,
+  "$fileid": 6627
+}
+,
+
+{"noteData": 6627, "noteTemplate": 799, "nullopt": true, "$fileid": 6628}
+,
+
+{
+  "members": true,
+  "value": 6,
+  "baseModel": 2649,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 179, "type": 0},
+  "femaleModels_0": {"id": 356, "type": 0},
+  "modelTranslate_0": 8,
+  "modelTranslate_1": -8,
+  "model_zoom": 930,
+  "rotation_1": 828,
+  "rotation_0": 420,
+  "tradeable": true,
+  "color_replacements": [[10004, 82]],
+  "name": "White gloves",
+  "noteData": 6630,
+  "nullopt": true,
+  "$fileid": 6629
+}
+,
+
+{"noteData": 6629, "noteTemplate": 799, "nullopt": true, "$fileid": 6630}
+,
+
+{
+  "members": true,
+  "value": 1152,
+  "baseModel": 2720,
+  "modelTranslate_0": 2,
+  "modelTranslate_1": 174,
+  "model_zoom": 1410,
+  "rotation_1": 60,
+  "rotation_0": 268,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 541, "type": 0},
+  "femaleModels_0": {"id": 541, "type": 0},
+  "tradeable": true,
+  "color_replacements": [[57, 99], [7054, 82]],
+  "name": "White sq shield",
+  "female_translate": [253, 245, 6],
+  "noteData": 6632,
+  "nullopt": true,
+  "$fileid": 6631
+}
+,
+
+{"noteData": 6631, "noteTemplate": 799, "nullopt": true, "$fileid": 6632}
+,
+
+{
+  "members": true,
+  "baseModel": 2339,
+  "modelTranslate_0": -6,
+  "modelTranslate_1": -14,
+  "model_zoom": 1560,
+  "rotation_1": 1104,
+  "rotation_0": 344,
+  "widget_actions_1": "Wear",
+  "value": 1632,
+  "maleModels_0": {"id": 486, "type": 0},
+  "femaleModels_0": {"id": 486, "type": 0},
+  "tradeable": true,
+  "color_replacements": [[57, 99], [7054, 82]],
+  "name": "White kiteshield",
+  "female_translate": [253, 245, 6],
+  "noteData": 6634,
+  "nullopt": true,
+  "$fileid": 6633
+}
+,
+
+{"noteData": 6633, "noteTemplate": 799, "nullopt": true, "$fileid": 6634}
+,
+
+{
+  "baseModel": 9653,
+  "maleModels_0": {"id": 9652, "type": 0},
+  "femaleModels_0": {"id": 9652, "type": 0},
+  "modelTranslate_0": 1,
+  "modelTranslate_1": -1,
+  "model_zoom": 740,
+  "rotation_1": 2028,
+  "rotation_0": 160,
+  "ambiance": 20,
+  "members": true,
+  "widget_actions_0": "Scan",
+  "widget_actions_1": "Contact",
+  "widget_actions_3": "Playback",
+  "widget_actions_4": "Destroy",
+  "name": "Commorb",
+  "nullopt": true,
+  "$fileid": 6635
+}
+,
+
+{
+  "baseModel": 9654,
+  "modelTranslate_0": 2,
+  "modelTranslate_1": -1,
+  "model_zoom": 810,
+  "rotation_1": 268,
+  "rotation_0": 144,
+  "members": true,
+  "name": "Solus's hat",
+  "nullopt": true,
+  "$fileid": 6636
+}
+,
+
+{
+  "dummyItem": 1,
+  "baseModel": 26395,
+  "modelTranslate_0": 15,
+  "modelTranslate_1": -20,
+  "model_zoom": 4486,
+  "rotation_1": 1812,
+  "rotation_0": 124,
+  "name": "Dark beast",
+  "nullopt": true,
+  "$fileid": 6637
+}
+,
+
+{
+  "baseModel": 9664,
+  "members": true,
+  "model_zoom": 380,
+  "rotation_0": 496,
+  "contrast": 33,
+  "ambiance": 33,
+  "name": "Colour wheel",
+  "nullopt": true,
+  "$fileid": 6638
+}
+,
+
+{
+  "baseModel": 8282,
+  "model_zoom": 770,
+  "rotation_1": 252,
+  "rotation_0": 376,
+  "members": true,
+  "widget_actions_4": "Destroy",
+  "name": "Hand mirror",
+  "extra": [{"prop": 59, "intvalue": 1, "stringvalue": null}],
+  "nullopt": true,
+  "$fileid": 6639
+}
+,
+
+{
+  "baseModel": 9666,
+  "ambiance": 40,
+  "contrast": 40,
+  "model_zoom": 340,
+  "rotation_0": 120,
+  "members": true,
+  "widget_actions_4": "Destroy",
+  "color_replacements": [[127, 949]],
+  "name": "Red crystal",
+  "nullopt": true,
+  "$fileid": 6640
+}
+,
+
+{
+  "baseModel": 9666,
+  "ambiance": 40,
+  "contrast": 40,
+  "model_zoom": 340,
+  "rotation_0": 120,
+  "members": true,
+  "widget_actions_4": "Destroy",
+  "color_replacements": [[127, 11200]],
+  "name": "Yellow crystal",
+  "extra": [{"prop": 59, "intvalue": 1, "stringvalue": null}],
+  "nullopt": true,
+  "$fileid": 6641
+}
+,
+
+{
+  "baseModel": 9666,
+  "ambiance": 40,
+  "contrast": 40,
+  "model_zoom": 340,
+  "rotation_0": 120,
+  "members": true,
+  "widget_actions_4": "Destroy",
+  "color_replacements": [[127, 22464]],
+  "name": "Green crystal",
+  "extra": [{"prop": 59, "intvalue": 1, "stringvalue": null}],
+  "nullopt": true,
+  "$fileid": 6642
+}
+,
+
+{
+  "baseModel": 9666,
+  "ambiance": 40,
+  "contrast": 40,
+  "model_zoom": 340,
+  "rotation_0": 120,
+  "members": true,
+  "widget_actions_4": "Destroy",
+  "color_replacements": [[127, 33728]],
+  "name": "Cyan crystal",
+  "extra": [{"prop": 59, "intvalue": 1, "stringvalue": null}],
+  "nullopt": true,
+  "$fileid": 6643
+}
+,
+
+{
+  "baseModel": 9666,
+  "ambiance": 40,
+  "contrast": 40,
+  "model_zoom": 340,
+  "rotation_0": 120,
+  "members": true,
+  "widget_actions_4": "Destroy",
+  "color_replacements": [[127, 43968]],
+  "name": "Blue crystal",
+  "extra": [{"prop": 59, "intvalue": 1, "stringvalue": null}],
+  "nullopt": true,
+  "$fileid": 6644
+}
+,
+
+{
+  "baseModel": 9666,
+  "ambiance": 40,
+  "contrast": 40,
+  "model_zoom": 340,
+  "rotation_0": 120,
+  "members": true,
+  "widget_actions_4": "Destroy",
+  "color_replacements": [[127, 55232]],
+  "name": "Magenta crystal",
+  "extra": [{"prop": 59, "intvalue": 1, "stringvalue": null}],
+  "nullopt": true,
+  "$fileid": 6645
+}
+,
+
+{
+  "baseModel": 9668,
+  "ambiance": 40,
+  "contrast": 40,
+  "model_zoom": 340,
+  "rotation_0": 120,
+  "members": true,
+  "widget_actions_4": "Destroy",
+  "name": "Fractured crystal",
+  "extra": [{"prop": 59, "intvalue": 1, "stringvalue": null}],
+  "nullopt": true,
+  "$fileid": 6646
+}
+,
+
+{
+  "baseModel": 9667,
+  "ambiance": 40,
+  "contrast": 40,
+  "model_zoom": 340,
+  "rotation_0": 120,
+  "members": true,
+  "widget_actions_4": "Destroy",
+  "name": "Fractured crystal",
+  "extra": [{"prop": 59, "intvalue": 1, "stringvalue": null}],
+  "nullopt": true,
+  "$fileid": 6647
+}
+,
+
+{
+  "widget_actions_0": "Read",
+  "widget_actions_4": "Destroy",
+  "baseModel": 2600,
+  "modelTranslate_1": 49,
+  "model_zoom": 750,
+  "rotation_1": 1380,
+  "rotation_0": 304,
+  "members": true,
+  "name": "Item list",
+  "nullopt": true,
+  "$fileid": 6648
+}
+,
+
+{
+  "value": 1,
+  "baseModel": 2543,
+  "model_zoom": 840,
+  "rotation_1": 152,
+  "rotation_0": 256,
+  "members": true,
+  "widget_actions_0": "Read",
+  "color_replacements": [[47677, 21673], [10351, 13522]],
+  "name": "Edern's journal",
+  "nullopt": true,
+  "$fileid": 6649
+}
+,
+
+{
+  "baseModel": 9666,
+  "ambiance": 40,
+  "contrast": 40,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": 1,
+  "model_zoom": 360,
+  "rotation_1": 1948,
+  "rotation_0": 104,
+  "members": true,
+  "color_replacements": [[127, 24]],
+  "name": "Blackened crystal",
+  "nullopt": true,
+  "$fileid": 6650
+}
+,
+
+{
+  "baseModel": 9666,
+  "ambiance": 40,
+  "contrast": 40,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": 1,
+  "model_zoom": 360,
+  "rotation_1": 1948,
+  "rotation_0": 104,
+  "members": true,
+  "name": "Newly made crystal",
+  "nullopt": true,
+  "$fileid": 6651
+}
+,
+
+{
+  "baseModel": 9669,
+  "ambiance": 40,
+  "contrast": 40,
+  "model_zoom": 450,
+  "rotation_0": 120,
+  "members": true,
+  "name": "Newly made crystal",
+  "nullopt": true,
+  "$fileid": 6652
+}
+,
+
+{
+  "baseModel": 9669,
+  "ambiance": 40,
+  "contrast": 40,
+  "model_zoom": 450,
+  "rotation_0": 120,
+  "members": true,
+  "widget_actions_4": "Destroy",
+  "name": "Crystal trinket",
+  "nullopt": true,
+  "$fileid": 6653
+}
+,
+
+{
+  "baseModel": 9768,
+  "modelTranslate_1": 3,
+  "model_zoom": 1360,
+  "rotation_1": 92,
+  "rotation_2": 1932,
+  "rotation_0": 416,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 9762, "type": 0},
+  "maleModels_1": 151,
+  "femaleModels_0": {"id": 9765, "type": 0},
+  "femaleModels_1": 332,
+  "color_replacements": [[8741, 12820]],
+  "name": "Camo top",
+  "nullopt": true,
+  "$fileid": 6654
+}
+,
+
+{
+  "baseModel": 9766,
+  "modelTranslate_1": 6,
+  "model_zoom": 2060,
+  "rotation_1": 1924,
+  "rotation_2": 104,
+  "rotation_0": 596,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 9761, "type": 0},
+  "femaleModels_0": {"id": 9764, "type": 0},
+  "name": "Camo bottoms",
+  "nullopt": true,
+  "$fileid": 6655
+}]}

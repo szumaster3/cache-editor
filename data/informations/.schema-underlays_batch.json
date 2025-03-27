@@ -1,0 +1,36 @@
+{
+  "type": "object",
+  "properties": {
+    "files": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "color": {
+            "oneOf": [
+              {
+                "type": "array",
+                "items": {"type": "number", "maximum": 255, "minimum": 0}
+              },
+              {"type": "null"}
+            ]
+          },
+          "material": {
+            "oneOf": [
+              {"type": "number", "maximum": 65535, "minimum": 0},
+              {"type": "null"}
+            ]
+          },
+          "material_tiling": {
+            "oneOf": [
+              {"type": "number", "maximum": 65535, "minimum": 0},
+              {"type": "null"}
+            ]
+          },
+          "unknown_0x04": {"oneOf": [{"const": true}, {"type": "null"}]},
+          "unknown_0x05": {"oneOf": [{"const": true}, {"type": "null"}]}
+        }
+      }
+    }
+  }
+}

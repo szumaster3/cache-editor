@@ -1,0 +1,2222 @@
+{"$schema":".schema-npcs_batch.json","files":[
+
+{
+  "animation_group": 313,
+  "actions_1": "Attack",
+  "combat": 63,
+  "name": "Queen spawn",
+  "models": [20718],
+  "movementCapabilities": 3,
+  "$fileid": 5248
+}
+,
+
+{
+  "animation_group": 108,
+  "boundSize": 1,
+  "actions_0": "Talk-to",
+  "combat": 0,
+  "color_replacements": [
+    [22426, 5797],
+    [22422, 5914],
+    [22040, 4626],
+    [5202, 5541],
+    [8747, 4626]
+  ],
+  "name": "Captain Errdo",
+  "models": [2908, 14824, 14825],
+  "headModels": [25874],
+  "movementCapabilities": 3,
+  "$fileid": 5249
+}
+,
+
+{
+  "animation_group": 245,
+  "actions_1": "Attack",
+  "unknown_63": true,
+  "combat": 93,
+  "name": "Scarab mage",
+  "models": [31020, 31019],
+  "movementCapabilities": 3,
+  "$fileid": 5250
+}
+,
+
+{
+  "animation_group": 246,
+  "boundSize": 2,
+  "actions_1": "Attack",
+  "combat": 106,
+  "name": "Locust rider",
+  "models": [31076, 31077, 31079],
+  "movementCapabilities": 3,
+  "$fileid": 5251
+}
+,
+
+{
+  "animation_group": 246,
+  "boundSize": 2,
+  "actions_1": "Attack",
+  "combat": 98,
+  "color_replacements": [
+    [40598, 1938],
+    [6938, 12056],
+    [7964, 12058],
+    [5910, 13076]
+  ],
+  "name": "Locust rider",
+  "models": [31076, 31077, 31078],
+  "movementCapabilities": 3,
+  "$fileid": 5252
+}
+,
+
+{
+  "animation_group": 844,
+  "boundSize": 3,
+  "actions_1": "Attack",
+  "unknown_63": true,
+  "combat": 191,
+  "name": "Giant scarab",
+  "models": [20821],
+  "movementCapabilities": 3,
+  "$fileid": 5253
+}
+,
+
+{
+  "animation_group": 245,
+  "actions_1": "Attack",
+  "unknown_63": true,
+  "combat": 66,
+  "name": "Scarab mage",
+  "models": [31020, 31019],
+  "movementCapabilities": 3,
+  "$fileid": 5254
+}
+,
+
+{
+  "animation_group": 246,
+  "boundSize": 2,
+  "actions_1": "Attack",
+  "combat": 68,
+  "name": "Locust rider",
+  "models": [31076, 31077, 31079],
+  "movementCapabilities": 3,
+  "$fileid": 5255
+}
+,
+
+{
+  "animation_group": 246,
+  "boundSize": 2,
+  "actions_1": "Attack",
+  "combat": 68,
+  "color_replacements": [
+    [40598, 1938],
+    [6938, 12056],
+    [7964, 12058],
+    [5910, 13076]
+  ],
+  "name": "Locust rider",
+  "models": [31076, 31077, 31078],
+  "movementCapabilities": 3,
+  "$fileid": 5256
+}
+,
+
+{
+  "animation_group": 4,
+  "actions_0": "Talk-to",
+  "actions_2": "Bank",
+  "actions_3": "Collect",
+  "combat": 1,
+  "morphs_1": {"unk1": 214761471, "unk2": [65535], "unk3": 344618755},
+  "$fileid": 5257
+}
+,
+
+{
+  "animation_group": 4,
+  "combat": 0,
+  "actions_0": "Talk-to",
+  "actions_2": "Bank",
+  "actions_3": "Collect",
+  "color_replacements": [
+    [25238, 10295],
+    [8741, 10283],
+    [24, 10270],
+    [61, 10283],
+    [9104, 10270],
+    [4550, 5673]
+  ],
+  "material_replacements": [[291, 202]],
+  "name": "Banker",
+  "models": [215, 6131, 292, 320, 10979, 10218, 266, 181],
+  "headModels": [39836, 40682],
+  "movementCapabilities": 3,
+  "$fileid": 5258
+}
+,
+
+{
+  "animation_group": 4,
+  "actions_0": "Talk-to",
+  "actions_2": "Bank",
+  "actions_3": "Collect",
+  "combat": 1,
+  "morphs_1": {"unk1": 214761471, "unk2": [65535], "unk3": 344749827},
+  "$fileid": 5259
+}
+,
+
+{
+  "animation_group": 4,
+  "combat": 0,
+  "actions_0": "Talk-to",
+  "actions_2": "Bank",
+  "actions_3": "Collect",
+  "color_replacements": [
+    [25238, 10295],
+    [8741, 10283],
+    [24, 10270],
+    [61, 10283],
+    [9104, 10270],
+    [4550, 5673]
+  ],
+  "material_replacements": [[249, 202]],
+  "name": "Banker",
+  "models": [378, 470, 484, 11348, 10706, 430, 358],
+  "headModels": [39090],
+  "movementCapabilities": 3,
+  "$fileid": 5260
+}
+,
+
+{
+  "animation_group": 4,
+  "combat": 1,
+  "morphs_1": {"unk1": 214695935, "unk2": [65535], "unk3": 344880899},
+  "$fileid": 5261
+}
+,
+
+{
+  "animation_group": 4,
+  "actions_0": "Talk-to",
+  "combat": 0,
+  "color_replacements": [
+    [4550, 6558],
+    [8741, 6558],
+    [9763, 7595],
+    [6439, 7485],
+    [6798, 3974],
+    [5002, 3974]
+  ],
+  "material_replacements": [[251, 250], [255, 273], [256, 202]],
+  "name": "Stonemason",
+  "models": [14174, 217, 10561, 40204, 11763, 14587, 10218, 11112, 181],
+  "headModels": [39458, 39686, 38096],
+  "movementCapabilities": 3,
+  "$fileid": 5262
+}
+,
+
+{
+  "animation_group": 4,
+  "combat": 1,
+  "morphs_1": {"unk1": 214695935, "unk2": [65535], "unk3": 345011971},
+  "$fileid": 5263
+}
+,
+
+{
+  "animation_group": 4,
+  "actions_0": "Talk-to",
+  "actions_2": "Trade",
+  "combat": 0,
+  "color_replacements": [
+    [4550, 6563],
+    [25238, 7485],
+    [926, 9015],
+    [43072, 9019],
+    [61, 9019]
+  ],
+  "name": "Nathifa",
+  "models": [376, 10078, 15010, 9026, 14588, 353, 9113, 358],
+  "headModels": [38799, 39163, 38864],
+  "movementCapabilities": 3,
+  "$fileid": 5264
+}
+,
+
+{
+  "animation_group": 4,
+  "combat": 1,
+  "morphs_1": {"unk1": 214695935, "unk2": [65535], "unk3": 345143043},
+  "$fileid": 5265
+}
+,
+
+{
+  "animation_group": 4,
+  "actions_0": "Talk-to",
+  "actions_2": "Trade",
+  "combat": 0,
+  "color_replacements": [
+    [4550, 6563],
+    [25238, 7485],
+    [926, 49054],
+    [43072, 9019],
+    [61, 9019]
+  ],
+  "name": "Urbi",
+  "models": [376, 390, 9026, 14588, 10706, 9113, 358],
+  "headModels": [38799, 38995],
+  "movementCapabilities": 3,
+  "$fileid": 5266
+}
+,
+
+{
+  "animation_group": 4,
+  "combat": 1,
+  "morphs_1": {"unk1": 214695935, "unk2": [65535], "unk3": 345274115},
+  "$fileid": 5267
+}
+,
+
+{
+  "animation_group": 4,
+  "actions_0": "Talk-to",
+  "actions_2": "Trade",
+  "combat": 0,
+  "color_replacements": [
+    [4550, 6563],
+    [9019, 50078],
+    [926, 49054],
+    [43072, 9019],
+    [49054, 7485],
+    [61, 9019]
+  ],
+  "name": "Jamila",
+  "models": [376, 390, 9026, 14588, 10706, 9024, 358],
+  "headModels": [38799, 38995],
+  "movementCapabilities": 3,
+  "$fileid": 5268
+}
+,
+
+{
+  "animation_group": 4,
+  "combat": 1,
+  "morphs_1": {"unk1": 214695935, "unk2": [65535], "unk3": 345405187},
+  "$fileid": 5269
+}
+,
+
+{
+  "animation_group": 29,
+  "actions_0": "Talk-to",
+  "combat": 0,
+  "unknown_63": true,
+  "color_replacements": [
+    [4550, 6558],
+    [943, 39822],
+    [926, 39822],
+    [8741, 37778],
+    [4626, 9019],
+    [10353, 39822]
+  ],
+  "material_replacements": [[251, 202], [255, 257]],
+  "name": "Sophanem guard",
+  "models": [20762, 456, 20761, 10706, 20757, 20763, 358],
+  "headModels": [39032],
+  "translations": ["0403f506"],
+  "movementCapabilities": 3,
+  "$fileid": 5270
+}
+,
+
+{
+  "animation_group": 4,
+  "combat": 1,
+  "morphs_1": {"unk1": 214695935, "unk2": [65535], "unk3": 345536259},
+  "$fileid": 5271
+}
+,
+
+{
+  "animation_group": 4,
+  "actions_0": "Talk-to",
+  "combat": 0,
+  "unknown_63": true,
+  "color_replacements": [
+    [4550, 6558],
+    [943, 39822],
+    [926, 39822],
+    [8741, 37778],
+    [4626, 9019],
+    [10353, 39822]
+  ],
+  "material_replacements": [[251, 202], [255, 257]],
+  "name": "Sophanem guard",
+  "models": [20762, 456, 14588, 10706, 20760, 20763, 358],
+  "headModels": [39032],
+  "translations": ["0403f506"],
+  "movementCapabilities": 3,
+  "$fileid": 5272
+}
+,
+
+{
+  "animation_group": 4,
+  "combat": 1,
+  "morphs_1": {"unk1": 214695935, "unk2": [65535], "unk3": 345667331},
+  "$fileid": 5273
+}
+,
+
+{
+  "animation_group": 29,
+  "actions_0": "Talk-to",
+  "combat": 0,
+  "unknown_63": true,
+  "color_replacements": [
+    [4550, 6558],
+    [10353, 39822],
+    [4626, 9019],
+    [939, 39822],
+    [943, 39822],
+    [926, 39822]
+  ],
+  "material_replacements": [[255, 258]],
+  "name": "Sophanem guard",
+  "models": [20750, 251, 11758, 11762, 14587, 10218, 20756, 6090, 181],
+  "headModels": [39698, 38096],
+  "movementCapabilities": 3,
+  "$fileid": 5274
+}
+,
+
+{
+  "animation_group": 4,
+  "combat": 1,
+  "morphs_1": {"unk1": 214695935, "unk2": [65535], "unk3": 345798403},
+  "$fileid": 5275
+}
+,
+
+{
+  "animation_group": 4,
+  "actions_0": "Talk-to",
+  "combat": 0,
+  "unknown_63": true,
+  "color_replacements": [
+    [4550, 6558],
+    [10353, 39822],
+    [4626, 9019],
+    [939, 39822],
+    [943, 39822],
+    [926, 39822]
+  ],
+  "material_replacements": [[255, 258]],
+  "name": "Sophanem guard",
+  "models": [20750, 251, 11758, 11762, 20746, 10218, 11201, 6090, 181],
+  "headModels": [39698, 38096],
+  "movementCapabilities": 3,
+  "$fileid": 5276
+}
+,
+
+{
+  "animation_group": 4,
+  "combat": 0,
+  "color_replacements": [
+    [4550, 6563],
+    [49054, 2700],
+    [926, 2700],
+    [10275, 5392],
+    [10304, 9019],
+    [10283, 5656]
+  ],
+  "name": "Menaphite guard",
+  "models": [
+    20750,
+    5104,
+    11758,
+    20754,
+    20747,
+    10218,
+    9955,
+    20751,
+    185,
+    20755,
+    11762
+  ],
+  "headModels": [39698, 39178, 39223],
+  "movementCapabilities": 1,
+  "$fileid": 5277
+}
+,
+
+{
+  "animation_group": 4,
+  "combat": 0,
+  "color_replacements": [
+    [4550, 6563],
+    [49054, 43280],
+    [926, 43280],
+    [4626, 5640],
+    [10304, 9019],
+    [10283, 5656]
+  ],
+  "name": "Coenus",
+  "models": [
+    20750,
+    5104,
+    11758,
+    20754,
+    20747,
+    10218,
+    9955,
+    20751,
+    185,
+    20755,
+    11762
+  ],
+  "headModels": [39687, 39178, 39223],
+  "movementCapabilities": 1,
+  "$fileid": 5278
+}
+,
+
+{
+  "animation_group": 4,
+  "boundSize": 1,
+  "actions_0": "Talk-to",
+  "combat": 0,
+  "unknown_63": true,
+  "color_replacements": [
+    [41, 5442],
+    [49054, 926],
+    [7700, 926],
+    [25238, 9019],
+    [4550, 6558],
+    [5442, 6558]
+  ],
+  "name": "Jex",
+  "models": [6130, 248, 6134, 40165, 6135, 6133, 185],
+  "headModels": [39275, 39771, 39930],
+  "movementCapabilities": 3,
+  "$fileid": 5279
+}
+,
+
+{
+  "animation_group": 4,
+  "unknown_63": true,
+  "combat": 1,
+  "morphs_1": {"unk1": 215285759, "unk2": [], "unk3": 346126083},
+  "$fileid": 5280
+}
+,
+
+{
+  "animation_group": 4,
+  "combat": 0,
+  "actions_0": "Talk-to",
+  "unknown_63": true,
+  "color_replacements": [[4550, 4657], [25238, 10351], [8741, 10334]],
+  "name": "Maisa",
+  "models": [364, 391, 20830, 470, 332, 10706, 20829, 419, 358],
+  "headModels": [39170, 38826, 38871],
+  "translations": ["06fdf506"],
+  "movementCapabilities": 3,
+  "$fileid": 5281
+}
+,
+
+{
+  "animation_group": 4,
+  "unknown_63": true,
+  "combat": 1,
+  "morphs_1": {"unk1": 215023615, "unk2": [924, 924], "unk3": 346322691},
+  "$fileid": 5282
+}
+,
+
+{
+  "animation_group": 4,
+  "unknown_63": true,
+  "combat": 1,
+  "morphs_1": {
+    "unk1": 214630399,
+    "unk2": [
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      924,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535
+    ],
+    "unk3": 60585731
+  },
+  "$fileid": 5283
+}
+,
+
+{
+  "animation_group": 4,
+  "boundSize": 1,
+  "actions_0": "Talk-to",
+  "combat": 0,
+  "unknown_63": true,
+  "color_replacements": [
+    [4550, 4647],
+    [25238, 10508],
+    [6798, 7700],
+    [8741, 10508],
+    [8860, 10512]
+  ],
+  "material_replacements": [
+    [268, 202],
+    [272, 257],
+    [292, 250],
+    [314, 202],
+    [313, 257]
+  ],
+  "name": "Osman",
+  "models": [208, 249, 310, 10980, 176, 275, 181],
+  "headModels": [38588, 39254],
+  "movementCapabilities": 3,
+  "$fileid": 5284
+}
+,
+
+{
+  "animation_group": 4,
+  "boundSize": 1,
+  "actions_0": "Talk-to",
+  "combat": 0,
+  "unknown_63": true,
+  "color_replacements": [
+    [4550, 4647],
+    [25238, 10508],
+    [6798, 7700],
+    [8741, 10508]
+  ],
+  "material_replacements": [[268, 202], [272, 257], [292, 250], [314, 202]],
+  "name": "Osman",
+  "models": [208, 249, 170, 176, 292, 275, 181],
+  "headModels": [38588, 39254],
+  "movementCapabilities": 3,
+  "$fileid": 5285
+}
+,
+
+{
+  "animation_group": 4,
+  "boundSize": 1,
+  "combat": 0,
+  "unknown_63": true,
+  "color_replacements": [
+    [4550, 4647],
+    [25238, 10508],
+    [6798, 7700],
+    [8741, 10508]
+  ],
+  "material_replacements": [[268, 202], [272, 257], [314, 202]],
+  "name": "Osman",
+  "models": [208, 254, 249, 170, 176, 181, 292, 490],
+  "headModels": [38588, 39254],
+  "movementCapabilities": 3,
+  "$fileid": 5286
+}
+,
+
+{
+  "animation_group": 4,
+  "boundSize": 1,
+  "combat": 0,
+  "unknown_63": true,
+  "color_replacements": [
+    [4550, 4647],
+    [25238, 10508],
+    [6798, 7700],
+    [8741, 10508]
+  ],
+  "material_replacements": [[268, 202], [272, 257], [314, 202]],
+  "name": "Osman",
+  "models": [208, 254, 249, 170, 176, 181, 292, 6099],
+  "headModels": [38588, 39254],
+  "movementCapabilities": 3,
+  "$fileid": 5287
+}
+,
+
+{
+  "animation_group": 4,
+  "boundSize": 1,
+  "combat": 0,
+  "unknown_63": true,
+  "color_replacements": [
+    [4550, 6558],
+    [61, 9015],
+    [4626, 40334],
+    [6798, 47209],
+    [25238, 42908],
+    [43072, 6558]
+  ],
+  "material_replacements": [[228, 426], [291, 257]],
+  "name": "Embalmer",
+  "models": [6130, 251, 280, 6134, 32593, 10218, 6135, 266, 185],
+  "headModels": [38096, 39771, 39930],
+  "movementCapabilities": 1,
+  "$fileid": 5288
+}
+,
+
+{
+  "animation_group": 4,
+  "boundSize": 1,
+  "combat": 0,
+  "unknown_63": true,
+  "color_replacements": [
+    [4550, 6558],
+    [61, 9015],
+    [4626, 40334],
+    [54397, 6435],
+    [25238, 42908],
+    [8741, 9015]
+  ],
+  "material_replacements": [[228, 426], [291, 257]],
+  "name": "Carpenter",
+  "models": [230, 250, 40200, 151, 176, 491, 266, 185],
+  "headModels": [38642, 39930],
+  "movementCapabilities": 1,
+  "$fileid": 5289
+}
+,
+
+{
+  "animation_group": 4,
+  "boundSize": 1,
+  "actions_0": "Talk-to",
+  "combat": 0,
+  "unknown_63": true,
+  "color_replacements": [
+    [4550, 6558],
+    [61, 9015],
+    [4626, 40334],
+    [54397, 6435],
+    [25238, 6435],
+    [8741, 9015]
+  ],
+  "name": "Linen worker",
+  "models": [201, 6130, 247, 6134, 326, 151, 176, 4047, 265, 185],
+  "headModels": [39771, 39256, 39392, 39930],
+  "movementCapabilities": 1,
+  "$fileid": 5290
+}
+,
+
+{
+  "animation_group": 4,
+  "boundSize": 1,
+  "combat": 0,
+  "unknown_63": true,
+  "color_replacements": [
+    [41, 5442],
+    [49054, 926],
+    [7700, 926],
+    [25238, 9019],
+    [4550, 6558],
+    [5442, 6558]
+  ],
+  "name": "Priest",
+  "models": [6130, 248, 6134, 40165, 6135, 6133, 185],
+  "headModels": [39771, 39275, 39930],
+  "movementCapabilities": 1,
+  "$fileid": 5291
+}
+,
+
+{
+  "animation_group": 844,
+  "boundSize": 3,
+  "combat": 0,
+  "unknown_63": true,
+  "name": "Giant scarab",
+  "models": [20821],
+  "movementCapabilities": 3,
+  "$fileid": 5292
+}
+,
+
+{
+  "animation_group": 67,
+  "boundSize": 1,
+  "actions_1": "Attack",
+  "combat": 13,
+  "color_replacements": [
+    [13506, 10304],
+    [13501, 10304],
+    [13493, 10295],
+    [13489, 10295],
+    [13497, 10299]
+  ],
+  "name": "Zombie",
+  "models": [21102, 21058, 21040, 21087, 21116, 21073, 21140],
+  "movementCapabilities": 3,
+  "$fileid": 5293
+}
+,
+
+{
+  "animation_group": 67,
+  "boundSize": 1,
+  "actions_1": "Attack",
+  "combat": 13,
+  "color_replacements": [
+    [13506, 10304],
+    [13501, 10304],
+    [13493, 10295],
+    [13489, 10295],
+    [13497, 10299]
+  ],
+  "name": "Zombie",
+  "models": [21105, 21059, 21041, 21088, 21117, 21073, 21140],
+  "movementCapabilities": 3,
+  "$fileid": 5294
+}
+,
+
+{
+  "animation_group": 67,
+  "boundSize": 1,
+  "actions_1": "Attack",
+  "combat": 13,
+  "color_replacements": [
+    [13506, 10304],
+    [13501, 10304],
+    [13493, 10295],
+    [13489, 10295],
+    [13497, 10299]
+  ],
+  "name": "Zombie",
+  "models": [21003, 20972, 20953, 20991, 21015, 20983, 21036],
+  "movementCapabilities": 3,
+  "$fileid": 5295
+}
+,
+
+{
+  "animation_group": 67,
+  "boundSize": 1,
+  "actions_1": "Attack",
+  "combat": 13,
+  "color_replacements": [
+    [13506, 10304],
+    [13501, 10304],
+    [13493, 10295],
+    [13489, 10295],
+    [13497, 10299]
+  ],
+  "name": "Zombie",
+  "models": [21002, 20973, 20954, 20992, 21016, 20984, 21036],
+  "movementCapabilities": 3,
+  "$fileid": 5296
+}
+,
+
+{
+  "animation_group": 67,
+  "boundSize": 1,
+  "actions_1": "Attack",
+  "combat": 13,
+  "color_replacements": [
+    [13506, 10304],
+    [13501, 10304],
+    [13493, 10295],
+    [13489, 10295],
+    [13497, 10299]
+  ],
+  "name": "Zombie",
+  "models": [21004, 20974, 20955, 20990, 21017, 20985, 21036],
+  "movementCapabilities": 3,
+  "$fileid": 5297
+}
+,
+
+{
+  "animation_group": 67,
+  "boundSize": 1,
+  "actions_1": "Attack",
+  "combat": 13,
+  "color_replacements": [
+    [13506, 32819],
+    [13501, 32819],
+    [13493, 32811],
+    [13489, 32811],
+    [13497, 32815]
+  ],
+  "name": "Zombie",
+  "models": [21103, 21055, 21039, 21084, 21115, 21075, 21140],
+  "movementCapabilities": 3,
+  "$fileid": 5298
+}
+,
+
+{
+  "animation_group": 67,
+  "boundSize": 1,
+  "actions_1": "Attack",
+  "combat": 13,
+  "color_replacements": [
+    [13506, 32819],
+    [13501, 32819],
+    [13493, 32811],
+    [13489, 32811],
+    [13497, 32815]
+  ],
+  "name": "Zombie",
+  "models": [21106, 21060, 21042, 21089, 21118, 21076, 21140],
+  "movementCapabilities": 3,
+  "$fileid": 5299
+}
+,
+
+{
+  "animation_group": 67,
+  "boundSize": 1,
+  "actions_1": "Attack",
+  "combat": 13,
+  "color_replacements": [
+    [13506, 32819],
+    [13501, 32819],
+    [13493, 32811],
+    [13489, 32811],
+    [13497, 32815]
+  ],
+  "name": "Zombie",
+  "models": [21102, 21061, 21043, 21090, 21119, 21076, 21140],
+  "movementCapabilities": 3,
+  "$fileid": 5300
+}
+,
+
+{
+  "animation_group": 67,
+  "boundSize": 1,
+  "actions_1": "Attack",
+  "combat": 13,
+  "color_replacements": [
+    [13506, 32819],
+    [13501, 32819],
+    [13493, 32811],
+    [13489, 32811],
+    [13497, 32815]
+  ],
+  "name": "Zombie",
+  "models": [21005, 20975, 20956, 20993, 21018, 20986, 21036],
+  "movementCapabilities": 3,
+  "$fileid": 5301
+}
+,
+
+{
+  "animation_group": 67,
+  "boundSize": 1,
+  "actions_1": "Attack",
+  "combat": 13,
+  "color_replacements": [
+    [13506, 32819],
+    [13501, 32819],
+    [13493, 32811],
+    [13489, 32811],
+    [13497, 32815]
+  ],
+  "name": "Zombie",
+  "models": [21006, 20976, 20957, 20994, 21019, 20986, 21036],
+  "movementCapabilities": 3,
+  "$fileid": 5302
+}
+,
+
+{
+  "animation_group": 67,
+  "boundSize": 1,
+  "actions_1": "Attack",
+  "combat": 13,
+  "color_replacements": [
+    [13506, 32819],
+    [13501, 32819],
+    [13493, 32811],
+    [13489, 32811],
+    [13497, 32815]
+  ],
+  "name": "Zombie",
+  "models": [21002, 20977, 20958, 20995, 21020, 20986, 21036],
+  "movementCapabilities": 3,
+  "$fileid": 5303
+}
+,
+
+{
+  "animation_group": 67,
+  "boundSize": 1,
+  "actions_1": "Attack",
+  "combat": 13,
+  "color_replacements": [
+    [13506, 54340],
+    [13501, 54340],
+    [13493, 54331],
+    [13489, 54331],
+    [13497, 54336],
+    [13485, 54323]
+  ],
+  "name": "Zombie",
+  "models": [21112, 21070, 21052, 21099, 21128, 21083, 21140],
+  "movementCapabilities": 3,
+  "$fileid": 5304
+}
+,
+
+{
+  "animation_group": 67,
+  "boundSize": 1,
+  "actions_1": "Attack",
+  "combat": 13,
+  "color_replacements": [
+    [13506, 54340],
+    [13501, 54340],
+    [13493, 54331],
+    [13489, 54331],
+    [13497, 54336],
+    [13485, 54323]
+  ],
+  "name": "Zombie",
+  "models": [21102, 21071, 21053, 21100, 21129, 21083],
+  "movementCapabilities": 3,
+  "$fileid": 5305
+}
+,
+
+{
+  "animation_group": 67,
+  "boundSize": 1,
+  "actions_1": "Attack",
+  "combat": 13,
+  "color_replacements": [
+    [13506, 54340],
+    [13501, 54340],
+    [13493, 54331],
+    [13489, 54331],
+    [13497, 54336],
+    [13485, 54323]
+  ],
+  "name": "Zombie",
+  "models": [21002, 20969, 20962, 20999, 21026, 20982, 21036],
+  "movementCapabilities": 3,
+  "$fileid": 5306
+}
+,
+
+{
+  "animation_group": 67,
+  "boundSize": 1,
+  "actions_1": "Attack",
+  "combat": 13,
+  "color_replacements": [
+    [13506, 54340],
+    [13501, 54340],
+    [13493, 54331],
+    [13489, 54331],
+    [13497, 54336],
+    [13485, 54323]
+  ],
+  "name": "Zombie",
+  "models": [21012, 20970, 20963, 21000, 21027, 20982, 21036],
+  "movementCapabilities": 3,
+  "$fileid": 5307
+}
+,
+
+{
+  "animation_group": 67,
+  "boundSize": 1,
+  "actions_1": "Attack",
+  "combat": 18,
+  "color_replacements": [
+    [13506, 54340],
+    [13501, 54340],
+    [13493, 54331],
+    [13489, 54331],
+    [13497, 54336],
+    [13485, 54323]
+  ],
+  "name": "Zombie",
+  "models": [21101, 21072, 21054, 21100, 21130, 21083],
+  "movementCapabilities": 3,
+  "$fileid": 5308
+}
+,
+
+{
+  "animation_group": 38,
+  "boundSize": 1,
+  "actions_1": "Attack",
+  "combat": 18,
+  "color_replacements": [
+    [13506, 54340],
+    [13501, 54340],
+    [13493, 54331],
+    [13489, 54331],
+    [13497, 54336],
+    [13485, 54323]
+  ],
+  "name": "Zombie",
+  "models": [21112, 21070, 21052, 21099, 21128, 21083, 21031],
+  "movementCapabilities": 3,
+  "$fileid": 5309
+}
+,
+
+{
+  "animation_group": 67,
+  "boundSize": 1,
+  "actions_1": "Attack",
+  "combat": 18,
+  "color_replacements": [
+    [13506, 15405],
+    [13501, 15405],
+    [13493, 15397],
+    [13489, 15397],
+    [13497, 16425]
+  ],
+  "name": "Zombie",
+  "models": [21111, 21067, 21049, 21098, 21125, 21081, 21140],
+  "movementCapabilities": 3,
+  "$fileid": 5310
+}
+,
+
+{
+  "animation_group": 67,
+  "boundSize": 1,
+  "actions_1": "Attack",
+  "combat": 18,
+  "color_replacements": [
+    [13506, 15405],
+    [13501, 15405],
+    [13493, 15397],
+    [13489, 15397],
+    [13497, 16425]
+  ],
+  "name": "Zombie",
+  "models": [21101, 21068, 21050, 21085, 21126, 21082, 21140],
+  "movementCapabilities": 3,
+  "$fileid": 5311
+}
+,
+
+{
+  "animation_group": 67,
+  "boundSize": 1,
+  "actions_1": "Attack",
+  "combat": 18,
+  "color_replacements": [
+    [13506, 15405],
+    [13501, 15405],
+    [13493, 15397],
+    [13489, 15397],
+    [13497, 16425]
+  ],
+  "name": "Zombie",
+  "models": [21009, 20965, 20959, 20990, 21023, 20983, 21036],
+  "movementCapabilities": 3,
+  "$fileid": 5312
+}
+,
+
+{
+  "animation_group": 67,
+  "boundSize": 1,
+  "actions_1": "Attack",
+  "combat": 18,
+  "color_replacements": [
+    [13506, 15405],
+    [13501, 15405],
+    [13493, 15397],
+    [13489, 15397],
+    [13497, 16425]
+  ],
+  "name": "Zombie",
+  "models": [21010, 20967, 20960, 20998, 21024, 20982, 21036],
+  "movementCapabilities": 3,
+  "$fileid": 5313
+}
+,
+
+{
+  "animation_group": 38,
+  "boundSize": 1,
+  "actions_1": "Attack",
+  "combat": 24,
+  "color_replacements": [
+    [13506, 10304],
+    [13501, 10304],
+    [13493, 10295],
+    [13489, 10295],
+    [13497, 10299]
+  ],
+  "name": "Zombie",
+  "models": [21105, 21059, 21041, 21088, 21117, 21073, 21136],
+  "movementCapabilities": 3,
+  "$fileid": 5314
+}
+,
+
+{
+  "animation_group": 68,
+  "boundSize": 1,
+  "actions_1": "Attack",
+  "combat": 24,
+  "color_replacements": [
+    [13506, 10304],
+    [13501, 10304],
+    [13493, 10295],
+    [13489, 10295],
+    [13497, 10299]
+  ],
+  "name": "Zombie",
+  "models": [21002, 20973, 20954, 20992, 21016, 20984, 21029],
+  "movementCapabilities": 3,
+  "$fileid": 5315
+}
+,
+
+{
+  "animation_group": 38,
+  "boundSize": 1,
+  "actions_1": "Attack",
+  "combat": 24,
+  "color_replacements": [
+    [13506, 32819],
+    [13501, 32819],
+    [13493, 32811],
+    [13489, 32811],
+    [13497, 32815]
+  ],
+  "material_replacements": [[445, 144]],
+  "name": "Zombie",
+  "models": [21107, 21063, 21045, 21092, 21121, 21077, 21139],
+  "movementCapabilities": 3,
+  "$fileid": 5316
+}
+,
+
+{
+  "animation_group": 38,
+  "boundSize": 1,
+  "actions_1": "Attack",
+  "combat": 24,
+  "color_replacements": [
+    [13506, 32819],
+    [13501, 32819],
+    [13493, 32811],
+    [13489, 32811],
+    [13497, 32815]
+  ],
+  "name": "Zombie",
+  "models": [20948],
+  "movementCapabilities": 3,
+  "$fileid": 5317
+}
+,
+
+{
+  "animation_group": 38,
+  "boundSize": 1,
+  "actions_1": "Attack",
+  "combat": 24,
+  "color_replacements": [
+    [13506, 32819],
+    [13501, 32819],
+    [13493, 32811],
+    [13489, 32811],
+    [13497, 32815]
+  ],
+  "name": "Zombie",
+  "models": [21106, 21060, 21042, 21089, 21118, 21076, 21139],
+  "movementCapabilities": 3,
+  "$fileid": 5318
+}
+,
+
+{
+  "animation_group": 38,
+  "boundSize": 1,
+  "actions_1": "Attack",
+  "combat": 24,
+  "color_replacements": [
+    [13506, 54340],
+    [13501, 54340],
+    [13493, 54331],
+    [13489, 54331],
+    [13497, 54336],
+    [13485, 54323]
+  ],
+  "name": "Zombie",
+  "models": [21112, 21070, 21052, 21099, 21128, 21083, 21134],
+  "movementCapabilities": 3,
+  "$fileid": 5319
+}
+,
+
+{
+  "animation_group": 69,
+  "boundSize": 1,
+  "actions_1": "Attack",
+  "combat": 24,
+  "color_replacements": [
+    [13506, 54340],
+    [13501, 54340],
+    [13493, 54331],
+    [13489, 54331],
+    [13497, 54336],
+    [13485, 54323]
+  ],
+  "name": "Zombie",
+  "models": [21002, 20969, 20962, 20999, 21026, 20982, 21031],
+  "movementCapabilities": 3,
+  "$fileid": 5320
+}
+,
+
+{
+  "animation_group": 38,
+  "boundSize": 1,
+  "actions_1": "Attack",
+  "combat": 24,
+  "color_replacements": [
+    [13506, 54340],
+    [13501, 54340],
+    [13493, 54331],
+    [13489, 54331],
+    [13497, 54336],
+    [13485, 54323]
+  ],
+  "name": "Zombie",
+  "models": [21012, 20970, 20963, 21000, 21027, 20982, 21035],
+  "movementCapabilities": 3,
+  "$fileid": 5321
+}
+,
+
+{
+  "animation_group": 68,
+  "boundSize": 1,
+  "actions_1": "Attack",
+  "combat": 24,
+  "color_replacements": [
+    [13506, 54340],
+    [13501, 54340],
+    [13493, 54331],
+    [13489, 54331],
+    [13497, 54336],
+    [13485, 54323]
+  ],
+  "name": "Zombie",
+  "models": [21002, 20971, 20964, 21000, 21028, 20982, 21029],
+  "movementCapabilities": 3,
+  "$fileid": 5322
+}
+,
+
+{
+  "animation_group": 38,
+  "boundSize": 1,
+  "actions_1": "Attack",
+  "combat": 24,
+  "color_replacements": [
+    [13506, 15405],
+    [13501, 15405],
+    [13493, 15397],
+    [13489, 15397],
+    [13497, 16425]
+  ],
+  "name": "Zombie",
+  "models": [21111, 21067, 21049, 21098, 21125, 21081, 21136],
+  "movementCapabilities": 3,
+  "$fileid": 5323
+}
+,
+
+{
+  "animation_group": 38,
+  "boundSize": 1,
+  "actions_1": "Attack",
+  "combat": 24,
+  "color_replacements": [
+    [13506, 15405],
+    [13501, 15405],
+    [13493, 15397],
+    [13489, 15397],
+    [13497, 16425]
+  ],
+  "name": "Zombie",
+  "models": [21101, 21068, 21050, 21085, 21126, 21082, 21139],
+  "movementCapabilities": 3,
+  "$fileid": 5324
+}
+,
+
+{
+  "animation_group": 38,
+  "boundSize": 1,
+  "actions_1": "Attack",
+  "combat": 24,
+  "color_replacements": [
+    [13506, 15405],
+    [13501, 15405],
+    [13493, 15397],
+    [13489, 15397],
+    [13497, 16425]
+  ],
+  "name": "Zombie",
+  "models": [21102, 21069, 21051, 21085, 21127, 21082, 21134],
+  "movementCapabilities": 3,
+  "$fileid": 5325
+}
+,
+
+{
+  "animation_group": 38,
+  "boundSize": 1,
+  "actions_1": "Attack",
+  "combat": 24,
+  "color_replacements": [
+    [13506, 15405],
+    [13501, 15405],
+    [13493, 15397],
+    [13489, 15397],
+    [13497, 16425]
+  ],
+  "name": "Zombie",
+  "models": [21009, 20965, 20959, 20990, 21023, 20983, 21035],
+  "movementCapabilities": 3,
+  "$fileid": 5326
+}
+,
+
+{
+  "animation_group": 38,
+  "boundSize": 1,
+  "actions_1": "Attack",
+  "combat": 24,
+  "color_replacements": [
+    [13506, 15405],
+    [13501, 15405],
+    [13493, 15397],
+    [13489, 15397],
+    [13497, 16425]
+  ],
+  "name": "Zombie",
+  "models": [21011, 20968, 20961, 20990, 21025, 20988, 21031],
+  "movementCapabilities": 3,
+  "$fileid": 5327
+}
+,
+
+{
+  "animation_group": 38,
+  "boundSize": 1,
+  "actions_1": "Attack",
+  "combat": 25,
+  "color_replacements": [
+    [13506, 10304],
+    [13501, 10304],
+    [13493, 10295],
+    [13489, 10295],
+    [13497, 10299],
+    [61, 5652]
+  ],
+  "name": "Zombie",
+  "models": [21102, 21058, 21040, 21087, 21116, 21073, 21133],
+  "movementCapabilities": 3,
+  "$fileid": 5328
+}
+,
+
+{
+  "animation_group": 38,
+  "boundSize": 1,
+  "actions_1": "Attack",
+  "combat": 25,
+  "color_replacements": [
+    [13506, 10304],
+    [13501, 10304],
+    [13493, 10295],
+    [13489, 10295],
+    [13497, 10299],
+    [61, 5652]
+  ],
+  "name": "Zombie",
+  "models": [21105, 21059, 21041, 21088, 21117, 21073, 21133],
+  "movementCapabilities": 3,
+  "$fileid": 5329
+}
+,
+
+{
+  "animation_group": 38,
+  "boundSize": 1,
+  "actions_1": "Attack",
+  "combat": 25,
+  "color_replacements": [
+    [13506, 10304],
+    [13501, 10304],
+    [13493, 10295],
+    [13489, 10295],
+    [13497, 10299],
+    [61, 5652]
+  ],
+  "name": "Zombie",
+  "models": [21003, 20972, 20953, 20991, 21015, 20983, 21030],
+  "movementCapabilities": 3,
+  "$fileid": 5330
+}
+,
+
+{
+  "animation_group": 38,
+  "boundSize": 1,
+  "actions_1": "Attack",
+  "combat": 25,
+  "color_replacements": [
+    [13506, 10304],
+    [13501, 10304],
+    [13493, 10295],
+    [13489, 10295],
+    [13497, 10299],
+    [61, 5652]
+  ],
+  "name": "Zombie",
+  "models": [21002, 20973, 20954, 20992, 21016, 20984, 21030],
+  "movementCapabilities": 3,
+  "$fileid": 5331
+}
+,
+
+{
+  "animation_group": 71,
+  "boundSize": 1,
+  "actions_1": "Attack",
+  "combat": 22,
+  "name": "Skeleton",
+  "models": [21170, 21178, 21160, 21158, 21181, 21188],
+  "movementCapabilities": 3,
+  "$fileid": 5332
+}
+,
+
+{
+  "animation_group": 71,
+  "boundSize": 1,
+  "actions_1": "Attack",
+  "combat": 22,
+  "name": "Skeleton",
+  "models": [21168, 21177, 21159, 21156, 21180, 21188],
+  "movementCapabilities": 3,
+  "$fileid": 5333
+}
+,
+
+{
+  "animation_group": 70,
+  "boundSize": 1,
+  "actions_1": "Attack",
+  "combat": 22,
+  "name": "Skeleton",
+  "models": [21169, 21161, 21157, 21182, 21201, 21186],
+  "movementCapabilities": 3,
+  "$fileid": 5334
+}
+,
+
+{
+  "animation_group": 71,
+  "boundSize": 1,
+  "actions_1": "Attack",
+  "combat": 21,
+  "name": "Skeleton",
+  "models": [21170, 21178, 21160, 21158, 21181, 21188],
+  "movementCapabilities": 3,
+  "$fileid": 5335
+}
+,
+
+{
+  "animation_group": 71,
+  "boundSize": 1,
+  "actions_1": "Attack",
+  "combat": 21,
+  "name": "Skeleton",
+  "models": [21168, 21177, 21159, 21156, 21180, 21188],
+  "movementCapabilities": 3,
+  "$fileid": 5336
+}
+,
+
+{
+  "animation_group": 70,
+  "boundSize": 1,
+  "actions_1": "Attack",
+  "combat": 25,
+  "name": "Skeleton",
+  "models": [21173, 21179, 21160, 21156, 21182, 21200, 21186],
+  "movementCapabilities": 3,
+  "$fileid": 5337
+}
+,
+
+{
+  "animation_group": 70,
+  "boundSize": 1,
+  "actions_1": "Attack",
+  "combat": 25,
+  "name": "Skeleton",
+  "models": [21175, 21179, 21161, 21156, 21181, 21205, 21187],
+  "movementCapabilities": 3,
+  "$fileid": 5338
+}
+,
+
+{
+  "animation_group": 70,
+  "boundSize": 1,
+  "actions_1": "Attack",
+  "combat": 25,
+  "name": "Skeleton",
+  "models": [21174, 21179, 21161, 21156, 21182, 21199, 21186],
+  "movementCapabilities": 3,
+  "$fileid": 5339
+}
+,
+
+{
+  "animation_group": 71,
+  "boundSize": 1,
+  "actions_1": "Attack",
+  "combat": 25,
+  "name": "Skeleton",
+  "models": [21169, 21161, 21157, 21181, 21204, 21188],
+  "movementCapabilities": 3,
+  "$fileid": 5340
+}
+,
+
+{
+  "animation_group": 1417,
+  "boundSize": 1,
+  "scaleXZ": 108,
+  "scaleY": 108,
+  "actions_1": "Attack",
+  "combat": 45,
+  "name": "Skeleton",
+  "models": [21166],
+  "movementCapabilities": 3,
+  "$fileid": 5341
+}
+,
+
+{
+  "animation_group": 74,
+  "boundSize": 1,
+  "ambience": 20,
+  "modelContract": 20,
+  "actions_1": "Attack",
+  "combat": 19,
+  "name": "Ghost",
+  "models": [21147],
+  "movementCapabilities": 3,
+  "$fileid": 5342
+}
+,
+
+{
+  "animation_group": 74,
+  "boundSize": 1,
+  "ambience": 20,
+  "modelContract": 20,
+  "actions_1": "Attack",
+  "combat": 19,
+  "name": "Ghost",
+  "models": [21148],
+  "movementCapabilities": 3,
+  "$fileid": 5343
+}
+,
+
+{
+  "animation_group": 74,
+  "boundSize": 1,
+  "ambience": 20,
+  "modelContract": 20,
+  "actions_1": "Attack",
+  "combat": 19,
+  "name": "Ghost",
+  "models": [21149],
+  "movementCapabilities": 3,
+  "$fileid": 5344
+}
+,
+
+{
+  "animation_group": 74,
+  "boundSize": 1,
+  "ambience": 20,
+  "modelContract": 20,
+  "actions_1": "Attack",
+  "combat": 19,
+  "name": "Ghost",
+  "models": [21143],
+  "movementCapabilities": 3,
+  "$fileid": 5345
+}
+,
+
+{
+  "animation_group": 74,
+  "boundSize": 1,
+  "ambience": 20,
+  "modelContract": 20,
+  "actions_1": "Attack",
+  "combat": 19,
+  "name": "Ghost",
+  "models": [21144],
+  "movementCapabilities": 3,
+  "$fileid": 5346
+}
+,
+
+{
+  "animation_group": 74,
+  "boundSize": 1,
+  "ambience": 20,
+  "modelContract": 20,
+  "actions_1": "Attack",
+  "combat": 19,
+  "name": "Ghost",
+  "models": [21145],
+  "movementCapabilities": 3,
+  "$fileid": 5347
+}
+,
+
+{
+  "animation_group": 74,
+  "boundSize": 1,
+  "ambience": 20,
+  "modelContract": 20,
+  "actions_1": "Attack",
+  "combat": 19,
+  "name": "Ghost",
+  "models": [21146],
+  "movementCapabilities": 3,
+  "$fileid": 5348
+}
+,
+
+{
+  "animation_group": 74,
+  "boundSize": 1,
+  "ambience": 20,
+  "modelContract": 20,
+  "actions_1": "Attack",
+  "combat": 19,
+  "name": "Ghost",
+  "models": [21143],
+  "movementCapabilities": 3,
+  "$fileid": 5349
+}
+,
+
+{
+  "animation_group": 74,
+  "boundSize": 1,
+  "ambience": 20,
+  "modelContract": 20,
+  "actions_1": "Attack",
+  "combat": 19,
+  "material_replacements": [[236, 91]],
+  "name": "Ghost",
+  "models": [21146],
+  "movementCapabilities": 3,
+  "$fileid": 5350
+}
+,
+
+{
+  "animation_group": 74,
+  "boundSize": 1,
+  "ambience": 20,
+  "modelContract": 20,
+  "actions_1": "Attack",
+  "combat": 19,
+  "name": "Ghost",
+  "models": [21149],
+  "movementCapabilities": 3,
+  "$fileid": 5351
+}
+,
+
+{
+  "animation_group": 74,
+  "boundSize": 1,
+  "ambience": 20,
+  "modelContract": 20,
+  "actions_1": "Attack",
+  "combat": 19,
+  "name": "Ghost",
+  "models": [21147],
+  "movementCapabilities": 3,
+  "$fileid": 5352
+}
+,
+
+{
+  "animation_group": 70,
+  "boundSize": 1,
+  "actions_1": "Attack",
+  "combat": 68,
+  "color_replacements": [
+    [10308, 11726],
+    [10304, 11722],
+    [10299, 11718],
+    [10295, 11726],
+    [10291, 11726],
+    [10287, 10685]
+  ],
+  "name": "Undead one",
+  "models": [21169, 21161, 21157, 21182, 21201, 21186],
+  "movementCapabilities": 3,
+  "$fileid": 5353
+}
+,
+
+{
+  "animation_group": 70,
+  "boundSize": 1,
+  "actions_1": "Attack",
+  "combat": 61,
+  "color_replacements": [
+    [10308, 11726],
+    [10304, 11722],
+    [10299, 11718],
+    [10295, 11726],
+    [10291, 11726],
+    [10287, 10685]
+  ],
+  "name": "Undead one",
+  "models": [21175, 21179, 21161, 21156, 21181, 21205, 21187],
+  "movementCapabilities": 3,
+  "$fileid": 5354
+}
+,
+
+{
+  "animation_group": 67,
+  "boundSize": 1,
+  "actions_1": "Attack",
+  "combat": 68,
+  "color_replacements": [
+    [13506, 7349],
+    [13501, 7349],
+    [13493, 7341],
+    [13489, 7341],
+    [13497, 8369],
+    [13481, 8481]
+  ],
+  "name": "Undead one",
+  "models": [21001, 20978, 20951, 20989, 21013, 20981, 21036],
+  "movementCapabilities": 3,
+  "$fileid": 5355
+}
+,
+
+{
+  "animation_group": 67,
+  "boundSize": 1,
+  "actions_1": "Attack",
+  "combat": 68,
+  "color_replacements": [
+    [13506, 7349],
+    [13501, 7349],
+    [13493, 7341],
+    [13489, 7341],
+    [13497, 8369],
+    [13481, 8481]
+  ],
+  "name": "Undead one",
+  "models": [21007, 20979, 20952, 20996, 21013, 20987, 21036],
+  "movementCapabilities": 3,
+  "$fileid": 5356
+}
+,
+
+{
+  "animation_group": 38,
+  "boundSize": 1,
+  "actions_1": "Attack",
+  "combat": 73,
+  "color_replacements": [
+    [13506, 7349],
+    [13501, 7349],
+    [13493, 7341],
+    [13489, 7341],
+    [13497, 8369],
+    [13481, 8481]
+  ],
+  "name": "Undead one",
+  "models": [21110, 21066, 21048, 21095, 21124, 21080, 21131],
+  "movementCapabilities": 3,
+  "$fileid": 5357
+}
+,
+
+{
+  "animation_group": 38,
+  "boundSize": 1,
+  "actions_1": "Attack",
+  "combat": 73,
+  "color_replacements": [
+    [13506, 7349],
+    [13501, 7349],
+    [13493, 7341],
+    [13489, 7341],
+    [13497, 8369],
+    [13481, 8481]
+  ],
+  "name": "Undead one",
+  "models": [21008, 20980, 20952, 20997, 21022, 20987, 21032],
+  "movementCapabilities": 3,
+  "$fileid": 5358
+}
+,
+
+{
+  "animation_group": 72,
+  "boundSize": 1,
+  "scaleXZ": 108,
+  "scaleY": 108,
+  "actions_1": "Attack",
+  "combat": 80,
+  "name": "Giant skeleton",
+  "models": [21166],
+  "movementCapabilities": 3,
+  "$fileid": 5359
+}
+,
+
+{
+  "animation_group": 785,
+  "combat": 96,
+  "name": "Mummy ashes",
+  "models": [20903],
+  "movementCapabilities": 3,
+  "$fileid": 5360
+}
+,
+
+{
+  "animation_group": 1251,
+  "ambience": 60,
+  "modelContract": 60,
+  "actions_1": "Attack",
+  "boundSize": 1,
+  "combat": 115,
+  "name": "Waterfiend",
+  "models": [34580],
+  "movementCapabilities": 3,
+  "$fileid": 5361
+}
+,
+
+{
+  "animation_group": 77,
+  "boundSize": 4,
+  "scaleXZ": 110,
+  "scaleY": 110,
+  "actions_1": "Attack",
+  "combat": 227,
+  "color_replacements": [
+    [2469, 16695],
+    [912, 16801],
+    [1938, 16677],
+    [1814, 16681],
+    [2588, 17713],
+    [910, 16796]
+  ],
+  "name": "Brutal green dragon",
+  "models": [17407, 17426, 17418],
+  "movementCapabilities": 3,
+  "$fileid": 5362
+}
+,
+
+{
+  "animation_group": 77,
+  "boundSize": 4,
+  "ambience": 15,
+  "modelContract": 15,
+  "scaleXZ": 110,
+  "scaleY": 110,
+  "actions_1": "Attack",
+  "combat": 304,
+  "name": "Mithril dragon",
+  "models": [24575, 24584, 24580],
+  "movementCapabilities": 3,
+  "$fileid": 5363
+}
+,
+
+{
+  "animation_group": 102,
+  "actions_1": "Attack",
+  "combat": 132,
+  "name": "Confused barbarian",
+  "models": [26626, 214, 252, 26640, 26643, 26620, 26617, 26622, 11747, 11788],
+  "movementCapabilities": 3,
+  "$fileid": 5364
+}
+,
+
+{
+  "animation_group": 71,
+  "boundSize": 1,
+  "actions_1": "Attack",
+  "combat": 60,
+  "name": "Skeleton",
+  "models": [21168, 21177, 21159, 21156, 21180, 21188],
+  "movementCapabilities": 3,
+  "$fileid": 5365
+}
+,
+
+{
+  "animation_group": 70,
+  "boundSize": 1,
+  "actions_1": "Attack",
+  "combat": 60,
+  "name": "Skeleton",
+  "models": [21169, 21161, 21157, 21182, 21201, 21186],
+  "movementCapabilities": 3,
+  "$fileid": 5366
+}
+,
+
+{
+  "animation_group": 70,
+  "boundSize": 1,
+  "actions_1": "Attack",
+  "combat": 85,
+  "name": "Skeleton",
+  "models": [21173, 21179, 21160, 21156, 21182, 21200, 21186],
+  "movementCapabilities": 3,
+  "$fileid": 5367
+}
+,
+
+{
+  "animation_group": 70,
+  "boundSize": 1,
+  "actions_1": "Attack",
+  "combat": 85,
+  "name": "Skeleton",
+  "models": [21175, 21179, 21161, 21156, 21181, 21205, 21187],
+  "movementCapabilities": 3,
+  "$fileid": 5368
+}
+,
+
+{
+  "animation_group": 74,
+  "boundSize": 1,
+  "ambience": 20,
+  "modelContract": 20,
+  "actions_1": "Attack",
+  "combat": 77,
+  "name": "Ghost",
+  "models": [21147],
+  "movementCapabilities": 3,
+  "$fileid": 5369
+}
+,
+
+{
+  "animation_group": 74,
+  "boundSize": 1,
+  "ambience": 20,
+  "modelContract": 20,
+  "actions_1": "Attack",
+  "combat": 77,
+  "name": "Ghost",
+  "models": [21143],
+  "movementCapabilities": 3,
+  "$fileid": 5370
+}
+,
+
+{
+  "animation_group": 74,
+  "boundSize": 1,
+  "ambience": 20,
+  "modelContract": 20,
+  "actions_1": "Attack",
+  "combat": 77,
+  "name": "Ghost",
+  "models": [21144],
+  "movementCapabilities": 3,
+  "$fileid": 5371
+}
+,
+
+{
+  "animation_group": 74,
+  "boundSize": 1,
+  "ambience": 20,
+  "modelContract": 20,
+  "actions_1": "Attack",
+  "combat": 76,
+  "name": "Ghost",
+  "models": [21149],
+  "movementCapabilities": 3,
+  "$fileid": 5372
+}
+,
+
+{
+  "animation_group": 74,
+  "boundSize": 1,
+  "ambience": 20,
+  "modelContract": 20,
+  "actions_1": "Attack",
+  "combat": 76,
+  "name": "Ghost",
+  "models": [21145],
+  "movementCapabilities": 3,
+  "$fileid": 5373
+}
+,
+
+{
+  "animation_group": 74,
+  "boundSize": 1,
+  "ambience": 20,
+  "modelContract": 20,
+  "actions_1": "Attack",
+  "combat": 76,
+  "name": "Ghost",
+  "models": [21146],
+  "movementCapabilities": 3,
+  "$fileid": 5374
+}
+,
+
+{
+  "animation_group": 69,
+  "boundSize": 1,
+  "actions_1": "Attack",
+  "combat": 30,
+  "color_replacements": [
+    [13506, 10304],
+    [13501, 10304],
+    [13493, 10295],
+    [13489, 10295],
+    [13497, 10299]
+  ],
+  "name": "Zombie",
+  "models": [21102, 21058, 21040, 21087, 21116, 21073, 21140],
+  "movementCapabilities": 3,
+  "$fileid": 5375
+}]}

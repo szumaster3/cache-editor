@@ -1,0 +1,3987 @@
+{"$schema":".schema-items_batch.json","files":[
+
+{"noteData": 767, "noteTemplate": 799, "nullopt": true, "$fileid": 768}
+,
+
+{
+  "baseModel": 25771,
+  "modelTranslate_0": -3,
+  "modelTranslate_1": -10,
+  "model_zoom": 2020,
+  "rotation_1": 198,
+  "rotation_0": 279,
+  "widget_actions_0": "Read",
+  "widget_actions_4": "Destroy",
+  "name": "Certificate",
+  "nullopt": true,
+  "$fileid": 769
+}
+,
+
+{
+  "widget_actions_0": "Wear",
+  "value": 1,
+  "baseModel": 2521,
+  "modelTranslate_1": 1,
+  "model_zoom": 1940,
+  "rotation_0": 572,
+  "color_replacements": [[25238, 62928]],
+  "name": "Picture",
+  "nullopt": true,
+  "$fileid": 770
+}
+,
+
+{
+  "baseModel": 2412,
+  "value": 15,
+  "members": true,
+  "modelTranslate_0": -8,
+  "modelTranslate_1": -21,
+  "model_zoom": 940,
+  "rotation_1": 152,
+  "rotation_0": 268,
+  "name": "Dramen branch",
+  "nullopt": true,
+  "$fileid": 771
+}
+,
+
+{
+  "value": 15,
+  "members": true,
+  "baseModel": 2648,
+  "modelTranslate_1": -23,
+  "model_zoom": 1460,
+  "rotation_1": 1416,
+  "rotation_0": 196,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 534, "type": 0},
+  "femaleModels_0": {"id": 534, "type": 0},
+  "name": "Dramen staff",
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 772
+}
+,
+
+{
+  "value": 2025,
+  "baseModel": 2677,
+  "modelTranslate_0": 3,
+  "modelTranslate_1": -35,
+  "model_zoom": 830,
+  "rotation_1": 180,
+  "rotation_2": 2024,
+  "rotation_0": 268,
+  "widget_actions_1": "Wear",
+  "members": true,
+  "color_replacements": [[127, 960]],
+  "name": "'perfect' ring",
+  "nullopt": true,
+  "$fileid": 773
+}
+,
+
+{
+  "value": 2175,
+  "baseModel": 2506,
+  "modelTranslate_0": 7,
+  "modelTranslate_1": 66,
+  "model_zoom": 465,
+  "rotation_1": 166,
+  "rotation_0": 290,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 281, "type": 0},
+  "femaleModels_0": {"id": 445, "type": 0},
+  "members": true,
+  "color_replacements": [[41, 960]],
+  "name": "'perfect' necklace",
+  "nullopt": true,
+  "$fileid": 774
+}
+,
+
+{
+  "members": true,
+  "baseModel": 2649,
+  "modelTranslate_0": 8,
+  "modelTranslate_1": -8,
+  "model_zoom": 930,
+  "rotation_1": 828,
+  "rotation_0": 420,
+  "widget_actions_1": "Wear",
+  "widget_actions_4": "Destroy",
+  "maleModels_0": {"id": 179, "type": 0},
+  "femaleModels_0": {"id": 356, "type": 0},
+  "color_replacements": [[10004, 123], [5532, 10299]],
+  "name": "Cooking gauntlets",
+  "nullopt": true,
+  "$fileid": 775
+}
+,
+
+{
+  "members": true,
+  "baseModel": 2649,
+  "modelTranslate_0": 8,
+  "modelTranslate_1": -8,
+  "model_zoom": 930,
+  "rotation_1": 828,
+  "rotation_0": 420,
+  "widget_actions_1": "Wear",
+  "widget_actions_4": "Destroy",
+  "maleModels_0": {"id": 179, "type": 0},
+  "femaleModels_0": {"id": 356, "type": 0},
+  "color_replacements": [[10004, 8666]],
+  "name": "Goldsmith gauntlets",
+  "nullopt": true,
+  "$fileid": 776
+}
+,
+
+{
+  "members": true,
+  "baseModel": 2649,
+  "modelTranslate_0": 8,
+  "modelTranslate_1": -8,
+  "model_zoom": 930,
+  "rotation_1": 828,
+  "rotation_0": 420,
+  "widget_actions_1": "Wear",
+  "widget_actions_4": "Destroy",
+  "maleModels_0": {"id": 179, "type": 0},
+  "femaleModels_0": {"id": 356, "type": 0},
+  "color_replacements": [[10004, 1825]],
+  "name": "Chaos gauntlets",
+  "nullopt": true,
+  "$fileid": 777
+}
+,
+
+{
+  "members": true,
+  "baseModel": 2649,
+  "modelTranslate_0": 8,
+  "modelTranslate_1": -8,
+  "model_zoom": 930,
+  "rotation_1": 828,
+  "rotation_0": 420,
+  "widget_actions_1": "Wear",
+  "widget_actions_4": "Destroy",
+  "maleModels_0": {"id": 179, "type": 0},
+  "femaleModels_0": {"id": 356, "type": 0},
+  "color_replacements": [[10004, 43072]],
+  "name": "Family gauntlets",
+  "nullopt": true,
+  "$fileid": 778
+}
+,
+
+{
+  "baseModel": 2688,
+  "members": true,
+  "modelTranslate_1": 18,
+  "rotation_1": 148,
+  "rotation_0": 356,
+  "name": "Crest part",
+  "nullopt": true,
+  "$fileid": 779
+}
+,
+
+{
+  "baseModel": 2691,
+  "members": true,
+  "modelTranslate_1": 18,
+  "rotation_1": 148,
+  "rotation_0": 356,
+  "name": "Crest part",
+  "nullopt": true,
+  "$fileid": 780
+}
+,
+
+{
+  "baseModel": 2693,
+  "members": true,
+  "modelTranslate_1": 18,
+  "rotation_1": 148,
+  "rotation_0": 356,
+  "name": "Crest part",
+  "nullopt": true,
+  "$fileid": 781
+}
+,
+
+{
+  "baseModel": 2369,
+  "members": true,
+  "modelTranslate_1": 18,
+  "rotation_1": 148,
+  "rotation_0": 356,
+  "name": "Family crest",
+  "nullopt": true,
+  "$fileid": 782
+}
+,
+
+{
+  "members": true,
+  "value": 2,
+  "baseModel": 2625,
+  "modelTranslate_0": 2,
+  "modelTranslate_1": 64,
+  "model_zoom": 900,
+  "rotation_1": 76,
+  "rotation_0": 264,
+  "color_replacements": [[6024, 6028]],
+  "name": "Bark sample",
+  "nullopt": true,
+  "$fileid": 783
+}
+,
+
+{
+  "members": true,
+  "value": 2,
+  "baseModel": 2543,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": -21,
+  "model_zoom": 830,
+  "rotation_1": 116,
+  "rotation_0": 244,
+  "widget_actions_0": "Read",
+  "color_replacements": [[5018, 18721], [61, 7952], [11177, 7952]],
+  "name": "Translation book",
+  "nullopt": true,
+  "$fileid": 784
+}
+,
+
+{
+  "members": true,
+  "value": 2,
+  "baseModel": 2633,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": 22,
+  "model_zoom": 860,
+  "rotation_1": 120,
+  "rotation_0": 276,
+  "widget_actions_0": "Read",
+  "color_replacements": [[5018, 17682], [10351, 15591]],
+  "name": "Glough's journal",
+  "nullopt": true,
+  "$fileid": 785
+}
+,
+
+{
+  "members": true,
+  "value": 2,
+  "baseModel": 2600,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": 7,
+  "model_zoom": 1040,
+  "rotation_1": 120,
+  "rotation_0": 380,
+  "widget_actions_0": "Read",
+  "name": "Hazelmere's scroll",
+  "nullopt": true,
+  "$fileid": 786
+}
+,
+
+{
+  "members": true,
+  "value": 2,
+  "baseModel": 2600,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": 7,
+  "model_zoom": 1040,
+  "rotation_1": 120,
+  "rotation_0": 380,
+  "widget_actions_0": "Read",
+  "name": "Lumber order",
+  "nullopt": true,
+  "$fileid": 787
+}
+,
+
+{
+  "members": true,
+  "baseModel": 2372,
+  "modelTranslate_0": -3,
+  "modelTranslate_1": 5,
+  "model_zoom": 700,
+  "rotation_1": 20,
+  "rotation_0": 328,
+  "name": "Glough's key",
+  "nullopt": true,
+  "$fileid": 788
+}
+,
+
+{
+  "baseModel": 2530,
+  "members": true,
+  "modelTranslate_0": -3,
+  "modelTranslate_1": 1,
+  "model_zoom": 1240,
+  "rotation_1": 88,
+  "rotation_0": 440,
+  "name": "Twigs",
+  "nullopt": true,
+  "$fileid": 789
+}
+,
+
+{
+  "baseModel": 2533,
+  "members": true,
+  "modelTranslate_0": -1,
+  "modelTranslate_1": 3,
+  "model_zoom": 1230,
+  "rotation_1": 2036,
+  "rotation_0": 364,
+  "name": "Twigs",
+  "nullopt": true,
+  "$fileid": 790
+}
+,
+
+{
+  "baseModel": 2538,
+  "members": true,
+  "model_zoom": 1170,
+  "rotation_1": 48,
+  "rotation_0": 420,
+  "name": "Twigs",
+  "nullopt": true,
+  "$fileid": 791
+}
+,
+
+{
+  "baseModel": 2526,
+  "members": true,
+  "modelTranslate_0": -2,
+  "modelTranslate_1": 3,
+  "model_zoom": 1500,
+  "rotation_0": 452,
+  "name": "Twigs",
+  "nullopt": true,
+  "$fileid": 792
+}
+,
+
+{
+  "baseModel": 2394,
+  "modelTranslate_1": -12,
+  "model_zoom": 1290,
+  "rotation_1": 1952,
+  "rotation_0": 144,
+  "members": true,
+  "color_replacements": [[5790, 41240]],
+  "name": "Daconia rock",
+  "nullopt": true,
+  "$fileid": 793
+}
+,
+
+{
+  "members": true,
+  "value": 2,
+  "baseModel": 2600,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": 7,
+  "model_zoom": 1040,
+  "rotation_1": 120,
+  "rotation_0": 380,
+  "widget_actions_0": "Read",
+  "name": "Invasion plans",
+  "nullopt": true,
+  "$fileid": 794
+}
+,
+
+{
+  "value": 2,
+  "members": true,
+  "baseModel": 3065,
+  "modelTranslate_0": 4,
+  "modelTranslate_1": 21,
+  "model_zoom": 710,
+  "rotation_1": 1832,
+  "rotation_0": 60,
+  "name": "War ship",
+  "nullopt": true,
+  "$fileid": 795
+}
+,
+
+{
+  "baseModel": 552,
+  "maleModels_0": {"id": 538, "type": 0},
+  "femaleModels_0": {"id": 538, "type": 0},
+  "modelTranslate_0": 29,
+  "modelTranslate_1": 32,
+  "model_zoom": 510,
+  "rotation_0": 1956,
+  "name": "Exploding vial",
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 796
+}
+,
+
+{
+  "baseModel": 506,
+  "maleModels_0": {"id": 506, "type": 0},
+  "femaleModels_0": {"id": 506, "type": 0},
+  "modelTranslate_0": -30,
+  "modelTranslate_1": 33,
+  "model_zoom": 470,
+  "rotation_0": 1896,
+  "name": "Herb bowl",
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 797
+}
+,
+
+{
+  "baseModel": 529,
+  "modelTranslate_0": 8,
+  "modelTranslate_1": -5,
+  "model_zoom": 610,
+  "rotation_1": 532,
+  "rotation_2": 1844,
+  "rotation_0": 440,
+  "maleModels_0": {"id": 529, "type": 0},
+  "femaleModels_0": {"id": 529, "type": 0},
+  "name": "Grinder",
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 798
+}
+,
+
+{
+  "baseModel": 2429,
+  "dummyItem": 2,
+  "stackable_1": true,
+  "modelTranslate_1": 2,
+  "model_zoom": 760,
+  "rotation_1": 28,
+  "rotation_0": 552,
+  "nullopt": true,
+  "$fileid": 799
+}
+,
+
+{
+  "members": true,
+  "value": 4,
+  "baseModel": 2752,
+  "maleModels_0": {"id": 545, "type": 0},
+  "femaleModels_0": {"id": 545, "type": 0},
+  "modelTranslate_0": 1,
+  "modelTranslate_1": 6,
+  "model_zoom": 750,
+  "rotation_1": 208,
+  "rotation_0": 388,
+  "widget_actions_1": "Wield",
+  "stackable_1": true,
+  "tradeable": true,
+  "color_replacements": [[61, 5652], [57, 5652]],
+  "name": "Bronze thrownaxe",
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 800
+}
+,
+
+{
+  "members": true,
+  "value": 13,
+  "baseModel": 2752,
+  "maleModels_0": {"id": 545, "type": 0},
+  "femaleModels_0": {"id": 545, "type": 0},
+  "modelTranslate_0": 1,
+  "modelTranslate_1": 6,
+  "model_zoom": 750,
+  "rotation_1": 208,
+  "rotation_0": 388,
+  "widget_actions_1": "Wield",
+  "stackable_1": true,
+  "tradeable": true,
+  "color_replacements": [[61, 24], [57, 24]],
+  "name": "Iron thrownaxe",
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 801
+}
+,
+
+{
+  "members": true,
+  "value": 38,
+  "baseModel": 2752,
+  "maleModels_0": {"id": 545, "type": 0},
+  "femaleModels_0": {"id": 545, "type": 0},
+  "modelTranslate_0": 1,
+  "modelTranslate_1": 6,
+  "model_zoom": 750,
+  "rotation_1": 208,
+  "rotation_0": 388,
+  "widget_actions_1": "Wield",
+  "stackable_1": true,
+  "tradeable": true,
+  "color_replacements": [[57, 61]],
+  "name": "Steel thrownaxe",
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 802
+}
+,
+
+{
+  "members": true,
+  "value": 105,
+  "baseModel": 2752,
+  "maleModels_0": {"id": 545, "type": 0},
+  "femaleModels_0": {"id": 545, "type": 0},
+  "modelTranslate_0": 1,
+  "modelTranslate_1": 6,
+  "model_zoom": 750,
+  "rotation_1": 208,
+  "rotation_0": 388,
+  "widget_actions_1": "Wield",
+  "stackable_1": true,
+  "tradeable": true,
+  "color_replacements": [[61, 43297], [57, 43297]],
+  "name": "Mithril thrownaxe",
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 803
+}
+,
+
+{
+  "members": true,
+  "value": 262,
+  "baseModel": 2752,
+  "maleModels_0": {"id": 545, "type": 0},
+  "femaleModels_0": {"id": 545, "type": 0},
+  "modelTranslate_0": 1,
+  "modelTranslate_1": 6,
+  "model_zoom": 750,
+  "rotation_1": 208,
+  "rotation_0": 388,
+  "widget_actions_1": "Wield",
+  "stackable_1": true,
+  "tradeable": true,
+  "color_replacements": [[61, 21662], [57, 21662]],
+  "name": "Adamant thrownaxe",
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 804
+}
+,
+
+{
+  "members": true,
+  "value": 698,
+  "baseModel": 2752,
+  "maleModels_0": {"id": 545, "type": 0},
+  "femaleModels_0": {"id": 545, "type": 0},
+  "modelTranslate_0": 1,
+  "modelTranslate_1": 6,
+  "model_zoom": 750,
+  "rotation_1": 208,
+  "rotation_0": 388,
+  "widget_actions_1": "Wield",
+  "stackable_1": true,
+  "tradeable": true,
+  "color_replacements": [[61, 36133], [57, 36133]],
+  "name": "Rune thrownaxe",
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 805
+}
+,
+
+{
+  "stackable_1": true,
+  "members": true,
+  "value": 1,
+  "baseModel": 2379,
+  "modelTranslate_0": 8,
+  "modelTranslate_1": 11,
+  "model_zoom": 720,
+  "rotation_1": 336,
+  "rotation_0": 396,
+  "maleModels_0": {"id": 492, "type": 0},
+  "femaleModels_0": {"id": 492, "type": 0},
+  "widget_actions_1": "Wield",
+  "tradeable": true,
+  "color_replacements": [[82, 5652]],
+  "name": "Bronze dart",
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 806
+}
+,
+
+{
+  "stackable_1": true,
+  "members": true,
+  "value": 2,
+  "baseModel": 2379,
+  "modelTranslate_0": 8,
+  "modelTranslate_1": 11,
+  "model_zoom": 720,
+  "rotation_1": 336,
+  "rotation_0": 396,
+  "maleModels_0": {"id": 492, "type": 0},
+  "femaleModels_0": {"id": 492, "type": 0},
+  "widget_actions_1": "Wield",
+  "tradeable": true,
+  "color_replacements": [[82, 33]],
+  "name": "Iron dart",
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 807
+}
+,
+
+{
+  "stackable_1": true,
+  "members": true,
+  "value": 10,
+  "baseModel": 2379,
+  "modelTranslate_0": 8,
+  "modelTranslate_1": 11,
+  "model_zoom": 720,
+  "rotation_1": 336,
+  "rotation_0": 396,
+  "maleModels_0": {"id": 492, "type": 0},
+  "femaleModels_0": {"id": 492, "type": 0},
+  "widget_actions_1": "Wield",
+  "tradeable": true,
+  "color_replacements": [[82, 61]],
+  "name": "Steel dart",
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 808
+}
+,
+
+{
+  "stackable_1": true,
+  "members": true,
+  "value": 25,
+  "baseModel": 2379,
+  "modelTranslate_0": 8,
+  "modelTranslate_1": 11,
+  "model_zoom": 720,
+  "rotation_1": 336,
+  "rotation_0": 396,
+  "maleModels_0": {"id": 492, "type": 0},
+  "femaleModels_0": {"id": 492, "type": 0},
+  "widget_actions_1": "Wield",
+  "tradeable": true,
+  "color_replacements": [[82, 43297]],
+  "name": "Mithril dart",
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 809
+}
+,
+
+{
+  "stackable_1": true,
+  "members": true,
+  "value": 65,
+  "baseModel": 2379,
+  "modelTranslate_0": 8,
+  "modelTranslate_1": 11,
+  "model_zoom": 720,
+  "rotation_1": 336,
+  "rotation_0": 396,
+  "maleModels_0": {"id": 492, "type": 0},
+  "femaleModels_0": {"id": 492, "type": 0},
+  "widget_actions_1": "Wield",
+  "tradeable": true,
+  "color_replacements": [[82, 21662]],
+  "name": "Adamant dart",
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 810
+}
+,
+
+{
+  "stackable_1": true,
+  "members": true,
+  "value": 350,
+  "baseModel": 2379,
+  "modelTranslate_0": 8,
+  "modelTranslate_1": 11,
+  "model_zoom": 720,
+  "rotation_1": 336,
+  "rotation_0": 396,
+  "maleModels_0": {"id": 492, "type": 0},
+  "femaleModels_0": {"id": 492, "type": 0},
+  "widget_actions_1": "Wield",
+  "tradeable": true,
+  "color_replacements": [[82, 36133]],
+  "name": "Rune dart",
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 811
+}
+,
+
+{
+  "stackable_1": true,
+  "members": true,
+  "value": 1,
+  "baseModel": 2454,
+  "modelTranslate_0": 8,
+  "modelTranslate_1": 11,
+  "model_zoom": 720,
+  "rotation_1": 336,
+  "rotation_0": 396,
+  "maleModels_0": {"id": 500, "type": 0},
+  "femaleModels_0": {"id": 500, "type": 0},
+  "widget_actions_1": "Wield",
+  "tradeable": true,
+  "color_replacements": [[82, 5652], [57, 13221], [22459, 13221]],
+  "name": "Bronze dart(p)",
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 812
+}
+,
+
+{
+  "stackable_1": true,
+  "members": true,
+  "value": 2,
+  "baseModel": 2454,
+  "modelTranslate_0": 8,
+  "modelTranslate_1": 11,
+  "model_zoom": 720,
+  "rotation_1": 336,
+  "rotation_0": 396,
+  "maleModels_0": {"id": 500, "type": 0},
+  "femaleModels_0": {"id": 500, "type": 0},
+  "widget_actions_1": "Wield",
+  "tradeable": true,
+  "color_replacements": [[82, 33], [22459, 13221]],
+  "name": "Iron dart(p)",
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 813
+}
+,
+
+{
+  "stackable_1": true,
+  "members": true,
+  "value": 10,
+  "baseModel": 2454,
+  "modelTranslate_0": 8,
+  "modelTranslate_1": 11,
+  "model_zoom": 720,
+  "rotation_1": 336,
+  "rotation_0": 396,
+  "maleModels_0": {"id": 500, "type": 0},
+  "femaleModels_0": {"id": 500, "type": 0},
+  "widget_actions_1": "Wield",
+  "tradeable": true,
+  "color_replacements": [[82, 61], [22459, 13221]],
+  "name": "Steel dart(p)",
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 814
+}
+,
+
+{
+  "stackable_1": true,
+  "members": true,
+  "value": 25,
+  "baseModel": 2454,
+  "modelTranslate_0": 8,
+  "modelTranslate_1": 11,
+  "model_zoom": 720,
+  "rotation_1": 336,
+  "rotation_0": 396,
+  "maleModels_0": {"id": 500, "type": 0},
+  "femaleModels_0": {"id": 500, "type": 0},
+  "widget_actions_1": "Wield",
+  "tradeable": true,
+  "color_replacements": [[82, 43297], [22459, 13221]],
+  "name": "Mithril dart(p)",
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 815
+}
+,
+
+{
+  "stackable_1": true,
+  "members": true,
+  "value": 65,
+  "baseModel": 2454,
+  "modelTranslate_0": 8,
+  "modelTranslate_1": 11,
+  "model_zoom": 720,
+  "rotation_1": 336,
+  "rotation_0": 396,
+  "maleModels_0": {"id": 500, "type": 0},
+  "femaleModels_0": {"id": 500, "type": 0},
+  "widget_actions_1": "Wield",
+  "tradeable": true,
+  "color_replacements": [[82, 21662], [22459, 13221]],
+  "name": "Adamant dart(p)",
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 816
+}
+,
+
+{
+  "stackable_1": true,
+  "members": true,
+  "value": 350,
+  "baseModel": 2454,
+  "modelTranslate_0": 8,
+  "modelTranslate_1": 11,
+  "model_zoom": 720,
+  "rotation_1": 336,
+  "rotation_0": 396,
+  "maleModels_0": {"id": 500, "type": 0},
+  "femaleModels_0": {"id": 500, "type": 0},
+  "widget_actions_1": "Wield",
+  "tradeable": true,
+  "color_replacements": [[82, 36133], [22459, 13221]],
+  "name": "Rune dart(p)",
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 817
+}
+,
+
+{
+  "stackable_1": true,
+  "members": true,
+  "baseModel": 2454,
+  "modelTranslate_0": 8,
+  "modelTranslate_1": 11,
+  "model_zoom": 720,
+  "rotation_1": 336,
+  "rotation_0": 396,
+  "maleModels_0": {"id": 500, "type": 0},
+  "femaleModels_0": {"id": 500, "type": 0},
+  "widget_actions_1": "Wield",
+  "color_replacements": [[22459, 13221]],
+  "name": "Poisoned dart(p)",
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 818
+}
+,
+
+{
+  "value": 1,
+  "baseModel": 2518,
+  "members": true,
+  "stackable_1": true,
+  "modelTranslate_0": 5,
+  "model_zoom": 720,
+  "rotation_1": 308,
+  "rotation_0": 344,
+  "tradeable": true,
+  "color_replacements": [[82, 5652]],
+  "name": "Bronze dart tip",
+  "nullopt": true,
+  "$fileid": 819
+}
+,
+
+{
+  "value": 3,
+  "baseModel": 2518,
+  "members": true,
+  "stackable_1": true,
+  "modelTranslate_0": 5,
+  "model_zoom": 720,
+  "rotation_1": 308,
+  "rotation_0": 344,
+  "tradeable": true,
+  "color_replacements": [[82, 28]],
+  "name": "Iron dart tip",
+  "nullopt": true,
+  "$fileid": 820
+}
+,
+
+{
+  "value": 5,
+  "baseModel": 2518,
+  "members": true,
+  "stackable_1": true,
+  "modelTranslate_0": 5,
+  "model_zoom": 720,
+  "rotation_1": 308,
+  "rotation_0": 344,
+  "tradeable": true,
+  "color_replacements": [[82, 61]],
+  "name": "Steel dart tip",
+  "nullopt": true,
+  "$fileid": 821
+}
+,
+
+{
+  "value": 12,
+  "baseModel": 2518,
+  "members": true,
+  "stackable_1": true,
+  "modelTranslate_0": 5,
+  "model_zoom": 720,
+  "rotation_1": 308,
+  "rotation_0": 344,
+  "tradeable": true,
+  "color_replacements": [[82, 43297]],
+  "name": "Mithril dart tip",
+  "nullopt": true,
+  "$fileid": 822
+}
+,
+
+{
+  "value": 36,
+  "baseModel": 2518,
+  "members": true,
+  "stackable_1": true,
+  "modelTranslate_0": 5,
+  "model_zoom": 720,
+  "rotation_1": 308,
+  "rotation_0": 344,
+  "tradeable": true,
+  "color_replacements": [[82, 21662]],
+  "name": "Adamant dart tip",
+  "nullopt": true,
+  "$fileid": 823
+}
+,
+
+{
+  "value": 175,
+  "baseModel": 2518,
+  "members": true,
+  "stackable_1": true,
+  "modelTranslate_0": 5,
+  "model_zoom": 720,
+  "rotation_1": 308,
+  "rotation_0": 344,
+  "tradeable": true,
+  "color_replacements": [[82, 36133]],
+  "name": "Rune dart tip",
+  "nullopt": true,
+  "$fileid": 824
+}
+,
+
+{
+  "value": 6,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 547, "type": 0},
+  "femaleModels_0": {"id": 547, "type": 0},
+  "baseModel": 2763,
+  "modelTranslate_0": -2,
+  "modelTranslate_1": 63,
+  "model_zoom": 1470,
+  "rotation_1": 1964,
+  "rotation_0": 268,
+  "stackable_1": true,
+  "members": true,
+  "tradeable": true,
+  "color_replacements": [[61, 5652], [22451, 5652]],
+  "name": "Bronze javelin",
+  "male_translate": [0, 247, 0],
+  "female_translate": [3, 237, 6],
+  "nullopt": true,
+  "$fileid": 825
+}
+,
+
+{
+  "value": 8,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 547, "type": 0},
+  "femaleModels_0": {"id": 547, "type": 0},
+  "baseModel": 2763,
+  "modelTranslate_0": -2,
+  "modelTranslate_1": 63,
+  "model_zoom": 1470,
+  "rotation_1": 1964,
+  "rotation_0": 268,
+  "stackable_1": true,
+  "members": true,
+  "tradeable": true,
+  "color_replacements": [[61, 33], [22451, 33]],
+  "name": "Iron javelin",
+  "male_translate": [0, 247, 0],
+  "female_translate": [3, 237, 6],
+  "nullopt": true,
+  "$fileid": 826
+}
+,
+
+{
+  "value": 37,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 547, "type": 0},
+  "femaleModels_0": {"id": 547, "type": 0},
+  "baseModel": 2763,
+  "modelTranslate_0": -2,
+  "modelTranslate_1": 63,
+  "model_zoom": 1470,
+  "rotation_1": 1964,
+  "rotation_0": 268,
+  "stackable_1": true,
+  "members": true,
+  "tradeable": true,
+  "color_replacements": [[22451, 61]],
+  "name": "Steel javelin",
+  "male_translate": [0, 247, 0],
+  "female_translate": [3, 237, 6],
+  "nullopt": true,
+  "$fileid": 827
+}
+,
+
+{
+  "value": 98,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 547, "type": 0},
+  "femaleModels_0": {"id": 547, "type": 0},
+  "baseModel": 2763,
+  "modelTranslate_0": -2,
+  "modelTranslate_1": 63,
+  "model_zoom": 1470,
+  "rotation_1": 1964,
+  "rotation_0": 268,
+  "stackable_1": true,
+  "members": true,
+  "tradeable": true,
+  "color_replacements": [[61, 43297], [22451, 43297]],
+  "name": "Mithril javelin",
+  "male_translate": [0, 247, 0],
+  "female_translate": [3, 237, 6],
+  "nullopt": true,
+  "$fileid": 828
+}
+,
+
+{
+  "value": 246,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 547, "type": 0},
+  "femaleModels_0": {"id": 547, "type": 0},
+  "baseModel": 2763,
+  "modelTranslate_0": -2,
+  "modelTranslate_1": 63,
+  "model_zoom": 1470,
+  "rotation_1": 1964,
+  "rotation_0": 268,
+  "stackable_1": true,
+  "members": true,
+  "tradeable": true,
+  "color_replacements": [[61, 21662], [22451, 21662]],
+  "name": "Adamant javelin",
+  "male_translate": [0, 247, 0],
+  "female_translate": [3, 237, 6],
+  "nullopt": true,
+  "$fileid": 829
+}
+,
+
+{
+  "value": 624,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 547, "type": 0},
+  "femaleModels_0": {"id": 547, "type": 0},
+  "baseModel": 2763,
+  "modelTranslate_0": -2,
+  "modelTranslate_1": 63,
+  "model_zoom": 1470,
+  "rotation_1": 1964,
+  "rotation_0": 268,
+  "stackable_1": true,
+  "members": true,
+  "tradeable": true,
+  "color_replacements": [[61, 36133], [22451, 36133]],
+  "name": "Rune javelin",
+  "male_translate": [0, 247, 0],
+  "female_translate": [3, 237, 6],
+  "nullopt": true,
+  "$fileid": 830
+}
+,
+
+{
+  "value": 4,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 547, "type": 0},
+  "femaleModels_0": {"id": 547, "type": 0},
+  "baseModel": 2763,
+  "modelTranslate_0": -2,
+  "modelTranslate_1": 63,
+  "model_zoom": 1470,
+  "rotation_1": 1964,
+  "rotation_0": 268,
+  "stackable_1": true,
+  "members": true,
+  "tradeable": true,
+  "color_replacements": [[61, 5652]],
+  "name": "Bronze javelin(p)",
+  "male_translate": [0, 247, 0],
+  "female_translate": [3, 237, 6],
+  "nullopt": true,
+  "$fileid": 831
+}
+,
+
+{
+  "value": 6,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 547, "type": 0},
+  "femaleModels_0": {"id": 547, "type": 0},
+  "baseModel": 2763,
+  "modelTranslate_0": -2,
+  "modelTranslate_1": 63,
+  "model_zoom": 1470,
+  "rotation_1": 1964,
+  "rotation_0": 268,
+  "stackable_1": true,
+  "members": true,
+  "tradeable": true,
+  "color_replacements": [[61, 33]],
+  "name": "Iron javelin(p)",
+  "male_translate": [0, 247, 0],
+  "female_translate": [3, 237, 6],
+  "nullopt": true,
+  "$fileid": 832
+}
+,
+
+{
+  "value": 24,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 547, "type": 0},
+  "femaleModels_0": {"id": 547, "type": 0},
+  "baseModel": 2763,
+  "modelTranslate_0": -2,
+  "modelTranslate_1": 63,
+  "model_zoom": 1470,
+  "rotation_1": 1964,
+  "rotation_0": 268,
+  "stackable_1": true,
+  "members": true,
+  "tradeable": true,
+  "name": "Steel javelin(p)",
+  "male_translate": [0, 247, 0],
+  "female_translate": [3, 237, 6],
+  "nullopt": true,
+  "$fileid": 833
+}
+,
+
+{
+  "value": 64,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 547, "type": 0},
+  "femaleModels_0": {"id": 547, "type": 0},
+  "baseModel": 2763,
+  "modelTranslate_0": -2,
+  "modelTranslate_1": 63,
+  "model_zoom": 1470,
+  "rotation_1": 1964,
+  "rotation_0": 268,
+  "stackable_1": true,
+  "members": true,
+  "tradeable": true,
+  "color_replacements": [[61, 43297]],
+  "name": "Mithril javelin(p)",
+  "male_translate": [0, 247, 0],
+  "female_translate": [3, 237, 6],
+  "nullopt": true,
+  "$fileid": 834
+}
+,
+
+{
+  "value": 160,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 547, "type": 0},
+  "femaleModels_0": {"id": 547, "type": 0},
+  "baseModel": 2763,
+  "modelTranslate_0": -2,
+  "modelTranslate_1": 63,
+  "model_zoom": 1470,
+  "rotation_1": 1964,
+  "rotation_0": 268,
+  "stackable_1": true,
+  "members": true,
+  "tradeable": true,
+  "color_replacements": [[61, 21662]],
+  "name": "Adamant javelin(p)",
+  "male_translate": [0, 247, 0],
+  "female_translate": [3, 237, 6],
+  "nullopt": true,
+  "$fileid": 835
+}
+,
+
+{
+  "value": 400,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 547, "type": 0},
+  "femaleModels_0": {"id": 547, "type": 0},
+  "baseModel": 2763,
+  "modelTranslate_0": -2,
+  "modelTranslate_1": 63,
+  "model_zoom": 1470,
+  "rotation_1": 1964,
+  "rotation_0": 268,
+  "stackable_1": true,
+  "members": true,
+  "tradeable": true,
+  "color_replacements": [[61, 36133]],
+  "name": "Rune javelin(p)",
+  "male_translate": [0, 247, 0],
+  "female_translate": [3, 237, 6],
+  "nullopt": true,
+  "$fileid": 836
+}
+,
+
+{
+  "value": 70,
+  "baseModel": 16876,
+  "modelTranslate_0": 2,
+  "modelTranslate_1": 1,
+  "model_zoom": 984,
+  "rotation_1": 150,
+  "rotation_0": 577,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 16846, "type": 0},
+  "femaleModels_0": {"id": 16846, "type": 0},
+  "tradeable": true,
+  "color_replacements": [
+    [6447, 6439],
+    [6443, 6563],
+    [6439, 6558],
+    [5656, 5904],
+    [5652, 6028],
+    [5904, 5002]
+  ],
+  "name": "Crossbow",
+  "female_translate": [3, 245, 6],
+  "noteData": 838,
+  "nullopt": true,
+  "$fileid": 837
+}
+,
+
+{"noteData": 837, "noteTemplate": 799, "nullopt": true, "$fileid": 838}
+,
+
+{
+  "value": 80,
+  "baseModel": 2832,
+  "modelTranslate_0": 2,
+  "modelTranslate_1": 15,
+  "model_zoom": 1820,
+  "rotation_1": 1004,
+  "rotation_0": 460,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 563, "type": 0},
+  "femaleModels_0": {"id": 563, "type": 0},
+  "tradeable": true,
+  "color_replacements": [[6674, 6049]],
+  "name": "Longbow",
+  "female_translate": [3, 245, 6],
+  "noteData": 840,
+  "nullopt": true,
+  "$fileid": 839
+}
+,
+
+{"noteData": 839, "noteTemplate": 799, "nullopt": true, "$fileid": 840}
+,
+
+{
+  "value": 50,
+  "baseModel": 2562,
+  "modelTranslate_0": 7,
+  "modelTranslate_1": 2,
+  "model_zoom": 1200,
+  "rotation_1": 124,
+  "rotation_0": 508,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 512, "type": 0},
+  "femaleModels_0": {"id": 512, "type": 0},
+  "tradeable": true,
+  "color_replacements": [[6674, 6049]],
+  "name": "Shortbow",
+  "female_translate": [3, 245, 6],
+  "noteData": 842,
+  "nullopt": true,
+  "$fileid": 841
+}
+,
+
+{"noteData": 841, "noteTemplate": 799, "nullopt": true, "$fileid": 842}
+,
+
+{
+  "value": 100,
+  "baseModel": 2562,
+  "modelTranslate_0": 7,
+  "modelTranslate_1": 2,
+  "model_zoom": 1200,
+  "rotation_1": 124,
+  "rotation_0": 508,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 512, "type": 0},
+  "femaleModels_0": {"id": 512, "type": 0},
+  "tradeable": true,
+  "color_replacements": [[6674, 8111]],
+  "name": "Oak shortbow",
+  "female_translate": [3, 245, 6],
+  "noteData": 844,
+  "nullopt": true,
+  "$fileid": 843
+}
+,
+
+{"noteData": 843, "noteTemplate": 799, "nullopt": true, "$fileid": 844}
+,
+
+{
+  "value": 160,
+  "baseModel": 2832,
+  "modelTranslate_0": 2,
+  "modelTranslate_1": 15,
+  "model_zoom": 1820,
+  "rotation_1": 1004,
+  "rotation_0": 460,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 563, "type": 0},
+  "femaleModels_0": {"id": 563, "type": 0},
+  "tradeable": true,
+  "color_replacements": [[6674, 8111]],
+  "name": "Oak longbow",
+  "female_translate": [3, 245, 6],
+  "noteData": 846,
+  "nullopt": true,
+  "$fileid": 845
+}
+,
+
+{"noteData": 845, "noteTemplate": 799, "nullopt": true, "$fileid": 846}
+,
+
+{
+  "value": 320,
+  "baseModel": 2832,
+  "modelTranslate_0": 2,
+  "modelTranslate_1": 15,
+  "model_zoom": 1820,
+  "rotation_1": 1004,
+  "rotation_0": 460,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 563, "type": 0},
+  "femaleModels_0": {"id": 563, "type": 0},
+  "tradeable": true,
+  "color_replacements": [[6674, 9903]],
+  "name": "Willow longbow",
+  "female_translate": [3, 245, 6],
+  "noteData": 848,
+  "nullopt": true,
+  "$fileid": 847
+}
+,
+
+{"noteData": 847, "noteTemplate": 799, "nullopt": true, "$fileid": 848}
+,
+
+{
+  "value": 200,
+  "baseModel": 2562,
+  "modelTranslate_0": 7,
+  "modelTranslate_1": 2,
+  "model_zoom": 1200,
+  "rotation_1": 124,
+  "rotation_0": 508,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 512, "type": 0},
+  "femaleModels_0": {"id": 512, "type": 0},
+  "tradeable": true,
+  "color_replacements": [[6674, 9903]],
+  "name": "Willow shortbow",
+  "female_translate": [3, 245, 6],
+  "noteData": 850,
+  "nullopt": true,
+  "$fileid": 849
+}
+,
+
+{"noteData": 849, "noteTemplate": 799, "nullopt": true, "$fileid": 850}
+,
+
+{
+  "value": 640,
+  "baseModel": 2832,
+  "modelTranslate_0": 2,
+  "modelTranslate_1": 15,
+  "model_zoom": 1820,
+  "rotation_1": 1004,
+  "rotation_0": 460,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 563, "type": 0},
+  "femaleModels_0": {"id": 563, "type": 0},
+  "tradeable": true,
+  "color_replacements": [[6674, 2250]],
+  "name": "Maple longbow",
+  "female_translate": [3, 245, 6],
+  "noteData": 852,
+  "loanId": 13523,
+  "nullopt": true,
+  "$fileid": 851
+}
+,
+
+{"noteData": 851, "noteTemplate": 799, "nullopt": true, "$fileid": 852}
+,
+
+{
+  "value": 400,
+  "baseModel": 2562,
+  "modelTranslate_0": 7,
+  "modelTranslate_1": 2,
+  "model_zoom": 1200,
+  "rotation_1": 124,
+  "rotation_0": 508,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 512, "type": 0},
+  "femaleModels_0": {"id": 512, "type": 0},
+  "tradeable": true,
+  "color_replacements": [[6674, 2250]],
+  "name": "Maple shortbow",
+  "female_translate": [3, 245, 6],
+  "noteData": 854,
+  "loanId": 13524,
+  "nullopt": true,
+  "$fileid": 853
+}
+,
+
+{"noteData": 853, "noteTemplate": 799, "nullopt": true, "$fileid": 854}
+,
+
+{
+  "members": true,
+  "value": 1280,
+  "baseModel": 2832,
+  "modelTranslate_0": 2,
+  "modelTranslate_1": 15,
+  "model_zoom": 1820,
+  "rotation_1": 1004,
+  "rotation_0": 460,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 563, "type": 0},
+  "femaleModels_0": {"id": 563, "type": 0},
+  "tradeable": true,
+  "color_replacements": [[6674, 9135]],
+  "name": "Yew longbow",
+  "female_translate": [3, 245, 6],
+  "noteData": 856,
+  "loanId": 13525,
+  "nullopt": true,
+  "$fileid": 855
+}
+,
+
+{"noteData": 855, "noteTemplate": 799, "nullopt": true, "$fileid": 856}
+,
+
+{
+  "members": true,
+  "value": 800,
+  "baseModel": 2562,
+  "modelTranslate_0": 7,
+  "modelTranslate_1": 2,
+  "model_zoom": 1200,
+  "rotation_1": 124,
+  "rotation_0": 508,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 512, "type": 0},
+  "femaleModels_0": {"id": 512, "type": 0},
+  "tradeable": true,
+  "color_replacements": [[6674, 9135]],
+  "name": "Yew shortbow",
+  "female_translate": [3, 245, 6],
+  "noteData": 858,
+  "loanId": 13526,
+  "nullopt": true,
+  "$fileid": 857
+}
+,
+
+{"noteData": 857, "noteTemplate": 799, "nullopt": true, "$fileid": 858}
+,
+
+{
+  "members": true,
+  "value": 2560,
+  "baseModel": 2832,
+  "modelTranslate_0": 2,
+  "modelTranslate_1": 15,
+  "model_zoom": 1820,
+  "rotation_1": 1004,
+  "rotation_0": 460,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 563, "type": 0},
+  "femaleModels_0": {"id": 563, "type": 0},
+  "tradeable": true,
+  "color_replacements": [[6674, 31516]],
+  "name": "Magic longbow",
+  "female_translate": [3, 245, 6],
+  "noteData": 860,
+  "loanId": 13527,
+  "nullopt": true,
+  "$fileid": 859
+}
+,
+
+{"noteData": 859, "noteTemplate": 799, "nullopt": true, "$fileid": 860}
+,
+
+{
+  "members": true,
+  "value": 1600,
+  "baseModel": 2562,
+  "modelTranslate_0": 7,
+  "modelTranslate_1": 2,
+  "model_zoom": 1200,
+  "rotation_1": 124,
+  "rotation_0": 508,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 512, "type": 0},
+  "femaleModels_0": {"id": 512, "type": 0},
+  "tradeable": true,
+  "color_replacements": [[6674, 31516]],
+  "name": "Magic shortbow",
+  "female_translate": [3, 245, 6],
+  "noteData": 862,
+  "loanId": 13528,
+  "nullopt": true,
+  "$fileid": 861
+}
+,
+
+{"noteData": 861, "noteTemplate": 799, "nullopt": true, "$fileid": 862}
+,
+
+{
+  "members": true,
+  "value": 58,
+  "baseModel": 2557,
+  "maleModels_0": {"id": 548, "type": 0},
+  "femaleModels_0": {"id": 548, "type": 0},
+  "modelTranslate_0": -1,
+  "modelTranslate_1": -26,
+  "model_zoom": 1080,
+  "rotation_1": 112,
+  "rotation_2": 1860,
+  "rotation_0": 204,
+  "widget_actions_1": "Wield",
+  "stackable_1": true,
+  "tradeable": true,
+  "color_replacements": [[61, 24], [57, 24]],
+  "name": "Iron knife",
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 863
+}
+,
+
+{
+  "members": true,
+  "value": 14,
+  "baseModel": 2557,
+  "maleModels_0": {"id": 548, "type": 0},
+  "femaleModels_0": {"id": 548, "type": 0},
+  "modelTranslate_0": -1,
+  "modelTranslate_1": -26,
+  "model_zoom": 1080,
+  "rotation_1": 112,
+  "rotation_2": 1860,
+  "rotation_0": 204,
+  "widget_actions_1": "Wield",
+  "stackable_1": true,
+  "tradeable": true,
+  "color_replacements": [[61, 5652], [57, 5652]],
+  "name": "Bronze knife",
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 864
+}
+,
+
+{
+  "members": true,
+  "value": 68,
+  "baseModel": 2557,
+  "maleModels_0": {"id": 548, "type": 0},
+  "femaleModels_0": {"id": 548, "type": 0},
+  "modelTranslate_0": -1,
+  "modelTranslate_1": -26,
+  "model_zoom": 1080,
+  "rotation_1": 112,
+  "rotation_2": 1860,
+  "rotation_0": 204,
+  "widget_actions_1": "Wield",
+  "stackable_1": true,
+  "tradeable": true,
+  "color_replacements": [[57, 61]],
+  "name": "Steel knife",
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 865
+}
+,
+
+{
+  "members": true,
+  "value": 27,
+  "baseModel": 2557,
+  "maleModels_0": {"id": 548, "type": 0},
+  "femaleModels_0": {"id": 548, "type": 0},
+  "modelTranslate_0": -1,
+  "modelTranslate_1": -26,
+  "model_zoom": 1080,
+  "rotation_1": 112,
+  "rotation_2": 1860,
+  "rotation_0": 204,
+  "widget_actions_1": "Wield",
+  "stackable_1": true,
+  "tradeable": true,
+  "color_replacements": [[61, 43297], [57, 43297]],
+  "name": "Mithril knife",
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 866
+}
+,
+
+{
+  "members": true,
+  "value": 66,
+  "baseModel": 2557,
+  "maleModels_0": {"id": 548, "type": 0},
+  "femaleModels_0": {"id": 548, "type": 0},
+  "modelTranslate_0": -1,
+  "modelTranslate_1": -26,
+  "model_zoom": 1080,
+  "rotation_1": 112,
+  "rotation_2": 1860,
+  "rotation_0": 204,
+  "widget_actions_1": "Wield",
+  "stackable_1": true,
+  "tradeable": true,
+  "color_replacements": [[61, 21662], [57, 21662]],
+  "name": "Adamant knife",
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 867
+}
+,
+
+{
+  "members": true,
+  "value": 167,
+  "baseModel": 2557,
+  "maleModels_0": {"id": 548, "type": 0},
+  "femaleModels_0": {"id": 548, "type": 0},
+  "modelTranslate_0": -1,
+  "modelTranslate_1": -26,
+  "model_zoom": 1080,
+  "rotation_1": 112,
+  "rotation_2": 1860,
+  "rotation_0": 204,
+  "widget_actions_1": "Wield",
+  "stackable_1": true,
+  "tradeable": true,
+  "color_replacements": [[61, 36133], [57, 36133]],
+  "name": "Rune knife",
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 868
+}
+,
+
+{
+  "members": true,
+  "value": 19,
+  "baseModel": 2557,
+  "maleModels_0": {"id": 548, "type": 0},
+  "femaleModels_0": {"id": 548, "type": 0},
+  "modelTranslate_0": -1,
+  "modelTranslate_1": -26,
+  "model_zoom": 1080,
+  "rotation_1": 112,
+  "rotation_2": 1860,
+  "rotation_0": 204,
+  "widget_actions_1": "Wield",
+  "stackable_1": true,
+  "tradeable": true,
+  "color_replacements": [[61, 8], [57, 0]],
+  "name": "Black knife",
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 869
+}
+,
+
+{
+  "members": true,
+  "value": 1,
+  "baseModel": 2557,
+  "maleModels_0": {"id": 548, "type": 0},
+  "femaleModels_0": {"id": 548, "type": 0},
+  "modelTranslate_0": -1,
+  "modelTranslate_1": -26,
+  "model_zoom": 1080,
+  "rotation_1": 112,
+  "rotation_2": 1860,
+  "rotation_0": 204,
+  "widget_actions_1": "Wield",
+  "stackable_1": true,
+  "tradeable": true,
+  "color_replacements": [[61, 5652], [57, 13221]],
+  "name": "Bronze knife(p)",
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 870
+}
+,
+
+{
+  "members": true,
+  "value": 3,
+  "baseModel": 2557,
+  "maleModels_0": {"id": 548, "type": 0},
+  "femaleModels_0": {"id": 548, "type": 0},
+  "modelTranslate_0": -1,
+  "modelTranslate_1": -26,
+  "model_zoom": 1080,
+  "rotation_1": 112,
+  "rotation_2": 1860,
+  "rotation_0": 204,
+  "widget_actions_1": "Wield",
+  "stackable_1": true,
+  "tradeable": true,
+  "color_replacements": [[61, 24], [57, 13221]],
+  "name": "Iron knife(p)",
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 871
+}
+,
+
+{
+  "members": true,
+  "value": 10,
+  "baseModel": 2557,
+  "maleModels_0": {"id": 548, "type": 0},
+  "femaleModels_0": {"id": 548, "type": 0},
+  "modelTranslate_0": -1,
+  "modelTranslate_1": -26,
+  "model_zoom": 1080,
+  "rotation_1": 112,
+  "rotation_2": 1860,
+  "rotation_0": 204,
+  "widget_actions_1": "Wield",
+  "stackable_1": true,
+  "tradeable": true,
+  "color_replacements": [[57, 13221]],
+  "name": "Steel knife(p)",
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 872
+}
+,
+
+{
+  "members": true,
+  "value": 27,
+  "baseModel": 2557,
+  "maleModels_0": {"id": 548, "type": 0},
+  "femaleModels_0": {"id": 548, "type": 0},
+  "modelTranslate_0": -1,
+  "modelTranslate_1": -26,
+  "model_zoom": 1080,
+  "rotation_1": 112,
+  "rotation_2": 1860,
+  "rotation_0": 204,
+  "widget_actions_1": "Wield",
+  "stackable_1": true,
+  "tradeable": true,
+  "color_replacements": [[61, 43297], [57, 13221]],
+  "name": "Mithril knife(p)",
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 873
+}
+,
+
+{
+  "members": true,
+  "value": 18,
+  "baseModel": 2557,
+  "maleModels_0": {"id": 548, "type": 0},
+  "femaleModels_0": {"id": 548, "type": 0},
+  "modelTranslate_0": -1,
+  "modelTranslate_1": -26,
+  "model_zoom": 1080,
+  "rotation_1": 112,
+  "rotation_2": 1860,
+  "rotation_0": 204,
+  "widget_actions_1": "Wield",
+  "stackable_1": true,
+  "tradeable": true,
+  "color_replacements": [[61, 8], [57, 13221]],
+  "name": "Black knife(p)",
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 874
+}
+,
+
+{
+  "members": true,
+  "value": 66,
+  "baseModel": 2557,
+  "maleModels_0": {"id": 548, "type": 0},
+  "femaleModels_0": {"id": 548, "type": 0},
+  "modelTranslate_0": -1,
+  "modelTranslate_1": -26,
+  "model_zoom": 1080,
+  "rotation_1": 112,
+  "rotation_2": 1860,
+  "rotation_0": 204,
+  "widget_actions_1": "Wield",
+  "stackable_1": true,
+  "tradeable": true,
+  "color_replacements": [[61, 21662], [57, 13221]],
+  "name": "Adamant knife(p)",
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 875
+}
+,
+
+{
+  "members": true,
+  "value": 166,
+  "baseModel": 2557,
+  "maleModels_0": {"id": 548, "type": 0},
+  "femaleModels_0": {"id": 548, "type": 0},
+  "modelTranslate_0": -1,
+  "modelTranslate_1": -26,
+  "model_zoom": 1080,
+  "rotation_1": 112,
+  "rotation_2": 1860,
+  "rotation_0": 204,
+  "widget_actions_1": "Wield",
+  "stackable_1": true,
+  "tradeable": true,
+  "color_replacements": [[61, 36133], [57, 13221]],
+  "name": "Rune knife(p)",
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 876
+}
+,
+
+{
+  "stackable_1": true,
+  "value": 3,
+  "baseModel": 16862,
+  "modelTranslate_0": 3,
+  "modelTranslate_1": 5,
+  "model_zoom": 720,
+  "rotation_1": 117,
+  "rotation_0": 477,
+  "widget_actions_1": "Wield",
+  "stack_info_0": [3807, 2],
+  "stack_info_1": [3808, 3],
+  "stack_info_2": [3809, 4],
+  "stack_info_3": [3810, 5],
+  "tradeable": true,
+  "color_replacements": [
+    [17971, 5532],
+    [5537, 5532],
+    [5532, 5656],
+    [5656, 5652],
+    [5652, 5904]
+  ],
+  "name": "Bronze bolts",
+  "nullopt": true,
+  "$fileid": 877
+}
+,
+
+{
+  "baseModel": 16862,
+  "modelTranslate_0": 3,
+  "modelTranslate_1": 5,
+  "model_zoom": 720,
+  "rotation_1": 117,
+  "rotation_0": 477,
+  "stackable_1": true,
+  "value": 3,
+  "members": true,
+  "widget_actions_1": "Wield",
+  "stack_info_0": [3811, 2],
+  "stack_info_1": [3812, 3],
+  "stack_info_2": [3813, 4],
+  "stack_info_3": [3814, 5],
+  "tradeable": true,
+  "color_replacements": [
+    [5537, 5532],
+    [5532, 5656],
+    [5656, 5652],
+    [5652, 5904]
+  ],
+  "name": "Bronze bolts(p)",
+  "nullopt": true,
+  "$fileid": 878
+}
+,
+
+{
+  "stackable_1": true,
+  "value": 7,
+  "members": true,
+  "baseModel": 16856,
+  "modelTranslate_0": 3,
+  "modelTranslate_1": 5,
+  "model_zoom": 720,
+  "rotation_1": 117,
+  "rotation_0": 477,
+  "widget_actions_1": "Wield",
+  "stack_info_0": [3815, 2],
+  "stack_info_1": [3816, 3],
+  "stack_info_2": [3817, 4],
+  "stack_info_3": [3818, 5],
+  "tradeable": true,
+  "color_replacements": [
+    [17971, 5532],
+    [5537, 5532],
+    [5532, 5656],
+    [5656, 5652],
+    [5652, 5904]
+  ],
+  "name": "Opal bolts",
+  "nullopt": true,
+  "$fileid": 879
+}
+,
+
+{
+  "stackable_1": true,
+  "value": 13,
+  "members": true,
+  "baseModel": 16856,
+  "modelTranslate_0": 3,
+  "modelTranslate_1": 5,
+  "model_zoom": 720,
+  "rotation_1": 117,
+  "rotation_0": 477,
+  "widget_actions_1": "Wield",
+  "stack_info_0": [3819, 2],
+  "stack_info_1": [3820, 3],
+  "stack_info_2": [3821, 4],
+  "stack_info_3": [3822, 5],
+  "tradeable": true,
+  "color_replacements": [
+    [10465, 41191],
+    [5537, 41],
+    [5532, 37],
+    [5656, 33],
+    [5652, 28]
+  ],
+  "name": "Pearl bolts",
+  "nullopt": true,
+  "$fileid": 880
+}
+,
+
+{
+  "stackable_1": true,
+  "value": 200,
+  "members": true,
+  "baseModel": 4410,
+  "modelTranslate_0": -1,
+  "modelTranslate_1": -42,
+  "model_zoom": 640,
+  "rotation_1": 4,
+  "rotation_0": 244,
+  "widget_actions_1": "Wield",
+  "stack_info_0": [3823, 2],
+  "stack_info_1": [3824, 3],
+  "stack_info_2": [3825, 4],
+  "stack_info_3": [3826, 5],
+  "tradeable": true,
+  "color_replacements": [[20, 5018]],
+  "name": "Barbed bolts",
+  "nullopt": true,
+  "$fileid": 881
+}
+,
+
+{
+  "value": 7,
+  "stackable_1": true,
+  "baseModel": 2711,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -29,
+  "model_zoom": 1220,
+  "rotation_1": 100,
+  "rotation_0": 216,
+  "widget_actions_1": "Wield",
+  "stack_info_0": [896, 2],
+  "stack_info_1": [895, 3],
+  "stack_info_2": [894, 4],
+  "stack_info_3": [897, 5],
+  "tradeable": true,
+  "color_replacements": [[61, 5652], [57, 5652]],
+  "name": "Bronze arrow",
+  "nullopt": true,
+  "$fileid": 882
+}
+,
+
+{
+  "members": true,
+  "value": 1,
+  "stackable_1": true,
+  "baseModel": 2711,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -29,
+  "model_zoom": 1220,
+  "rotation_1": 100,
+  "rotation_0": 216,
+  "widget_actions_1": "Wield",
+  "stack_info_0": [900, 2],
+  "stack_info_1": [899, 3],
+  "stack_info_2": [898, 4],
+  "stack_info_3": [901, 5],
+  "tradeable": true,
+  "color_replacements": [[61, 5652], [57, 13221]],
+  "name": "Bronze arrow(p)",
+  "nullopt": true,
+  "$fileid": 883
+}
+,
+
+{
+  "value": 20,
+  "stackable_1": true,
+  "baseModel": 2711,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -29,
+  "model_zoom": 1220,
+  "rotation_1": 100,
+  "rotation_0": 216,
+  "widget_actions_1": "Wield",
+  "stack_info_0": [904, 2],
+  "stack_info_1": [903, 3],
+  "stack_info_2": [902, 4],
+  "stack_info_3": [905, 5],
+  "tradeable": true,
+  "color_replacements": [[61, 33], [57, 33]],
+  "name": "Iron arrow",
+  "nullopt": true,
+  "$fileid": 884
+}
+,
+
+{
+  "members": true,
+  "value": 3,
+  "stackable_1": true,
+  "baseModel": 2711,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -29,
+  "model_zoom": 1220,
+  "rotation_1": 100,
+  "rotation_0": 216,
+  "widget_actions_1": "Wield",
+  "stack_info_0": [908, 2],
+  "stack_info_1": [907, 3],
+  "stack_info_2": [906, 4],
+  "stack_info_3": [909, 5],
+  "tradeable": true,
+  "color_replacements": [[61, 33], [57, 13221]],
+  "name": "Iron arrow(p)",
+  "nullopt": true,
+  "$fileid": 885
+}
+,
+
+{
+  "value": 46,
+  "stackable_1": true,
+  "baseModel": 2711,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -29,
+  "model_zoom": 1220,
+  "rotation_1": 100,
+  "rotation_0": 216,
+  "widget_actions_1": "Wield",
+  "stack_info_0": [912, 2],
+  "stack_info_1": [911, 3],
+  "stack_info_2": [910, 4],
+  "stack_info_3": [913, 5],
+  "tradeable": true,
+  "name": "Steel arrow",
+  "nullopt": true,
+  "$fileid": 886
+}
+,
+
+{
+  "members": true,
+  "value": 12,
+  "stackable_1": true,
+  "baseModel": 2711,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -29,
+  "model_zoom": 1220,
+  "rotation_1": 100,
+  "rotation_0": 216,
+  "widget_actions_1": "Wield",
+  "stack_info_0": [916, 2],
+  "stack_info_1": [915, 3],
+  "stack_info_2": [914, 4],
+  "stack_info_3": [917, 5],
+  "tradeable": true,
+  "color_replacements": [[57, 13221]],
+  "name": "Steel arrow(p)",
+  "nullopt": true,
+  "$fileid": 887
+}
+,
+
+{
+  "value": 76,
+  "stackable_1": true,
+  "baseModel": 2711,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -29,
+  "model_zoom": 1220,
+  "rotation_1": 100,
+  "rotation_0": 216,
+  "widget_actions_1": "Wield",
+  "stack_info_0": [920, 2],
+  "stack_info_1": [919, 3],
+  "stack_info_2": [918, 4],
+  "stack_info_3": [921, 5],
+  "tradeable": true,
+  "color_replacements": [[61, 43297], [57, 43297]],
+  "name": "Mithril arrow",
+  "nullopt": true,
+  "$fileid": 888
+}
+,
+
+{
+  "members": true,
+  "value": 32,
+  "stackable_1": true,
+  "baseModel": 2711,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -29,
+  "model_zoom": 1220,
+  "rotation_1": 100,
+  "rotation_0": 216,
+  "widget_actions_1": "Wield",
+  "stack_info_0": [924, 2],
+  "stack_info_1": [923, 3],
+  "stack_info_2": [922, 4],
+  "stack_info_3": [925, 5],
+  "tradeable": true,
+  "color_replacements": [[61, 43297], [57, 13221]],
+  "name": "Mithril arrow(p)",
+  "nullopt": true,
+  "$fileid": 889
+}
+,
+
+{
+  "value": 172,
+  "stackable_1": true,
+  "baseModel": 2711,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -29,
+  "model_zoom": 1220,
+  "rotation_1": 100,
+  "rotation_0": 216,
+  "widget_actions_1": "Wield",
+  "stack_info_0": [928, 2],
+  "stack_info_1": [927, 3],
+  "stack_info_2": [926, 4],
+  "stack_info_3": [929, 5],
+  "tradeable": true,
+  "color_replacements": [[61, 21662], [57, 21662]],
+  "name": "Adamant arrow",
+  "nullopt": true,
+  "$fileid": 890
+}
+,
+
+{
+  "members": true,
+  "value": 80,
+  "stackable_1": true,
+  "baseModel": 2711,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -29,
+  "model_zoom": 1220,
+  "rotation_1": 100,
+  "rotation_0": 216,
+  "widget_actions_1": "Wield",
+  "stack_info_0": [932, 2],
+  "stack_info_1": [931, 3],
+  "stack_info_2": [930, 4],
+  "stack_info_3": [933, 5],
+  "tradeable": true,
+  "color_replacements": [[61, 21662], [57, 13221]],
+  "name": "Adamant arrow(p)",
+  "nullopt": true,
+  "$fileid": 891
+}
+,
+
+{
+  "members": true,
+  "value": 510,
+  "stackable_1": true,
+  "baseModel": 2711,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -29,
+  "model_zoom": 1220,
+  "rotation_1": 100,
+  "rotation_0": 216,
+  "widget_actions_1": "Wield",
+  "stack_info_0": [936, 2],
+  "stack_info_1": [935, 3],
+  "stack_info_2": [934, 4],
+  "stack_info_3": [937, 5],
+  "tradeable": true,
+  "color_replacements": [[61, 36133], [57, 36133]],
+  "name": "Rune arrow",
+  "nullopt": true,
+  "$fileid": 892
+}
+,
+
+{
+  "members": true,
+  "value": 400,
+  "stackable_1": true,
+  "baseModel": 2711,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -29,
+  "model_zoom": 1220,
+  "rotation_1": 100,
+  "rotation_0": 216,
+  "widget_actions_1": "Wield",
+  "stack_info_0": [940, 2],
+  "stack_info_1": [939, 3],
+  "stack_info_2": [938, 4],
+  "stack_info_3": [941, 5],
+  "tradeable": true,
+  "color_replacements": [[61, 36133], [57, 13221]],
+  "name": "Rune arrow(p)",
+  "nullopt": true,
+  "$fileid": 893
+}
+,
+
+{
+  "stackable_1": true,
+  "baseModel": 2421,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -29,
+  "model_zoom": 1220,
+  "rotation_1": 100,
+  "rotation_0": 216,
+  "dummyItem": 2,
+  "color_replacements": [[61, 5652], [57, 5652]],
+  "nullopt": true,
+  "$fileid": 894
+}
+,
+
+{
+  "stackable_1": true,
+  "baseModel": 2420,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -29,
+  "model_zoom": 1220,
+  "rotation_1": 100,
+  "rotation_0": 216,
+  "dummyItem": 2,
+  "color_replacements": [[61, 5652], [57, 5652]],
+  "nullopt": true,
+  "$fileid": 895
+}
+,
+
+{
+  "stackable_1": true,
+  "baseModel": 2419,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -29,
+  "model_zoom": 1220,
+  "rotation_1": 100,
+  "rotation_0": 216,
+  "dummyItem": 2,
+  "color_replacements": [[61, 5652], [57, 5652]],
+  "nullopt": true,
+  "$fileid": 896
+}
+,
+
+{
+  "stackable_1": true,
+  "baseModel": 2422,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -29,
+  "model_zoom": 1220,
+  "rotation_1": 100,
+  "rotation_0": 216,
+  "dummyItem": 2,
+  "color_replacements": [[61, 5652], [57, 5652]],
+  "nullopt": true,
+  "$fileid": 897
+}
+,
+
+{
+  "stackable_1": true,
+  "baseModel": 2421,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -29,
+  "model_zoom": 1220,
+  "rotation_1": 100,
+  "rotation_0": 216,
+  "dummyItem": 2,
+  "color_replacements": [[61, 5652], [57, 13221]],
+  "nullopt": true,
+  "$fileid": 898
+}
+,
+
+{
+  "stackable_1": true,
+  "baseModel": 2420,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -29,
+  "model_zoom": 1220,
+  "rotation_1": 100,
+  "rotation_0": 216,
+  "dummyItem": 2,
+  "color_replacements": [[61, 5652], [57, 13221]],
+  "nullopt": true,
+  "$fileid": 899
+}
+,
+
+{
+  "stackable_1": true,
+  "baseModel": 2419,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -29,
+  "model_zoom": 1220,
+  "rotation_1": 100,
+  "rotation_0": 216,
+  "dummyItem": 2,
+  "color_replacements": [[61, 5652], [57, 13221]],
+  "nullopt": true,
+  "$fileid": 900
+}
+,
+
+{
+  "stackable_1": true,
+  "baseModel": 2422,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -29,
+  "model_zoom": 1220,
+  "rotation_1": 100,
+  "rotation_0": 216,
+  "dummyItem": 2,
+  "color_replacements": [[61, 5652], [57, 13221]],
+  "nullopt": true,
+  "$fileid": 901
+}
+,
+
+{
+  "stackable_1": true,
+  "baseModel": 2421,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -29,
+  "model_zoom": 1220,
+  "rotation_1": 100,
+  "rotation_0": 216,
+  "dummyItem": 2,
+  "color_replacements": [[61, 33], [57, 33]],
+  "nullopt": true,
+  "$fileid": 902
+}
+,
+
+{
+  "stackable_1": true,
+  "baseModel": 2420,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -29,
+  "model_zoom": 1220,
+  "rotation_1": 100,
+  "rotation_0": 216,
+  "dummyItem": 2,
+  "color_replacements": [[61, 33], [57, 33]],
+  "nullopt": true,
+  "$fileid": 903
+}
+,
+
+{
+  "stackable_1": true,
+  "baseModel": 2419,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -29,
+  "model_zoom": 1220,
+  "rotation_1": 100,
+  "rotation_0": 216,
+  "dummyItem": 2,
+  "color_replacements": [[61, 33], [57, 33]],
+  "nullopt": true,
+  "$fileid": 904
+}
+,
+
+{
+  "stackable_1": true,
+  "baseModel": 2422,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -29,
+  "model_zoom": 1220,
+  "rotation_1": 100,
+  "rotation_0": 216,
+  "dummyItem": 2,
+  "color_replacements": [[61, 33], [57, 33]],
+  "nullopt": true,
+  "$fileid": 905
+}
+,
+
+{
+  "stackable_1": true,
+  "baseModel": 2421,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -29,
+  "model_zoom": 1220,
+  "rotation_1": 100,
+  "rotation_0": 216,
+  "dummyItem": 2,
+  "color_replacements": [[61, 33], [57, 13221]],
+  "nullopt": true,
+  "$fileid": 906
+}
+,
+
+{
+  "stackable_1": true,
+  "baseModel": 2420,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -29,
+  "model_zoom": 1220,
+  "rotation_1": 100,
+  "rotation_0": 216,
+  "dummyItem": 2,
+  "color_replacements": [[61, 33], [57, 13221]],
+  "nullopt": true,
+  "$fileid": 907
+}
+,
+
+{
+  "stackable_1": true,
+  "baseModel": 2419,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -29,
+  "model_zoom": 1220,
+  "rotation_1": 100,
+  "rotation_0": 216,
+  "dummyItem": 2,
+  "color_replacements": [[61, 33], [57, 13221]],
+  "nullopt": true,
+  "$fileid": 908
+}
+,
+
+{
+  "stackable_1": true,
+  "baseModel": 2422,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -29,
+  "model_zoom": 1220,
+  "rotation_1": 100,
+  "rotation_0": 216,
+  "dummyItem": 2,
+  "color_replacements": [[61, 33], [57, 13221]],
+  "nullopt": true,
+  "$fileid": 909
+}
+,
+
+{
+  "stackable_1": true,
+  "baseModel": 2421,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -29,
+  "model_zoom": 1220,
+  "rotation_1": 100,
+  "rotation_0": 216,
+  "dummyItem": 2,
+  "nullopt": true,
+  "$fileid": 910
+}
+,
+
+{
+  "stackable_1": true,
+  "baseModel": 2420,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -29,
+  "model_zoom": 1220,
+  "rotation_1": 100,
+  "rotation_0": 216,
+  "dummyItem": 2,
+  "nullopt": true,
+  "$fileid": 911
+}
+,
+
+{
+  "stackable_1": true,
+  "baseModel": 2419,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -29,
+  "model_zoom": 1220,
+  "rotation_1": 100,
+  "rotation_0": 216,
+  "dummyItem": 2,
+  "nullopt": true,
+  "$fileid": 912
+}
+,
+
+{
+  "stackable_1": true,
+  "baseModel": 2422,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -29,
+  "model_zoom": 1220,
+  "rotation_1": 100,
+  "rotation_0": 216,
+  "dummyItem": 2,
+  "nullopt": true,
+  "$fileid": 913
+}
+,
+
+{
+  "stackable_1": true,
+  "baseModel": 2421,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -29,
+  "model_zoom": 1220,
+  "rotation_1": 100,
+  "rotation_0": 216,
+  "dummyItem": 2,
+  "color_replacements": [[57, 13221]],
+  "nullopt": true,
+  "$fileid": 914
+}
+,
+
+{
+  "stackable_1": true,
+  "baseModel": 2420,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -29,
+  "model_zoom": 1220,
+  "rotation_1": 100,
+  "rotation_0": 216,
+  "dummyItem": 2,
+  "color_replacements": [[57, 13221]],
+  "nullopt": true,
+  "$fileid": 915
+}
+,
+
+{
+  "stackable_1": true,
+  "baseModel": 2419,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -29,
+  "model_zoom": 1220,
+  "rotation_1": 100,
+  "rotation_0": 216,
+  "dummyItem": 2,
+  "color_replacements": [[57, 13221]],
+  "nullopt": true,
+  "$fileid": 916
+}
+,
+
+{
+  "stackable_1": true,
+  "baseModel": 2422,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -29,
+  "model_zoom": 1220,
+  "rotation_1": 100,
+  "rotation_0": 216,
+  "dummyItem": 2,
+  "color_replacements": [[57, 13221]],
+  "nullopt": true,
+  "$fileid": 917
+}
+,
+
+{
+  "stackable_1": true,
+  "baseModel": 2421,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -29,
+  "model_zoom": 1220,
+  "rotation_1": 100,
+  "rotation_0": 216,
+  "dummyItem": 2,
+  "color_replacements": [[61, 43297], [57, 43297]],
+  "nullopt": true,
+  "$fileid": 918
+}
+,
+
+{
+  "stackable_1": true,
+  "baseModel": 2420,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -29,
+  "model_zoom": 1220,
+  "rotation_1": 100,
+  "rotation_0": 216,
+  "dummyItem": 2,
+  "color_replacements": [[61, 43297], [57, 43297]],
+  "nullopt": true,
+  "$fileid": 919
+}
+,
+
+{
+  "stackable_1": true,
+  "baseModel": 2419,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -29,
+  "model_zoom": 1220,
+  "rotation_1": 100,
+  "rotation_0": 216,
+  "dummyItem": 2,
+  "color_replacements": [[61, 43297], [57, 43297]],
+  "nullopt": true,
+  "$fileid": 920
+}
+,
+
+{
+  "stackable_1": true,
+  "baseModel": 2422,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -29,
+  "model_zoom": 1220,
+  "rotation_1": 100,
+  "rotation_0": 216,
+  "dummyItem": 2,
+  "color_replacements": [[61, 43297], [57, 43297]],
+  "nullopt": true,
+  "$fileid": 921
+}
+,
+
+{
+  "stackable_1": true,
+  "baseModel": 2421,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -29,
+  "model_zoom": 1220,
+  "rotation_1": 100,
+  "rotation_0": 216,
+  "dummyItem": 2,
+  "color_replacements": [[61, 43297], [57, 13221]],
+  "nullopt": true,
+  "$fileid": 922
+}
+,
+
+{
+  "stackable_1": true,
+  "baseModel": 2420,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -29,
+  "model_zoom": 1220,
+  "rotation_1": 100,
+  "rotation_0": 216,
+  "dummyItem": 2,
+  "color_replacements": [[61, 43297], [57, 13221]],
+  "nullopt": true,
+  "$fileid": 923
+}
+,
+
+{
+  "stackable_1": true,
+  "baseModel": 2419,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -29,
+  "model_zoom": 1220,
+  "rotation_1": 100,
+  "rotation_0": 216,
+  "dummyItem": 2,
+  "color_replacements": [[61, 43297], [57, 13221]],
+  "nullopt": true,
+  "$fileid": 924
+}
+,
+
+{
+  "stackable_1": true,
+  "baseModel": 2422,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -29,
+  "model_zoom": 1220,
+  "rotation_1": 100,
+  "rotation_0": 216,
+  "dummyItem": 2,
+  "color_replacements": [[61, 43297], [57, 13221]],
+  "nullopt": true,
+  "$fileid": 925
+}
+,
+
+{
+  "stackable_1": true,
+  "baseModel": 2421,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -29,
+  "model_zoom": 1220,
+  "rotation_1": 100,
+  "rotation_0": 216,
+  "dummyItem": 2,
+  "color_replacements": [[61, 21662], [57, 21662]],
+  "nullopt": true,
+  "$fileid": 926
+}
+,
+
+{
+  "stackable_1": true,
+  "baseModel": 2420,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -29,
+  "model_zoom": 1220,
+  "rotation_1": 100,
+  "rotation_0": 216,
+  "dummyItem": 2,
+  "color_replacements": [[61, 21662], [57, 21662]],
+  "nullopt": true,
+  "$fileid": 927
+}
+,
+
+{
+  "stackable_1": true,
+  "baseModel": 2419,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -29,
+  "model_zoom": 1220,
+  "rotation_1": 100,
+  "rotation_0": 216,
+  "dummyItem": 2,
+  "color_replacements": [[61, 21662], [57, 21662]],
+  "nullopt": true,
+  "$fileid": 928
+}
+,
+
+{
+  "stackable_1": true,
+  "baseModel": 2422,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -29,
+  "model_zoom": 1220,
+  "rotation_1": 100,
+  "rotation_0": 216,
+  "dummyItem": 2,
+  "color_replacements": [[61, 21662], [57, 21662]],
+  "nullopt": true,
+  "$fileid": 929
+}
+,
+
+{
+  "stackable_1": true,
+  "baseModel": 2421,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -29,
+  "model_zoom": 1220,
+  "rotation_1": 100,
+  "rotation_0": 216,
+  "dummyItem": 2,
+  "color_replacements": [[61, 21662], [57, 13221]],
+  "nullopt": true,
+  "$fileid": 930
+}
+,
+
+{
+  "stackable_1": true,
+  "baseModel": 2420,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -29,
+  "model_zoom": 1220,
+  "rotation_1": 100,
+  "rotation_0": 216,
+  "dummyItem": 2,
+  "color_replacements": [[61, 21662], [57, 13221]],
+  "nullopt": true,
+  "$fileid": 931
+}
+,
+
+{
+  "stackable_1": true,
+  "baseModel": 2419,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -29,
+  "model_zoom": 1220,
+  "rotation_1": 100,
+  "rotation_0": 216,
+  "dummyItem": 2,
+  "color_replacements": [[61, 21662], [57, 13221]],
+  "nullopt": true,
+  "$fileid": 932
+}
+,
+
+{
+  "stackable_1": true,
+  "baseModel": 2422,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -29,
+  "model_zoom": 1220,
+  "rotation_1": 100,
+  "rotation_0": 216,
+  "dummyItem": 2,
+  "color_replacements": [[61, 21662], [57, 13221]],
+  "nullopt": true,
+  "$fileid": 933
+}
+,
+
+{
+  "stackable_1": true,
+  "baseModel": 2421,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -29,
+  "model_zoom": 1220,
+  "rotation_1": 100,
+  "rotation_0": 216,
+  "dummyItem": 2,
+  "color_replacements": [[61, 36133], [57, 36133]],
+  "nullopt": true,
+  "$fileid": 934
+}
+,
+
+{
+  "stackable_1": true,
+  "baseModel": 2420,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -29,
+  "model_zoom": 1220,
+  "rotation_1": 100,
+  "rotation_0": 216,
+  "dummyItem": 2,
+  "color_replacements": [[61, 36133], [57, 36133]],
+  "nullopt": true,
+  "$fileid": 935
+}
+,
+
+{
+  "stackable_1": true,
+  "baseModel": 2419,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -29,
+  "model_zoom": 1220,
+  "rotation_1": 100,
+  "rotation_0": 216,
+  "dummyItem": 2,
+  "color_replacements": [[61, 36133], [57, 36133]],
+  "nullopt": true,
+  "$fileid": 936
+}
+,
+
+{
+  "stackable_1": true,
+  "baseModel": 2422,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -29,
+  "model_zoom": 1220,
+  "rotation_1": 100,
+  "rotation_0": 216,
+  "dummyItem": 2,
+  "color_replacements": [[61, 36133], [57, 36133]],
+  "nullopt": true,
+  "$fileid": 937
+}
+,
+
+{
+  "stackable_1": true,
+  "baseModel": 2421,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -29,
+  "model_zoom": 1220,
+  "rotation_1": 100,
+  "rotation_0": 216,
+  "dummyItem": 2,
+  "color_replacements": [[61, 36133], [57, 13221]],
+  "nullopt": true,
+  "$fileid": 938
+}
+,
+
+{
+  "stackable_1": true,
+  "baseModel": 2420,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -29,
+  "model_zoom": 1220,
+  "rotation_1": 100,
+  "rotation_0": 216,
+  "dummyItem": 2,
+  "color_replacements": [[61, 36133], [57, 13221]],
+  "nullopt": true,
+  "$fileid": 939
+}
+,
+
+{
+  "stackable_1": true,
+  "baseModel": 2419,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -29,
+  "model_zoom": 1220,
+  "rotation_1": 100,
+  "rotation_0": 216,
+  "dummyItem": 2,
+  "color_replacements": [[61, 36133], [57, 13221]],
+  "nullopt": true,
+  "$fileid": 940
+}
+,
+
+{
+  "stackable_1": true,
+  "baseModel": 2422,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -29,
+  "model_zoom": 1220,
+  "rotation_1": 100,
+  "rotation_0": 216,
+  "dummyItem": 2,
+  "color_replacements": [[61, 36133], [57, 13221]],
+  "nullopt": true,
+  "$fileid": 941
+}
+,
+
+{
+  "members": true,
+  "value": 10,
+  "stackable_1": true,
+  "baseModel": 698,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": 1,
+  "model_zoom": 1750,
+  "rotation_1": 120,
+  "rotation_0": 332,
+  "widget_actions_1": "Wield",
+  "stack_info_0": [2546, 2],
+  "stack_info_1": [2547, 3],
+  "stack_info_2": [2548, 4],
+  "stack_info_3": [2549, 5],
+  "tradeable": true,
+  "name": "Bronze fire arrows",
+  "nullopt": true,
+  "$fileid": 942
+}
+,
+
+{
+  "value": 0,
+  "baseModel": 2362,
+  "model_zoom": 1010,
+  "rotation_1": 32,
+  "rotation_0": 288,
+  "members": true,
+  "name": "Worm",
+  "noteData": 944,
+  "nullopt": true,
+  "$fileid": 943
+}
+,
+
+{"noteData": 943, "noteTemplate": 799, "nullopt": true, "$fileid": 944}
+,
+
+{
+  "baseModel": 2776,
+  "maleModels_0": {"id": 549, "type": 0},
+  "femaleModels_0": {"id": 549, "type": 0},
+  "modelTranslate_1": 40,
+  "model_zoom": 1810,
+  "rotation_1": 16,
+  "rotation_0": 1592,
+  "name": "Throwing rope",
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 945
+}
+,
+
+{
+  "value": 6,
+  "baseModel": 2559,
+  "modelTranslate_0": -11,
+  "modelTranslate_1": -4,
+  "model_zoom": 580,
+  "rotation_1": 1260,
+  "rotation_0": 444,
+  "maleModels_0": {"id": 4045, "type": 0},
+  "femaleModels_0": {"id": 4045, "type": 0},
+  "tradeable": true,
+  "name": "Knife",
+  "female_translate": [3, 245, 6],
+  "noteData": 947,
+  "nullopt": true,
+  "$fileid": 946
+}
+,
+
+{"noteData": 946, "noteTemplate": 799, "nullopt": true, "$fileid": 947}
+,
+
+{
+  "baseModel": 2631,
+  "modelTranslate_0": -2,
+  "modelTranslate_1": 5,
+  "model_zoom": 1290,
+  "rotation_1": 168,
+  "rotation_0": 388,
+  "value": 10,
+  "tradeable": true,
+  "name": "Bear fur",
+  "noteData": 949,
+  "nullopt": true,
+  "$fileid": 948
+}
+,
+
+{"noteData": 948, "noteTemplate": 799, "nullopt": true, "$fileid": 949}
+,
+
+{
+  "value": 55,
+  "baseModel": 2725,
+  "modelTranslate_1": -15,
+  "model_zoom": 1360,
+  "rotation_0": 368,
+  "tradeable": true,
+  "color_replacements": [[127, 54722]],
+  "name": "Silk",
+  "noteData": 951,
+  "nullopt": true,
+  "$fileid": 950
+}
+,
+
+{"noteData": 950, "noteTemplate": 799, "nullopt": true, "$fileid": 951}
+,
+
+{
+  "value": 3,
+  "baseModel": 7304,
+  "maleModels_0": {"id": 496, "type": 0},
+  "femaleModels_0": {"id": 496, "type": 0},
+  "model_zoom": 1860,
+  "rotation_1": 1532,
+  "rotation_0": 396,
+  "widget_actions_0": "Dig",
+  "tradeable": true,
+  "color_replacements": [[61, 5181], [57, 5177], [70, 5190]],
+  "name": "Spade",
+  "noteData": 953,
+  "nullopt": true,
+  "$fileid": 952
+}
+,
+
+{"noteData": 952, "noteTemplate": 799, "nullopt": true, "$fileid": 953}
+,
+
+{
+  "value": 18,
+  "baseModel": 1842,
+  "maleModels_0": {"id": 10131, "type": 0},
+  "femaleModels_0": {"id": 10131, "type": 0},
+  "modelTranslate_0": -2,
+  "modelTranslate_1": -30,
+  "model_zoom": 1240,
+  "rotation_1": 1976,
+  "rotation_0": 188,
+  "tradeable": true,
+  "color_replacements": [[6558, 7054]],
+  "name": "Rope",
+  "female_translate": [3, 245, 6],
+  "noteData": 955,
+  "nullopt": true,
+  "$fileid": 954
+}
+,
+
+{"noteData": 954, "noteTemplate": 799, "nullopt": true, "$fileid": 955}
+,
+
+{
+  "value": 1,
+  "baseModel": 2600,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": 7,
+  "model_zoom": 1040,
+  "rotation_1": 120,
+  "rotation_0": 380,
+  "name": "Flier",
+  "nullopt": true,
+  "$fileid": 956
+}
+,
+
+{
+  "baseModel": 2742,
+  "value": 0,
+  "name": "Tinderbox",
+  "nullopt": true,
+  "$fileid": 957
+}
+,
+
+{
+  "value": 150,
+  "baseModel": 2631,
+  "modelTranslate_0": 2,
+  "model_zoom": 1350,
+  "rotation_1": 1668,
+  "rotation_0": 312,
+  "members": true,
+  "tradeable": true,
+  "color_replacements": [[8103, 61]],
+  "name": "Grey wolf fur",
+  "noteData": 959,
+  "nullopt": true,
+  "$fileid": 958
+}
+,
+
+{"noteData": 958, "noteTemplate": 799, "nullopt": true, "$fileid": 959}
+,
+
+{
+  "baseModel": 15048,
+  "modelTranslate_1": 18,
+  "rotation_1": 148,
+  "rotation_0": 356,
+  "ambiance": 25,
+  "value": 100,
+  "tradeable": true,
+  "name": "Plank",
+  "noteData": 961,
+  "nullopt": true,
+  "$fileid": 960
+}
+,
+
+{"noteData": 960, "noteTemplate": 799, "nullopt": true, "$fileid": 961}
+,
+
+{
+  "baseModel": 2637,
+  "modelTranslate_0": -3,
+  "modelTranslate_1": 40,
+  "model_zoom": 630,
+  "rotation_1": 1728,
+  "rotation_0": 272,
+  "tradeable": true,
+  "name": "Christmas cracker",
+  "noteData": 963,
+  "nullopt": true,
+  "$fileid": 962
+}
+,
+
+{"noteData": 962, "noteTemplate": 799, "nullopt": true, "$fileid": 963}
+,
+
+{
+  "baseModel": 2388,
+  "modelTranslate_0": -1,
+  "modelTranslate_1": -10,
+  "model_zoom": 530,
+  "rotation_1": 64,
+  "rotation_2": 1996,
+  "rotation_0": 160,
+  "color_replacements": [[5231, 7514]],
+  "name": "Skull",
+  "nullopt": true,
+  "$fileid": 964
+}
+,
+
+{
+  "baseModel": 2388,
+  "modelTranslate_0": -1,
+  "modelTranslate_1": -10,
+  "model_zoom": 530,
+  "rotation_1": 64,
+  "rotation_2": 1996,
+  "rotation_0": 160,
+  "stackable_1": true,
+  "color_replacements": [[5231, 7514]],
+  "name": "Skull",
+  "nullopt": true,
+  "$fileid": 965
+}
+,
+
+{
+  "baseModel": 2617,
+  "modelTranslate_0": -2,
+  "modelTranslate_1": 7,
+  "model_zoom": 870,
+  "rotation_1": 100,
+  "rotation_0": 340,
+  "name": "Tile",
+  "nullopt": true,
+  "$fileid": 966
+}
+,
+
+{
+  "baseModel": 2742,
+  "value": 0,
+  "name": "Tinderbox",
+  "nullopt": true,
+  "$fileid": 967
+}
+,
+
+{
+  "baseModel": 2571,
+  "modelTranslate_0": -5,
+  "modelTranslate_1": -16,
+  "model_zoom": 820,
+  "rotation_1": 20,
+  "rotation_0": 204,
+  "members": true,
+  "name": "Rock",
+  "nullopt": true,
+  "$fileid": 968
+}
+,
+
+{
+  "baseModel": 2742,
+  "value": 0,
+  "name": "Tinderbox",
+  "nullopt": true,
+  "$fileid": 969
+}
+,
+
+{
+  "value": 10,
+  "baseModel": 2746,
+  "maleModels_0": {"id": 532, "type": 0},
+  "femaleModels_0": {"id": 532, "type": 0},
+  "model_zoom": 940,
+  "rotation_1": 112,
+  "rotation_0": 248,
+  "members": true,
+  "tradeable": true,
+  "name": "Papyrus",
+  "female_translate": [3, 245, 6],
+  "noteData": 971,
+  "nullopt": true,
+  "$fileid": 970
+}
+,
+
+{"noteData": 970, "noteTemplate": 799, "nullopt": true, "$fileid": 971}
+,
+
+{
+  "baseModel": 2838,
+  "maleModels_0": {"id": 532, "type": 0},
+  "femaleModels_0": {"id": 532, "type": 0},
+  "model_zoom": 940,
+  "rotation_1": 112,
+  "rotation_0": 248,
+  "members": true,
+  "name": "Papyrus",
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 972
+}
+,
+
+{
+  "value": 45,
+  "baseModel": 2395,
+  "maleModels_0": {"id": 494, "type": 0},
+  "femaleModels_0": {"id": 494, "type": 0},
+  "modelTranslate_1": 26,
+  "model_zoom": 400,
+  "rotation_1": 220,
+  "rotation_0": 288,
+  "tradeable": true,
+  "name": "Charcoal",
+  "female_translate": [3, 245, 6],
+  "noteData": 974,
+  "nullopt": true,
+  "$fileid": 973
+}
+,
+
+{"noteData": 973, "noteTemplate": 799, "nullopt": true, "$fileid": 974}
+,
+
+{
+  "value": 52,
+  "baseModel": 2841,
+  "members": true,
+  "modelTranslate_0": -2,
+  "modelTranslate_1": -12,
+  "model_zoom": 770,
+  "rotation_1": 88,
+  "rotation_0": 200,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 566, "type": 0},
+  "femaleModels_0": {"id": 566, "type": 0},
+  "tradeable": true,
+  "color_replacements": [[61, 33]],
+  "name": "Machete",
+  "female_translate": [3, 245, 6],
+  "noteData": 976,
+  "nullopt": true,
+  "$fileid": 975
+}
+,
+
+{"noteData": 975, "noteTemplate": 799, "nullopt": true, "$fileid": 976}
+,
+
+{
+  "baseModel": 2241,
+  "model_zoom": 2050,
+  "rotation_1": 36,
+  "rotation_0": 116,
+  "color_replacements": [[41, 6439], [22435, 6051], [22420, 5016]],
+  "name": "Cooking pot",
+  "noteData": 978,
+  "nullopt": true,
+  "$fileid": 977
+}
+,
+
+{"noteData": 977, "noteTemplate": 799, "nullopt": true, "$fileid": 978}
+,
+
+{
+  "baseModel": 2500,
+  "modelTranslate_0": 3,
+  "model_zoom": 290,
+  "rotation_1": 224,
+  "rotation_0": 488,
+  "dummyItem": 2,
+  "nullopt": true,
+  "$fileid": 979
+}
+,
+
+{
+  "dummyItem": 2,
+  "widget_actions_0": "Wear",
+  "value": 1,
+  "baseModel": 2521,
+  "modelTranslate_1": 1,
+  "model_zoom": 1940,
+  "rotation_0": 572,
+  "color_replacements": [[25238, 62928]],
+  "nullopt": true,
+  "$fileid": 980
+}
+,
+
+{
+  "value": 12,
+  "baseModel": 2724,
+  "modelTranslate_1": 2,
+  "model_zoom": 880,
+  "rotation_1": 232,
+  "rotation_2": 260,
+  "rotation_0": 460,
+  "tradeable": true,
+  "name": "Disk of returning",
+  "noteData": 982,
+  "nullopt": true,
+  "$fileid": 981
+}
+,
+
+{"noteData": 981, "noteTemplate": 799, "nullopt": true, "$fileid": 982}
+,
+
+{
+  "baseModel": 2372,
+  "modelTranslate_0": -3,
+  "modelTranslate_1": 5,
+  "model_zoom": 700,
+  "rotation_1": 20,
+  "rotation_0": 328,
+  "tradeable": true,
+  "color_replacements": [[8128, 7087]],
+  "name": "Brass key",
+  "noteData": 984,
+  "nullopt": true,
+  "$fileid": 983
+}
+,
+
+{"noteData": 983, "noteTemplate": 799, "nullopt": true, "$fileid": 984}
+,
+
+{
+  "members": true,
+  "baseModel": 2414,
+  "modelTranslate_0": -7,
+  "modelTranslate_1": 1,
+  "model_zoom": 740,
+  "rotation_1": 8,
+  "rotation_0": 296,
+  "tradeable": true,
+  "name": "Tooth half of a key",
+  "noteData": 986,
+  "nullopt": true,
+  "$fileid": 985
+}
+,
+
+{"noteData": 985, "noteTemplate": 799, "nullopt": true, "$fileid": 986}
+,
+
+{
+  "members": true,
+  "baseModel": 2415,
+  "modelTranslate_0": 2,
+  "modelTranslate_1": 66,
+  "model_zoom": 750,
+  "rotation_1": 1980,
+  "rotation_0": 292,
+  "tradeable": true,
+  "name": "Loop half of a key",
+  "noteData": 988,
+  "nullopt": true,
+  "$fileid": 987
+}
+,
+
+{"noteData": 987, "noteTemplate": 799, "nullopt": true, "$fileid": 988}
+,
+
+{
+  "members": true,
+  "baseModel": 2372,
+  "modelTranslate_0": -3,
+  "modelTranslate_1": 5,
+  "model_zoom": 700,
+  "rotation_1": 20,
+  "rotation_0": 328,
+  "tradeable": true,
+  "color_replacements": [[8128, 43069]],
+  "name": "Crystal key",
+  "noteData": 990,
+  "nullopt": true,
+  "$fileid": 989
+}
+,
+
+{"noteData": 989, "noteTemplate": 799, "nullopt": true, "$fileid": 990}
+,
+
+{
+  "baseModel": 2372,
+  "modelTranslate_0": -3,
+  "modelTranslate_1": 5,
+  "model_zoom": 700,
+  "rotation_1": 20,
+  "rotation_0": 328,
+  "tradeable": true,
+  "color_replacements": [[8128, 3625]],
+  "name": "Muddy key",
+  "noteData": 992,
+  "nullopt": true,
+  "$fileid": 991
+}
+,
+
+{"noteData": 991, "noteTemplate": 799, "nullopt": true, "$fileid": 992}
+,
+
+{
+  "members": true,
+  "baseModel": 2372,
+  "modelTranslate_0": -3,
+  "modelTranslate_1": 5,
+  "model_zoom": 700,
+  "rotation_1": 20,
+  "rotation_0": 328,
+  "tradeable": true,
+  "color_replacements": [[8128, 10508]],
+  "name": "Sinister key",
+  "noteData": 994,
+  "nullopt": true,
+  "$fileid": 993
+}
+,
+
+{"noteData": 993, "noteTemplate": 799, "nullopt": true, "$fileid": 994}
+,
+
+{
+  "baseModel": 2484,
+  "stackable_1": true,
+  "modelTranslate_0": 3,
+  "model_zoom": 710,
+  "rotation_1": 2012,
+  "rotation_0": 184,
+  "stack_info_0": [996, 2],
+  "stack_info_1": [997, 3],
+  "stack_info_2": [998, 4],
+  "stack_info_3": [999, 5],
+  "stack_info_4": [1000, 25],
+  "stack_info_5": [1001, 100],
+  "stack_info_6": [1002, 250],
+  "stack_info_7": [1003, 1000],
+  "stack_info_8": [1004, 10000],
+  "name": "Coins",
+  "nullopt": true,
+  "$fileid": 995
+}
+,
+
+{
+  "baseModel": 2485,
+  "stackable_1": true,
+  "modelTranslate_0": 3,
+  "model_zoom": 710,
+  "rotation_1": 2012,
+  "rotation_0": 184,
+  "dummyItem": 2,
+  "nullopt": true,
+  "$fileid": 996
+}
+,
+
+{
+  "baseModel": 2486,
+  "stackable_1": true,
+  "modelTranslate_0": 3,
+  "model_zoom": 710,
+  "rotation_1": 2012,
+  "rotation_0": 184,
+  "dummyItem": 2,
+  "nullopt": true,
+  "$fileid": 997
+}
+,
+
+{
+  "baseModel": 2487,
+  "stackable_1": true,
+  "modelTranslate_0": 3,
+  "model_zoom": 710,
+  "rotation_1": 2012,
+  "rotation_0": 184,
+  "dummyItem": 2,
+  "nullopt": true,
+  "$fileid": 998
+}
+,
+
+{
+  "baseModel": 2488,
+  "stackable_1": true,
+  "modelTranslate_0": 3,
+  "model_zoom": 710,
+  "rotation_1": 2012,
+  "rotation_0": 184,
+  "dummyItem": 2,
+  "nullopt": true,
+  "$fileid": 999
+}
+,
+
+{
+  "baseModel": 2667,
+  "modelTranslate_0": 3,
+  "model_zoom": 710,
+  "rotation_1": 2012,
+  "rotation_0": 184,
+  "stackable_1": true,
+  "dummyItem": 2,
+  "nullopt": true,
+  "$fileid": 1000
+}
+,
+
+{
+  "baseModel": 2825,
+  "modelTranslate_0": 3,
+  "model_zoom": 710,
+  "rotation_1": 2012,
+  "rotation_0": 184,
+  "stackable_1": true,
+  "dummyItem": 2,
+  "nullopt": true,
+  "$fileid": 1001
+}
+,
+
+{
+  "baseModel": 2423,
+  "modelTranslate_0": 2,
+  "modelTranslate_1": -2,
+  "model_zoom": 650,
+  "rotation_1": 2044,
+  "rotation_0": 160,
+  "stackable_1": true,
+  "dummyItem": 2,
+  "nullopt": true,
+  "$fileid": 1002
+}
+,
+
+{
+  "baseModel": 2710,
+  "modelTranslate_0": 11,
+  "modelTranslate_1": 13,
+  "model_zoom": 980,
+  "rotation_1": 64,
+  "rotation_0": 172,
+  "stackable_1": true,
+  "dummyItem": 2,
+  "nullopt": true,
+  "$fileid": 1003
+}
+,
+
+{
+  "baseModel": 2775,
+  "modelTranslate_0": 11,
+  "model_zoom": 1000,
+  "rotation_1": 80,
+  "rotation_0": 168,
+  "stackable_1": true,
+  "dummyItem": 2,
+  "nullopt": true,
+  "$fileid": 1004
+}
+,
+
+{
+  "value": 2,
+  "baseModel": 2592,
+  "modelTranslate_0": -4,
+  "modelTranslate_1": -4,
+  "model_zoom": 1580,
+  "rotation_1": 172,
+  "rotation_0": 544,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 305, "type": 0},
+  "femaleModels_0": {"id": 467, "type": 0},
+  "tradeable": true,
+  "material_replacements": [[272, 258]],
+  "name": "White apron",
+  "noteData": 1006,
+  "nullopt": true,
+  "$fileid": 1005
+}
+,
+
+{"noteData": 1005, "noteTemplate": 799, "nullopt": true, "$fileid": 1006}
+,
+
+{
+  "value": 20,
+  "baseModel": 2603,
+  "modelTranslate_0": 3,
+  "modelTranslate_1": 6,
+  "model_zoom": 2140,
+  "rotation_1": 948,
+  "rotation_0": 400,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 323, "type": 0},
+  "femaleModels_0": {"id": 481, "type": 0},
+  "tradeable": true,
+  "color_replacements": [[7700, 1950], [11200, 2749]],
+  "name": "Cape",
+  "noteData": 1008,
+  "nullopt": true,
+  "$fileid": 1007
+}
+,
+
+{"noteData": 1007, "noteTemplate": 799, "nullopt": true, "$fileid": 1008}
+,
+
+{
+  "value": 30,
+  "baseModel": 2506,
+  "modelTranslate_0": 7,
+  "modelTranslate_1": 66,
+  "model_zoom": 465,
+  "rotation_1": 166,
+  "rotation_0": 290,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 281, "type": 0},
+  "femaleModels_0": {"id": 445, "type": 0},
+  "tradeable": true,
+  "color_replacements": [[9152, 7085]],
+  "name": "Brass necklace",
+  "noteData": 1010,
+  "nullopt": true,
+  "$fileid": 1009
+}
+,
+
+{"noteData": 1009, "noteTemplate": 799, "nullopt": true, "$fileid": 1010}
+,
+
+{
+  "value": 2,
+  "baseModel": 2521,
+  "modelTranslate_1": 1,
+  "model_zoom": 1940,
+  "rotation_0": 572,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 265, "type": 0},
+  "femaleModels_0": {"id": 428, "type": 0},
+  "tradeable": true,
+  "color_replacements": [[25238, 38814]],
+  "material_replacements": [[252, 253]],
+  "name": "Blue skirt",
+  "noteData": 1012,
+  "nullopt": true,
+  "$fileid": 1011
+}
+,
+
+{"noteData": 1011, "noteTemplate": 799, "nullopt": true, "$fileid": 1012}
+,
+
+{
+  "value": 2,
+  "baseModel": 2521,
+  "modelTranslate_1": 1,
+  "model_zoom": 1940,
+  "rotation_0": 572,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 265, "type": 0},
+  "femaleModels_0": {"id": 428, "type": 0},
+  "tradeable": true,
+  "color_replacements": [[25238, 62928]],
+  "material_replacements": [[252, 253]],
+  "name": "Pink skirt",
+  "noteData": 1014,
+  "nullopt": true,
+  "$fileid": 1013
+}
+,
+
+{"noteData": 1013, "noteTemplate": 799, "nullopt": true, "$fileid": 1014}
+,
+
+{
+  "value": 2,
+  "baseModel": 2521,
+  "modelTranslate_1": 1,
+  "model_zoom": 1940,
+  "rotation_0": 572,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 265, "type": 0},
+  "femaleModels_0": {"id": 428, "type": 0},
+  "tradeable": true,
+  "color_replacements": [[25238, 10508]],
+  "material_replacements": [[252, 253]],
+  "name": "Black skirt",
+  "noteData": 1016,
+  "nullopt": true,
+  "$fileid": 1015
+}
+,
+
+{"noteData": 1015, "noteTemplate": 799, "nullopt": true, "$fileid": 1016}
+,
+
+{
+  "value": 2,
+  "baseModel": 2483,
+  "modelTranslate_0": 5,
+  "modelTranslate_1": -10,
+  "model_zoom": 800,
+  "rotation_1": 156,
+  "rotation_0": 152,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 202, "type": 0},
+  "femaleModels_0": {"id": 377, "type": 0},
+  "maleHeads_0": 39400,
+  "femaleHeads_0": 38748,
+  "maleModels_1": 215,
+  "femaleModels_1": 391,
+  "tradeable": true,
+  "color_replacements": [[38814, 0]],
+  "name": "Wizard hat",
+  "noteData": 1018,
+  "nullopt": true,
+  "$fileid": 1017
+}
+,
+
+{"noteData": 1017, "noteTemplate": 799, "nullopt": true, "$fileid": 1018}
+,
+
+{
+  "value": 20,
+  "baseModel": 2603,
+  "modelTranslate_0": 3,
+  "modelTranslate_1": 6,
+  "model_zoom": 2140,
+  "rotation_1": 948,
+  "rotation_0": 400,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 323, "type": 0},
+  "femaleModels_0": {"id": 481, "type": 0},
+  "tradeable": true,
+  "color_replacements": [[7700, 12], [11200, 54676], [926, 12]],
+  "name": "Cape",
+  "noteData": 1020,
+  "nullopt": true,
+  "$fileid": 1019
+}
+,
+
+{"noteData": 1019, "noteTemplate": 799, "nullopt": true, "$fileid": 1020}
+,
+
+{
+  "value": 20,
+  "baseModel": 2603,
+  "modelTranslate_0": 3,
+  "modelTranslate_1": 6,
+  "model_zoom": 2140,
+  "rotation_1": 948,
+  "rotation_0": 400,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 323, "type": 0},
+  "femaleModels_0": {"id": 481, "type": 0},
+  "tradeable": true,
+  "color_replacements": [[7700, 43420], [11200, 28], [926, 43420]],
+  "name": "Cape",
+  "noteData": 1022,
+  "nullopt": true,
+  "$fileid": 1021
+}
+,
+
+{"noteData": 1021, "noteTemplate": 799, "nullopt": true, "$fileid": 1022}
+,
+
+{
+  "value": 20,
+  "baseModel": 2603,
+  "modelTranslate_0": 3,
+  "modelTranslate_1": 6,
+  "model_zoom": 2140,
+  "rotation_1": 948,
+  "rotation_0": 400,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 323, "type": 0},
+  "femaleModels_0": {"id": 481, "type": 0},
+  "tradeable": true,
+  "color_replacements": [[11200, 11183], [7700, 11200], [926, 10043]],
+  "name": "Cape",
+  "noteData": 1024,
+  "nullopt": true,
+  "$fileid": 1023
+}]}

@@ -1,0 +1,1408 @@
+{"$schema":".schema-overlays_batch.json","files":[
+
+{
+  "material": 408,
+  "color": [40, 40, 39],
+  "material_tiling": 256,
+  "bleedpriority": 23,
+  "bleedToUnderlay": true,
+  "$fileid": 0
+}
+,
+
+{
+  "color": [68, 68, 68],
+  "material": 501,
+  "bleedpriority": 23,
+  "bleedToUnderlay": true,
+  "$fileid": 1
+}
+,
+
+{
+  "color": [102, 102, 102],
+  "material": 408,
+  "bleedpriority": 24,
+  "bleedToUnderlay": true,
+  "$fileid": 2
+}
+,
+
+{
+  "color": [136, 136, 136],
+  "material": 501,
+  "bleedpriority": 25,
+  "bleedToUnderlay": true,
+  "$fileid": 3
+}
+,
+
+{"color": [91, 60, 34], "material": 595, "bleedpriority": 127, "$fileid": 4}
+,
+
+{
+  "color": [114, 150, 183],
+  "material": 1,
+  "unknown_0x08": true,
+  "bleedpriority": 127,
+  "$fileid": 5
+}
+,
+
+{"material": 137, "bleedpriority": 127, "$fileid": 6}
+,
+
+{"color": [91, 91, 91], "material": 615, "bleedpriority": 127, "$fileid": 7}
+,
+
+{
+  "color": [255, 255, 245],
+  "material": 629,
+  "material_tiling": 192,
+  "bleedpriority": 127,
+  "$fileid": 8
+}
+,
+
+{
+  "color": [80, 80, 80],
+  "material": 499,
+  "material_tiling": 192,
+  "bleedpriority": 77,
+  "bleedToUnderlay": true,
+  "$fileid": 9
+}
+,
+
+{
+  "color": [34, 34, 34],
+  "material": 616,
+  "material_tiling": 160,
+  "bleedpriority": 72,
+  "bleedToUnderlay": true,
+  "$fileid": 10
+}
+,
+
+{
+  "color": [102, 93, 88],
+  "material": 505,
+  "bleedpriority": 38,
+  "bleedToUnderlay": true,
+  "$fileid": 11
+}
+,
+
+{
+  "material_tiling": 256,
+  "color": [153, 51, 51],
+  "material": 301,
+  "bleedpriority": 127,
+  "$fileid": 12
+}
+,
+
+{
+  "material": 602,
+  "color": [61, 43, 11],
+  "bleedpriority": 49,
+  "bleedToUnderlay": true,
+  "$fileid": 13
+}
+,
+
+{
+  "color": [61, 43, 11],
+  "material": 154,
+  "bleedpriority": 49,
+  "bleedToUnderlay": true,
+  "$fileid": 14
+}
+,
+
+{
+  "color": [102, 51, 0],
+  "material": 513,
+  "bleedpriority": 50,
+  "bleedToUnderlay": true,
+  "$fileid": 15
+}
+,
+
+{
+  "color": [102, 51, 0],
+  "material": 513,
+  "bleedpriority": 50,
+  "bleedToUnderlay": true,
+  "$fileid": 16
+}
+,
+
+{"color": [0, 0, 204], "material": 43, "bleedpriority": 127, "$fileid": 17}
+,
+
+{"material": 31, "bleedpriority": 127, "$fileid": 18}
+,
+
+{"material": 15, "bleedpriority": 127, "$fileid": 19}
+,
+
+{
+  "color": [153, 102, 0],
+  "material": 99,
+  "material_tiling": 256,
+  "bleedpriority": 51,
+  "bleedToUnderlay": true,
+  "$fileid": 20
+}
+,
+
+{
+  "color": [109, 91, 43],
+  "material": 181,
+  "bleedpriority": 52,
+  "bleedToUnderlay": true,
+  "$fileid": 21
+}
+,
+
+{
+  "color": [109, 91, 43],
+  "material": 181,
+  "bleedpriority": 53,
+  "bleedToUnderlay": true,
+  "$fileid": 22
+}
+,
+
+{"material": 47, "bleedpriority": 26, "bleedToUnderlay": true, "$fileid": 23}
+,
+
+{
+  "color": [203, 186, 118],
+  "material": 499,
+  "bleedpriority": 52,
+  "bleedToUnderlay": true,
+  "$fileid": 24
+}
+,
+
+{
+  "color": [130, 121, 68],
+  "material": 348,
+  "material_tiling": 256,
+  "bleedpriority": 26,
+  "bleedToUnderlay": true,
+  "$fileid": 25
+}
+,
+
+{"material": 23, "bleedpriority": 78, "bleedToUnderlay": true, "$fileid": 26}
+,
+
+{"material": 2, "bleedpriority": 79, "bleedToUnderlay": true, "$fileid": 27}
+,
+
+{
+  "color": [53, 114, 10],
+  "material": 276,
+  "bleedpriority": 63,
+  "bleedToUnderlay": true,
+  "$fileid": 28
+}
+,
+
+{
+  "color": [230, 230, 235],
+  "material": 502,
+  "bleedpriority": 99,
+  "bleedToUnderlay": true,
+  "$fileid": 29
+}
+,
+
+{
+  "color": [60, 0, 0],
+  "material": 493,
+  "bleedToUnderlay": true,
+  "bleedpriority": 127,
+  "$fileid": 30
+}
+,
+
+{"material": 11, "bleedpriority": 27, "bleedToUnderlay": true, "$fileid": 31}
+,
+
+{
+  "color": [200, 245, 255],
+  "material": 494,
+  "bleedpriority": 98,
+  "bleedToUnderlay": true,
+  "$fileid": 32
+}
+,
+
+{"color": [60, 0, 0], "material": 178, "bleedpriority": 127, "$fileid": 33}
+,
+
+{"color": [91, 60, 34], "material": 595, "bleedpriority": 127, "$fileid": 34}
+,
+
+{
+  "color": [102, 68, 17],
+  "material": 58,
+  "bleedpriority": 65,
+  "bleedToUnderlay": true,
+  "$fileid": 35
+}
+,
+
+{"color": [1, 1, 1], "bleedpriority": 9, "bleedToUnderlay": true, "$fileid": 36}
+,
+
+{"color": [85, 119, 153], "material": 493, "bleedpriority": 127, "$fileid": 37}
+,
+
+{"material": 17, "bleedpriority": 127, "$fileid": 38}
+,
+
+{"color": [71, 73, 163], "material": 493, "bleedpriority": 127, "$fileid": 39}
+,
+
+{"color": [63, 97, 129], "bleedpriority": 127, "$fileid": 40}
+,
+
+{
+  "unknown_0x05": true,
+  "color": [255, 0, 255],
+  "bleedpriority": 127,
+  "$fileid": 41
+}
+,
+
+{"color": [255, 0, 255], "bleedpriority": 127, "$fileid": 42}
+,
+
+{
+  "color": [80, 80, 80],
+  "unknown_0x05": true,
+  "bleedpriority": 127,
+  "$fileid": 43
+}
+,
+
+{"material": 3, "unknown_0x05": true, "bleedpriority": 127, "$fileid": 44}
+,
+
+{"material": 23, "unknown_0x05": true, "bleedpriority": 127, "$fileid": 45}
+,
+
+{"material": 2, "unknown_0x05": true, "bleedpriority": 127, "$fileid": 46}
+,
+
+{
+  "color": [40, 40, 32],
+  "material": 424,
+  "material_tiling": 256,
+  "bleedpriority": 58,
+  "bleedToUnderlay": true,
+  "secondary_colour": [1, 1, 1],
+  "$fileid": 47
+}
+,
+
+{
+  "color": [40, 40, 32],
+  "material": 348,
+  "bleedpriority": 31,
+  "bleedToUnderlay": true,
+  "$fileid": 48
+}
+,
+
+{
+  "color": [48, 32, 32],
+  "material": 593,
+  "bleedpriority": 30,
+  "bleedToUnderlay": true,
+  "$fileid": 49
+}
+,
+
+{
+  "unknown_0x05": true,
+  "color": [255, 0, 255],
+  "bleedpriority": 127,
+  "secondary_colour": [130, 121, 68],
+  "$fileid": 50
+}
+,
+
+{"bleedpriority": 5, "bleedToUnderlay": true, "$fileid": 51}
+,
+
+{
+  "unknown_0x05": true,
+  "color": [255, 0, 255],
+  "bleedpriority": 127,
+  "secondary_colour": [196, 172, 78],
+  "$fileid": 52
+}
+,
+
+{
+  "unknown_0x05": true,
+  "color": [255, 0, 255],
+  "bleedpriority": 127,
+  "secondary_colour": [183, 151, 103],
+  "$fileid": 53
+}
+,
+
+{
+  "unknown_0x05": true,
+  "color": [255, 0, 255],
+  "bleedpriority": 127,
+  "secondary_colour": [96, 96, 88],
+  "$fileid": 54
+}
+,
+
+{
+  "color": [96, 96, 88],
+  "material": 301,
+  "material_tiling": 256,
+  "bleedpriority": 127,
+  "$fileid": 55
+}
+,
+
+{
+  "unknown_0x05": true,
+  "color": [255, 0, 255],
+  "bleedpriority": 127,
+  "secondary_colour": [131, 195, 202],
+  "$fileid": 56
+}
+,
+
+{
+  "color": [61, 43, 11],
+  "unknown_0x05": true,
+  "material": 600,
+  "bleedpriority": 127,
+  "secondary_colour": [255, 255, 245],
+  "$fileid": 57
+}
+,
+
+{
+  "unknown_0x05": true,
+  "color": [255, 0, 255],
+  "bleedpriority": 127,
+  "secondary_colour": [40, 40, 32],
+  "$fileid": 58
+}
+,
+
+{
+  "unknown_0x05": true,
+  "color": [130, 96, 22],
+  "material": 66,
+  "bleedpriority": 84,
+  "bleedToUnderlay": true,
+  "$fileid": 59
+}
+,
+
+{
+  "unknown_0x05": true,
+  "color": [255, 0, 255],
+  "bleedpriority": 127,
+  "secondary_colour": [61, 43, 11],
+  "$fileid": 60
+}
+,
+
+{
+  "unknown_0x05": true,
+  "color": [255, 0, 255],
+  "bleedpriority": 127,
+  "secondary_colour": [0, 24, 24],
+  "$fileid": 61
+}
+,
+
+{
+  "unknown_0x05": true,
+  "color": [0, 56, 56],
+  "material": 416,
+  "bleedpriority": 58,
+  "bleedToUnderlay": true,
+  "$fileid": 62
+}
+,
+
+{
+  "unknown_0x05": true,
+  "color": [255, 0, 255],
+  "bleedpriority": 127,
+  "secondary_colour": [184, 176, 152],
+  "$fileid": 63
+}
+,
+
+{
+  "unknown_0x05": true,
+  "color": [32, 40, 40],
+  "material": 598,
+  "bleedpriority": 65,
+  "bleedToUnderlay": true,
+  "$fileid": 64
+}
+,
+
+{
+  "unknown_0x05": true,
+  "color": [255, 0, 255],
+  "bleedpriority": 127,
+  "secondary_colour": [56, 56, 40],
+  "$fileid": 65
+}
+,
+
+{
+  "unknown_0x05": true,
+  "color": [64, 48, 16],
+  "material": 501,
+  "bleedpriority": 31,
+  "bleedToUnderlay": true,
+  "secondary_colour": [64, 48, 16],
+  "$fileid": 66
+}
+,
+
+{
+  "unknown_0x05": true,
+  "color": [255, 0, 255],
+  "bleedpriority": 127,
+  "secondary_colour": [128, 112, 72],
+  "$fileid": 67
+}
+,
+
+{
+  "unknown_0x05": true,
+  "color": [255, 0, 255],
+  "bleedpriority": 127,
+  "secondary_colour": [64, 48, 32],
+  "$fileid": 68
+}
+,
+
+{
+  "color": [160, 112, 72],
+  "unknown_0x05": true,
+  "material": 66,
+  "material_tiling": 256,
+  "bleedpriority": 31,
+  "bleedToUnderlay": true,
+  "$fileid": 69
+}
+,
+
+{
+  "unknown_0x05": true,
+  "color": [160, 105, 71],
+  "material": 301,
+  "bleedpriority": 127,
+  "$fileid": 70
+}
+,
+
+{
+  "unknown_0x05": true,
+  "color": [255, 0, 255],
+  "bleedpriority": 127,
+  "secondary_colour": [48, 104, 80],
+  "$fileid": 71
+}
+,
+
+{
+  "unknown_0x05": true,
+  "color": [88, 56, 24],
+  "material": 508,
+  "bleedpriority": 32,
+  "bleedToUnderlay": true,
+  "$fileid": 72
+}
+,
+
+{
+  "unknown_0x05": true,
+  "color": [168, 208, 64],
+  "bleedpriority": 127,
+  "$fileid": 73
+}
+,
+
+{
+  "color": [68, 68, 68],
+  "material": 600,
+  "material_tiling": 128,
+  "bleedpriority": 127,
+  "$fileid": 74
+}
+,
+
+{
+  "color": [196, 172, 78],
+  "material": 425,
+  "bleedpriority": 58,
+  "bleedToUnderlay": true,
+  "$fileid": 75
+}
+,
+
+{
+  "color": [183, 151, 103],
+  "unknown_0x05": true,
+  "material": 512,
+  "material_tiling": 256,
+  "bleedpriority": 27,
+  "bleedToUnderlay": true,
+  "$fileid": 76
+}
+,
+
+{
+  "color": [61, 43, 11],
+  "material": 300,
+  "bleedpriority": 60,
+  "bleedToUnderlay": true,
+  "$fileid": 77
+}
+,
+
+{"color": [151, 135, 79], "$fileid": 78}
+,
+
+{
+  "color": [125, 91, 43],
+  "material": 99,
+  "material_tiling": 256,
+  "bleedpriority": 47,
+  "bleedToUnderlay": true,
+  "$fileid": 79
+}
+,
+
+{
+  "color": [80, 64, 32],
+  "material": 129,
+  "material_tiling": 256,
+  "bleedpriority": 48,
+  "bleedToUnderlay": true,
+  "$fileid": 80
+}
+,
+
+{
+  "color": [92, 84, 68],
+  "material": 508,
+  "material_tiling": 256,
+  "bleedpriority": 28,
+  "bleedToUnderlay": true,
+  "$fileid": 81
+}
+,
+
+{
+  "color": [70, 64, 52],
+  "material": 508,
+  "material_tiling": 256,
+  "bleedpriority": 27,
+  "bleedToUnderlay": true,
+  "$fileid": 82
+}
+,
+
+{"material": 35, "bleedpriority": 78, "bleedToUnderlay": true, "$fileid": 83}
+,
+
+{
+  "color": [48, 53, 37],
+  "material": 668,
+  "material_tiling": 256,
+  "bleedpriority": 127,
+  "$fileid": 84
+}
+,
+
+{"color": [60, 0, 0], "material": 493, "bleedpriority": 127, "$fileid": 85}
+,
+
+{
+  "color": [66, 63, 115],
+  "material": 408,
+  "bleedpriority": 28,
+  "bleedToUnderlay": true,
+  "$fileid": 86
+}
+,
+
+{
+  "color": [84, 77, 55],
+  "material": 181,
+  "bleedpriority": 55,
+  "bleedToUnderlay": true,
+  "$fileid": 87
+}
+,
+
+{
+  "color": [94, 70, 28],
+  "material": 197,
+  "bleedpriority": 56,
+  "bleedToUnderlay": true,
+  "$fileid": 88
+}
+,
+
+{
+  "color": [46, 41, 32],
+  "material": 416,
+  "bleedpriority": 29,
+  "bleedToUnderlay": true,
+  "$fileid": 89
+}
+,
+
+{"material": 505, "color": [80, 64, 32], "bleedpriority": 127, "$fileid": 90}
+,
+
+{
+  "color": [221, 221, 221],
+  "material": 301,
+  "material_tiling": 256,
+  "bleedpriority": 127,
+  "$fileid": 91
+}
+,
+
+{
+  "color": [102, 51, 0],
+  "material": 328,
+  "bleedpriority": 30,
+  "bleedToUnderlay": true,
+  "$fileid": 92
+}
+,
+
+{
+  "color": [80, 64, 32],
+  "material": 492,
+  "material_tiling": 192,
+  "bleedpriority": 127,
+  "$fileid": 93
+}
+,
+
+{"color": [101, 78, 24], "material": 595, "bleedpriority": 127, "$fileid": 94}
+,
+
+{
+  "color": [140, 110, 60],
+  "material": 355,
+  "bleedpriority": 6,
+  "bleedToUnderlay": true,
+  "$fileid": 95
+}
+,
+
+{
+  "color": [94, 70, 28],
+  "material": 506,
+  "bleedpriority": 60,
+  "bleedToUnderlay": true,
+  "$fileid": 96
+}
+,
+
+{
+  "color": [109, 91, 43],
+  "material": 492,
+  "material_tiling": 192,
+  "bleedpriority": 127,
+  "$fileid": 97
+}
+,
+
+{
+  "unknown_0x05": true,
+  "color": [255, 0, 255],
+  "bleedpriority": 127,
+  "secondary_colour": [117, 34, 34],
+  "$fileid": 98
+}
+,
+
+{
+  "unknown_0x05": true,
+  "color": [255, 0, 255],
+  "bleedpriority": 127,
+  "secondary_colour": [96, 48, 40],
+  "$fileid": 99
+}
+,
+
+{
+  "color": [84, 66, 23],
+  "material": 512,
+  "bleedpriority": 80,
+  "bleedToUnderlay": true,
+  "$fileid": 100
+}
+,
+
+{
+  "color": [48, 53, 37],
+  "material": 596,
+  "bleedpriority": 81,
+  "bleedToUnderlay": true,
+  "$fileid": 101
+}
+,
+
+{"color": [120, 112, 96], "material": 505, "bleedpriority": 127, "$fileid": 102}
+,
+
+{
+  "color": [131, 195, 202],
+  "material": 174,
+  "bleedpriority": 127,
+  "$fileid": 103
+}
+,
+
+{
+  "color": [102, 102, 102],
+  "material": 593,
+  "bleedpriority": 25,
+  "bleedToUnderlay": true,
+  "$fileid": 104
+}
+,
+
+{"color": [102, 89, 59], "material": 301, "bleedpriority": 127, "$fileid": 105}
+,
+
+{
+  "color": [58, 75, 53],
+  "material_tiling": 192,
+  "material": 328,
+  "bleedpriority": 80,
+  "bleedToUnderlay": true,
+  "$fileid": 106
+}
+,
+
+{
+  "color": [64, 48, 16],
+  "material": 400,
+  "bleedpriority": 55,
+  "bleedToUnderlay": true,
+  "$fileid": 107
+}
+,
+
+{"material": 602, "color": [61, 43, 11], "bleedpriority": 49, "$fileid": 108}
+,
+
+{
+  "color": [56, 56, 32],
+  "material": 516,
+  "bleedpriority": 65,
+  "bleedToUnderlay": true,
+  "$fileid": 109
+}
+,
+
+{"color": [251, 161, 58], "material": 61, "bleedpriority": 127, "$fileid": 110}
+,
+
+{
+  "color": [255, 255, 255],
+  "material": 669,
+  "material_tiling": 256,
+  "bleedpriority": 127,
+  "$fileid": 111
+}
+,
+
+{
+  "unknown_0x05": true,
+  "color": [184, 155, 103],
+  "material": 301,
+  "bleedpriority": 127,
+  "$fileid": 112
+}
+,
+
+{
+  "color": [255, 255, 255],
+  "material": 651,
+  "tertiary_colour": [23, 40, 27],
+  "unknown_0x0E": 6,
+  "bleedpriority": 127,
+  "$fileid": 113
+}
+,
+
+{"color": [102, 93, 88], "material": 505, "bleedpriority": 127, "$fileid": 114}
+,
+
+{"color": [48, 53, 37], "material": 596, "bleedpriority": 127, "$fileid": 115}
+,
+
+{
+  "unknown_0x05": true,
+  "color": [79, 79, 79],
+  "material": 597,
+  "bleedpriority": 56,
+  "bleedToUnderlay": true,
+  "$fileid": 116
+}
+,
+
+{
+  "color": [80, 64, 32],
+  "material": 492,
+  "material_tiling": 192,
+  "bleedpriority": 64,
+  "bleedToUnderlay": true,
+  "$fileid": 117
+}
+,
+
+{
+  "color": [92, 84, 60],
+  "material": 424,
+  "bleedpriority": 55,
+  "bleedToUnderlay": true,
+  "$fileid": 118
+}
+,
+
+{
+  "color": [47, 43, 31],
+  "material": 424,
+  "bleedpriority": 56,
+  "bleedToUnderlay": true,
+  "secondary_colour": [51, 48, 40],
+  "$fileid": 119
+}
+,
+
+{
+  "color": [102, 94, 75],
+  "material": 500,
+  "bleedpriority": 83,
+  "bleedToUnderlay": true,
+  "$fileid": 120
+}
+,
+
+{"color": [80, 70, 45], "material": 619, "bleedpriority": 127, "$fileid": 121}
+,
+
+{
+  "color": [184, 176, 152],
+  "material": 507,
+  "unknown_0x05": true,
+  "bleedpriority": 127,
+  "$fileid": 122
+}
+,
+
+{"color": [48, 53, 37], "material": 623, "bleedpriority": 127, "$fileid": 123}
+,
+
+{
+  "unknown_0x05": true,
+  "color": [255, 0, 255],
+  "bleedpriority": 127,
+  "secondary_colour": [132, 127, 117],
+  "$fileid": 124
+}
+,
+
+{
+  "unknown_0x05": true,
+  "color": [187, 141, 104],
+  "material": 512,
+  "bleedpriority": 25,
+  "bleedToUnderlay": true,
+  "$fileid": 125
+}
+,
+
+{
+  "color": [64, 64, 56],
+  "material": 424,
+  "bleedpriority": 57,
+  "bleedToUnderlay": true,
+  "$fileid": 126
+}
+,
+
+{"color": [119, 167, 133], "material": 58, "bleedpriority": 127, "$fileid": 127}
+,
+
+{
+  "color": [255, 255, 255],
+  "material": 671,
+  "tertiary_colour": [137, 197, 207],
+  "unknown_0x0E": 24,
+  "bleedpriority": 127,
+  "$fileid": 128
+}
+,
+
+{"color": [130, 196, 184], "material": 58, "bleedpriority": 127, "$fileid": 129}
+,
+
+{
+  "color": [39, 39, 16],
+  "material": 181,
+  "bleedpriority": 57,
+  "bleedToUnderlay": true,
+  "$fileid": 130
+}
+,
+
+{
+  "color": [55, 50, 41],
+  "material": 500,
+  "bleedpriority": 80,
+  "bleedToUnderlay": true,
+  "$fileid": 131
+}
+,
+
+{
+  "color": [48, 56, 40],
+  "material": 593,
+  "bleedpriority": 30,
+  "bleedToUnderlay": true,
+  "$fileid": 132
+}
+,
+
+{
+  "unknown_0x05": true,
+  "color": [64, 64, 68],
+  "material": 301,
+  "bleedpriority": 127,
+  "secondary_colour": [4, 100, 100],
+  "$fileid": 133
+}
+,
+
+{
+  "unknown_0x05": true,
+  "color": [255, 0, 255],
+  "bleedpriority": 127,
+  "secondary_colour": [238, 238, 238],
+  "$fileid": 134
+}
+,
+
+{
+  "unknown_0x05": true,
+  "color": [255, 0, 255],
+  "bleedpriority": 127,
+  "secondary_colour": [99, 119, 166],
+  "$fileid": 135
+}
+,
+
+{
+  "color": [116, 105, 73],
+  "material": 608,
+  "material_tiling": 127,
+  "bleedpriority": 81,
+  "bleedToUnderlay": true,
+  "$fileid": 136
+}
+,
+
+{
+  "color": [255, 255, 255],
+  "material": 670,
+  "tertiary_colour": [55, 24, 24],
+  "unknown_0x0E": 16,
+  "bleedpriority": 127,
+  "$fileid": 137
+}
+,
+
+{
+  "material": 621,
+  "color": [55, 52, 34],
+  "bleedpriority": 51,
+  "bleedToUnderlay": true,
+  "$fileid": 138
+}
+,
+
+{"color": [109, 91, 43], "material": 181, "bleedpriority": 127, "$fileid": 139}
+,
+
+{
+  "color": [230, 230, 235],
+  "material": 274,
+  "bleedpriority": 126,
+  "bleedToUnderlay": true,
+  "$fileid": 140
+}
+,
+
+{
+  "color": [200, 245, 255],
+  "material": 494,
+  "bleedpriority": 127,
+  "$fileid": 141
+}
+,
+
+{"color": [1, 1, 1], "bleedpriority": 127, "$fileid": 142}
+,
+
+{
+  "color": [183, 151, 103],
+  "unknown_0x05": true,
+  "material": 512,
+  "material_tiling": 256,
+  "bleedpriority": 127,
+  "$fileid": 143
+}
+,
+
+{"color": [94, 70, 28], "material": 197, "bleedpriority": 127, "$fileid": 144}
+,
+
+{"color": [58, 75, 53], "bleedpriority": 127, "$fileid": 145}
+,
+
+{
+  "color": [130, 196, 184],
+  "material": 274,
+  "bleedpriority": 112,
+  "bleedToUnderlay": true,
+  "$fileid": 146
+}
+,
+
+{"color": [86, 82, 74], "bleedpriority": 127, "material": 422, "$fileid": 147}
+,
+
+{
+  "unknown_0x05": true,
+  "color": [221, 166, 221],
+  "material": 274,
+  "bleedpriority": 127,
+  "secondary_colour": [219, 183, 219],
+  "$fileid": 148
+}
+,
+
+{
+  "unknown_0x05": true,
+  "color": [255, 0, 255],
+  "bleedpriority": 127,
+  "secondary_colour": [56, 56, 56],
+  "$fileid": 149
+}
+,
+
+{"color": [114, 150, 183], "bleedpriority": 127, "$fileid": 150}
+,
+
+{
+  "unknown_0x05": true,
+  "color": [255, 0, 255],
+  "bleedpriority": 127,
+  "secondary_colour": [246, 207, 14],
+  "$fileid": 151
+}
+,
+
+{
+  "unknown_0x05": true,
+  "color": [255, 0, 255],
+  "bleedpriority": 127,
+  "secondary_colour": [84, 77, 55],
+  "$fileid": 152
+}
+,
+
+{
+  "unknown_0x05": true,
+  "color": [255, 0, 255],
+  "bleedpriority": 127,
+  "secondary_colour": [53, 114, 10],
+  "$fileid": 153
+}
+,
+
+{
+  "unknown_0x05": true,
+  "color": [255, 0, 255],
+  "bleedpriority": 127,
+  "secondary_colour": [203, 186, 118],
+  "$fileid": 154
+}
+,
+
+{"color": [68, 136, 110], "bleedpriority": 127, "$fileid": 155}
+,
+
+{"color": [250, 183, 55], "material": 61, "bleedpriority": 127, "$fileid": 156}
+,
+
+{"color": [65, 130, 175], "bleedpriority": 127, "$fileid": 157}
+,
+
+{
+  "color": [60, 40, 35],
+  "material": 625,
+  "bleedpriority": 58,
+  "bleedToUnderlay": true,
+  "$fileid": 158
+}
+,
+
+{
+  "unknown_0x05": true,
+  "color": [221, 166, 221],
+  "material": 274,
+  "bleedpriority": 127,
+  "secondary_colour": [219, 183, 219],
+  "$fileid": 159
+}
+,
+
+{
+  "unknown_0x05": true,
+  "color": [255, 0, 255],
+  "bleedpriority": 127,
+  "secondary_colour": [101, 77, 11],
+  "$fileid": 160
+}
+,
+
+{
+  "unknown_0x05": true,
+  "color": [67, 85, 65],
+  "material": 493,
+  "bleedpriority": 127,
+  "secondary_colour": [67, 85, 65],
+  "$fileid": 161
+}
+,
+
+{
+  "unknown_0x05": true,
+  "color": [110, 62, 47],
+  "material": 493,
+  "bleedpriority": 127,
+  "secondary_colour": [110, 62, 47],
+  "$fileid": 162
+}
+,
+
+{"color": [64, 48, 16], "material": 400, "bleedpriority": 55, "$fileid": 163}
+,
+
+{
+  "color": [68, 68, 68],
+  "material": 512,
+  "material_tiling": 256,
+  "bleedpriority": 33,
+  "bleedToUnderlay": true,
+  "$fileid": 164
+}
+,
+
+{
+  "color": [153, 102, 0],
+  "material": 20,
+  "bleedToUnderlay": true,
+  "material_tiling": 100,
+  "$fileid": 165
+}
+,
+
+{
+  "color": [153, 102, 0],
+  "material": 20,
+  "bleedpriority": 52,
+  "material_tiling": 100,
+  "$fileid": 166
+}
+,
+
+{
+  "color": [66, 63, 115],
+  "material": 408,
+  "bleedpriority": 50,
+  "bleedToUnderlay": true,
+  "$fileid": 167
+}
+,
+
+{
+  "color": [255, 255, 255],
+  "material": 637,
+  "tertiary_colour": [201, 229, 234],
+  "unknown_0x0E": 50,
+  "bleedpriority": 127,
+  "$fileid": 168
+}
+,
+
+{
+  "color": [84, 66, 23],
+  "material": 422,
+  "bleedpriority": 33,
+  "bleedToUnderlay": true,
+  "$fileid": 169
+}
+,
+
+{
+  "color": [120, 112, 96],
+  "material": 505,
+  "bleedpriority": 81,
+  "bleedToUnderlay": true,
+  "$fileid": 170
+}
+,
+
+{
+  "color": [120, 107, 82],
+  "material": 66,
+  "bleedpriority": 83,
+  "bleedToUnderlay": true,
+  "$fileid": 171
+}
+,
+
+{
+  "color": [120, 104, 72],
+  "material": 66,
+  "material_tiling": 140,
+  "bleedpriority": 82,
+  "bleedToUnderlay": true,
+  "$fileid": 172
+}
+,
+
+{"material": 43, "color": [96, 96, 88], "bleedpriority": 127, "$fileid": 173}
+,
+
+{
+  "color": [80, 70, 45],
+  "material": 619,
+  "bleedpriority": 5,
+  "bleedToUnderlay": true,
+  "$fileid": 174
+}
+,
+
+{
+  "color": [128, 101, 38],
+  "material": 617,
+  "material_tiling": 64,
+  "bleedpriority": 127,
+  "$fileid": 175
+}
+,
+
+{
+  "color": [55, 50, 41],
+  "material": 500,
+  "bleedpriority": 65,
+  "bleedToUnderlay": true,
+  "$fileid": 176
+}
+,
+
+{
+  "color": [87, 85, 77],
+  "material": 600,
+  "material_tiling": 128,
+  "bleedpriority": 127,
+  "$fileid": 177
+}
+,
+
+{
+  "color": [121, 106, 84],
+  "unknown_0x05": true,
+  "material": 608,
+  "material_tiling": 256,
+  "bleedpriority": 127,
+  "$fileid": 178
+}
+,
+
+{
+  "unknown_0x05": true,
+  "color": [255, 0, 255],
+  "bleedpriority": 127,
+  "secondary_colour": [121, 106, 84],
+  "$fileid": 179
+}
+,
+
+{
+  "color": [132, 127, 117],
+  "unknown_0x05": true,
+  "material": 600,
+  "material_tiling": 128,
+  "bleedpriority": 127,
+  "$fileid": 180
+}
+,
+
+{
+  "material_tiling": 256,
+  "color": [153, 51, 51],
+  "material": 58,
+  "bleedpriority": 127,
+  "$fileid": 181
+}
+,
+
+{
+  "color": [1, 1, 1],
+  "material": 505,
+  "material_tiling": 128,
+  "bleedpriority": 90,
+  "bleedToUnderlay": true,
+  "$fileid": 182
+}
+,
+
+{"color": [63, 97, 129], "bleedpriority": 127, "$fileid": 183}
+,
+
+{
+  "color": [255, 0, 255],
+  "bleedpriority": 81,
+  "bleedToUnderlay": true,
+  "$fileid": 184
+}]}

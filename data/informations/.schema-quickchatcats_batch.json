@@ -1,0 +1,47 @@
+{
+  "type": "object",
+  "properties": {
+    "files": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "text": {"oneOf": [{"type": "string"}, {"type": "null"}]},
+          "subcategories": {
+            "oneOf": [
+              {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": {"type": "number", "maximum": 65535, "minimum": 0},
+                    "hotkey": {"type": "number", "maximum": 255, "minimum": 0}
+                  },
+                  "required": ["id", "hotkey"]
+                }
+              },
+              {"type": "null"}
+            ]
+          },
+          "lines": {
+            "oneOf": [
+              {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": {"type": "number", "maximum": 65535, "minimum": 0},
+                    "hotkey": {"type": "number", "maximum": 255, "minimum": 0}
+                  },
+                  "required": ["id", "hotkey"]
+                }
+              },
+              {"type": "null"}
+            ]
+          },
+          "nonsearchable": {"oneOf": [{"const": true}, {"type": "null"}]}
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,3125 @@
+{"$schema":".schema-items_batch.json","files":[
+
+{
+  "baseModel": 2595,
+  "modelTranslate_0": -4,
+  "modelTranslate_1": 12,
+  "model_zoom": 1780,
+  "rotation_1": 436,
+  "rotation_0": 320,
+  "members": true,
+  "widget_actions_4": "Destroy",
+  "name": "Dwarf remains",
+  "nullopt": true,
+  "$fileid": 0
+}
+,
+
+{
+  "baseModel": 2679,
+  "modelTranslate_0": -3,
+  "modelTranslate_1": 2,
+  "model_zoom": 1164,
+  "rotation_1": 2026,
+  "rotation_0": 477,
+  "members": true,
+  "widget_actions_4": "Destroy",
+  "name": "Toolkit",
+  "nullopt": true,
+  "$fileid": 1
+}
+,
+
+{
+  "baseModel": 2413,
+  "modelTranslate_0": 1,
+  "model_zoom": 1400,
+  "rotation_1": 1852,
+  "rotation_0": 156,
+  "stackable_1": true,
+  "members": true,
+  "value": 5,
+  "tradeable": true,
+  "name": "Cannonball",
+  "nullopt": true,
+  "$fileid": 2
+}
+,
+
+{
+  "baseModel": 2794,
+  "modelTranslate_0": 2,
+  "modelTranslate_1": 3,
+  "model_zoom": 844,
+  "rotation_1": 1958,
+  "rotation_0": 285,
+  "widget_actions_0": "Read",
+  "members": true,
+  "widget_actions_4": "Destroy",
+  "color_replacements": [[5018, 18712], [10351, 10452]],
+  "name": "Nulodion's notes",
+  "nullopt": true,
+  "$fileid": 3
+}
+,
+
+{
+  "baseModel": 2706,
+  "modelTranslate_0": 8,
+  "model_zoom": 2160,
+  "rotation_1": 88,
+  "rotation_0": 308,
+  "value": 5,
+  "members": true,
+  "name": "Ammo mould",
+  "nullopt": true,
+  "$fileid": 4
+}
+,
+
+{
+  "baseModel": 2794,
+  "modelTranslate_0": 2,
+  "modelTranslate_1": 3,
+  "model_zoom": 844,
+  "rotation_1": 1958,
+  "rotation_0": 285,
+  "widget_actions_0": "Read",
+  "value": 10,
+  "members": true,
+  "color_replacements": [[5018, 4391], [10351, 10452]],
+  "name": "Instruction manual",
+  "nullopt": true,
+  "$fileid": 5
+}
+,
+
+{
+  "baseModel": 2461,
+  "modelTranslate_0": -2,
+  "modelTranslate_1": -4,
+  "model_zoom": 2590,
+  "rotation_1": 1756,
+  "rotation_0": 188,
+  "value": 187500,
+  "widget_actions_0": "Set-up",
+  "members": true,
+  "tradeable": true,
+  "name": "Cannon base",
+  "noteData": 7,
+  "nullopt": true,
+  "$fileid": 6
+}
+,
+
+{"noteData": 6, "noteTemplate": 799, "nullopt": true, "$fileid": 7}
+,
+
+{
+  "baseModel": 2642,
+  "modelTranslate_1": 106,
+  "model_zoom": 1750,
+  "rotation_1": 1456,
+  "rotation_0": 268,
+  "value": 187500,
+  "members": true,
+  "tradeable": true,
+  "name": "Cannon stand",
+  "noteData": 9,
+  "nullopt": true,
+  "$fileid": 8
+}
+,
+
+{"noteData": 8, "noteTemplate": 799, "nullopt": true, "$fileid": 9}
+,
+
+{
+  "baseModel": 2361,
+  "modelTranslate_1": -3,
+  "rotation_1": 1872,
+  "rotation_0": 188,
+  "value": 187500,
+  "members": true,
+  "tradeable": true,
+  "name": "Cannon barrels",
+  "noteData": 11,
+  "nullopt": true,
+  "$fileid": 10
+}
+,
+
+{"noteData": 10, "noteTemplate": 799, "nullopt": true, "$fileid": 11}
+,
+
+{
+  "baseModel": 2769,
+  "modelTranslate_0": 2,
+  "modelTranslate_1": -19,
+  "model_zoom": 1170,
+  "rotation_1": 1780,
+  "rotation_0": 160,
+  "value": 187500,
+  "members": true,
+  "tradeable": true,
+  "name": "Cannon furnace",
+  "noteData": 13,
+  "nullopt": true,
+  "$fileid": 12
+}
+,
+
+{"noteData": 12, "noteTemplate": 799, "nullopt": true, "$fileid": 13}
+,
+
+{
+  "baseModel": 4877,
+  "members": true,
+  "stackable_1": true,
+  "modelTranslate_0": 4,
+  "modelTranslate_1": -3,
+  "model_zoom": 1730,
+  "rotation_1": 1976,
+  "rotation_2": 212,
+  "rotation_0": 4,
+  "name": "Railing",
+  "nullopt": true,
+  "$fileid": 14
+}
+,
+
+{
+  "value": 10,
+  "members": true,
+  "baseModel": 2443,
+  "modelTranslate_0": -3,
+  "modelTranslate_1": 10,
+  "model_zoom": 670,
+  "rotation_1": 1932,
+  "rotation_0": 440,
+  "name": "Holy table napkin",
+  "nullopt": true,
+  "$fileid": 15
+}
+,
+
+{
+  "value": 10,
+  "members": true,
+  "baseModel": 2433,
+  "modelTranslate_1": -2,
+  "model_zoom": 490,
+  "rotation_1": 1208,
+  "rotation_0": 152,
+  "widget_actions_0": "Blow",
+  "name": "Magic whistle",
+  "nullopt": true,
+  "$fileid": 16
+}
+,
+
+{
+  "value": 10,
+  "members": true,
+  "baseModel": 2536,
+  "modelTranslate_0": 2,
+  "model_zoom": 830,
+  "rotation_1": 776,
+  "rotation_0": 1132,
+  "widget_actions_0": "Ring",
+  "color_replacements": [[11179, 103]],
+  "name": "Grail bell",
+  "nullopt": true,
+  "$fileid": 17
+}
+,
+
+{
+  "value": 2,
+  "members": true,
+  "baseModel": 2476,
+  "modelTranslate_0": 4,
+  "modelTranslate_1": 10,
+  "model_zoom": 700,
+  "rotation_1": 692,
+  "rotation_0": 428,
+  "widget_actions_0": "Blow-on",
+  "color_replacements": [[127, 10820]],
+  "name": "Magic gold feather",
+  "nullopt": true,
+  "$fileid": 18
+}
+,
+
+{
+  "value": 3,
+  "members": true,
+  "baseModel": 2623,
+  "model_zoom": 670,
+  "rotation_1": 2044,
+  "rotation_0": 116,
+  "widget_actions_4": "Destroy",
+  "name": "Holy grail",
+  "nullopt": true,
+  "$fileid": 19
+}
+,
+
+{
+  "baseModel": 2351,
+  "members": true,
+  "rotation_1": 2040,
+  "rotation_0": 292,
+  "name": "White cog",
+  "nullopt": true,
+  "$fileid": 20
+}
+,
+
+{
+  "baseModel": 2351,
+  "members": true,
+  "rotation_1": 2040,
+  "rotation_0": 292,
+  "color_replacements": [[127, 0]],
+  "name": "Black cog",
+  "nullopt": true,
+  "$fileid": 21
+}
+,
+
+{
+  "baseModel": 2351,
+  "members": true,
+  "rotation_1": 2040,
+  "rotation_0": 292,
+  "color_replacements": [[127, 43968]],
+  "name": "Blue cog",
+  "nullopt": true,
+  "$fileid": 22
+}
+,
+
+{
+  "baseModel": 2351,
+  "members": true,
+  "rotation_1": 2040,
+  "rotation_0": 292,
+  "color_replacements": [[127, 960]],
+  "name": "Red cog",
+  "nullopt": true,
+  "$fileid": 23
+}
+,
+
+{
+  "baseModel": 2714,
+  "members": true,
+  "model_zoom": 900,
+  "rotation_1": 1828,
+  "rotation_0": 68,
+  "name": "Rat poison",
+  "nullopt": true,
+  "$fileid": 24
+}
+,
+
+{
+  "baseModel": 2519,
+  "members": true,
+  "stackable_1": true,
+  "modelTranslate_0": 9,
+  "modelTranslate_1": 9,
+  "model_zoom": 990,
+  "rotation_1": 188,
+  "rotation_0": 340,
+  "color_replacements": [[5698, 960]],
+  "name": "Red vine worm",
+  "nullopt": true,
+  "$fileid": 25
+}
+,
+
+{
+  "baseModel": 14343,
+  "members": true,
+  "modelTranslate_0": -5,
+  "modelTranslate_1": -11,
+  "model_zoom": 1190,
+  "rotation_1": 1931,
+  "rotation_0": 210,
+  "name": "Fishing trophy",
+  "nullopt": true,
+  "$fileid": 26
+}
+,
+
+{
+  "baseModel": 14342,
+  "members": true,
+  "modelTranslate_0": -4,
+  "modelTranslate_1": 1,
+  "model_zoom": 1360,
+  "rotation_1": 1881,
+  "rotation_0": 498,
+  "name": "Fishing pass",
+  "nullopt": true,
+  "$fileid": 27
+}
+,
+
+{
+  "value": 3,
+  "baseModel": 2684,
+  "members": true,
+  "modelTranslate_1": -6,
+  "model_zoom": 1430,
+  "rotation_1": 1836,
+  "rotation_0": 124,
+  "name": "Insect repellent",
+  "nullopt": true,
+  "$fileid": 28
+}
+,
+
+{
+  "baseModel": 2742,
+  "value": 0,
+  "name": "Tinderbox",
+  "nullopt": true,
+  "$fileid": 29
+}
+,
+
+{
+  "value": 6,
+  "baseModel": 2504,
+  "members": true,
+  "modelTranslate_1": -18,
+  "model_zoom": 1020,
+  "rotation_1": 1660,
+  "rotation_0": 204,
+  "color_replacements": [[39834, 7766]],
+  "name": "Bucket of wax",
+  "nullopt": true,
+  "$fileid": 30
+}
+,
+
+{
+  "baseModel": 2742,
+  "value": 0,
+  "name": "Tinderbox",
+  "nullopt": true,
+  "$fileid": 31
+}
+,
+
+{
+  "members": true,
+  "value": 3,
+  "baseModel": 2575,
+  "modelTranslate_1": -2,
+  "model_zoom": 570,
+  "rotation_1": 1864,
+  "rotation_0": 168,
+  "widget_actions_0": "Extinguish",
+  "color_replacements": [[127, 8]],
+  "name": "Lit black candle",
+  "nullopt": true,
+  "$fileid": 32
+}
+,
+
+{
+  "members": true,
+  "value": 3,
+  "baseModel": 2575,
+  "modelTranslate_1": -2,
+  "model_zoom": 570,
+  "rotation_1": 1864,
+  "rotation_0": 168,
+  "widget_actions_0": "Extinguish",
+  "name": "Lit candle",
+  "nullopt": true,
+  "$fileid": 33
+}
+,
+
+{
+  "members": true,
+  "value": 3,
+  "baseModel": 2575,
+  "modelTranslate_1": -2,
+  "model_zoom": 570,
+  "rotation_1": 1864,
+  "rotation_0": 168,
+  "widget_actions_0": "Extinguish",
+  "stackable_1": true,
+  "name": "Lit candle",
+  "nullopt": true,
+  "$fileid": 34
+}
+,
+
+{
+  "members": true,
+  "value": 200,
+  "baseModel": 2458,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": 17,
+  "model_zoom": 1500,
+  "rotation_1": 932,
+  "rotation_0": 384,
+  "widget_actions_1": "Wield",
+  "maleModels_0": {"id": 501, "type": 0},
+  "femaleModels_0": {"id": 501, "type": 0},
+  "name": "Excalibur",
+  "female_translate": [3, 245, 6],
+  "nullopt": true,
+  "$fileid": 35
+}
+,
+
+{
+  "members": true,
+  "value": 3,
+  "baseModel": 2467,
+  "modelTranslate_1": -2,
+  "model_zoom": 570,
+  "rotation_1": 1864,
+  "rotation_0": 168,
+  "tradeable": true,
+  "name": "Candle",
+  "noteData": 37,
+  "nullopt": true,
+  "$fileid": 36
+}
+,
+
+{"noteData": 36, "noteTemplate": 799, "nullopt": true, "$fileid": 37}
+,
+
+{
+  "members": true,
+  "value": 3,
+  "baseModel": 2467,
+  "modelTranslate_1": -2,
+  "model_zoom": 570,
+  "rotation_1": 1864,
+  "rotation_0": 168,
+  "color_replacements": [[127, 8]],
+  "name": "Black candle",
+  "nullopt": true,
+  "$fileid": 38
+}
+,
+
+{
+  "baseModel": 2551,
+  "modelTranslate_0": 4,
+  "modelTranslate_1": 4,
+  "model_zoom": 780,
+  "rotation_1": 176,
+  "rotation_0": 440,
+  "members": true,
+  "stackable_1": true,
+  "value": 10,
+  "stack_info_0": [13195, 2],
+  "stack_info_1": [13196, 3],
+  "stack_info_2": [13197, 4],
+  "stack_info_3": [13198, 5],
+  "tradeable": true,
+  "color_replacements": [[61, 5652], [57, 5652]],
+  "name": "Bronze arrowtips",
+  "nullopt": true,
+  "$fileid": 39
+}
+,
+
+{
+  "baseModel": 2551,
+  "modelTranslate_0": 4,
+  "modelTranslate_1": 4,
+  "model_zoom": 780,
+  "rotation_1": 176,
+  "rotation_0": 440,
+  "members": true,
+  "stackable_1": true,
+  "value": 26,
+  "stack_info_0": [13199, 2],
+  "stack_info_1": [13200, 3],
+  "stack_info_2": [13201, 4],
+  "stack_info_3": [13202, 5],
+  "tradeable": true,
+  "color_replacements": [[61, 33], [57, 33]],
+  "name": "Iron arrowtips",
+  "nullopt": true,
+  "$fileid": 40
+}
+,
+
+{
+  "baseModel": 2551,
+  "modelTranslate_0": 4,
+  "modelTranslate_1": 4,
+  "model_zoom": 780,
+  "rotation_1": 176,
+  "rotation_0": 440,
+  "members": true,
+  "stackable_1": true,
+  "value": 36,
+  "stack_info_0": [13203, 2],
+  "stack_info_1": [13204, 3],
+  "stack_info_2": [13205, 4],
+  "stack_info_3": [13206, 5],
+  "tradeable": true,
+  "name": "Steel arrowtips",
+  "nullopt": true,
+  "$fileid": 41
+}
+,
+
+{
+  "baseModel": 2551,
+  "modelTranslate_0": 4,
+  "modelTranslate_1": 4,
+  "model_zoom": 780,
+  "rotation_1": 176,
+  "rotation_0": 440,
+  "members": true,
+  "stackable_1": true,
+  "value": 68,
+  "stack_info_0": [13207, 2],
+  "stack_info_1": [13208, 3],
+  "stack_info_2": [13209, 4],
+  "stack_info_3": [13210, 5],
+  "tradeable": true,
+  "color_replacements": [[61, 43297], [57, 43297]],
+  "name": "Mithril arrowtips",
+  "nullopt": true,
+  "$fileid": 42
+}
+,
+
+{
+  "baseModel": 2551,
+  "modelTranslate_0": 4,
+  "modelTranslate_1": 4,
+  "model_zoom": 780,
+  "rotation_1": 176,
+  "rotation_0": 440,
+  "members": true,
+  "stackable_1": true,
+  "value": 160,
+  "stack_info_0": [13211, 2],
+  "stack_info_1": [13212, 3],
+  "stack_info_2": [13213, 4],
+  "stack_info_3": [13214, 5],
+  "tradeable": true,
+  "color_replacements": [[61, 21662], [57, 21662]],
+  "name": "Adamant arrowtips",
+  "nullopt": true,
+  "$fileid": 43
+}
+,
+
+{
+  "baseModel": 2551,
+  "modelTranslate_0": 4,
+  "modelTranslate_1": 4,
+  "model_zoom": 780,
+  "rotation_1": 176,
+  "rotation_0": 440,
+  "members": true,
+  "stackable_1": true,
+  "value": 460,
+  "stack_info_0": [13215, 2],
+  "stack_info_1": [13216, 3],
+  "stack_info_2": [13217, 4],
+  "stack_info_3": [13218, 5],
+  "tradeable": true,
+  "color_replacements": [[61, 36133], [57, 36133]],
+  "name": "Rune arrowtips",
+  "nullopt": true,
+  "$fileid": 44
+}
+,
+
+{
+  "baseModel": 16857,
+  "modelTranslate_0": 1,
+  "model_zoom": 300,
+  "rotation_1": 66,
+  "rotation_0": 453,
+  "stackable_1": true,
+  "members": true,
+  "value": 7,
+  "stack_info_0": [9199, 2],
+  "stack_info_1": [9200, 3],
+  "stack_info_2": [9201, 4],
+  "stack_info_3": [9202, 5],
+  "tradeable": true,
+  "color_replacements": [[10465, 10465]],
+  "name": "Opal bolt tips",
+  "nullopt": true,
+  "$fileid": 45
+}
+,
+
+{
+  "baseModel": 16857,
+  "modelTranslate_0": 1,
+  "model_zoom": 300,
+  "rotation_1": 66,
+  "rotation_0": 453,
+  "stackable_1": true,
+  "members": true,
+  "value": 12,
+  "stack_info_0": [9199, 2],
+  "stack_info_1": [9200, 3],
+  "stack_info_2": [9201, 4],
+  "stack_info_3": [9202, 5],
+  "tradeable": true,
+  "name": "Pearl bolt tips",
+  "nullopt": true,
+  "$fileid": 46
+}
+,
+
+{
+  "baseModel": 2445,
+  "members": true,
+  "stackable_1": true,
+  "value": 95,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": 1,
+  "model_zoom": 724,
+  "rotation_1": 332,
+  "rotation_0": 492,
+  "tradeable": true,
+  "name": "Barb bolttips",
+  "nullopt": true,
+  "$fileid": 47
+}
+,
+
+{
+  "value": 60,
+  "members": true,
+  "baseModel": 2401,
+  "modelTranslate_0": 2,
+  "modelTranslate_1": 15,
+  "model_zoom": 1820,
+  "rotation_1": 1004,
+  "rotation_0": 460,
+  "maleModels_0": {"id": 26609, "type": 0},
+  "femaleModels_0": {"id": 26609, "type": 0},
+  "tradeable": true,
+  "color_replacements": [[6674, 6049]],
+  "name": "Longbow (u)",
+  "female_translate": [3, 245, 6],
+  "noteData": 49,
+  "nullopt": true,
+  "$fileid": 48
+}
+,
+
+{"noteData": 48, "noteTemplate": 799, "nullopt": true, "$fileid": 49}
+,
+
+{
+  "value": 23,
+  "members": true,
+  "baseModel": 2435,
+  "modelTranslate_0": 7,
+  "modelTranslate_1": 2,
+  "model_zoom": 1200,
+  "rotation_1": 124,
+  "rotation_0": 508,
+  "maleModels_0": {"id": 26610, "type": 0},
+  "femaleModels_0": {"id": 26610, "type": 0},
+  "tradeable": true,
+  "color_replacements": [[6674, 6049]],
+  "name": "Shortbow (u)",
+  "female_translate": [3, 245, 6],
+  "noteData": 51,
+  "nullopt": true,
+  "$fileid": 50
+}
+,
+
+{"noteData": 50, "noteTemplate": 799, "nullopt": true, "$fileid": 51}
+,
+
+{
+  "value": 12,
+  "stackable_1": true,
+  "members": true,
+  "baseModel": 9032,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -29,
+  "model_zoom": 1220,
+  "rotation_1": 100,
+  "rotation_0": 216,
+  "stack_info_0": [6440, 2],
+  "stack_info_1": [6441, 3],
+  "stack_info_2": [6442, 4],
+  "stack_info_3": [6443, 5],
+  "tradeable": true,
+  "name": "Arrow shaft",
+  "nullopt": true,
+  "$fileid": 52
+}
+,
+
+{
+  "value": 1,
+  "stackable_1": true,
+  "members": true,
+  "baseModel": 9028,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -29,
+  "model_zoom": 1220,
+  "rotation_1": 100,
+  "rotation_0": 216,
+  "stack_info_0": [6444, 2],
+  "stack_info_1": [6445, 3],
+  "stack_info_2": [6446, 4],
+  "stack_info_3": [6447, 5],
+  "tradeable": true,
+  "name": "Headless arrow",
+  "nullopt": true,
+  "$fileid": 53
+}
+,
+
+{
+  "value": 50,
+  "members": true,
+  "baseModel": 2435,
+  "modelTranslate_0": 7,
+  "modelTranslate_1": 2,
+  "model_zoom": 1200,
+  "rotation_1": 124,
+  "rotation_0": 508,
+  "maleModels_0": {"id": 26610, "type": 0},
+  "femaleModels_0": {"id": 26610, "type": 0},
+  "tradeable": true,
+  "color_replacements": [[6674, 8111]],
+  "name": "Oak shortbow (u)",
+  "female_translate": [3, 245, 6],
+  "noteData": 55,
+  "nullopt": true,
+  "$fileid": 54
+}
+,
+
+{"noteData": 54, "noteTemplate": 799, "nullopt": true, "$fileid": 55}
+,
+
+{
+  "value": 80,
+  "members": true,
+  "baseModel": 2401,
+  "modelTranslate_0": 2,
+  "modelTranslate_1": 15,
+  "model_zoom": 1820,
+  "rotation_1": 1004,
+  "rotation_0": 460,
+  "maleModels_0": {"id": 26609, "type": 0},
+  "femaleModels_0": {"id": 26609, "type": 0},
+  "tradeable": true,
+  "color_replacements": [[6674, 8111]],
+  "name": "Oak longbow (u)",
+  "female_translate": [3, 245, 6],
+  "noteData": 57,
+  "nullopt": true,
+  "$fileid": 56
+}
+,
+
+{"noteData": 56, "noteTemplate": 799, "nullopt": true, "$fileid": 57}
+,
+
+{
+  "value": 160,
+  "members": true,
+  "baseModel": 2401,
+  "modelTranslate_0": 2,
+  "modelTranslate_1": 15,
+  "model_zoom": 1820,
+  "rotation_1": 1004,
+  "rotation_0": 460,
+  "maleModels_0": {"id": 26609, "type": 0},
+  "femaleModels_0": {"id": 26609, "type": 0},
+  "tradeable": true,
+  "color_replacements": [[6674, 9903]],
+  "name": "Willow longbow (u)",
+  "female_translate": [3, 245, 6],
+  "noteData": 59,
+  "nullopt": true,
+  "$fileid": 58
+}
+,
+
+{"noteData": 58, "noteTemplate": 799, "nullopt": true, "$fileid": 59}
+,
+
+{
+  "value": 100,
+  "members": true,
+  "baseModel": 2435,
+  "modelTranslate_0": 7,
+  "modelTranslate_1": 2,
+  "model_zoom": 1200,
+  "rotation_1": 124,
+  "rotation_0": 508,
+  "maleModels_0": {"id": 26610, "type": 0},
+  "femaleModels_0": {"id": 26610, "type": 0},
+  "tradeable": true,
+  "color_replacements": [[6674, 9903]],
+  "name": "Willow shortbow (u)",
+  "female_translate": [3, 245, 6],
+  "noteData": 61,
+  "nullopt": true,
+  "$fileid": 60
+}
+,
+
+{"noteData": 60, "noteTemplate": 799, "nullopt": true, "$fileid": 61}
+,
+
+{
+  "value": 320,
+  "members": true,
+  "baseModel": 2401,
+  "modelTranslate_0": 2,
+  "modelTranslate_1": 15,
+  "model_zoom": 1820,
+  "rotation_1": 1004,
+  "rotation_0": 460,
+  "maleModels_0": {"id": 26609, "type": 0},
+  "femaleModels_0": {"id": 26609, "type": 0},
+  "tradeable": true,
+  "color_replacements": [[6674, 2250]],
+  "name": "Maple longbow (u)",
+  "female_translate": [3, 245, 6],
+  "noteData": 63,
+  "nullopt": true,
+  "$fileid": 62
+}
+,
+
+{"noteData": 62, "noteTemplate": 799, "nullopt": true, "$fileid": 63}
+,
+
+{
+  "value": 200,
+  "members": true,
+  "baseModel": 2435,
+  "modelTranslate_0": 7,
+  "modelTranslate_1": 2,
+  "model_zoom": 1200,
+  "rotation_1": 124,
+  "rotation_0": 508,
+  "maleModels_0": {"id": 26610, "type": 0},
+  "femaleModels_0": {"id": 26610, "type": 0},
+  "tradeable": true,
+  "color_replacements": [[6674, 2250]],
+  "name": "Maple shortbow (u)",
+  "female_translate": [3, 245, 6],
+  "noteData": 65,
+  "nullopt": true,
+  "$fileid": 64
+}
+,
+
+{"noteData": 64, "noteTemplate": 799, "nullopt": true, "$fileid": 65}
+,
+
+{
+  "value": 640,
+  "members": true,
+  "baseModel": 2401,
+  "modelTranslate_0": 2,
+  "modelTranslate_1": 15,
+  "model_zoom": 1820,
+  "rotation_1": 1004,
+  "rotation_0": 460,
+  "maleModels_0": {"id": 26609, "type": 0},
+  "femaleModels_0": {"id": 26609, "type": 0},
+  "tradeable": true,
+  "color_replacements": [[6674, 9135]],
+  "name": "Yew longbow (u)",
+  "female_translate": [3, 245, 6],
+  "noteData": 67,
+  "nullopt": true,
+  "$fileid": 66
+}
+,
+
+{"noteData": 66, "noteTemplate": 799, "nullopt": true, "$fileid": 67}
+,
+
+{
+  "value": 400,
+  "members": true,
+  "baseModel": 2435,
+  "modelTranslate_0": 7,
+  "modelTranslate_1": 2,
+  "model_zoom": 1200,
+  "rotation_1": 124,
+  "rotation_0": 508,
+  "maleModels_0": {"id": 26610, "type": 0},
+  "femaleModels_0": {"id": 26610, "type": 0},
+  "tradeable": true,
+  "color_replacements": [[6674, 9135]],
+  "name": "Yew shortbow (u)",
+  "female_translate": [3, 245, 6],
+  "noteData": 69,
+  "nullopt": true,
+  "$fileid": 68
+}
+,
+
+{"noteData": 68, "noteTemplate": 799, "nullopt": true, "$fileid": 69}
+,
+
+{
+  "value": 1280,
+  "members": true,
+  "baseModel": 2401,
+  "modelTranslate_0": 2,
+  "modelTranslate_1": 15,
+  "model_zoom": 1820,
+  "rotation_1": 1004,
+  "rotation_0": 460,
+  "maleModels_0": {"id": 26609, "type": 0},
+  "femaleModels_0": {"id": 26609, "type": 0},
+  "tradeable": true,
+  "color_replacements": [[6674, 31516]],
+  "name": "Magic longbow (u)",
+  "female_translate": [3, 245, 6],
+  "noteData": 71,
+  "nullopt": true,
+  "$fileid": 70
+}
+,
+
+{"noteData": 70, "noteTemplate": 799, "nullopt": true, "$fileid": 71}
+,
+
+{
+  "value": 800,
+  "members": true,
+  "baseModel": 2435,
+  "modelTranslate_0": 7,
+  "modelTranslate_1": 2,
+  "model_zoom": 1200,
+  "rotation_1": 124,
+  "rotation_0": 508,
+  "maleModels_0": {"id": 26610, "type": 0},
+  "femaleModels_0": {"id": 26610, "type": 0},
+  "tradeable": true,
+  "color_replacements": [[6674, 31516]],
+  "name": "Magic shortbow (u)",
+  "female_translate": [3, 245, 6],
+  "noteData": 73,
+  "nullopt": true,
+  "$fileid": 72
+}
+,
+
+{"noteData": 72, "noteTemplate": 799, "nullopt": true, "$fileid": 73}
+,
+
+{
+  "members": true,
+  "value": 10,
+  "baseModel": 40637,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": -4,
+  "model_zoom": 640,
+  "rotation_1": 156,
+  "rotation_0": 108,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 22311, "type": 0},
+  "femaleModels_0": {"id": 40436, "type": 0},
+  "maleHeads_0": 38589,
+  "femaleHeads_0": 38586,
+  "widget_actions_4": "Destroy",
+  "color_replacements": [[61, 28], [926, 5231]],
+  "name": "Khazard helmet",
+  "nullopt": true,
+  "$fileid": 74
+}
+,
+
+{
+  "members": true,
+  "value": 12,
+  "baseModel": 40638,
+  "modelTranslate_0": 1,
+  "model_zoom": 1634,
+  "rotation_0": 488,
+  "widget_actions_1": "Wear",
+  "maleModels_0": {"id": 22314, "type": 0},
+  "maleModels_1": 157,
+  "femaleModels_0": {"id": 40428, "type": 0},
+  "femaleModels_1": 339,
+  "widget_actions_4": "Destroy",
+  "name": "Khazard armour",
+  "nullopt": true,
+  "$fileid": 75
+}
+,
+
+{
+  "members": true,
+  "baseModel": 2424,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": 7,
+  "model_zoom": 890,
+  "rotation_1": 228,
+  "rotation_0": 508,
+  "widget_actions_4": "Destroy",
+  "name": "Khazard cell keys",
+  "nullopt": true,
+  "$fileid": 76
+}
+,
+
+{
+  "members": true,
+  "value": 5,
+  "baseModel": 2660,
+  "modelTranslate_1": -1,
+  "model_zoom": 970,
+  "rotation_1": 1888,
+  "rotation_0": 104,
+  "widget_actions_4": "Destroy",
+  "color_replacements": [[1942, 22424]],
+  "name": "Khali brew",
+  "nullopt": true,
+  "$fileid": 77
+}
+,
+
+{
+  "members": true,
+  "value": 2,
+  "stackable_1": true,
+  "baseModel": 2711,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -29,
+  "model_zoom": 1220,
+  "rotation_1": 100,
+  "rotation_0": 216,
+  "widget_actions_1": "Wield",
+  "stack_info_0": [81, 2],
+  "stack_info_1": [80, 3],
+  "stack_info_2": [79, 4],
+  "stack_info_3": [82, 5],
+  "color_replacements": [
+    [57, 37340],
+    [61, 37340],
+    [5012, 37444],
+    [926, 37340],
+    [5012, 37340]
+  ],
+  "name": "Ice arrows",
+  "nullopt": true,
+  "$fileid": 78
+}
+,
+
+{
+  "stackable_1": true,
+  "baseModel": 2421,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -29,
+  "model_zoom": 1220,
+  "rotation_1": 100,
+  "rotation_0": 216,
+  "dummyItem": 2,
+  "color_replacements": [
+    [57, 37340],
+    [61, 37340],
+    [5012, 37444],
+    [926, 37340],
+    [5012, 37340]
+  ],
+  "nullopt": true,
+  "$fileid": 79
+}
+,
+
+{
+  "stackable_1": true,
+  "baseModel": 2420,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -29,
+  "model_zoom": 1220,
+  "rotation_1": 100,
+  "rotation_0": 216,
+  "dummyItem": 2,
+  "color_replacements": [
+    [57, 37340],
+    [61, 37340],
+    [5012, 37444],
+    [926, 37340],
+    [5012, 37340]
+  ],
+  "nullopt": true,
+  "$fileid": 80
+}
+,
+
+{
+  "stackable_1": true,
+  "baseModel": 2419,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -29,
+  "model_zoom": 1220,
+  "rotation_1": 100,
+  "rotation_0": 216,
+  "dummyItem": 2,
+  "color_replacements": [
+    [57, 37340],
+    [61, 37340],
+    [5012, 37444],
+    [926, 37340],
+    [5012, 37340]
+  ],
+  "nullopt": true,
+  "$fileid": 81
+}
+,
+
+{
+  "stackable_1": true,
+  "baseModel": 2422,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -29,
+  "model_zoom": 1220,
+  "rotation_1": 100,
+  "rotation_0": 216,
+  "dummyItem": 2,
+  "color_replacements": [
+    [57, 37340],
+    [61, 37340],
+    [5012, 37444],
+    [926, 37340],
+    [5012, 37340]
+  ],
+  "nullopt": true,
+  "$fileid": 82
+}
+,
+
+{
+  "members": true,
+  "value": 15,
+  "baseModel": 2615,
+  "modelTranslate_1": 25,
+  "model_zoom": 830,
+  "rotation_1": 1704,
+  "rotation_0": 264,
+  "name": "Lever",
+  "nullopt": true,
+  "$fileid": 83
+}
+,
+
+{
+  "members": true,
+  "value": 15,
+  "baseModel": 2810,
+  "modelTranslate_0": -5,
+  "modelTranslate_1": 2,
+  "model_zoom": 1490,
+  "rotation_1": 1400,
+  "rotation_0": 148,
+  "color_replacements": [[43117, 326]],
+  "name": "Staff of armadyl",
+  "nullopt": true,
+  "$fileid": 84
+}
+,
+
+{
+  "members": true,
+  "value": 1,
+  "baseModel": 2372,
+  "modelTranslate_0": -3,
+  "modelTranslate_1": 5,
+  "model_zoom": 700,
+  "rotation_1": 20,
+  "rotation_0": 328,
+  "name": "Shiny key",
+  "nullopt": true,
+  "$fileid": 85
+}
+,
+
+{
+  "baseModel": 2508,
+  "members": true,
+  "maleModels_0": {"id": 282, "type": 0},
+  "femaleModels_0": {"id": 446, "type": 0},
+  "value": 12,
+  "modelTranslate_0": -1,
+  "modelTranslate_1": -5,
+  "model_zoom": 420,
+  "rotation_1": 80,
+  "rotation_0": 224,
+  "widget_actions_1": "Wear",
+  "color_replacements": [[926, 22193]],
+  "name": "Pendant of lucien",
+  "nullopt": true,
+  "$fileid": 86
+}
+,
+
+{
+  "baseModel": 2508,
+  "members": true,
+  "value": 12,
+  "maleModels_0": {"id": 282, "type": 0},
+  "femaleModels_0": {"id": 446, "type": 0},
+  "modelTranslate_0": -1,
+  "modelTranslate_1": -5,
+  "model_zoom": 420,
+  "rotation_1": 80,
+  "rotation_0": 224,
+  "widget_actions_1": "Wear",
+  "color_replacements": [[926, 99]],
+  "name": "Armadyl pendant",
+  "nullopt": true,
+  "$fileid": 87
+}
+,
+
+{
+  "members": true,
+  "maleModels_0": {"id": 185, "type": 0},
+  "femaleModels_0": {"id": 361, "type": 0},
+  "value": 6,
+  "baseModel": 2837,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": -6,
+  "model_zoom": 770,
+  "rotation_1": 160,
+  "rotation_0": 152,
+  "widget_actions_1": "Wear",
+  "color_replacements": [[4626, 43189]],
+  "name": "Boots of lightness",
+  "nullopt": true,
+  "$fileid": 88
+}
+,
+
+{
+  "members": true,
+  "maleModels_0": {"id": 185, "type": 0},
+  "femaleModels_0": {"id": 361, "type": 0},
+  "value": 6,
+  "baseModel": 2837,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": -6,
+  "model_zoom": 770,
+  "rotation_1": 160,
+  "rotation_0": 152,
+  "widget_actions_1": "Wear",
+  "color_replacements": [[4626, 43189]],
+  "name": "Boots of lightness",
+  "nullopt": true,
+  "$fileid": 89
+}
+,
+
+{
+  "baseModel": 2725,
+  "modelTranslate_1": -15,
+  "model_zoom": 1360,
+  "rotation_0": 368,
+  "members": true,
+  "value": 5,
+  "name": "Child's blanket",
+  "nullopt": true,
+  "$fileid": 90
+}
+,
+
+{
+  "value": 3,
+  "baseModel": 2697,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1996,
+  "rotation_0": 84,
+  "members": true,
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[61, 32980]],
+  "name": "Guam potion(unf)",
+  "noteData": 92,
+  "nullopt": true,
+  "$fileid": 91
+}
+,
+
+{"noteData": 91, "noteTemplate": 799, "nullopt": true, "$fileid": 92}
+,
+
+{
+  "value": 5,
+  "baseModel": 2697,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1996,
+  "rotation_0": 84,
+  "members": true,
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[61, 54484]],
+  "name": "Marrentill potion(unf)",
+  "noteData": 94,
+  "nullopt": true,
+  "$fileid": 93
+}
+,
+
+{"noteData": 93, "noteTemplate": 799, "nullopt": true, "$fileid": 94}
+,
+
+{
+  "value": 11,
+  "baseModel": 2697,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1996,
+  "rotation_0": 84,
+  "members": true,
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[61, 10452]],
+  "name": "Tarromin potion(unf)",
+  "noteData": 96,
+  "nullopt": true,
+  "$fileid": 95
+}
+,
+
+{"noteData": 95, "noteTemplate": 799, "nullopt": true, "$fileid": 96}
+,
+
+{
+  "value": 20,
+  "baseModel": 2697,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1996,
+  "rotation_0": 84,
+  "members": true,
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[61, 212]],
+  "name": "Harralander potion(unf)",
+  "noteData": 98,
+  "nullopt": true,
+  "$fileid": 97
+}
+,
+
+{"noteData": 97, "noteTemplate": 799, "nullopt": true, "$fileid": 98}
+,
+
+{
+  "value": 25,
+  "baseModel": 2697,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1996,
+  "rotation_0": 84,
+  "members": true,
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[61, 21716]],
+  "name": "Ranarr potion(unf)",
+  "noteData": 100,
+  "nullopt": true,
+  "$fileid": 99
+}
+,
+
+{"noteData": 99, "noteTemplate": 799, "nullopt": true, "$fileid": 100}
+,
+
+{
+  "value": 40,
+  "baseModel": 2697,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1996,
+  "rotation_0": 84,
+  "members": true,
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[61, 43105]],
+  "name": "Irit potion(unf)",
+  "noteData": 102,
+  "nullopt": true,
+  "$fileid": 101
+}
+,
+
+{"noteData": 101, "noteTemplate": 799, "nullopt": true, "$fileid": 102}
+,
+
+{
+  "value": 48,
+  "baseModel": 2697,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1996,
+  "rotation_0": 84,
+  "members": true,
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[61, 78]],
+  "name": "Avantoe potion(unf)",
+  "noteData": 104,
+  "nullopt": true,
+  "$fileid": 103
+}
+,
+
+{"noteData": 103, "noteTemplate": 799, "nullopt": true, "$fileid": 104}
+,
+
+{
+  "value": 54,
+  "baseModel": 2697,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1996,
+  "rotation_0": 84,
+  "members": true,
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[61, 90]],
+  "name": "Kwuarm potion(unf)",
+  "noteData": 106,
+  "nullopt": true,
+  "$fileid": 105
+}
+,
+
+{"noteData": 105, "noteTemplate": 799, "nullopt": true, "$fileid": 106}
+,
+
+{
+  "value": 65,
+  "baseModel": 2697,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1996,
+  "rotation_0": 84,
+  "members": true,
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[61, 4316]],
+  "name": "Cadantine potion(unf)",
+  "noteData": 108,
+  "nullopt": true,
+  "$fileid": 107
+}
+,
+
+{"noteData": 107, "noteTemplate": 799, "nullopt": true, "$fileid": 108}
+,
+
+{
+  "value": 70,
+  "baseModel": 2697,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1996,
+  "rotation_0": 84,
+  "members": true,
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[61, 39132]],
+  "name": "Dwarf weed potion(unf)",
+  "noteData": 110,
+  "nullopt": true,
+  "$fileid": 109
+}
+,
+
+{"noteData": 109, "noteTemplate": 799, "nullopt": true, "$fileid": 110}
+,
+
+{
+  "value": 25,
+  "baseModel": 2697,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1996,
+  "rotation_0": 84,
+  "members": true,
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[61, 4321]],
+  "name": "Torstol potion(unf)",
+  "noteData": 112,
+  "nullopt": true,
+  "$fileid": 111
+}
+,
+
+{"noteData": 111, "noteTemplate": 799, "nullopt": true, "$fileid": 112}
+,
+
+{
+  "widget_actions_0": "Drink",
+  "value": 1500,
+  "baseModel": 2789,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1996,
+  "rotation_0": 84,
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[61, 11080]],
+  "name": "Strength potion(4)",
+  "noteData": 114,
+  "nullopt": true,
+  "$fileid": 113
+}
+,
+
+{"noteData": 113, "noteTemplate": 799, "nullopt": true, "$fileid": 114}
+,
+
+{
+  "widget_actions_0": "Drink",
+  "value": 1200,
+  "baseModel": 2697,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1996,
+  "rotation_0": 84,
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[61, 11080]],
+  "name": "Strength potion(3)",
+  "noteData": 116,
+  "nullopt": true,
+  "$fileid": 115
+}
+,
+
+{"noteData": 115, "noteTemplate": 799, "nullopt": true, "$fileid": 116}
+,
+
+{
+  "widget_actions_0": "Drink",
+  "value": 900,
+  "baseModel": 2384,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1996,
+  "rotation_0": 84,
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[61, 11080]],
+  "name": "Strength potion(2)",
+  "noteData": 118,
+  "nullopt": true,
+  "$fileid": 117
+}
+,
+
+{"noteData": 117, "noteTemplate": 799, "nullopt": true, "$fileid": 118}
+,
+
+{
+  "widget_actions_0": "Drink",
+  "value": 600,
+  "baseModel": 2621,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1996,
+  "rotation_0": 84,
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[61, 11080]],
+  "name": "Strength potion(1)",
+  "noteData": 120,
+  "nullopt": true,
+  "$fileid": 119
+}
+,
+
+{"noteData": 119, "noteTemplate": 799, "nullopt": true, "$fileid": 120}
+,
+
+{
+  "widget_actions_0": "Drink",
+  "value": 560,
+  "baseModel": 2697,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1996,
+  "rotation_0": 84,
+  "members": true,
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[61, 33608]],
+  "name": "Attack potion(3)",
+  "noteData": 122,
+  "nullopt": true,
+  "$fileid": 121
+}
+,
+
+{"noteData": 121, "noteTemplate": 799, "nullopt": true, "$fileid": 122}
+,
+
+{
+  "widget_actions_0": "Drink",
+  "value": 420,
+  "baseModel": 2384,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1996,
+  "rotation_0": 84,
+  "members": true,
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[61, 33608]],
+  "name": "Attack potion(2)",
+  "noteData": 124,
+  "nullopt": true,
+  "$fileid": 123
+}
+,
+
+{"noteData": 123, "noteTemplate": 799, "nullopt": true, "$fileid": 124}
+,
+
+{
+  "widget_actions_0": "Drink",
+  "value": 280,
+  "baseModel": 2621,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1996,
+  "rotation_0": 84,
+  "members": true,
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[61, 33608]],
+  "name": "Attack potion(1)",
+  "noteData": 126,
+  "nullopt": true,
+  "$fileid": 125
+}
+,
+
+{"noteData": 125, "noteTemplate": 799, "nullopt": true, "$fileid": 126}
+,
+
+{
+  "widget_actions_0": "Drink",
+  "value": 88,
+  "baseModel": 2697,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1996,
+  "rotation_0": 84,
+  "members": true,
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[61, 840]],
+  "name": "Restore potion(3)",
+  "noteData": 128,
+  "nullopt": true,
+  "$fileid": 127
+}
+,
+
+{"noteData": 127, "noteTemplate": 799, "nullopt": true, "$fileid": 128}
+,
+
+{
+  "widget_actions_0": "Drink",
+  "value": 66,
+  "baseModel": 2384,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1996,
+  "rotation_0": 84,
+  "members": true,
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[61, 840]],
+  "name": "Restore potion(2)",
+  "noteData": 130,
+  "nullopt": true,
+  "$fileid": 129
+}
+,
+
+{"noteData": 129, "noteTemplate": 799, "nullopt": true, "$fileid": 130}
+,
+
+{
+  "widget_actions_0": "Drink",
+  "value": 44,
+  "baseModel": 2621,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1996,
+  "rotation_0": 84,
+  "members": true,
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[61, 840]],
+  "name": "Restore potion(1)",
+  "noteData": 132,
+  "nullopt": true,
+  "$fileid": 131
+}
+,
+
+{"noteData": 131, "noteTemplate": 799, "nullopt": true, "$fileid": 132}
+,
+
+{
+  "widget_actions_0": "Drink",
+  "value": 880,
+  "baseModel": 2697,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1996,
+  "rotation_0": 84,
+  "members": true,
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[61, 22344]],
+  "name": "Defence potion(3)",
+  "noteData": 134,
+  "nullopt": true,
+  "$fileid": 133
+}
+,
+
+{"noteData": 133, "noteTemplate": 799, "nullopt": true, "$fileid": 134}
+,
+
+{
+  "widget_actions_0": "Drink",
+  "value": 660,
+  "baseModel": 2384,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1996,
+  "rotation_0": 84,
+  "members": true,
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[61, 22344]],
+  "name": "Defence potion(2)",
+  "noteData": 136,
+  "nullopt": true,
+  "$fileid": 135
+}
+,
+
+{"noteData": 135, "noteTemplate": 799, "nullopt": true, "$fileid": 136}
+,
+
+{
+  "widget_actions_0": "Drink",
+  "value": 440,
+  "baseModel": 2621,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1996,
+  "rotation_0": 84,
+  "members": true,
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[61, 22344]],
+  "name": "Defence potion(1)",
+  "noteData": 138,
+  "nullopt": true,
+  "$fileid": 137
+}
+,
+
+{"noteData": 137, "noteTemplate": 799, "nullopt": true, "$fileid": 138}
+,
+
+{
+  "widget_actions_0": "Drink",
+  "value": 152,
+  "baseModel": 2697,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1996,
+  "rotation_0": 84,
+  "members": true,
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[61, 28488]],
+  "name": "Prayer potion(3)",
+  "noteData": 140,
+  "nullopt": true,
+  "$fileid": 139
+}
+,
+
+{"noteData": 139, "noteTemplate": 799, "nullopt": true, "$fileid": 140}
+,
+
+{
+  "widget_actions_0": "Drink",
+  "value": 114,
+  "baseModel": 2384,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1996,
+  "rotation_0": 84,
+  "members": true,
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[61, 28488]],
+  "name": "Prayer potion(2)",
+  "noteData": 142,
+  "nullopt": true,
+  "$fileid": 141
+}
+,
+
+{"noteData": 141, "noteTemplate": 799, "nullopt": true, "$fileid": 142}
+,
+
+{
+  "widget_actions_0": "Drink",
+  "value": 76,
+  "baseModel": 2621,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1996,
+  "rotation_0": 84,
+  "members": true,
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[61, 28488]],
+  "name": "Prayer potion(1)",
+  "noteData": 144,
+  "nullopt": true,
+  "$fileid": 143
+}
+,
+
+{"noteData": 143, "noteTemplate": 799, "nullopt": true, "$fileid": 144}
+,
+
+{
+  "widget_actions_0": "Drink",
+  "value": 180,
+  "baseModel": 2697,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1996,
+  "rotation_0": 84,
+  "members": true,
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[61, 43848]],
+  "name": "Super attack(3)",
+  "noteData": 146,
+  "nullopt": true,
+  "$fileid": 145
+}
+,
+
+{"noteData": 145, "noteTemplate": 799, "nullopt": true, "$fileid": 146}
+,
+
+{
+  "widget_actions_0": "Drink",
+  "value": 135,
+  "baseModel": 2384,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1996,
+  "rotation_0": 84,
+  "members": true,
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[61, 43848]],
+  "name": "Super attack(2)",
+  "noteData": 148,
+  "nullopt": true,
+  "$fileid": 147
+}
+,
+
+{"noteData": 147, "noteTemplate": 799, "nullopt": true, "$fileid": 148}
+,
+
+{
+  "widget_actions_0": "Drink",
+  "value": 90,
+  "baseModel": 2621,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1996,
+  "rotation_0": 84,
+  "members": true,
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[61, 43848]],
+  "name": "Super attack(1)",
+  "noteData": 150,
+  "nullopt": true,
+  "$fileid": 149
+}
+,
+
+{"noteData": 149, "noteTemplate": 799, "nullopt": true, "$fileid": 150}
+,
+
+{
+  "widget_actions_0": "Drink",
+  "value": 200,
+  "baseModel": 2697,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1996,
+  "rotation_0": 84,
+  "members": true,
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[61, 24]],
+  "name": "Fishing potion(3)",
+  "noteData": 152,
+  "nullopt": true,
+  "$fileid": 151
+}
+,
+
+{"noteData": 151, "noteTemplate": 799, "nullopt": true, "$fileid": 152}
+,
+
+{
+  "widget_actions_0": "Drink",
+  "value": 150,
+  "baseModel": 2384,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1996,
+  "rotation_0": 84,
+  "members": true,
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[61, 24]],
+  "name": "Fishing potion(2)",
+  "noteData": 154,
+  "nullopt": true,
+  "$fileid": 153
+}
+,
+
+{"noteData": 153, "noteTemplate": 799, "nullopt": true, "$fileid": 154}
+,
+
+{
+  "widget_actions_0": "Drink",
+  "value": 100,
+  "baseModel": 2621,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1996,
+  "rotation_0": 84,
+  "members": true,
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[61, 24]],
+  "name": "Fishing potion(1)",
+  "noteData": 156,
+  "nullopt": true,
+  "$fileid": 155
+}
+,
+
+{"noteData": 155, "noteTemplate": 799, "nullopt": true, "$fileid": 156}
+,
+
+{
+  "widget_actions_0": "Drink",
+  "value": 220,
+  "baseModel": 2697,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1996,
+  "rotation_0": 84,
+  "members": true,
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[61, 119]],
+  "name": "Super strength(3)",
+  "noteData": 158,
+  "nullopt": true,
+  "$fileid": 157
+}
+,
+
+{"noteData": 157, "noteTemplate": 799, "nullopt": true, "$fileid": 158}
+,
+
+{
+  "widget_actions_0": "Drink",
+  "value": 165,
+  "baseModel": 2384,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1996,
+  "rotation_0": 84,
+  "members": true,
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[61, 119]],
+  "name": "Super strength(2)",
+  "noteData": 160,
+  "nullopt": true,
+  "$fileid": 159
+}
+,
+
+{"noteData": 159, "noteTemplate": 799, "nullopt": true, "$fileid": 160}
+,
+
+{
+  "widget_actions_0": "Drink",
+  "value": 110,
+  "baseModel": 2621,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1996,
+  "rotation_0": 84,
+  "members": true,
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[61, 119]],
+  "name": "Super strength(1)",
+  "noteData": 162,
+  "nullopt": true,
+  "$fileid": 161
+}
+,
+
+{"noteData": 161, "noteTemplate": 799, "nullopt": true, "$fileid": 162}
+,
+
+{
+  "widget_actions_0": "Drink",
+  "value": 264,
+  "baseModel": 2697,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1996,
+  "rotation_0": 84,
+  "members": true,
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[61, 8008]],
+  "name": "Super defence(3)",
+  "noteData": 164,
+  "nullopt": true,
+  "$fileid": 163
+}
+,
+
+{"noteData": 163, "noteTemplate": 799, "nullopt": true, "$fileid": 164}
+,
+
+{
+  "widget_actions_0": "Drink",
+  "value": 198,
+  "baseModel": 2384,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1996,
+  "rotation_0": 84,
+  "members": true,
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[61, 8008]],
+  "name": "Super defence(2)",
+  "noteData": 166,
+  "nullopt": true,
+  "$fileid": 165
+}
+,
+
+{"noteData": 165, "noteTemplate": 799, "nullopt": true, "$fileid": 166}
+,
+
+{
+  "widget_actions_0": "Drink",
+  "value": 132,
+  "baseModel": 2621,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1996,
+  "rotation_0": 84,
+  "members": true,
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[61, 8008]],
+  "name": "Super defence(1)",
+  "noteData": 168,
+  "nullopt": true,
+  "$fileid": 167
+}
+,
+
+{"noteData": 167, "noteTemplate": 799, "nullopt": true, "$fileid": 168}
+,
+
+{
+  "widget_actions_0": "Drink",
+  "value": 288,
+  "baseModel": 2697,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1996,
+  "rotation_0": 84,
+  "members": true,
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[61, 36680]],
+  "name": "Ranging potion(3)",
+  "noteData": 170,
+  "nullopt": true,
+  "$fileid": 169
+}
+,
+
+{"noteData": 169, "noteTemplate": 799, "nullopt": true, "$fileid": 170}
+,
+
+{
+  "widget_actions_0": "Drink",
+  "value": 216,
+  "baseModel": 2384,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1996,
+  "rotation_0": 84,
+  "members": true,
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[61, 36680]],
+  "name": "Ranging potion(2)",
+  "noteData": 172,
+  "nullopt": true,
+  "$fileid": 171
+}
+,
+
+{"noteData": 171, "noteTemplate": 799, "nullopt": true, "$fileid": 172}
+,
+
+{
+  "widget_actions_0": "Drink",
+  "value": 144,
+  "baseModel": 2621,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1996,
+  "rotation_0": 84,
+  "members": true,
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[61, 36680]],
+  "name": "Ranging potion(1)",
+  "noteData": 174,
+  "nullopt": true,
+  "$fileid": 173
+}
+,
+
+{"noteData": 173, "noteTemplate": 799, "nullopt": true, "$fileid": 174}
+,
+
+{
+  "widget_actions_0": "Drink",
+  "value": 288,
+  "baseModel": 2697,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1996,
+  "rotation_0": 84,
+  "members": true,
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[61, 18372]],
+  "name": "Antipoison(3)",
+  "noteData": 176,
+  "nullopt": true,
+  "$fileid": 175
+}
+,
+
+{"noteData": 175, "noteTemplate": 799, "nullopt": true, "$fileid": 176}
+,
+
+{
+  "widget_actions_0": "Drink",
+  "value": 216,
+  "baseModel": 2384,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1996,
+  "rotation_0": 84,
+  "members": true,
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[61, 18372]],
+  "name": "Antipoison(2)",
+  "noteData": 178,
+  "nullopt": true,
+  "$fileid": 177
+}
+,
+
+{"noteData": 177, "noteTemplate": 799, "nullopt": true, "$fileid": 178}
+,
+
+{
+  "widget_actions_0": "Drink",
+  "value": 144,
+  "baseModel": 2621,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1996,
+  "rotation_0": 84,
+  "members": true,
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[61, 18372]],
+  "name": "Antipoison(1)",
+  "noteData": 180,
+  "nullopt": true,
+  "$fileid": 179
+}
+,
+
+{"noteData": 179, "noteTemplate": 799, "nullopt": true, "$fileid": 180}
+,
+
+{
+  "widget_actions_0": "Drink",
+  "value": 288,
+  "baseModel": 2697,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1996,
+  "rotation_0": 84,
+  "members": true,
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[61, 62404]],
+  "name": "Super antipoison(3)",
+  "noteData": 182,
+  "nullopt": true,
+  "$fileid": 181
+}
+,
+
+{"noteData": 181, "noteTemplate": 799, "nullopt": true, "$fileid": 182}
+,
+
+{
+  "widget_actions_0": "Drink",
+  "value": 216,
+  "baseModel": 2384,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1996,
+  "rotation_0": 84,
+  "members": true,
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[61, 62404]],
+  "name": "Super antipoison(2)",
+  "noteData": 184,
+  "nullopt": true,
+  "$fileid": 183
+}
+,
+
+{"noteData": 183, "noteTemplate": 799, "nullopt": true, "$fileid": 184}
+,
+
+{
+  "widget_actions_0": "Drink",
+  "value": 144,
+  "baseModel": 2621,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1996,
+  "rotation_0": 84,
+  "members": true,
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[61, 62404]],
+  "name": "Super antipoison(1)",
+  "noteData": 186,
+  "nullopt": true,
+  "$fileid": 185
+}
+,
+
+{"noteData": 185, "noteTemplate": 799, "nullopt": true, "$fileid": 186}
+,
+
+{
+  "value": 144,
+  "baseModel": 2789,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1996,
+  "rotation_0": 84,
+  "members": true,
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[61, 39876]],
+  "name": "Weapon poison",
+  "noteData": 188,
+  "nullopt": true,
+  "$fileid": 187
+}
+,
+
+{"noteData": 187, "noteTemplate": 799, "nullopt": true, "$fileid": 188}
+,
+
+{
+  "widget_actions_0": "Drink",
+  "value": 175,
+  "baseModel": 2697,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1996,
+  "rotation_0": 84,
+  "members": true,
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[61, 7099]],
+  "name": "Zamorak brew(3)",
+  "noteData": 190,
+  "nullopt": true,
+  "$fileid": 189
+}
+,
+
+{"noteData": 189, "noteTemplate": 799, "nullopt": true, "$fileid": 190}
+,
+
+{
+  "widget_actions_0": "Drink",
+  "value": 150,
+  "baseModel": 2384,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1996,
+  "rotation_0": 84,
+  "members": true,
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[61, 7099]],
+  "name": "Zamorak brew(2)",
+  "noteData": 192,
+  "nullopt": true,
+  "$fileid": 191
+}
+,
+
+{"noteData": 191, "noteTemplate": 799, "nullopt": true, "$fileid": 192}
+,
+
+{
+  "widget_actions_0": "Drink",
+  "value": 125,
+  "baseModel": 2621,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1996,
+  "rotation_0": 84,
+  "members": true,
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[61, 7099]],
+  "name": "Zamorak brew(1)",
+  "noteData": 194,
+  "nullopt": true,
+  "$fileid": 193
+}
+,
+
+{"noteData": 193, "noteTemplate": 799, "nullopt": true, "$fileid": 194}
+,
+
+{
+  "baseModel": 2789,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1996,
+  "rotation_0": 84,
+  "tradeable": true,
+  "color_replacements": [[61, 25026]],
+  "name": "Potion",
+  "noteData": 196,
+  "nullopt": true,
+  "$fileid": 195
+}
+,
+
+{"noteData": 195, "noteTemplate": 799, "nullopt": true, "$fileid": 196}
+,
+
+{
+  "baseModel": 2639,
+  "modelTranslate_1": 1,
+  "model_zoom": 700,
+  "rotation_1": 1988,
+  "rotation_0": 104,
+  "widget_actions_0": "Drink",
+  "members": true,
+  "value": 20,
+  "tradeable": true,
+  "color_replacements": [[37811, 21460]],
+  "name": "Poison chalice",
+  "noteData": 198,
+  "nullopt": true,
+  "$fileid": 197
+}
+,
+
+{"noteData": 197, "noteTemplate": 799, "nullopt": true, "$fileid": 198}
+,
+
+{
+  "widget_actions_0": "Clean",
+  "members": true,
+  "baseModel": 28853,
+  "modelTranslate_0": 8,
+  "modelTranslate_1": -1,
+  "model_zoom": 789,
+  "rotation_1": 1770,
+  "rotation_2": 97,
+  "rotation_0": 581,
+  "tradeable": true,
+  "color_replacements": [[22418, 22428]],
+  "name": "Grimy guam",
+  "noteData": 200,
+  "nullopt": true,
+  "$fileid": 199
+}
+,
+
+{"noteData": 199, "noteTemplate": 799, "nullopt": true, "$fileid": 200}
+,
+
+{
+  "widget_actions_0": "Clean",
+  "members": true,
+  "baseModel": 28853,
+  "modelTranslate_0": 8,
+  "modelTranslate_1": -1,
+  "model_zoom": 789,
+  "rotation_1": 1770,
+  "rotation_2": 97,
+  "rotation_0": 581,
+  "tradeable": true,
+  "color_replacements": [[22418, 22433]],
+  "name": "Grimy marrentill",
+  "noteData": 202,
+  "nullopt": true,
+  "$fileid": 201
+}
+,
+
+{"noteData": 201, "noteTemplate": 799, "nullopt": true, "$fileid": 202}
+,
+
+{
+  "widget_actions_0": "Clean",
+  "members": true,
+  "baseModel": 28853,
+  "modelTranslate_0": 8,
+  "modelTranslate_1": -1,
+  "model_zoom": 789,
+  "rotation_1": 1770,
+  "rotation_2": 97,
+  "rotation_0": 581,
+  "tradeable": true,
+  "color_replacements": [[22418, 25505]],
+  "name": "Grimy tarromin",
+  "noteData": 204,
+  "nullopt": true,
+  "$fileid": 203
+}
+,
+
+{"noteData": 203, "noteTemplate": 799, "nullopt": true, "$fileid": 204}
+,
+
+{
+  "widget_actions_0": "Clean",
+  "members": true,
+  "baseModel": 28853,
+  "modelTranslate_0": 8,
+  "modelTranslate_1": -1,
+  "model_zoom": 789,
+  "rotation_1": 1770,
+  "rotation_2": 97,
+  "rotation_0": 581,
+  "tradeable": true,
+  "color_replacements": [[22418, 16289]],
+  "name": "Grimy harralander",
+  "noteData": 206,
+  "nullopt": true,
+  "$fileid": 205
+}
+,
+
+{"noteData": 205, "noteTemplate": 799, "nullopt": true, "$fileid": 206}
+,
+
+{
+  "widget_actions_0": "Clean",
+  "members": true,
+  "baseModel": 28853,
+  "modelTranslate_0": 8,
+  "modelTranslate_1": -1,
+  "model_zoom": 789,
+  "rotation_1": 1770,
+  "rotation_2": 97,
+  "rotation_0": 581,
+  "tradeable": true,
+  "color_replacements": [[22418, 17304]],
+  "name": "Grimy ranarr",
+  "noteData": 208,
+  "nullopt": true,
+  "$fileid": 207
+}
+,
+
+{"noteData": 207, "noteTemplate": 799, "nullopt": true, "$fileid": 208}
+,
+
+{
+  "widget_actions_0": "Clean",
+  "members": true,
+  "baseModel": 28853,
+  "modelTranslate_0": 8,
+  "modelTranslate_1": -1,
+  "model_zoom": 789,
+  "rotation_1": 1770,
+  "rotation_2": 97,
+  "rotation_0": 581,
+  "tradeable": true,
+  "color_replacements": [[22418, 17961]],
+  "name": "Grimy irit",
+  "noteData": 210,
+  "nullopt": true,
+  "$fileid": 209
+}
+,
+
+{"noteData": 209, "noteTemplate": 799, "nullopt": true, "$fileid": 210}
+,
+
+{
+  "widget_actions_0": "Clean",
+  "members": true,
+  "baseModel": 28853,
+  "modelTranslate_0": 8,
+  "modelTranslate_1": -1,
+  "model_zoom": 789,
+  "rotation_1": 1770,
+  "rotation_2": 97,
+  "rotation_0": 581,
+  "tradeable": true,
+  "color_replacements": [[22418, 24342]],
+  "name": "Grimy avantoe",
+  "noteData": 212,
+  "nullopt": true,
+  "$fileid": 211
+}
+,
+
+{"noteData": 211, "noteTemplate": 799, "nullopt": true, "$fileid": 212}
+,
+
+{
+  "widget_actions_0": "Clean",
+  "members": true,
+  "baseModel": 28853,
+  "modelTranslate_0": 8,
+  "modelTranslate_1": -1,
+  "model_zoom": 789,
+  "rotation_1": 1770,
+  "rotation_2": 97,
+  "rotation_0": 581,
+  "tradeable": true,
+  "color_replacements": [[22418, 13204]],
+  "name": "Grimy kwuarm",
+  "noteData": 214,
+  "nullopt": true,
+  "$fileid": 213
+}
+,
+
+{"noteData": 213, "noteTemplate": 799, "nullopt": true, "$fileid": 214}
+,
+
+{
+  "widget_actions_0": "Clean",
+  "members": true,
+  "baseModel": 28853,
+  "modelTranslate_0": 8,
+  "modelTranslate_1": -1,
+  "model_zoom": 789,
+  "rotation_1": 1770,
+  "rotation_2": 97,
+  "rotation_0": 581,
+  "tradeable": true,
+  "color_replacements": [[22418, 13974]],
+  "name": "Grimy cadantine",
+  "noteData": 216,
+  "nullopt": true,
+  "$fileid": 215
+}
+,
+
+{"noteData": 215, "noteTemplate": 799, "nullopt": true, "$fileid": 216}
+,
+
+{
+  "widget_actions_0": "Clean",
+  "members": true,
+  "baseModel": 28853,
+  "modelTranslate_0": 8,
+  "modelTranslate_1": -1,
+  "model_zoom": 789,
+  "rotation_1": 1770,
+  "rotation_2": 97,
+  "rotation_0": 581,
+  "tradeable": true,
+  "color_replacements": [[22418, 22416]],
+  "name": "Grimy dwarf weed",
+  "noteData": 218,
+  "nullopt": true,
+  "$fileid": 217
+}
+,
+
+{"noteData": 217, "noteTemplate": 799, "nullopt": true, "$fileid": 218}
+,
+
+{
+  "widget_actions_0": "Clean",
+  "members": true,
+  "baseModel": 28853,
+  "modelTranslate_0": 8,
+  "modelTranslate_1": -1,
+  "model_zoom": 789,
+  "rotation_1": 1770,
+  "rotation_2": 97,
+  "rotation_0": 581,
+  "tradeable": true,
+  "color_replacements": [[22418, 22422]],
+  "name": "Grimy torstol",
+  "noteData": 220,
+  "nullopt": true,
+  "$fileid": 219
+}
+,
+
+{"noteData": 219, "noteTemplate": 799, "nullopt": true, "$fileid": 220}
+,
+
+{
+  "value": 3,
+  "baseModel": 2520,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": -2,
+  "model_zoom": 690,
+  "rotation_1": 256,
+  "rotation_0": 364,
+  "tradeable": true,
+  "name": "Eye of newt",
+  "noteData": 222,
+  "nullopt": true,
+  "$fileid": 221
+}
+,
+
+{"noteData": 221, "noteTemplate": 799, "nullopt": true, "$fileid": 222}
+,
+
+{
+  "value": 7,
+  "baseModel": 2343,
+  "modelTranslate_0": -3,
+  "model_zoom": 1500,
+  "rotation_1": 12,
+  "rotation_0": 252,
+  "tradeable": true,
+  "name": "Red spiders' eggs",
+  "noteData": 224,
+  "nullopt": true,
+  "$fileid": 223
+}
+,
+
+{"noteData": 223, "noteTemplate": 799, "nullopt": true, "$fileid": 224}
+,
+
+{
+  "value": 7,
+  "baseModel": 7221,
+  "modelTranslate_0": -6,
+  "modelTranslate_1": -3,
+  "model_zoom": 930,
+  "rotation_1": 2036,
+  "rotation_2": 1980,
+  "rotation_0": 68,
+  "ambiance": 15,
+  "tradeable": true,
+  "name": "Limpwurt root",
+  "noteData": 226,
+  "nullopt": true,
+  "$fileid": 225
+}
+,
+
+{"noteData": 225, "noteTemplate": 799, "nullopt": true, "$fileid": 226}
+,
+
+{
+  "baseModel": 2789,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1996,
+  "rotation_0": 84,
+  "value": 10,
+  "widget_actions_3": "Empty",
+  "tradeable": true,
+  "color_replacements": [[61, 42330]],
+  "name": "Vial of water",
+  "noteData": 228,
+  "nullopt": true,
+  "$fileid": 227
+}
+,
+
+{"noteData": 227, "noteTemplate": 799, "nullopt": true, "$fileid": 228}
+,
+
+{
+  "baseModel": 2747,
+  "modelTranslate_1": -1,
+  "model_zoom": 550,
+  "rotation_1": 1996,
+  "rotation_0": 84,
+  "maleModels_0": {"id": 561, "type": 0},
+  "femaleModels_0": {"id": 561, "type": 0},
+  "value": 5,
+  "tradeable": true,
+  "name": "Vial",
+  "female_translate": [0, 6, 0],
+  "noteData": 230,
+  "nullopt": true,
+  "$fileid": 229
+}
+,
+
+{"noteData": 229, "noteTemplate": 799, "nullopt": true, "$fileid": 230}
+,
+
+{
+  "value": 10,
+  "members": true,
+  "baseModel": 2440,
+  "modelTranslate_0": -1,
+  "modelTranslate_1": 2,
+  "model_zoom": 1170,
+  "rotation_1": 48,
+  "rotation_0": 484,
+  "tradeable": true,
+  "name": "Snape grass",
+  "noteData": 232,
+  "nullopt": true,
+  "$fileid": 231
+}
+,
+
+{"noteData": 231, "noteTemplate": 799, "nullopt": true, "$fileid": 232}
+,
+
+{
+  "value": 4,
+  "members": true,
+  "baseModel": 2682,
+  "modelTranslate_0": -3,
+  "modelTranslate_1": -8,
+  "model_zoom": 680,
+  "rotation_1": 316,
+  "rotation_0": 180,
+  "tradeable": true,
+  "name": "Pestle and mortar",
+  "noteData": 234,
+  "nullopt": true,
+  "$fileid": 233
+}
+,
+
+{"noteData": 233, "noteTemplate": 799, "nullopt": true, "$fileid": 234}
+,
+
+{
+  "baseModel": 2742,
+  "modelTranslate_0": -6,
+  "model_zoom": 1210,
+  "rotation_1": 1892,
+  "rotation_0": 264,
+  "members": true,
+  "value": 20,
+  "tradeable": true,
+  "color_replacements": [[82, 7741]],
+  "name": "Unicorn horn dust",
+  "noteData": 236,
+  "nullopt": true,
+  "$fileid": 235
+}
+,
+
+{"noteData": 235, "noteTemplate": 799, "nullopt": true, "$fileid": 236}
+,
+
+{
+  "baseModel": 2495,
+  "modelTranslate_0": 4,
+  "modelTranslate_1": -8,
+  "model_zoom": 840,
+  "rotation_1": 132,
+  "rotation_0": 248,
+  "members": true,
+  "value": 20,
+  "tradeable": true,
+  "name": "Unicorn horn",
+  "noteData": 238,
+  "nullopt": true,
+  "$fileid": 237
+}
+,
+
+{"noteData": 237, "noteTemplate": 799, "nullopt": true, "$fileid": 238}
+,
+
+{
+  "baseModel": 2358,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": 4,
+  "model_zoom": 970,
+  "rotation_1": 668,
+  "rotation_0": 404,
+  "members": true,
+  "value": 10,
+  "tradeable": true,
+  "color_replacements": [[960, 127]],
+  "name": "White berries",
+  "noteData": 240,
+  "nullopt": true,
+  "$fileid": 239
+}
+,
+
+{"noteData": 239, "noteTemplate": 799, "nullopt": true, "$fileid": 240}
+,
+
+{
+  "baseModel": 2742,
+  "modelTranslate_0": -6,
+  "model_zoom": 1210,
+  "rotation_1": 1892,
+  "rotation_0": 264,
+  "value": 52,
+  "members": true,
+  "tradeable": true,
+  "color_replacements": [[82, 40487]],
+  "name": "Dragon scale dust",
+  "noteData": 242,
+  "nullopt": true,
+  "$fileid": 241
+}
+,
+
+{"noteData": 241, "noteTemplate": 799, "nullopt": true, "$fileid": 242}
+,
+
+{
+  "value": 50,
+  "members": true,
+  "baseModel": 2761,
+  "modelTranslate_0": 7,
+  "model_zoom": 1370,
+  "rotation_1": 148,
+  "rotation_0": 212,
+  "tradeable": true,
+  "name": "Blue dragon scale",
+  "noteData": 244,
+  "nullopt": true,
+  "$fileid": 243
+}
+,
+
+{"noteData": 243, "noteTemplate": 799, "nullopt": true, "$fileid": 244}
+,
+
+{
+  "baseModel": 2390,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": 100,
+  "model_zoom": 600,
+  "rotation_1": 84,
+  "rotation_0": 260,
+  "tradeable": true,
+  "color_replacements": [[127, 701]],
+  "name": "Wine of zamorak",
+  "noteData": 246,
+  "nullopt": true,
+  "$fileid": 245
+}
+,
+
+{"noteData": 245, "noteTemplate": 799, "nullopt": true, "$fileid": 246}
+,
+
+{
+  "widget_actions_0": "Eat",
+  "baseModel": 2358,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": 4,
+  "model_zoom": 970,
+  "rotation_1": 668,
+  "rotation_0": 404,
+  "members": true,
+  "tradeable": true,
+  "color_replacements": [[960, 13223], [6040, 10136]],
+  "name": "Jangerberries",
+  "noteData": 248,
+  "nullopt": true,
+  "$fileid": 247
+}
+,
+
+{"noteData": 247, "noteTemplate": 799, "nullopt": true, "$fileid": 248}
+,
+
+{
+  "value": 3,
+  "members": true,
+  "baseModel": 2364,
+  "modelTranslate_0": 8,
+  "modelTranslate_1": -1,
+  "model_zoom": 789,
+  "rotation_1": 1770,
+  "rotation_2": 97,
+  "rotation_0": 581,
+  "tradeable": true,
+  "color_replacements": [[22418, 22428], [22428, 22418]],
+  "name": "Clean guam",
+  "noteData": 250,
+  "nullopt": true,
+  "$fileid": 249
+}
+,
+
+{"noteData": 249, "noteTemplate": 799, "nullopt": true, "$fileid": 250}
+,
+
+{
+  "value": 5,
+  "members": true,
+  "baseModel": 2364,
+  "modelTranslate_0": 8,
+  "modelTranslate_1": -1,
+  "model_zoom": 789,
+  "rotation_1": 1770,
+  "rotation_2": 97,
+  "rotation_0": 581,
+  "tradeable": true,
+  "color_replacements": [[22418, 22433], [22428, 22424]],
+  "name": "Clean marrentill",
+  "noteData": 252,
+  "nullopt": true,
+  "$fileid": 251
+}
+,
+
+{"noteData": 251, "noteTemplate": 799, "nullopt": true, "$fileid": 252}
+,
+
+{
+  "value": 11,
+  "members": true,
+  "baseModel": 2364,
+  "modelTranslate_0": 8,
+  "modelTranslate_1": -1,
+  "model_zoom": 789,
+  "rotation_1": 1770,
+  "rotation_2": 97,
+  "rotation_0": 581,
+  "tradeable": true,
+  "color_replacements": [[22418, 25505], [22428, 25496]],
+  "name": "Clean tarromin",
+  "noteData": 254,
+  "nullopt": true,
+  "$fileid": 253
+}
+,
+
+{"noteData": 253, "noteTemplate": 799, "nullopt": true, "$fileid": 254}
+,
+
+{
+  "value": 20,
+  "members": true,
+  "baseModel": 2364,
+  "modelTranslate_0": 8,
+  "modelTranslate_1": -1,
+  "model_zoom": 789,
+  "rotation_1": 1770,
+  "rotation_2": 97,
+  "rotation_0": 581,
+  "tradeable": true,
+  "color_replacements": [[22418, 16289], [22428, 13204]],
+  "name": "Clean harralander",
+  "noteData": 256,
+  "nullopt": true,
+  "$fileid": 255
+}]}

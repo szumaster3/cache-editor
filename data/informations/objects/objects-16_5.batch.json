@@ -1,0 +1,2808 @@
+{"$schema":".schema-objects_batch.json","files":[
+
+{
+  "width": 2,
+  "length": 2,
+  "mapscene": 1,
+  "actions_0": "Chop down",
+  "actions_2": "hidden",
+  "unknown_51": 42,
+  "color_replacements": [[3470, 5029]],
+  "models_05": {"models": [{"type": 10, "values": [1637], "unktail": []}]},
+  "name": "Tree",
+  "$fileid": 1280
+}
+,
+
+{
+  "ambient": 25,
+  "width": 3,
+  "length": 3,
+  "actions_0": "Chop down",
+  "actions_2": "hidden",
+  "mapscene": 1,
+  "unknown_51": 32,
+  "models_05": {
+    "models": [{"type": 10, "values": [8037, 8040], "unktail": []}]
+  },
+  "name": "Oak",
+  "$fileid": 1281
+}
+,
+
+{
+  "width": 2,
+  "length": 2,
+  "mapscene": 6,
+  "actions_0": "Chop down",
+  "actions_2": "hidden",
+  "unknown_51": 32,
+  "models_05": {"models": [{"type": 10, "values": [1715], "unktail": []}]},
+  "name": "Dead tree",
+  "$fileid": 1282
+}
+,
+
+{
+  "width": 2,
+  "length": 2,
+  "mapscene": 6,
+  "actions_0": "Chop down",
+  "actions_2": "hidden",
+  "unknown_51": 42,
+  "models_05": {"models": [{"type": 10, "values": [1715], "unktail": []}]},
+  "name": "Dead tree",
+  "$fileid": 1283
+}
+,
+
+{
+  "width": 2,
+  "length": 2,
+  "mapscene": 6,
+  "scaleX": 100,
+  "scaleY": 100,
+  "scaleZ": 100,
+  "actions_0": "Chop down",
+  "actions_2": "hidden",
+  "unknown_51": 42,
+  "models_05": {"models": [{"type": 10, "values": [1715], "unktail": []}]},
+  "name": "Dead tree",
+  "$fileid": 1284
+}
+,
+
+{
+  "width": 2,
+  "length": 2,
+  "mapscene": 6,
+  "actions_0": "Chop down",
+  "actions_2": "hidden",
+  "unknown_51": 42,
+  "color_replacements": [[5388, 6814], [7566, 5788]],
+  "models_05": {"models": [{"type": 10, "values": [1715], "unktail": []}]},
+  "name": "Dead tree",
+  "$fileid": 1285
+}
+,
+
+{
+  "mapscene": 27,
+  "actions_0": "Chop down",
+  "actions_2": "hidden",
+  "unknown_51": 32,
+  "color_replacements": [[6028, 3470], [7054, 3470]],
+  "models_05": {"models": [{"type": 10, "values": [1716], "unktail": []}]},
+  "name": "Dead tree",
+  "$fileid": 1286
+}
+,
+
+{
+  "mapscene": 6,
+  "unknown_16": true,
+  "unknown_51": 42,
+  "models_05": {"models": [{"type": 10, "values": [1621], "unktail": []}]},
+  "name": "Dead tree",
+  "$fileid": 1287
+}
+,
+
+{
+  "mapscene": 6,
+  "mirror": true,
+  "unknown_16": true,
+  "unknown_51": 42,
+  "models_05": {"models": [{"type": 10, "values": [1621], "unktail": []}]},
+  "name": "Dead tree",
+  "$fileid": 1288
+}
+,
+
+{
+  "mapscene": 27,
+  "actions_0": "Chop down",
+  "actions_2": "hidden",
+  "unknown_51": 42,
+  "color_replacements": [[7054, 5388], [6028, 5388]],
+  "models_05": {"models": [{"type": 10, "values": [1716], "unktail": []}]},
+  "name": "Dead tree",
+  "$fileid": 1289
+}
+,
+
+{
+  "width": 2,
+  "length": 2,
+  "mapscene": 6,
+  "actions_0": "Chop down",
+  "actions_2": "hidden",
+  "unknown_51": 42,
+  "models_05": {"models": [{"type": 10, "values": [1718], "unktail": []}]},
+  "name": "Dead tree",
+  "$fileid": 1290
+}
+,
+
+{
+  "mapscene": 6,
+  "actions_0": "Chop down",
+  "actions_2": "hidden",
+  "unknown_51": 42,
+  "models_05": {"models": [{"type": 10, "values": [23908], "unktail": []}]},
+  "name": "Dead tree",
+  "$fileid": 1291
+}
+,
+
+{
+  "width": 2,
+  "length": 2,
+  "actions_0": "Chop down",
+  "actions_2": "hidden",
+  "mapscene": 0,
+  "unknown_51": 42,
+  "models_05": {"models": [{"type": 10, "values": [1650], "unktail": []}]},
+  "name": "Dramen tree",
+  "$fileid": 1292
+}
+,
+
+{
+  "width": 4,
+  "length": 4,
+  "probably_animation": 332,
+  "actions_0": "Talk-to",
+  "actions_1": "Teleport",
+  "mapscene": 0,
+  "unknown_51": 42,
+  "models_05": {"models": [{"type": 10, "values": [2851], "unktail": []}]},
+  "name": "Spirit tree",
+  "$fileid": 1293
+}
+,
+
+{
+  "width": 4,
+  "length": 4,
+  "probably_animation": 332,
+  "actions_0": "Talk-to",
+  "actions_1": "Teleport",
+  "mapscene": 0,
+  "models_05": {"models": [{"type": 10, "values": [2851], "unktail": []}]},
+  "name": "Spirit tree",
+  "$fileid": 1294
+}
+,
+
+{
+  "width": 4,
+  "length": 4,
+  "probably_animation": 333,
+  "actions_0": "Talk-to",
+  "actions_1": "Teleport",
+  "mapscene": 0,
+  "models_05": {"models": [{"type": 10, "values": [2851], "unktail": []}]},
+  "name": "Spirit tree",
+  "$fileid": 1295
+}
+,
+
+{
+  "width": 3,
+  "length": 2,
+  "mapscene": 6,
+  "models_05": {"models": [{"type": 10, "values": [1633], "unktail": []}]},
+  "name": "Fallen tree",
+  "$fileid": 1296
+}
+,
+
+{
+  "width": 3,
+  "length": 2,
+  "mapscene": 6,
+  "probably_morphFloor": true,
+  "color_replacements": [[5029, 3470], [4814, 6684]],
+  "models_05": {"models": [{"type": 10, "values": [1633], "unktail": []}]},
+  "name": "Fallen tree",
+  "$fileid": 1297
+}
+,
+
+{
+  "probably_nocollision": true,
+  "mapscene": 9,
+  "models_05": {"models": [{"type": 10, "values": [1707], "unktail": []}]},
+  "name": "Fern",
+  "$fileid": 1298
+}
+,
+
+{
+  "probably_nocollision": true,
+  "mapscene": 9,
+  "ambient": 40,
+  "models_05": {"models": [{"type": 10, "values": [1653], "unktail": []}]},
+  "name": "Fern",
+  "$fileid": 1299
+}
+,
+
+{
+  "probably_nocollision": true,
+  "mapscene": 9,
+  "ambient": 40,
+  "models_05": {"models": [{"type": 10, "values": [1655], "unktail": []}]},
+  "name": "Fern",
+  "$fileid": 1300
+}
+,
+
+{
+  "width": 2,
+  "length": 2,
+  "ambient": 40,
+  "mapscene": 5,
+  "unknown_51": 155,
+  "color_replacements": [[61, 16916], [49, 13840], [41, 4626]],
+  "models_05": {"models": [{"type": 10, "values": [1701], "unktail": []}]},
+  "name": "Tree",
+  "$fileid": 1301
+}
+,
+
+{
+  "width": 2,
+  "length": 2,
+  "mapscene": 5,
+  "unknown_51": 45,
+  "models_05": {"models": [{"type": 10, "values": [1702], "unktail": []}]},
+  "name": "Leafy tree",
+  "$fileid": 1302
+}
+,
+
+{
+  "width": 2,
+  "length": 2,
+  "mapscene": 5,
+  "unknown_51": 100,
+  "color_replacements": [[61, 15799], [49, 15923], [41, 6583]],
+  "models_05": {"models": [{"type": 10, "values": [1701], "unktail": []}]},
+  "name": "Tree",
+  "$fileid": 1303
+}
+,
+
+{
+  "width": 2,
+  "length": 2,
+  "mapscene": 5,
+  "unknown_51": 5,
+  "color_replacements": [[6693, 6699]],
+  "models_05": {"models": [{"type": 10, "values": [1702], "unktail": []}]},
+  "name": "Tree",
+  "$fileid": 1304
+}
+,
+
+{
+  "width": 2,
+  "length": 2,
+  "mapscene": 5,
+  "scaleX": 170,
+  "scaleY": 170,
+  "scaleZ": 170,
+  "color_replacements": [[6693, 6699]],
+  "models_05": {"models": [{"type": 10, "values": [1702], "unktail": []}]},
+  "name": "Tree",
+  "$fileid": 1305
+}
+,
+
+{
+  "width": 2,
+  "length": 2,
+  "actions_0": "Chop down",
+  "actions_2": "hidden",
+  "mapscene": 0,
+  "ambient": 25,
+  "unknown_4F": {
+    "unknown_1": 750,
+    "unknown_2": 1000,
+    "unknown_3": 5,
+    "unknown_4": [3987]
+  },
+  "models_05": {"models": [{"type": 10, "values": [7978], "unktail": []}]},
+  "name": "Magic tree",
+  "$fileid": 1306
+}
+,
+
+{
+  "width": 2,
+  "mapscene": 2,
+  "length": 2,
+  "actions_0": "Chop down",
+  "actions_2": "hidden",
+  "ambient": 25,
+  "unknown_51": 42,
+  "models_05": {"models": [{"type": 10, "values": [8023], "unktail": []}]},
+  "name": "Maple tree",
+  "$fileid": 1307
+}
+,
+
+{
+  "width": 2,
+  "length": 2,
+  "mapscene": 3,
+  "actions_0": "Chop down",
+  "actions_2": "hidden",
+  "unknown_51": 42,
+  "color_replacements": [[5786, 8598]],
+  "models_05": {"models": [{"type": 10, "values": [8131], "unktail": []}]},
+  "name": "Willow",
+  "$fileid": 1308
+}
+,
+
+{
+  "width": 3,
+  "length": 3,
+  "actions_0": "Chop down",
+  "actions_2": "hidden",
+  "mapscene": 3,
+  "ambient": 25,
+  "models_05": {"models": [{"type": 10, "values": [8157], "unktail": []}]},
+  "name": "Yew",
+  "$fileid": 1309
+}
+,
+
+{
+  "width": 2,
+  "length": 2,
+  "mapscene": 0,
+  "deletable": true,
+  "models_05": {"models": [{"type": 10, "values": [1576], "unktail": []}]},
+  "name": "Tree",
+  "$fileid": 1310
+}
+,
+
+{
+  "width": 2,
+  "length": 2,
+  "mapscene": 5,
+  "models_05": {"models": [{"type": 10, "values": [1612], "unktail": []}]},
+  "name": "Palm",
+  "$fileid": 1311
+}
+,
+
+{
+  "width": 2,
+  "length": 2,
+  "mapscene": 5,
+  "models_05": {"models": [{"type": 10, "values": [1575], "unktail": []}]},
+  "name": "Palm",
+  "$fileid": 1312
+}
+,
+
+{
+  "width": 3,
+  "length": 2,
+  "mapscene": 5,
+  "models_05": {"models": [{"type": 10, "values": [1593], "unktail": []}]},
+  "name": "Plant",
+  "$fileid": 1313
+}
+,
+
+{
+  "width": 3,
+  "length": 2,
+  "mapscene": 5,
+  "unknown_51": 30,
+  "color_replacements": [[6028, 6579], [22455, 15919]],
+  "models_05": {"models": [{"type": 10, "values": [1593], "unktail": []}]},
+  "name": "Plant",
+  "$fileid": 1314
+}
+,
+
+{
+  "width": 2,
+  "length": 2,
+  "actions_0": "Chop down",
+  "actions_2": "hidden",
+  "mapscene": 0,
+  "unknown_51": 42,
+  "color_replacements": [[3470, 5665]],
+  "models_05": {"models": [{"type": 10, "values": [1667], "unktail": []}]},
+  "name": "Evergreen",
+  "$fileid": 1315
+}
+,
+
+{
+  "width": 3,
+  "length": 3,
+  "actions_0": "Chop down",
+  "actions_2": "hidden",
+  "mapscene": 0,
+  "unknown_51": 42,
+  "color_replacements": [[3470, 5665]],
+  "models_05": {"models": [{"type": 10, "values": [1688], "unktail": []}]},
+  "name": "Evergreen",
+  "$fileid": 1316
+}
+,
+
+{
+  "width": 2,
+  "length": 2,
+  "actions_0": "Talk-to",
+  "actions_1": "Teleport",
+  "mapscene": 0,
+  "ambient": 25,
+  "unknown_51": 42,
+  "models_05": {"models": [{"type": 10, "values": [8110], "unktail": []}]},
+  "name": "Spirit tree",
+  "$fileid": 1317
+}
+,
+
+{
+  "width": 3,
+  "length": 3,
+  "actions_0": "Chop down",
+  "actions_2": "hidden",
+  "mapscene": 1,
+  "unknown_51": 20,
+  "color_replacements": [[127, 41077]],
+  "models_05": {"models": [{"type": 10, "values": [1614], "unktail": []}]},
+  "name": "Evergreen",
+  "$fileid": 1318
+}
+,
+
+{
+  "width": 3,
+  "length": 3,
+  "actions_0": "Chop down",
+  "actions_2": "hidden",
+  "mapscene": 1,
+  "unknown_51": 20,
+  "color_replacements": [[127, 41077]],
+  "models_05": {"models": [{"type": 10, "values": [1611], "unktail": []}]},
+  "name": "Evergreen",
+  "$fileid": 1319
+}
+,
+
+{
+  "probably_morphFloor": true,
+  "contrast": 15,
+  "ambient": 25,
+  "color_replacements": [[4892, 4504], [4899, 4496], [5921, 4508]],
+  "models": [{"values": [1139], "type": 22}],
+  "$fileid": 1320
+}
+,
+
+{
+  "probably_morphFloor": true,
+  "contrast": 15,
+  "ambient": 25,
+  "color_replacements": [[4892, 4504], [4899, 4496], [5921, 4508]],
+  "models": [{"values": [1032], "type": 22}],
+  "$fileid": 1321
+}
+,
+
+{
+  "mapscene": 2,
+  "material_replacements": [[152, 78]],
+  "models_05": {"models": [{"type": 10, "values": [1583], "unktail": []}]},
+  "name": "Hollow tree",
+  "$fileid": 1322
+}
+,
+
+{
+  "mapscene": 6,
+  "maybe_allows_lineofsight": true,
+  "models_05": {"models": [{"type": 10, "values": [2172], "unktail": []}]},
+  "name": "Roots",
+  "$fileid": 1323
+}
+,
+
+{
+  "mapscene": 6,
+  "maybe_allows_lineofsight": true,
+  "models_05": {"models": [{"type": 10, "values": [2173], "unktail": []}]},
+  "name": "Roots",
+  "$fileid": 1324
+}
+,
+
+{
+  "mapscene": 6,
+  "maybe_allows_lineofsight": true,
+  "models_05": {"models": [{"type": 10, "values": [2174], "unktail": []}]},
+  "name": "Roots",
+  "$fileid": 1325
+}
+,
+
+{
+  "mapscene": 0,
+  "ambient": 10,
+  "contrast": 10,
+  "unknown_51": 70,
+  "models_05": {"models": [{"type": 10, "values": [1676], "unktail": []}]},
+  "name": "Tropical tree",
+  "$fileid": 1326
+}
+,
+
+{
+  "ambient": 10,
+  "contrast": 10,
+  "models_05": {"models": [{"type": 10, "values": [1687], "unktail": []}]},
+  "name": "Tropical tree",
+  "$fileid": 1327
+}
+,
+
+{
+  "ambient": 10,
+  "contrast": 10,
+  "models_05": {"models": [{"type": 10, "values": [1605], "unktail": []}]},
+  "name": "Tropical tree",
+  "$fileid": 1328
+}
+,
+
+{
+  "width": 3,
+  "length": 3,
+  "models_05": {"models": [{"type": 10, "values": [1706], "unktail": []}]},
+  "name": "Tropical leaves",
+  "$fileid": 1329
+}
+,
+
+{
+  "width": 3,
+  "length": 3,
+  "mapscene": 0,
+  "actions_0": "Chop down",
+  "actions_2": "hidden",
+  "unknown_51": 20,
+  "models_05": {"models": [{"type": 10, "values": [1681], "unktail": []}]},
+  "name": "Tree",
+  "$fileid": 1330
+}
+,
+
+{
+  "width": 3,
+  "length": 3,
+  "mapscene": 0,
+  "actions_0": "Chop down",
+  "actions_2": "hidden",
+  "unknown_51": 20,
+  "models_05": {"models": [{"type": 10, "values": [1682], "unktail": []}]},
+  "name": "Tree",
+  "$fileid": 1331
+}
+,
+
+{
+  "width": 3,
+  "length": 3,
+  "mapscene": 0,
+  "actions_0": "Chop down",
+  "actions_2": "hidden",
+  "unknown_51": 20,
+  "models_05": {"models": [{"type": 10, "values": [1683], "unktail": []}]},
+  "name": "Tree",
+  "$fileid": 1332
+}
+,
+
+{
+  "width": 2,
+  "length": 2,
+  "unknown_16": true,
+  "mapscene": 6,
+  "models_05": {"models": [{"type": 10, "values": [1607], "unktail": []}]},
+  "name": "Dead tree",
+  "$fileid": 1333
+}
+,
+
+{
+  "width": 3,
+  "mapscene": 6,
+  "color_replacements": [[4537, 5786], [4531, 6674]],
+  "models_05": {"models": [{"type": 10, "values": [1634], "unktail": []}]},
+  "name": "Hollow log",
+  "$fileid": 1334
+}
+,
+
+{
+  "width": 2,
+  "mapscene": 6,
+  "color_replacements": [[4537, 5786], [4531, 6674]],
+  "models_05": {"models": [{"type": 10, "values": [1594], "unktail": []}]},
+  "name": "Hollow log",
+  "$fileid": 1335
+}
+,
+
+{
+  "width": 3,
+  "color_replacements": [[4531, 5790], [4537, 127]],
+  "material_replacements": [[80, 502]],
+  "models_05": {"models": [{"type": 10, "values": [1634], "unktail": []}]},
+  "name": "Hollow log",
+  "$fileid": 1336
+}
+,
+
+{
+  "width": 2,
+  "color_replacements": [[4531, 5790], [4537, 127]],
+  "material_replacements": [[80, 502]],
+  "models_05": {"models": [{"type": 10, "values": [1594], "unktail": []}]},
+  "name": "Hollow log",
+  "$fileid": 1337
+}
+,
+
+{
+  "color_replacements": [[4537, 5786], [4531, 6674]],
+  "models_05": {"models": [{"type": 10, "values": [1659], "unktail": []}]},
+  "name": "Hollow log",
+  "$fileid": 1338
+}
+,
+
+{
+  "width": 3,
+  "length": 3,
+  "mapscene": 6,
+  "models_05": {"models": [{"type": 10, "values": [2152], "unktail": []}]},
+  "name": "Roots",
+  "$fileid": 1339
+}
+,
+
+{
+  "width": 3,
+  "length": 3,
+  "mapscene": 6,
+  "models_05": {"models": [{"type": 10, "values": [2153], "unktail": []}]},
+  "name": "Roots",
+  "$fileid": 1340
+}
+,
+
+{
+  "mapscene": 6,
+  "probably_morphFloor": true,
+  "color_replacements": [[5388, 3470]],
+  "models_05": {"models": [{"type": 10, "values": [1573], "unktail": []}]},
+  "name": "Tree stump",
+  "$fileid": 1341
+}
+,
+
+{
+  "width": 2,
+  "length": 2,
+  "mapscene": 6,
+  "probably_morphFloor": true,
+  "color_replacements": [[5388, 3470], [3470, 5665]],
+  "models_05": {"models": [{"type": 10, "values": [1695], "unktail": []}]},
+  "name": "Tree stump",
+  "$fileid": 1342
+}
+,
+
+{
+  "width": 2,
+  "length": 2,
+  "mapscene": 6,
+  "probably_morphFloor": true,
+  "color_replacements": [[5388, 5029]],
+  "models_05": {"models": [{"type": 10, "values": [1695], "unktail": []}]},
+  "name": "Tree stump",
+  "$fileid": 1343
+}
+,
+
+{
+  "width": 2,
+  "length": 2,
+  "mapscene": 6,
+  "probably_morphFloor": true,
+  "color_replacements": [[5388, 5786]],
+  "models_05": {"models": [{"type": 10, "values": [1695], "unktail": []}]},
+  "name": "Tree stump",
+  "$fileid": 1344
+}
+,
+
+{
+  "width": 2,
+  "length": 2,
+  "scaleX": 100,
+  "scaleY": 100,
+  "scaleZ": 100,
+  "probably_morphFloor": true,
+  "color_replacements": [[5388, 3470]],
+  "models_05": {"models": [{"type": 10, "values": [1695], "unktail": []}]},
+  "name": "Tree stump",
+  "$fileid": 1345
+}
+,
+
+{
+  "width": 2,
+  "length": 2,
+  "scaleX": 448,
+  "scaleY": 448,
+  "scaleZ": 448,
+  "mapscene": 6,
+  "probably_morphFloor": true,
+  "color_replacements": [[5388, 3470]],
+  "models_05": {"models": [{"type": 10, "values": [1695], "unktail": []}]},
+  "name": "Tree stump",
+  "$fileid": 1346
+}
+,
+
+{
+  "width": 2,
+  "length": 2,
+  "mapscene": 6,
+  "probably_morphFloor": true,
+  "color_replacements": [[6674, 5388]],
+  "models_05": {"models": [{"type": 10, "values": [1629], "unktail": []}]},
+  "name": "Tree stump",
+  "$fileid": 1347
+}
+,
+
+{
+  "width": 2,
+  "length": 2,
+  "scaleX": 100,
+  "scaleY": 100,
+  "scaleZ": 100,
+  "mapscene": 6,
+  "probably_morphFloor": true,
+  "color_replacements": [[6674, 5388]],
+  "models_05": {"models": [{"type": 10, "values": [1629], "unktail": []}]},
+  "name": "Tree stump",
+  "$fileid": 1348
+}
+,
+
+{
+  "width": 2,
+  "length": 2,
+  "scaleX": 100,
+  "scaleY": 100,
+  "scaleZ": 100,
+  "mapscene": 6,
+  "probably_morphFloor": true,
+  "color_replacements": [[5388, 6814], [6674, 6814]],
+  "models_05": {"models": [{"type": 10, "values": [1629], "unktail": []}]},
+  "name": "Tree stump",
+  "$fileid": 1349
+}
+,
+
+{
+  "width": 2,
+  "length": 2,
+  "scaleX": 80,
+  "scaleY": 80,
+  "scaleZ": 80,
+  "mapscene": 6,
+  "probably_morphFloor": true,
+  "color_replacements": [[6674, 5388]],
+  "models_05": {"models": [{"type": 10, "values": [1629], "unktail": []}]},
+  "name": "Tree stump",
+  "$fileid": 1350
+}
+,
+
+{
+  "mapscene": 6,
+  "probably_morphFloor": true,
+  "color_replacements": [[6028, 3470], [7054, 3470]],
+  "models_05": {"models": [{"type": 10, "values": [1685], "unktail": []}]},
+  "name": "Tree stump",
+  "$fileid": 1351
+}
+,
+
+{
+  "mapscene": 6,
+  "probably_morphFloor": true,
+  "color_replacements": [[7054, 21646], [6028, 21646]],
+  "models_05": {"models": [{"type": 10, "values": [1685], "unktail": []}]},
+  "name": "Tree stump",
+  "$fileid": 1352
+}
+,
+
+{
+  "probably_morphFloor": true,
+  "color_replacements": [[7054, 5388], [6028, 5388]],
+  "models_05": {"models": [{"type": 10, "values": [1685], "unktail": []}]},
+  "name": "Tree stump",
+  "$fileid": 1353
+}
+,
+
+{
+  "width": 2,
+  "length": 2,
+  "probably_morphFloor": true,
+  "models_05": {"models": [{"type": 10, "values": [1635], "unktail": []}]},
+  "name": "Tree stump",
+  "$fileid": 1354
+}
+,
+
+{
+  "width": 3,
+  "length": 3,
+  "probably_morphFloor": true,
+  "color_replacements": [[3470, 5665]],
+  "models_05": {"models": [{"type": 10, "values": [1652], "unktail": []}]},
+  "name": "Tree stump",
+  "$fileid": 1355
+}
+,
+
+{
+  "ambient": 25,
+  "width": 3,
+  "length": 3,
+  "probably_morphFloor": true,
+  "models_05": {"models": [{"type": 10, "values": [8039], "unktail": []}]},
+  "name": "Tree stump",
+  "$fileid": 1356
+}
+,
+
+{
+  "width": 3,
+  "length": 3,
+  "probably_morphFloor": true,
+  "models_05": {"models": [{"type": 10, "values": [1661], "unktail": []}]},
+  "name": "Tree stump",
+  "$fileid": 1357
+}
+,
+
+{
+  "probably_morphFloor": true,
+  "color_replacements": [[7690, 3470]],
+  "models_05": {"models": [{"type": 10, "values": [1596], "unktail": []}]},
+  "name": "Tree stump",
+  "$fileid": 1358
+}
+,
+
+{
+  "probably_morphFloor": true,
+  "models_05": {"models": [{"type": 10, "values": [1592], "unktail": []}]},
+  "name": "Tree stump",
+  "$fileid": 1359
+}
+,
+
+{
+  "mapscene": 23,
+  "unknown_51": 40,
+  "models_05": {"models": [{"type": 10, "values": [1562], "unktail": []}]},
+  "name": "Tropical tree",
+  "$fileid": 1360
+}
+,
+
+{
+  "width": 7,
+  "length": 7,
+  "models_05": {"models": [{"type": 10, "values": [1563], "unktail": []}]},
+  "name": "Tropical tree",
+  "$fileid": 1361
+}
+,
+
+{
+  "width": 4,
+  "length": 3,
+  "models_05": {"models": [{"type": 10, "values": [1564], "unktail": []}]},
+  "name": "Tropical tree",
+  "$fileid": 1362
+}
+,
+
+{
+  "width": 3,
+  "length": 3,
+  "mapscene": 6,
+  "probably_morphFloor": true,
+  "color_replacements": [[6028, 21776]],
+  "models_05": {"models": [{"type": 10, "values": [2152], "unktail": []}]},
+  "name": "Roots",
+  "$fileid": 1363
+}
+,
+
+{
+  "width": 3,
+  "length": 3,
+  "mapscene": 6,
+  "color_replacements": [[6028, 21776]],
+  "models_05": {"models": [{"type": 10, "values": [2153], "unktail": []}]},
+  "name": "Roots",
+  "$fileid": 1364
+}
+,
+
+{
+  "mapscene": 6,
+  "actions_0": "Chop down",
+  "actions_2": "hidden",
+  "unknown_4B": 0,
+  "color_replacements": [[7054, 21646], [6028, 21646]],
+  "models_05": {"models": [{"type": 10, "values": [1716], "unktail": []}]},
+  "name": "Dead tree",
+  "$fileid": 1365
+}
+,
+
+{
+  "mapscene": 6,
+  "unknown_51": 35,
+  "color_replacements": [[6028, 21776]],
+  "models_05": {"models": [{"type": 10, "values": [2172], "unktail": []}]},
+  "name": "Roots",
+  "$fileid": 1366
+}
+,
+
+{
+  "mapscene": 6,
+  "unknown_51": 35,
+  "color_replacements": [[6028, 21776]],
+  "models_05": {"models": [{"type": 10, "values": [2173], "unktail": []}]},
+  "name": "Roots",
+  "$fileid": 1367
+}
+,
+
+{
+  "mapscene": 6,
+  "unknown_51": 35,
+  "color_replacements": [[6028, 21776]],
+  "models_05": {"models": [{"type": 10, "values": [2174], "unktail": []}]},
+  "name": "Roots",
+  "$fileid": 1368
+}
+,
+
+{
+  "width": 3,
+  "length": 2,
+  "mapscene": 5,
+  "unknown_51": 70,
+  "color_replacements": [[6028, 21646], [22455, 29592]],
+  "models_05": {"models": [{"type": 10, "values": [1593], "unktail": []}]},
+  "name": "Plant",
+  "$fileid": 1369
+}
+,
+
+{
+  "width": 3,
+  "mapscene": 6,
+  "color_replacements": [[4537, 21646], [4531, 21646]],
+  "models_05": {"models": [{"type": 10, "values": [1634], "unktail": []}]},
+  "name": "Hollow log",
+  "$fileid": 1370
+}
+,
+
+{
+  "mapscene": 0,
+  "unknown_51": 70,
+  "models_05": {"models": [{"type": 10, "values": [1684], "unktail": []}]},
+  "name": "Tropical tree",
+  "$fileid": 1371
+}
+,
+
+{
+  "models_05": {"models": [{"type": 10, "values": [1651], "unktail": []}]},
+  "name": "Tropical tree",
+  "$fileid": 1372
+}
+,
+
+{
+  "models_05": {"models": [{"type": 10, "values": [1648], "unktail": []}]},
+  "name": "Tropical tree",
+  "$fileid": 1373
+}
+,
+
+{
+  "width": 4,
+  "length": 3,
+  "models_05": {"models": [{"type": 10, "values": [1673], "unktail": []}]},
+  "name": "Tropical tree",
+  "$fileid": 1374
+}
+,
+
+{
+  "mapscene": 0,
+  "unknown_51": 75,
+  "models_05": {"models": [{"type": 10, "values": [1721], "unktail": []}]},
+  "name": "Tropical tree",
+  "$fileid": 1375
+}
+,
+
+{
+  "models_05": {"models": [{"type": 10, "values": [1584], "unktail": []}]},
+  "name": "Tropical tree",
+  "$fileid": 1376
+}
+,
+
+{
+  "width": 4,
+  "length": 3,
+  "models_05": {"models": [{"type": 10, "values": [1606], "unktail": []}]},
+  "name": "Tropical tree",
+  "$fileid": 1377
+}
+,
+
+{
+  "width": 3,
+  "color_replacements": [[4537, 5388], [4531, 5388]],
+  "models_05": {"models": [{"type": 10, "values": [1634], "unktail": []}]},
+  "name": "Hollow log",
+  "$fileid": 1378
+}
+,
+
+{
+  "width": 2,
+  "color_replacements": [[4537, 5388], [4531, 5388]],
+  "models_05": {"models": [{"type": 10, "values": [1594], "unktail": []}]},
+  "name": "Hollow log",
+  "$fileid": 1379
+}
+,
+
+{
+  "mapscene": 6,
+  "color_replacements": [[6028, 5388]],
+  "models_05": {"models": [{"type": 10, "values": [2172], "unktail": []}]},
+  "name": "Roots",
+  "$fileid": 1380
+}
+,
+
+{
+  "mapscene": 6,
+  "color_replacements": [[6028, 5388]],
+  "models_05": {"models": [{"type": 10, "values": [2173], "unktail": []}]},
+  "name": "Roots",
+  "$fileid": 1381
+}
+,
+
+{
+  "mapscene": 6,
+  "color_replacements": [[6028, 5388]],
+  "models_05": {"models": [{"type": 10, "values": [2174], "unktail": []}]},
+  "name": "Roots",
+  "$fileid": 1382
+}
+,
+
+{
+  "mapscene": 6,
+  "actions_0": "Chop down",
+  "actions_2": "hidden",
+  "unknown_51": 32,
+  "color_replacements": [[7690, 3470]],
+  "material_replacements": [[80, 77], [152, 78]],
+  "models_05": {"models": [{"type": 10, "values": [1719], "unktail": []}]},
+  "name": "Dead tree",
+  "$fileid": 1383
+}
+,
+
+{
+  "mapscene": 6,
+  "actions_0": "Chop down",
+  "actions_2": "hidden",
+  "models_05": {"models": [{"type": 10, "values": [1700], "unktail": []}]},
+  "name": "Dead tree",
+  "$fileid": 1384
+}
+,
+
+{
+  "deletable": false,
+  "mapscene": 6,
+  "color_replacements": [[6028, 61985]],
+  "models_05": {"models": [{"type": 10, "values": [2172], "unktail": []}]},
+  "$fileid": 1385
+}
+,
+
+{
+  "mapscene": 6,
+  "color_replacements": [[6028, 61985]],
+  "models_05": {"models": [{"type": 10, "values": [2173], "unktail": []}]},
+  "name": "Roots",
+  "$fileid": 1386
+}
+,
+
+{
+  "mapscene": 6,
+  "color_replacements": [[6028, 61985]],
+  "models_05": {"models": [{"type": 10, "values": [2174], "unktail": []}]},
+  "name": "Roots",
+  "$fileid": 1387
+}
+,
+
+{
+  "width": 3,
+  "length": 3,
+  "mapscene": 6,
+  "color_replacements": [[6028, 61985]],
+  "models_05": {"models": [{"type": 10, "values": [2152], "unktail": []}]},
+  "name": "Roots",
+  "$fileid": 1388
+}
+,
+
+{
+  "width": 3,
+  "length": 3,
+  "mapscene": 6,
+  "color_replacements": [[6028, 61985]],
+  "models_05": {"models": [{"type": 10, "values": [2153], "unktail": []}]},
+  "name": "Roots",
+  "$fileid": 1389
+}
+,
+
+{
+  "width": 2,
+  "probably_nocollision": true,
+  "mapscene": 5,
+  "models_05": {"models": [{"type": 10, "values": [1618], "unktail": []}]},
+  "name": "Jungle plant",
+  "$fileid": 1390
+}
+,
+
+{
+  "width": 2,
+  "length": 2,
+  "ambient": 40,
+  "mapscene": 5,
+  "maybe_allows_lineofsight": true,
+  "color_replacements": [
+    [61, 16916],
+    [49, 13840],
+    [41, 3350],
+    [37, 3346],
+    [33, 3470]
+  ],
+  "models_05": {"models": [{"type": 10, "values": [1641], "unktail": []}]},
+  "name": "Plant",
+  "$fileid": 1391
+}
+,
+
+{
+  "width": 2,
+  "length": 2,
+  "ambient": 40,
+  "mapscene": 5,
+  "maybe_allows_lineofsight": true,
+  "color_replacements": [
+    [61, 16916],
+    [49, 13840],
+    [41, 3350],
+    [37, 3346],
+    [33, 3470]
+  ],
+  "models_05": {"models": [{"type": 10, "values": [1642], "unktail": []}]},
+  "name": "Plant",
+  "$fileid": 1392
+}
+,
+
+{
+  "ambient": 40,
+  "mapscene": 5,
+  "maybe_allows_lineofsight": true,
+  "color_replacements": [
+    [61, 16916],
+    [49, 13840],
+    [24, 14216],
+    [41, 3350],
+    [37, 3346],
+    [33, 3470]
+  ],
+  "models_05": {"models": [{"type": 10, "values": [1643], "unktail": []}]},
+  "name": "Plant",
+  "$fileid": 1393
+}
+,
+
+{
+  "width": 2,
+  "length": 2,
+  "ambient": 40,
+  "mapscene": 5,
+  "maybe_allows_lineofsight": true,
+  "color_replacements": [[61, 16916], [49, 13840], [41, 3346]],
+  "models_05": {"models": [{"type": 10, "values": [1645], "unktail": []}]},
+  "name": "Plant",
+  "$fileid": 1394
+}
+,
+
+{
+  "probably_animation": 492,
+  "maybe_allows_lineofsight": true,
+  "models_05": {"models": [{"type": 10, "values": [14207], "unktail": []}]},
+  "name": "Fly trap",
+  "$fileid": 1395
+}
+,
+
+{
+  "mapscene": 4,
+  "maybe_allows_lineofsight": true,
+  "models_05": {"models": [{"type": 10, "values": [1580], "unktail": []}]},
+  "name": "Cactus",
+  "$fileid": 1396
+}
+,
+
+{
+  "mapscene": 4,
+  "maybe_allows_lineofsight": true,
+  "models_05": {"models": [{"type": 10, "values": [1604], "unktail": []}]},
+  "name": "Cactus",
+  "$fileid": 1397
+}
+,
+
+{
+  "width": 2,
+  "maybe_allows_lineofsight": true,
+  "color_replacements": [[17304, 17197]],
+  "models_05": {"models": [{"type": 10, "values": [1618], "unktail": []}]},
+  "name": "Jungle plant",
+  "$fileid": 1398
+}
+,
+
+{
+  "width": 2,
+  "length": 2,
+  "maybe_allows_lineofsight": true,
+  "models_05": {"models": [{"type": 10, "values": [1677], "unktail": []}]},
+  "name": "Jungle plant",
+  "$fileid": 1399
+}
+,
+
+{
+  "width": 2,
+  "length": 2,
+  "maybe_allows_lineofsight": true,
+  "color_replacements": [[22439, 17065]],
+  "models_05": {"models": [{"type": 10, "values": [1677], "unktail": []}]},
+  "name": "Jungle plant",
+  "$fileid": 1400
+}
+,
+
+{
+  "width": 2,
+  "length": 2,
+  "maybe_allows_lineofsight": true,
+  "color_replacements": [
+    [61, 19243],
+    [49, 19239],
+    [41, 19243],
+    [37, 3346],
+    [33, 3470]
+  ],
+  "models_05": {"models": [{"type": 10, "values": [1641], "unktail": []}]},
+  "name": "Jungle plant",
+  "$fileid": 1401
+}
+,
+
+{
+  "width": 2,
+  "length": 2,
+  "maybe_allows_lineofsight": true,
+  "color_replacements": [[22439, 16955]],
+  "models_05": {"models": [{"type": 10, "values": [1677], "unktail": []}]},
+  "name": "Jungle plant",
+  "$fileid": 1402
+}
+,
+
+{
+  "width": 2,
+  "length": 2,
+  "mapscene": 4,
+  "ambient": 45,
+  "models_05": {"models": [{"type": 10, "values": [1597], "unktail": []}]},
+  "name": "Cactus",
+  "$fileid": 1403
+}
+,
+
+{
+  "width": 2,
+  "length": 2,
+  "mapscene": 4,
+  "ambient": 45,
+  "unknown_51": 45,
+  "models_05": {"models": [{"type": 10, "values": [1598], "unktail": []}]},
+  "name": "Cactus",
+  "$fileid": 1404
+}
+,
+
+{
+  "width": 2,
+  "length": 2,
+  "mapscene": 4,
+  "ambient": 45,
+  "unknown_51": 35,
+  "maybe_allows_lineofsight": true,
+  "models_05": {"models": [{"type": 10, "values": [1599], "unktail": []}]},
+  "name": "Cactus",
+  "$fileid": 1405
+}
+,
+
+{
+  "width": 2,
+  "length": 2,
+  "mapscene": 4,
+  "ambient": 45,
+  "unknown_51": 25,
+  "maybe_allows_lineofsight": true,
+  "models_05": {"models": [{"type": 10, "values": [1600], "unktail": []}]},
+  "name": "Cactus",
+  "$fileid": 1406
+}
+,
+
+{
+  "width": 2,
+  "length": 2,
+  "probably_nocollision": true,
+  "models_05": {"models": [{"type": 10, "values": [2296], "unktail": []}]},
+  "name": "Whipping Plant",
+  "$fileid": 1407
+}
+,
+
+{
+  "width": 2,
+  "length": 2,
+  "actions_0": "Pick",
+  "maybe_allows_lineofsight": true,
+  "models_05": {"models": [{"type": 10, "values": [1627], "unktail": []}]},
+  "name": "Pineapple Plant",
+  "$fileid": 1408
+}
+,
+
+{
+  "width": 2,
+  "length": 2,
+  "actions_0": "Pick",
+  "maybe_allows_lineofsight": true,
+  "models_05": {"models": [{"type": 10, "values": [1627], "unktail": []}]},
+  "name": "Pineapple Plant",
+  "$fileid": 1409
+}
+,
+
+{
+  "width": 2,
+  "length": 2,
+  "actions_0": "Pick",
+  "maybe_allows_lineofsight": true,
+  "models_05": {"models": [{"type": 10, "values": [1627], "unktail": []}]},
+  "name": "Pineapple Plant",
+  "$fileid": 1410
+}
+,
+
+{
+  "width": 2,
+  "length": 2,
+  "actions_0": "Pick",
+  "maybe_allows_lineofsight": true,
+  "models_05": {"models": [{"type": 10, "values": [1627], "unktail": []}]},
+  "name": "Pineapple Plant",
+  "$fileid": 1411
+}
+,
+
+{
+  "width": 2,
+  "length": 2,
+  "actions_0": "Pick",
+  "maybe_allows_lineofsight": true,
+  "models_05": {"models": [{"type": 10, "values": [1627], "unktail": []}]},
+  "name": "Pineapple Plant",
+  "$fileid": 1412
+}
+,
+
+{
+  "width": 2,
+  "length": 2,
+  "actions_0": "Pick",
+  "maybe_allows_lineofsight": true,
+  "models_05": {"models": [{"type": 10, "values": [1582], "unktail": []}]},
+  "name": "Pineapple Plant",
+  "$fileid": 1413
+}
+,
+
+{"deletable": false, "models": [{"values": [2074], "type": 4}], "$fileid": 1414}
+,
+
+{
+  "unknown_16": true,
+  "occludes_1": false,
+  "deletable": false,
+  "ambient": 20,
+  "contrast": 25,
+  "models": [
+    {"values": [893], "type": 0},
+    {"values": [894], "type": 1},
+    {"values": [876], "type": 2},
+    {"values": [877], "type": 3},
+    {"values": [878], "type": 9}
+  ],
+  "$fileid": 1415
+}
+,
+
+{
+  "unknown_16": true,
+  "deletable": false,
+  "ambient": 20,
+  "contrast": 25,
+  "models": [
+    {"values": [886], "type": 0},
+    {"values": [887], "type": 1},
+    {"values": [888], "type": 2},
+    {"values": [889], "type": 3},
+    {"values": [890], "type": 9}
+  ],
+  "$fileid": 1416
+}
+,
+
+{
+  "unknown_16": true,
+  "probably_morphFloor": true,
+  "models": [
+    {"values": [782], "type": 0},
+    {"values": [783], "type": 1},
+    {"values": [784], "type": 9}
+  ],
+  "$fileid": 1417
+}
+,
+
+{
+  "unknown_16": true,
+  "probably_morphFloor": true,
+  "models": [{"values": [789], "type": 0}, {"values": [790], "type": 9}],
+  "$fileid": 1418
+}
+,
+
+{
+  "unknown_16": true,
+  "probably_morphFloor": true,
+  "deletable": false,
+  "models_05": {"models": [{"type": 10, "values": [826], "unktail": []}]},
+  "$fileid": 1419
+}
+,
+
+{
+  "unknown_16": true,
+  "probably_morphFloor": true,
+  "deletable": false,
+  "models_05": {"models": [{"type": 10, "values": [771], "unktail": []}]},
+  "$fileid": 1420
+}
+,
+
+{
+  "width": 2,
+  "unknown_16": true,
+  "deletable": false,
+  "models_05": {"models": [{"type": 10, "values": [835], "unktail": []}]},
+  "$fileid": 1421
+}
+,
+
+{
+  "unknown_16": true,
+  "probably_morphFloor": true,
+  "deletable": false,
+  "models": [{"values": [824], "type": 0}],
+  "$fileid": 1422
+}
+,
+
+{
+  "unknown_16": true,
+  "probably_morphFloor": true,
+  "deletable": false,
+  "models": [{"values": [832], "type": 0}],
+  "$fileid": 1423
+}
+,
+
+{
+  "unknown_16": true,
+  "probably_morphFloor": true,
+  "mirror": true,
+  "deletable": false,
+  "models": [{"values": [832], "type": 0}],
+  "$fileid": 1424
+}
+,
+
+{
+  "unknown_16": true,
+  "probably_morphFloor": true,
+  "deletable": false,
+  "models": [{"values": [836], "type": 0}],
+  "$fileid": 1425
+}
+,
+
+{
+  "unknown_16": true,
+  "probably_morphFloor": true,
+  "mirror": true,
+  "deletable": false,
+  "models": [{"values": [836], "type": 0}],
+  "$fileid": 1426
+}
+,
+
+{
+  "unknown_16": true,
+  "probably_morphFloor": true,
+  "deletable": false,
+  "models": [{"values": [791], "type": 0}],
+  "$fileid": 1427
+}
+,
+
+{
+  "unknown_16": true,
+  "probably_morphFloor": true,
+  "deletable": false,
+  "material_replacements": [[105, 418]],
+  "models": [
+    {"values": [827], "type": 0},
+    {"values": [828], "type": 1},
+    {"values": [829], "type": 9}
+  ],
+  "$fileid": 1428
+}
+,
+
+{
+  "unknown_16": true,
+  "probably_morphFloor": true,
+  "deletable": false,
+  "models": [{"values": [795], "type": 0}],
+  "$fileid": 1429
+}
+,
+
+{
+  "unknown_16": true,
+  "probably_morphFloor": true,
+  "deletable": false,
+  "models": [{"values": [778], "type": 0}],
+  "$fileid": 1430
+}
+,
+
+{
+  "unknown_16": true,
+  "probably_morphFloor": true,
+  "deletable": false,
+  "models_05": {"models": [{"type": 10, "values": [812], "unktail": []}]},
+  "$fileid": 1431
+}
+,
+
+{
+  "unknown_16": true,
+  "probably_morphFloor": true,
+  "deletable": false,
+  "models": [
+    {"values": [797], "type": 0},
+    {"values": [798], "type": 1},
+    {"values": [799], "type": 9}
+  ],
+  "$fileid": 1432
+}
+,
+
+{
+  "unknown_16": true,
+  "probably_morphFloor": true,
+  "deletable": false,
+  "models_05": {"models": [{"type": 10, "values": [772], "unktail": []}]},
+  "$fileid": 1433
+}
+,
+
+{
+  "unknown_16": true,
+  "probably_morphFloor": true,
+  "deletable": false,
+  "material_replacements": [[70, 418]],
+  "models_05": {"models": [{"type": 10, "values": [834], "unktail": []}]},
+  "$fileid": 1434
+}
+,
+
+{
+  "unknown_16": true,
+  "probably_morphFloor": true,
+  "deletable": false,
+  "models_05": {"models": [{"type": 10, "values": [823], "unktail": []}]},
+  "$fileid": 1435
+}
+,
+
+{
+  "unknown_16": true,
+  "probably_morphFloor": true,
+  "deletable": false,
+  "models_05": {"models": [{"type": 10, "values": [787], "unktail": []}]},
+  "$fileid": 1436
+}
+,
+
+{
+  "unknown_16": true,
+  "probably_morphFloor": true,
+  "deletable": false,
+  "color_replacements": [[6689, 8]],
+  "models_05": {"models": [{"type": 10, "values": [787], "unktail": []}]},
+  "$fileid": 1437
+}
+,
+
+{
+  "unknown_16": true,
+  "probably_morphFloor": true,
+  "deletable": false,
+  "models": [{"values": [792], "type": 22}],
+  "$fileid": 1438
+}
+,
+
+{
+  "unknown_16": true,
+  "probably_morphFloor": true,
+  "deletable": false,
+  "models": [{"values": [793], "type": 22}],
+  "$fileid": 1439
+}
+,
+
+{
+  "unknown_16": true,
+  "probably_morphFloor": true,
+  "deletable": false,
+  "color_replacements": [[6689, 36991]],
+  "material_replacements": [[83, 453], [72, 407], [418, 494]],
+  "models": [
+    {"values": [782], "type": 0},
+    {"values": [783], "type": 1},
+    {"values": [784], "type": 9}
+  ],
+  "$fileid": 1440
+}
+,
+
+{
+  "unknown_16": true,
+  "probably_morphFloor": true,
+  "deletable": false,
+  "color_replacements": [[6689, 36991]],
+  "material_replacements": [[70, 494]],
+  "models_05": {"models": [{"type": 10, "values": [834], "unktail": []}]},
+  "$fileid": 1441
+}
+,
+
+{
+  "unknown_16": true,
+  "probably_morphFloor": true,
+  "deletable": false,
+  "color_replacements": [[6689, 119]],
+  "material_replacements": [[560, 407]],
+  "models_05": {"models": [{"type": 10, "values": [823], "unktail": []}]},
+  "$fileid": 1442
+}
+,
+
+{
+  "unknown_16": true,
+  "probably_morphFloor": true,
+  "deletable": false,
+  "color_replacements": [[6689, 119]],
+  "models_05": {"models": [{"type": 10, "values": [787], "unktail": []}]},
+  "$fileid": 1443
+}
+,
+
+{
+  "contrast": 100,
+  "ambient": 50,
+  "probably_morphFloor": true,
+  "deletable": false,
+  "color_replacements": [[6689, 41077]],
+  "material_replacements": [[127, 315]],
+  "models": [{"values": [2056], "type": 4}],
+  "$fileid": 1444
+}
+,
+
+{
+  "contrast": 100,
+  "ambient": 50,
+  "mirror": true,
+  "probably_morphFloor": true,
+  "deletable": false,
+  "color_replacements": [[6689, 41077]],
+  "material_replacements": [[127, 315]],
+  "models": [{"values": [2056], "type": 4}],
+  "$fileid": 1445
+}
+,
+
+{
+  "contrast": 100,
+  "ambient": 50,
+  "probably_morphFloor": true,
+  "deletable": false,
+  "color_replacements": [[6689, 41077]],
+  "material_replacements": [[127, 315]],
+  "models": [{"values": [2071], "type": 4}],
+  "$fileid": 1446
+}
+,
+
+{
+  "contrast": 100,
+  "ambient": 50,
+  "mirror": true,
+  "probably_morphFloor": true,
+  "deletable": false,
+  "color_replacements": [[6689, 41077]],
+  "material_replacements": [[127, 315]],
+  "models": [{"values": [2071], "type": 4}],
+  "$fileid": 1447
+}
+,
+
+{
+  "contrast": 100,
+  "ambient": 50,
+  "probably_morphFloor": true,
+  "deletable": false,
+  "color_replacements": [[6689, 8]],
+  "models": [{"values": [2056], "type": 4}],
+  "$fileid": 1448
+}
+,
+
+{
+  "contrast": 100,
+  "ambient": 50,
+  "mirror": true,
+  "probably_morphFloor": true,
+  "deletable": false,
+  "color_replacements": [[6689, 8]],
+  "models": [{"values": [2056], "type": 4}],
+  "$fileid": 1449
+}
+,
+
+{
+  "contrast": 100,
+  "ambient": 50,
+  "probably_morphFloor": true,
+  "deletable": false,
+  "color_replacements": [[6689, 8]],
+  "models": [{"values": [2071], "type": 4}],
+  "$fileid": 1450
+}
+,
+
+{
+  "contrast": 100,
+  "ambient": 50,
+  "mirror": true,
+  "probably_morphFloor": true,
+  "deletable": false,
+  "color_replacements": [[6689, 8]],
+  "models": [{"values": [2071], "type": 4}],
+  "$fileid": 1451
+}
+,
+
+{
+  "contrast": 100,
+  "ambient": 50,
+  "probably_morphFloor": true,
+  "deletable": false,
+  "models": [{"values": [2056], "type": 4}],
+  "$fileid": 1452
+}
+,
+
+{
+  "contrast": 100,
+  "ambient": 50,
+  "mirror": true,
+  "probably_morphFloor": true,
+  "deletable": false,
+  "models": [{"values": [2056], "type": 4}],
+  "$fileid": 1453
+}
+,
+
+{
+  "contrast": 100,
+  "ambient": 50,
+  "probably_morphFloor": true,
+  "deletable": false,
+  "models": [{"values": [2071], "type": 4}],
+  "$fileid": 1454
+}
+,
+
+{
+  "contrast": 100,
+  "ambient": 50,
+  "mirror": true,
+  "probably_morphFloor": true,
+  "deletable": false,
+  "models": [{"values": [2071], "type": 4}],
+  "$fileid": 1455
+}
+,
+
+{
+  "width": 2,
+  "contrast": 100,
+  "ambient": 50,
+  "probably_morphFloor": true,
+  "models": [{"values": [2078], "type": 4}],
+  "$fileid": 1456
+}
+,
+
+{
+  "width": 2,
+  "contrast": 100,
+  "ambient": 50,
+  "probably_morphFloor": true,
+  "models": [{"values": [2025], "type": 4}],
+  "$fileid": 1457
+}
+,
+
+{
+  "width": 2,
+  "contrast": 100,
+  "ambient": 50,
+  "probably_morphFloor": true,
+  "deletable": false,
+  "models": [{"values": [2087], "type": 4}],
+  "$fileid": 1458
+}
+,
+
+{
+  "unknown_16": true,
+  "probably_morphFloor": true,
+  "deletable": false,
+  "color_replacements": [[6689, 7952]],
+  "models": [
+    {"values": [782], "type": 0},
+    {"values": [783], "type": 1},
+    {"values": [784], "type": 9}
+  ],
+  "$fileid": 1459
+}
+,
+
+{
+  "unknown_16": true,
+  "probably_morphFloor": true,
+  "deletable": false,
+  "color_replacements": [[6689, 7952]],
+  "material_replacements": [[70, 418]],
+  "models_05": {"models": [{"type": 10, "values": [834], "unktail": []}]},
+  "$fileid": 1460
+}
+,
+
+{
+  "unknown_16": true,
+  "probably_morphFloor": true,
+  "deletable": false,
+  "models_05": {"models": [{"type": 10, "values": [816], "unktail": []}]},
+  "$fileid": 1461
+}
+,
+
+{
+  "unknown_16": true,
+  "probably_morphFloor": true,
+  "deletable": false,
+  "models_05": {"models": [{"type": 10, "values": [814], "unktail": []}]},
+  "$fileid": 1462
+}
+,
+
+{
+  "unknown_16": true,
+  "probably_morphFloor": true,
+  "deletable": false,
+  "mirror": true,
+  "models_05": {"models": [{"type": 10, "values": [814], "unktail": []}]},
+  "$fileid": 1463
+}
+,
+
+{
+  "unknown_16": true,
+  "probably_morphFloor": true,
+  "deletable": false,
+  "models_05": {"models": [{"type": 10, "values": [815], "unktail": []}]},
+  "$fileid": 1464
+}
+,
+
+{
+  "unknown_16": true,
+  "probably_morphFloor": true,
+  "deletable": false,
+  "models_05": {"models": [{"type": 10, "values": [817], "unktail": []}]},
+  "$fileid": 1465
+}
+,
+
+{
+  "unknown_16": true,
+  "probably_morphFloor": true,
+  "deletable": false,
+  "models_05": {"models": [{"type": 10, "values": [822], "unktail": []}]},
+  "$fileid": 1466
+}
+,
+
+{
+  "unknown_16": true,
+  "probably_morphFloor": true,
+  "deletable": false,
+  "color_replacements": [[6689, 7952]],
+  "models_05": {"models": [{"type": 10, "values": [823], "unktail": []}]},
+  "$fileid": 1467
+}
+,
+
+{
+  "unknown_16": true,
+  "probably_morphFloor": true,
+  "deletable": false,
+  "color_replacements": [[6689, 7952]],
+  "models_05": {"models": [{"type": 10, "values": [787], "unktail": []}]},
+  "$fileid": 1468
+}
+,
+
+{
+  "unknown_16": true,
+  "probably_morphFloor": true,
+  "color_replacements": [[6689, 7952]],
+  "material_replacements": [[69, 177], [105, 418]],
+  "models": [
+    {"values": [827], "type": 0},
+    {"values": [828], "type": 1},
+    {"values": [829], "type": 9}
+  ],
+  "$fileid": 1469
+}
+,
+
+{
+  "unknown_16": true,
+  "probably_morphFloor": true,
+  "color_replacements": [[6689, 7952]],
+  "material_replacements": [[69, 177], [105, 418]],
+  "models": [{"values": [795], "type": 0}],
+  "$fileid": 1470
+}
+,
+
+{
+  "unknown_16": true,
+  "probably_morphFloor": true,
+  "color_replacements": [[6689, 7952]],
+  "models": [{"values": [778], "type": 0}],
+  "$fileid": 1471
+}
+,
+
+{
+  "unknown_16": true,
+  "probably_morphFloor": true,
+  "deletable": false,
+  "color_replacements": [[6689, 7952]],
+  "models_05": {"models": [{"type": 10, "values": [812], "unktail": []}]},
+  "$fileid": 1472
+}
+,
+
+{
+  "contrast": 100,
+  "ambient": 50,
+  "probably_morphFloor": true,
+  "color_replacements": [[6689, 7952]],
+  "models": [{"values": [2056], "type": 4}],
+  "$fileid": 1473
+}
+,
+
+{
+  "contrast": 100,
+  "ambient": 50,
+  "mirror": true,
+  "probably_morphFloor": true,
+  "color_replacements": [[6689, 7952]],
+  "models": [{"values": [2056], "type": 4}],
+  "$fileid": 1474
+}
+,
+
+{
+  "contrast": 100,
+  "ambient": 50,
+  "probably_morphFloor": true,
+  "color_replacements": [[6689, 7952]],
+  "models": [{"values": [2071], "type": 4}],
+  "$fileid": 1475
+}
+,
+
+{
+  "contrast": 100,
+  "ambient": 50,
+  "mirror": true,
+  "probably_morphFloor": true,
+  "color_replacements": [[6689, 7952]],
+  "models": [{"values": [2071], "type": 4}],
+  "$fileid": 1476
+}
+,
+
+{
+  "unknown_16": true,
+  "probably_morphFloor": true,
+  "deletable": false,
+  "models_05": {"models": [{"type": 10, "values": [833], "unktail": []}]},
+  "$fileid": 1477
+}
+,
+
+{
+  "unknown_16": true,
+  "probably_morphFloor": true,
+  "deletable": false,
+  "color_replacements": [[6689, 7952]],
+  "material_replacements": [[378, 83], [76, 72]],
+  "models_05": {"models": [{"type": 10, "values": [833], "unktail": []}]},
+  "$fileid": 1478
+}
+,
+
+{
+  "unknown_16": true,
+  "probably_morphFloor": true,
+  "color_replacements": [[6689, 61733]],
+  "models": [
+    {"values": [782], "type": 0},
+    {"values": [783], "type": 1},
+    {"values": [784], "type": 9}
+  ],
+  "$fileid": 1479
+}
+,
+
+{
+  "width": 2,
+  "contrast": 100,
+  "ambient": 50,
+  "probably_morphFloor": true,
+  "color_replacements": [[6689, 61985]],
+  "models": [{"values": [2056], "type": 4}],
+  "$fileid": 1480
+}
+,
+
+{
+  "width": 2,
+  "contrast": 100,
+  "ambient": 50,
+  "mirror": true,
+  "probably_morphFloor": true,
+  "color_replacements": [[6689, 61985]],
+  "models": [{"values": [2056], "type": 4}],
+  "$fileid": 1481
+}
+,
+
+{
+  "width": 2,
+  "contrast": 100,
+  "ambient": 50,
+  "probably_morphFloor": true,
+  "color_replacements": [[6689, 61985]],
+  "models": [{"values": [2071], "type": 4}],
+  "$fileid": 1482
+}
+,
+
+{
+  "width": 2,
+  "contrast": 100,
+  "ambient": 50,
+  "mirror": true,
+  "probably_morphFloor": true,
+  "color_replacements": [[6689, 61985]],
+  "models": [{"values": [2071], "type": 4}],
+  "$fileid": 1483
+}
+,
+
+{
+  "unknown_16": true,
+  "probably_morphFloor": true,
+  "deletable": false,
+  "color_replacements": [[6689, 61733]],
+  "models_05": {"models": [{"type": 10, "values": [834], "unktail": []}]},
+  "$fileid": 1484
+}
+,
+
+{
+  "unknown_16": true,
+  "probably_morphFloor": true,
+  "deletable": false,
+  "models_05": {"models": [{"type": 10, "values": [834], "unktail": []}]},
+  "$fileid": 1485
+}
+,
+
+{
+  "unknown_16": true,
+  "probably_morphFloor": true,
+  "deletable": false,
+  "color_replacements": [[6689, 7952]],
+  "models_05": {"models": [{"type": 10, "values": [825], "unktail": []}]},
+  "$fileid": 1486
+}
+,
+
+{
+  "unknown_16": true,
+  "probably_morphFloor": true,
+  "deletable": false,
+  "color_replacements": [[6689, 119]],
+  "models_05": {"models": [{"type": 10, "values": [825], "unktail": []}]},
+  "$fileid": 1487
+}
+,
+
+{
+  "unknown_16": true,
+  "occludes_1": false,
+  "color_replacements": [[10334, 43270]],
+  "models": [
+    {"values": [893], "type": 0},
+    {"values": [894], "type": 1},
+    {"values": [876], "type": 2},
+    {"values": [877], "type": 3},
+    {"values": [878], "type": 9}
+  ],
+  "$fileid": 1488
+}
+,
+
+{
+  "unknown_16": true,
+  "probably_morphFloor": true,
+  "color_replacements": [[6689, 45]],
+  "models": [
+    {"values": [782], "type": 0},
+    {"values": [783], "type": 1},
+    {"values": [784], "type": 9}
+  ],
+  "$fileid": 1489
+}
+,
+
+{
+  "unknown_16": true,
+  "probably_morphFloor": true,
+  "deletable": false,
+  "color_replacements": [[6689, 45]],
+  "material_replacements": [[70, 418]],
+  "models_05": {"models": [{"type": 10, "values": [834], "unktail": []}]},
+  "$fileid": 1490
+}
+,
+
+{
+  "unknown_16": true,
+  "probably_morphFloor": true,
+  "color_replacements": [[6689, 45]],
+  "material_replacements": [[105, 418]],
+  "models": [
+    {"values": [827], "type": 0},
+    {"values": [828], "type": 1},
+    {"values": [829], "type": 9}
+  ],
+  "$fileid": 1491
+}
+,
+
+{
+  "unknown_16": true,
+  "probably_morphFloor": true,
+  "deletable": false,
+  "color_replacements": [[6689, 45]],
+  "models_05": {"models": [{"type": 10, "values": [823], "unktail": []}]},
+  "$fileid": 1492
+}
+,
+
+{
+  "contrast": 100,
+  "ambient": 50,
+  "probably_morphFloor": true,
+  "color_replacements": [[6689, 45]],
+  "models": [{"values": [2056], "type": 4}],
+  "$fileid": 1493
+}
+,
+
+{
+  "unknown_16": true,
+  "probably_morphFloor": true,
+  "color_replacements": [[6689, 45]],
+  "models": [{"values": [836], "type": 0}],
+  "$fileid": 1494
+}
+,
+
+{
+  "unknown_16": true,
+  "probably_morphFloor": true,
+  "mirror": true,
+  "color_replacements": [[6689, 45]],
+  "models": [{"values": [836], "type": 0}],
+  "$fileid": 1495
+}
+,
+
+{
+  "unknown_16": true,
+  "probably_morphFloor": true,
+  "deletable": false,
+  "color_replacements": [[8, 7952], [5524, 8980]],
+  "models_05": {"models": [{"type": 10, "values": [816], "unktail": []}]},
+  "$fileid": 1496
+}
+,
+
+{
+  "unknown_16": true,
+  "probably_morphFloor": true,
+  "deletable": false,
+  "color_replacements": [[8, 7952], [5524, 8980]],
+  "models_05": {"models": [{"type": 10, "values": [814], "unktail": []}]},
+  "$fileid": 1497
+}
+,
+
+{
+  "unknown_16": true,
+  "probably_morphFloor": true,
+  "deletable": false,
+  "mirror": true,
+  "color_replacements": [[8, 7952], [5524, 8980]],
+  "models_05": {"models": [{"type": 10, "values": [814], "unktail": []}]},
+  "$fileid": 1498
+}
+,
+
+{
+  "unknown_16": true,
+  "probably_morphFloor": true,
+  "deletable": false,
+  "color_replacements": [[8, 7952], [5524, 8980]],
+  "models_05": {"models": [{"type": 10, "values": [815], "unktail": []}]},
+  "$fileid": 1499
+}
+,
+
+{
+  "unknown_16": true,
+  "probably_morphFloor": true,
+  "deletable": false,
+  "color_replacements": [[8, 7952], [5524, 8980]],
+  "models_05": {"models": [{"type": 10, "values": [817], "unktail": []}]},
+  "$fileid": 1500
+}
+,
+
+{
+  "unknown_16": true,
+  "probably_morphFloor": true,
+  "deletable": false,
+  "color_replacements": [[8, 7952], [5524, 8980]],
+  "models_05": {"models": [{"type": 10, "values": [822], "unktail": []}]},
+  "$fileid": 1501
+}
+,
+
+{
+  "unknown_16": true,
+  "probably_morphFloor": true,
+  "color_replacements": [[6689, 8]],
+  "models": [
+    {"values": [782], "type": 0},
+    {"values": [783], "type": 1},
+    {"values": [784], "type": 9}
+  ],
+  "$fileid": 1502
+}
+,
+
+{
+  "unknown_16": true,
+  "probably_morphFloor": true,
+  "deletable": false,
+  "color_replacements": [[6689, 8]],
+  "models_05": {"models": [{"type": 10, "values": [834], "unktail": []}]},
+  "$fileid": 1503
+}
+,
+
+{
+  "unknown_16": true,
+  "deletable": true,
+  "unknown_4B": 0,
+  "models": [{"values": [608], "type": 0}],
+  "name": "Door",
+  "$fileid": 1504
+}
+,
+
+{
+  "unknown_16": true,
+  "occludes_1": false,
+  "deletable": true,
+  "unknown_4B": 0,
+  "models": [{"values": [605], "type": 0}],
+  "name": "Door",
+  "$fileid": 1505
+}
+,
+
+{
+  "deletable": true,
+  "actions_0": "Open",
+  "mirror": true,
+  "unknown_4B": 0,
+  "ambient": 25,
+  "contrast": 25,
+  "models": [{"values": [633], "type": 0}],
+  "name": "Large door",
+  "$fileid": 1506
+}
+,
+
+{
+  "deletable": true,
+  "actions_0": "Close",
+  "mirror": true,
+  "unknown_4B": 0,
+  "ambient": 25,
+  "contrast": 25,
+  "models": [{"values": [594], "type": 0}],
+  "name": "Large door",
+  "$fileid": 1507
+}
+,
+
+{
+  "deletable": true,
+  "actions_0": "Open",
+  "unknown_4B": 0,
+  "ambient": 25,
+  "contrast": 25,
+  "models": [{"values": [633], "type": 0}],
+  "name": "Large door",
+  "$fileid": 1508
+}
+,
+
+{
+  "mirror": true,
+  "deletable": false,
+  "unknown_4B": 0,
+  "ambient": 25,
+  "contrast": 25,
+  "models": [{"values": [633], "type": 0}],
+  "$fileid": 1509
+}
+,
+
+{
+  "deletable": false,
+  "unknown_4B": 0,
+  "ambient": 25,
+  "contrast": 25,
+  "models": [{"values": [633], "type": 0}],
+  "$fileid": 1510
+}
+,
+
+{
+  "deletable": true,
+  "actions_0": "Close",
+  "unknown_4B": 0,
+  "ambient": 25,
+  "contrast": 25,
+  "models": [{"values": [594], "type": 0}],
+  "name": "Large door",
+  "$fileid": 1511
+}
+,
+
+{
+  "actions_0": "Open",
+  "unknown_4B": 0,
+  "ambient": 25,
+  "contrast": 25,
+  "models": [{"values": [14930], "type": 0}, {"values": [14931], "type": 9}],
+  "name": "Large door",
+  "$fileid": 1512
+}
+,
+
+{
+  "actions_0": "Open",
+  "unknown_4B": 0,
+  "models": [{"values": [616], "type": 0}],
+  "name": "Large door",
+  "$fileid": 1513
+}
+,
+
+{
+  "actions_0": "Close",
+  "unknown_4B": 0,
+  "models": [{"values": [616], "type": 0}],
+  "name": "Large door",
+  "$fileid": 1514
+}
+,
+
+{
+  "actions_0": "Close",
+  "unknown_4B": 0,
+  "ambient": 25,
+  "contrast": 25,
+  "models": [{"values": [14930], "type": 0}, {"values": [14931], "type": 9}],
+  "name": "Large door",
+  "$fileid": 1515
+}
+,
+
+{
+  "actions_0": "Open",
+  "unknown_4B": 0,
+  "ambient": 25,
+  "contrast": 25,
+  "models": [{"values": [639], "type": 0}],
+  "name": "Large door",
+  "$fileid": 1516
+}
+,
+
+{
+  "actions_0": "Close",
+  "unknown_4B": 0,
+  "models": [{"values": [639], "type": 0}],
+  "name": "Large door",
+  "$fileid": 1517
+}
+,
+
+{
+  "unknown_16": true,
+  "unknown_4B": 0,
+  "models": [{"values": [664], "type": 0}],
+  "$fileid": 1518
+}
+,
+
+{
+  "actions_0": "Open",
+  "mirror": true,
+  "unknown_4B": 0,
+  "ambient": 25,
+  "contrast": 25,
+  "models": [{"values": [639], "type": 0}],
+  "name": "Large door",
+  "$fileid": 1519
+}
+,
+
+{
+  "actions_0": "Close",
+  "mirror": true,
+  "unknown_4B": 0,
+  "models": [{"values": [639], "type": 0}],
+  "name": "Large door",
+  "$fileid": 1520
+}
+,
+
+{
+  "unknown_16": true,
+  "mirror": true,
+  "unknown_4B": 0,
+  "models": [{"values": [664], "type": 0}],
+  "$fileid": 1521
+}
+,
+
+{
+  "deletable": false,
+  "unknown_4B": 0,
+  "models": [{"values": [639], "type": 0}],
+  "$fileid": 1522
+}
+,
+
+{
+  "mirror": true,
+  "deletable": false,
+  "unknown_4B": 0,
+  "models": [{"values": [639], "type": 0}],
+  "$fileid": 1523
+}
+,
+
+{
+  "deletable": false,
+  "unknown_4B": 0,
+  "models": [{"values": [639], "type": 0}],
+  "$fileid": 1524
+}
+,
+
+{
+  "mirror": true,
+  "deletable": false,
+  "unknown_4B": 0,
+  "models": [{"values": [639], "type": 0}],
+  "$fileid": 1525
+}
+,
+
+{
+  "deletable": true,
+  "actions_0": "Open",
+  "unknown_4B": 0,
+  "models": [{"values": [884], "type": 0}, {"values": [885], "type": 9}],
+  "name": "Curtain",
+  "$fileid": 1526
+}
+,
+
+{
+  "deletable": false,
+  "unknown_4B": 0,
+  "models": [{"values": [879], "type": 0}, {"values": [880], "type": 9}],
+  "$fileid": 1527
+}
+,
+
+{
+  "deletable": true,
+  "actions_0": "Open",
+  "unknown_4B": 0,
+  "models": [{"values": [884], "type": 0}, {"values": [885], "type": 9}],
+  "name": "Curtain",
+  "$fileid": 1528
+}
+,
+
+{
+  "deletable": true,
+  "actions_0": "Close",
+  "probably_nocollision": true,
+  "unknown_4B": 0,
+  "models": [{"values": [879], "type": 0}, {"values": [880], "type": 9}],
+  "name": "Curtain",
+  "$fileid": 1529
+}
+,
+
+{
+  "deletable": true,
+  "actions_0": "Open",
+  "unknown_4B": 0,
+  "models": [{"values": [9476], "type": 0}, {"values": [9477], "type": 9}],
+  "name": "Door",
+  "$fileid": 1530
+}
+,
+
+{
+  "deletable": true,
+  "actions_0": "Close",
+  "unknown_4B": 0,
+  "models": [{"values": [9476], "type": 0}, {"values": [9477], "type": 9}],
+  "name": "Door",
+  "$fileid": 1531
+}
+,
+
+{
+  "deletable": false,
+  "unknown_4B": 0,
+  "models": [{"values": [9476], "type": 0}, {"values": [9477], "type": 9}],
+  "$fileid": 1532
+}
+,
+
+{
+  "deletable": true,
+  "actions_0": "Open",
+  "unknown_4B": 0,
+  "color_replacements": [
+    [4407, 4523],
+    [4527, 4519],
+    [4523, 4643],
+    [4519, 4638],
+    [5656, 4762]
+  ],
+  "models": [{"values": [14928], "type": 0}, {"values": [14929], "type": 9}],
+  "name": "Door",
+  "$fileid": 1533
+}
+,
+
+{
+  "deletable": true,
+  "actions_0": "Close",
+  "unknown_4B": 0,
+  "color_replacements": [
+    [4407, 4523],
+    [4527, 4519],
+    [4523, 4643],
+    [4519, 4638],
+    [5656, 4762]
+  ],
+  "models": [{"values": [14928], "type": 0}, {"values": [14929], "type": 9}],
+  "name": "Door",
+  "$fileid": 1534
+}
+,
+
+{
+  "deletable": false,
+  "unknown_4B": 0,
+  "color_replacements": [
+    [4407, 4523],
+    [4527, 4519],
+    [4523, 4643],
+    [4519, 4638],
+    [5656, 4762]
+  ],
+  "models": [{"values": [14928], "type": 0}, {"values": [14929], "type": 9}],
+  "$fileid": 1535
+}]}

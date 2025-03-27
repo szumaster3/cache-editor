@@ -1,0 +1,45 @@
+{
+  "type": "object",
+  "properties": {
+    "files": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "extra": {
+            "oneOf": [
+              {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "prop": {
+                      "type": "number",
+                      "maximum": 16777215,
+                      "minimum": 0
+                    },
+                    "intvalue": {
+                      "oneOf": [
+                        {
+                          "type": "number",
+                          "maximum": 2147483647,
+                          "minimum": -2147483648
+                        },
+                        {"type": "null"}
+                      ]
+                    },
+                    "stringvalue": {
+                      "oneOf": [{"type": "string"}, {"type": "null"}]
+                    }
+                  },
+                  "required": ["prop", "intvalue", "stringvalue"]
+                }
+              },
+              {"type": "null"}
+            ]
+          }
+        }
+      }
+    }
+  }
+}

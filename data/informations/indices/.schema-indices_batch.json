@@ -1,0 +1,96 @@
+{
+  "type": "object",
+  "properties": {
+    "files": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "format": {"type": "number", "maximum": 255, "minimum": 0},
+          "timestamp": {
+            "anyOf": [
+              {"type": "number", "maximum": 4294967295, "minimum": 0},
+              {"const": 0}
+            ]
+          },
+          "flags": {"type": "number", "maximum": 255, "minimum": 0},
+          "indices": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "minor": {"type": "integer"},
+                "name": {
+                  "oneOf": [
+                    {"type": "number", "maximum": 4294967295, "minimum": 0},
+                    {"type": "null"}
+                  ]
+                },
+                "crc": {"type": "number", "maximum": 4294967295, "minimum": 0},
+                "uncompressed_crc": {
+                  "oneOf": [
+                    {"type": "number", "maximum": 4294967295, "minimum": 0},
+                    {"type": "null"}
+                  ]
+                },
+                "size": {
+                  "oneOf": [
+                    {"type": "number", "maximum": 4294967295, "minimum": 0},
+                    {"type": "null"}
+                  ]
+                },
+                "uncompressed_size": {
+                  "oneOf": [
+                    {"type": "number", "maximum": 4294967295, "minimum": 0},
+                    {"type": "null"}
+                  ]
+                },
+                "encryption_or_hash": {
+                  "oneOf": [{"type": "string"}, {"type": "null"}]
+                },
+                "version": {
+                  "type": "number",
+                  "maximum": 4294967295,
+                  "minimum": 0
+                },
+                "subindexcount": {
+                  "type": "number",
+                  "maximum": 2147483647,
+                  "minimum": 0
+                },
+                "subindices": {"type": "array", "items": {"type": "integer"}},
+                "subnames": {
+                  "oneOf": [
+                    {
+                      "type": "array",
+                      "items": {
+                        "type": "number",
+                        "maximum": 4294967295,
+                        "minimum": 0
+                      }
+                    },
+                    {"type": "null"}
+                  ]
+                }
+              },
+              "required": [
+                "minor",
+                "name",
+                "crc",
+                "uncompressed_crc",
+                "size",
+                "uncompressed_size",
+                "encryption_or_hash",
+                "version",
+                "subindexcount",
+                "subindices",
+                "subnames"
+              ]
+            }
+          }
+        },
+        "required": ["format", "timestamp", "flags", "indices"]
+      }
+    }
+  }
+}

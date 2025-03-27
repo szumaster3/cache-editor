@@ -1,0 +1,4458 @@
+{"$schema":".schema-items_batch.json","files":[
+
+{
+  "baseModel": 13186,
+  "dummyItem": 1,
+  "modelTranslate_0": -1,
+  "modelTranslate_1": -49,
+  "model_zoom": 3664,
+  "rotation_1": 1646,
+  "rotation_0": 216,
+  "name": "Gazebo",
+  "extra": [
+    {"prop": 211, "intvalue": 8782, "stringvalue": null},
+    {"prop": 212, "intvalue": 8, "stringvalue": null},
+    {"prop": 213, "intvalue": 2353, "stringvalue": null},
+    {"prop": 214, "intvalue": 4, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8192
+}
+,
+
+{
+  "baseModel": 13185,
+  "dummyItem": 1,
+  "modelTranslate_0": -9,
+  "modelTranslate_1": 13,
+  "model_zoom": 3664,
+  "rotation_1": 435,
+  "rotation_0": 192,
+  "name": "Small fountain",
+  "extra": [
+    {"prop": 211, "intvalue": 8786, "stringvalue": null},
+    {"prop": 212, "intvalue": 1, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8193
+}
+,
+
+{
+  "baseModel": 13149,
+  "dummyItem": 1,
+  "modelTranslate_0": -10,
+  "modelTranslate_1": -100,
+  "model_zoom": 5456,
+  "rotation_1": 426,
+  "rotation_0": 189,
+  "name": "Large fountain",
+  "extra": [
+    {"prop": 211, "intvalue": 8786, "stringvalue": null},
+    {"prop": 212, "intvalue": 2, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8194
+}
+,
+
+{
+  "baseModel": 13191,
+  "dummyItem": 1,
+  "modelTranslate_0": -2,
+  "modelTranslate_1": -22,
+  "model_zoom": 4304,
+  "rotation_1": 1529,
+  "rotation_0": 204,
+  "name": "Posh fountain",
+  "extra": [
+    {"prop": 211, "intvalue": 8786, "stringvalue": null},
+    {"prop": 212, "intvalue": 3, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8195
+}
+,
+
+{
+  "baseModel": 13150,
+  "dummyItem": 1,
+  "modelTranslate_0": 23,
+  "modelTranslate_1": 74,
+  "model_zoom": 2128,
+  "rotation_1": 366,
+  "rotation_0": 174,
+  "name": "Boundary stones",
+  "extra": [
+    {"prop": 211, "intvalue": 1761, "stringvalue": null},
+    {"prop": 212, "intvalue": 10, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8196
+}
+,
+
+{
+  "baseModel": 13152,
+  "dummyItem": 1,
+  "modelTranslate_0": -32,
+  "modelTranslate_1": -44,
+  "model_zoom": 2768,
+  "rotation_1": 1358,
+  "rotation_0": 138,
+  "name": "Wooden fence",
+  "extra": [
+    {"prop": 211, "intvalue": 960, "stringvalue": null},
+    {"prop": 212, "intvalue": 10, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8197
+}
+,
+
+{
+  "baseModel": 13156,
+  "dummyItem": 1,
+  "modelTranslate_0": -32,
+  "modelTranslate_1": -44,
+  "model_zoom": 3280,
+  "rotation_1": 1358,
+  "rotation_0": 138,
+  "name": "Stone wall",
+  "extra": [
+    {"prop": 211, "intvalue": 3420, "stringvalue": null},
+    {"prop": 212, "intvalue": 10, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8198
+}
+,
+
+{
+  "baseModel": 13159,
+  "dummyItem": 1,
+  "modelTranslate_0": -42,
+  "modelTranslate_1": -85,
+  "model_zoom": 4816,
+  "rotation_1": 1355,
+  "rotation_0": 135,
+  "name": "Iron railings",
+  "extra": [
+    {"prop": 211, "intvalue": 2351, "stringvalue": null},
+    {"prop": 212, "intvalue": 10, "stringvalue": null},
+    {"prop": 213, "intvalue": 3420, "stringvalue": null},
+    {"prop": 214, "intvalue": 6, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8199
+}
+,
+
+{
+  "baseModel": 13154,
+  "dummyItem": 1,
+  "modelTranslate_0": -32,
+  "modelTranslate_1": -44,
+  "model_zoom": 2768,
+  "rotation_1": 1364,
+  "rotation_0": 138,
+  "name": "Picket fence",
+  "extra": [
+    {"prop": 211, "intvalue": 8778, "stringvalue": null},
+    {"prop": 212, "intvalue": 10, "stringvalue": null},
+    {"prop": 213, "intvalue": 2353, "stringvalue": null},
+    {"prop": 214, "intvalue": 2, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8200
+}
+,
+
+{
+  "baseModel": 13161,
+  "dummyItem": 1,
+  "modelTranslate_0": -32,
+  "modelTranslate_1": -44,
+  "model_zoom": 4688,
+  "rotation_1": 1364,
+  "rotation_0": 138,
+  "name": "Garden fence",
+  "extra": [
+    {"prop": 211, "intvalue": 8780, "stringvalue": null},
+    {"prop": 212, "intvalue": 10, "stringvalue": null},
+    {"prop": 213, "intvalue": 2353, "stringvalue": null},
+    {"prop": 214, "intvalue": 2, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8201
+}
+,
+
+{
+  "baseModel": 13163,
+  "dummyItem": 1,
+  "modelTranslate_0": -24,
+  "modelTranslate_1": -45,
+  "model_zoom": 2384,
+  "rotation_1": 1364,
+  "rotation_0": 138,
+  "name": "Marble wall",
+  "extra": [
+    {"prop": 211, "intvalue": 8786, "stringvalue": null},
+    {"prop": 212, "intvalue": 8, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8202
+}
+,
+
+{
+  "baseModel": 13172,
+  "dummyItem": 1,
+  "modelTranslate_0": -10,
+  "modelTranslate_1": -3,
+  "model_zoom": 2128,
+  "rotation_1": 1889,
+  "rotation_0": 114,
+  "name": "Thorny hedge",
+  "extra": [
+    {"prop": 211, "intvalue": 8437, "stringvalue": null},
+    {"prop": 212, "intvalue": 1, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8203
+}
+,
+
+{
+  "baseModel": 13173,
+  "dummyItem": 1,
+  "modelTranslate_0": -2,
+  "model_zoom": 2128,
+  "rotation_1": 285,
+  "rotation_0": 108,
+  "name": "Nice hedge",
+  "extra": [
+    {"prop": 211, "intvalue": 8439, "stringvalue": null},
+    {"prop": 212, "intvalue": 1, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8204
+}
+,
+
+{
+  "baseModel": 13174,
+  "dummyItem": 1,
+  "modelTranslate_0": -2,
+  "modelTranslate_1": 2,
+  "model_zoom": 2512,
+  "rotation_1": 285,
+  "rotation_0": 108,
+  "name": "Small box hedge",
+  "extra": [
+    {"prop": 211, "intvalue": 8441, "stringvalue": null},
+    {"prop": 212, "intvalue": 1, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8205
+}
+,
+
+{
+  "baseModel": 13168,
+  "dummyItem": 1,
+  "modelTranslate_0": -1,
+  "modelTranslate_1": 67,
+  "model_zoom": 1360,
+  "rotation_1": 45,
+  "rotation_0": 48,
+  "name": "Topiary hedge",
+  "extra": [
+    {"prop": 211, "intvalue": 8443, "stringvalue": null},
+    {"prop": 212, "intvalue": 1, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8206
+}
+,
+
+{
+  "baseModel": 13175,
+  "dummyItem": 1,
+  "modelTranslate_0": -2,
+  "modelTranslate_1": 2,
+  "model_zoom": 2640,
+  "rotation_1": 285,
+  "rotation_0": 108,
+  "name": "Fancy hedge",
+  "extra": [
+    {"prop": 211, "intvalue": 8445, "stringvalue": null},
+    {"prop": 212, "intvalue": 1, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8207
+}
+,
+
+{
+  "baseModel": 13170,
+  "dummyItem": 1,
+  "modelTranslate_0": -2,
+  "modelTranslate_1": -9,
+  "model_zoom": 2896,
+  "rotation_1": 276,
+  "rotation_0": 180,
+  "name": "Tall fancy hedge",
+  "extra": [
+    {"prop": 211, "intvalue": 8447, "stringvalue": null},
+    {"prop": 212, "intvalue": 1, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8208
+}
+,
+
+{
+  "baseModel": 13177,
+  "dummyItem": 1,
+  "modelTranslate_0": -2,
+  "modelTranslate_1": -9,
+  "model_zoom": 3664,
+  "rotation_1": 276,
+  "rotation_0": 180,
+  "name": "Tall box hedge",
+  "extra": [
+    {"prop": 211, "intvalue": 8449, "stringvalue": null},
+    {"prop": 212, "intvalue": 1, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8209
+}
+,
+
+{
+  "baseModel": 13143,
+  "dummyItem": 1,
+  "model_zoom": 3408,
+  "rotation_1": 1961,
+  "rotation_0": 240,
+  "name": "Rosemary",
+  "extra": [
+    {"prop": 211, "intvalue": 8451, "stringvalue": null},
+    {"prop": 212, "intvalue": 1, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8210
+}
+,
+
+{
+  "baseModel": 13145,
+  "dummyItem": 1,
+  "model_zoom": 3408,
+  "rotation_1": 1823,
+  "rotation_0": 249,
+  "name": "Daffodils",
+  "extra": [
+    {"prop": 211, "intvalue": 8453, "stringvalue": null},
+    {"prop": 212, "intvalue": 1, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8211
+}
+,
+
+{
+  "baseModel": 13147,
+  "dummyItem": 1,
+  "model_zoom": 2256,
+  "rotation_1": 1910,
+  "rotation_0": 255,
+  "name": "Bluebells",
+  "extra": [
+    {"prop": 211, "intvalue": 8455, "stringvalue": null},
+    {"prop": 212, "intvalue": 1, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8212
+}
+,
+
+{
+  "baseModel": 13137,
+  "dummyItem": 1,
+  "model_zoom": 2896,
+  "rotation_1": 150,
+  "rotation_0": 240,
+  "name": "Sunflower",
+  "extra": [
+    {"prop": 211, "intvalue": 8457, "stringvalue": null},
+    {"prop": 212, "intvalue": 1, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8213
+}
+,
+
+{
+  "baseModel": 13139,
+  "dummyItem": 1,
+  "modelTranslate_0": -4,
+  "modelTranslate_1": 13,
+  "model_zoom": 2128,
+  "rotation_1": 150,
+  "rotation_0": 240,
+  "name": "Marigolds",
+  "extra": [
+    {"prop": 211, "intvalue": 8459, "stringvalue": null},
+    {"prop": 212, "intvalue": 1, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8214
+}
+,
+
+{
+  "baseModel": 13141,
+  "dummyItem": 1,
+  "modelTranslate_1": -45,
+  "model_zoom": 3024,
+  "rotation_1": 138,
+  "rotation_0": 189,
+  "name": "Roses",
+  "extra": [
+    {"prop": 211, "intvalue": 8461, "stringvalue": null},
+    {"prop": 212, "intvalue": 1, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8215
+}
+,
+
+{
+  "baseModel": 14101,
+  "dummyItem": 1,
+  "modelTranslate_0": -2,
+  "modelTranslate_1": -10,
+  "model_zoom": 2384,
+  "rotation_1": 1685,
+  "rotation_0": 165,
+  "name": "Firepit",
+  "extra": [
+    {"prop": 211, "intvalue": 2353, "stringvalue": null},
+    {"prop": 212, "intvalue": 1, "stringvalue": null},
+    {"prop": 213, "intvalue": 1761, "stringvalue": null},
+    {"prop": 214, "intvalue": 2, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8216
+}
+,
+
+{
+  "baseModel": 14101,
+  "dummyItem": 1,
+  "modelTranslate_0": -2,
+  "modelTranslate_1": -10,
+  "model_zoom": 2384,
+  "rotation_1": 1685,
+  "rotation_0": 165,
+  "name": "Firepit with hook",
+  "extra": [
+    {"prop": 211, "intvalue": 2353, "stringvalue": null},
+    {"prop": 212, "intvalue": 2, "stringvalue": null},
+    {"prop": 213, "intvalue": 1761, "stringvalue": null},
+    {"prop": 214, "intvalue": 2, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8217
+}
+,
+
+{
+  "baseModel": 14101,
+  "dummyItem": 1,
+  "modelTranslate_0": -2,
+  "modelTranslate_1": -10,
+  "model_zoom": 2384,
+  "rotation_1": 1685,
+  "rotation_0": 165,
+  "name": "Firepit with pot",
+  "extra": [
+    {"prop": 211, "intvalue": 2353, "stringvalue": null},
+    {"prop": 212, "intvalue": 3, "stringvalue": null},
+    {"prop": 213, "intvalue": 1761, "stringvalue": null},
+    {"prop": 214, "intvalue": 2, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8218
+}
+,
+
+{
+  "baseModel": 14100,
+  "dummyItem": 1,
+  "modelTranslate_0": 8,
+  "model_zoom": 3408,
+  "rotation_1": 288,
+  "rotation_0": 48,
+  "name": "Small oven",
+  "extra": [
+    {"prop": 211, "intvalue": 2353, "stringvalue": null},
+    {"prop": 212, "intvalue": 4, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8219
+}
+,
+
+{
+  "baseModel": 12629,
+  "dummyItem": 1,
+  "modelTranslate_0": 5,
+  "modelTranslate_1": -10,
+  "model_zoom": 3920,
+  "rotation_1": 303,
+  "rotation_0": 51,
+  "name": "Large oven",
+  "extra": [
+    {"prop": 211, "intvalue": 2353, "stringvalue": null},
+    {"prop": 212, "intvalue": 5, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8220
+}
+,
+
+{
+  "baseModel": 12616,
+  "dummyItem": 1,
+  "modelTranslate_0": -11,
+  "modelTranslate_1": -46,
+  "model_zoom": 3408,
+  "rotation_1": 228,
+  "rotation_0": 138,
+  "name": "Steel range",
+  "extra": [
+    {"prop": 211, "intvalue": 2353, "stringvalue": null},
+    {"prop": 212, "intvalue": 6, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8221
+}
+,
+
+{
+  "baseModel": 12632,
+  "dummyItem": 1,
+  "modelTranslate_0": -2,
+  "modelTranslate_1": -46,
+  "model_zoom": 3792,
+  "rotation_1": 228,
+  "rotation_0": 138,
+  "name": "Fancy range",
+  "extra": [
+    {"prop": 211, "intvalue": 2353, "stringvalue": null},
+    {"prop": 212, "intvalue": 8, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8222
+}
+,
+
+{
+  "baseModel": 12548,
+  "modelTranslate_0": 30,
+  "modelTranslate_1": 85,
+  "rotation_1": 285,
+  "rotation_0": 111,
+  "dummyItem": 1,
+  "name": "Wooden shelves 1",
+  "extra": [
+    {"prop": 211, "intvalue": 960, "stringvalue": null},
+    {"prop": 212, "intvalue": 3, "stringvalue": null},
+    {"prop": 213, "intvalue": 1539, "stringvalue": null},
+    {"prop": 214, "intvalue": 3, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8223
+}
+,
+
+{
+  "baseModel": 12538,
+  "modelTranslate_0": 30,
+  "modelTranslate_1": 85,
+  "rotation_1": 285,
+  "rotation_0": 111,
+  "dummyItem": 1,
+  "name": "Wooden shelves 2",
+  "extra": [
+    {"prop": 211, "intvalue": 960, "stringvalue": null},
+    {"prop": 212, "intvalue": 3, "stringvalue": null},
+    {"prop": 213, "intvalue": 1539, "stringvalue": null},
+    {"prop": 214, "intvalue": 3, "stringvalue": null},
+    {"prop": 215, "intvalue": 1761, "stringvalue": null},
+    {"prop": 216, "intvalue": 6, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8224
+}
+,
+
+{
+  "baseModel": 12543,
+  "modelTranslate_0": 30,
+  "modelTranslate_1": 100,
+  "rotation_1": 285,
+  "rotation_0": 111,
+  "dummyItem": 1,
+  "name": "Wooden shelves 3",
+  "extra": [
+    {"prop": 211, "intvalue": 960, "stringvalue": null},
+    {"prop": 212, "intvalue": 3, "stringvalue": null},
+    {"prop": 213, "intvalue": 1539, "stringvalue": null},
+    {"prop": 214, "intvalue": 3, "stringvalue": null},
+    {"prop": 215, "intvalue": 1761, "stringvalue": null},
+    {"prop": 216, "intvalue": 6, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8225
+}
+,
+
+{
+  "baseModel": 12537,
+  "modelTranslate_0": 30,
+  "modelTranslate_1": 91,
+  "rotation_1": 285,
+  "rotation_0": 111,
+  "dummyItem": 1,
+  "name": "Oak shelves 1",
+  "extra": [
+    {"prop": 211, "intvalue": 8778, "stringvalue": null},
+    {"prop": 212, "intvalue": 3, "stringvalue": null},
+    {"prop": 213, "intvalue": 1761, "stringvalue": null},
+    {"prop": 214, "intvalue": 6, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8226
+}
+,
+
+{
+  "baseModel": 12541,
+  "modelTranslate_0": 30,
+  "modelTranslate_1": 100,
+  "rotation_1": 285,
+  "rotation_0": 111,
+  "dummyItem": 1,
+  "name": "Oak shelves 2",
+  "extra": [
+    {"prop": 211, "intvalue": 8778, "stringvalue": null},
+    {"prop": 212, "intvalue": 3, "stringvalue": null},
+    {"prop": 213, "intvalue": 1761, "stringvalue": null},
+    {"prop": 214, "intvalue": 6, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8227
+}
+,
+
+{
+  "baseModel": 12542,
+  "modelTranslate_0": 30,
+  "modelTranslate_1": 100,
+  "rotation_1": 285,
+  "rotation_0": 111,
+  "dummyItem": 1,
+  "name": "Teak shelves 1",
+  "extra": [
+    {"prop": 211, "intvalue": 8780, "stringvalue": null},
+    {"prop": 212, "intvalue": 3, "stringvalue": null},
+    {"prop": 213, "intvalue": 1761, "stringvalue": null},
+    {"prop": 214, "intvalue": 6, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8228
+}
+,
+
+{
+  "baseModel": 12539,
+  "modelTranslate_0": 30,
+  "modelTranslate_1": 100,
+  "rotation_1": 285,
+  "rotation_0": 111,
+  "dummyItem": 1,
+  "name": "Teak shelves 2",
+  "extra": [
+    {"prop": 211, "intvalue": 8780, "stringvalue": null},
+    {"prop": 212, "intvalue": 3, "stringvalue": null},
+    {"prop": 213, "intvalue": 1761, "stringvalue": null},
+    {"prop": 214, "intvalue": 6, "stringvalue": null},
+    {"prop": 215, "intvalue": 8784, "stringvalue": null},
+    {"prop": 216, "intvalue": 2, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8229
+}
+,
+
+{
+  "baseModel": 13219,
+  "dummyItem": 1,
+  "modelTranslate_0": -11,
+  "modelTranslate_1": -100,
+  "model_zoom": 4560,
+  "rotation_1": 360,
+  "rotation_0": 240,
+  "name": "Pump and drain",
+  "extra": [
+    {"prop": 211, "intvalue": 2353, "stringvalue": null},
+    {"prop": 212, "intvalue": 5, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8230
+}
+,
+
+{
+  "baseModel": 13221,
+  "dummyItem": 1,
+  "modelTranslate_0": -26,
+  "modelTranslate_1": -97,
+  "model_zoom": 4176,
+  "rotation_1": 354,
+  "rotation_0": 246,
+  "name": "Pump and tub",
+  "extra": [
+    {"prop": 211, "intvalue": 2353, "stringvalue": null},
+    {"prop": 212, "intvalue": 10, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8231
+}
+,
+
+{
+  "baseModel": 13220,
+  "dummyItem": 1,
+  "modelTranslate_0": -14,
+  "modelTranslate_1": -96,
+  "model_zoom": 4560,
+  "rotation_1": 354,
+  "rotation_0": 246,
+  "name": "Sink",
+  "extra": [
+    {"prop": 211, "intvalue": 2353, "stringvalue": null},
+    {"prop": 212, "intvalue": 15, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8232
+}
+,
+
+{
+  "baseModel": 12504,
+  "dummyItem": 1,
+  "modelTranslate_0": -4,
+  "model_zoom": 5200,
+  "rotation_1": 1904,
+  "rotation_0": 120,
+  "name": "Wooden larder",
+  "extra": [
+    {"prop": 211, "intvalue": 960, "stringvalue": null},
+    {"prop": 212, "intvalue": 8, "stringvalue": null},
+    {"prop": 213, "intvalue": 1539, "stringvalue": null},
+    {"prop": 214, "intvalue": 8, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8233
+}
+,
+
+{
+  "baseModel": 12502,
+  "dummyItem": 1,
+  "modelTranslate_0": -4,
+  "model_zoom": 5200,
+  "rotation_1": 1904,
+  "rotation_0": 120,
+  "name": "Oak larder",
+  "extra": [
+    {"prop": 211, "intvalue": 8778, "stringvalue": null},
+    {"prop": 212, "intvalue": 8, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8234
+}
+,
+
+{
+  "baseModel": 12503,
+  "dummyItem": 1,
+  "modelTranslate_0": -4,
+  "model_zoom": 5200,
+  "rotation_1": 1904,
+  "rotation_0": 120,
+  "name": "Teak larder",
+  "extra": [
+    {"prop": 211, "intvalue": 8780, "stringvalue": null},
+    {"prop": 212, "intvalue": 8, "stringvalue": null},
+    {"prop": 213, "intvalue": 8790, "stringvalue": null},
+    {"prop": 214, "intvalue": 2, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8235
+}
+,
+
+{
+  "baseModel": 12521,
+  "modelTranslate_0": -4,
+  "modelTranslate_1": 4,
+  "model_zoom": 2512,
+  "rotation_1": 1898,
+  "rotation_0": 189,
+  "dummyItem": 1,
+  "name": "Cat blanket",
+  "extra": [
+    {"prop": 211, "intvalue": 8790, "stringvalue": null},
+    {"prop": 212, "intvalue": 1, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8236
+}
+,
+
+{
+  "baseModel": 12520,
+  "modelTranslate_0": -4,
+  "modelTranslate_1": 4,
+  "model_zoom": 2512,
+  "rotation_1": 1898,
+  "rotation_0": 189,
+  "dummyItem": 1,
+  "name": "Cat basket",
+  "extra": [
+    {"prop": 211, "intvalue": 960, "stringvalue": null},
+    {"prop": 212, "intvalue": 2, "stringvalue": null},
+    {"prop": 213, "intvalue": 1539, "stringvalue": null},
+    {"prop": 214, "intvalue": 2, "stringvalue": null},
+    {"prop": 213, "intvalue": 8790, "stringvalue": null},
+    {"prop": 214, "intvalue": 1, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8237
+}
+,
+
+{
+  "baseModel": 12522,
+  "modelTranslate_0": -4,
+  "modelTranslate_1": 4,
+  "model_zoom": 2512,
+  "rotation_1": 1898,
+  "rotation_0": 189,
+  "dummyItem": 1,
+  "name": "Cushioned basket",
+  "extra": [
+    {"prop": 211, "intvalue": 960, "stringvalue": null},
+    {"prop": 212, "intvalue": 2, "stringvalue": null},
+    {"prop": 213, "intvalue": 1539, "stringvalue": null},
+    {"prop": 214, "intvalue": 2, "stringvalue": null},
+    {"prop": 213, "intvalue": 8790, "stringvalue": null},
+    {"prop": 214, "intvalue": 2, "stringvalue": null},
+    {"prop": 215, "intvalue": 1737, "stringvalue": null},
+    {"prop": 216, "intvalue": 2, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8238
+}
+,
+
+{
+  "baseModel": 12388,
+  "modelTranslate_1": -7,
+  "model_zoom": 3920,
+  "rotation_1": 1910,
+  "rotation_0": 96,
+  "dummyItem": 1,
+  "name": "Beer barrel",
+  "extra": [
+    {"prop": 211, "intvalue": 960, "stringvalue": null},
+    {"prop": 212, "intvalue": 3, "stringvalue": null},
+    {"prop": 213, "intvalue": 1539, "stringvalue": null},
+    {"prop": 214, "intvalue": 3, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8239
+}
+,
+
+{
+  "baseModel": 12389,
+  "modelTranslate_1": -7,
+  "model_zoom": 3920,
+  "rotation_1": 1910,
+  "rotation_0": 96,
+  "dummyItem": 1,
+  "name": "Cider barrel",
+  "extra": [
+    {"prop": 211, "intvalue": 960, "stringvalue": null},
+    {"prop": 212, "intvalue": 3, "stringvalue": null},
+    {"prop": 213, "intvalue": 1539, "stringvalue": null},
+    {"prop": 214, "intvalue": 3, "stringvalue": null},
+    {"prop": 215, "intvalue": 5763, "stringvalue": null},
+    {"prop": 216, "intvalue": 8, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8240
+}
+,
+
+{
+  "baseModel": 12386,
+  "modelTranslate_1": -7,
+  "model_zoom": 3920,
+  "rotation_1": 1910,
+  "rotation_0": 96,
+  "dummyItem": 1,
+  "name": "Asgarnian ale",
+  "extra": [
+    {"prop": 211, "intvalue": 8778, "stringvalue": null},
+    {"prop": 212, "intvalue": 3, "stringvalue": null},
+    {"prop": 213, "intvalue": 1905, "stringvalue": null},
+    {"prop": 214, "intvalue": 8, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8241
+}
+,
+
+{
+  "baseModel": 12387,
+  "modelTranslate_1": -7,
+  "model_zoom": 3920,
+  "rotation_1": 1910,
+  "rotation_0": 96,
+  "dummyItem": 1,
+  "name": "Greenman's ale",
+  "extra": [
+    {"prop": 211, "intvalue": 8778, "stringvalue": null},
+    {"prop": 212, "intvalue": 3, "stringvalue": null},
+    {"prop": 213, "intvalue": 1909, "stringvalue": null},
+    {"prop": 214, "intvalue": 8, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8242
+}
+,
+
+{
+  "baseModel": 12384,
+  "modelTranslate_1": -7,
+  "model_zoom": 3920,
+  "rotation_1": 1910,
+  "rotation_0": 96,
+  "dummyItem": 1,
+  "name": "Dragon bitter",
+  "extra": [
+    {"prop": 211, "intvalue": 8778, "stringvalue": null},
+    {"prop": 212, "intvalue": 3, "stringvalue": null},
+    {"prop": 213, "intvalue": 2353, "stringvalue": null},
+    {"prop": 214, "intvalue": 2, "stringvalue": null},
+    {"prop": 215, "intvalue": 1911, "stringvalue": null},
+    {"prop": 216, "intvalue": 8, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8243
+}
+,
+
+{
+  "baseModel": 12385,
+  "modelTranslate_1": -7,
+  "model_zoom": 3920,
+  "rotation_1": 1910,
+  "rotation_0": 96,
+  "dummyItem": 1,
+  "name": "Chef's delight",
+  "extra": [
+    {"prop": 211, "intvalue": 8778, "stringvalue": null},
+    {"prop": 212, "intvalue": 3, "stringvalue": null},
+    {"prop": 213, "intvalue": 2353, "stringvalue": null},
+    {"prop": 214, "intvalue": 2, "stringvalue": null},
+    {"prop": 215, "intvalue": 5755, "stringvalue": null},
+    {"prop": 216, "intvalue": 8, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8244
+}
+,
+
+{
+  "baseModel": 1495,
+  "dummyItem": 1,
+  "name": "Blank poh entity",
+  "nullopt": true,
+  "$fileid": 8245
+}
+,
+
+{
+  "baseModel": 12581,
+  "model_zoom": 5712,
+  "rotation_1": 1853,
+  "rotation_0": 138,
+  "dummyItem": 1,
+  "name": "Wood kitchen table",
+  "extra": [
+    {"prop": 211, "intvalue": 960, "stringvalue": null},
+    {"prop": 212, "intvalue": 3, "stringvalue": null},
+    {"prop": 213, "intvalue": 1539, "stringvalue": null},
+    {"prop": 214, "intvalue": 3, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8246
+}
+,
+
+{
+  "baseModel": 12491,
+  "model_zoom": 5712,
+  "rotation_1": 1853,
+  "rotation_0": 138,
+  "dummyItem": 1,
+  "name": "Oak kitchen table",
+  "extra": [
+    {"prop": 211, "intvalue": 8778, "stringvalue": null},
+    {"prop": 212, "intvalue": 3, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8247
+}
+,
+
+{
+  "baseModel": 12492,
+  "model_zoom": 5712,
+  "rotation_1": 1853,
+  "rotation_0": 138,
+  "dummyItem": 1,
+  "name": "Teak kitchen table",
+  "extra": [
+    {"prop": 211, "intvalue": 8780, "stringvalue": null},
+    {"prop": 212, "intvalue": 3, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8248
+}
+,
+
+{
+  "baseModel": 12552,
+  "dummyItem": 1,
+  "model_zoom": 5328,
+  "rotation_1": 1871,
+  "rotation_0": 48,
+  "name": "Oak staircase",
+  "extra": [
+    {"prop": 211, "intvalue": 8778, "stringvalue": null},
+    {"prop": 212, "intvalue": 10, "stringvalue": null},
+    {"prop": 213, "intvalue": 2353, "stringvalue": null},
+    {"prop": 214, "intvalue": 4, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8249
+}
+,
+
+{
+  "baseModel": 12552,
+  "dummyItem": 1,
+  "model_zoom": 5328,
+  "rotation_1": 1871,
+  "rotation_0": 48,
+  "name": "Oak staircase",
+  "extra": [
+    {"prop": 211, "intvalue": 8778, "stringvalue": null},
+    {"prop": 212, "intvalue": 10, "stringvalue": null},
+    {"prop": 213, "intvalue": 2353, "stringvalue": null},
+    {"prop": 214, "intvalue": 4, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8250
+}
+,
+
+{
+  "baseModel": 12552,
+  "dummyItem": 1,
+  "model_zoom": 5328,
+  "rotation_1": 1871,
+  "rotation_0": 48,
+  "name": "Oak staircase",
+  "extra": [
+    {"prop": 211, "intvalue": 8778, "stringvalue": null},
+    {"prop": 212, "intvalue": 10, "stringvalue": null},
+    {"prop": 213, "intvalue": 2353, "stringvalue": null},
+    {"prop": 214, "intvalue": 4, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8251
+}
+,
+
+{
+  "baseModel": 12553,
+  "dummyItem": 1,
+  "model_zoom": 5328,
+  "rotation_1": 1871,
+  "rotation_0": 48,
+  "name": "Teak staircase",
+  "extra": [
+    {"prop": 211, "intvalue": 8780, "stringvalue": null},
+    {"prop": 212, "intvalue": 10, "stringvalue": null},
+    {"prop": 213, "intvalue": 2353, "stringvalue": null},
+    {"prop": 214, "intvalue": 4, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8252
+}
+,
+
+{
+  "baseModel": 12553,
+  "dummyItem": 1,
+  "model_zoom": 5328,
+  "rotation_1": 1871,
+  "rotation_0": 48,
+  "name": "Teak staircase",
+  "extra": [
+    {"prop": 211, "intvalue": 8780, "stringvalue": null},
+    {"prop": 212, "intvalue": 10, "stringvalue": null},
+    {"prop": 213, "intvalue": 2353, "stringvalue": null},
+    {"prop": 214, "intvalue": 4, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8253
+}
+,
+
+{
+  "baseModel": 12553,
+  "dummyItem": 1,
+  "model_zoom": 5328,
+  "rotation_1": 1871,
+  "rotation_0": 48,
+  "name": "Teak staircase",
+  "extra": [
+    {"prop": 211, "intvalue": 8780, "stringvalue": null},
+    {"prop": 212, "intvalue": 10, "stringvalue": null},
+    {"prop": 213, "intvalue": 2353, "stringvalue": null},
+    {"prop": 214, "intvalue": 4, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8254
+}
+,
+
+{
+  "baseModel": 12551,
+  "dummyItem": 1,
+  "modelTranslate_0": -2,
+  "modelTranslate_1": 2,
+  "model_zoom": 5328,
+  "rotation_1": 1904,
+  "rotation_0": 2039,
+  "name": "Marble staircase",
+  "extra": [
+    {"prop": 211, "intvalue": 8782, "stringvalue": null},
+    {"prop": 212, "intvalue": 5, "stringvalue": null},
+    {"prop": 213, "intvalue": 8786, "stringvalue": null},
+    {"prop": 214, "intvalue": 5, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8255
+}
+,
+
+{
+  "baseModel": 12551,
+  "dummyItem": 1,
+  "modelTranslate_0": -2,
+  "modelTranslate_1": 2,
+  "model_zoom": 5328,
+  "rotation_1": 1904,
+  "rotation_0": 2039,
+  "name": "Marble staircase",
+  "extra": [
+    {"prop": 211, "intvalue": 8782, "stringvalue": null},
+    {"prop": 212, "intvalue": 5, "stringvalue": null},
+    {"prop": 213, "intvalue": 8786, "stringvalue": null},
+    {"prop": 214, "intvalue": 5, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8256
+}
+,
+
+{
+  "baseModel": 12551,
+  "dummyItem": 1,
+  "modelTranslate_0": -2,
+  "modelTranslate_1": 2,
+  "model_zoom": 5328,
+  "rotation_1": 1904,
+  "rotation_0": 2039,
+  "name": "Marble staircase",
+  "extra": [
+    {"prop": 211, "intvalue": 8782, "stringvalue": null},
+    {"prop": 212, "intvalue": 5, "stringvalue": null},
+    {"prop": 213, "intvalue": 8786, "stringvalue": null},
+    {"prop": 214, "intvalue": 5, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8257
+}
+,
+
+{
+  "baseModel": 12554,
+  "dummyItem": 1,
+  "model_zoom": 4432,
+  "name": "Spiral staircase",
+  "extra": [
+    {"prop": 211, "intvalue": 8780, "stringvalue": null},
+    {"prop": 212, "intvalue": 10, "stringvalue": null},
+    {"prop": 213, "intvalue": 3420, "stringvalue": null},
+    {"prop": 214, "intvalue": 7, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8258
+}
+,
+
+{
+  "baseModel": 12555,
+  "dummyItem": 1,
+  "model_zoom": 4432,
+  "rotation_1": 3,
+  "rotation_0": 2000,
+  "name": "Marble spiral",
+  "extra": [
+    {"prop": 211, "intvalue": 8780, "stringvalue": null},
+    {"prop": 212, "intvalue": 10, "stringvalue": null},
+    {"prop": 213, "intvalue": 8786, "stringvalue": null},
+    {"prop": 214, "intvalue": 7, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8259
+}
+,
+
+{
+  "baseModel": 12162,
+  "dummyItem": 1,
+  "modelTranslate_0": -5,
+  "modelTranslate_1": -73,
+  "model_zoom": 2735,
+  "rotation_1": 270,
+  "rotation_0": 183,
+  "name": "Crawling hand",
+  "extra": [
+    {"prop": 211, "intvalue": 8780, "stringvalue": null},
+    {"prop": 212, "intvalue": 2, "stringvalue": null},
+    {"prop": 213, "intvalue": 7982, "stringvalue": null},
+    {"prop": 214, "intvalue": 1, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8260
+}
+,
+
+{
+  "baseModel": 12161,
+  "dummyItem": 1,
+  "modelTranslate_0": 5,
+  "modelTranslate_1": 42,
+  "model_zoom": 2281,
+  "rotation_1": 1754,
+  "rotation_0": 57,
+  "name": "Cockatrice head",
+  "extra": [
+    {"prop": 211, "intvalue": 8780, "stringvalue": null},
+    {"prop": 212, "intvalue": 2, "stringvalue": null},
+    {"prop": 213, "intvalue": 7983, "stringvalue": null},
+    {"prop": 214, "intvalue": 1, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8261
+}
+,
+
+{
+  "baseModel": 12160,
+  "dummyItem": 1,
+  "modelTranslate_0": 22,
+  "modelTranslate_1": 62,
+  "model_zoom": 1872,
+  "rotation_1": 1817,
+  "rotation_0": 54,
+  "name": "Basilisk head",
+  "extra": [
+    {"prop": 211, "intvalue": 8780, "stringvalue": null},
+    {"prop": 212, "intvalue": 2, "stringvalue": null},
+    {"prop": 213, "intvalue": 7984, "stringvalue": null},
+    {"prop": 214, "intvalue": 1, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8262
+}
+,
+
+{
+  "baseModel": 12165,
+  "dummyItem": 1,
+  "modelTranslate_0": 26,
+  "modelTranslate_1": 64,
+  "model_zoom": 1827,
+  "rotation_1": 1715,
+  "rotation_0": 57,
+  "name": "Kurask head",
+  "extra": [
+    {"prop": 211, "intvalue": 8782, "stringvalue": null},
+    {"prop": 212, "intvalue": 2, "stringvalue": null},
+    {"prop": 213, "intvalue": 7985, "stringvalue": null},
+    {"prop": 214, "intvalue": 1, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8263
+}
+,
+
+{
+  "baseModel": 12159,
+  "dummyItem": 1,
+  "modelTranslate_0": 13,
+  "modelTranslate_1": 53,
+  "model_zoom": 2128,
+  "rotation_1": 1715,
+  "rotation_0": 57,
+  "name": "Abyssal head",
+  "extra": [
+    {"prop": 211, "intvalue": 8782, "stringvalue": null},
+    {"prop": 212, "intvalue": 2, "stringvalue": null},
+    {"prop": 213, "intvalue": 7986, "stringvalue": null},
+    {"prop": 214, "intvalue": 1, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8264
+}
+,
+
+{
+  "baseModel": 12164,
+  "dummyItem": 1,
+  "modelTranslate_0": 8,
+  "modelTranslate_1": 46,
+  "model_zoom": 2151,
+  "rotation_1": 1697,
+  "rotation_0": 90,
+  "color_replacements": [[61, 8]],
+  "name": "Kbd heads",
+  "extra": [
+    {"prop": 211, "intvalue": 8782, "stringvalue": null},
+    {"prop": 212, "intvalue": 2, "stringvalue": null},
+    {"prop": 213, "intvalue": 8784, "stringvalue": null},
+    {"prop": 214, "intvalue": 2, "stringvalue": null},
+    {"prop": 215, "intvalue": 7987, "stringvalue": null},
+    {"prop": 216, "intvalue": 1, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8265
+}
+,
+
+{
+  "baseModel": 24588,
+  "dummyItem": 1,
+  "modelTranslate_0": -8,
+  "modelTranslate_1": -18,
+  "model_zoom": 2285,
+  "rotation_1": 1881,
+  "rotation_2": 69,
+  "rotation_0": 2047,
+  "name": "Kq head",
+  "extra": [
+    {"prop": 211, "intvalue": 8782, "stringvalue": null},
+    {"prop": 212, "intvalue": 2, "stringvalue": null},
+    {"prop": 213, "intvalue": 8784, "stringvalue": null},
+    {"prop": 214, "intvalue": 2, "stringvalue": null},
+    {"prop": 215, "intvalue": 7988, "stringvalue": null},
+    {"prop": 216, "intvalue": 1, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8266
+}
+,
+
+{
+  "baseModel": 12155,
+  "dummyItem": 1,
+  "modelTranslate_0": 29,
+  "modelTranslate_1": 76,
+  "model_zoom": 1616,
+  "rotation_1": 1790,
+  "rotation_0": 69,
+  "name": "Mounted bass",
+  "extra": [
+    {"prop": 211, "intvalue": 8778, "stringvalue": null},
+    {"prop": 212, "intvalue": 2, "stringvalue": null},
+    {"prop": 213, "intvalue": 7990, "stringvalue": null},
+    {"prop": 214, "intvalue": 1, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8267
+}
+,
+
+{
+  "baseModel": 12157,
+  "dummyItem": 1,
+  "modelTranslate_0": 33,
+  "modelTranslate_1": 76,
+  "model_zoom": 1616,
+  "rotation_1": 1790,
+  "rotation_0": 69,
+  "name": "Mounted swordfish",
+  "extra": [
+    {"prop": 211, "intvalue": 8780, "stringvalue": null},
+    {"prop": 212, "intvalue": 2, "stringvalue": null},
+    {"prop": 213, "intvalue": 7992, "stringvalue": null},
+    {"prop": 214, "intvalue": 1, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8268
+}
+,
+
+{
+  "baseModel": 12156,
+  "dummyItem": 1,
+  "modelTranslate_0": 33,
+  "modelTranslate_1": 66,
+  "rotation_1": 1790,
+  "rotation_0": 69,
+  "name": "Mounted shark",
+  "extra": [
+    {"prop": 211, "intvalue": 8782, "stringvalue": null},
+    {"prop": 212, "intvalue": 2, "stringvalue": null},
+    {"prop": 213, "intvalue": 7994, "stringvalue": null},
+    {"prop": 214, "intvalue": 1, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8269
+}
+,
+
+{
+  "baseModel": 12382,
+  "dummyItem": 1,
+  "modelTranslate_0": -1,
+  "modelTranslate_1": 4,
+  "model_zoom": 3024,
+  "rotation_1": 1808,
+  "rotation_0": 180,
+  "color_replacements": [[21662, 43297], [21776, 43282]],
+  "name": "Mithril armour",
+  "extra": [
+    {"prop": 211, "intvalue": 8778, "stringvalue": null},
+    {"prop": 212, "intvalue": 2, "stringvalue": null},
+    {"prop": 213, "intvalue": 1121, "stringvalue": null},
+    {"prop": 214, "intvalue": 1, "stringvalue": null},
+    {"prop": 215, "intvalue": 1085, "stringvalue": null},
+    {"prop": 216, "intvalue": 1, "stringvalue": null},
+    {"prop": 217, "intvalue": 1159, "stringvalue": null},
+    {"prop": 218, "intvalue": 1, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8270
+}
+,
+
+{
+  "baseModel": 12382,
+  "dummyItem": 1,
+  "modelTranslate_0": -1,
+  "modelTranslate_1": 4,
+  "model_zoom": 3024,
+  "rotation_1": 1808,
+  "rotation_0": 180,
+  "name": "Adamantite armour",
+  "extra": [
+    {"prop": 211, "intvalue": 8778, "stringvalue": null},
+    {"prop": 212, "intvalue": 2, "stringvalue": null},
+    {"prop": 213, "intvalue": 1123, "stringvalue": null},
+    {"prop": 214, "intvalue": 1, "stringvalue": null},
+    {"prop": 215, "intvalue": 1091, "stringvalue": null},
+    {"prop": 216, "intvalue": 1, "stringvalue": null},
+    {"prop": 217, "intvalue": 1161, "stringvalue": null},
+    {"prop": 218, "intvalue": 1, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8271
+}
+,
+
+{
+  "baseModel": 12382,
+  "dummyItem": 1,
+  "modelTranslate_0": -1,
+  "modelTranslate_1": 4,
+  "model_zoom": 3024,
+  "rotation_1": 1808,
+  "rotation_0": 180,
+  "color_replacements": [[21662, 36133], [21776, 37270]],
+  "name": "Runite armour",
+  "extra": [
+    {"prop": 211, "intvalue": 8778, "stringvalue": null},
+    {"prop": 212, "intvalue": 2, "stringvalue": null},
+    {"prop": 213, "intvalue": 1127, "stringvalue": null},
+    {"prop": 214, "intvalue": 1, "stringvalue": null},
+    {"prop": 215, "intvalue": 1093, "stringvalue": null},
+    {"prop": 216, "intvalue": 1, "stringvalue": null},
+    {"prop": 217, "intvalue": 1163, "stringvalue": null},
+    {"prop": 218, "intvalue": 1, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8272
+}
+,
+
+{
+  "baseModel": 12383,
+  "dummyItem": 1,
+  "modelTranslate_0": -1,
+  "modelTranslate_1": 4,
+  "model_zoom": 3024,
+  "rotation_1": 1808,
+  "rotation_0": 180,
+  "color_replacements": [[61, 937]],
+  "name": "Cw armour 1",
+  "extra": [
+    {"prop": 211, "intvalue": 8778, "stringvalue": null},
+    {"prop": 212, "intvalue": 2, "stringvalue": null},
+    {"prop": 213, "intvalue": 4069, "stringvalue": null},
+    {"prop": 214, "intvalue": 1, "stringvalue": null},
+    {"prop": 215, "intvalue": 4072, "stringvalue": null},
+    {"prop": 216, "intvalue": 1, "stringvalue": null},
+    {"prop": 217, "intvalue": 4071, "stringvalue": null},
+    {"prop": 218, "intvalue": 1, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8273
+}
+,
+
+{
+  "baseModel": 12383,
+  "dummyItem": 1,
+  "modelTranslate_0": -1,
+  "modelTranslate_1": 4,
+  "model_zoom": 3024,
+  "rotation_1": 1808,
+  "rotation_0": 180,
+  "color_replacements": [[937, 94], [43945, 43449]],
+  "name": "Cw armour 2",
+  "extra": [
+    {"prop": 211, "intvalue": 8778, "stringvalue": null},
+    {"prop": 212, "intvalue": 2, "stringvalue": null},
+    {"prop": 213, "intvalue": 4504, "stringvalue": null},
+    {"prop": 214, "intvalue": 1, "stringvalue": null},
+    {"prop": 215, "intvalue": 4507, "stringvalue": null},
+    {"prop": 216, "intvalue": 1, "stringvalue": null},
+    {"prop": 217, "intvalue": 4506, "stringvalue": null},
+    {"prop": 218, "intvalue": 1, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8274
+}
+,
+
+{
+  "baseModel": 12383,
+  "dummyItem": 1,
+  "modelTranslate_0": -1,
+  "modelTranslate_1": 4,
+  "model_zoom": 3024,
+  "rotation_1": 1808,
+  "rotation_0": 180,
+  "color_replacements": [[937, 10929], [43945, 43280]],
+  "name": "Cw armour 3",
+  "extra": [
+    {"prop": 211, "intvalue": 8778, "stringvalue": null},
+    {"prop": 212, "intvalue": 2, "stringvalue": null},
+    {"prop": 213, "intvalue": 4509, "stringvalue": null},
+    {"prop": 214, "intvalue": 1, "stringvalue": null},
+    {"prop": 215, "intvalue": 4512, "stringvalue": null},
+    {"prop": 216, "intvalue": 1, "stringvalue": null},
+    {"prop": 217, "intvalue": 4511, "stringvalue": null},
+    {"prop": 218, "intvalue": 1, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8275
+}
+,
+
+{
+  "baseModel": 12462,
+  "dummyItem": 1,
+  "modelTranslate_0": -1,
+  "modelTranslate_1": 4,
+  "model_zoom": 3024,
+  "rotation_1": 1808,
+  "rotation_0": 180,
+  "name": "Rune case 1",
+  "extra": [
+    {"prop": 211, "intvalue": 8780, "stringvalue": null},
+    {"prop": 212, "intvalue": 2, "stringvalue": null},
+    {"prop": 213, "intvalue": 1775, "stringvalue": null},
+    {"prop": 214, "intvalue": 2, "stringvalue": null},
+    {"prop": 215, "intvalue": 556, "stringvalue": null},
+    {"prop": 216, "intvalue": 1, "stringvalue": null},
+    {"prop": 217, "intvalue": 555, "stringvalue": null},
+    {"prop": 218, "intvalue": 1, "stringvalue": null},
+    {"prop": 219, "intvalue": 557, "stringvalue": null},
+    {"prop": 220, "intvalue": 1, "stringvalue": null},
+    {"prop": 221, "intvalue": 554, "stringvalue": null},
+    {"prop": 222, "intvalue": 1, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8276
+}
+,
+
+{
+  "baseModel": 12462,
+  "dummyItem": 1,
+  "modelTranslate_0": -1,
+  "modelTranslate_1": 4,
+  "model_zoom": 3024,
+  "rotation_1": 1808,
+  "rotation_0": 180,
+  "name": "Rune case 2",
+  "extra": [
+    {"prop": 211, "intvalue": 8780, "stringvalue": null},
+    {"prop": 212, "intvalue": 2, "stringvalue": null},
+    {"prop": 213, "intvalue": 1775, "stringvalue": null},
+    {"prop": 214, "intvalue": 2, "stringvalue": null},
+    {"prop": 215, "intvalue": 559, "stringvalue": null},
+    {"prop": 216, "intvalue": 1, "stringvalue": null},
+    {"prop": 217, "intvalue": 564, "stringvalue": null},
+    {"prop": 218, "intvalue": 1, "stringvalue": null},
+    {"prop": 219, "intvalue": 562, "stringvalue": null},
+    {"prop": 220, "intvalue": 1, "stringvalue": null},
+    {"prop": 221, "intvalue": 561, "stringvalue": null},
+    {"prop": 222, "intvalue": 1, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8277
+}
+,
+
+{
+  "baseModel": 12462,
+  "dummyItem": 1,
+  "modelTranslate_0": -1,
+  "modelTranslate_1": 4,
+  "model_zoom": 3024,
+  "rotation_1": 1808,
+  "rotation_0": 180,
+  "name": "Rune case 3",
+  "extra": [
+    {"prop": 211, "intvalue": 8780, "stringvalue": null},
+    {"prop": 212, "intvalue": 2, "stringvalue": null},
+    {"prop": 213, "intvalue": 1775, "stringvalue": null},
+    {"prop": 214, "intvalue": 2, "stringvalue": null},
+    {"prop": 215, "intvalue": 563, "stringvalue": null},
+    {"prop": 216, "intvalue": 1, "stringvalue": null},
+    {"prop": 217, "intvalue": 565, "stringvalue": null},
+    {"prop": 218, "intvalue": 1, "stringvalue": null},
+    {"prop": 219, "intvalue": 566, "stringvalue": null},
+    {"prop": 220, "intvalue": 1, "stringvalue": null},
+    {"prop": 221, "intvalue": 560, "stringvalue": null},
+    {"prop": 222, "intvalue": 1, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8278
+}
+,
+
+{
+  "baseModel": 12167,
+  "dummyItem": 1,
+  "modelTranslate_0": 48,
+  "modelTranslate_1": 100,
+  "model_zoom": 1247,
+  "rotation_1": 212,
+  "rotation_0": 78,
+  "name": "Silverlight",
+  "extra": [
+    {"prop": 211, "intvalue": 8780, "stringvalue": null},
+    {"prop": 212, "intvalue": 2, "stringvalue": null},
+    {"prop": 213, "intvalue": 2402, "stringvalue": null},
+    {"prop": 214, "intvalue": 1, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8279
+}
+,
+
+{
+  "baseModel": 12166,
+  "dummyItem": 1,
+  "modelTranslate_0": 48,
+  "modelTranslate_1": 100,
+  "model_zoom": 1247,
+  "rotation_1": 212,
+  "rotation_0": 78,
+  "name": "Excalibur",
+  "extra": [
+    {"prop": 211, "intvalue": 8780, "stringvalue": null},
+    {"prop": 212, "intvalue": 2, "stringvalue": null},
+    {"prop": 213, "intvalue": 35, "stringvalue": null},
+    {"prop": 214, "intvalue": 1, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8280
+}
+,
+
+{
+  "baseModel": 12167,
+  "dummyItem": 1,
+  "modelTranslate_0": 48,
+  "modelTranslate_1": 100,
+  "model_zoom": 1247,
+  "rotation_1": 212,
+  "rotation_0": 78,
+  "color_replacements": [[47168, 268], [11200, 24]],
+  "name": "Darklight",
+  "extra": [
+    {"prop": 211, "intvalue": 8780, "stringvalue": null},
+    {"prop": 212, "intvalue": 2, "stringvalue": null},
+    {"prop": 213, "intvalue": 6746, "stringvalue": null},
+    {"prop": 214, "intvalue": 1, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8281
+}
+,
+
+{
+  "baseModel": 12154,
+  "dummyItem": 1,
+  "modelTranslate_0": 48,
+  "modelTranslate_1": 84,
+  "model_zoom": 1887,
+  "rotation_1": 212,
+  "rotation_0": 78,
+  "name": "Anti-dragon shield",
+  "extra": [
+    {"prop": 211, "intvalue": 8780, "stringvalue": null},
+    {"prop": 212, "intvalue": 3, "stringvalue": null},
+    {"prop": 213, "intvalue": 1540, "stringvalue": null},
+    {"prop": 214, "intvalue": 1, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8282
+}
+,
+
+{
+  "baseModel": 12153,
+  "dummyItem": 1,
+  "modelTranslate_0": 39,
+  "modelTranslate_1": 99,
+  "model_zoom": 919,
+  "rotation_1": 277,
+  "rotation_0": 55,
+  "name": "Amulet of glory",
+  "extra": [
+    {"prop": 211, "intvalue": 8780, "stringvalue": null},
+    {"prop": 212, "intvalue": 3, "stringvalue": null},
+    {"prop": 213, "intvalue": 1704, "stringvalue": null},
+    {"prop": 214, "intvalue": 1, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8283
+}
+,
+
+{
+  "baseModel": 12158,
+  "dummyItem": 1,
+  "modelTranslate_0": 19,
+  "modelTranslate_1": 34,
+  "model_zoom": 2640,
+  "rotation_1": 429,
+  "rotation_2": 28,
+  "rotation_0": 21,
+  "contrast": 100,
+  "ambiance": 100,
+  "name": "Cape of legends",
+  "extra": [
+    {"prop": 211, "intvalue": 8780, "stringvalue": null},
+    {"prop": 212, "intvalue": 3, "stringvalue": null},
+    {"prop": 213, "intvalue": 1052, "stringvalue": null},
+    {"prop": 214, "intvalue": 1, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8284
+}
+,
+
+{
+  "baseModel": 12525,
+  "dummyItem": 1,
+  "modelTranslate_0": 40,
+  "modelTranslate_1": 79,
+  "model_zoom": 1375,
+  "rotation_1": 260,
+  "rotation_0": 42,
+  "contrast": 100,
+  "ambiance": 100,
+  "name": "King arthur",
+  "extra": [
+    {"prop": 211, "intvalue": 8780, "stringvalue": null},
+    {"prop": 212, "intvalue": 2, "stringvalue": null},
+    {"prop": 213, "intvalue": 7995, "stringvalue": null},
+    {"prop": 214, "intvalue": 1, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8285
+}
+,
+
+{
+  "baseModel": 12523,
+  "dummyItem": 1,
+  "modelTranslate_0": 40,
+  "modelTranslate_1": 79,
+  "model_zoom": 1375,
+  "rotation_1": 260,
+  "rotation_0": 42,
+  "contrast": 100,
+  "ambiance": 100,
+  "name": "Elena",
+  "extra": [
+    {"prop": 211, "intvalue": 8780, "stringvalue": null},
+    {"prop": 212, "intvalue": 2, "stringvalue": null},
+    {"prop": 213, "intvalue": 7996, "stringvalue": null},
+    {"prop": 214, "intvalue": 1, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8286
+}
+,
+
+{
+  "baseModel": 12524,
+  "dummyItem": 1,
+  "modelTranslate_0": 40,
+  "modelTranslate_1": 79,
+  "model_zoom": 1375,
+  "rotation_1": 260,
+  "rotation_0": 42,
+  "contrast": 100,
+  "ambiance": 100,
+  "name": "Giant dwarf",
+  "extra": [
+    {"prop": 211, "intvalue": 8780, "stringvalue": null},
+    {"prop": 212, "intvalue": 2, "stringvalue": null},
+    {"prop": 213, "intvalue": 7997, "stringvalue": null},
+    {"prop": 214, "intvalue": 1, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8287
+}
+,
+
+{
+  "baseModel": 12526,
+  "dummyItem": 1,
+  "modelTranslate_0": 40,
+  "modelTranslate_1": 79,
+  "model_zoom": 1503,
+  "rotation_1": 260,
+  "rotation_0": 42,
+  "contrast": 100,
+  "ambiance": 100,
+  "name": "Miscellanians",
+  "extra": [
+    {"prop": 211, "intvalue": 8782, "stringvalue": null},
+    {"prop": 212, "intvalue": 2, "stringvalue": null},
+    {"prop": 213, "intvalue": 7998, "stringvalue": null},
+    {"prop": 214, "intvalue": 1, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8288
+}
+,
+
+{
+  "baseModel": 12500,
+  "dummyItem": 1,
+  "modelTranslate_0": 40,
+  "modelTranslate_1": 79,
+  "model_zoom": 1631,
+  "rotation_1": 260,
+  "rotation_0": 42,
+  "contrast": 100,
+  "ambiance": 100,
+  "name": "Lumbridge",
+  "extra": [
+    {"prop": 211, "intvalue": 8780, "stringvalue": null},
+    {"prop": 212, "intvalue": 3, "stringvalue": null},
+    {"prop": 213, "intvalue": 8002, "stringvalue": null},
+    {"prop": 214, "intvalue": 1, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8289
+}
+,
+
+{
+  "baseModel": 12497,
+  "dummyItem": 1,
+  "modelTranslate_0": 40,
+  "modelTranslate_1": 75,
+  "model_zoom": 1631,
+  "rotation_1": 260,
+  "rotation_0": 42,
+  "contrast": 100,
+  "ambiance": 100,
+  "name": "The desert",
+  "extra": [
+    {"prop": 211, "intvalue": 8780, "stringvalue": null},
+    {"prop": 212, "intvalue": 3, "stringvalue": null},
+    {"prop": 213, "intvalue": 7999, "stringvalue": null},
+    {"prop": 214, "intvalue": 1, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8290
+}
+,
+
+{
+  "baseModel": 12501,
+  "dummyItem": 1,
+  "modelTranslate_0": 40,
+  "modelTranslate_1": 75,
+  "model_zoom": 1759,
+  "rotation_1": 260,
+  "rotation_0": 42,
+  "contrast": 100,
+  "ambiance": 100,
+  "name": "Morytania",
+  "extra": [
+    {"prop": 211, "intvalue": 8780, "stringvalue": null},
+    {"prop": 212, "intvalue": 3, "stringvalue": null},
+    {"prop": 213, "intvalue": 8003, "stringvalue": null},
+    {"prop": 214, "intvalue": 1, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8291
+}
+,
+
+{
+  "baseModel": 12499,
+  "dummyItem": 1,
+  "modelTranslate_0": 40,
+  "modelTranslate_1": 75,
+  "model_zoom": 1759,
+  "rotation_1": 260,
+  "rotation_0": 42,
+  "contrast": 100,
+  "ambiance": 100,
+  "name": "Karamja",
+  "extra": [
+    {"prop": 211, "intvalue": 8782, "stringvalue": null},
+    {"prop": 212, "intvalue": 3, "stringvalue": null},
+    {"prop": 213, "intvalue": 8001, "stringvalue": null},
+    {"prop": 214, "intvalue": 1, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8292
+}
+,
+
+{
+  "baseModel": 12498,
+  "dummyItem": 1,
+  "modelTranslate_0": 40,
+  "modelTranslate_1": 75,
+  "model_zoom": 1759,
+  "rotation_1": 260,
+  "rotation_0": 42,
+  "contrast": 100,
+  "ambiance": 100,
+  "name": "Isafdar",
+  "extra": [
+    {"prop": 211, "intvalue": 8782, "stringvalue": null},
+    {"prop": 212, "intvalue": 3, "stringvalue": null},
+    {"prop": 213, "intvalue": 8000, "stringvalue": null},
+    {"prop": 214, "intvalue": 1, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8293
+}
+,
+
+{
+  "baseModel": 12175,
+  "dummyItem": 1,
+  "modelTranslate_0": 42,
+  "modelTranslate_1": 58,
+  "model_zoom": 1759,
+  "rotation_1": 260,
+  "rotation_0": 42,
+  "contrast": 100,
+  "ambiance": 100,
+  "name": "Small map",
+  "extra": [
+    {"prop": 211, "intvalue": 8780, "stringvalue": null},
+    {"prop": 212, "intvalue": 2, "stringvalue": null},
+    {"prop": 213, "intvalue": 8004, "stringvalue": null},
+    {"prop": 214, "intvalue": 1, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8294
+}
+,
+
+{
+  "baseModel": 12177,
+  "dummyItem": 1,
+  "modelTranslate_0": 42,
+  "modelTranslate_1": 58,
+  "model_zoom": 1759,
+  "rotation_1": 260,
+  "rotation_0": 42,
+  "contrast": 100,
+  "ambiance": 100,
+  "name": "Medium map",
+  "extra": [
+    {"prop": 211, "intvalue": 8782, "stringvalue": null},
+    {"prop": 212, "intvalue": 3, "stringvalue": null},
+    {"prop": 213, "intvalue": 8005, "stringvalue": null},
+    {"prop": 214, "intvalue": 1, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8295
+}
+,
+
+{
+  "baseModel": 12176,
+  "dummyItem": 1,
+  "modelTranslate_0": 42,
+  "modelTranslate_1": 58,
+  "model_zoom": 1759,
+  "rotation_1": 260,
+  "rotation_0": 42,
+  "contrast": 100,
+  "ambiance": 100,
+  "name": "Large map",
+  "extra": [
+    {"prop": 211, "intvalue": 8782, "stringvalue": null},
+    {"prop": 212, "intvalue": 4, "stringvalue": null},
+    {"prop": 213, "intvalue": 8006, "stringvalue": null},
+    {"prop": 214, "intvalue": 1, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8296
+}
+,
+
+{
+  "baseModel": 12428,
+  "dummyItem": 1,
+  "modelTranslate_1": 24,
+  "model_zoom": 4304,
+  "rotation_1": 351,
+  "rotation_0": 135,
+  "name": "Oak cage",
+  "extra": [
+    {"prop": 211, "intvalue": 8778, "stringvalue": null},
+    {"prop": 212, "intvalue": 10, "stringvalue": null},
+    {"prop": 213, "intvalue": 2353, "stringvalue": null},
+    {"prop": 214, "intvalue": 2, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8297
+}
+,
+
+{
+  "baseModel": 12423,
+  "dummyItem": 1,
+  "modelTranslate_1": 24,
+  "model_zoom": 4176,
+  "rotation_1": 351,
+  "rotation_0": 135,
+  "name": "Oak and steel cage",
+  "extra": [
+    {"prop": 211, "intvalue": 8778, "stringvalue": null},
+    {"prop": 212, "intvalue": 10, "stringvalue": null},
+    {"prop": 213, "intvalue": 2353, "stringvalue": null},
+    {"prop": 214, "intvalue": 10, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8298
+}
+,
+
+{
+  "baseModel": 12438,
+  "dummyItem": 1,
+  "modelTranslate_1": 24,
+  "model_zoom": 4304,
+  "rotation_1": 351,
+  "rotation_0": 135,
+  "name": "Steel cage",
+  "extra": [
+    {"prop": 211, "intvalue": 2353, "stringvalue": null},
+    {"prop": 212, "intvalue": 20, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8299
+}
+,
+
+{
+  "baseModel": 12433,
+  "dummyItem": 1,
+  "modelTranslate_1": 24,
+  "model_zoom": 4304,
+  "rotation_1": 351,
+  "rotation_0": 135,
+  "name": "Spiked cage",
+  "extra": [
+    {"prop": 211, "intvalue": 2353, "stringvalue": null},
+    {"prop": 212, "intvalue": 25, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8300
+}
+,
+
+{
+  "baseModel": 12418,
+  "dummyItem": 1,
+  "modelTranslate_1": 24,
+  "model_zoom": 3920,
+  "rotation_1": 351,
+  "rotation_0": 135,
+  "name": "Bone cage",
+  "extra": [
+    {"prop": 211, "intvalue": 8778, "stringvalue": null},
+    {"prop": 212, "intvalue": 10, "stringvalue": null},
+    {"prop": 213, "intvalue": 526, "stringvalue": null},
+    {"prop": 214, "intvalue": 10, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8301
+}
+,
+
+{
+  "baseModel": 12518,
+  "dummyItem": 1,
+  "modelTranslate_1": -22,
+  "model_zoom": 2512,
+  "rotation_1": 1931,
+  "rotation_0": 189,
+  "name": "Spikes",
+  "extra": [
+    {"prop": 211, "intvalue": 2353, "stringvalue": null},
+    {"prop": 212, "intvalue": 20, "stringvalue": null},
+    {"prop": 213, "intvalue": 995, "stringvalue": null},
+    {"prop": 214, "intvalue": 50000, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8302
+}
+,
+
+{
+  "baseModel": 12515,
+  "dummyItem": 1,
+  "model_zoom": 3280,
+  "rotation_1": 324,
+  "rotation_0": 201,
+  "name": "Tentacle pool",
+  "extra": [
+    {"prop": 211, "intvalue": 1929, "stringvalue": null},
+    {"prop": 212, "intvalue": 20, "stringvalue": null},
+    {"prop": 213, "intvalue": 995, "stringvalue": null},
+    {"prop": 214, "intvalue": 100000, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8303
+}
+,
+
+{
+  "baseModel": 12615,
+  "dummyItem": 1,
+  "modelTranslate_0": -5,
+  "modelTranslate_1": -32,
+  "model_zoom": 2512,
+  "rotation_1": 1931,
+  "rotation_0": 189,
+  "name": "Flame pit",
+  "extra": [
+    {"prop": 211, "intvalue": 590, "stringvalue": null},
+    {"prop": 212, "intvalue": 20, "stringvalue": null},
+    {"prop": 213, "intvalue": 995, "stringvalue": null},
+    {"prop": 214, "intvalue": 125000, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8304
+}
+,
+
+{
+  "baseModel": 13224,
+  "dummyItem": 1,
+  "modelTranslate_0": 8,
+  "modelTranslate_1": -7,
+  "model_zoom": 4432,
+  "rotation_1": 1841,
+  "rotation_0": 87,
+  "name": "Rocnar",
+  "extra": [
+    {"prop": 211, "intvalue": 995, "stringvalue": null},
+    {"prop": 212, "intvalue": 150000, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8305
+}
+,
+
+{
+  "baseModel": 12495,
+  "dummyItem": 1,
+  "model_zoom": 4432,
+  "rotation_1": 1847,
+  "rotation_0": 222,
+  "name": "Oak ladder",
+  "extra": [
+    {"prop": 211, "intvalue": 8778, "stringvalue": null},
+    {"prop": 212, "intvalue": 5, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8306
+}
+,
+
+{
+  "baseModel": 12496,
+  "dummyItem": 1,
+  "model_zoom": 4432,
+  "rotation_1": 1847,
+  "rotation_0": 222,
+  "name": "Teak ladder",
+  "extra": [
+    {"prop": 211, "intvalue": 8780, "stringvalue": null},
+    {"prop": 212, "intvalue": 5, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8307
+}
+,
+
+{
+  "baseModel": 12494,
+  "dummyItem": 1,
+  "model_zoom": 4432,
+  "rotation_1": 1847,
+  "rotation_0": 222,
+  "name": "Mahogany ladder",
+  "extra": [
+    {"prop": 211, "intvalue": 8782, "stringvalue": null},
+    {"prop": 212, "intvalue": 5, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8308
+}
+,
+
+{
+  "baseModel": 12443,
+  "modelTranslate_1": -9,
+  "model_zoom": 3152,
+  "rotation_1": 1883,
+  "rotation_0": 123,
+  "dummyItem": 1,
+  "name": "Crude wooden chair",
+  "extra": [
+    {"prop": 211, "intvalue": 960, "stringvalue": null},
+    {"prop": 212, "intvalue": 2, "stringvalue": null},
+    {"prop": 213, "intvalue": 1539, "stringvalue": null},
+    {"prop": 214, "intvalue": 2, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8309
+}
+,
+
+{
+  "baseModel": 12450,
+  "modelTranslate_1": -9,
+  "model_zoom": 3152,
+  "rotation_1": 1883,
+  "rotation_0": 123,
+  "dummyItem": 1,
+  "color_replacements": [[12393, 22439]],
+  "name": "Wooden chair",
+  "extra": [
+    {"prop": 211, "intvalue": 960, "stringvalue": null},
+    {"prop": 212, "intvalue": 3, "stringvalue": null},
+    {"prop": 213, "intvalue": 1539, "stringvalue": null},
+    {"prop": 214, "intvalue": 3, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8310
+}
+,
+
+{
+  "baseModel": 12448,
+  "modelTranslate_1": -9,
+  "model_zoom": 3152,
+  "rotation_1": 1883,
+  "rotation_0": 123,
+  "dummyItem": 1,
+  "color_replacements": [[12393, 11187]],
+  "name": "Rocking chair",
+  "extra": [
+    {"prop": 211, "intvalue": 960, "stringvalue": null},
+    {"prop": 212, "intvalue": 3, "stringvalue": null},
+    {"prop": 213, "intvalue": 1539, "stringvalue": null},
+    {"prop": 214, "intvalue": 3, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8311
+}
+,
+
+{
+  "baseModel": 12446,
+  "modelTranslate_1": -9,
+  "model_zoom": 3152,
+  "rotation_1": 1883,
+  "rotation_0": 123,
+  "dummyItem": 1,
+  "color_replacements": [[12393, 6067]],
+  "name": "Oak chair",
+  "extra": [
+    {"prop": 211, "intvalue": 8778, "stringvalue": null},
+    {"prop": 212, "intvalue": 2, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8312
+}
+,
+
+{
+  "baseModel": 12447,
+  "modelTranslate_1": -9,
+  "model_zoom": 3152,
+  "rotation_1": 1883,
+  "rotation_0": 123,
+  "dummyItem": 1,
+  "color_replacements": [[12393, 947]],
+  "name": "Oak armchair",
+  "extra": [
+    {"prop": 211, "intvalue": 8778, "stringvalue": null},
+    {"prop": 212, "intvalue": 3, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8313
+}
+,
+
+{
+  "baseModel": 12449,
+  "modelTranslate_1": -9,
+  "model_zoom": 3152,
+  "rotation_1": 1883,
+  "rotation_0": 123,
+  "dummyItem": 1,
+  "color_replacements": [[12393, 55219]],
+  "name": "Teak armchair",
+  "extra": [
+    {"prop": 211, "intvalue": 8780, "stringvalue": null},
+    {"prop": 212, "intvalue": 2, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8314
+}
+,
+
+{
+  "baseModel": 12444,
+  "modelTranslate_1": -9,
+  "model_zoom": 3152,
+  "rotation_1": 1883,
+  "rotation_0": 123,
+  "dummyItem": 1,
+  "color_replacements": [[12393, 43955]],
+  "name": "Mahogany armchair",
+  "extra": [
+    {"prop": 211, "intvalue": 8782, "stringvalue": null},
+    {"prop": 212, "intvalue": 2, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8315
+}
+,
+
+{
+  "baseModel": 11818,
+  "dummyItem": 1,
+  "modelTranslate_0": -4,
+  "modelTranslate_1": -100,
+  "model_zoom": 1762,
+  "rotation_1": 1290,
+  "rotation_0": 332,
+  "name": "Brown rug",
+  "extra": [
+    {"prop": 211, "intvalue": 8790, "stringvalue": null},
+    {"prop": 212, "intvalue": 2, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8316
+}
+,
+
+{
+  "baseModel": 12390,
+  "dummyItem": 1,
+  "modelTranslate_0": -4,
+  "modelTranslate_1": -100,
+  "model_zoom": 1762,
+  "rotation_1": 1290,
+  "rotation_0": 332,
+  "name": "Rug",
+  "extra": [
+    {"prop": 211, "intvalue": 8790, "stringvalue": null},
+    {"prop": 212, "intvalue": 4, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8317
+}
+,
+
+{
+  "baseModel": 12527,
+  "dummyItem": 1,
+  "modelTranslate_0": -1,
+  "modelTranslate_1": -72,
+  "model_zoom": 2086,
+  "rotation_1": 1290,
+  "rotation_0": 332,
+  "name": "Opulent rug",
+  "extra": [
+    {"prop": 211, "intvalue": 8790, "stringvalue": null},
+    {"prop": 212, "intvalue": 4, "stringvalue": null},
+    {"prop": 213, "intvalue": 8784, "stringvalue": null},
+    {"prop": 214, "intvalue": 1, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8318
+}
+,
+
+{
+  "baseModel": 12415,
+  "modelTranslate_0": 11,
+  "modelTranslate_1": -20,
+  "model_zoom": 4304,
+  "rotation_1": 276,
+  "rotation_0": 162,
+  "dummyItem": 1,
+  "name": "Wooden bookcase",
+  "extra": [
+    {"prop": 211, "intvalue": 960, "stringvalue": null},
+    {"prop": 212, "intvalue": 4, "stringvalue": null},
+    {"prop": 213, "intvalue": 1539, "stringvalue": null},
+    {"prop": 214, "intvalue": 4, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8319
+}
+,
+
+{
+  "baseModel": 12410,
+  "modelTranslate_0": 11,
+  "modelTranslate_1": -20,
+  "model_zoom": 4304,
+  "rotation_1": 276,
+  "rotation_0": 162,
+  "dummyItem": 1,
+  "color_replacements": [[12393, 22439]],
+  "name": "Oak bookcase",
+  "extra": [
+    {"prop": 211, "intvalue": 8778, "stringvalue": null},
+    {"prop": 212, "intvalue": 3, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8320
+}
+,
+
+{
+  "baseModel": 12409,
+  "modelTranslate_0": 11,
+  "modelTranslate_1": -20,
+  "model_zoom": 4304,
+  "rotation_1": 276,
+  "rotation_0": 162,
+  "dummyItem": 1,
+  "color_replacements": [[12393, 11187]],
+  "name": "Mahogany b'kcase",
+  "extra": [
+    {"prop": 211, "intvalue": 8782, "stringvalue": null},
+    {"prop": 212, "intvalue": 3, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8321
+}
+,
+
+{
+  "baseModel": 12453,
+  "dummyItem": 1,
+  "modelTranslate_0": 23,
+  "modelTranslate_1": 100,
+  "rotation_1": 345,
+  "rotation_0": 99,
+  "name": "Torn curtains",
+  "extra": [
+    {"prop": 211, "intvalue": 960, "stringvalue": null},
+    {"prop": 212, "intvalue": 3, "stringvalue": null},
+    {"prop": 213, "intvalue": 1539, "stringvalue": null},
+    {"prop": 214, "intvalue": 3, "stringvalue": null},
+    {"prop": 215, "intvalue": 8790, "stringvalue": null},
+    {"prop": 216, "intvalue": 3, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8322
+}
+,
+
+{
+  "baseModel": 12451,
+  "dummyItem": 1,
+  "modelTranslate_0": 24,
+  "modelTranslate_1": 100,
+  "rotation_1": 345,
+  "rotation_0": 99,
+  "name": "Curtains",
+  "extra": [
+    {"prop": 211, "intvalue": 8778, "stringvalue": null},
+    {"prop": 212, "intvalue": 3, "stringvalue": null},
+    {"prop": 213, "intvalue": 8790, "stringvalue": null},
+    {"prop": 214, "intvalue": 3, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8323
+}
+,
+
+{
+  "baseModel": 12452,
+  "dummyItem": 1,
+  "modelTranslate_0": 24,
+  "modelTranslate_1": 100,
+  "rotation_1": 345,
+  "rotation_0": 99,
+  "name": "Opulent curtains",
+  "extra": [
+    {"prop": 211, "intvalue": 8780, "stringvalue": null},
+    {"prop": 212, "intvalue": 3, "stringvalue": null},
+    {"prop": 213, "intvalue": 8790, "stringvalue": null},
+    {"prop": 214, "intvalue": 3, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8324
+}
+,
+
+{
+  "baseModel": 12610,
+  "dummyItem": 1,
+  "modelTranslate_0": 14,
+  "modelTranslate_1": -10,
+  "model_zoom": 3920,
+  "rotation_1": 279,
+  "rotation_0": 105,
+  "name": "Clay fireplace",
+  "extra": [
+    {"prop": 211, "intvalue": 1761, "stringvalue": null},
+    {"prop": 212, "intvalue": 3, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8325
+}
+,
+
+{
+  "baseModel": 12612,
+  "dummyItem": 1,
+  "modelTranslate_0": -8,
+  "modelTranslate_1": -12,
+  "model_zoom": 4816,
+  "rotation_1": 279,
+  "rotation_0": 105,
+  "name": "Stone fireplace",
+  "extra": [
+    {"prop": 211, "intvalue": 3420, "stringvalue": null},
+    {"prop": 212, "intvalue": 2, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8326
+}
+,
+
+{
+  "baseModel": 12614,
+  "dummyItem": 1,
+  "modelTranslate_0": -8,
+  "modelTranslate_1": -12,
+  "model_zoom": 4816,
+  "rotation_1": 279,
+  "rotation_0": 105,
+  "name": "Marble fireplace",
+  "extra": [
+    {"prop": 211, "intvalue": 8786, "stringvalue": null},
+    {"prop": 212, "intvalue": 1, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8327
+}
+,
+
+{
+  "baseModel": 11240,
+  "dummyItem": 1,
+  "modelTranslate_1": -20,
+  "model_zoom": 4681,
+  "rotation_1": 1898,
+  "rotation_0": 108,
+  "name": "Teak portal",
+  "extra": [
+    {"prop": 211, "intvalue": 8780, "stringvalue": null},
+    {"prop": 212, "intvalue": 3, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8328
+}
+,
+
+{
+  "baseModel": 11235,
+  "dummyItem": 1,
+  "modelTranslate_1": -20,
+  "model_zoom": 4681,
+  "rotation_1": 1898,
+  "rotation_0": 108,
+  "name": "Mahogany portal",
+  "extra": [
+    {"prop": 211, "intvalue": 8782, "stringvalue": null},
+    {"prop": 212, "intvalue": 3, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8329
+}
+,
+
+{
+  "baseModel": 11237,
+  "dummyItem": 1,
+  "modelTranslate_1": -20,
+  "model_zoom": 4681,
+  "rotation_1": 1898,
+  "rotation_0": 108,
+  "name": "Marble portal",
+  "extra": [
+    {"prop": 211, "intvalue": 8786, "stringvalue": null},
+    {"prop": 212, "intvalue": 3, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8330
+}
+,
+
+{
+  "baseModel": 13199,
+  "dummyItem": 1,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": -65,
+  "model_zoom": 5459,
+  "rotation_1": 1877,
+  "rotation_0": 225,
+  "name": "Teleport focus",
+  "extra": [
+    {"prop": 211, "intvalue": 3420, "stringvalue": null},
+    {"prop": 212, "intvalue": 2, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8331
+}
+,
+
+{
+  "baseModel": 13200,
+  "dummyItem": 1,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": -65,
+  "model_zoom": 5459,
+  "rotation_1": 1877,
+  "rotation_0": 225,
+  "name": "Greater focus",
+  "extra": [
+    {"prop": 211, "intvalue": 8786, "stringvalue": null},
+    {"prop": 212, "intvalue": 1, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8332
+}
+,
+
+{
+  "baseModel": 13192,
+  "dummyItem": 1,
+  "modelTranslate_0": 1,
+  "modelTranslate_1": -65,
+  "model_zoom": 5459,
+  "rotation_1": 1877,
+  "rotation_0": 225,
+  "name": "Scrying pool",
+  "extra": [
+    {"prop": 211, "intvalue": 8786, "stringvalue": null},
+    {"prop": 212, "intvalue": 4, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8333
+}
+,
+
+{
+  "baseModel": 12511,
+  "ground_actions_0": "Study",
+  "ground_actions_4": "Remove",
+  "modelTranslate_0": 9,
+  "modelTranslate_1": 5,
+  "model_zoom": 2512,
+  "rotation_1": 1880,
+  "rotation_0": 165,
+  "dummyItem": 1,
+  "name": "Oak lectern",
+  "extra": [
+    {"prop": 211, "intvalue": 8778, "stringvalue": null},
+    {"prop": 212, "intvalue": 1, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8334
+}
+,
+
+{
+  "baseModel": 12509,
+  "ground_actions_0": "Study",
+  "ground_actions_4": "Remove",
+  "modelTranslate_0": 9,
+  "modelTranslate_1": 5,
+  "model_zoom": 2512,
+  "rotation_1": 1880,
+  "rotation_0": 165,
+  "dummyItem": 1,
+  "name": "Eagle lectern",
+  "extra": [
+    {"prop": 211, "intvalue": 8778, "stringvalue": null},
+    {"prop": 212, "intvalue": 2, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8335
+}
+,
+
+{
+  "baseModel": 12506,
+  "ground_actions_0": "Study",
+  "ground_actions_4": "Remove",
+  "modelTranslate_0": 9,
+  "modelTranslate_1": 5,
+  "model_zoom": 2512,
+  "rotation_1": 1880,
+  "rotation_0": 165,
+  "dummyItem": 1,
+  "name": "Demon lectern",
+  "extra": [
+    {"prop": 211, "intvalue": 8778, "stringvalue": null},
+    {"prop": 212, "intvalue": 2, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8336
+}
+,
+
+{
+  "baseModel": 12510,
+  "ground_actions_0": "Study",
+  "ground_actions_4": "Remove",
+  "modelTranslate_0": 9,
+  "modelTranslate_1": 5,
+  "model_zoom": 2512,
+  "rotation_1": 1880,
+  "rotation_0": 165,
+  "dummyItem": 1,
+  "name": "Teak eagle lectern",
+  "extra": [
+    {"prop": 211, "intvalue": 8780, "stringvalue": null},
+    {"prop": 212, "intvalue": 2, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8337
+}
+,
+
+{
+  "baseModel": 12507,
+  "ground_actions_0": "Study",
+  "ground_actions_4": "Remove",
+  "modelTranslate_0": 9,
+  "modelTranslate_1": 5,
+  "model_zoom": 2512,
+  "rotation_1": 1880,
+  "rotation_0": 165,
+  "dummyItem": 1,
+  "name": "Teak demon lectern",
+  "extra": [
+    {"prop": 211, "intvalue": 8780, "stringvalue": null},
+    {"prop": 212, "intvalue": 2, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8338
+}
+,
+
+{
+  "baseModel": 12508,
+  "ground_actions_0": "Study",
+  "ground_actions_4": "Remove",
+  "modelTranslate_0": 9,
+  "modelTranslate_1": 5,
+  "model_zoom": 2512,
+  "rotation_1": 1880,
+  "rotation_0": 165,
+  "dummyItem": 1,
+  "name": "Mahogany eagle",
+  "extra": [
+    {"prop": 211, "intvalue": 8782, "stringvalue": null},
+    {"prop": 212, "intvalue": 2, "stringvalue": null},
+    {"prop": 213, "intvalue": 8784, "stringvalue": null},
+    {"prop": 214, "intvalue": 1, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8339
+}
+,
+
+{
+  "baseModel": 12505,
+  "ground_actions_0": "Study",
+  "ground_actions_4": "Remove",
+  "modelTranslate_0": 9,
+  "modelTranslate_1": 5,
+  "model_zoom": 2512,
+  "rotation_1": 1880,
+  "rotation_0": 165,
+  "dummyItem": 1,
+  "name": "Mahogany demon",
+  "extra": [
+    {"prop": 211, "intvalue": 8782, "stringvalue": null},
+    {"prop": 212, "intvalue": 2, "stringvalue": null},
+    {"prop": 213, "intvalue": 8784, "stringvalue": null},
+    {"prop": 214, "intvalue": 1, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8340
+}
+,
+
+{
+  "baseModel": 12485,
+  "ground_actions_4": "Remove",
+  "modelTranslate_0": -4,
+  "modelTranslate_1": -100,
+  "model_zoom": 5456,
+  "rotation_1": 1687,
+  "rotation_0": 198,
+  "dummyItem": 1,
+  "name": "Globe",
+  "extra": [
+    {"prop": 211, "intvalue": 8778, "stringvalue": null},
+    {"prop": 212, "intvalue": 3, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8341
+}
+,
+
+{
+  "baseModel": 12486,
+  "ground_actions_4": "Remove",
+  "modelTranslate_0": 2,
+  "modelTranslate_1": -93,
+  "model_zoom": 6096,
+  "rotation_1": 1671,
+  "rotation_0": 155,
+  "dummyItem": 1,
+  "name": "Ornamental globe",
+  "extra": [
+    {"prop": 211, "intvalue": 8780, "stringvalue": null},
+    {"prop": 212, "intvalue": 3, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8342
+}
+,
+
+{
+  "baseModel": 12484,
+  "ground_actions_4": "Remove",
+  "modelTranslate_0": 2,
+  "modelTranslate_1": -93,
+  "model_zoom": 6096,
+  "rotation_1": 1671,
+  "rotation_0": 155,
+  "dummyItem": 1,
+  "name": "Lunar globe",
+  "extra": [
+    {"prop": 211, "intvalue": 8780, "stringvalue": null},
+    {"prop": 212, "intvalue": 3, "stringvalue": null},
+    {"prop": 213, "intvalue": 8784, "stringvalue": null},
+    {"prop": 214, "intvalue": 1, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8343
+}
+,
+
+{
+  "baseModel": 12483,
+  "ground_actions_4": "Remove",
+  "modelTranslate_0": 2,
+  "modelTranslate_1": -93,
+  "model_zoom": 6096,
+  "rotation_1": 1671,
+  "rotation_0": 155,
+  "dummyItem": 1,
+  "name": "Celestial globe",
+  "extra": [
+    {"prop": 211, "intvalue": 8780, "stringvalue": null},
+    {"prop": 212, "intvalue": 3, "stringvalue": null},
+    {"prop": 213, "intvalue": 8784, "stringvalue": null},
+    {"prop": 214, "intvalue": 1, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8344
+}
+,
+
+{
+  "baseModel": 12482,
+  "ground_actions_4": "Remove",
+  "modelTranslate_0": 2,
+  "modelTranslate_1": -93,
+  "model_zoom": 6096,
+  "rotation_1": 1671,
+  "rotation_0": 155,
+  "dummyItem": 1,
+  "name": "Armillary sphere",
+  "extra": [
+    {"prop": 211, "intvalue": 8782, "stringvalue": null},
+    {"prop": 212, "intvalue": 2, "stringvalue": null},
+    {"prop": 213, "intvalue": 8784, "stringvalue": null},
+    {"prop": 214, "intvalue": 2, "stringvalue": null},
+    {"prop": 215, "intvalue": 2353, "stringvalue": null},
+    {"prop": 216, "intvalue": 4, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8345
+}
+,
+
+{
+  "baseModel": 12971,
+  "ground_actions_4": "Remove",
+  "modelTranslate_1": -93,
+  "model_zoom": 6352,
+  "rotation_1": 1671,
+  "rotation_0": 155,
+  "dummyItem": 1,
+  "name": "Small orrery",
+  "extra": [
+    {"prop": 211, "intvalue": 8782, "stringvalue": null},
+    {"prop": 212, "intvalue": 3, "stringvalue": null},
+    {"prop": 213, "intvalue": 8784, "stringvalue": null},
+    {"prop": 214, "intvalue": 3, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8346
+}
+,
+
+{
+  "baseModel": 12970,
+  "ground_actions_4": "Remove",
+  "modelTranslate_1": -93,
+  "model_zoom": 6864,
+  "rotation_1": 1671,
+  "rotation_0": 124,
+  "dummyItem": 1,
+  "name": "Large orrery",
+  "extra": [
+    {"prop": 211, "intvalue": 8782, "stringvalue": null},
+    {"prop": 212, "intvalue": 3, "stringvalue": null},
+    {"prop": 213, "intvalue": 8784, "stringvalue": null},
+    {"prop": 214, "intvalue": 5, "stringvalue": null},
+    {"prop": 213, "intvalue": 8786, "stringvalue": null},
+    {"prop": 214, "intvalue": 2, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8347
+}
+,
+
+{
+  "baseModel": 13135,
+  "ground_actions_4": "Remove",
+  "modelTranslate_0": -3,
+  "modelTranslate_1": -23,
+  "model_zoom": 3024,
+  "rotation_1": 1937,
+  "rotation_0": 126,
+  "dummyItem": 1,
+  "name": "Wooden telescope",
+  "extra": [
+    {"prop": 211, "intvalue": 8778, "stringvalue": null},
+    {"prop": 212, "intvalue": 2, "stringvalue": null},
+    {"prop": 213, "intvalue": 1775, "stringvalue": null},
+    {"prop": 214, "intvalue": 1, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8348
+}
+,
+
+{
+  "baseModel": 13136,
+  "ground_actions_4": "Remove",
+  "modelTranslate_0": -3,
+  "modelTranslate_1": -23,
+  "model_zoom": 3024,
+  "rotation_1": 1937,
+  "rotation_0": 126,
+  "dummyItem": 1,
+  "color_replacements": [[12393, 22439]],
+  "name": "Teak telescope",
+  "extra": [
+    {"prop": 211, "intvalue": 8780, "stringvalue": null},
+    {"prop": 212, "intvalue": 2, "stringvalue": null},
+    {"prop": 213, "intvalue": 1775, "stringvalue": null},
+    {"prop": 214, "intvalue": 1, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8349
+}
+,
+
+{
+  "baseModel": 13134,
+  "ground_actions_4": "Remove",
+  "modelTranslate_0": -3,
+  "modelTranslate_1": -23,
+  "model_zoom": 3024,
+  "rotation_1": 1937,
+  "rotation_0": 126,
+  "dummyItem": 1,
+  "color_replacements": [[12393, 11187]],
+  "name": "Mahogany 'scope",
+  "extra": [
+    {"prop": 211, "intvalue": 8782, "stringvalue": null},
+    {"prop": 212, "intvalue": 2, "stringvalue": null},
+    {"prop": 213, "intvalue": 1775, "stringvalue": null},
+    {"prop": 214, "intvalue": 1, "stringvalue": null},
+    {"prop": 213, "intvalue": 8784, "stringvalue": null},
+    {"prop": 214, "intvalue": 1, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8350
+}
+,
+
+{
+  "baseModel": 12952,
+  "modelTranslate_0": 2,
+  "modelTranslate_1": -13,
+  "model_zoom": 2896,
+  "rotation_1": 1661,
+  "rotation_0": 156,
+  "dummyItem": 1,
+  "name": "Crystal ball",
+  "extra": [
+    {"prop": 211, "intvalue": 8780, "stringvalue": null},
+    {"prop": 212, "intvalue": 3, "stringvalue": null},
+    {"prop": 213, "intvalue": 567, "stringvalue": null},
+    {"prop": 214, "intvalue": 1, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8351
+}
+,
+
+{
+  "baseModel": 12951,
+  "modelTranslate_0": -3,
+  "modelTranslate_1": -39,
+  "model_zoom": 3152,
+  "rotation_1": 1604,
+  "rotation_0": 99,
+  "dummyItem": 1,
+  "name": "Elemental sphere",
+  "extra": [
+    {"prop": 211, "intvalue": 8780, "stringvalue": null},
+    {"prop": 212, "intvalue": 3, "stringvalue": null},
+    {"prop": 213, "intvalue": 567, "stringvalue": null},
+    {"prop": 214, "intvalue": 1, "stringvalue": null},
+    {"prop": 215, "intvalue": 8784, "stringvalue": null},
+    {"prop": 216, "intvalue": 1, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8352
+}
+,
+
+{
+  "baseModel": 12953,
+  "modelTranslate_0": 4,
+  "modelTranslate_1": -37,
+  "model_zoom": 3536,
+  "rotation_1": 1628,
+  "rotation_0": 84,
+  "dummyItem": 1,
+  "name": "Crystal of power",
+  "extra": [
+    {"prop": 211, "intvalue": 8782, "stringvalue": null},
+    {"prop": 212, "intvalue": 2, "stringvalue": null},
+    {"prop": 213, "intvalue": 567, "stringvalue": null},
+    {"prop": 214, "intvalue": 1, "stringvalue": null},
+    {"prop": 215, "intvalue": 8784, "stringvalue": null},
+    {"prop": 216, "intvalue": 2, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8353
+}
+,
+
+{
+  "baseModel": 12168,
+  "ambiance": 30,
+  "contrast": 20,
+  "dummyItem": 1,
+  "modelTranslate_0": 28,
+  "modelTranslate_1": 100,
+  "model_zoom": 1892,
+  "rotation_1": 315,
+  "rotation_0": 89,
+  "name": "Alchemical chart",
+  "extra": [
+    {"prop": 211, "intvalue": 8790, "stringvalue": null},
+    {"prop": 212, "intvalue": 2, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8354
+}
+,
+
+{
+  "baseModel": 12169,
+  "ambiance": 30,
+  "contrast": 20,
+  "dummyItem": 1,
+  "modelTranslate_0": 28,
+  "modelTranslate_1": 100,
+  "model_zoom": 1892,
+  "rotation_1": 315,
+  "rotation_0": 89,
+  "name": "Astronomical chart",
+  "extra": [
+    {"prop": 211, "intvalue": 8790, "stringvalue": null},
+    {"prop": 212, "intvalue": 3, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8355
+}
+,
+
+{
+  "baseModel": 12170,
+  "ambiance": 30,
+  "contrast": 20,
+  "dummyItem": 1,
+  "modelTranslate_0": 28,
+  "modelTranslate_1": 100,
+  "model_zoom": 1892,
+  "rotation_1": 315,
+  "rotation_0": 89,
+  "name": "Infernal chart",
+  "extra": [
+    {"prop": 211, "intvalue": 8790, "stringvalue": null},
+    {"prop": 212, "intvalue": 4, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8356
+}
+,
+
+{
+  "baseModel": 12595,
+  "dummyItem": 1,
+  "modelTranslate_0": -3,
+  "modelTranslate_1": -18,
+  "model_zoom": 3664,
+  "rotation_1": 1886,
+  "rotation_0": 159,
+  "name": "Oak throne",
+  "extra": [
+    {"prop": 211, "intvalue": 8778, "stringvalue": null},
+    {"prop": 212, "intvalue": 5, "stringvalue": null},
+    {"prop": 213, "intvalue": 8786, "stringvalue": null},
+    {"prop": 214, "intvalue": 1, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8357
+}
+,
+
+{
+  "baseModel": 12596,
+  "dummyItem": 1,
+  "modelTranslate_1": -18,
+  "model_zoom": 3664,
+  "rotation_1": 1886,
+  "rotation_0": 159,
+  "name": "Teak throne",
+  "extra": [
+    {"prop": 211, "intvalue": 8780, "stringvalue": null},
+    {"prop": 212, "intvalue": 5, "stringvalue": null},
+    {"prop": 213, "intvalue": 8786, "stringvalue": null},
+    {"prop": 214, "intvalue": 2, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8358
+}
+,
+
+{
+  "baseModel": 12593,
+  "dummyItem": 1,
+  "modelTranslate_1": -26,
+  "model_zoom": 4048,
+  "rotation_1": 1886,
+  "rotation_0": 159,
+  "name": "Mahogany throne",
+  "extra": [
+    {"prop": 211, "intvalue": 8782, "stringvalue": null},
+    {"prop": 212, "intvalue": 5, "stringvalue": null},
+    {"prop": 213, "intvalue": 8786, "stringvalue": null},
+    {"prop": 214, "intvalue": 3, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8359
+}
+,
+
+{
+  "baseModel": 12594,
+  "dummyItem": 1,
+  "modelTranslate_1": -26,
+  "model_zoom": 4048,
+  "rotation_1": 1886,
+  "rotation_0": 159,
+  "name": "Gilded throne",
+  "extra": [
+    {"prop": 211, "intvalue": 8782, "stringvalue": null},
+    {"prop": 212, "intvalue": 5, "stringvalue": null},
+    {"prop": 213, "intvalue": 8786, "stringvalue": null},
+    {"prop": 214, "intvalue": 2, "stringvalue": null},
+    {"prop": 215, "intvalue": 8784, "stringvalue": null},
+    {"prop": 216, "intvalue": 3, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8360
+}
+,
+
+{
+  "baseModel": 12589,
+  "dummyItem": 1,
+  "modelTranslate_0": -5,
+  "modelTranslate_1": -26,
+  "model_zoom": 3408,
+  "rotation_1": 1949,
+  "rotation_0": 141,
+  "name": "Skeleton throne",
+  "extra": [
+    {"prop": 211, "intvalue": 8788, "stringvalue": null},
+    {"prop": 212, "intvalue": 5, "stringvalue": null},
+    {"prop": 213, "intvalue": 8786, "stringvalue": null},
+    {"prop": 214, "intvalue": 4, "stringvalue": null},
+    {"prop": 215, "intvalue": 526, "stringvalue": null},
+    {"prop": 216, "intvalue": 5, "stringvalue": null},
+    {"prop": 217, "intvalue": 964, "stringvalue": null},
+    {"prop": 218, "intvalue": 2, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8361
+}
+,
+
+{
+  "baseModel": 12590,
+  "dummyItem": 1,
+  "modelTranslate_0": -5,
+  "modelTranslate_1": -99,
+  "model_zoom": 3408,
+  "rotation_1": 1955,
+  "rotation_0": 219,
+  "name": "Crystal throne",
+  "extra": [
+    {"prop": 211, "intvalue": 8788, "stringvalue": null},
+    {"prop": 212, "intvalue": 15, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8362
+}
+,
+
+{
+  "baseModel": 12592,
+  "dummyItem": 1,
+  "modelTranslate_1": -35,
+  "model_zoom": 3664,
+  "rotation_1": 1886,
+  "rotation_0": 159,
+  "name": "Demonic throne",
+  "extra": [
+    {"prop": 211, "intvalue": 8788, "stringvalue": null},
+    {"prop": 212, "intvalue": 25, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8363
+}
+,
+
+{
+  "baseModel": 13123,
+  "dummyItem": 1,
+  "modelTranslate_1": -20,
+  "model_zoom": 3124,
+  "rotation_1": 1700,
+  "rotation_0": 153,
+  "name": "Oak lever",
+  "extra": [
+    {"prop": 211, "intvalue": 8778, "stringvalue": null},
+    {"prop": 212, "intvalue": 5, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8364
+}
+,
+
+{
+  "baseModel": 13124,
+  "dummyItem": 1,
+  "modelTranslate_1": -20,
+  "model_zoom": 3124,
+  "rotation_1": 1700,
+  "rotation_0": 153,
+  "name": "Teak lever",
+  "extra": [
+    {"prop": 211, "intvalue": 8780, "stringvalue": null},
+    {"prop": 212, "intvalue": 5, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8365
+}
+,
+
+{
+  "baseModel": 13122,
+  "dummyItem": 1,
+  "modelTranslate_1": -20,
+  "model_zoom": 3124,
+  "rotation_1": 1700,
+  "rotation_0": 153,
+  "name": "Mahogany lever",
+  "extra": [
+    {"prop": 211, "intvalue": 8782, "stringvalue": null},
+    {"prop": 212, "intvalue": 5, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8366
+}
+,
+
+{
+  "baseModel": 12604,
+  "dummyItem": 1,
+  "modelTranslate_0": -1,
+  "modelTranslate_1": -20,
+  "model_zoom": 3152,
+  "rotation_1": 1814,
+  "rotation_0": 228,
+  "name": "Trapdoor",
+  "extra": [
+    {"prop": 211, "intvalue": 8778, "stringvalue": null},
+    {"prop": 212, "intvalue": 5, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8367
+}
+,
+
+{
+  "baseModel": 12606,
+  "dummyItem": 1,
+  "modelTranslate_0": -1,
+  "modelTranslate_1": -20,
+  "model_zoom": 3152,
+  "rotation_1": 1814,
+  "rotation_0": 228,
+  "name": "Trapdoor",
+  "extra": [
+    {"prop": 211, "intvalue": 8780, "stringvalue": null},
+    {"prop": 212, "intvalue": 5, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8368
+}
+,
+
+{
+  "baseModel": 12602,
+  "dummyItem": 1,
+  "modelTranslate_0": -1,
+  "modelTranslate_1": -20,
+  "model_zoom": 3152,
+  "rotation_1": 1814,
+  "rotation_0": 228,
+  "name": "Trapdoor",
+  "extra": [
+    {"prop": 211, "intvalue": 8782, "stringvalue": null},
+    {"prop": 212, "intvalue": 5, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8369
+}
+,
+
+{
+  "baseModel": 12477,
+  "dummyItem": 1,
+  "model_zoom": 3152,
+  "rotation_1": 1820,
+  "rotation_0": 192,
+  "name": "Floor decoration",
+  "extra": [
+    {"prop": 211, "intvalue": 8782, "stringvalue": null},
+    {"prop": 212, "intvalue": 5, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8370
+}
+,
+
+{
+  "baseModel": 12911,
+  "dummyItem": 1,
+  "modelTranslate_1": -5,
+  "model_zoom": 6822,
+  "rotation_1": 1838,
+  "rotation_0": 180,
+  "name": "Steel cage",
+  "extra": [
+    {"prop": 211, "intvalue": 8782, "stringvalue": null},
+    {"prop": 212, "intvalue": 5, "stringvalue": null},
+    {"prop": 213, "intvalue": 2353, "stringvalue": null},
+    {"prop": 214, "intvalue": 20, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8371
+}
+,
+
+{
+  "baseModel": 12602,
+  "dummyItem": 1,
+  "modelTranslate_0": -1,
+  "modelTranslate_1": -20,
+  "model_zoom": 3152,
+  "rotation_1": 1814,
+  "rotation_0": 228,
+  "name": "Trapdoor",
+  "extra": [
+    {"prop": 211, "intvalue": 8782, "stringvalue": null},
+    {"prop": 212, "intvalue": 5, "stringvalue": null},
+    {"prop": 213, "intvalue": 8792, "stringvalue": null},
+    {"prop": 214, "intvalue": 10, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8372
+}
+,
+
+{
+  "baseModel": 13126,
+  "dummyItem": 1,
+  "modelTranslate_0": -1,
+  "modelTranslate_1": 15,
+  "model_zoom": 3408,
+  "rotation_1": 2012,
+  "rotation_0": 165,
+  "name": "Lesser magic cage",
+  "extra": [
+    {"prop": 211, "intvalue": 8782, "stringvalue": null},
+    {"prop": 212, "intvalue": 5, "stringvalue": null},
+    {"prop": 213, "intvalue": 8788, "stringvalue": null},
+    {"prop": 214, "intvalue": 2, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8373
+}
+,
+
+{
+  "baseModel": 13125,
+  "dummyItem": 1,
+  "modelTranslate_1": -37,
+  "model_zoom": 4304,
+  "rotation_1": 1976,
+  "rotation_0": 141,
+  "name": "Greater magic cage",
+  "extra": [
+    {"prop": 211, "intvalue": 8782, "stringvalue": null},
+    {"prop": 212, "intvalue": 5, "stringvalue": null},
+    {"prop": 213, "intvalue": 8788, "stringvalue": null},
+    {"prop": 214, "intvalue": 4, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8374
+}
+,
+
+{
+  "baseModel": 10557,
+  "dummyItem": 1,
+  "modelTranslate_0": -5,
+  "model_zoom": 4816,
+  "rotation_1": 1850,
+  "rotation_0": 177,
+  "name": "Wooden workbench",
+  "extra": [
+    {"prop": 211, "intvalue": 960, "stringvalue": null},
+    {"prop": 212, "intvalue": 5, "stringvalue": null},
+    {"prop": 213, "intvalue": 1539, "stringvalue": null},
+    {"prop": 214, "intvalue": 5, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8375
+}
+,
+
+{
+  "baseModel": 10556,
+  "dummyItem": 1,
+  "modelTranslate_0": -5,
+  "model_zoom": 4816,
+  "rotation_1": 1850,
+  "rotation_0": 177,
+  "name": "Oak workbench",
+  "extra": [
+    {"prop": 211, "intvalue": 8778, "stringvalue": null},
+    {"prop": 212, "intvalue": 5, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8376
+}
+,
+
+{
+  "baseModel": 12188,
+  "dummyItem": 1,
+  "modelTranslate_0": -5,
+  "model_zoom": 4816,
+  "rotation_1": 1850,
+  "rotation_0": 177,
+  "name": "Steel framed bench",
+  "extra": [
+    {"prop": 211, "intvalue": 8778, "stringvalue": null},
+    {"prop": 212, "intvalue": 6, "stringvalue": null},
+    {"prop": 213, "intvalue": 2353, "stringvalue": null},
+    {"prop": 214, "intvalue": 4, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8377
+}
+,
+
+{
+  "baseModel": 12188,
+  "dummyItem": 1,
+  "model_zoom": 4048,
+  "rotation_1": 1853,
+  "rotation_0": 174,
+  "name": "Bench with vice",
+  "extra": [
+    {"prop": 211, "intvalue": 8778, "stringvalue": null},
+    {"prop": 212, "intvalue": 2, "stringvalue": null},
+    {"prop": 213, "intvalue": 2353, "stringvalue": null},
+    {"prop": 214, "intvalue": 1, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8378
+}
+,
+
+{
+  "baseModel": 12188,
+  "dummyItem": 1,
+  "model_zoom": 4048,
+  "rotation_1": 1853,
+  "rotation_0": 174,
+  "name": "Bench with lathe",
+  "extra": [
+    {"prop": 211, "intvalue": 8778, "stringvalue": null},
+    {"prop": 212, "intvalue": 2, "stringvalue": null},
+    {"prop": 213, "intvalue": 2353, "stringvalue": null},
+    {"prop": 214, "intvalue": 1, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8379
+}
+,
+
+{
+  "baseModel": 12184,
+  "dummyItem": 1,
+  "modelTranslate_1": -11,
+  "model_zoom": 3920,
+  "rotation_1": 1868,
+  "rotation_0": 210,
+  "name": "Crafting table 1",
+  "extra": [
+    {"prop": 211, "intvalue": 8778, "stringvalue": null},
+    {"prop": 212, "intvalue": 4, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8380
+}
+,
+
+{
+  "baseModel": 12184,
+  "dummyItem": 1,
+  "modelTranslate_1": -11,
+  "model_zoom": 3920,
+  "rotation_1": 1868,
+  "rotation_0": 210,
+  "name": "Crafting table 2",
+  "extra": [
+    {"prop": 211, "intvalue": 1775, "stringvalue": null},
+    {"prop": 212, "intvalue": 1, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8381
+}
+,
+
+{
+  "baseModel": 12184,
+  "dummyItem": 1,
+  "modelTranslate_1": -11,
+  "model_zoom": 3920,
+  "rotation_1": 1868,
+  "rotation_0": 210,
+  "name": "Crafting table 3",
+  "extra": [
+    {"prop": 211, "intvalue": 1775, "stringvalue": null},
+    {"prop": 212, "intvalue": 2, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8382
+}
+,
+
+{
+  "baseModel": 12185,
+  "dummyItem": 1,
+  "modelTranslate_1": -11,
+  "model_zoom": 3920,
+  "rotation_1": 1868,
+  "rotation_0": 210,
+  "name": "Crafting table 4",
+  "extra": [
+    {"prop": 211, "intvalue": 8778, "stringvalue": null},
+    {"prop": 212, "intvalue": 2, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8383
+}
+,
+
+{
+  "baseModel": 12597,
+  "dummyItem": 1,
+  "modelTranslate_0": -7,
+  "modelTranslate_1": 31,
+  "model_zoom": 2151,
+  "rotation_1": 552,
+  "rotation_0": 18,
+  "name": "Tool store 1",
+  "extra": [
+    {"prop": 211, "intvalue": 8778, "stringvalue": null},
+    {"prop": 212, "intvalue": 2, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8384
+}
+,
+
+{
+  "baseModel": 12598,
+  "dummyItem": 1,
+  "modelTranslate_0": 5,
+  "modelTranslate_1": 12,
+  "model_zoom": 2086,
+  "rotation_1": 595,
+  "rotation_2": 14,
+  "rotation_0": 14,
+  "name": "Tool store 2",
+  "extra": [
+    {"prop": 211, "intvalue": 8778, "stringvalue": null},
+    {"prop": 212, "intvalue": 2, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8385
+}
+,
+
+{
+  "baseModel": 12599,
+  "dummyItem": 1,
+  "modelTranslate_0": 18,
+  "modelTranslate_1": 32,
+  "model_zoom": 2930,
+  "rotation_1": 415,
+  "name": "Tool store 3",
+  "extra": [
+    {"prop": 211, "intvalue": 8778, "stringvalue": null},
+    {"prop": 212, "intvalue": 2, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8386
+}
+,
+
+{
+  "baseModel": 12600,
+  "dummyItem": 1,
+  "modelTranslate_0": 15,
+  "modelTranslate_1": 15,
+  "model_zoom": 2605,
+  "rotation_1": 387,
+  "name": "Tool store 4",
+  "extra": [
+    {"prop": 211, "intvalue": 8778, "stringvalue": null},
+    {"prop": 212, "intvalue": 2, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8387
+}
+,
+
+{
+  "baseModel": 12601,
+  "dummyItem": 1,
+  "modelTranslate_0": 7,
+  "modelTranslate_1": 7,
+  "model_zoom": 2735,
+  "rotation_1": 443,
+  "name": "Tool store 5",
+  "extra": [
+    {"prop": 211, "intvalue": 8778, "stringvalue": null},
+    {"prop": 212, "intvalue": 2, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8388
+}
+,
+
+{
+  "baseModel": 12187,
+  "dummyItem": 1,
+  "model_zoom": 4816,
+  "rotation_1": 1832,
+  "rotation_0": 189,
+  "name": "Repair bench",
+  "extra": [
+    {"prop": 211, "intvalue": 8778, "stringvalue": null},
+    {"prop": 212, "intvalue": 2, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8389
+}
+,
+
+{
+  "baseModel": 10388,
+  "dummyItem": 1,
+  "modelTranslate_0": 6,
+  "modelTranslate_1": -14,
+  "model_zoom": 3536,
+  "rotation_1": 1862,
+  "rotation_0": 150,
+  "name": "Whetstone",
+  "extra": [
+    {"prop": 211, "intvalue": 8778, "stringvalue": null},
+    {"prop": 212, "intvalue": 4, "stringvalue": null},
+    {"prop": 213, "intvalue": 3420, "stringvalue": null},
+    {"prop": 214, "intvalue": 1, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8390
+}
+,
+
+{
+  "baseModel": 12561,
+  "dummyItem": 1,
+  "modelTranslate_0": -11,
+  "modelTranslate_1": -93,
+  "model_zoom": 3280,
+  "rotation_1": 1904,
+  "rotation_0": 180,
+  "name": "Armour stand",
+  "extra": [
+    {"prop": 211, "intvalue": 8778, "stringvalue": null},
+    {"prop": 212, "intvalue": 8, "stringvalue": null},
+    {"prop": 213, "intvalue": 3420, "stringvalue": null},
+    {"prop": 214, "intvalue": 1, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8391
+}
+,
+
+{
+  "baseModel": 12564,
+  "dummyItem": 1,
+  "modelTranslate_0": -2,
+  "modelTranslate_1": -94,
+  "model_zoom": 3024,
+  "rotation_1": 1901,
+  "rotation_0": 189,
+  "name": "Pluming stand",
+  "extra": [
+    {"prop": 211, "intvalue": 8778, "stringvalue": null},
+    {"prop": 212, "intvalue": 2, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8392
+}
+,
+
+{
+  "baseModel": 12563,
+  "dummyItem": 1,
+  "modelTranslate_0": -2,
+  "modelTranslate_1": -50,
+  "model_zoom": 3024,
+  "rotation_1": 1892,
+  "rotation_0": 165,
+  "name": "Shield easel",
+  "extra": [
+    {"prop": 211, "intvalue": 8778, "stringvalue": null},
+    {"prop": 212, "intvalue": 4, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8393
+}
+,
+
+{
+  "baseModel": 12562,
+  "dummyItem": 1,
+  "modelTranslate_0": -8,
+  "modelTranslate_1": -20,
+  "model_zoom": 3408,
+  "rotation_1": 1850,
+  "rotation_0": 162,
+  "name": "Banner easel",
+  "extra": [
+    {"prop": 211, "intvalue": 8778, "stringvalue": null},
+    {"prop": 212, "intvalue": 8, "stringvalue": null},
+    {"prop": 213, "intvalue": 8790, "stringvalue": null},
+    {"prop": 214, "intvalue": 2, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8394
+}
+,
+
+{
+  "baseModel": 2318,
+  "dummyItem": 1,
+  "value": 1000,
+  "name": "Parlour",
+  "nullopt": true,
+  "$fileid": 8395
+}
+,
+
+{
+  "baseModel": 2318,
+  "dummyItem": 1,
+  "value": 5000,
+  "name": "Kitchen",
+  "nullopt": true,
+  "$fileid": 8396
+}
+,
+
+{
+  "baseModel": 2318,
+  "dummyItem": 1,
+  "value": 5000,
+  "name": "Dining room",
+  "nullopt": true,
+  "$fileid": 8397
+}
+,
+
+{
+  "baseModel": 2318,
+  "dummyItem": 1,
+  "value": 10000,
+  "name": "Bedroom",
+  "nullopt": true,
+  "$fileid": 8398
+}
+,
+
+{
+  "baseModel": 2318,
+  "dummyItem": 1,
+  "value": 25000,
+  "name": "Games room",
+  "nullopt": true,
+  "$fileid": 8399
+}
+,
+
+{
+  "baseModel": 2318,
+  "dummyItem": 1,
+  "value": 25000,
+  "name": "Combat room",
+  "nullopt": true,
+  "$fileid": 8400
+}
+,
+
+{
+  "baseModel": 2318,
+  "dummyItem": 1,
+  "value": 15000,
+  "name": "Hall",
+  "nullopt": true,
+  "$fileid": 8401
+}
+,
+
+{
+  "baseModel": 2318,
+  "dummyItem": 1,
+  "value": 15000,
+  "name": "Hall",
+  "nullopt": true,
+  "$fileid": 8402
+}
+,
+
+{
+  "baseModel": 2318,
+  "dummyItem": 1,
+  "value": 25000,
+  "name": "Hall",
+  "nullopt": true,
+  "$fileid": 8403
+}
+,
+
+{
+  "baseModel": 2318,
+  "dummyItem": 1,
+  "value": 25000,
+  "name": "Hall",
+  "nullopt": true,
+  "$fileid": 8404
+}
+,
+
+{
+  "baseModel": 2318,
+  "dummyItem": 1,
+  "value": 50000,
+  "name": "Chapel",
+  "nullopt": true,
+  "$fileid": 8405
+}
+,
+
+{
+  "baseModel": 2318,
+  "dummyItem": 1,
+  "value": 10000,
+  "name": "Workshop",
+  "nullopt": true,
+  "$fileid": 8406
+}
+,
+
+{
+  "baseModel": 2318,
+  "dummyItem": 1,
+  "value": 50000,
+  "name": "Study",
+  "nullopt": true,
+  "$fileid": 8407
+}
+,
+
+{
+  "baseModel": 2318,
+  "dummyItem": 1,
+  "value": 100000,
+  "name": "Portal chamber",
+  "nullopt": true,
+  "$fileid": 8408
+}
+,
+
+{
+  "baseModel": 2318,
+  "dummyItem": 1,
+  "value": 150000,
+  "name": "Throne room",
+  "nullopt": true,
+  "$fileid": 8409
+}
+,
+
+{
+  "baseModel": 2318,
+  "dummyItem": 1,
+  "value": 150000,
+  "name": "Oubliette",
+  "nullopt": true,
+  "$fileid": 8410
+}
+,
+
+{
+  "baseModel": 2318,
+  "dummyItem": 1,
+  "value": 7500,
+  "name": "Dungeon corridor",
+  "nullopt": true,
+  "$fileid": 8411
+}
+,
+
+{
+  "baseModel": 2318,
+  "dummyItem": 1,
+  "value": 7500,
+  "name": "Dungeon cross",
+  "nullopt": true,
+  "$fileid": 8412
+}
+,
+
+{
+  "baseModel": 2318,
+  "dummyItem": 1,
+  "value": 7500,
+  "name": "Dungeon stairs",
+  "nullopt": true,
+  "$fileid": 8413
+}
+,
+
+{
+  "baseModel": 2318,
+  "dummyItem": 1,
+  "value": 250000,
+  "name": "Treasure room",
+  "nullopt": true,
+  "$fileid": 8414
+}
+,
+
+{
+  "baseModel": 2318,
+  "dummyItem": 1,
+  "value": 1000,
+  "name": "Garden",
+  "nullopt": true,
+  "$fileid": 8415
+}
+,
+
+{
+  "baseModel": 2318,
+  "dummyItem": 1,
+  "value": 75000,
+  "name": "Formal garden",
+  "nullopt": true,
+  "$fileid": 8416
+}
+,
+
+{
+  "baseModel": 12307,
+  "modelTranslate_1": -100,
+  "model_zoom": 919,
+  "rotation_0": 249,
+  "value": 1000,
+  "members": true,
+  "tradeable": true,
+  "name": "Bagged dead tree",
+  "noteData": 8418,
+  "nullopt": true,
+  "$fileid": 8417
+}
+,
+
+{"noteData": 8417, "noteTemplate": 799, "nullopt": true, "$fileid": 8418}
+,
+
+{
+  "baseModel": 12307,
+  "modelTranslate_1": -100,
+  "model_zoom": 919,
+  "rotation_0": 249,
+  "value": 2000,
+  "members": true,
+  "tradeable": true,
+  "name": "Bagged nice tree",
+  "noteData": 8420,
+  "nullopt": true,
+  "$fileid": 8419
+}
+,
+
+{"noteData": 8419, "noteTemplate": 799, "nullopt": true, "$fileid": 8420}
+,
+
+{
+  "baseModel": 12307,
+  "modelTranslate_1": -100,
+  "model_zoom": 919,
+  "rotation_0": 249,
+  "value": 5000,
+  "members": true,
+  "tradeable": true,
+  "name": "Bagged oak tree",
+  "noteData": 8422,
+  "extra": [
+    {"prop": 211, "intvalue": 5370, "stringvalue": null},
+    {"prop": 212, "intvalue": 1, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8421
+}
+,
+
+{"noteData": 8421, "noteTemplate": 799, "nullopt": true, "$fileid": 8422}
+,
+
+{
+  "baseModel": 12307,
+  "modelTranslate_1": -100,
+  "model_zoom": 919,
+  "rotation_0": 249,
+  "value": 10000,
+  "members": true,
+  "tradeable": true,
+  "name": "Bagged willow tree",
+  "noteData": 8424,
+  "extra": [
+    {"prop": 211, "intvalue": 5371, "stringvalue": null},
+    {"prop": 212, "intvalue": 1, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8423
+}
+,
+
+{"noteData": 8423, "noteTemplate": 799, "nullopt": true, "$fileid": 8424}
+,
+
+{
+  "baseModel": 12307,
+  "modelTranslate_1": -100,
+  "model_zoom": 919,
+  "rotation_0": 249,
+  "value": 15000,
+  "members": true,
+  "tradeable": true,
+  "name": "Bagged maple tree",
+  "noteData": 8426,
+  "extra": [
+    {"prop": 211, "intvalue": 5372, "stringvalue": null},
+    {"prop": 212, "intvalue": 1, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8425
+}
+,
+
+{"noteData": 8425, "noteTemplate": 799, "nullopt": true, "$fileid": 8426}
+,
+
+{
+  "baseModel": 12307,
+  "modelTranslate_1": -100,
+  "model_zoom": 919,
+  "rotation_0": 249,
+  "value": 20000,
+  "members": true,
+  "tradeable": true,
+  "name": "Bagged yew tree",
+  "noteData": 8428,
+  "extra": [
+    {"prop": 211, "intvalue": 5373, "stringvalue": null},
+    {"prop": 212, "intvalue": 1, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8427
+}
+,
+
+{"noteData": 8427, "noteTemplate": 799, "nullopt": true, "$fileid": 8428}
+,
+
+{
+  "baseModel": 12307,
+  "modelTranslate_1": -100,
+  "model_zoom": 919,
+  "rotation_0": 249,
+  "value": 50000,
+  "members": true,
+  "tradeable": true,
+  "name": "Bagged magic tree",
+  "noteData": 8430,
+  "extra": [
+    {"prop": 211, "intvalue": 5374, "stringvalue": null},
+    {"prop": 212, "intvalue": 1, "stringvalue": null}
+  ],
+  "nullopt": true,
+  "$fileid": 8429
+}
+,
+
+{"noteData": 8429, "noteTemplate": 799, "nullopt": true, "$fileid": 8430}
+,
+
+{
+  "baseModel": 12307,
+  "modelTranslate_1": -100,
+  "model_zoom": 919,
+  "rotation_0": 249,
+  "value": 1000,
+  "members": true,
+  "tradeable": true,
+  "name": "Bagged plant 1",
+  "noteData": 8432,
+  "nullopt": true,
+  "$fileid": 8431
+}
+,
+
+{"noteData": 8431, "noteTemplate": 799, "nullopt": true, "$fileid": 8432}
+,
+
+{
+  "baseModel": 12307,
+  "modelTranslate_1": -100,
+  "model_zoom": 919,
+  "rotation_0": 249,
+  "value": 5000,
+  "members": true,
+  "tradeable": true,
+  "name": "Bagged plant 2",
+  "noteData": 8434,
+  "nullopt": true,
+  "$fileid": 8433
+}
+,
+
+{"noteData": 8433, "noteTemplate": 799, "nullopt": true, "$fileid": 8434}
+,
+
+{
+  "baseModel": 12307,
+  "modelTranslate_1": -100,
+  "model_zoom": 919,
+  "rotation_0": 249,
+  "value": 10000,
+  "members": true,
+  "tradeable": true,
+  "name": "Bagged plant 3",
+  "noteData": 8436,
+  "nullopt": true,
+  "$fileid": 8435
+}
+,
+
+{"noteData": 8435, "noteTemplate": 799, "nullopt": true, "$fileid": 8436}
+,
+
+{
+  "baseModel": 12307,
+  "modelTranslate_1": -100,
+  "model_zoom": 919,
+  "rotation_0": 249,
+  "value": 5000,
+  "members": true,
+  "tradeable": true,
+  "name": "Thorny hedge",
+  "noteData": 8438,
+  "nullopt": true,
+  "$fileid": 8437
+}
+,
+
+{"noteData": 8437, "noteTemplate": 799, "nullopt": true, "$fileid": 8438}
+,
+
+{
+  "baseModel": 12307,
+  "modelTranslate_1": -100,
+  "model_zoom": 919,
+  "rotation_0": 249,
+  "value": 10000,
+  "members": true,
+  "tradeable": true,
+  "name": "Nice hedge",
+  "noteData": 8440,
+  "nullopt": true,
+  "$fileid": 8439
+}
+,
+
+{"noteData": 8439, "noteTemplate": 799, "nullopt": true, "$fileid": 8440}
+,
+
+{
+  "baseModel": 12307,
+  "modelTranslate_1": -100,
+  "model_zoom": 919,
+  "rotation_0": 249,
+  "value": 15000,
+  "members": true,
+  "tradeable": true,
+  "name": "Small box hedge",
+  "noteData": 8442,
+  "nullopt": true,
+  "$fileid": 8441
+}
+,
+
+{"noteData": 8441, "noteTemplate": 799, "nullopt": true, "$fileid": 8442}
+,
+
+{
+  "baseModel": 12307,
+  "modelTranslate_1": -100,
+  "model_zoom": 919,
+  "rotation_0": 249,
+  "value": 20000,
+  "members": true,
+  "tradeable": true,
+  "name": "Topiary hedge",
+  "noteData": 8444,
+  "nullopt": true,
+  "$fileid": 8443
+}
+,
+
+{"noteData": 8443, "noteTemplate": 799, "nullopt": true, "$fileid": 8444}
+,
+
+{
+  "baseModel": 12307,
+  "modelTranslate_1": -100,
+  "model_zoom": 919,
+  "rotation_0": 249,
+  "value": 25000,
+  "members": true,
+  "tradeable": true,
+  "name": "Fancy hedge",
+  "noteData": 8446,
+  "nullopt": true,
+  "$fileid": 8445
+}
+,
+
+{"noteData": 8445, "noteTemplate": 799, "nullopt": true, "$fileid": 8446}
+,
+
+{
+  "baseModel": 12307,
+  "modelTranslate_1": -100,
+  "model_zoom": 919,
+  "rotation_0": 249,
+  "value": 50000,
+  "members": true,
+  "tradeable": true,
+  "name": "Tall fancy hedge",
+  "noteData": 8448,
+  "nullopt": true,
+  "$fileid": 8447
+}]}

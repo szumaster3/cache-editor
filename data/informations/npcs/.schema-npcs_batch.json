@@ -1,0 +1,675 @@
+{
+  "type": "object",
+  "properties": {
+    "files": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "models": {
+            "oneOf": [
+              {
+                "type": "array",
+                "items": {
+                  "anyOf": [
+                    {"type": "number", "maximum": 2147483647, "minimum": 0},
+                    {"type": "number", "maximum": 65535, "minimum": 0}
+                  ]
+                }
+              },
+              {"type": "null"}
+            ]
+          },
+          "name": {"oneOf": [{"type": "string"}, {"type": "null"}]},
+          "examine": {"oneOf": [{"type": "string"}, {"type": "null"}]},
+          "unknown_08": {
+            "oneOf": [
+              {"type": "number", "maximum": 255, "minimum": 0},
+              {"type": "null"}
+            ]
+          },
+          "unknown_0B": {
+            "oneOf": [
+              {"type": "number", "maximum": 255, "minimum": 0},
+              {"type": "null"}
+            ]
+          },
+          "boundSize": {
+            "oneOf": [
+              {"type": "number", "maximum": 255, "minimum": 0},
+              {"type": "null"}
+            ]
+          },
+          "unk_0D": {
+            "oneOf": [
+              {"type": "number", "maximum": 65535, "minimum": 0},
+              {"type": "null"}
+            ]
+          },
+          "unk_0E": {
+            "oneOf": [
+              {"type": "number", "maximum": 65535, "minimum": 0},
+              {"type": "null"}
+            ]
+          },
+          "unk_11": {
+            "oneOf": [
+              {
+                "type": "array",
+                "items": {"type": "number", "maximum": 65535, "minimum": 0}
+              },
+              {"type": "null"}
+            ]
+          },
+          "actions_0": {"oneOf": [{"type": "string"}, {"type": "null"}]},
+          "actions_1": {"oneOf": [{"type": "string"}, {"type": "null"}]},
+          "actions_2": {"oneOf": [{"type": "string"}, {"type": "null"}]},
+          "actions_3": {"oneOf": [{"type": "string"}, {"type": "null"}]},
+          "actions_4": {"oneOf": [{"type": "string"}, {"type": "null"}]},
+          "color_replacements": {
+            "oneOf": [
+              {
+                "type": "array",
+                "items": {
+                  "type": "array",
+                  "items": [
+                    {"type": "number", "maximum": 65535, "minimum": 0},
+                    {"type": "number", "maximum": 65535, "minimum": 0}
+                  ],
+                  "minItems": 2,
+                  "maxItems": 2
+                }
+              },
+              {"type": "null"}
+            ]
+          },
+          "material_replacements": {
+            "oneOf": [
+              {
+                "type": "array",
+                "items": {
+                  "type": "array",
+                  "items": [
+                    {"type": "number", "maximum": 65535, "minimum": 0},
+                    {"type": "number", "maximum": 65535, "minimum": 0}
+                  ],
+                  "minItems": 2,
+                  "maxItems": 2
+                }
+              },
+              {"type": "null"}
+            ]
+          },
+          "recolourPalette": {
+            "oneOf": [
+              {
+                "type": "array",
+                "items": {"type": "number", "maximum": 127, "minimum": -128}
+              },
+              {"type": "null"}
+            ]
+          },
+          "recolor_indices": {
+            "oneOf": [
+              {"type": "number", "maximum": 65535, "minimum": 0},
+              {"type": "null"}
+            ]
+          },
+          "retexture_indices": {
+            "oneOf": [
+              {"type": "number", "maximum": 65535, "minimum": 0},
+              {"type": "null"}
+            ]
+          },
+          "headModels": {
+            "oneOf": [
+              {
+                "type": "array",
+                "items": {
+                  "anyOf": [
+                    {"type": "number", "maximum": 2147483647, "minimum": 0},
+                    {"type": "number", "maximum": 65535, "minimum": 0}
+                  ]
+                }
+              },
+              {"type": "null"}
+            ]
+          },
+          "drawMapDot": {"oneOf": [{"const": false}, {"type": "null"}]},
+          "combat": {
+            "oneOf": [
+              {"type": "number", "maximum": 65535, "minimum": 0},
+              {"type": "null"}
+            ]
+          },
+          "scaleXZ": {
+            "oneOf": [
+              {"type": "number", "maximum": 65535, "minimum": 0},
+              {"type": "null"}
+            ]
+          },
+          "scaleY": {
+            "oneOf": [
+              {"type": "number", "maximum": 65535, "minimum": 0},
+              {"type": "null"}
+            ]
+          },
+          "unknown_63": {"oneOf": [{"const": true}, {"type": "null"}]},
+          "ambience": {
+            "oneOf": [
+              {"type": "number", "maximum": 127, "minimum": -128},
+              {"type": "null"}
+            ]
+          },
+          "modelContract": {
+            "oneOf": [
+              {"type": "number", "maximum": 127, "minimum": -128},
+              {"type": "null"}
+            ]
+          },
+          "head_icon_data": {
+            "oneOf": [
+              {"type": "number", "maximum": 65535, "minimum": 0},
+              {"type": "null"}
+            ]
+          },
+          "unknown_67": {
+            "oneOf": [
+              {"type": "number", "maximum": 65535, "minimum": 0},
+              {"type": "null"}
+            ]
+          },
+          "morphs_1": {
+            "oneOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "unk1": {
+                    "type": "number",
+                    "maximum": 4294967295,
+                    "minimum": 0
+                  },
+                  "unk2": {
+                    "type": "array",
+                    "items": {"type": "number", "maximum": 65535, "minimum": 0}
+                  },
+                  "unk3": {
+                    "anyOf": [
+                      {"type": "number", "maximum": 4294967295, "minimum": 0},
+                      {"type": "number", "maximum": 65535, "minimum": 0}
+                    ]
+                  }
+                },
+                "required": ["unk1", "unk2", "unk3"]
+              },
+              {"type": "null"}
+            ]
+          },
+          "unknown_6B": {"oneOf": [{"const": false}, {"type": "null"}]},
+          "slowWalk": {"oneOf": [{"const": false}, {"type": "null"}]},
+          "animateIdle": {"oneOf": [{"const": false}, {"type": "null"}]},
+          "shadow": {
+            "oneOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "SrcColor": {
+                    "type": "number",
+                    "maximum": 65535,
+                    "minimum": 0
+                  },
+                  "DstColor": {"type": "number", "maximum": 65535, "minimum": 0}
+                },
+                "required": ["SrcColor", "DstColor"]
+              },
+              {"type": "null"}
+            ]
+          },
+          "shadowAlphaIntensity": {
+            "oneOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "Src": {"type": "number", "maximum": 127, "minimum": -128},
+                  "Dst": {"type": "number", "maximum": 127, "minimum": -128}
+                },
+                "required": ["Src", "Dst"]
+              },
+              {"type": "null"}
+            ]
+          },
+          "unknown_73": {
+            "oneOf": [
+              {
+                "type": "array",
+                "items": [
+                  {"type": "number", "maximum": 255, "minimum": 0},
+                  {"type": "number", "maximum": 255, "minimum": 0}
+                ],
+                "minItems": 2,
+                "maxItems": 2
+              },
+              {"type": "null"}
+            ]
+          },
+          "morphs_2": {
+            "oneOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "unk1": {
+                    "type": "number",
+                    "maximum": 4294967295,
+                    "minimum": 0
+                  },
+                  "unk2": {"type": "number", "maximum": 65535, "minimum": 0},
+                  "unk3": {
+                    "type": "array",
+                    "items": {"type": "number", "maximum": 65535, "minimum": 0}
+                  },
+                  "unk4": {
+                    "type": "number",
+                    "maximum": 4294967295,
+                    "minimum": 0
+                  }
+                },
+                "required": ["unk1", "unk2", "unk3", "unk4"]
+              },
+              {"type": "null"}
+            ]
+          },
+          "movementCapabilities": {
+            "oneOf": [
+              {"type": "number", "maximum": 127, "minimum": -128},
+              {"type": "null"}
+            ]
+          },
+          "unknown_78": {
+            "oneOf": [
+              {
+                "type": "array",
+                "items": [
+                  {"type": "number", "maximum": 65535, "minimum": 0},
+                  {"type": "number", "maximum": 65535, "minimum": 0},
+                  {"type": "number", "maximum": 65535, "minimum": 0},
+                  {"type": "number", "maximum": 255, "minimum": 0}
+                ],
+                "minItems": 4,
+                "maxItems": 4
+              },
+              {"type": "null"}
+            ]
+          },
+          "translations": {
+            "oneOf": [
+              {"type": "array", "items": {"type": "string"}},
+              {"type": "null"}
+            ]
+          },
+          "unk_7A": {
+            "oneOf": [
+              {"type": "number", "maximum": 65535, "minimum": 0},
+              {"type": "null"}
+            ]
+          },
+          "iconHeight": {
+            "oneOf": [
+              {"type": "number", "maximum": 65535, "minimum": 0},
+              {"type": "null"}
+            ]
+          },
+          "respawnDirection": {
+            "oneOf": [
+              {"type": "number", "maximum": 127, "minimum": -128},
+              {"type": "null"}
+            ]
+          },
+          "animation_group": {
+            "oneOf": [
+              {"type": "number", "maximum": 65535, "minimum": 0},
+              {"type": "null"}
+            ]
+          },
+          "movementType": {
+            "oneOf": [
+              {"type": "number", "maximum": 127, "minimum": -128},
+              {"type": "null"}
+            ]
+          },
+          "ambient_sound": {
+            "oneOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "unk1": {"type": "number", "maximum": 65535, "minimum": 0},
+                  "unk2": {"type": "number", "maximum": 65535, "minimum": 0},
+                  "unk3": {"type": "number", "maximum": 65535, "minimum": 0},
+                  "unk4": {"type": "number", "maximum": 65535, "minimum": 0},
+                  "unk45": {"type": "number", "maximum": 255, "minimum": 0}
+                },
+                "required": ["unk1", "unk2", "unk3", "unk4", "unk45"]
+              },
+              {"type": "null"}
+            ]
+          },
+          "oldCursor": {
+            "oneOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "Op": {"type": "number", "maximum": 255, "minimum": 0},
+                  "Cursor": {"type": "number", "maximum": 65535, "minimum": 0}
+                },
+                "required": ["Op", "Cursor"]
+              },
+              {"type": "null"}
+            ]
+          },
+          "oldCursor2": {
+            "oneOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "Op": {"type": "number", "maximum": 255, "minimum": 0},
+                  "Cursor": {"type": "number", "maximum": 65535, "minimum": 0}
+                },
+                "required": ["Op", "Cursor"]
+              },
+              {"type": "null"}
+            ]
+          },
+          "attackCursor": {
+            "oneOf": [
+              {"type": "number", "maximum": 65535, "minimum": 0},
+              {"type": "null"}
+            ]
+          },
+          "armyIcon": {
+            "oneOf": [
+              {"type": "number", "maximum": 1073741823, "minimum": -1073741824},
+              {"type": "null"}
+            ]
+          },
+          "unknown_8C": {
+            "oneOf": [
+              {"type": "number", "maximum": 255, "minimum": 0},
+              {"type": "null"}
+            ]
+          },
+          "unknown_8D": {"oneOf": [{"const": true}, {"type": "null"}]},
+          "mapFunction": {
+            "oneOf": [
+              {"type": "number", "maximum": 65535, "minimum": 0},
+              {"type": "null"}
+            ]
+          },
+          "unknown_8F": {"oneOf": [{"const": true}, {"type": "null"}]},
+          "members_actions_0": {
+            "oneOf": [{"type": "string"}, {"type": "null"}]
+          },
+          "members_actions_1": {
+            "oneOf": [{"type": "string"}, {"type": "null"}]
+          },
+          "members_actions_2": {
+            "oneOf": [{"type": "string"}, {"type": "null"}]
+          },
+          "members_actions_3": {
+            "oneOf": [{"type": "string"}, {"type": "null"}]
+          },
+          "members_actions_4": {
+            "oneOf": [{"type": "string"}, {"type": "null"}]
+          },
+          "unknown_9B": {
+            "oneOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "unknown_1": {
+                    "type": "number",
+                    "maximum": 127,
+                    "minimum": -128
+                  },
+                  "unknown_2": {
+                    "type": "number",
+                    "maximum": 127,
+                    "minimum": -128
+                  },
+                  "unknown_3": {
+                    "type": "number",
+                    "maximum": 127,
+                    "minimum": -128
+                  },
+                  "unknown_4": {
+                    "type": "number",
+                    "maximum": 127,
+                    "minimum": -128
+                  }
+                },
+                "required": ["unknown_1", "unknown_2", "unknown_3", "unknown_4"]
+              },
+              {"type": "null"}
+            ]
+          },
+          "aByte3076_set_1": {"oneOf": [{"const": true}, {"type": "null"}]},
+          "aByte3076_set_0": {"oneOf": [{"const": false}, {"type": "null"}]},
+          "quests": {
+            "oneOf": [
+              {
+                "type": "array",
+                "items": {"type": "number", "maximum": 65535, "minimum": 0}
+              },
+              {"type": "null"}
+            ]
+          },
+          "dummy_1": {"oneOf": [{"const": true}, {"type": "null"}]},
+          "unknown_A3": {
+            "oneOf": [
+              {"type": "number", "maximum": 255, "minimum": 0},
+              {"type": "null"}
+            ]
+          },
+          "unknown_A4": {
+            "oneOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "unknown_1": {
+                    "type": "number",
+                    "maximum": 65535,
+                    "minimum": 0
+                  },
+                  "unknown_2": {
+                    "type": "number",
+                    "maximum": 65535,
+                    "minimum": 0
+                  }
+                },
+                "required": ["unknown_1", "unknown_2"]
+              },
+              {"type": "null"}
+            ]
+          },
+          "unknown_A5": {
+            "oneOf": [
+              {"type": "number", "maximum": 255, "minimum": 0},
+              {"type": "null"}
+            ]
+          },
+          "unknown_A8": {
+            "oneOf": [
+              {"type": "number", "maximum": 255, "minimum": 0},
+              {"type": "null"}
+            ]
+          },
+          "unknown_A9": {"oneOf": [{"const": false}, {"type": "null"}]},
+          "action_cursors_0": {
+            "oneOf": [
+              {"type": "number", "maximum": 65535, "minimum": 0},
+              {"type": "null"}
+            ]
+          },
+          "action_cursors_1": {
+            "oneOf": [
+              {"type": "number", "maximum": 65535, "minimum": 0},
+              {"type": "null"}
+            ]
+          },
+          "action_cursors_2": {
+            "oneOf": [
+              {"type": "number", "maximum": 65535, "minimum": 0},
+              {"type": "null"}
+            ]
+          },
+          "action_cursors_3": {
+            "oneOf": [
+              {"type": "number", "maximum": 65535, "minimum": 0},
+              {"type": "null"}
+            ]
+          },
+          "action_cursors_4": {
+            "oneOf": [
+              {"type": "number", "maximum": 65535, "minimum": 0},
+              {"type": "null"}
+            ]
+          },
+          "action_cursors_5": {
+            "oneOf": [
+              {"type": "number", "maximum": 65535, "minimum": 0},
+              {"type": "null"}
+            ]
+          },
+          "dummy_2": {"oneOf": [{"const": true}, {"type": "null"}]},
+          "unknown_B3": {
+            "oneOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "unknown_1": {
+                    "type": "number",
+                    "maximum": 16383,
+                    "minimum": -16384
+                  },
+                  "unknown_2": {
+                    "type": "number",
+                    "maximum": 16383,
+                    "minimum": -16384
+                  },
+                  "unknown_3": {
+                    "type": "number",
+                    "maximum": 16383,
+                    "minimum": -16384
+                  },
+                  "unknown_4": {
+                    "type": "number",
+                    "maximum": 16383,
+                    "minimum": -16384
+                  },
+                  "unknown_5": {
+                    "type": "number",
+                    "maximum": 16383,
+                    "minimum": -16384
+                  },
+                  "unknown_6": {
+                    "type": "number",
+                    "maximum": 16383,
+                    "minimum": -16384
+                  }
+                },
+                "required": [
+                  "unknown_1",
+                  "unknown_2",
+                  "unknown_3",
+                  "unknown_4",
+                  "unknown_5",
+                  "unknown_6"
+                ]
+              },
+              {"type": "null"}
+            ]
+          },
+          "unknown_B4": {
+            "oneOf": [
+              {"type": "number", "maximum": 255, "minimum": 0},
+              {"type": "null"}
+            ]
+          },
+          "unknown_B5": {
+            "oneOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "unknown_1": {
+                    "type": "number",
+                    "maximum": 65535,
+                    "minimum": 0
+                  },
+                  "unknown_2": {"type": "number", "maximum": 255, "minimum": 0}
+                },
+                "required": ["unknown_1", "unknown_2"]
+              },
+              {"type": "null"}
+            ]
+          },
+          "unknown_B6": {"oneOf": [{"const": true}, {"type": "null"}]},
+          "unknown_B7": {
+            "oneOf": [
+              {"type": "number", "maximum": 255, "minimum": 0},
+              {"type": "null"}
+            ]
+          },
+          "unknown_B8": {
+            "oneOf": [
+              {"type": "number", "maximum": 255, "minimum": 0},
+              {"type": "null"}
+            ]
+          },
+          "unknown_B9": {"oneOf": [{"const": true}, {"type": "null"}]},
+          "unknown_DB": {
+            "oneOf": [
+              {"type": "number", "maximum": 255, "minimum": 0},
+              {"type": "null"}
+            ]
+          },
+          "extra": {
+            "oneOf": [
+              {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "prop": {
+                      "type": "number",
+                      "maximum": 16777215,
+                      "minimum": 0
+                    },
+                    "intvalue": {
+                      "oneOf": [
+                        {
+                          "type": "number",
+                          "maximum": 2147483647,
+                          "minimum": -2147483648
+                        },
+                        {"type": "null"}
+                      ]
+                    },
+                    "stringvalue": {
+                      "oneOf": [{"type": "string"}, {"type": "null"}]
+                    }
+                  },
+                  "required": ["prop", "intvalue", "stringvalue"]
+                }
+              },
+              {"type": "null"}
+            ]
+          },
+          "unknown_FD": {
+            "oneOf": [
+              {"type": "number", "maximum": 255, "minimum": 0},
+              {"type": "null"}
+            ]
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,2130 @@
+{"$schema":".schema-npcs_batch.json","files":[
+
+{
+  "animation_group": 1043,
+  "scaleXZ": 125,
+  "scaleY": 125,
+  "actions_1": "Attack",
+  "boundSize": 2,
+  "combat": 44,
+  "color_replacements": [
+    [6482, 10444],
+    [8722, 12820],
+    [99, 64448],
+    [6478, 10436]
+  ],
+  "name": "Zogre",
+  "models": [6767, 6773],
+  "movementCapabilities": 3,
+  "$fileid": 2048
+}
+,
+
+{
+  "animation_group": 1043,
+  "scaleXZ": 120,
+  "scaleY": 120,
+  "actions_1": "Attack",
+  "boundSize": 2,
+  "combat": 44,
+  "color_replacements": [
+    [6482, 10444],
+    [8722, 12820],
+    [99, 64448],
+    [6478, 10436]
+  ],
+  "name": "Zogre",
+  "models": [6766, 6771],
+  "movementCapabilities": 3,
+  "$fileid": 2049
+}
+,
+
+{
+  "animation_group": 1045,
+  "scaleXZ": 120,
+  "scaleY": 120,
+  "actions_1": "Attack",
+  "boundSize": 2,
+  "combat": 44,
+  "name": "Skogre",
+  "models": [6770],
+  "movementCapabilities": 3,
+  "$fileid": 2050
+}
+,
+
+{
+  "animation_group": 1044,
+  "scaleXZ": 130,
+  "scaleY": 130,
+  "actions_1": "Attack",
+  "boundSize": 2,
+  "combat": 44,
+  "color_replacements": [
+    [6482, 10444],
+    [8722, 12820],
+    [99, 64448],
+    [6478, 10436]
+  ],
+  "name": "Zogre",
+  "models": [6767, 6772],
+  "movementCapabilities": 3,
+  "$fileid": 2051
+}
+,
+
+{
+  "animation_group": 1044,
+  "boundSize": 2,
+  "scaleXZ": 120,
+  "scaleY": 120,
+  "actions_1": "Attack",
+  "combat": 44,
+  "color_replacements": [
+    [6482, 10444],
+    [8722, 12820],
+    [99, 64448],
+    [6478, 10436]
+  ],
+  "name": "Zogre",
+  "models": [6766, 6771],
+  "movementCapabilities": 3,
+  "$fileid": 2052
+}
+,
+
+{
+  "animation_group": 1044,
+  "scaleXZ": 120,
+  "scaleY": 120,
+  "actions_1": "Attack",
+  "boundSize": 2,
+  "combat": 44,
+  "color_replacements": [
+    [6482, 10444],
+    [8722, 12820],
+    [99, 64448],
+    [6478, 10436]
+  ],
+  "name": "Zogre",
+  "models": [6762, 6771],
+  "movementCapabilities": 3,
+  "$fileid": 2053
+}
+,
+
+{
+  "animation_group": 1044,
+  "scaleXZ": 125,
+  "scaleY": 125,
+  "actions_1": "Attack",
+  "boundSize": 2,
+  "combat": 44,
+  "color_replacements": [
+    [6482, 10444],
+    [8722, 12820],
+    [99, 64448],
+    [6478, 10436]
+  ],
+  "name": "Zogre",
+  "models": [6767, 6773],
+  "movementCapabilities": 3,
+  "$fileid": 2054
+}
+,
+
+{
+  "animation_group": 1046,
+  "scaleXZ": 120,
+  "boundSize": 2,
+  "actions_1": "Attack",
+  "combat": 44,
+  "color_replacements": [
+    [6482, 10444],
+    [8722, 12820],
+    [99, 64448],
+    [6478, 10436]
+  ],
+  "name": "Zogre",
+  "models": [6761, 6771, 6765],
+  "movementCapabilities": 3,
+  "$fileid": 2055
+}
+,
+
+{
+  "animation_group": 1046,
+  "scaleXZ": 120,
+  "actions_1": "Attack",
+  "boundSize": 2,
+  "combat": 44,
+  "color_replacements": [
+    [6482, 10444],
+    [8722, 12820],
+    [99, 64448],
+    [6478, 10436]
+  ],
+  "name": "Skogre",
+  "models": [6761, 6770, 6765],
+  "movementCapabilities": 3,
+  "$fileid": 2056
+}
+,
+
+{
+  "animation_group": 60,
+  "scaleXZ": 130,
+  "scaleY": 130,
+  "actions_1": "Attack",
+  "boundSize": 2,
+  "combat": 44,
+  "name": "Skogre",
+  "models": [6770],
+  "movementCapabilities": 3,
+  "$fileid": 2057
+}
+,
+
+{
+  "animation_group": 655,
+  "drawMapDot": false,
+  "combat": 0,
+  "unknown_67": 0,
+  "name": "Hole in the wall",
+  "models": [34601],
+  "movementCapabilities": 1,
+  "$fileid": 2058
+}
+,
+
+{
+  "animation_group": 119,
+  "combat": 0,
+  "actions_0": "Talk-to",
+  "color_replacements": [
+    [8741, 40408],
+    [8078, 54397],
+    [25238, 21629],
+    [38814, 40408],
+    [7700, 127],
+    [926, 32856]
+  ],
+  "material_replacements": [[202, 253], [257, 252]],
+  "name": "Zavistic Rarve",
+  "models": [202, 214, 251, 290, 292, 323, 162, 176, 534, 256],
+  "headModels": [39582, 38096, 39400],
+  "movementCapabilities": 3,
+  "$fileid": 2059
+}
+,
+
+{
+  "animation_group": 60,
+  "scaleXZ": 256,
+  "scaleY": 240,
+  "boundSize": 3,
+  "actions_1": "Attack",
+  "combat": 111,
+  "color_replacements": [
+    [6482, 10421],
+    [8722, 10266],
+    [99, 64448],
+    [6478, 10413],
+    [2165, 59491]
+  ],
+  "name": "Slash Bash",
+  "models": [6764, 6771],
+  "movementCapabilities": 2,
+  "$fileid": 2060
+}
+,
+
+{
+  "combat": 1,
+  "color_replacements": [
+    [25238, 4626],
+    [4550, 3418],
+    [11200, 262],
+    [38814, 40099],
+    [33, 4399]
+  ],
+  "name": "Sithik Ints",
+  "models": [6809],
+  "headModels": [39836, 38642, 39483],
+  "movementCapabilities": 3,
+  "$fileid": 2061
+}
+,
+
+{
+  "combat": 1,
+  "color_replacements": [
+    [25238, 4626],
+    [4550, 3418],
+    [11200, 262],
+    [38814, 40099],
+    [33, 4399]
+  ],
+  "name": "Sithik Ints",
+  "models": [6810],
+  "headModels": [6753],
+  "movementCapabilities": 3,
+  "$fileid": 2062
+}
+,
+
+{
+  "animation_group": 60,
+  "combat": 0,
+  "boundSize": 2,
+  "actions_0": "Talk-to",
+  "color_replacements": [[8722, 13850]],
+  "name": "Gargh",
+  "models": [2878, 3442],
+  "headModels": [141],
+  "movementCapabilities": 3,
+  "$fileid": 2063
+}
+,
+
+{
+  "animation_group": 60,
+  "combat": 0,
+  "boundSize": 2,
+  "scaleXZ": 125,
+  "scaleY": 123,
+  "actions_0": "Talk-to",
+  "color_replacements": [[8722, 5673]],
+  "name": "Scarg",
+  "models": [3442, 2878],
+  "headModels": [141],
+  "movementCapabilities": 3,
+  "$fileid": 2064
+}
+,
+
+{
+  "animation_group": 60,
+  "combat": 0,
+  "boundSize": 2,
+  "scaleXZ": 129,
+  "scaleY": 133,
+  "actions_0": "Talk-to",
+  "color_replacements": [[8722, 8609]],
+  "name": "Gruh",
+  "models": [3442, 2878],
+  "headModels": [141],
+  "movementCapabilities": 3,
+  "$fileid": 2065
+}
+,
+
+{
+  "animation_group": 4,
+  "combat": 0,
+  "scaleXZ": 111,
+  "scaleY": 103,
+  "actions_0": "Talk-to",
+  "color_replacements": [[25238, 1719], [8741, 939], [38814, 64295]],
+  "material_replacements": [[202, 252], [257, 252]],
+  "name": "Irwin Feaselbaum",
+  "models": [202, 215, 292, 328, 170, 176, 265, 181, 246],
+  "headModels": [39836, 39223, 39400],
+  "movementCapabilities": 3,
+  "$fileid": 2066
+}
+,
+
+{
+  "animation_group": 265,
+  "combat": 0,
+  "boundSize": 1,
+  "drawMapDot": false,
+  "actions_0": "Net",
+  "actions_2": "Bait",
+  "actions_3": "hidden",
+  "actions_4": "hidden",
+  "name": "Fishing spot",
+  "models": [6568],
+  "movementCapabilities": 5,
+  "$fileid": 2067
+}
+,
+
+{
+  "animation_group": 265,
+  "combat": 0,
+  "boundSize": 1,
+  "drawMapDot": false,
+  "actions_0": "Net",
+  "actions_2": "Bait",
+  "actions_3": "hidden",
+  "actions_4": "hidden",
+  "name": "Fishing spot",
+  "models": [6568],
+  "movementCapabilities": 5,
+  "$fileid": 2068
+}
+,
+
+{
+  "animation_group": 782,
+  "actions_0": "Talk-to",
+  "actions_1": "Attack",
+  "combat": 11,
+  "name": "Cave goblin miner",
+  "models": [23665, 23703, 23632, 23681],
+  "headModels": [23246, 23231],
+  "movementCapabilities": 3,
+  "$fileid": 2069
+}
+,
+
+{
+  "animation_group": 782,
+  "actions_0": "Talk-to",
+  "actions_1": "Attack",
+  "combat": 11,
+  "name": "Cave goblin miner",
+  "models": [23666, 23703, 23632, 23681],
+  "headModels": [23246, 23231],
+  "movementCapabilities": 3,
+  "$fileid": 2070
+}
+,
+
+{
+  "animation_group": 782,
+  "actions_0": "Talk-to",
+  "actions_1": "Attack",
+  "combat": 11,
+  "name": "Cave goblin miner",
+  "models": [23649, 23703, 23632, 23681],
+  "headModels": [23246, 23231],
+  "movementCapabilities": 3,
+  "$fileid": 2071
+}
+,
+
+{
+  "animation_group": 782,
+  "actions_0": "Talk-to",
+  "actions_1": "Attack",
+  "combat": 11,
+  "color_replacements": [
+    [8609, 14494],
+    [8602, 14490],
+    [8598, 14614],
+    [8086, 16912],
+    [8976, 17806]
+  ],
+  "name": "Cave goblin miner",
+  "models": [23667, 23703, 23632, 23681],
+  "headModels": [23246, 23231],
+  "movementCapabilities": 3,
+  "$fileid": 2072
+}
+,
+
+{
+  "animation_group": 782,
+  "actions_0": "Talk-to",
+  "actions_1": "Attack",
+  "combat": 26,
+  "name": "Cave goblin guard",
+  "models": [23658, 23700, 23634, 23680],
+  "headModels": [23228, 23246],
+  "movementCapabilities": 3,
+  "$fileid": 2073
+}
+,
+
+{
+  "animation_group": 782,
+  "actions_0": "Talk-to",
+  "actions_1": "Attack",
+  "combat": 24,
+  "color_replacements": [[32798, 32811]],
+  "name": "Cave goblin guard",
+  "models": [23658, 23700, 23634, 23676],
+  "headModels": [23228, 23246],
+  "movementCapabilities": 3,
+  "$fileid": 2074
+}
+,
+
+{
+  "animation_group": 783,
+  "actions_0": "Talk-to",
+  "actions_1": "Attack",
+  "combat": 11,
+  "name": "Cave goblin miner",
+  "models": [23665, 23703, 23632, 23681],
+  "headModels": [23246, 23231],
+  "movementCapabilities": 1,
+  "$fileid": 2075
+}
+,
+
+{
+  "animation_group": 783,
+  "actions_0": "Talk-to",
+  "actions_1": "Attack",
+  "combat": 11,
+  "name": "Cave goblin miner",
+  "models": [23666, 23703, 23632, 23681],
+  "headModels": [6957],
+  "movementCapabilities": 1,
+  "$fileid": 2076
+}
+,
+
+{
+  "animation_group": 783,
+  "actions_0": "Talk-to",
+  "actions_1": "Attack",
+  "combat": 11,
+  "name": "Cave goblin miner",
+  "models": [23649, 23703, 23632, 23681],
+  "headModels": [23246, 23231],
+  "movementCapabilities": 1,
+  "$fileid": 2077
+}
+,
+
+{
+  "animation_group": 783,
+  "actions_0": "Talk-to",
+  "actions_1": "Attack",
+  "combat": 11,
+  "color_replacements": [
+    [8609, 14494],
+    [8602, 14490],
+    [8598, 14614],
+    [8086, 16912],
+    [8976, 17806]
+  ],
+  "name": "Cave goblin miner",
+  "models": [23667, 23703, 23632, 23681],
+  "headModels": [23246, 23231],
+  "movementCapabilities": 1,
+  "$fileid": 2078
+}
+,
+
+{
+  "animation_group": 4,
+  "combat": 1,
+  "morphs_1": {
+    "unk1": 34930687,
+    "unk2": [2082, 2082, 2082, 2082, 2082, 2082, 2082, 2082, 2082],
+    "unk3": 136476419
+  },
+  "$fileid": 2079
+}
+,
+
+{
+  "animation_group": 4,
+  "combat": 1,
+  "morphs_1": {"unk1": 35454975, "unk2": [65535], "unk3": 136476419},
+  "$fileid": 2080
+}
+,
+
+{
+  "animation_group": 4,
+  "combat": 1,
+  "morphs_1": {
+    "unk1": 34930687,
+    "unk2": [
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      2083
+    ],
+    "unk3": 136541955
+  },
+  "$fileid": 2081
+}
+,
+
+{
+  "animation_group": 4,
+  "combat": 0,
+  "actions_0": "Talk-to",
+  "actions_2": "Pickpocket",
+  "color_replacements": [
+    [25238, 38321],
+    [8741, 38321],
+    [8078, 38354],
+    [926, 37997],
+    [7700, 37997],
+    [11200, 37997]
+  ],
+  "material_replacements": [[202, 252], [257, 252]],
+  "name": "Sigmund",
+  "models": [6848, 292, 162, 265, 181, 176, 323, 283, 5215],
+  "headModels": [39744, 39218],
+  "movementCapabilities": 3,
+  "$fileid": 2082
+}
+,
+
+{
+  "animation_group": 4,
+  "combat": 0,
+  "actions_0": "Talk-to",
+  "color_replacements": [
+    [8741, 61347],
+    [25238, 61347],
+    [7952, 61347],
+    [61, 5784],
+    [8078, 61347]
+  ],
+  "material_replacements": [[272, 252]],
+  "name": "Sigmund",
+  "models": [24536, 176, 5215, 181, 24537, 296, 5434, 5430, 5433, 317, 283],
+  "headModels": [38093, 39218],
+  "movementCapabilities": 3,
+  "$fileid": 2083
+}
+,
+
+{
+  "animation_group": 214,
+  "actions_0": "Talk-to",
+  "actions_2": "Follow",
+  "combat": 0,
+  "unknown_63": true,
+  "name": "Mistag",
+  "models": [23668, 23704],
+  "headModels": [23246, 23232, 23230],
+  "movementCapabilities": 3,
+  "$fileid": 2084
+}
+,
+
+{
+  "animation_group": 782,
+  "combat": 1,
+  "morphs_1": {
+    "unk1": 34930687,
+    "unk2": [
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      65535,
+      2086,
+      2086
+    ],
+    "unk3": 136738563
+  },
+  "$fileid": 2085
+}
+,
+
+{
+  "animation_group": 782,
+  "combat": 0,
+  "actions_0": "Talk-to",
+  "actions_2": "Follow",
+  "name": "Kazgar",
+  "models": [23658, 23700, 23634, 23676],
+  "headModels": [23228, 23246],
+  "movementCapabilities": 3,
+  "$fileid": 2086
+}
+,
+
+{
+  "animation_group": 214,
+  "actions_0": "Talk-to",
+  "combat": 0,
+  "color_replacements": [[5532, 406], [5656, 410], [5652, 286]],
+  "name": "Ur-tag",
+  "models": [23674, 23710, 23630],
+  "headModels": [23235, 23246, 23227],
+  "movementCapabilities": 1,
+  "$fileid": 2087
+}
+,
+
+{
+  "animation_group": 117,
+  "combat": 0,
+  "boundSize": 1,
+  "material_replacements": [[263, 527]],
+  "name": "Duke Horacio",
+  "models": [40357],
+  "headModels": [39624],
+  "movementCapabilities": 1,
+  "$fileid": 2088
+}
+,
+
+{
+  "animation_group": 214,
+  "combat": 0,
+  "name": "Mistag",
+  "models": [23668, 23704],
+  "headModels": [23246, 23232, 23230],
+  "movementCapabilities": 1,
+  "$fileid": 2089
+}
+,
+
+{
+  "animation_group": 4,
+  "combat": 0,
+  "color_replacements": [
+    [8741, 61347],
+    [25238, 61347],
+    [7952, 61347],
+    [61, 5784],
+    [8078, 61347]
+  ],
+  "material_replacements": [[272, 252]],
+  "name": "Sigmund",
+  "models": [24536, 176, 5215, 181, 24537, 296, 5434, 5430, 5433, 317, 283],
+  "headModels": [38093, 39218],
+  "movementCapabilities": 1,
+  "$fileid": 2090
+}
+,
+
+{
+  "animation_group": 436,
+  "boundSize": 1,
+  "combat": 0,
+  "actions_0": "Talk-to",
+  "color_replacements": [[61, 530], [43055, 813], [4550, 4560]],
+  "name": "Secretary",
+  "models": [7031, 7071, 7058, 7036, 7048, 7068],
+  "headModels": [6990, 6998],
+  "movementCapabilities": 3,
+  "$fileid": 2091
+}
+,
+
+{
+  "animation_group": 436,
+  "boundSize": 1,
+  "combat": 0,
+  "actions_0": "Talk-to",
+  "color_replacements": [[6356, 51507], [61, 51507], [2578, 51507], [6980, 0]],
+  "name": "Purple Pewter Secretary",
+  "models": [7031, 7070, 7060, 7038, 7048, 7068],
+  "headModels": [6990, 6995],
+  "movementCapabilities": 3,
+  "$fileid": 2092
+}
+,
+
+{
+  "animation_group": 436,
+  "boundSize": 1,
+  "scaleXZ": 120,
+  "scaleY": 120,
+  "combat": 0,
+  "actions_0": "Talk-to",
+  "color_replacements": [
+    [2578, 9802],
+    [43055, 8138],
+    [61, 9802],
+    [12, 4541],
+    [910, 10529]
+  ],
+  "name": "Yellow Fortune Secretary",
+  "models": [7035, 7058, 7038, 7048, 7068],
+  "headModels": [6994],
+  "movementCapabilities": 3,
+  "$fileid": 2093
+}
+,
+
+{
+  "animation_group": 440,
+  "combat": 0,
+  "unknown_67": 0,
+  "actions_0": "Talk-to",
+  "color_replacements": [[7473, 39234], [61, 39234]],
+  "material_replacements": [[232, 142]],
+  "name": "Blue Opal Secretary",
+  "models": [2973, 2983, 7037, 7047],
+  "headModels": [3],
+  "movementCapabilities": 3,
+  "$fileid": 2094
+}
+,
+
+{
+  "animation_group": 440,
+  "combat": 0,
+  "unknown_67": 0,
+  "actions_0": "Talk-to",
+  "color_replacements": [[61, 19769], [22, 3982]],
+  "name": "Green Gemstone Secretary",
+  "models": [2970, 7059, 2978, 7047],
+  "headModels": [0],
+  "movementCapabilities": 3,
+  "$fileid": 2095
+}
+,
+
+{
+  "animation_group": 440,
+  "combat": 0,
+  "actions_0": "Talk-to",
+  "color_replacements": [[61, 2165], [7473, 2165], [22, 10306]],
+  "material_replacements": [[232, 295]],
+  "name": "White Chisel Secretary",
+  "models": [2973, 2983, 2978, 7047],
+  "headModels": [3],
+  "movementCapabilities": 3,
+  "$fileid": 2096
+}
+,
+
+{
+  "animation_group": 440,
+  "combat": 0,
+  "unknown_67": 0,
+  "actions_0": "Talk-to",
+  "color_replacements": [[4550, 5586], [2578, 57], [61, 70], [22, 49]],
+  "name": "Silver Cog Secretary",
+  "models": [2970, 7059, 2978, 7047],
+  "headModels": [0],
+  "movementCapabilities": 3,
+  "$fileid": 2097
+}
+,
+
+{
+  "animation_group": 440,
+  "combat": 0,
+  "unknown_67": 0,
+  "actions_0": "Talk-to",
+  "color_replacements": [[4550, 4537], [5784, 6945], [61, 8741], [22, 6812]],
+  "name": "Brown Engine Secretary",
+  "models": [2971, 7063, 2978, 7047],
+  "headModels": [1],
+  "movementCapabilities": 3,
+  "$fileid": 2098
+}
+,
+
+{
+  "animation_group": 2,
+  "combat": 0,
+  "actions_0": "Talk-to",
+  "color_replacements": [
+    [7473, 1701],
+    [61, 2842],
+    [22, 286],
+    [4626, 10508],
+    [2578, 10508],
+    [4550, 5586]
+  ],
+  "name": "Red Axe Secretary",
+  "models": [2974, 7069, 7059, 2978, 7045, 2985],
+  "headModels": [4, 6949],
+  "movementCapabilities": 3,
+  "$fileid": 2099
+}
+,
+
+{
+  "animation_group": 2,
+  "boundSize": 1,
+  "combat": 0,
+  "unknown_63": true,
+  "actions_0": "Talk-to",
+  "color_replacements": [[6356, 51507], [61, 51507], [74, 9924], [4626, 41246]],
+  "name": "Purple Pewter Director",
+  "models": [7026, 6020, 6017, 7037, 7045, 2985],
+  "headModels": [6985],
+  "movementCapabilities": 3,
+  "$fileid": 2100
+}
+,
+
+{
+  "animation_group": 2,
+  "boundSize": 1,
+  "scaleXZ": 130,
+  "scaleY": 115,
+  "combat": 0,
+  "unknown_63": true,
+  "actions_0": "Talk-to",
+  "color_replacements": [
+    [43059, 39234],
+    [61, 42176],
+    [5417, 43051],
+    [5181, 35895],
+    [4626, 39818],
+    [2578, 35994]
+  ],
+  "name": "Blue Opal Director",
+  "models": [7027, 7055, 7037, 7044, 2985],
+  "headModels": [6986],
+  "movementCapabilities": 3,
+  "$fileid": 2101
+}
+,
+
+{
+  "animation_group": 436,
+  "boundSize": 1,
+  "scaleXZ": 135,
+  "scaleY": 128,
+  "combat": 0,
+  "unknown_63": true,
+  "actions_0": "Talk-to",
+  "color_replacements": [
+    [6980, 7516],
+    [43055, 8138],
+    [61, 9802],
+    [4550, 4541],
+    [910, 10816],
+    [22, 10816]
+  ],
+  "name": "Yellow Fortune Director",
+  "models": [7031, 7070, 7058, 7038, 7045, 7068],
+  "headModels": [6990, 6995],
+  "movementCapabilities": 3,
+  "$fileid": 2102
+}
+,
+
+{
+  "animation_group": 2,
+  "boundSize": 1,
+  "scaleXZ": 138,
+  "scaleY": 135,
+  "combat": 0,
+  "unknown_63": true,
+  "actions_0": "Talk-to",
+  "color_replacements": [
+    [4550, 4694],
+    [2578, 18074],
+    [5181, 5421],
+    [61, 19769],
+    [8604, 18074]
+  ],
+  "material_replacements": [[295, 142]],
+  "name": "Green Gemstone Director",
+  "models": [7029, 7069, 6017, 2978, 7044, 2985],
+  "headModels": [6988, 6949],
+  "movementCapabilities": 3,
+  "$fileid": 2103
+}
+,
+
+{
+  "animation_group": 2,
+  "boundSize": 1,
+  "combat": 0,
+  "unknown_63": true,
+  "actions_0": "Talk-to",
+  "color_replacements": [[2578, 2165], [7062, 107], [61, 7475], [12, 7475]],
+  "name": "White Chisel Director",
+  "models": [7028, 7059, 2979, 2980, 2985],
+  "headModels": [6987],
+  "movementCapabilities": 3,
+  "$fileid": 2104
+}
+,
+
+{
+  "animation_group": 2,
+  "boundSize": 1,
+  "scaleXZ": 140,
+  "scaleY": 128,
+  "combat": 0,
+  "unknown_63": true,
+  "actions_0": "Talk-to",
+  "color_replacements": [[6356, 61], [4626, 8], [33, 43088]],
+  "name": "Silver Cog Director",
+  "models": [7029, 6017, 7037, 7045, 2985],
+  "headModels": [6988],
+  "movementCapabilities": 3,
+  "$fileid": 2105
+}
+,
+
+{
+  "animation_group": 2,
+  "boundSize": 1,
+  "scaleXZ": 135,
+  "scaleY": 140,
+  "combat": 0,
+  "unknown_63": true,
+  "actions_0": "Talk-to",
+  "color_replacements": [
+    [5784, 5582],
+    [4550, 4539],
+    [61, 6812],
+    [910, 6812],
+    [53, 6812]
+  ],
+  "material_replacements": [[294, 142]],
+  "name": "Brown Engine Director",
+  "models": [2971, 7055, 7036, 7045, 7068],
+  "headModels": [1],
+  "movementCapabilities": 3,
+  "$fileid": 2106
+}
+,
+
+{
+  "animation_group": 212,
+  "combat": 0,
+  "unknown_63": true,
+  "actions_0": "Talk-to",
+  "color_replacements": [
+    [4550, 4428],
+    [5665, 4323],
+    [5784, 4446],
+    [61, 1701],
+    [90, 538],
+    [53, 545]
+  ],
+  "name": "Red Axe Director",
+  "models": [7030, 7055, 7037, 7075, 2980, 2985],
+  "headModels": [6989],
+  "movementCapabilities": 3,
+  "$fileid": 2107
+}
+,
+
+{
+  "animation_group": 41,
+  "combat": 0,
+  "boundSize": 1,
+  "ambience": 15,
+  "color_replacements": [
+    [4397, 74],
+    [4521, 70],
+    [4517, 66],
+    [4641, 61],
+    [10353, 57],
+    [10345, 53]
+  ],
+  "name": "Red Axe Cat",
+  "models": [34012],
+  "headModels": [34053],
+  "movementCapabilities": 3,
+  "$fileid": 2108
+}
+,
+
+{
+  "animation_group": 2,
+  "scaleXZ": 120,
+  "scaleY": 125,
+  "combat": 0,
+  "color_replacements": [[61, 51507], [10347, 58138], [4626, 54430]],
+  "name": "Trader",
+  "models": [2971, 7072, 7063, 2978, 7045, 2985],
+  "headModels": [1, 6997],
+  "movementCapabilities": 3,
+  "$fileid": 2109
+}
+,
+
+{
+  "animation_group": 436,
+  "combat": 0,
+  "color_replacements": [
+    [61, 51507],
+    [910, 58138],
+    [4626, 54430],
+    [2578, 51507],
+    [43055, 59466],
+    [12, 4550]
+  ],
+  "name": "Trader",
+  "models": [7035, 7070, 7060, 7036, 7048, 7068],
+  "headModels": [6994, 6995],
+  "movementCapabilities": 3,
+  "$fileid": 2110
+}
+,
+
+{
+  "animation_group": 2,
+  "scaleXZ": 130,
+  "scaleY": 115,
+  "combat": 0,
+  "color_replacements": [
+    [61, 39234],
+    [22, 38193],
+    [4626, 36750],
+    [5784, 8993],
+    [4550, 4558]
+  ],
+  "name": "Trader",
+  "models": [2970, 7072, 7063, 2979, 7045, 2985],
+  "headModels": [0, 6997],
+  "movementCapabilities": 3,
+  "$fileid": 2111
+}
+,
+
+{
+  "animation_group": 2,
+  "combat": 0,
+  "color_replacements": [
+    [10347, 39234],
+    [61, 42287],
+    [90, 39234],
+    [4626, 21642],
+    [5417, 38317],
+    [5784, 10283]
+  ],
+  "name": "Trader",
+  "models": [2972, 7071, 7062, 7037, 7044, 2985],
+  "headModels": [2, 6996],
+  "movementCapabilities": 3,
+  "$fileid": 2112
+}
+,
+
+{
+  "animation_group": 436,
+  "scaleXZ": 130,
+  "scaleY": 115,
+  "combat": 0,
+  "color_replacements": [[6980, 6945], [61, 9802], [43055, 6732], [5417, 5322]],
+  "name": "Trader",
+  "models": [7031, 7071, 7064, 7036, 7044, 7068],
+  "headModels": [6990, 6998],
+  "movementCapabilities": 3,
+  "$fileid": 2113
+}
+,
+
+{
+  "animation_group": 436,
+  "combat": 0,
+  "color_replacements": [
+    [6980, 6808],
+    [61, 9802],
+    [43055, 6732],
+    [10347, 8625],
+    [4550, 5714]
+  ],
+  "name": "Trader",
+  "models": [7031, 7064, 7036, 7048, 7068],
+  "headModels": [6990],
+  "movementCapabilities": 3,
+  "$fileid": 2114
+}
+,
+
+{
+  "animation_group": 2,
+  "scaleXZ": 134,
+  "scaleY": 115,
+  "combat": 0,
+  "color_replacements": [[61, 19769], [90, 15153], [4550, 7853], [10347, 9680]],
+  "material_replacements": [[295, 142]],
+  "name": "Trader",
+  "models": [2974, 7072, 7063, 7037, 7044, 2985],
+  "headModels": [4, 6997],
+  "movementCapabilities": 3,
+  "$fileid": 2115
+}
+,
+
+{
+  "animation_group": 2,
+  "scaleXZ": 130,
+  "scaleY": 115,
+  "combat": 0,
+  "color_replacements": [
+    [61, 19769],
+    [90, 15153],
+    [4550, 6715],
+    [10347, 13646]
+  ],
+  "name": "Trader",
+  "models": [2973, 7072, 7062, 7037, 7044, 2985],
+  "headModels": [3, 6997],
+  "movementCapabilities": 3,
+  "$fileid": 2116
+}
+,
+
+{
+  "animation_group": 2,
+  "scaleXZ": 134,
+  "scaleY": 130,
+  "combat": 0,
+  "color_replacements": [[61, 2165]],
+  "name": "Trader",
+  "models": [2973, 7072, 7063, 2978, 7044, 2985],
+  "headModels": [3, 6997],
+  "movementCapabilities": 3,
+  "$fileid": 2117
+}
+,
+
+{
+  "animation_group": 2,
+  "combat": 0,
+  "color_replacements": [[61, 2165]],
+  "name": "Trader",
+  "models": [2972, 6020, 7062, 2979, 7044, 2985],
+  "headModels": [2],
+  "movementCapabilities": 3,
+  "$fileid": 2118
+}
+,
+
+{
+  "animation_group": 2,
+  "combat": 0,
+  "color_replacements": [[5417, 49], [4626, 8]],
+  "material_replacements": [[295, 142]],
+  "name": "Trader",
+  "models": [2974, 7072, 7062, 2978, 7044, 2985],
+  "headModels": [4, 6997],
+  "movementCapabilities": 3,
+  "$fileid": 2119
+}
+,
+
+{
+  "animation_group": 2,
+  "combat": 0,
+  "color_replacements": [[5417, 49], [5784, 9013]],
+  "name": "Trader",
+  "models": [2972, 7072, 7063, 2978, 7044, 2985],
+  "headModels": [2, 6997],
+  "movementCapabilities": 3,
+  "$fileid": 2120
+}
+,
+
+{
+  "animation_group": 2,
+  "scaleXZ": 134,
+  "scaleY": 124,
+  "combat": 0,
+  "color_replacements": [[61, 6812], [22, 7060], [5784, 1577]],
+  "name": "Trader",
+  "models": [2970, 7072, 7063, 2978, 7045, 2985],
+  "headModels": [0, 6997],
+  "movementCapabilities": 3,
+  "$fileid": 2121
+}
+,
+
+{
+  "animation_group": 436,
+  "scaleXZ": 134,
+  "scaleY": 134,
+  "combat": 0,
+  "color_replacements": [[61, 6812], [22, 7060], [910, 10396]],
+  "name": "Trader",
+  "models": [7033, 7060, 7038, 7045, 7068],
+  "headModels": [6992],
+  "movementCapabilities": 3,
+  "$fileid": 2122
+}
+,
+
+{
+  "animation_group": 48,
+  "boundSize": 1,
+  "combat": 0,
+  "morphs_1": {"unk1": 38141951, "unk2": [], "unk3": 139228931},
+  "$fileid": 2123
+}
+,
+
+{
+  "animation_group": 2,
+  "scaleXZ": 110,
+  "scaleY": 115,
+  "combat": 0,
+  "color_replacements": [[61, 1701], [10347, 819], [4550, 4560]],
+  "name": "Trader",
+  "models": [2974, 7072, 7063, 2978, 7044, 2985],
+  "headModels": [4, 6997],
+  "movementCapabilities": 3,
+  "$fileid": 2124
+}
+,
+
+{
+  "animation_group": 48,
+  "boundSize": 1,
+  "combat": 0,
+  "morphs_1": {"unk1": 38141951, "unk2": [], "unk3": 139360003},
+  "$fileid": 2125
+}
+,
+
+{
+  "animation_group": 2,
+  "scaleXZ": 115,
+  "scaleY": 125,
+  "combat": 0,
+  "color_replacements": [
+    [61, 1701],
+    [10347, 33670],
+    [4550, 5578],
+    [5784, 8999]
+  ],
+  "name": "Trader",
+  "models": [2974, 7072, 7063, 2978, 7045, 2985],
+  "headModels": [4, 6997],
+  "movementCapabilities": 3,
+  "$fileid": 2126
+}
+,
+
+{
+  "animation_group": 2,
+  "scaleXZ": 140,
+  "scaleY": 130,
+  "combat": 0,
+  "unknown_63": true,
+  "actions_0": "Talk-to",
+  "color_replacements": [[61, 12], [10347, 82], [5784, 10337], [4550, 3418]],
+  "name": "Trade Referee",
+  "models": [2973, 7071, 7063, 7037, 7044, 2985],
+  "headModels": [3, 6996],
+  "movementCapabilities": 3,
+  "$fileid": 2127
+}
+,
+
+{
+  "animation_group": 2,
+  "scaleXZ": 135,
+  "scaleY": 135,
+  "combat": 0,
+  "actions_0": "Talk-to",
+  "color_replacements": [
+    [28, 8],
+    [61, 59664],
+    [906, 9021],
+    [908, 8],
+    [5181, 6565]
+  ],
+  "name": "Supreme Commander",
+  "models": [7029, 7050, 7039, 7042],
+  "headModels": [6988],
+  "movementCapabilities": 3,
+  "$fileid": 2128
+}
+,
+
+{
+  "animation_group": 2,
+  "boundSize": 1,
+  "scaleXZ": 140,
+  "scaleY": 130,
+  "combat": 0,
+  "unknown_63": true,
+  "actions_0": "Talk-to",
+  "color_replacements": [
+    [4626, 8],
+    [37, 8],
+    [61, 8],
+    [28, 43055],
+    [7062, 10838],
+    [7054, 43055]
+  ],
+  "name": "Commander Veldaban",
+  "models": [7028, 7050, 7039, 2991, 7043, 2985],
+  "headModels": [6987],
+  "movementCapabilities": 3,
+  "$fileid": 2129
+}
+,
+
+{
+  "animation_group": 2,
+  "boundSize": 1,
+  "actions_0": "Talk-to",
+  "actions_1": "Attack",
+  "combat": 48,
+  "color_replacements": [[61, 12], [57, 12], [37, 12], [7054, 28]],
+  "name": "Black Guard",
+  "models": [2971, 2986, 7051, 7040, 7043, 7065, 2993],
+  "headModels": [1, 6],
+  "movementCapabilities": 3,
+  "$fileid": 2130
+}
+,
+
+{
+  "animation_group": 2,
+  "boundSize": 1,
+  "scaleXZ": 130,
+  "scaleY": 130,
+  "actions_0": "Talk-to",
+  "actions_1": "Attack",
+  "combat": 48,
+  "color_replacements": [[61, 12], [57, 12], [37, 12], [7054, 28]],
+  "name": "Black Guard",
+  "models": [2970, 2986, 7051, 7040, 7043, 7065, 2993],
+  "headModels": [0, 6],
+  "movementCapabilities": 3,
+  "$fileid": 2131
+}
+,
+
+{
+  "animation_group": 2,
+  "boundSize": 1,
+  "actions_0": "Talk-to",
+  "actions_1": "Attack",
+  "combat": 48,
+  "color_replacements": [[61, 12], [57, 12], [37, 12], [5784, 9529]],
+  "name": "Black Guard",
+  "models": [2973, 2986, 7051, 7040, 7043, 7065, 2993],
+  "headModels": [3, 6],
+  "movementCapabilities": 3,
+  "$fileid": 2132
+}
+,
+
+{
+  "animation_group": 2,
+  "boundSize": 1,
+  "actions_0": "Talk-to",
+  "actions_1": "Attack",
+  "combat": 48,
+  "color_replacements": [[61, 12], [57, 12], [37, 12], [7054, 28]],
+  "name": "Black Guard",
+  "models": [2971, 2986, 7051, 7040, 7043, 7065, 2993],
+  "headModels": [1, 6],
+  "movementCapabilities": 2,
+  "$fileid": 2133
+}
+,
+
+{
+  "animation_group": 2,
+  "scaleXZ": 150,
+  "scaleY": 132,
+  "actions_0": "Talk-to",
+  "actions_1": "Attack",
+  "combat": 66,
+  "color_replacements": [[61, 8], [28, 908], [33, 908]],
+  "name": "Black Guard Berserker",
+  "models": [7025, 7050, 7039, 7073, 2991, 7042],
+  "headModels": [6984],
+  "movementCapabilities": 3,
+  "$fileid": 2134
+}
+,
+
+{
+  "animation_group": 2,
+  "scaleXZ": 150,
+  "scaleY": 130,
+  "actions_0": "Talk-to",
+  "actions_1": "Attack",
+  "combat": 66,
+  "color_replacements": [[61, 43150], [908, 43150], [906, 43150]],
+  "name": "Black Guard Berserker",
+  "models": [7025, 7050, 7039, 2993, 2991, 7042],
+  "headModels": [6984],
+  "movementCapabilities": 3,
+  "$fileid": 2135
+}
+,
+
+{
+  "animation_group": 2,
+  "scaleXZ": 145,
+  "scaleY": 135,
+  "actions_0": "Talk-to",
+  "actions_1": "Attack",
+  "combat": 66,
+  "color_replacements": [
+    [61, 22406],
+    [8, 22406],
+    [33, 10382],
+    [908, 22406],
+    [906, 22406]
+  ],
+  "name": "Black Guard Berserker",
+  "models": [7025, 7050, 7039, 7073, 7042],
+  "headModels": [6984],
+  "movementCapabilities": 3,
+  "$fileid": 2136
+}
+,
+
+{
+  "animation_group": 108,
+  "actions_0": "Talk-to",
+  "combat": 0,
+  "color_replacements": [
+    [22418, 687],
+    [22424, 11160],
+    [22426, 687],
+    [6038, 926]
+  ],
+  "name": "Gnome emissary",
+  "models": [2900, 2911, 2922],
+  "headModels": [23],
+  "movementCapabilities": 3,
+  "$fileid": 2137
+}
+,
+
+{
+  "animation_group": 108,
+  "actions_0": "Talk-to",
+  "combat": 0,
+  "color_replacements": [
+    [22422, 687],
+    [22424, 11160],
+    [22426, 687],
+    [6038, 926]
+  ],
+  "name": "Gnome traveller",
+  "models": [2907, 2914, 2917],
+  "headModels": [21],
+  "movementCapabilities": 3,
+  "$fileid": 2138
+}
+,
+
+{
+  "animation_group": 108,
+  "actions_0": "Talk-to",
+  "combat": 0,
+  "color_replacements": [[22422, 414], [37, 10644], [22426, 4643], [49, 10518]],
+  "name": "Gnome traveller",
+  "models": [2890, 2914, 2917],
+  "headModels": [21],
+  "movementCapabilities": 3,
+  "$fileid": 2139
+}
+,
+
+{
+  "animation_group": 435,
+  "boundSize": 1,
+  "actions_0": "Talk-to",
+  "unknown_67": 0,
+  "combat": 0,
+  "color_replacements": [[4521, 37], [4517, 33], [10353, 78], [10345, 66]],
+  "name": "Dromund's cat",
+  "models": [34027],
+  "headModels": [34056],
+  "movementCapabilities": 3,
+  "$fileid": 2140
+}
+,
+
+{
+  "animation_group": 2,
+  "boundSize": 1,
+  "scaleXZ": 140,
+  "scaleY": 135,
+  "combat": 0,
+  "actions_0": "Talk-to",
+  "color_replacements": [[61, 4548], [5181, 6373], [8604, 8485], [4626, 8410]],
+  "name": "Blasidar the sculptor",
+  "models": [7029, 7069, 7061, 2979, 7046, 2985, 7074],
+  "headModels": [6988, 6949],
+  "movementCapabilities": 3,
+  "$fileid": 2141
+}
+,
+
+{
+  "animation_group": 2,
+  "boundSize": 1,
+  "combat": 0,
+  "material_replacements": [[294, 232]],
+  "morphs_1": {
+    "unk1": 37814271,
+    "unk2": [2143, 2144, 2145, 2147, 2146, 2148, 2149],
+    "unk3": 140932867
+  },
+  "$fileid": 2142
+}
+,
+
+{
+  "animation_group": 2,
+  "boundSize": 1,
+  "scaleXZ": 135,
+  "scaleY": 135,
+  "combat": 0,
+  "actions_0": "Talk-to",
+  "color_replacements": [[2578, 61], [12, 61], [61, 7473]],
+  "name": "Riki the sculptor's model",
+  "models": [2974, 2983, 2978, 2980, 2985],
+  "headModels": [4],
+  "movementCapabilities": 3,
+  "$fileid": 2143
+}
+,
+
+{
+  "animation_group": 2,
+  "boundSize": 1,
+  "scaleXZ": 135,
+  "scaleY": 135,
+  "combat": 0,
+  "actions_0": "Talk-to",
+  "color_replacements": [[2578, 61], [12, 61], [61, 7473]],
+  "material_replacements": [[295, 232]],
+  "name": "Riki the sculptor's model",
+  "models": [2974, 2983, 2978, 2980, 7067],
+  "headModels": [4],
+  "movementCapabilities": 3,
+  "$fileid": 2144
+}
+,
+
+{
+  "animation_group": 2,
+  "boundSize": 1,
+  "scaleXZ": 135,
+  "scaleY": 135,
+  "combat": 0,
+  "actions_0": "Talk-to",
+  "color_replacements": [[61, 9635], [53, 7469], [12, 9630], [2578, 8613]],
+  "name": "Riki the sculptor's model",
+  "models": [2974, 7056, 7037, 2980, 2985],
+  "headModels": [4],
+  "movementCapabilities": 3,
+  "$fileid": 2145
+}
+,
+
+{
+  "animation_group": 2,
+  "boundSize": 1,
+  "scaleXZ": 135,
+  "scaleY": 135,
+  "combat": 0,
+  "actions_0": "Talk-to",
+  "color_replacements": [[2578, 61], [12, 61], [61, 7473]],
+  "material_replacements": [[295, 232]],
+  "name": "Riki the sculptor's model",
+  "models": [2974, 2983, 2978, 2980, 2985, 7073],
+  "headModels": [4],
+  "movementCapabilities": 3,
+  "$fileid": 2146
+}
+,
+
+{
+  "animation_group": 2,
+  "boundSize": 1,
+  "scaleXZ": 135,
+  "scaleY": 135,
+  "combat": 0,
+  "actions_0": "Talk-to",
+  "color_replacements": [[61, 9635], [53, 7469], [12, 9630], [2578, 8613]],
+  "name": "Riki the sculptor's model",
+  "models": [2974, 7056, 7037, 2980, 7067],
+  "headModels": [4],
+  "movementCapabilities": 3,
+  "$fileid": 2147
+}
+,
+
+{
+  "animation_group": 2,
+  "boundSize": 1,
+  "scaleXZ": 135,
+  "scaleY": 135,
+  "combat": 0,
+  "actions_0": "Talk-to",
+  "color_replacements": [[2578, 61], [12, 61], [61, 7473]],
+  "material_replacements": [[295, 232]],
+  "name": "Riki the sculptor's model",
+  "models": [2974, 2983, 2978, 2980, 7067, 7073],
+  "headModels": [4],
+  "movementCapabilities": 3,
+  "$fileid": 2148
+}
+,
+
+{
+  "animation_group": 2,
+  "boundSize": 1,
+  "scaleXZ": 135,
+  "scaleY": 135,
+  "combat": 0,
+  "actions_0": "Talk-to",
+  "color_replacements": [[61, 9635], [53, 7469], [12, 9630], [2578, 8613]],
+  "name": "Riki the sculptor's model",
+  "models": [2974, 7056, 7037, 2980, 2985, 7073],
+  "headModels": [4],
+  "movementCapabilities": 3,
+  "$fileid": 2149
+}
+,
+
+{
+  "animation_group": 2,
+  "boundSize": 1,
+  "scaleXZ": 135,
+  "scaleY": 135,
+  "combat": 0,
+  "actions_0": "Talk-to",
+  "color_replacements": [[61, 9635], [53, 7469], [12, 9630], [2578, 8613]],
+  "name": "Riki the sculptor's model",
+  "models": [2974, 7056, 7037, 2980, 7067, 7073],
+  "headModels": [4],
+  "movementCapabilities": 3,
+  "$fileid": 2150
+}
+,
+
+{
+  "animation_group": 2,
+  "boundSize": 1,
+  "scaleXZ": 130,
+  "combat": 0,
+  "actions_0": "Talk-to",
+  "actions_2": "Trade",
+  "color_replacements": [[61, 668], [33, 8119], [12, 668], [8604, 540]],
+  "name": "Vigr",
+  "models": [2974, 7069, 7059, 2979, 2980, 2985],
+  "headModels": [4, 6949],
+  "movementCapabilities": 3,
+  "$fileid": 2151
+}
+,
+
+{
+  "animation_group": 2,
+  "boundSize": 1,
+  "scaleXZ": 130,
+  "scaleY": 120,
+  "combat": 0,
+  "actions_0": "Talk-to",
+  "actions_2": "Trade",
+  "color_replacements": [[61, 7077], [7473, 99], [4626, 10659]],
+  "name": "Santiri",
+  "models": [2971, 2983, 2979, 2980, 2985],
+  "headModels": [1],
+  "movementCapabilities": 3,
+  "$fileid": 2152
+}
+,
+
+{
+  "animation_group": 2,
+  "boundSize": 1,
+  "combat": 0,
+  "actions_0": "Talk-to",
+  "actions_2": "Trade",
+  "color_replacements": [
+    [803, 38049],
+    [7473, 10553],
+    [6356, 41255],
+    [10659, 40099]
+  ],
+  "name": "Saro",
+  "models": [2984, 2978, 2981, 2985, 40129],
+  "headModels": [4, 6026],
+  "movementCapabilities": 3,
+  "$fileid": 2153
+}
+,
+
+{
+  "animation_group": 2,
+  "boundSize": 1,
+  "combat": 0,
+  "actions_0": "Talk-to",
+  "actions_2": "Trade",
+  "color_replacements": [
+    [803, 12820],
+    [7473, 10553],
+    [6356, 12820],
+    [61, 29574]
+  ],
+  "name": "Gunslik",
+  "models": [2974, 2984, 2978, 2981, 2985],
+  "headModels": [4],
+  "movementCapabilities": 3,
+  "$fileid": 2154
+}
+,
+
+{
+  "animation_group": 2,
+  "boundSize": 1,
+  "combat": 0,
+  "actions_0": "Talk-to",
+  "color_replacements": [[10659, 66], [7473, 61], [6356, 12820]],
+  "material_replacements": [[295, 232]],
+  "name": "Wemund",
+  "models": [2983, 2978, 6021, 7045, 2985, 40127],
+  "headModels": [3, 6026],
+  "movementCapabilities": 3,
+  "$fileid": 2155
+}
+,
+
+{
+  "animation_group": 2,
+  "scaleXZ": 130,
+  "boundSize": 1,
+  "combat": 0,
+  "actions_0": "Talk-to",
+  "actions_2": "Trade",
+  "color_replacements": [[61, 90], [8485, 8631], [5784, 9001], [4550, 3534]],
+  "material_replacements": [[125, 253], [140, 253]],
+  "name": "Randivor",
+  "models": [2973, 7072, 7061, 2978, 7046, 2985],
+  "headModels": [3, 6997],
+  "movementCapabilities": 3,
+  "$fileid": 2156
+}
+,
+
+{
+  "animation_group": 2,
+  "boundSize": 1,
+  "combat": 0,
+  "actions_0": "Talk-to",
+  "actions_2": "Trade",
+  "color_replacements": [
+    [61, 14627],
+    [33, 8119],
+    [12, 13204],
+    [8604, 3350],
+    [2578, 6947]
+  ],
+  "name": "Hervi",
+  "models": [2974, 7069, 7059, 2979, 2980, 2985],
+  "headModels": [4, 6949],
+  "movementCapabilities": 3,
+  "$fileid": 2157
+}
+,
+
+{
+  "animation_group": 2,
+  "boundSize": 1,
+  "scaleXZ": 130,
+  "combat": 0,
+  "actions_0": "Talk-to",
+  "actions_2": "Trade",
+  "color_replacements": [
+    [8485, 58423],
+    [7473, 9529],
+    [10659, 7729],
+    [5784, 5929]
+  ],
+  "name": "Nolar",
+  "models": [7061, 2979, 7046, 2985, 40126],
+  "headModels": [2, 6026],
+  "movementCapabilities": 3,
+  "$fileid": 2158
+}
+,
+
+{
+  "animation_group": 2,
+  "boundSize": 1,
+  "scaleXZ": 130,
+  "combat": 0,
+  "actions_0": "Talk-to",
+  "actions_2": "Trade",
+  "color_replacements": [
+    [8485, 16],
+    [7473, 9529],
+    [10330, 7729],
+    [8604, 10417],
+    [61, 9529]
+  ],
+  "name": "Gulldamar",
+  "models": [2971, 7069, 7061, 2978, 7046, 2985],
+  "headModels": [2, 6949],
+  "movementCapabilities": 3,
+  "$fileid": 2159
+}
+,
+
+{
+  "animation_group": 212,
+  "boundSize": 1,
+  "scaleXZ": 130,
+  "combat": 0,
+  "actions_0": "Talk-to",
+  "actions_2": "Trade",
+  "color_replacements": [[7473, 5669], [2578, 57], [8604, 3350]],
+  "name": "Tati",
+  "models": [7029, 7071, 2983, 2979, 7075, 2980, 2985],
+  "headModels": [6988, 6996],
+  "movementCapabilities": 3,
+  "$fileid": 2160
+}
+,
+
+{
+  "animation_group": 436,
+  "boundSize": 1,
+  "combat": 0,
+  "actions_0": "Talk-to",
+  "actions_2": "Trade",
+  "color_replacements": [[61, 61896], [43055, 813], [12, 4550], [910, 59920]],
+  "name": "Agmundi",
+  "models": [7032, 7060, 7038, 7048, 7068],
+  "headModels": [6991],
+  "movementCapabilities": 3,
+  "$fileid": 2161
+}
+,
+
+{
+  "animation_group": 436,
+  "boundSize": 1,
+  "combat": 0,
+  "actions_0": "Talk-to",
+  "actions_2": "Trade",
+  "color_replacements": [[61, 6845], [43055, 813], [7062, 7987]],
+  "name": "Vermundi",
+  "models": [7032, 7060, 7038, 7048, 7068],
+  "headModels": [6991],
+  "movementCapabilities": 3,
+  "$fileid": 2162
+}
+,
+
+{
+  "animation_group": 439,
+  "boundSize": 1,
+  "scaleXZ": 120,
+  "scaleY": 120,
+  "combat": 0,
+  "actions_0": "Talk-to",
+  "actions_2": "Bank",
+  "actions_3": "Collect",
+  "color_replacements": [[61, 7834], [43055, 813], [2578, 8481], [12, 4550]],
+  "name": "Banker",
+  "models": [7035, 6020, 7060, 7038, 7048, 7068],
+  "headModels": [6994],
+  "movementCapabilities": 1,
+  "$fileid": 2163
+}
+,
+
+{
+  "animation_group": 438,
+  "boundSize": 1,
+  "combat": 0,
+  "actions_0": "Talk-to",
+  "actions_2": "Bank",
+  "actions_3": "Collect",
+  "color_replacements": [
+    [803, 7834],
+    [7473, 7834],
+    [6356, 7834],
+    [61, 29574],
+    [4626, 898]
+  ],
+  "material_replacements": [[295, 142]],
+  "name": "Banker",
+  "models": [2972, 6020, 6017, 2978, 2981, 2985],
+  "headModels": [2],
+  "movementCapabilities": 1,
+  "$fileid": 2164
+}
+,
+
+{
+  "animation_group": 2,
+  "combat": 0,
+  "actions_0": "Talk-to",
+  "color_replacements": [[61, 6356], [4550, 2394]],
+  "name": "Librarian",
+  "models": [7029, 7071, 6017, 7037, 7045, 2985],
+  "headModels": [6988, 6996],
+  "movementCapabilities": 3,
+  "$fileid": 2165
+}
+,
+
+{
+  "animation_group": 436,
+  "scaleXZ": 120,
+  "scaleY": 118,
+  "combat": 0,
+  "actions_0": "Talk-to",
+  "color_replacements": [[910, 8078], [61, 200], [10347, 8526], [7062, 5027]],
+  "name": "Assistant",
+  "models": [7035, 7064, 7038, 7045, 7068],
+  "headModels": [6994],
+  "movementCapabilities": 3,
+  "$fileid": 2166
+}
+,
+
+{
+  "animation_group": 436,
+  "scaleXZ": 115,
+  "scaleY": 120,
+  "combat": 0,
+  "actions_0": "Talk-to",
+  "color_replacements": [[61, 41133], [22, 417], [4550, 4564]],
+  "name": "Customer",
+  "models": [7033, 7060, 7036, 7045, 7068],
+  "headModels": [6992],
+  "movementCapabilities": 3,
+  "$fileid": 2167
+}
+,
+
+{
+  "animation_group": 4,
+  "combat": 0,
+  "actions_0": "Talk-to",
+  "color_replacements": [[8741, 12973], [25238, 7582]],
+  "name": "Customer",
+  "models": [378, 456, 480, 348, 353, 419, 358],
+  "headModels": [39090],
+  "movementCapabilities": 3,
+  "$fileid": 2168
+}
+,
+
+{
+  "animation_group": 2,
+  "combat": 0,
+  "actions_0": "Talk-to",
+  "color_replacements": [
+    [7863, 43055],
+    [7880, 43055],
+    [61, 40099],
+    [53, 10270],
+    [4292, 16536],
+    [90, 16536]
+  ],
+  "name": "Dromund",
+  "models": [7027, 7055, 7037, 7045, 2985],
+  "headModels": [6986],
+  "movementCapabilities": 2,
+  "$fileid": 2169
+}
+,
+
+{
+  "animation_group": 2,
+  "combat": 0,
+  "actions_0": "Talk-to",
+  "color_replacements": [[61, 8604], [803, 16532], [5784, 9775]],
+  "name": "Rind the gardener",
+  "models": [2973, 7069, 7062, 2979, 2981, 2985],
+  "headModels": [3, 6949],
+  "movementCapabilities": 3,
+  "$fileid": 2170
+}
+,
+
+{
+  "animation_group": 2,
+  "scaleXZ": 130,
+  "scaleY": 120,
+  "combat": 0,
+  "actions_0": "Talk-to",
+  "color_replacements": [[61, 5417], [10347, 49], [5784, 7836], [4626, 5662]],
+  "material_replacements": [[295, 142]],
+  "name": "Factory Manager",
+  "models": [2970, 7063, 7037, 7044, 2985],
+  "headModels": [0],
+  "movementCapabilities": 3,
+  "$fileid": 2171
+}
+,
+
+{
+  "animation_group": 2,
+  "scaleXZ": 120,
+  "scaleY": 135,
+  "combat": 0,
+  "actions_0": "Talk-to",
+  "color_replacements": [[61, 5417], [10347, 49], [4550, 4535]],
+  "name": "Factory Worker",
+  "models": [2971, 2983, 2979, 7044, 2985],
+  "headModels": [1],
+  "movementCapabilities": 3,
+  "$fileid": 2172
+}
+,
+
+{
+  "animation_group": 2,
+  "scaleXZ": 115,
+  "scaleY": 130,
+  "combat": 0,
+  "actions_0": "Talk-to",
+  "color_replacements": [[7473, 5417], [10347, 49], [4550, 4535]],
+  "name": "Factory Worker",
+  "models": [2972, 2983, 2979, 7045, 2985],
+  "headModels": [2],
+  "movementCapabilities": 3,
+  "$fileid": 2173
+}
+,
+
+{
+  "animation_group": 2,
+  "scaleXZ": 120,
+  "scaleY": 130,
+  "combat": 0,
+  "actions_0": "Talk-to",
+  "color_replacements": [
+    [7473, 5417],
+    [4550, 5440],
+    [22, 2716],
+    [10347, 20],
+    [61, 41]
+  ],
+  "name": "Factory Worker",
+  "models": [2973, 7062, 2979, 7045, 2985],
+  "headModels": [4],
+  "movementCapabilities": 3,
+  "$fileid": 2174
+}
+,
+
+{
+  "animation_group": 2,
+  "scaleXZ": 133,
+  "scaleY": 133,
+  "combat": 0,
+  "actions_0": "Talk-to",
+  "color_replacements": [[7473, 5417], [4550, 5440], [61, 5417], [10347, 20]],
+  "material_replacements": [[295, 232]],
+  "name": "Factory Worker",
+  "models": [2974, 2983, 2978, 7045, 2985],
+  "headModels": [4],
+  "movementCapabilities": 3,
+  "$fileid": 2175
+}]}
