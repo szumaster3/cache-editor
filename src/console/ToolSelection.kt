@@ -14,13 +14,11 @@ import com.editor.cache.transfer.IndexTransfer
 import com.editor.cache.transfer.InterfaceTransfer
 import com.editor.cache.transfer.RegionTransfer
 import com.editor.misc.ColorPicker
+import com.editor.misc.Screenshot
 import com.editor.model.ModelExporter
 import com.editor.model.ModelPacker
 import com.editor.model.view.frame.ModelFrame
-import java.awt.Color
-import java.awt.Cursor
-import java.awt.Dimension
-import java.awt.FlowLayout
+import java.awt.*
 import java.awt.event.ActionEvent
 import java.io.*
 import java.time.LocalDateTime
@@ -72,8 +70,8 @@ class ToolSelection : JFrame() {
             preferredSize = Dimension(100, 30)
         }
 
-        val button2 = JButton("Timestamp").apply {
-            addActionListener { placeholderButton2(this) }
+        val button2 = JButton("Screenshot Capture").apply {
+            addActionListener { placeholderButton3(this) }
             preferredSize = Dimension(205, 30)
         }
 
@@ -364,9 +362,8 @@ class ToolSelection : JFrame() {
         button.text = "$date | $time"
     }
 
-    private fun placeholderButton3(button: JButton, texts: List<String>) {
-        val randomText = texts.random()
-        button.text = randomText
+    private fun placeholderButton3(button: JButton) {
+        EventQueue.invokeLater { Screenshot() }
     }
 
     private fun backup(button: JButton) {

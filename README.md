@@ -1,4 +1,5 @@
-![](https://i.imgur.com/w7729G1.gif)<br>
+## 530-Editor
+
 [![License][License: AGPL v3]][license-url] [![License][Shield: Fork]][fork-url]
 
 ***
