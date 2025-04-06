@@ -237,7 +237,7 @@ class ToolSelection : JFrame() {
             }
 
             12 -> try {
-                SwingUtilities.invokeLater { ModelPacker(cache).isVisible = true }; Main.log(toolSelected, startMessage)
+                ModelPacker(cache).isVisible = true ; Main.log(toolSelected, startMessage)
             } catch (e: IOException) {
                 Main.log(toolSelected, failMessage)
             }

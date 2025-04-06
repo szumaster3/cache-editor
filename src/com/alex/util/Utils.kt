@@ -2,17 +2,13 @@ package com.alex.util
 
 import com.alex.filestore.Cache
 import com.alex.io.OutputStream
-import com.alex.util.bzip2.CBZip2InputStream
-import com.alex.util.bzip2.CBZip2OutputStream
-import java.awt.Color
-import java.awt.Toolkit
+import java.awt.*
 import java.awt.datatransfer.Clipboard
 import java.awt.datatransfer.StringSelection
 import java.io.*
 import java.math.BigInteger
 import java.util.*
-import java.util.zip.GZIPInputStream
-import java.util.zip.GZIPOutputStream
+import javax.swing.JProgressBar
 import kotlin.math.pow
 
 /**
@@ -336,7 +332,6 @@ object Utils {
         return if (cache.indexes[7].putFile(archiveId, 0, data)) {
             archiveId
         } else {
-            println("Failed packing model $archiveId")
             -1
         }
     }
@@ -358,7 +353,6 @@ object Utils {
         if (cache.indexes[7].putFile(modelId, 0, data)) {
             modelId
         } else {
-            println("Failed packing model $modelId")
             -1
         }
 
@@ -385,5 +379,19 @@ object Utils {
         id: Int,
         bits: Int,
     ): Int = (id) and (1 shl bits) - 1
+
+    class ProgressBar : JProgressBar() {
+        override fun paintComponent(g: Graphics) {
+            super.paintComponent(g)
+            val g2d = g as Graphics2D
+            g2d.color = Color.WHITE
+            val fontMetrics = g2d.fontMetrics
+            val progressText = "${getPercentComplete() * 100}%"
+            val x = (width - fontMetrics.stringWidth(progressText)) / 2
+            val y = (height + fontMetrics.ascent - fontMetrics.descent) / 2
+            preferredSize = Dimension(width, fontMetrics.height + 2)
+            g2d.drawString(progressText, x, y)
+        }
+    }
 
 }
