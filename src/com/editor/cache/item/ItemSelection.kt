@@ -28,6 +28,7 @@ class ItemSelection : JFrame {
      */
     constructor(cache: String?) {
         CACHE = Cache(cache)
+        title = "Item Selection"
         this.isResizable = false
         this.defaultCloseOperation = 1
         this.setLocationRelativeTo(null)
