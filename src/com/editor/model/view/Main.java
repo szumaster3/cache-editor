@@ -15,7 +15,7 @@ import java.util.Properties;
 public class Main extends JFrame implements Runnable {
     public static boolean isOptimizedSelected = false;
     private static long gcDelay = 0L;
-    private static com.editor.model.view.render.Renderer renderer;
+    private static Renderer renderer;
     JFileChooser fileChooser2;
     private int posY = 159;
     private int posX = 268;

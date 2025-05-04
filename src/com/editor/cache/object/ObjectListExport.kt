@@ -1,8 +1,7 @@
 package com.editor.cache.`object`
 
-import com.alex.defs.items.ItemDefinitions
+import com.alex.defs.objects.ObjectDefinitions
 import com.alex.filestore.Cache
-import com.alex.util.Utils.getItemDefinitionsSize
 import com.alex.util.Utils.getObjectDefinitionsSize
 import java.io.BufferedWriter
 import java.io.File
@@ -29,7 +28,7 @@ class ObjectListExport(
                 writer.appendLine("Id - name")
 
                 for (id in 0 until getObjectDefinitionsSize(this.cache)) {
-                    val def = ItemDefinitions.getItemDefinition(this.cache, id)
+                    val def = ObjectDefinitions.getObjectDefinition(this.cache, id)
                     val itemInfo = "$id - ${def.name}"
                     writer.appendLine(itemInfo)
                     println(itemInfo)
