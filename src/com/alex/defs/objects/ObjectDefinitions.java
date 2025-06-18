@@ -6,16 +6,15 @@ import com.alex.io.OutputStream;
 
 import java.io.IOException;
 import java.util.HashMap;
-
+import java.util.Map;
 
 public class ObjectDefinitions implements Cloneable {
-
     public static int anInt3832;
     public static int anInt3836;
     public static int anInt3842;
     public static int anInt3843;
     public static int anInt3846;
-    public HashMap<Integer, Object> clientScriptData;
+    public HashMap < Integer, Object > clientScriptData;
     public short[] originalModelColors;
     public int[] childrenIds;
     public int anInt3834;
@@ -75,12 +74,12 @@ public class ObjectDefinitions implements Cloneable {
     public int[] arrayForModelId;
     public int id;
     int[] anIntArray3833 = null;
-    boolean aBoolean3845;
+    public boolean aBoolean3845;
     int[] anIntArray3859;
     int configFileId;
-    boolean aBoolean3866;
-    boolean aBoolean3867;
-    boolean aBoolean3870;
+    public boolean aBoolean3866;
+    public boolean aBoolean3867;
+    public boolean aBoolean3870;
     boolean aBoolean3872;
     boolean aBoolean3873;
     Object loader;
@@ -173,8 +172,8 @@ public class ObjectDefinitions implements Cloneable {
             stream.writeByte(27);
         }
 
-        if (this.originalModelColors != null && this.modifiedModelColors != null
-                && this.originalModelColors.length == this.modifiedModelColors.length) {
+        if (this.originalModelColors != null && this.modifiedModelColors != null &&
+                this.originalModelColors.length == this.modifiedModelColors.length) {
             stream.writeByte(40);
             stream.writeByte(this.originalModelColors.length);
             for (int i = 0; i < this.originalModelColors.length; ++i) {
@@ -192,21 +191,21 @@ public class ObjectDefinitions implements Cloneable {
             }
         }
 
-        // if (this.clientScriptData != null) {
-        //     stream.writeByte(249);
-        //     stream.writeByte(this.clientScriptData.size());
-        //     for (Map.Entry<Integer, Object> entry : this.clientScriptData.entrySet()) {
-        //         int key = entry.getKey();
-        //         Object value = entry.getValue();
-        //         stream.writeByte((value instanceof String) ? 1 : 0);
-        //         stream.writeMedium(key);
-        //         if (value instanceof String) {
-        //             stream.writeString((String) value);
-        //         } else {
-        //             stream.writeInt((Integer) value);
-        //         }
-        //     }
-        // }
+        if (this.clientScriptData != null) {
+            stream.writeByte(249);
+            stream.writeByte(this.clientScriptData.size());
+            for (Map.Entry < Integer, Object > entry: this.clientScriptData.entrySet()) {
+                int key = entry.getKey();
+                Object value = entry.getValue();
+                stream.writeByte((value instanceof String) ? 1 : 0);
+                stream.writeMedium(key);
+                if (value instanceof String) {
+                    stream.writeString((String) value);
+                } else {
+                    stream.writeInt((Integer) value);
+                }
+            }
+        }
 
         stream.writeByte(0);
 
@@ -259,9 +258,9 @@ public class ObjectDefinitions implements Cloneable {
                                                     originalModelColors = new short[i_53_];
                                                     modifiedModelColors = new short[i_53_];
                                                     for (int i_54_ = 0; i_53_ > i_54_; i_54_++) {
-                                                        originalModelColors[i_54_] = (short) (stream
+                                                        originalModelColors[i_54_] = (short)(stream
                                                                 .readUnsignedShort());
-                                                        modifiedModelColors[i_54_] = (short) (stream
+                                                        modifiedModelColors[i_54_] = (short)(stream
                                                                 .readUnsignedShort());
                                                     }
                                                 } else if (opcode != 41) {
@@ -286,8 +285,8 @@ public class ObjectDefinitions implements Cloneable {
                                                                                 else if (opcode == 74)
                                                                                     notCliped = true;
                                                                                 else if (opcode != 75) {
-                                                                                    if (opcode != 77
-                                                                                            && opcode != 92) {
+                                                                                    if (opcode != 77 &&
+                                                                                            opcode != 92) {
                                                                                         if (opcode == 78) {
                                                                                             anInt3860 = stream
                                                                                                     .readUnsignedShort();
@@ -351,8 +350,8 @@ public class ObjectDefinitions implements Cloneable {
                                                                                                                                         .readUnsignedShort();
                                                                                                                             else if (opcode >= 150 && opcode < 155) {
                                                                                                                                 options[opcode + -150] = stream.readString();
-																																	/*if (!loader.showOptions)
-																																		options[opcode	+ -150] = null;*/
+                                                                                                                                /*if (!loader.showOptions)
+                                                                                                                                	options[opcode	+ -150] = null;*/
                                                                                                                             } else if (opcode != 160) {
                                                                                                                                 if (opcode == 162) {
                                                                                                                                     aByte3912 = (byte) 3;
@@ -395,7 +394,7 @@ public class ObjectDefinitions implements Cloneable {
                                                                                                                                                 } else if (opcode == 249) {
                                                                                                                                                     int i_58_ = stream.readUnsignedByte();
                                                                                                                                                     if (clientScriptData == null)
-                                                                                                                                                        clientScriptData = new HashMap<Integer, Object>(i_58_);
+                                                                                                                                                        clientScriptData = new HashMap < Integer, Object > (i_58_);
                                                                                                                                                     for (int i_60_ = 0; i_60_ < i_58_; i_60_++) {
                                                                                                                                                         boolean bool = stream.readUnsignedByte() == 1;
                                                                                                                                                         int key = stream.read24BitInt();
@@ -482,8 +481,8 @@ public class ObjectDefinitions implements Cloneable {
                                                                                         }
                                                                                         int i_67_ = stream
                                                                                                 .readUnsignedByte();
-                                                                                        childrenIds = new int[i_67_
-                                                                                                - -2];
+                                                                                        childrenIds = new int[i_67_ -
+                                                                                                -2];
                                                                                         for (int i_68_ = 0; i_67_ >= i_68_; i_68_++) {
                                                                                             childrenIds[i_68_] = stream
                                                                                                     .readUnsignedShort();
@@ -516,7 +515,7 @@ public class ObjectDefinitions implements Cloneable {
                                                                 .readUnsignedByte());
                                                         aByteArray3858 = (new byte[i_69_]);
                                                         for (int i_70_ = 0; i_70_ < i_69_; i_70_++)
-                                                            aByteArray3858[i_70_] = (byte) (stream
+                                                            aByteArray3858[i_70_] = (byte)(stream
                                                                     .readByte());
                                                     }
                                                 } else {
@@ -525,15 +524,15 @@ public class ObjectDefinitions implements Cloneable {
                                                     originalTextureColors = new short[i_71_];
                                                     modifiedTextureColors = new short[i_71_];
                                                     for (int i_72_ = 0; i_71_ > i_72_; i_72_++) {
-                                                        originalTextureColors[i_72_] = (short) (stream
+                                                        originalTextureColors[i_72_] = (short)(stream
                                                                 .readUnsignedShort());
-                                                        modifiedTextureColors[i_72_] = (short) (stream
+                                                        modifiedTextureColors[i_72_] = (short)(stream
                                                                 .readUnsignedShort());
                                                     }
                                                 }
                                             } else
-                                                options[-30
-                                                        + opcode] = (stream
+                                                options[-30 +
+                                                        opcode] = (stream
                                                         .readString());
                                         } else
                                             anInt3840 = (stream.readByte() * 5);
@@ -661,7 +660,7 @@ public class ObjectDefinitions implements Cloneable {
         return clipType;
     }
 
-    public boolean isProjectileCliped() {
+    public boolean isProjectileClipped() {
         return projectileCliped;
     }
 
@@ -682,7 +681,7 @@ public class ObjectDefinitions implements Cloneable {
     public boolean containsOption(String o) {
         if (options == null)
             return false;
-        for (String option : options) {
+        for (String option: options) {
             if (option == null)
                 continue;
             if (option.equalsIgnoreCase(o))
@@ -744,4 +743,115 @@ public class ObjectDefinitions implements Cloneable {
         this.notCliped = notClipped;
     }
 
+    public boolean isWalkable() {
+        return aBoolean3870;
+    }
+
+    public boolean isSolid() {
+        return aBoolean3853;
+    }
+
+    public boolean isInteractive() {
+        return aBoolean3867;
+    }
+
+    public boolean castsShadow() {
+        return aBoolean3845;
+    }
+
+    public boolean blocksProjectile() {
+        return aBoolean3866;
+    }
+
+    public void setWalkable(boolean walkable) {
+        this.aBoolean3870 = walkable;
+    }
+
+    public void setSolid(boolean solid) {
+        this.aBoolean3853 = solid;
+    }
+
+    public void setInteractive(boolean interactive) {
+        this.aBoolean3867 = interactive;
+    }
+
+    public void setCastsShadow(boolean castsShadow) {
+        this.aBoolean3845 = castsShadow;
+    }
+
+    public void setBlockProjectile(boolean blockProjectile) {
+        this.aBoolean3866 = blockProjectile;
+    }
+
+    public void setScaleX(int scaleX) {
+        this.anInt3841 = scaleX;
+    }
+
+    public void setScaleY(int scaleY) {
+        this.anInt3917 = scaleY;
+    }
+
+    public void setScaleZ(int scaleZ) {
+        this.anInt3902 = scaleZ;
+    }
+
+    public void setRotationX(int rotationX) {
+        this.anInt3840 = rotationX;
+    }
+
+    public void setRotationY(int rotationY) {
+        this.anInt3878 = rotationY;
+    }
+
+    public void setRotationZ(int rotationZ) {
+        this.anInt3876 = rotationZ;
+    }
+
+    public void setAnimationId(int animationId) {
+        this.anInt3855 = animationId;
+    }
+
+    public void setSizeX(int sizeX) {
+        this.sizeX = sizeX;
+    }
+
+    public void setSizeY(int sizeY) {
+        this.sizeY = sizeY;
+    }
+
+    public void setHeightOffsetX(int heightOffsetX) {
+        this.anInt3883 = heightOffsetX;
+    }
+
+    public void setHeightOffsetY(int heightOffsetY) {
+        this.anInt3915 = heightOffsetY;
+    }
+
+    public void setOptions(String[] options) {
+        this.options = options;
+    }
+
+    public void setChildrenIds(int[] childrenIds) {
+        this.childrenIds = childrenIds;
+    }
+
+    public void setOriginalModelColors(short[] originalModelColors) {
+        this.originalModelColors = originalModelColors;
+    }
+
+    public void setModifiedModelColors(short[] modifiedModelColors) {
+        this.modifiedModelColors = modifiedModelColors;
+    }
+
+    public void setOriginalTextureColors(short[] originalTextureColors) {
+        this.originalTextureColors = originalTextureColors;
+    }
+
+    public void setModifiedTextureColors(short[] modifiedTextureColors) {
+        this.modifiedTextureColors = modifiedTextureColors;
+    }
+
+    public void setClipType(int clipType) {
+        this.clipType = clipType;
+    }
 }
