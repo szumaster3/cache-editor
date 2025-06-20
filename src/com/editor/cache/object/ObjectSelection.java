@@ -6,9 +6,13 @@ import com.alex.util.Utils;
 import console.Main;
 
 import javax.swing.*;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * The object selection.
@@ -25,13 +29,10 @@ public class ObjectSelection extends JFrame {
     private JMenuBar jMenuBar1;
     private JMenuItem exitButton;
     private JButton deleteButton;
+    private JTextField searchField;
 
-    /**
-     * Instantiates a new Object selection.
-     *
-     * @param cache the cache
-     * @throws IOException the io exception
-     */
+    private final List<ObjectDefinitions> allObjects = new ArrayList<>();
+
     public ObjectSelection(String cache) throws IOException {
         Cache = new Cache(cache);
         setTitle("Object Selection");
@@ -41,19 +42,10 @@ public class ObjectSelection extends JFrame {
         initComponents();
     }
 
-    /**
-     * Instantiates a new Object selection.
-     */
     public ObjectSelection() {
         initComponents();
     }
 
-    /**
-     * The entry point of application.
-     *
-     * @param args the input arguments
-     * @throws IOException the io exception
-     */
     public static void main(String[] args) throws IOException {
         Cache = new Cache("cache/", false);
         EventQueue.invokeLater(() -> new ObjectSelection().setVisible(true));
@@ -73,6 +65,26 @@ public class ObjectSelection extends JFrame {
         objectsList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
         objectsList.setCellRenderer(new ObjectListCellRenderer());
         JScrollPane jScrollPane1 = new JScrollPane(objectsList);
+
+        // Search field (live search)
+        searchField = new JTextField();
+        searchField.setColumns(20);
+        searchField.getDocument().addDocumentListener(new DocumentListener() {
+            @Override
+            public void insertUpdate(DocumentEvent e) {
+                filterObjectList(searchField.getText());
+            }
+
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+                filterObjectList(searchField.getText());
+            }
+
+            @Override
+            public void changedUpdate(DocumentEvent e) {
+                filterObjectList(searchField.getText());
+            }
+        });
 
         editButton.addActionListener(e -> {
             try {
@@ -104,9 +116,37 @@ public class ObjectSelection extends JFrame {
 
         GroupLayout layout = new GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING).addGroup(layout.createSequentialGroup().addContainerGap().addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING).addComponent(jScrollPane1, GroupLayout.PREFERRED_SIZE, 200, GroupLayout.PREFERRED_SIZE).addGroup(layout.createSequentialGroup().addComponent(editButton).addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE).addComponent(addButton)).addGroup(layout.createSequentialGroup().addComponent(duplicateButton).addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE).addComponent(deleteButton))).addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)));
+        layout.setHorizontalGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup().addContainerGap()
+                        .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                                .addComponent(searchField, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jScrollPane1, GroupLayout.PREFERRED_SIZE, 200, GroupLayout.PREFERRED_SIZE)
+                                .addGroup(layout.createSequentialGroup()
+                                        .addComponent(editButton)
+                                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(addButton))
+                                .addGroup(layout.createSequentialGroup()
+                                        .addComponent(duplicateButton)
+                                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(deleteButton)))
+                        .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
 
-        layout.setVerticalGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING).addGroup(layout.createSequentialGroup().addContainerGap().addComponent(jScrollPane1, GroupLayout.PREFERRED_SIZE, 279, GroupLayout.PREFERRED_SIZE).addPreferredGap(LayoutStyle.ComponentPlacement.RELATED).addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE).addComponent(editButton).addComponent(addButton)).addPreferredGap(LayoutStyle.ComponentPlacement.RELATED).addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE).addComponent(duplicateButton).addComponent(deleteButton)).addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)));
+        layout.setVerticalGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup().addContainerGap()
+                        .addComponent(searchField, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane1, GroupLayout.PREFERRED_SIZE, 279, GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                                .addComponent(editButton)
+                                .addComponent(addButton))
+                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                                .addComponent(duplicateButton)
+                                .addComponent(deleteButton))
+                        .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
 
         pack();
         addAllObjects();
@@ -116,33 +156,42 @@ public class ObjectSelection extends JFrame {
         dispose();
     }
 
-    /**
-     * Add all objects to the list
-     */
     public void addAllObjects() {
-        int id;
         int totalObjects = Utils.getObjectDefinitionsSize(Cache);
-        for (id = 0; id < totalObjects; ++id) {
-            this.addObjectDefs(ObjectDefinitions.getObjectDefinition(Cache, id));
+        for (int id = 0; id < totalObjects; ++id) {
+            ObjectDefinitions obj = ObjectDefinitions.getObjectDefinition(Cache, id);
+            if (obj != null) {
+                allObjects.add(obj);
+                addObjectDefs(obj);
+            }
         }
-
         Main.log("ObjectSelection", "All Objects Loaded");
     }
 
-    /**
-     * Add object definitions to the list model
-     *
-     * @param defs the object definition
-     */
-    public void addObjectDefs(final ObjectDefinitions defs) {
-        EventQueue.invokeLater(() -> ObjectSelection.this.objectsListModel.addElement(defs));
+    private void filterObjectList(String searchTerm) {
+        List<ObjectDefinitions> filtered;
+        if (searchTerm == null || searchTerm.trim().isEmpty()) {
+            filtered = allObjects;
+        } else {
+            filtered = new ArrayList<>();
+            for (ObjectDefinitions obj : allObjects) {
+                if ((obj.getName() != null && obj.getName().toLowerCase().contains(searchTerm.toLowerCase()))
+                        || Integer.toString(obj.id).equals(searchTerm)) {
+                    filtered.add(obj);
+                }
+            }
+        }
+
+        objectsListModel.clear();
+        for (ObjectDefinitions obj : filtered) {
+            objectsListModel.addElement(obj);
+        }
     }
 
-    /**
-     * Update object definitions in the list model
-     *
-     * @param obj the object definition
-     */
+    public void addObjectDefs(final ObjectDefinitions defs) {
+        EventQueue.invokeLater(() -> objectsListModel.addElement(defs));
+    }
+
     public void updateObjectDefs(final ObjectDefinitions obj) {
         EventQueue.invokeLater(() -> {
             int index = objectsListModel.indexOf(obj);
@@ -154,13 +203,11 @@ public class ObjectSelection extends JFrame {
         });
     }
 
-    /**
-     * Remove object definitions from the list model
-     *
-     * @param obj the object definition
-     */
     public void removeObjectDefs(final ObjectDefinitions obj) {
-        EventQueue.invokeLater(() -> objectsListModel.removeElement(obj));
+        EventQueue.invokeLater(() -> {
+            objectsListModel.removeElement(obj);
+            allObjects.remove(obj);
+        });
     }
 
     private void editObject() throws IOException {

@@ -8,23 +8,28 @@ import java.awt.EventQueue
 import java.io.IOException
 import javax.swing.*
 import javax.swing.LayoutStyle.ComponentPlacement
+import javax.swing.event.DocumentEvent
+import javax.swing.event.DocumentListener
 
 class NPCSelection : JFrame {
     private var addButton: JButton? = null
     private var duplicateButton: JButton? = null
     private var editButton: JButton? = null
+    private var deleteButton: JButton? = null
     private var npcListModel: DefaultListModel<NPCDefinitions>? = null
     private var npcList: JList<NPCDefinitions?>? = null
     private var jMenu1: JMenu? = null
     private var jMenuBar1: JMenuBar? = null
     private var exitButton: JMenuItem? = null
-    private var deleteButton: JButton? = null
+    private var searchField: JTextField? = null
+
+    private val allNPCs = mutableListOf<NPCDefinitions>()
 
     constructor(cache: String?) {
         Cache = Cache(cache)
         this.title = "NPC Selection"
         this.isResizable = false
-        this.defaultCloseOperation = 1
+        this.defaultCloseOperation = EXIT_ON_CLOSE
         this.setLocationRelativeTo(null)
         this.initComponents()
     }
@@ -41,13 +46,20 @@ class NPCSelection : JFrame {
         this.jMenuBar1 = JMenuBar()
         this.jMenu1 = JMenu()
         this.exitButton = JMenuItem()
-        this.defaultCloseOperation = 1
         this.npcListModel = DefaultListModel<NPCDefinitions>()
         this.npcList = JList<NPCDefinitions?>(this.npcListModel)
         npcList?.selectionMode = ListSelectionModel.SINGLE_SELECTION
-        npcList?.layoutOrientation = JList.HORIZONTAL_WRAP
+        npcList?.layoutOrientation = JList.VERTICAL
         npcList?.visibleRowCount = -1
         val jScrollPane1 = JScrollPane(this.npcList)
+
+        searchField = JTextField()
+        searchField?.columns = 20
+        searchField?.document?.addDocumentListener(object : DocumentListener {
+            override fun insertUpdate(e: DocumentEvent?) = filterNPCList(searchField?.text ?: "")
+            override fun removeUpdate(e: DocumentEvent?) = filterNPCList(searchField?.text ?: "")
+            override fun changedUpdate(e: DocumentEvent?) = filterNPCList(searchField?.text ?: "")
+        })
 
         editButton?.apply {
             text = "Edit"
@@ -114,58 +126,39 @@ class NPCSelection : JFrame {
         val layout = GroupLayout(this.contentPane)
         this.contentPane.layout = layout
         layout.setHorizontalGroup(
-            layout.createParallelGroup(GroupLayout.Alignment.LEADING).addGroup(
-                layout
-                    .createSequentialGroup()
+            layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
                     .addContainerGap()
-                    .addGroup(
-                        layout
-                            .createParallelGroup(GroupLayout.Alignment.LEADING)
-                            .addGroup(
-                                layout
-                                    .createSequentialGroup()
-                                    .addGroup(
-                                        layout
-                                            .createParallelGroup(GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(jScrollPane1, -2, 200, -2)
-                                            .addGroup(
-                                                layout
-                                                    .createSequentialGroup()
-                                                    .addComponent(this.editButton)
-                                                    .addPreferredGap(ComponentPlacement.RELATED, -1, 32767)
-                                                    .addComponent(this.addButton),
-                                            ),
-                                    ).addGap(0, 0, 32767),
-                            ).addGroup(
-                                layout
-                                    .createSequentialGroup()
-                                    .addComponent(this.duplicateButton)
-                                    .addPreferredGap(ComponentPlacement.RELATED, -1, 32767)
-                                    .addComponent(this.deleteButton),
-                            ),
-                    ).addContainerGap(-1, 32767),
-            ),
+                    .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                        .addComponent(searchField, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jScrollPane1, GroupLayout.PREFERRED_SIZE, 200, GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(editButton)
+                            .addPreferredGap(ComponentPlacement.RELATED)
+                            .addComponent(addButton))
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(duplicateButton)
+                            .addPreferredGap(ComponentPlacement.RELATED)
+                            .addComponent(deleteButton)))
+                    .addContainerGap(GroupLayout.DEFAULT_SIZE, Int.MAX_VALUE))
         )
+
         layout.setVerticalGroup(
-            layout.createParallelGroup(GroupLayout.Alignment.LEADING).addGroup(
-                layout
-                    .createSequentialGroup()
+            layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(jScrollPane1, -2, 279, -2)
+                    .addComponent(searchField, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
                     .addPreferredGap(ComponentPlacement.RELATED)
-                    .addGroup(
-                        layout
-                            .createParallelGroup(GroupLayout.Alignment.BASELINE)
-                            .addComponent(this.editButton)
-                            .addComponent(this.addButton),
-                    ).addPreferredGap(ComponentPlacement.RELATED)
-                    .addGroup(
-                        layout
-                            .createParallelGroup(GroupLayout.Alignment.BASELINE)
-                            .addComponent(this.duplicateButton)
-                            .addComponent(this.deleteButton),
-                    ).addContainerGap(-1, 32767),
-            ),
+                    .addComponent(jScrollPane1, GroupLayout.PREFERRED_SIZE, 279, GroupLayout.PREFERRED_SIZE)
+                    .addPreferredGap(ComponentPlacement.RELATED)
+                    .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                        .addComponent(editButton)
+                        .addComponent(addButton))
+                    .addPreferredGap(ComponentPlacement.RELATED)
+                    .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                        .addComponent(duplicateButton)
+                        .addComponent(deleteButton))
+                    .addContainerGap(GroupLayout.DEFAULT_SIZE, Int.MAX_VALUE))
         )
 
         this.pack()
@@ -182,17 +175,32 @@ class NPCSelection : JFrame {
     fun addAllNPCs() {
         val npcCount = getNPCDefinitionsSize(Cache!!)
         println("NPC Count: $npcCount")
-        var id = 0
-        while (id < npcCount) {
+        for (id in 0 until npcCount) {
             val npc = NPCDefinitions.getNPCDefinition(Cache, id)
             if (npc != null) {
+                allNPCs.add(npc)
                 this.addNPCDefs(npc)
             } else {
                 println("Error: NPC not loaded for ID $id")
             }
-            ++id
         }
         log("NPCSelection", "All NPCs Loaded")
+    }
+
+    private fun filterNPCList(searchTerm: String) {
+        val filtered = if (searchTerm.isBlank()) {
+            allNPCs
+        } else {
+            allNPCs.filter { npc ->
+                npc.name?.contains(searchTerm, ignoreCase = true) == true ||
+                        npc.id.toString() == searchTerm
+            }
+        }
+
+        npcListModel?.clear()
+        for (npc in filtered) {
+            npcListModel?.addElement(npc)
+        }
     }
 
     fun addNPCDefs(npc: NPCDefinitions?) {
@@ -213,7 +221,10 @@ class NPCSelection : JFrame {
     }
 
     fun removeNPCDefs(npc: NPCDefinitions?) {
-        EventQueue.invokeLater { npcListModel?.removeElement(npc) }
+        EventQueue.invokeLater {
+            npcListModel?.removeElement(npc)
+            allNPCs.remove(npc)
+        }
     }
 
     companion object {
