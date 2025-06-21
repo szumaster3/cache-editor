@@ -91,8 +91,8 @@ public class ObjectEditor extends JFrame {
         gbc.gridy = 0;
         gbc.anchor = GridBagConstraints.LINE_END;
 
-        addLabel(sizePanel, gbc, 0, "Size X:", clamp(definitions.getSizeX(), 1, 50));
-        addLabel(sizePanel, gbc, 2, "Size Y:", clamp(definitions.getSizeY(), 1, 50));
+        addLabel(sizePanel, gbc, 0, "Size X:", definitions.getSizeX());
+        addLabel(sizePanel, gbc, 2, "Size Y:", definitions.getSizeY());
 
         basicPropsPanel.add(wrap("Size:", sizePanel));
 
@@ -134,9 +134,9 @@ public class ObjectEditor extends JFrame {
         gbc.gridy = 0;
         gbc.anchor = GridBagConstraints.LINE_END;
 
-        addLabel(scalePanel, gbc, 0, "Scale X:", clamp(definitions.anInt3841, 0, 5000));
-        addLabel(scalePanel, gbc, 2, "Scale Y:", clamp(definitions.anInt3917, 0, 5000));
-        addLabel(scalePanel, gbc, 4, "Scale Z:", clamp(definitions.anInt3902, 0, 5000));
+        addLabel(scalePanel, gbc, 0, "Scale X:", definitions.anInt3841);
+        addLabel(scalePanel, gbc, 2, "Scale Y:", definitions.anInt3917);
+        addLabel(scalePanel, gbc, 4, "Scale Z:", definitions.anInt3902);
         transformPanel.add(wrap("Scale:", scalePanel));
 
         // Rotation panel.
@@ -147,9 +147,9 @@ public class ObjectEditor extends JFrame {
         gbc.gridy = 0;
         gbc.anchor = GridBagConstraints.LINE_END;
 
-        addLabel(rotationPanel, gbc, 0, "Rotation X:", clamp(definitions.anInt3840, 0, 2048));
-        addLabel(rotationPanel, gbc, 2, "Rotation Y:", clamp(definitions.anInt3878, 0, 2048));
-        addLabel(rotationPanel, gbc, 4, "Rotation Z:", clamp(definitions.anInt3876, 0, 2048));
+        addLabel(rotationPanel, gbc, 0, "Rotation X:", definitions.anInt3840);
+        addLabel(rotationPanel, gbc, 2, "Rotation Y:", definitions.anInt3878);
+        addLabel(rotationPanel, gbc, 4, "Rotation Z:", definitions.anInt3876);
         transformPanel.add(wrap("Rotation:", rotationPanel));
 
         mainPanel.add(transformPanel);
@@ -195,8 +195,8 @@ public class ObjectEditor extends JFrame {
         gbc.gridy = 0;
         gbc.anchor = GridBagConstraints.LINE_END;
 
-        addLabel(heightOffsetPanel, gbc, 0, "Height offset X:", clamp(definitions.anInt3883, -5000, 5000));
-        addLabel(heightOffsetPanel, gbc, 2, "Height offset Y:", clamp(definitions.anInt3915, -5000, 5000));
+        addLabel(heightOffsetPanel, gbc, 0, "Height offset X:", definitions.anInt3883);
+        addLabel(heightOffsetPanel, gbc, 2, "Height offset Y:", definitions.anInt3915);
 
         mainPanel.add(heightOffsetPanel);
         mainPanel.add(Box.createVerticalStrut(15));
