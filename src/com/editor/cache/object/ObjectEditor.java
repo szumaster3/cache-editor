@@ -589,16 +589,13 @@ public class ObjectEditor extends JFrame {
             return "";
         }
         StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < options.length; i++) {
-            String opt = options[i];
+        for (String opt : options) {
             if (opt == null || opt.isEmpty()) {
                 sb.append("null");
             } else {
                 sb.append(opt);
             }
-            if (i < options.length - 1) {
-                sb.append(";");
-            }
+            sb.append(";");
         }
         return sb.toString();
     }
