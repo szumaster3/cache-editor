@@ -7,6 +7,8 @@
 Python script `npc_stats_update.py` updates NPC JSON data by fetching data from wiki.
 This helps preserve and complete NPC data for personal or development use.
 
+![](https://i.imgur.com/d8BJmwk.png)
+
 #### Use
 
 - Put `npc_configs.json` in the script folder.
