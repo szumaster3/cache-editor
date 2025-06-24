@@ -355,7 +355,7 @@ public class ItemEditor extends JFrame {
         this.addModelMenuBtn = new JMenuItem();
         this.exportMenuBtn = new JMenuItem();
         this.exitMenuBtn = new JMenuItem();
-        this.setDefaultCloseOperation(3);
+        this.setDefaultCloseOperation(1);
         this.jLabel1.setText("Name");
         this.itemName.setText(this.defs.name);
         this.jLabel2.setText("Value");

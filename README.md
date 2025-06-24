@@ -1,5 +1,9 @@
 ## 530-Editor
 
+Combination of all sorts of available editors made available to the public and bundled into one.
+
+*Under development.*
+
 [![License][License: AGPL v3]][license-url] [![License][Shield: Fork]][fork-url]
 
 ***

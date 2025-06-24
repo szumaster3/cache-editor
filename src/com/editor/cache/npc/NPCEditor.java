@@ -281,7 +281,7 @@ public class NPCEditor extends JFrame {
         this.addModelButton = new JMenuItem();
         this.exportButton = new JMenuItem();
         this.exitButton = new JMenuItem();
-        this.setDefaultCloseOperation(3);
+        this.setDefaultCloseOperation(1);
         this.jLabel1.setText("Name");
         this.name.setText(this.defs.getName());
         this.jLabel4.setText("Combat Level");
