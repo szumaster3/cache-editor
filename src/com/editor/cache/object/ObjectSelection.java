@@ -37,7 +37,7 @@ public class ObjectSelection extends JFrame {
         Cache = new Cache(cache);
         setTitle("Object Selection");
         setResizable(false);
-        setDefaultCloseOperation(1);
+        setDefaultCloseOperation(2);
         setLocationRelativeTo(null);
         initComponents();
     }

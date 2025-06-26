@@ -144,7 +144,7 @@ public class NPCEditor extends JFrame {
         this.initComponents();
         this.setResizable(false);
         this.setTitle("NPC Editor");
-        this.setDefaultCloseOperation(1);
+        this.setDefaultCloseOperation(2);
         this.setLocationRelativeTo(null);
         this.setVisible(true);
     }

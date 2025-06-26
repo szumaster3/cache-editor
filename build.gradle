@@ -30,7 +30,7 @@ repositories {
 
 dependencies {
     implementation 'com.displee:rs-cache-library:7.2.0'
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(dir: 'libs', include: ['jogl-all.jar'])
 }
 
 java {

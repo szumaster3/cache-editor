@@ -191,7 +191,7 @@ public class ItemEditor extends JFrame {
         this.initComponents();
         this.setResizable(false);
         this.setTitle("Item Editor");
-        this.setDefaultCloseOperation(1);
+        this.setDefaultCloseOperation(2);
         this.setLocationRelativeTo(null);
         this.setVisible(true);
     }

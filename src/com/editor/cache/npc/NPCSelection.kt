@@ -29,7 +29,7 @@ class NPCSelection : JFrame {
         Cache = Cache(cache)
         this.title = "NPC Selection"
         this.isResizable = false
-        this.defaultCloseOperation = EXIT_ON_CLOSE
+        this.defaultCloseOperation = 2
         this.setLocationRelativeTo(null)
         this.initComponents()
     }

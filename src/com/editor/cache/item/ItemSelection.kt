@@ -19,7 +19,7 @@ class ItemSelection : JFrame {
         CACHE = Cache(cache)
         title = "Item Selection"
         isResizable = false
-        defaultCloseOperation = 1
+        defaultCloseOperation = 2
         setLocationRelativeTo(null)
         initComponents()
     }

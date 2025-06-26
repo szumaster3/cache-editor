@@ -29,7 +29,7 @@ public class ObjectEditor extends JFrame {
 
         setLocationRelativeTo(null);
         setTitle("Object Editor");
-        setDefaultCloseOperation(1);
+        setDefaultCloseOperation(2);
 
         JPanel mainPanel = new JPanel();
         mainPanel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
