@@ -230,7 +230,8 @@ class ItemSelection : JFrame {
             )
         }
 
-        deleteFileButton.isEnabled = true
+        deleteFileButton.isEnabled = false
+        infoButton.isEnabled = false
         pack()
 
         Thread {
