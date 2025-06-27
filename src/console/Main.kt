@@ -7,9 +7,10 @@ import java.io.IOException
 import java.util.*
 
 /**
- * The type Main.
+ * The Main.
  */
 object Main {
+    private const val APP_VERSION = "1.0.1"
     /**
      * The entry point of application.
      *
@@ -17,6 +18,7 @@ object Main {
      */
     @JvmStatic
     fun main(args: Array<String>) {
+        println("Application version: $APP_VERSION")
         Console.redirectSystemStreams()
         EventQueue.invokeLater {
             Console().isVisible = true

@@ -2,6 +2,7 @@ package console
 
 import com.displee.cache.CacheLibrary
 import com.editor.cache.FileManager
+import com.editor.cache.IndexManager
 import com.editor.cache.extract.IndicesSelection
 import com.editor.cache.iface.InterfaceEditor
 import com.editor.cache.item.ItemListExport
@@ -75,6 +76,72 @@ class ToolSelection : JFrame() {
             preferredSize = Dimension(205, 30)
         }
 
+        val cacheTab = JPanel()
+        cacheTab.layout = BoxLayout(cacheTab, BoxLayout.Y_AXIS)
+
+        val createIndexButton = JButton("Create Index").apply {
+            addActionListener {
+                val id = JOptionPane.showInputDialog(this, "Enter index ID to create:")?.toIntOrNull()
+                if (id != null) {
+                    try {
+                        IndexManager.createIndex(cache, id)
+                    } catch (e: Exception) {
+                        JOptionPane.showMessageDialog(this, "Failed to create index $id: ${e.message}")
+                    }
+                }
+            }
+        }
+
+        val deleteIndexButton = JButton("Delete Index").apply {
+            addActionListener {
+                val id = JOptionPane.showInputDialog(this, "Enter index ID to delete:")?.toIntOrNull()
+                if (id != null) {
+                    try {
+                        val lib = CacheLibrary.create(cache)
+                        IndexManager.deleteIndex(lib, id)
+                    } catch (e: Exception) {
+                        JOptionPane.showMessageDialog(this, "Failed to delete index $id: ${e.message}")
+                    }
+                }
+            }
+        }
+
+        val exportIndexButton = JButton("Export Index").apply {
+            addActionListener {
+                val id = JOptionPane.showInputDialog(this, "Enter index ID to export:")?.toIntOrNull()
+                if (id != null) {
+                    try {
+                        val lib = CacheLibrary.create(cache)
+                        IndexManager.exportIndex(lib, id)
+                    } catch (e: Exception) {
+                        JOptionPane.showMessageDialog(this, "Failed to export index $id: ${e.message}")
+                    }
+                }
+            }
+        }
+
+        val editCRCButton = JButton("Edit CRC").apply {
+            addActionListener {
+                val id = JOptionPane.showInputDialog(this, "Enter index ID to update CRC:")?.toIntOrNull()
+                val crc = JOptionPane.showInputDialog(this, "Enter new CRC:")?.toIntOrNull()
+                if (id != null && crc != null) {
+                    try {
+                        val lib = CacheLibrary.create(cache)
+                        IndexManager.updateIndexCRC(lib, id, crc)
+                    } catch (e: Exception) {
+                        JOptionPane.showMessageDialog(this, "Failed to update CRC: ${e.message}")
+                    }
+                }
+            }
+        }
+
+        listOf(createIndexButton, deleteIndexButton, exportIndexButton, editCRCButton).forEach {
+            it.alignmentX = Component.CENTER_ALIGNMENT
+            it.maximumSize = Dimension(200, 30)
+            cacheTab.add(Box.createVerticalStrut(10))
+            cacheTab.add(it)
+        }
+
         val panelMiddle = JPanel(FlowLayout(FlowLayout.CENTER))
         panelMiddle.add(button0)
         panelMiddle.add(button1)
@@ -135,6 +202,9 @@ class ToolSelection : JFrame() {
 
         tabbedPane.addTab("Tools", toolsTab)
         tabbedPane.addTab("Panel", panelTab)
+        tabbedPane.addTab("Cache", cacheTab)
+
+        // createIndexButton.isEnabled = false
 
         this.contentPane.add(tabbedPane)
 

@@ -26,7 +26,7 @@ class FileManager(
     private val treeModel = DefaultTreeModel(rootNode)
     private val tree = JTree(treeModel)
 
-    private val infoLabel = JLabel("<html>Name: <br>Archives: <br>Revision: <br>CRC:</html>")
+    private val infoLabel = JLabel("<html>Name: <br>Archives: <br>Revision: <br>CRC:<br>Compression:</html>")
     private val actionResultPanel = JPanel(BorderLayout())
 
     init {
@@ -150,6 +150,7 @@ class FileManager(
         val archivesCount = currentIndex?.archives()?.size ?: "None"
         val revision = currentIndex?.revision ?: "None"
         val crc = currentIndex?.crc ?: "None"
+        val compression = currentIndex?.compressionType ?: "None"
 
         val selectedDetails =
             when {
@@ -164,7 +165,7 @@ class FileManager(
             }
 
         infoLabel.text =
-            "<html>Name: $indexName <br>Archives: $archivesCount <br>Revision: $revision <br>CRC: $crc</html>"
+            "<html>Name: $indexName <br>Archives: $archivesCount <br>Revision: $revision <br>CRC: $crc<br>Compression: $compression</html>"
     }
 
     private fun createAddArchiveButton(): JButton =

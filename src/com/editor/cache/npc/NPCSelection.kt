@@ -3,6 +3,7 @@ package com.editor.cache.npc
 import com.alex.defs.npcs.NPCDefinitions
 import com.alex.filestore.Cache
 import com.alex.util.Utils.getNPCDefinitionsSize
+import com.editor.utils.TextPrompt
 import console.Main.log
 import java.awt.EventQueue
 import java.io.IOException
@@ -60,7 +61,7 @@ class NPCSelection : JFrame {
             override fun removeUpdate(e: DocumentEvent?) = filterNPCList(searchField?.text ?: "")
             override fun changedUpdate(e: DocumentEvent?) = filterNPCList(searchField?.text ?: "")
         })
-
+        TextPrompt("Search by ID or name...", searchField!!)
         editButton?.apply {
             text = "Edit"
             addActionListener {
@@ -134,11 +135,11 @@ class NPCSelection : JFrame {
                         .addComponent(jScrollPane1, GroupLayout.PREFERRED_SIZE, 200, GroupLayout.PREFERRED_SIZE)
                         .addGroup(layout.createSequentialGroup()
                             .addComponent(editButton)
-                            .addPreferredGap(ComponentPlacement.RELATED)
+                            .addGap(0, 0, Int.MAX_VALUE)
                             .addComponent(addButton))
                         .addGroup(layout.createSequentialGroup()
                             .addComponent(duplicateButton)
-                            .addPreferredGap(ComponentPlacement.RELATED)
+                            .addGap(0, 0, Int.MAX_VALUE)
                             .addComponent(deleteButton)))
                     .addContainerGap(GroupLayout.DEFAULT_SIZE, Int.MAX_VALUE))
         )
@@ -154,7 +155,7 @@ class NPCSelection : JFrame {
                     .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
                         .addComponent(editButton)
                         .addComponent(addButton))
-                    .addPreferredGap(ComponentPlacement.RELATED)
+                    .addPreferredGap(ComponentPlacement.UNRELATED)
                     .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
                         .addComponent(duplicateButton)
                         .addComponent(deleteButton))

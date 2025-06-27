@@ -174,13 +174,17 @@ public final class Index {
     }
 
     public void removeArchive(int archiveId) {
+        if (archiveId < 0 || archiveId >= cachedFiles.length) {
+            throw new IllegalArgumentException("archiveId out of bounds: " + archiveId);
+        }
         byte temp[][][] = new byte[cachedFiles.length - 1][][];
         int count = 0;
-        for (int i = 0; i < cachedFiles.length; i++)
+        for (int i = 0; i < cachedFiles.length; i++) {
             if (i != archiveId) {
                 temp[count] = cachedFiles[i];
                 count++;
             }
+        }
         cachedFiles = temp;
         table.removeArchive(archiveId);
         rewriteTable();
@@ -232,6 +236,7 @@ public final class Index {
 
     public boolean removeFile(int archiveId, int fileId, int compression, int[] keys) {
         if (!this.fileExists(archiveId, fileId)) {
+            System.out.println("removeFile aborted: file does not exist for archiveId=" + archiveId + ", fileId=" + fileId);
             return false;
         } else {
             this.cacheArchiveFiles(archiveId, keys);
@@ -274,14 +279,22 @@ public final class Index {
             byte[] var141 = var131.compress();
             reference.setCrc(CRC32HGenerator.getHash(var141, 0, var141.length - 2));
             reference.whirpool = Whirlpool.whirlpool(var141, 0, var141.length - 2);
-            if (!this.mainFile.putArchiveData(archiveId, var141)) {
+
+            boolean putArchiveResult = this.mainFile.putArchiveData(archiveId, var141);
+            if (!putArchiveResult) {
+                System.out.println("putArchiveData failed for archiveId " + archiveId);
                 return false;
-            } else if (!this.rewriteTable()) {
-                return false;
-            } else {
-                this.resetCachedFiles();
-                return true;
             }
+
+            boolean rewriteTableResult = this.rewriteTable();
+            if (!rewriteTableResult) {
+                System.out.println("rewriteTable failed");
+                return false;
+            }
+
+            this.resetCachedFiles();
+            System.out.println("removeFile succeeded for archiveId=" + archiveId + ", fileId=" + fileId);
+            return true;
         }
     }
 

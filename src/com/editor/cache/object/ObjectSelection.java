@@ -3,6 +3,7 @@ package com.editor.cache.object;
 import com.alex.defs.objects.ObjectDefinitions;
 import com.alex.filestore.Cache;
 import com.alex.util.Utils;
+import com.editor.utils.TextPrompt;
 import console.Main;
 
 import javax.swing.*;
@@ -86,6 +87,8 @@ public class ObjectSelection extends JFrame {
             }
         });
 
+        new TextPrompt("Search by ID or name...", searchField);
+
         editButton.addActionListener(e -> {
             try {
                 editObject();
@@ -123,11 +126,10 @@ public class ObjectSelection extends JFrame {
                                 .addComponent(jScrollPane1, GroupLayout.PREFERRED_SIZE, 200, GroupLayout.PREFERRED_SIZE)
                                 .addGroup(layout.createSequentialGroup()
                                         .addComponent(editButton)
-                                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(addButton))
+                                        .addGap(0, 0, Short.MAX_VALUE)                                        .addComponent(addButton))
                                 .addGroup(layout.createSequentialGroup()
                                         .addComponent(duplicateButton)
-                                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addGap(0, 0, Short.MAX_VALUE)
                                         .addComponent(deleteButton)))
                         .addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -141,7 +143,7 @@ public class ObjectSelection extends JFrame {
                         .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
                                 .addComponent(editButton)
                                 .addComponent(addButton))
-                        .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
+                        .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
                                 .addComponent(duplicateButton)
                                 .addComponent(deleteButton))
