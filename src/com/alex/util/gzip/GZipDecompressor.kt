@@ -5,6 +5,7 @@ import java.util.zip.Inflater
 
 object GZipDecompressor {
     private val inflaterInstance = Inflater(true)
+
     @JvmStatic
     fun decompress(stream: Stream, data: ByteArray?): Boolean {
         val var2 = inflaterInstance

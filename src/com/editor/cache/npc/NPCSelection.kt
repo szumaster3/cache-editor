@@ -128,38 +128,62 @@ class NPCSelection : JFrame {
         this.contentPane.layout = layout
         layout.setHorizontalGroup(
             layout.createParallelGroup(GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
-                        .addComponent(searchField, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jScrollPane1, GroupLayout.PREFERRED_SIZE, 200, GroupLayout.PREFERRED_SIZE)
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(editButton)
-                            .addGap(0, 0, Int.MAX_VALUE)
-                            .addComponent(addButton))
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(duplicateButton)
-                            .addGap(0, 0, Int.MAX_VALUE)
-                            .addComponent(deleteButton)))
-                    .addContainerGap(GroupLayout.DEFAULT_SIZE, Int.MAX_VALUE))
+                .addGroup(
+                    layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(
+                            layout.createParallelGroup(GroupLayout.Alignment.LEADING)
+                                .addComponent(
+                                    searchField,
+                                    GroupLayout.PREFERRED_SIZE,
+                                    GroupLayout.DEFAULT_SIZE,
+                                    GroupLayout.PREFERRED_SIZE
+                                )
+                                .addComponent(jScrollPane1, GroupLayout.PREFERRED_SIZE, 200, GroupLayout.PREFERRED_SIZE)
+                                .addGroup(
+                                    layout.createSequentialGroup()
+                                        .addComponent(editButton)
+                                        .addGap(0, 0, Int.MAX_VALUE)
+                                        .addComponent(addButton)
+                                )
+                                .addGroup(
+                                    layout.createSequentialGroup()
+                                        .addComponent(duplicateButton)
+                                        .addGap(0, 0, Int.MAX_VALUE)
+                                        .addComponent(deleteButton)
+                                )
+                        )
+                        .addContainerGap(GroupLayout.DEFAULT_SIZE, Int.MAX_VALUE)
+                )
         )
 
         layout.setVerticalGroup(
             layout.createParallelGroup(GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(searchField, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                    .addPreferredGap(ComponentPlacement.RELATED)
-                    .addComponent(jScrollPane1, GroupLayout.PREFERRED_SIZE, 279, GroupLayout.PREFERRED_SIZE)
-                    .addPreferredGap(ComponentPlacement.RELATED)
-                    .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-                        .addComponent(editButton)
-                        .addComponent(addButton))
-                    .addPreferredGap(ComponentPlacement.UNRELATED)
-                    .addGroup(layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
-                        .addComponent(duplicateButton)
-                        .addComponent(deleteButton))
-                    .addContainerGap(GroupLayout.DEFAULT_SIZE, Int.MAX_VALUE))
+                .addGroup(
+                    layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(
+                            searchField,
+                            GroupLayout.PREFERRED_SIZE,
+                            GroupLayout.DEFAULT_SIZE,
+                            GroupLayout.PREFERRED_SIZE
+                        )
+                        .addPreferredGap(ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane1, GroupLayout.PREFERRED_SIZE, 279, GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(ComponentPlacement.RELATED)
+                        .addGroup(
+                            layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                                .addComponent(editButton)
+                                .addComponent(addButton)
+                        )
+                        .addPreferredGap(ComponentPlacement.UNRELATED)
+                        .addGroup(
+                            layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                                .addComponent(duplicateButton)
+                                .addComponent(deleteButton)
+                        )
+                        .addContainerGap(GroupLayout.DEFAULT_SIZE, Int.MAX_VALUE)
+                )
         )
 
         this.pack()

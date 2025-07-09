@@ -40,6 +40,7 @@ data class SpotDefinition(
                         visibilityType = 3.toByte()
                         defaultSize = 0
                     }
+
                     10 -> isVisible = true
                     11 -> visibilityType = 1.toByte()
                     12 -> visibilityType = 4.toByte()
@@ -48,14 +49,17 @@ data class SpotDefinition(
                         visibilityType = 2.toByte()
                         defaultSize = stream.readUnsignedByte()
                     }
+
                     15 -> {
                         visibilityType = 3.toByte()
                         defaultSize = stream.readUnsignedShort()
                     }
+
                     16 -> {
                         visibilityType = 3.toByte()
                         defaultSize = stream.readInt()
                     }
+
                     40 -> {
                         val length = stream.readUnsignedByte()
                         recolorToFind = IntArray(length)
@@ -65,6 +69,7 @@ data class SpotDefinition(
                             recolorToReplace!![index] = stream.readUnsignedShort()
                         }
                     }
+
                     41 -> {
                         val length = stream.readUnsignedByte()
                         retextureToFind = IntArray(length)

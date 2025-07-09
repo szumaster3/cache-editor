@@ -145,6 +145,7 @@ public class Whirlpool {
     protected long[] L = new long[8];
     protected long[] block = new long[8]; // mu(buffer)
     protected long[] state = new long[8]; // the cipher state
+
     public Whirlpool() {
     }
 

@@ -126,7 +126,7 @@ public class ObjectSelection extends JFrame {
                                 .addComponent(jScrollPane1, GroupLayout.PREFERRED_SIZE, 200, GroupLayout.PREFERRED_SIZE)
                                 .addGroup(layout.createSequentialGroup()
                                         .addComponent(editButton)
-                                        .addGap(0, 0, Short.MAX_VALUE)                                        .addComponent(addButton))
+                                        .addGap(0, 0, Short.MAX_VALUE).addComponent(addButton))
                                 .addGroup(layout.createSequentialGroup()
                                         .addComponent(duplicateButton)
                                         .addGap(0, 0, Short.MAX_VALUE)

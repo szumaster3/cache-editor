@@ -1,4 +1,4 @@
-package com.alex.defs.npcs
+package com.alex.defs
 
 import com.alex.filestore.Cache
 import com.alex.io.InputStream
@@ -301,17 +301,17 @@ class NPCDefinition(
                                                                                         aBoolean849 =
                                                                                             true
                                                                                     } else if ((
-                                                                                            opcode
-                                                                                                xor -0x1
-                                                                                        ) != -143
+                                                                                                opcode
+                                                                                                        xor -0x1
+                                                                                                ) != -143
                                                                                     ) {
                                                                                         if (opcode == 143) {
                                                                                             aBoolean856 =
                                                                                                 true
                                                                                         } else if ((
-                                                                                                opcode
-                                                                                                    xor -0x1
-                                                                                            ) <= -151 &&
+                                                                                                    opcode
+                                                                                                            xor -0x1
+                                                                                                    ) <= -151 &&
                                                                                             opcode < 155
                                                                                         ) {
                                                                                             options[opcode - 150] =
@@ -325,13 +325,13 @@ class NPCDefinition(
                                                                                             ) {
                                                                                                 options[
                                                                                                     opcode +
-                                                                                                        -150,
+                                                                                                            -150,
                                                                                                 ] = null
                                                                                             }
                                                                                         } else if ((
-                                                                                                opcode
-                                                                                                    xor -0x1
-                                                                                            ) == -161
+                                                                                                    opcode
+                                                                                                            xor -0x1
+                                                                                                    ) == -161
                                                                                         ) {
                                                                                             val i =
                                                                                                 stream
@@ -490,15 +490,17 @@ class NPCDefinition(
                                                         val i = (stream.readUnsignedByte())
                                                         var i_62_ = 0
                                                         while ((
-                                                                (i_62_ xor -0x1) > (
-                                                                    i
-                                                                        xor -0x1
-                                                                )
-                                                            )
+                                                                    (i_62_ xor -0x1) > (
+                                                                            i
+                                                                                    xor -0x1
+                                                                            )
+                                                                    )
                                                         ) {
                                                             val i_63_ = (stream.readUnsignedByte())
                                                             val `is` =
-                                                                ((IntArray(3)).also { anIntArrayArray840!![i_63_] = it })
+                                                                ((IntArray(3)).also {
+                                                                    anIntArrayArray840!![i_63_] = it
+                                                                })
                                                             `is`[0] = (stream.readByte())
                                                             `is`[1] = (stream.readByte())
                                                             `is`[2] = (stream.readByte())
@@ -708,7 +710,8 @@ class NPCDefinition(
         return var61
     }
 
-    fun write(cache: Cache): Boolean = cache.indexes[18].putFile(getConfigArchive(id, 7), getConfigFile(id, 7), encode())
+    fun write(cache: Cache): Boolean =
+        cache.indexes[18].putFile(getConfigArchive(id, 7), getConfigFile(id, 7), encode())
 
     override fun toString(): String = id.toString() + " - " + this.name
 

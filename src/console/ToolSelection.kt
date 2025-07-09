@@ -37,7 +37,7 @@ class ToolSelection : JFrame() {
     private val cacheFile = File("cache_location.txt")
     private val toolSelected = "ToolSelection"
     private val startMessage = "Tool started."
-    private val failMessage = "Failed to start."
+    private val failMessage = "Failed to start. Before turning on the editor you need to load the cache."
     private val backupMessage = JLabel().apply { font = font.deriveFont(12) }
 
     init {
@@ -71,10 +71,10 @@ class ToolSelection : JFrame() {
             preferredSize = Dimension(100, 30)
         }
 
-        val button2 = JButton("Screenshot Capture").apply {
-            addActionListener { placeholderButton3(this) }
-            preferredSize = Dimension(205, 30)
-        }
+        // val button2 = JButton("Screenshot Capture").apply {
+        //     addActionListener { placeholderButton3(this) }
+        //     preferredSize = Dimension(205, 30)
+        // }
 
         val cacheTab = JPanel()
         cacheTab.layout = BoxLayout(cacheTab, BoxLayout.Y_AXIS)
@@ -144,10 +144,11 @@ class ToolSelection : JFrame() {
 
         val panelMiddle = JPanel(FlowLayout(FlowLayout.CENTER))
         panelMiddle.add(button0)
+        panelMiddle.add(Box.createHorizontalStrut(2))
         panelMiddle.add(button1)
 
         val panelBottom = JPanel(FlowLayout(FlowLayout.CENTER))
-        panelBottom.add(button2)
+        // panelBottom.add(button2)
 
         panelTab.add(selectToolButton)
         panelTab.add(panelMiddle)
@@ -203,7 +204,7 @@ class ToolSelection : JFrame() {
         tabbedPane.addTab("Tools", toolsTab)
         tabbedPane.addTab("Panel", panelTab)
         tabbedPane.addTab("Cache", cacheTab)
-
+        tabbedPane.setEnabledAt(2, false)
         // createIndexButton.isEnabled = false
 
         this.contentPane.add(tabbedPane)

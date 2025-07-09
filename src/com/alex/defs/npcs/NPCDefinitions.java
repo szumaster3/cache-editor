@@ -1138,7 +1138,7 @@ public final class NPCDefinitions implements Cloneable {
             stream.writeByte(this.respawnDirection);
         }
 
-        if(this.renderEmote != -1) {
+        if (this.renderEmote != -1) {
             stream.writeByte(127);
             stream.writeShort(this.renderEmote);
         }

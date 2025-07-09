@@ -22,7 +22,7 @@ object SpriteDumper {
                 val s = SpriteLoader.getArchive(i) ?: continue
 
                 for (frame in 0 until s.size()) {
-                    val file = File(PropertyValues.dump_path, "$i"+"_$frame.png")
+                    val file = File(PropertyValues.dump_path, "$i" + "_$frame.png")
                     val image = s.getSprite(frame)
                     try {
                         ImageIO.write(image, "png", file)

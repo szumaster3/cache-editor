@@ -92,6 +92,7 @@ public class CBZip2InputStream extends InputStream implements BZip2Constants {
      * This field is initialized by initBlock().
      */
     private Data data;
+
     /**
      * Constructs a new CBZip2InputStream which decompresses bytes read from
      * the specified stream.

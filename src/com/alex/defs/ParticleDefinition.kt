@@ -59,39 +59,48 @@ data class ParticleDefinition(
                         minimumAngleV = stream.readUnsignedShort().toShort()
                         maximumAngleV = stream.readUnsignedShort().toShort()
                     }
+
                     2 -> opcode2 = stream.readUnsignedByte()
                     3 -> {
                         minimumSpeed = stream.readInt()
                         maximumSpeed = stream.readInt()
                     }
+
                     4 -> {
                         particleType = stream.readUnsignedByte()
                         intensity = stream.readByte()
                     }
+
                     5 -> {
                         minSize = stream.readUnsignedShort()
                         maxSize = minSize
                     }
+
                     6 -> {
                         startColorMin = stream.readInt()
                         startColorMax = stream.readInt()
                     }
+
                     7 -> {
                         minLifetime = stream.readUnsignedShort()
                         maxLifetime = stream.readUnsignedShort()
                     }
+
                     8 -> {
                         minParticleRate = stream.readUnsignedShort()
                         maxParticleRate = stream.readUnsignedShort()
                     }
+
                     9 -> {
                         val length = stream.readUnsignedByte()
                         particleArray1 = IntArray(length) { stream.readUnsignedShort() }
                     }
+
                     10 -> {
                         val length = stream.readUnsignedByte()
                         particleArray2 = IntArray(length) { stream.readUnsignedShort() }
                     }
+
                     12 -> particleArray3 = IntArray(1) { stream.readByte() }
                     13 -> intensity = stream.readByte()
                     14 -> texture = stream.readUnsignedShort()
@@ -101,6 +110,7 @@ data class ParticleDefinition(
                         lifetime = stream.readUnsignedShort()
                         isPeriodic = stream.readUnsignedByte() == 1
                     }
+
                     17 -> angleH = stream.readUnsignedShort()
                     18 -> fadeColor = stream.readInt()
                     19 -> minimumSetting = stream.readUnsignedByte()
@@ -113,6 +123,7 @@ data class ParticleDefinition(
                         val length = stream.readUnsignedByte()
                         particleArray3 = IntArray(length) { stream.readUnsignedShort() }
                     }
+
                     26 -> uniformColorVariance = false
                     27 -> sizeChange = stream.readUnsignedShort()
                     28 -> particleRate = stream.readShort()

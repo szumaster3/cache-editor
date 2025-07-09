@@ -40,7 +40,7 @@ class CacheFile(
             val arrayOfByte2 = readBlock(i) ?: return null
             i =
                 ((arrayOfByte2[4].toInt() and 0xFF) shl 16) + ((arrayOfByte2[5].toInt() and 0xFF) shl 8) +
-                (arrayOfByte2[6].toInt() and 0xFF)
+                        (arrayOfByte2[6].toInt() and 0xFF)
             if (fileLength[paramInt] - j - 8 > 512) {
                 System.arraycopy(arrayOfByte2, 8, arrayOfByte1, j, 512)
             } else {

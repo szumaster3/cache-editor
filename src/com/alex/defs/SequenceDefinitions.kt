@@ -132,7 +132,8 @@ class SequenceDefinitions {
         }
     }
 
-    fun write(cache: Cache): Boolean = cache.indexes[20].putFile(Utils.getConfigArchive(id, 8), Utils.getConfigFile(id, 8), encode())
+    fun write(cache: Cache): Boolean =
+        cache.indexes[20].putFile(Utils.getConfigArchive(id, 8), Utils.getConfigFile(id, 8), encode())
 
     private fun encode(): ByteArray {
         val stream = OutputStream()

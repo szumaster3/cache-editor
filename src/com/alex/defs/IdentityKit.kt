@@ -29,6 +29,7 @@ class IdentityKit(
                         bodyModels!![index] = stream.readSmartInt()
                     }
                 }
+
                 3 -> nonSelectable = true
                 40 -> {
                     val length = stream.readUnsignedByte()
@@ -39,6 +40,7 @@ class IdentityKit(
                         recolorToReplace!![index] = stream.readUnsignedShort()
                     }
                 }
+
                 41 -> {
                     val length = stream.readUnsignedByte()
                     retextureToFind = IntArray(length)
@@ -48,6 +50,7 @@ class IdentityKit(
                         retextureToReplace!![index] = stream.readUnsignedShort()
                     }
                 }
+
                 in 60..69 -> headModels[opcode - 60] = stream.readSmartInt()
             }
         }

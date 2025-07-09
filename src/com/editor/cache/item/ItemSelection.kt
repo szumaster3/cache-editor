@@ -71,7 +71,11 @@ class ItemSelection : JFrame {
 
         deleteButton.addActionListener {
             val selected = itemList?.selectedValue ?: return@addActionListener
-            if (JOptionPane.showConfirmDialog(this, "Do you really want to delete item [${selected.id}]?") == JOptionPane.YES_OPTION) {
+            if (JOptionPane.showConfirmDialog(
+                    this,
+                    "Do you really want to delete item [${selected.id}]?"
+                ) == JOptionPane.YES_OPTION
+            ) {
                 removeItemDefinition(selected)
             }
         }
@@ -120,10 +124,20 @@ class ItemSelection : JFrame {
                 if (confirm == JOptionPane.YES_OPTION) {
                     val success = forceRemoveFileReference(archiveId)
                     if (success) {
-                        JOptionPane.showMessageDialog(this, "Last file removed from archive $archiveId.", "Success", JOptionPane.INFORMATION_MESSAGE)
+                        JOptionPane.showMessageDialog(
+                            this,
+                            "Last file removed from archive $archiveId.",
+                            "Success",
+                            JOptionPane.INFORMATION_MESSAGE
+                        )
                         reloadItemList()
                     } else {
-                        JOptionPane.showMessageDialog(this, "Failed to remove last file.", "Error", JOptionPane.ERROR_MESSAGE)
+                        JOptionPane.showMessageDialog(
+                            this,
+                            "Failed to remove last file.",
+                            "Error",
+                            JOptionPane.ERROR_MESSAGE
+                        )
                     }
                 }
 
@@ -132,7 +146,12 @@ class ItemSelection : JFrame {
                 val fileId = JOptionPane.showInputDialog(this, "Enter File ID:")?.toIntOrNull()
 
                 if (archiveId == null || fileId == null) {
-                    JOptionPane.showMessageDialog(this, "Invalid archive or file ID.", "Error", JOptionPane.ERROR_MESSAGE)
+                    JOptionPane.showMessageDialog(
+                        this,
+                        "Invalid archive or file ID.",
+                        "Error",
+                        JOptionPane.ERROR_MESSAGE
+                    )
                     return@addActionListener
                 }
 
@@ -145,10 +164,20 @@ class ItemSelection : JFrame {
                 if (confirm == JOptionPane.YES_OPTION) {
                     val success = removeArchiveFile(archiveId, fileId)
                     if (success) {
-                        JOptionPane.showMessageDialog(this, "File $fileId removed from archive $archiveId.", "Success", JOptionPane.INFORMATION_MESSAGE)
+                        JOptionPane.showMessageDialog(
+                            this,
+                            "File $fileId removed from archive $archiveId.",
+                            "Success",
+                            JOptionPane.INFORMATION_MESSAGE
+                        )
                         reloadItemList()
                     } else {
-                        JOptionPane.showMessageDialog(this, "Failed to remove file.", "Error", JOptionPane.ERROR_MESSAGE)
+                        JOptionPane.showMessageDialog(
+                            this,
+                            "Failed to remove file.",
+                            "Error",
+                            JOptionPane.ERROR_MESSAGE
+                        )
                     }
                 }
             }
@@ -171,6 +200,7 @@ class ItemSelection : JFrame {
                     itemList?.repaint()
                 }
             }
+
             override fun insertUpdate(e: javax.swing.event.DocumentEvent?) = filter()
             override fun removeUpdate(e: javax.swing.event.DocumentEvent?) = filter()
             override fun changedUpdate(e: javax.swing.event.DocumentEvent?) = filter()
@@ -206,7 +236,12 @@ class ItemSelection : JFrame {
 
             setVerticalGroup(
                 createSequentialGroup()
-                    .addComponent(searchField, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                    .addComponent(
+                        searchField,
+                        GroupLayout.PREFERRED_SIZE,
+                        GroupLayout.DEFAULT_SIZE,
+                        GroupLayout.PREFERRED_SIZE
+                    )
                     .addPreferredGap(ComponentPlacement.UNRELATED)
                     .addComponent(scrollPane, GroupLayout.PREFERRED_SIZE, 279, GroupLayout.PREFERRED_SIZE)
                     .addPreferredGap(ComponentPlacement.UNRELATED)
@@ -279,12 +314,22 @@ class ItemSelection : JFrame {
         try {
             val index = CACHE!!.indexes[19]
             if (!index.fileExists(def.archiveId, def.fileId)) {
-                JOptionPane.showMessageDialog(this, "File does not exist in cache.", "Warning", JOptionPane.WARNING_MESSAGE)
+                JOptionPane.showMessageDialog(
+                    this,
+                    "File does not exist in cache.",
+                    "Warning",
+                    JOptionPane.WARNING_MESSAGE
+                )
                 return
             }
             val removed = index.removeFile(def.archiveId, def.fileId)
             if (!removed) {
-                JOptionPane.showMessageDialog(this, "Failed to remove file from cache.", "Error", JOptionPane.ERROR_MESSAGE)
+                JOptionPane.showMessageDialog(
+                    this,
+                    "Failed to remove file from cache.",
+                    "Error",
+                    JOptionPane.ERROR_MESSAGE
+                )
                 return
             }
             if (index.getValidFilesCount(def.archiveId) == 0) {
@@ -292,17 +337,32 @@ class ItemSelection : JFrame {
             }
             val rewritten = index.rewriteTable()
             if (!rewritten) {
-                JOptionPane.showMessageDialog(this, "Failed to rewrite index table.", "Error", JOptionPane.ERROR_MESSAGE)
+                JOptionPane.showMessageDialog(
+                    this,
+                    "Failed to rewrite index table.",
+                    "Error",
+                    JOptionPane.ERROR_MESSAGE
+                )
                 return
             }
             EventQueue.invokeLater {
                 fullItemList.removeIf { it.id == def.id }
                 itemDefinitionListModel?.removeElement(def)
                 reloadItemList()
-                JOptionPane.showMessageDialog(this, "Item removed successfully.", "Success", JOptionPane.INFORMATION_MESSAGE)
+                JOptionPane.showMessageDialog(
+                    this,
+                    "Item removed successfully.",
+                    "Success",
+                    JOptionPane.INFORMATION_MESSAGE
+                )
             }
         } catch (ex: Exception) {
-            JOptionPane.showMessageDialog(this, "Failed to remove item definition: ${ex.message}", "Error", JOptionPane.ERROR_MESSAGE)
+            JOptionPane.showMessageDialog(
+                this,
+                "Failed to remove item definition: ${ex.message}",
+                "Error",
+                JOptionPane.ERROR_MESSAGE
+            )
             ex.printStackTrace()
         }
     }
@@ -313,14 +373,24 @@ class ItemSelection : JFrame {
                 ?: throw IllegalStateException("Cache or index 19 is not initialized.")
 
             if (!index.fileExists(archiveId, fileId)) {
-                JOptionPane.showMessageDialog(null, "File does not exist in cache.", "Warning", JOptionPane.WARNING_MESSAGE)
+                JOptionPane.showMessageDialog(
+                    null,
+                    "File does not exist in cache.",
+                    "Warning",
+                    JOptionPane.WARNING_MESSAGE
+                )
                 return false
             }
 
             index.removeFile(archiveId, fileId)
 
             if (index.fileExists(archiveId, fileId)) {
-                JOptionPane.showMessageDialog(null, "Failed to remove file from cache.", "Error", JOptionPane.ERROR_MESSAGE)
+                JOptionPane.showMessageDialog(
+                    null,
+                    "Failed to remove file from cache.",
+                    "Error",
+                    JOptionPane.ERROR_MESSAGE
+                )
                 return false
             }
 
@@ -330,7 +400,12 @@ class ItemSelection : JFrame {
             }
 
             if (!index.rewriteTable()) {
-                JOptionPane.showMessageDialog(null, "Failed to rewrite index table.", "Error", JOptionPane.ERROR_MESSAGE)
+                JOptionPane.showMessageDialog(
+                    null,
+                    "Failed to rewrite index table.",
+                    "Error",
+                    JOptionPane.ERROR_MESSAGE
+                )
                 return false
             }
 
@@ -347,7 +422,12 @@ class ItemSelection : JFrame {
             return true
         } catch (ex: Exception) {
             ex.printStackTrace()
-            JOptionPane.showMessageDialog(null, "Failed to remove file: ${ex.message}", "Error", JOptionPane.ERROR_MESSAGE)
+            JOptionPane.showMessageDialog(
+                null,
+                "Failed to remove file: ${ex.message}",
+                "Error",
+                JOptionPane.ERROR_MESSAGE
+            )
             return false
         }
     }

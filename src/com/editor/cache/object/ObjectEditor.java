@@ -3,11 +3,16 @@ package com.editor.cache.object;
 import com.alex.defs.objects.ObjectDefinitions;
 
 import javax.swing.*;
+import javax.swing.table.TableModel;
 import java.awt.*;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 public class ObjectEditor extends JFrame {
     private ObjectDefinitions definitions;
@@ -23,18 +28,40 @@ public class ObjectEditor extends JFrame {
     private JSpinner animationId;
     private JSpinner heightOffsetX, heightOffsetY;
 
+    private Map<Integer, Object> clientScriptData;
+    private ClientScriptTableModel clientScriptModel;
+    private JTable clientScriptTable;
+
     public ObjectEditor(ObjectSelection objectSelection, ObjectDefinitions definitions) {
         this.definitions = definitions;
         this.objectSelection = objectSelection;
 
         setLocationRelativeTo(null);
         setTitle("Object Editor");
-        setDefaultCloseOperation(2);
+        setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 
+        clientScriptData = definitions.clientScriptData != null ? definitions.clientScriptData : new HashMap<>();
+
+        JTabbedPane tabbedPane = new JTabbedPane();
+
+        JPanel mainPanel = createMainPropertiesPanel();
+        tabbedPane.addTab("Properties", new JScrollPane(mainPanel));
+
+        JPanel clientScriptPanel = createClientScriptPanel();
+        tabbedPane.addTab("Client Scripts", clientScriptPanel);
+
+        setContentPane(tabbedPane);
+
+        setPreferredSize(new Dimension(820, 700));
+        pack();
+        setLocationRelativeTo(null);
+        setVisible(true);
+    }
+
+    private JPanel createMainPropertiesPanel() {
         JPanel mainPanel = new JPanel();
         mainPanel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
         mainPanel.setLayout(new BoxLayout(mainPanel, BoxLayout.Y_AXIS));
-        setContentPane(new JScrollPane(mainPanel));
 
         // Basic information.
         JPanel basicInfoPanel = new JPanel();
@@ -111,10 +138,16 @@ public class ObjectEditor extends JFrame {
         childrenIds = new JTextField(intArrayToSemicolonString(definitions.childrenIds));
         modelsColorsPanel.add(createLabel("Child IDs:", childrenIds));
 
-        modelColors = new JTextField(pairColorsToString(definitions.originalModelColors, definitions.modifiedModelColors));
+        modelColors = new JTextField(pairColorsToString(
+                shortArrayToIntArray(definitions.originalModelColors),
+                shortArrayToIntArray(definitions.modifiedModelColors)
+        ));
         modelsColorsPanel.add(createLabel("Model Colors:", modelColors));
 
-        textureColors = new JTextField(pairColorsToString(definitions.originalTextureColors, definitions.modifiedTextureColors));
+        textureColors = new JTextField(pairColorsToString(
+                shortArrayToIntArray(definitions.originalTextureColors),
+                shortArrayToIntArray(definitions.modifiedTextureColors)
+        ));
         modelsColorsPanel.add(createLabel("Texture Colors:", textureColors));
 
         mainPanel.add(modelsColorsPanel);
@@ -171,7 +204,7 @@ public class ObjectEditor extends JFrame {
         isSolid = new JCheckBox("Solid", definitions.isSolid());
         isInteractive = new JCheckBox("Interactive", definitions.isInteractive());
         castsShadow = new JCheckBox("Casts Shadow", definitions.castsShadow());
-        isProjectile = new JCheckBox("???", definitions.blocksProjectile());
+        isProjectile = new JCheckBox("Block Projectile", definitions.blocksProjectile());
 
         flagsPanel.add(isWalkable);
         flagsPanel.add(Box.createHorizontalStrut(10));
@@ -201,171 +234,87 @@ public class ObjectEditor extends JFrame {
         mainPanel.add(heightOffsetPanel);
         mainPanel.add(Box.createVerticalStrut(15));
 
-        // ClientScripts clientScriptModel = new ClientScripts(definitions.clientScriptData);
-        // JTable clientScriptTable = new JTable(clientScriptModel);
-        // clientScriptTable.setFillsViewportHeight(true);
-
-        // JPanel clientScriptPanel = new JPanel(new BorderLayout());
-        // clientScriptPanel.setBorder(BorderFactory.createTitledBorder("Client Script Data"));
-        // clientScriptPanel.add(new JScrollPane(clientScriptTable), BorderLayout.CENTER);
-
-        // JPanel clientScriptButtons = new JPanel();
-        // JButton add = new JButton("Add");
-        // add.addActionListener(e -> {
-        //     clientScriptModel.getEntries().add(new AbstractMap.SimpleEntry<>(0, ""));
-        //     clientScriptModel.fireTableDataChanged();
-        // });
-        // JButton remove = new JButton("Remove");
-        // remove.addActionListener(e -> {
-        //     int sel = clientScriptTable.getSelectedRow();
-        //     if (sel >= 0) {
-        //         clientScriptModel.getEntries().remove(sel);
-        //         clientScriptModel.fireTableDataChanged();
-        //     }
-        // });
-        // clientScriptButtons.add(add);
-        // clientScriptButtons.add(remove);
-        // clientScriptPanel.add(clientScriptButtons, BorderLayout.SOUTH);
-
-        // mainPanel.add(clientScriptPanel);
-        // mainPanel.add(Box.createVerticalStrut(15));
-
         // Buttons.
         JPanel buttonsPanel = new JPanel(new FlowLayout(FlowLayout.CENTER, 20, 10));
 
-        JButton applyButton = new JButton("Add");
+        JButton applyButton = new JButton("Save Object");
         applyButton.addActionListener(
                 actionEvent -> save()
         );
 
-        JButton saveButton = new JButton("Dump to TXT");
-        saveButton.addActionListener(
+        JButton exportButton = new JButton("Dump to TXT");
+        exportButton.addActionListener(
                 actionEvent -> export()
         );
 
         buttonsPanel.add(applyButton);
-        buttonsPanel.add(saveButton);
+        buttonsPanel.add(exportButton);
         buttonsPanel.setAlignmentX(Component.CENTER_ALIGNMENT);
 
         mainPanel.add(buttonsPanel);
-        setPreferredSize(new Dimension(801, 721));
-        pack();
-        setLocationRelativeTo(null);
-        setVisible(true);
+
+        return mainPanel;
     }
 
-    private void limitSize(JSpinner spinner) {
-        Dimension pref = spinner.getPreferredSize();
-        spinner.setPreferredSize(new Dimension(60, pref.height));
-        spinner.setMaximumSize(new Dimension(60, pref.height));
-    }
-
-    private void addLabel(JPanel panel, GridBagConstraints gbc, int x, String label, int value) {
-        JLabel jlabel = new JLabel(label);
-        JSpinner spinner = new JSpinner(new SpinnerNumberModel(value, -10000, 10000, 1));
-        limitSize(spinner);
-        gbc.gridx = x;
-        panel.add(jlabel, gbc);
-        gbc.gridx = x + 1;
-        panel.add(spinner, gbc);
-
-        if ("Size X:".equals(label)) {
-            sizeX = spinner;
-        } else if ("Size Y:".equals(label)) {
-            sizeY = spinner;
-        } else if ("Scale X:".equals(label)) {
-            scaleX = spinner;
-        } else if ("Scale Y:".equals(label)) {
-            scaleY = spinner;
-        } else if ("Scale Z:".equals(label)) {
-            scaleZ = spinner;
-        } else if ("Rotation X:".equals(label)) {
-            rotationX = spinner;
-        } else if ("Rotation Y:".equals(label)) {
-            rotationY = spinner;
-        } else if ("Rotation Z:".equals(label)) {
-            rotationZ = spinner;
-        } else if ("Height offset X:".equals(label)) {
-            heightOffsetX = spinner;
-        } else if ("Height offset Y:".equals(label)) {
-            heightOffsetY = spinner;
-        }
-    }
-
-    private JPanel createLabel(String label, JComponent field) {
+    private JPanel createClientScriptPanel() {
         JPanel panel = new JPanel(new BorderLayout(5, 5));
-        JLabel jlabel = new JLabel(label);
-        jlabel.setPreferredSize(new Dimension(160, 20));
-        panel.add(jlabel, BorderLayout.WEST);
-        panel.add(field, BorderLayout.CENTER);
-        panel.setMaximumSize(new Dimension(Integer.MAX_VALUE, 30));
-        panel.setAlignmentX(Component.LEFT_ALIGNMENT);
+        clientScriptModel = new ClientScriptTableModel(clientScriptData);
+        clientScriptTable = new JTable((TableModel) clientScriptModel);
+        clientScriptTable.setFillsViewportHeight(true);
+
+        panel.add(new JScrollPane(clientScriptTable), BorderLayout.CENTER);
+
+        JPanel buttonsPanel = new JPanel();
+
+        JButton addButton = new JButton("Add");
+        addButton.addActionListener(e -> {
+            clientScriptModel.addEntry(0, "");
+        });
+
+        JButton removeButton = new JButton("Remove");
+        removeButton.addActionListener(e -> {
+            int selected = clientScriptTable.getSelectedRow();
+            if (selected >= 0) {
+                clientScriptModel.removeEntry(selected);
+            }
+        });
+
+        JButton saveButton = new JButton("Save Client Scripts");
+        saveButton.addActionListener(e -> {
+            saveClientScripts();
+        });
+
+        JButton loadButton = new JButton("Load Client Scripts");
+        loadButton.addActionListener(e -> {
+            loadClientScripts();
+        });
+
+        buttonsPanel.add(addButton);
+        buttonsPanel.add(removeButton);
+        buttonsPanel.add(saveButton);
+        buttonsPanel.add(loadButton);
+
+        panel.add(buttonsPanel, BorderLayout.SOUTH);
+
         return panel;
     }
 
-    private int clamp(int value, int min, int max) {
-        return Math.max(min, Math.min(max, value));
-    }
-
-    private JPanel wrap(String labelText, JPanel panel) {
-        JPanel wrapper = new JPanel(new BorderLayout());
-        JLabel label = new JLabel(labelText);
-        label.setPreferredSize(new Dimension(150, 20));
-        wrapper.add(label, BorderLayout.WEST);
-        wrapper.add(panel, BorderLayout.CENTER);
-        wrapper.setMaximumSize(new Dimension(Integer.MAX_VALUE, 40));
-        wrapper.setAlignmentX(Component.LEFT_ALIGNMENT);
-        return wrapper;
-    }
-
-    private void export() {
-        try {
-            String filePath = "data/export/objects/" + definitions.id + ".txt";
-            Path path = Paths.get(filePath);
-
-            Files.createDirectories(path.getParent());
-
-            StringBuilder content = new StringBuilder();
-            content.append("Object ID: ").append(definitions.id).append("\n");
-            content.append("Name: ").append(name.getText()).append("\n");
-            content.append("Size X: ").append(sizeX.getValue()).append("\n");
-            content.append("Size Y: ").append(sizeY.getValue()).append("\n");
-            content.append("Model IDs: ").append(models.getText()).append("\n");
-
-            content.append("Options: ").append(options.getText()).append("\n");
-
-            content.append("Model Colors: ").append(modelColors.getText()).append("\n");
-            content.append("Texture Colors: ").append(textureColors.getText()).append("\n");
-
-            content.append("Scale X: ").append(scaleX.getValue()).append("\n");
-            content.append("Scale Y: ").append(scaleY.getValue()).append("\n");
-            content.append("Scale Z: ").append(scaleZ.getValue()).append("\n");
-
-            content.append("Rotation X: ").append(rotationX.getValue()).append("\n");
-            content.append("Rotation Y: ").append(rotationY.getValue()).append("\n");
-            content.append("Rotation Z: ").append(rotationZ.getValue()).append("\n");
-
-            content.append("Animation ID: ").append(animationId.getValue()).append("\n");
-
-            content.append("Walkable: ").append(isWalkable.isSelected()).append("\n");
-            content.append("Solid: ").append(isSolid.isSelected()).append("\n");
-            content.append("Interactive: ").append(isInteractive.isSelected()).append("\n");
-            content.append("Casts Shadow: ").append(castsShadow.isSelected()).append("\n");
-            content.append("Block Projectile: ").append(isProjectile.isSelected()).append("\n");
-
-            content.append("Height Offset X: ").append(heightOffsetX.getValue()).append("\n");
-            content.append("Height Offset Y: ").append(heightOffsetY.getValue()).append("\n");
-
-            content.append("Config File ID: ").append(configFileId.getText()).append("\n");
-            content.append("Config ID: ").append(configId.getText()).append("\n");
-            content.append("Clip Type: ").append(clipType.getText()).append("\n");
-
-            Files.write(path, content.toString().getBytes());
-
-            JOptionPane.showMessageDialog(this, "Object data saved to file.");
-        } catch (IOException e) {
-            JOptionPane.showMessageDialog(this, "Error saving to file: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+    private void saveClientScripts() {
+        Map<Integer, Object> newData = new HashMap<>();
+        for (Map.Entry<Integer, Object> entry : clientScriptModel.getEntries()) {
+            if (entry.getKey() != null && entry.getValue() != null) {
+                newData.put(entry.getKey(), entry.getValue());
+            }
         }
+        definitions.clientScriptData = (HashMap<Integer, Object>) newData;
+        JOptionPane.showMessageDialog(this, "Client scripts saved to definitions.");
+    }
+
+    private void loadClientScripts() {
+        clientScriptData = definitions.clientScriptData != null ? definitions.clientScriptData : new HashMap<>();
+        clientScriptModel.setEntries(new ArrayList<>(clientScriptData.entrySet()));
+        clientScriptModel.fireTableDataChanged();
+        JOptionPane.showMessageDialog(this, "Client scripts loaded from definitions.");
     }
 
     private void save() {
@@ -374,10 +323,11 @@ public class ObjectEditor extends JFrame {
             definitions.setOptions(parseOptionsString(options.getText()));
             definitions.models = parseIntArray(models.getText().trim(), ";");
             definitions.childrenIds = parseIntArray(childrenIds.getText().trim(), ";");
-            definitions.originalModelColors = parseOriginalColors(modelColors.getText().trim());
-            definitions.modifiedModelColors = parseModifiedColors(modelColors.getText().trim());
-            definitions.originalTextureColors = parseOriginalColors(textureColors.getText().trim());
-            definitions.modifiedTextureColors = parseModifiedColors(textureColors.getText().trim());
+            definitions.originalModelColors = toShortArray(parseOriginalColors(modelColors.getText().trim()));
+            definitions.modifiedModelColors = toShortArray(parseModifiedColors(modelColors.getText().trim()));
+            definitions.originalTextureColors = toShortArray(parseOriginalColors(textureColors.getText().trim()));
+            definitions.modifiedTextureColors = toShortArray(parseModifiedColors(textureColors.getText().trim()));
+
             if (sizeX != null) {
                 definitions.setSizeX((Integer) sizeX.getValue());
             }
@@ -435,16 +385,16 @@ public class ObjectEditor extends JFrame {
             }
 
 
-            // Map<Integer, Object> clientScriptData = definitions.clientScriptData != null ? definitions.clientScriptData : new HashMap<>();
-            // ClientScripts clientScriptModel = new ClientScripts(clientScriptData);
+            Map<Integer, Object> clientScriptData = definitions.clientScriptData != null ? definitions.clientScriptData : new HashMap<>();
+            ClientScripts clientScriptModel = new ClientScripts(clientScriptData);
 
-            // Map<Integer, Object> newClientScriptData = new HashMap<>();
-            // for (Map.Entry<Integer, Object> entry : clientScriptModel.getEntries()) {
-            //     if (entry.getKey() != null && entry.getValue() != null) {
-            //         newClientScriptData.put(entry.getKey(), entry.getValue());
-            //     }
-            // }
-            // definitions.clientScriptData = new HashMap<>(newClientScriptData);
+            Map<Integer, Object> newClientScriptData = new HashMap<>();
+            for (Map.Entry<Integer, Object> entry : clientScriptModel.getEntries()) {
+                if (entry.getKey() != null && entry.getValue() != null) {
+                    newClientScriptData.put(entry.getKey(), entry.getValue());
+                }
+            }
+            definitions.clientScriptData = new HashMap<>(newClientScriptData);
 
             definitions.write(ObjectSelection.Cache);
             objectSelection.updateObjectDefs(definitions);
@@ -453,150 +403,160 @@ public class ObjectEditor extends JFrame {
             dispose();
         } catch (Exception e) {
             JOptionPane.showMessageDialog(this, "Error saving object: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
-            e.printStackTrace();
         }
     }
 
-    private String[] parseOptionsString(String text) {
-        if (text == null || text.trim().isEmpty()) {
-            return new String[0];
+    private void export() {
+        Path path = Paths.get("object_" + definitions.id + ".txt");
+        try {
+            Files.writeString(path, definitions.toString());
+            JOptionPane.showMessageDialog(this, "Exported to " + path.toAbsolutePath());
+        } catch (IOException e) {
+            JOptionPane.showMessageDialog(this, "Export error: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
         }
-        String[] parts = text.split(";");
-        String[] options = new String[parts.length];
-        for (int i = 0; i < parts.length; i++) {
-            String part = parts[i].trim();
-            if (part.equalsIgnoreCase("null") || part.isEmpty()) {
-                options[i] = null;
-            } else {
-                options[i] = part;
-            }
-        }
-        return options;
     }
 
-    private String optionsArrayToString(ObjectDefinitions def) {
+    private JPanel createLabel(String label, JComponent component) {
+        JPanel panel = new JPanel(new BorderLayout(5, 5));
+        JLabel jLabel = new JLabel(label);
+        jLabel.setPreferredSize(new Dimension(120, 25));
+        panel.add(jLabel, BorderLayout.WEST);
+        panel.add(component, BorderLayout.CENTER);
+        panel.setAlignmentX(Component.LEFT_ALIGNMENT);
+        return panel;
+    }
+
+    private JPanel wrap(String label, JComponent component) {
+        JPanel panel = new JPanel(new BorderLayout(5, 5));
+        panel.add(new JLabel(label), BorderLayout.WEST);
+        panel.add(component, BorderLayout.CENTER);
+        panel.setAlignmentX(Component.LEFT_ALIGNMENT);
+        return panel;
+    }
+
+    private void addLabel(JPanel panel, GridBagConstraints gbc, int x, String text, int value) {
+        gbc.gridx = x;
+        JLabel label = new JLabel(text);
+        label.setPreferredSize(new Dimension(100, 25));
+        panel.add(label, gbc);
+        gbc.gridx = x + 1;
+        JTextField field = new JTextField(String.valueOf(value), 4);
+        panel.add(field, gbc);
+    }
+
+    private String optionsArrayToString(String[] options) {
+        if (options == null) return "";
         StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < def.options.length; i++) {
-            String opt = def.options[i];
-            if (opt == null || opt.isEmpty()) {
-                sb.append("null");
-            } else {
-                sb.append(opt);
+        for (String option : options) {
+            if (option != null) {
+                sb.append(option).append(";");
             }
-            sb.append(";");
         }
         return sb.toString();
     }
 
     private String intArrayToSemicolonString(int[] arr) {
-        if (arr == null || arr.length == 0) return "";
+        if (arr == null) return "";
         StringBuilder sb = new StringBuilder();
-        for (int i: arr) {
+        for (int i : arr) {
             sb.append(i).append(";");
         }
         return sb.toString();
     }
 
-    private String shortArrayToSemicolonString(short[] arr) {
-        if (arr == null || arr.length == 0) return "";
+    private String pairColorsToString(int[] original, int[] modified) {
+        if (original == null || modified == null) return "";
         StringBuilder sb = new StringBuilder();
-        for (short i: arr) {
-            sb.append(i).append(";");
+        for (int i = 0; i < Math.min(original.length, modified.length); i++) {
+            sb.append(original[i]).append(":").append(modified[i]).append(";");
         }
         return sb.toString();
     }
 
-    private int[] parseIntArray(String text, String separator) {
-        if (text == null || text.trim().isEmpty()) return null;
-        String[] parts = text.split(separator);
+    private String[] parseOptionsString(String text) {
+        if (text == null || text.isEmpty()) return new String[0];
+        return text.split(";");
+    }
+
+    private short[] toShortArray(int[] intArray) {
+        if (intArray == null) return null;
+        short[] shortArray = new short[intArray.length];
+        for (int i = 0; i < intArray.length; i++) {
+            shortArray[i] = (short) intArray[i];
+        }
+        return shortArray;
+    }
+
+    private int[] parseIntArray(String text, String delimiter) {
+        if (text == null || text.isEmpty()) return new int[0];
+        String[] parts = text.split(delimiter);
         int[] result = new int[parts.length];
-        int count = 0;
-        for (String part: parts) {
-            String p = part.trim();
-            if (p.isEmpty()) continue;
+        int idx = 0;
+        for (String part : parts) {
             try {
-                result[count++] = Integer.parseInt(p);
-            } catch (NumberFormatException ignored) {}
-        }
-        if (count == 0) return null;
-        if (count < result.length) {
-            int[] trimmed = new int[count];
-            System.arraycopy(result, 0, trimmed, 0, count);
-            return trimmed;
-        }
-        return result;
-    }
-
-    private short[] parseShortArray(String text, String separator) {
-        if (text == null || text.trim().isEmpty()) return null;
-        String[] parts = text.split(separator);
-        short[] result = new short[parts.length];
-        int count = 0;
-        for (String part: parts) {
-            String p = part.trim();
-            if (p.isEmpty()) continue;
-            try {
-                result[count++] = Short.parseShort(p);
-            } catch (NumberFormatException ignored) {}
-        }
-        if (count == 0) return null;
-        if (count < result.length) {
-            short[] trimmed = new short[count];
-            System.arraycopy(result, 0, trimmed, 0, count);
-            return trimmed;
-        }
-        return result;
-    }
-
-    private String pairColorsToString(short[] originals, short[] modifieds) {
-        if (originals == null || modifieds == null) return "";
-        StringBuilder sb = new StringBuilder();
-        int len = Math.min(originals.length, modifieds.length);
-        for (int i = 0; i < len; i++) {
-            sb.append(originals[i]).append("=").append(modifieds[i]).append(";");
-        }
-        return sb.toString();
-    }
-
-    private short[] parseOriginalColors(String text) {
-        if (text == null || text.isEmpty()) return new short[0];
-        String[] pairs = text.split(";");
-        short[] arr = new short[pairs.length];
-        for (int i = 0; i < pairs.length; i++) {
-            String pair = pairs[i].trim();
-            if (pair.isEmpty()) continue;
-            String[] parts = pair.split("=");
-            arr[i] = Short.parseShort(parts[0]);
-        }
-        return arr;
-    }
-
-    private short[] parseModifiedColors(String text) {
-        if (text == null || text.isEmpty()) return new short[0];
-        String[] pairs = text.split(";");
-        short[] arr = new short[pairs.length];
-        for (int i = 0; i < pairs.length; i++) {
-            String pair = pairs[i].trim();
-            if (pair.isEmpty()) continue;
-            String[] parts = pair.split("=");
-            arr[i] = Short.parseShort(parts[1]);
-        }
-        return arr;
-    }
-
-    private String optionsArrayToString(String[] options) {
-        if (options == null || options.length == 0) {
-            return "";
-        }
-        StringBuilder sb = new StringBuilder();
-        for (String opt : options) {
-            if (opt == null || opt.isEmpty()) {
-                sb.append("null");
-            } else {
-                sb.append(opt);
+                result[idx++] = Integer.parseInt(part.trim());
+            } catch (NumberFormatException ignored) {
+                // skip
             }
-            sb.append(";");
         }
-        return sb.toString();
+        if (idx < result.length) {
+            return Arrays.copyOf(result, idx);
+        }
+        return result;
+    }
+
+    private int[] parseOriginalColors(String text) {
+        if (text == null || text.isEmpty()) return new int[0];
+        String[] pairs = text.split(";");
+        int[] originals = new int[pairs.length];
+        int idx = 0;
+        for (String pair : pairs) {
+            String[] split = pair.split(":");
+            if (split.length == 2) {
+                try {
+                    originals[idx++] = Integer.parseInt(split[0].trim());
+                } catch (NumberFormatException ignored) {
+                }
+            }
+        }
+        if (idx < originals.length) {
+            return Arrays.copyOf(originals, idx);
+        }
+        return originals;
+    }
+
+    private int[] parseModifiedColors(String text) {
+        if (text == null || text.isEmpty()) return new int[0];
+        String[] pairs = text.split(";");
+        int[] modified = new int[pairs.length];
+        int idx = 0;
+        for (String pair : pairs) {
+            String[] split = pair.split(":");
+            if (split.length == 2) {
+                try {
+                    modified[idx++] = Integer.parseInt(split[1].trim());
+                } catch (NumberFormatException ignored) {
+                }
+            }
+        }
+        if (idx < modified.length) {
+            return Arrays.copyOf(modified, idx);
+        }
+        return modified;
+    }
+
+    private int[] shortArrayToIntArray(short[] arr) {
+        if (arr == null) return null;
+        int[] intArr = new int[arr.length];
+        for (int i = 0; i < arr.length; i++) {
+            intArr[i] = arr[i];
+        }
+        return intArr;
+    }
+
+    private void limitSize(JSpinner spinner) {
+        if (spinner == null) return;
+        JSpinner.NumberEditor editor = new JSpinner.NumberEditor(spinner, "#");
+        spinner.setEditor(editor);
     }
 }

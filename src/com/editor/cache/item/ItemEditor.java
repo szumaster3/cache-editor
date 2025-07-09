@@ -3,7 +3,6 @@ package com.editor.cache.item;
 import com.alex.defs.items.ItemDefinitions;
 import com.alex.util.SpringUtilities;
 import com.alex.util.Utils;
-import com.editor.model.view.render.Model3D;
 import console.Main;
 
 import javax.swing.*;

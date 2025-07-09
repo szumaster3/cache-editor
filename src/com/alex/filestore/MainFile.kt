@@ -350,10 +350,10 @@ class MainFile internal constructor(
 
         private fun getMediumInt(buffer: ByteBuffer): Int =
             (buffer.get().toInt() and 255) shl 16 or ((buffer.get().toInt() and 255) shl 8) or (
-                buffer
-                    .get()
-                    .toInt() and 255
-            )
+                    buffer
+                        .get()
+                        .toInt() and 255
+                    )
 
         private fun putMediumInt(
             buffer: ByteBuffer,

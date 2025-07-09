@@ -567,12 +567,12 @@ public class NPCEditor extends JFrame {
             int i$;
             String t;
             String[] editedColor;
-            if(!this.modelColorField.getText().equals("")) {
+            if (!this.modelColorField.getText().equals("")) {
                 var17 = this.modelColorField.getText().split(";");
                 i = var17;
                 len$ = var17.length;
 
-                for(i$ = 0; i$ < len$; ++i$) {
+                for (i$ = 0; i$ < len$; ++i$) {
                     t = i[i$];
                     editedColor = t.split("=");
                     this.defs.changeModelColor(Integer.valueOf(editedColor[0]).intValue(), Integer.valueOf(editedColor[1]).intValue());
@@ -580,12 +580,12 @@ public class NPCEditor extends JFrame {
             }
 
             this.defs.resetTextureColors();
-            if(!this.textureColorField.getText().equals("")) {
+            if (!this.textureColorField.getText().equals("")) {
                 var17 = this.textureColorField.getText().split(";");
                 i = var17;
                 len$ = var17.length;
 
-                for(i$ = 0; i$ < len$; ++i$) {
+                for (i$ = 0; i$ < len$; ++i$) {
                     t = i[i$];
                     editedColor = t.split("=");
                     this.defs.changeTextureColor(Integer.valueOf(editedColor[0]).intValue(), Integer.valueOf(editedColor[1]).intValue());
@@ -1011,8 +1011,8 @@ public class NPCEditor extends JFrame {
 
     public String getChangedModelColors() {
         String text = "";
-        if(this.defs.originalModelColors != null) {
-            for(int i = 0; i < this.defs.originalModelColors.length; ++i) {
+        if (this.defs.originalModelColors != null) {
+            for (int i = 0; i < this.defs.originalModelColors.length; ++i) {
                 text = text + this.defs.originalModelColors[i] + "=" + this.defs.modifiedModelColors[i] + ";";
             }
         }
@@ -1022,8 +1022,8 @@ public class NPCEditor extends JFrame {
 
     public String getChangedTextureColors() {
         String text = "";
-        if(this.defs.originalTextureColors != null) {
-            for(int i = 0; i < this.defs.originalTextureColors.length; ++i) {
+        if (this.defs.originalTextureColors != null) {
+            for (int i = 0; i < this.defs.originalTextureColors.length; ++i) {
                 text = text + this.defs.originalTextureColors[i] + "=" + this.defs.modifiedTextureColors[i] + ";";
             }
         }

@@ -7,8 +7,13 @@ import core.cache.CacheIndex
 import java.awt.BorderLayout
 import java.awt.Dimension
 import java.awt.GridLayout
+import java.io.File
+import java.nio.file.Files
 import javax.swing.*
-import javax.swing.tree.*
+import javax.swing.tree.DefaultMutableTreeNode
+import javax.swing.tree.DefaultTreeModel
+import javax.swing.tree.TreePath
+import javax.swing.tree.TreeSelectionModel
 
 class FileManager(
     private val library: CacheLibrary,
@@ -52,11 +57,13 @@ class FileManager(
             add(createAddFileButton())
             add(createRemoveFileButton())
             add(createEditFileButton())
+            add(createExportIndexButton())
+            add(createRenameArchiveButton())
         }
 
         add(mainPanel)
-        setSize(280, 550)
-        defaultCloseOperation = 1
+        setSize(320, 600)
+        defaultCloseOperation = DISPOSE_ON_CLOSE
         setLocationRelativeTo(null)
         isVisible = true
     }
@@ -64,8 +71,7 @@ class FileManager(
     private fun createTreePanel(): JScrollPane {
         tree.selectionModel.selectionMode = TreeSelectionModel.SINGLE_TREE_SELECTION
         populateTree(rootNode)
-        val treeModel = DefaultTreeModel(rootNode)
-        tree.model = treeModel
+        tree.model = DefaultTreeModel(rootNode)
         tree.expandRow(0)
 
         tree.addTreeSelectionListener { event ->
@@ -75,28 +81,46 @@ class FileManager(
             when {
                 nodeData.startsWith("Index") -> {
                     selectedIndex = nodeData.substringAfter("Index ").toInt()
+                    selectedArchive = null
+                    selectedFile = null
                     currentIndex = library.index(selectedIndex!!)
+                    currentArchive = null
+                    currentFile = null
                 }
+
                 nodeData.startsWith("Archive") -> {
                     selectedArchive = nodeData.substringAfter("Archive ").toInt()
+                    selectedFile = null
                     currentIndex?.let { currentArchive = it.archive(selectedArchive!!) }
+                    currentFile = null
                 }
+
                 nodeData.startsWith("File") -> {
                     selectedFile = nodeData.substringAfter("File ").toInt()
                     currentFile = currentArchive?.file(selectedFile!!)?.data
                 }
+                else -> {
+                    selectedIndex = null
+                    selectedArchive = null
+                    selectedFile = null
+                    currentIndex = null
+                    currentArchive = null
+                    currentFile = null
+                }
             }
 
             detailsPanel()
-            updateActionInfoLabel()
+            updateActionInfoLabel("Selected: $nodeData")
         }
 
         return JScrollPane(tree)
     }
 
-    private fun updateActionInfoLabel() {
+    private fun updateActionInfoLabel(text: String) {
         actionResultPanel.removeAll()
-        actionResultPanel.add(createActionResultLabel(), BorderLayout.PAGE_END)
+        val label = createActionResultLabel()
+        label.text = text
+        actionResultPanel.add(label, BorderLayout.PAGE_END)
         actionResultPanel.revalidate()
         actionResultPanel.repaint()
     }
@@ -117,10 +141,12 @@ class FileManager(
         val panel = JPanel(BorderLayout())
         panel.border = BorderFactory.createEmptyBorder(5, 7, 5, 0)
         panel.add(infoLabel, BorderLayout.CENTER)
+        panel.add(actionResultPanel, BorderLayout.SOUTH)
         return panel
     }
 
     private fun populateTree(rootNode: DefaultMutableTreeNode) {
+        rootNode.removeAllChildren()
         val indices = library.indices()
 
         indices.forEach { index ->
@@ -152,18 +178,6 @@ class FileManager(
         val crc = currentIndex?.crc ?: "None"
         val compression = currentIndex?.compressionType ?: "None"
 
-        val selectedDetails =
-            when {
-                selectedArchive != null -> {
-                    val filesCount = currentArchive?.files?.size ?: "Unknown"
-                    "Archive $selectedArchive"
-                }
-                selectedIndex != null -> {
-                    "Index $indexName"
-                }
-                else -> "None"
-            }
-
         infoLabel.text =
             "<html>Name: $indexName <br>Archives: $archivesCount <br>Revision: $revision <br>CRC: $crc<br>Compression: $compression</html>"
     }
@@ -171,31 +185,43 @@ class FileManager(
     private fun createAddArchiveButton(): JButton =
         JButton("Add archive").apply {
             addActionListener { addArchive() }
-            size = Dimension(40, 25)
+            size = Dimension(100, 25)
         }
 
     private fun createRemoveArchiveButton(): JButton =
         JButton("Remove archive").apply {
             addActionListener { removeArchive() }
-            size = Dimension(40, 25)
+            size = Dimension(100, 25)
         }
 
     private fun createAddFileButton(): JButton =
         JButton("Add file").apply {
             addActionListener { addFile() }
-            size = Dimension(40, 25)
+            size = Dimension(100, 25)
         }
 
     private fun createRemoveFileButton(): JButton =
         JButton("Remove file").apply {
             addActionListener { removeFile() }
-            size = Dimension(40, 25)
+            size = Dimension(100, 25)
         }
 
     private fun createEditFileButton(): JButton =
         JButton("Edit").apply {
             addActionListener { editFile() }
-            size = Dimension(40, 25)
+            size = Dimension(100, 25)
+        }
+
+    private fun createExportIndexButton(): JButton =
+        JButton("Export index").apply {
+            addActionListener { exportIndex() }
+            size = Dimension(100, 25)
+        }
+
+    private fun createRenameArchiveButton(): JButton =
+        JButton("Rename archive").apply {
+            addActionListener { renameArchive() }
+            size = Dimension(120, 25)
         }
 
     private fun findNode(
@@ -212,14 +238,12 @@ class FileManager(
     }
 
     private fun refreshTree() {
-
         val expandedPaths = getExpandedPaths()
         val selectedPath = tree.selectionPath
 
         if (selectedIndex != null) {
             val indexNode = findNode(rootNode, "Index ${selectedIndex!!}")
             if (indexNode != null) {
-
                 updateIndexNode(indexNode)
             }
         }
@@ -232,6 +256,24 @@ class FileManager(
 
         tree.revalidate()
         tree.repaint()
+    }
+
+    private fun updateIndexNode(indexNode: DefaultMutableTreeNode) {
+        indexNode.removeAllChildren()
+
+        val index = library.index(selectedIndex!!)
+        val archives = index.archives()
+        archives.forEach { archive ->
+            val archiveNode = DefaultMutableTreeNode("Archive ${archive.id}")
+            indexNode.add(archiveNode)
+
+            archive.files.forEach { (fileId, _) ->
+                val fileNode = DefaultMutableTreeNode("File $fileId")
+                archiveNode.add(fileNode)
+            }
+        }
+
+        (tree.model as DefaultTreeModel).nodeStructureChanged(indexNode)
     }
 
     private fun getExpandedPaths(): List<TreePath> {
@@ -289,67 +331,116 @@ class FileManager(
     private fun addArchive() {
         selectedIndex?.let {
             val newArchive = library.index(it).add()
-        }
-    }
-
-    private fun updateIndexNode(indexNode: DefaultMutableTreeNode) {
-
-        indexNode.removeAllChildren()
-
-        val index = library.index(selectedIndex!!)
-        val archives = index.archives()
-        archives.forEach { archive ->
-            val archiveNode = DefaultMutableTreeNode("Archive ${archive.id}")
-            indexNode.add(archiveNode)
-
-            archive.files.forEach { (fileId, _) ->
-                val fileNode = DefaultMutableTreeNode("File $fileId")
-                archiveNode.add(fileNode)
+            if (newArchive != null) {
+                updateActionInfoLabel("Added archive ${newArchive.id} to index $it.")
+                refreshTree()
             }
         }
-
-        (tree.model as DefaultTreeModel).nodeChanged(indexNode)
     }
 
     private fun removeArchive() {
+        if (selectedIndex == null || selectedArchive == null) {
+            updateActionInfoLabel("Select an archive to remove.")
+            return
+        }
         val index = library.index(selectedIndex!!)
         val archive = index.archive(selectedArchive!!)
         archive?.let {
             index.remove(selectedArchive!!)
-            index.update()
-
-            val indexNode = findNode(rootNode, "Index ${selectedIndex!!}")
-            val archiveNode = findNode(indexNode!!, "Archive ${selectedArchive!!}")
-            archiveNode?.let { (tree.model as DefaultTreeModel).removeNodeFromParent(archiveNode) }
+            val updated = index.update()
+            updateActionInfoLabel(if (updated) "Removed archive $selectedArchive." else "Failed to remove archive.")
+            refreshTree()
         }
-        library.reload()
-        refreshTree()
-        updateActionInfoLabel()
     }
 
-    private fun addFile() {}
+    private fun addFile() {
+        if (selectedIndex == null || selectedArchive == null) {
+            updateActionInfoLabel("Select an archive to add file to.")
+            return
+        }
+        val fc = JFileChooser()
+        val ret = fc.showOpenDialog(this)
+        if (ret == JFileChooser.APPROVE_OPTION) {
+            val file = fc.selectedFile
+            val data = Files.readAllBytes(file.toPath())
+            val archive = library.index(selectedIndex!!).archive(selectedArchive!!)
+            if (archive != null) {
+                archive.add(data)
+                val updated = library.index(selectedIndex!!).update()
+                updateActionInfoLabel(if (updated) "Added file ${file.name} to archive $selectedArchive." else "Failed to add file.")
+                refreshTree()
+            }
+        }
+    }
 
     private fun removeFile() {
-        val index = library.index(selectedIndex!!)
-
+        if (selectedIndex == null || selectedArchive == null || selectedFile == null) {
+            updateActionInfoLabel("Select a file to remove.")
+            return
+        }
         library.remove(selectedIndex!!, selectedArchive!!, selectedFile!!)
-        index.update()
-
-        val archiveNode = findNode(rootNode, "Archive ${selectedArchive!!}")
-        val fileNode = findNode(archiveNode!!, "File ${selectedFile!!}")
-        fileNode?.let { (tree.model as DefaultTreeModel).removeNodeFromParent(fileNode) }
-
+        library.index(selectedIndex!!).update()
+        updateActionInfoLabel("Removed file $selectedFile from archive $selectedArchive.")
         refreshTree()
-        library.reload()
-        updateActionInfoLabel()
     }
 
-    private fun updateIndex() {
-        selectedIndex?.let { indexId ->
-            val index = library.index(indexId)
-            if (index.update()) {} else {}
+    private fun exportIndex() {
+        if (selectedIndex == null) {
+            updateActionInfoLabel("Select an index to export.")
+            return
+        }
+        val index = library.index(selectedIndex!!)
+        val fc = JFileChooser()
+        fc.selectedFile = java.io.File("index_${selectedIndex}.dat")
+        val ret = fc.showSaveDialog(this)
+        if (ret == JFileChooser.APPROVE_OPTION) {
+            try {
+                val file = fc.selectedFile
+                val data = index.write()
+                file.writeBytes(data)
+                updateActionInfoLabel("Exported index $selectedIndex to ${file.absolutePath}")
+            } catch (ex: Exception) {
+                updateActionInfoLabel("Failed to export index: ${ex.message}")
+            }
         }
     }
 
-    private fun saveFile() {}
+    private fun renameArchive() {
+        if (selectedIndex == null || selectedArchive == null) {
+            updateActionInfoLabel("Select an archive to rename.")
+            return
+        }
+        val newIdStr = JOptionPane.showInputDialog(this, "Enter new archive ID:")
+        val newId = newIdStr?.toIntOrNull()
+        if (newId == null) {
+            updateActionInfoLabel("Invalid archive ID.")
+            return
+        }
+
+        val index = library.index(selectedIndex!!)
+        val archive = index.archive(selectedArchive!!)
+        if (archive == null) {
+            updateActionInfoLabel("Archive not found.")
+            return
+        }
+
+        val newArchive = index.add(newId)
+        archive.files.forEach { (fileId, file) ->
+            val data = file.data
+            if (data != null) {
+                newArchive.add(fileId, data)
+            } else {
+                println("Warning: File $fileId data is null, skipping")
+            }
+        }
+        index.remove(selectedArchive!!)
+        val updated = index.update()
+        if (updated) {
+            selectedArchive = newId
+            updateActionInfoLabel("Renamed archive to $newId")
+            refreshTree()
+        } else {
+            updateActionInfoLabel("Failed to rename archive")
+        }
+    }
 }

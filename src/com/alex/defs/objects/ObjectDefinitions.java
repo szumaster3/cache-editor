@@ -14,7 +14,7 @@ public class ObjectDefinitions implements Cloneable {
     public static int anInt3842;
     public static int anInt3843;
     public static int anInt3846;
-    public HashMap < Integer, Object > clientScriptData;
+    public HashMap<Integer, Object> clientScriptData;
     public short[] originalModelColors;
     public int[] childrenIds;
     public int anInt3834;
@@ -194,7 +194,7 @@ public class ObjectDefinitions implements Cloneable {
         if (this.clientScriptData != null) {
             stream.writeByte(249);
             stream.writeByte(this.clientScriptData.size());
-            for (Map.Entry < Integer, Object > entry: this.clientScriptData.entrySet()) {
+            for (Map.Entry<Integer, Object> entry : this.clientScriptData.entrySet()) {
                 int key = entry.getKey();
                 Object value = entry.getValue();
                 stream.writeByte((value instanceof String) ? 1 : 0);
@@ -258,9 +258,9 @@ public class ObjectDefinitions implements Cloneable {
                                                     originalModelColors = new short[i_53_];
                                                     modifiedModelColors = new short[i_53_];
                                                     for (int i_54_ = 0; i_53_ > i_54_; i_54_++) {
-                                                        originalModelColors[i_54_] = (short)(stream
+                                                        originalModelColors[i_54_] = (short) (stream
                                                                 .readUnsignedShort());
-                                                        modifiedModelColors[i_54_] = (short)(stream
+                                                        modifiedModelColors[i_54_] = (short) (stream
                                                                 .readUnsignedShort());
                                                     }
                                                 } else if (opcode != 41) {
@@ -394,7 +394,7 @@ public class ObjectDefinitions implements Cloneable {
                                                                                                                                                 } else if (opcode == 249) {
                                                                                                                                                     int i_58_ = stream.readUnsignedByte();
                                                                                                                                                     if (clientScriptData == null)
-                                                                                                                                                        clientScriptData = new HashMap < Integer, Object > (i_58_);
+                                                                                                                                                        clientScriptData = new HashMap<Integer, Object>(i_58_);
                                                                                                                                                     for (int i_60_ = 0; i_60_ < i_58_; i_60_++) {
                                                                                                                                                         boolean bool = stream.readUnsignedByte() == 1;
                                                                                                                                                         int key = stream.read24BitInt();
@@ -515,7 +515,7 @@ public class ObjectDefinitions implements Cloneable {
                                                                 .readUnsignedByte());
                                                         aByteArray3858 = (new byte[i_69_]);
                                                         for (int i_70_ = 0; i_70_ < i_69_; i_70_++)
-                                                            aByteArray3858[i_70_] = (byte)(stream
+                                                            aByteArray3858[i_70_] = (byte) (stream
                                                                     .readByte());
                                                     }
                                                 } else {
@@ -524,9 +524,9 @@ public class ObjectDefinitions implements Cloneable {
                                                     originalTextureColors = new short[i_71_];
                                                     modifiedTextureColors = new short[i_71_];
                                                     for (int i_72_ = 0; i_71_ > i_72_; i_72_++) {
-                                                        originalTextureColors[i_72_] = (short)(stream
+                                                        originalTextureColors[i_72_] = (short) (stream
                                                                 .readUnsignedShort());
-                                                        modifiedTextureColors[i_72_] = (short)(stream
+                                                        modifiedTextureColors[i_72_] = (short) (stream
                                                                 .readUnsignedShort());
                                                     }
                                                 }
@@ -681,7 +681,7 @@ public class ObjectDefinitions implements Cloneable {
     public boolean containsOption(String o) {
         if (options == null)
             return false;
-        for (String option: options) {
+        for (String option : options) {
             if (option == null)
                 continue;
             if (option.equalsIgnoreCase(o))

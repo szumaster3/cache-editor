@@ -32,10 +32,13 @@ class ClientScripts extends AbstractTableModel {
     @Override
     public Object getValueAt(int row, int col) {
         Map.Entry<Integer, Object> entry = entries.get(row);
-        switch(col) {
-            case 0: return entry.getKey();
-            case 1: return entry.getValue() instanceof String ? "String" : "Integer";
-            case 2: return entry.getValue().toString();
+        switch (col) {
+            case 0:
+                return entry.getKey();
+            case 1:
+                return entry.getValue() instanceof String ? "String" : "Integer";
+            case 2:
+                return entry.getValue().toString();
         }
         return null;
     }
@@ -49,7 +52,7 @@ class ClientScripts extends AbstractTableModel {
     public void setValueAt(Object aValue, int row, int col) {
         Map.Entry<Integer, Object> entry = entries.get(row);
         try {
-            switch(col) {
+            switch (col) {
                 case 0:
                     int newKey = Integer.parseInt(aValue.toString());
                     entries.set(row, new AbstractMap.SimpleEntry<>(newKey, entry.getValue()));

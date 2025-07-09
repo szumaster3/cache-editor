@@ -1,14 +1,7 @@
 package com.editor.cache
 
-import com.alex.filestore.Archive
-import com.alex.filestore.Index
-import com.alex.filestore.MainFile
-import com.alex.filestore.ReferenceTable
-import com.displee.compress.CompressionType
-import java.io.RandomAccessFile
-import java.nio.ByteBuffer
-
 import com.displee.cache.CacheLibrary
+import com.displee.compress.CompressionType
 import java.io.File
 import java.io.FileOutputStream
 import java.util.zip.ZipEntry
@@ -39,7 +32,12 @@ object IndexManager {
             cacheLibrary.index(indexId).remove(indexId)
             JOptionPane.showMessageDialog(null, "Index $indexId deleted.")
         } catch (ex: Exception) {
-            JOptionPane.showMessageDialog(null, "Failed to delete index: ${ex.message}", "Error", JOptionPane.ERROR_MESSAGE)
+            JOptionPane.showMessageDialog(
+                null,
+                "Failed to delete index: ${ex.message}",
+                "Error",
+                JOptionPane.ERROR_MESSAGE
+            )
         }
     }
 
@@ -54,7 +52,12 @@ object IndexManager {
                 JOptionPane.showMessageDialog(null, "Index $indexId exported to ${file.absolutePath}")
             }
         } catch (ex: Exception) {
-            JOptionPane.showMessageDialog(null, "Failed to export index: ${ex.message}", "Error", JOptionPane.ERROR_MESSAGE)
+            JOptionPane.showMessageDialog(
+                null,
+                "Failed to export index: ${ex.message}",
+                "Error",
+                JOptionPane.ERROR_MESSAGE
+            )
         }
     }
 
@@ -63,7 +66,12 @@ object IndexManager {
             cacheLibrary.updateIndexCrc(indexId, crc)
             JOptionPane.showMessageDialog(null, "CRC for index $indexId updated.")
         } catch (ex: Exception) {
-            JOptionPane.showMessageDialog(null, "Failed to update CRC: ${ex.message}", "Error", JOptionPane.ERROR_MESSAGE)
+            JOptionPane.showMessageDialog(
+                null,
+                "Failed to update CRC: ${ex.message}",
+                "Error",
+                JOptionPane.ERROR_MESSAGE
+            )
         }
     }
 

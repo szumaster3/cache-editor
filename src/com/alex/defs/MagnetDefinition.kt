@@ -36,10 +36,12 @@ class MagnetDefinition(
                     positionY = stream.readInt()
                     positionZ = stream.readInt()
                 }
+
                 4 -> {
                     velocityX = stream.readUnsignedByte()
                     velocityY = stream.readInt()
                 }
+
                 6 -> radius = stream.readUnsignedByte()
                 8 -> type = 4
                 9 -> unknownParam = -1

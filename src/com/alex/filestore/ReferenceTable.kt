@@ -55,7 +55,6 @@ class ReferenceTable internal constructor(
          * @return the int [ ]
          */
         get() = archive.keys
-
         /**
          * Sets keys.
          *
