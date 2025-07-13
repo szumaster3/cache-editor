@@ -61,22 +61,15 @@ object InterfaceUtils {
      */
     @JvmStatic
     fun getScriptArray(input: String?): Array<Any?>? {
-        if (input == null || input === "" || input === " ") return null
-        val values = input.split(";".toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray()
+        if (input.isNullOrBlank()) return null
+
+        val values = input.split(";")
+            .filter { it.isNotBlank() }
+            .toTypedArray()
+
         val objs = arrayOfNulls<Any>(values.size)
-        try {
-            values[0].toInt()
-        } catch (exp: Exception) {
-            // Return null if the first value isn't a number
-            return null
-        }
         for (i in values.indices) {
-            try {
-                val x = values[i].toInt()
-                objs[i] = x
-            } catch (ex: Exception) {
-                objs[i] = values[i]
-            }
+            objs[i] = values[i].toIntOrNull() ?: values[i]
         }
         return objs
     }

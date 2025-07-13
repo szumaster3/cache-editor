@@ -26,10 +26,12 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class InterfaceEditor extends JFrame {
-    public static Cache Cache;
+    public static Cache cache;
     public static JProgressBar progressBar;
     public ProgressMonitor progressMonitor;
     protected JList interface_list;
@@ -117,8 +119,19 @@ public class InterfaceEditor extends JFrame {
     private ComponentDefinition copiedComp = null;
     private ComponentDefinition selectedComponent;
 
+    private static final String SCROLLBAR_IMAGE_PATH = "data/export/scriptsprites/scrollbar.jpg";
+    private static final String BUTTON_IMAGE_PATH = "data/scriptsprites/button.png";
+    private static final Font DEFAULT_FONT = new Font("Helvetica", Font.PLAIN, 11);
+
+    private final Map<String, BufferedImage> imageCache = new HashMap<>();
+
     public InterfaceEditor(String cache) throws IOException {
-        Cache = new Cache(cache);
+        try {
+            InterfaceEditor.cache = new Cache(cache);
+        } catch (IOException e) {
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(null, "Failed to load cache", "Error", JOptionPane.ERROR_MESSAGE);
+        }
         setTitle("Interface Editor Shnek");
         getContentPane().setLayout(new BorderLayout());
         setDefaultCloseOperation(1);
@@ -155,7 +168,7 @@ public class InterfaceEditor extends JFrame {
     private JMenuItem getJMenuItem(String cache, JMenuBar menuBar) {
         JMenuItem mntmDumpSprites = new JMenuItem("Export sprites");
         mntmDumpSprites.addActionListener(arg0 -> {
-            progressMonitor = new ProgressMonitor(menuBar, "Dumping sprites...", "", 0, Cache.getIndexes()[8].getLastArchiveId());
+            progressMonitor = new ProgressMonitor(menuBar, "Dumping sprites...", "", 0, InterfaceEditor.cache.getIndexes()[8].getLastArchiveId());
             progressMonitor.setProgress(1);
 
             new Thread(() -> {
@@ -195,7 +208,7 @@ public class InterfaceEditor extends JFrame {
                     PropertyValues.setCachePath(path);
                 }
                 Main.log("Iface tool", "Application started...");
-                InterfaceEditor frame = new InterfaceEditor(Cache.toString());
+                InterfaceEditor frame = new InterfaceEditor(cache.toString());
                 frame.setVisible(true);
             } catch (Exception e) {
                 e.printStackTrace();
@@ -330,11 +343,12 @@ public class InterfaceEditor extends JFrame {
         // Save button
         JButton saveButton = new JButton("Save");
         saveButton.setPreferredSize(new Dimension(IfaceConstants.LEFT_SCROLLPANE_WIDTH, IfaceConstants.BUTTON_HEIGHT));
+
         saveButton.addActionListener(arg0 -> {
             if (currentInterface != -1 && selectedComp != -1) {
-                saveInterface(currentInterface, selectedComp);
                 drawTree(currentInterface);
                 setValues(currentInterface, selectedComp);
+                saveComponent(currentInterface, selectedComponent.componentId);
             } else {
                 JOptionPane.showMessageDialog(interfaceViewportScrollPane, "Please select a component & interface before saving it.");
             }
@@ -358,17 +372,14 @@ public class InterfaceEditor extends JFrame {
             );
 
             if (option == JOptionPane.YES_OPTION) {
-                Cache.getIndexes()[3].removeArchive(currentInterface);
-                ComponentDefinition.icomponentsdefs = new ComponentDefinition[ComponentDefinition.getInterfaceDefinitionsSize(Cache)][];
+                cache.getIndexes()[3].removeArchive(currentInterface);
+                ComponentDefinition.icomponentsdefs = new ComponentDefinition[ComponentDefinition.getInterfaceDefinitionsSize(cache)][];
                 drawTree(currentInterface);
 
                 refreshInterface();
             }
         });
-
-        // Set the button's preferred size
         deleteInterfaceButton.setPreferredSize(new Dimension(IfaceConstants.LEFT_SCROLLPANE_WIDTH, IfaceConstants.BUTTON_HEIGHT));
-
         return deleteInterfaceButton;
     }
 
@@ -399,10 +410,10 @@ public class InterfaceEditor extends JFrame {
             defaultButton.parentId = -1;
 
             // Save the default button to cache
-            Cache.getIndexes()[3].putFile(ComponentDefinition.getInterfaceDefinitionsSize(Cache), 0, defaultButton.encode());
+            cache.getIndexes()[3].putFile(ComponentDefinition.getInterfaceDefinitionsSize(cache), 0, defaultButton.encode());
 
             // Initialize component definitions array
-            ComponentDefinition.icomponentsdefs = new ComponentDefinition[ComponentDefinition.getInterfaceDefinitionsSize(Cache)][];
+            ComponentDefinition.icomponentsdefs = new ComponentDefinition[ComponentDefinition.getInterfaceDefinitionsSize(cache)][];
 
             // Create list and set up its selection listener
             JList<String> list = new JList<>(populateList());
@@ -560,13 +571,13 @@ public class InterfaceEditor extends JFrame {
                         // If the component is a container, delete all nested components as well
                         if (c.type == ComponentConstants.CONTAINER) {
                             for (int compId : getNestedComponents(currentInterface, selectedComp)) {
-                                Cache.getIndexes()[3].removeFile(currentInterface, compId);
+                                cache.getIndexes()[3].removeFile(currentInterface, compId);
                             }
                         }
                         // Delete the selected component itself
-                        Cache.getIndexes()[3].removeFile(currentInterface, selectedComp);
-                        Cache.getIndexes()[3].resetCachedFiles();
-                        Cache.getIndexes()[3].rewriteTable();
+                        cache.getIndexes()[3].removeFile(currentInterface, selectedComp);
+                        cache.getIndexes()[3].resetCachedFiles();
+                        cache.getIndexes()[3].rewriteTable();
                     } finally {
                         drawTree(currentInterface);
                     }
@@ -634,7 +645,7 @@ public class InterfaceEditor extends JFrame {
             comp.baseHeight = 50;
             comp.baseWidth = 50;
             comp.parentId = -1;
-            Cache.getIndexes()[3].putFile(currentInterface, ComponentDefinition.getInterfaceDefinitionsComponentsSize(Cache, currentInterface), comp.encode());
+            cache.getIndexes()[3].putFile(currentInterface, ComponentDefinition.getInterfaceDefinitionsComponentsSize(cache, currentInterface), comp.encode());
             ComponentDefinition.getInterface(currentInterface);
             drawTree(currentInterface);
 
@@ -649,8 +660,8 @@ public class InterfaceEditor extends JFrame {
             comp.basePositionX = 0;
             comp.basePositionY = 0;
             comp.parentId = -1;
-            comp.ihash = ComponentDefinition.getInterfaceDefinitionsComponentsSize(Cache, currentInterface) + (currentInterface << 16);
-            Cache.getIndexes()[3].putFile(currentInterface, ComponentDefinition.getInterfaceDefinitionsComponentsSize(Cache, currentInterface), comp.encode());
+            comp.ihash = ComponentDefinition.getInterfaceDefinitionsComponentsSize(cache, currentInterface) + (currentInterface << 16);
+            cache.getIndexes()[3].putFile(currentInterface, ComponentDefinition.getInterfaceDefinitionsComponentsSize(cache, currentInterface), comp.encode());
             ComponentDefinition.getInterface(currentInterface);
             drawTree(currentInterface);
         });
@@ -664,8 +675,8 @@ public class InterfaceEditor extends JFrame {
             comp.basePositionX = 0;
             comp.basePositionY = 0;
             comp.parentId = -1;
-            comp.ihash = ComponentDefinition.getInterfaceDefinitionsComponentsSize(Cache, currentInterface) + (currentInterface << 16);
-            Cache.getIndexes()[3].putFile(currentInterface, ComponentDefinition.getInterfaceDefinitionsComponentsSize(Cache, currentInterface), comp.encode());
+            comp.ihash = ComponentDefinition.getInterfaceDefinitionsComponentsSize(cache, currentInterface) + (currentInterface << 16);
+            cache.getIndexes()[3].putFile(currentInterface, ComponentDefinition.getInterfaceDefinitionsComponentsSize(cache, currentInterface), comp.encode());
             ComponentDefinition.getInterface(currentInterface);
             drawTree(currentInterface);
 
@@ -714,8 +725,8 @@ public class InterfaceEditor extends JFrame {
             comp.basePositionY = 0;
             comp.parentId = -1;
             comp.text = "Hallo world";
-            comp.ihash = ComponentDefinition.getInterfaceDefinitionsComponentsSize(Cache, currentInterface) + (currentInterface << 16);
-            Cache.getIndexes()[3].putFile(currentInterface, ComponentDefinition.getInterfaceDefinitionsComponentsSize(Cache, currentInterface), comp.encode());
+            comp.ihash = ComponentDefinition.getInterfaceDefinitionsComponentsSize(cache, currentInterface) + (currentInterface << 16);
+            cache.getIndexes()[3].putFile(currentInterface, ComponentDefinition.getInterfaceDefinitionsComponentsSize(cache, currentInterface), comp.encode());
             ComponentDefinition.getInterface(currentInterface);
             drawTree(currentInterface);
 
@@ -734,8 +745,8 @@ public class InterfaceEditor extends JFrame {
             comp.basePositionY = 0;
             comp.parentId = -1;
             comp.spriteId = 0;
-            comp.ihash = ComponentDefinition.getInterfaceDefinitionsComponentsSize(Cache, currentInterface) + (currentInterface << 16);
-            Cache.getIndexes()[3].putFile(currentInterface, ComponentDefinition.getInterfaceDefinitionsComponentsSize(Cache, currentInterface), comp.encode());
+            comp.ihash = ComponentDefinition.getInterfaceDefinitionsComponentsSize(cache, currentInterface) + (currentInterface << 16);
+            cache.getIndexes()[3].putFile(currentInterface, ComponentDefinition.getInterfaceDefinitionsComponentsSize(cache, currentInterface), comp.encode());
             ComponentDefinition.getInterface(currentInterface);
             drawTree(currentInterface);
 
@@ -868,269 +879,146 @@ public class InterfaceEditor extends JFrame {
     }
 
     public void setValues(int inter, int componentId) {
-        /* cleaning previous values*/
         System.out.println("Setting values for component: " + componentId + " from interface " + inter);
         cleanValues();
-        /*  selected component*/
-        final ComponentDefinition comp = ComponentDefinition.getInterfaceComponent(inter, componentId);
-        /* setting all the values*/
-        this.txt_hash.setText(comp.ihash + "");
-        this.txt_height.setText(comp.baseHeight + "");
-        if (comp.type == ComponentConstants.CONTAINER) txt_type.setText("Container");
-        else if (comp.type == ComponentConstants.TEXT) txt_type.setText("Text");
-        else if (comp.type == ComponentConstants.SPRITE) txt_type.setText("Sprite");
-        else if (comp.type == ComponentConstants.FIGURE) txt_type.setText("Figure");
-        else if (comp.type == ComponentConstants.MODEL) txt_type.setText("Model");
-        else txt_type.setText(comp.type + "");
-        this.txt_scrollX.setText(comp.layerHeight + "");
-        this.txt_scrollY.setText(comp.layerWidth + "");
-        this.txt_width.setText(comp.baseWidth + "");
-        this.txt_x.setText(comp.basePositionX + "");
-        this.txt_y.setText(comp.basePositionY + "");
-        this.txt_border.setText(comp.width2 + "");
-        this.txt_animationId.setText(comp.animationId + "");
-        if (comp.hidden) chckbxHidden.setSelected(true);
-        else chckbxHidden.setSelected(false);
-        if (comp.hFlip) this.chckbxHorizontalFlip.setSelected(true);
-        else this.chckbxHorizontalFlip.setSelected(false);
-        if (comp.vFlip) this.chckbxVerticalFlip.setSelected(true);
-        else this.chckbxVerticalFlip.setSelected(false);
-        if (comp.filled) this.chckbxFilled.setSelected(true);
-        else this.chckbxFilled.setSelected(false);
 
-        this.txt_trans.setText(comp.transparency + "");
-        this.txt_modeHeight.setText(comp.aspectHeightType + "");
-        this.txt_widthMode.setText(comp.aspectWidthType + "");
-        this.txt_model.setText(comp.modelId + "");
-        this.txt_parent.setText(comp.parentId + "");
-        this.txt_sprite.setText(comp.spriteId + "");
-        this.txt_color.setText(comp.color + "");
-        this.txt_text.setText(comp.text);
-        this.txt_multi.setText(comp.multiline + "");
-        this.txt_font.setText(comp.fontId + "");
-        this.txt_modex.setText(comp.aspectXType + "");
-        this.txt_positionmodeY.setText(comp.aspectYType + "");
-        this.txt_xali.setText(comp.textHorizontalAli + "");
-        this.txt_yali.setText(comp.textVerticalAli + "");
-        if (comp.repeat_) this.chckbxRepeat.setSelected(true);
-        else this.chckbxRepeat.setSelected(false);
-        this.txt_border.setText(comp.borderThickness + "");
+        final ComponentDefinition comp = ComponentDefinition.getInterfaceComponent(inter, componentId);
+        if (comp == null) {
+            System.out.println("Component not found for interface " + inter + ", component " + componentId);
+            return;
+        }
+
+        txt_hash.setText(String.valueOf(comp.ihash));
+        txt_height.setText(String.valueOf(comp.baseHeight));
+
+        switch (comp.type) {
+            case ComponentConstants.CONTAINER:
+                txt_type.setText("Container");
+                break;
+            case ComponentConstants.TEXT:
+                txt_type.setText("Text");
+                break;
+            case ComponentConstants.SPRITE:
+                txt_type.setText("Sprite");
+                break;
+            case ComponentConstants.FIGURE:
+                txt_type.setText("Figure");
+                break;
+            case ComponentConstants.MODEL:
+                txt_type.setText("Model");
+                break;
+            default:
+                txt_type.setText(String.valueOf(comp.type));
+                break;
+        }
+
+        txt_scrollX.setText(String.valueOf(comp.layerWidth));
+        txt_scrollY.setText(String.valueOf(comp.layerHeight));
+
+        txt_width.setText(String.valueOf(comp.baseWidth));
+        txt_x.setText(String.valueOf(comp.basePositionX));
+        txt_y.setText(String.valueOf(comp.basePositionY));
+        txt_border.setText(String.valueOf(comp.borderThickness));
+
+        txt_animationId.setText(String.valueOf(comp.animationId));
+
+        chckbxHidden.setSelected(comp.hidden);
+        chckbxHorizontalFlip.setSelected(comp.hFlip);
+        chckbxVerticalFlip.setSelected(comp.vFlip);
+        chckbxFilled.setSelected(comp.filled);
+        chckbxRepeat.setSelected(comp.repeat_);
+
+        txt_trans.setText(String.valueOf(comp.transparency));
+        txt_modeHeight.setText(String.valueOf(comp.aspectHeightType));
+        txt_widthMode.setText(String.valueOf(comp.aspectWidthType));
+        txt_model.setText(String.valueOf(comp.modelId));
+        txt_parent.setText(String.valueOf(comp.parentId));
+        txt_sprite.setText(String.valueOf(comp.spriteId));
+        txt_color.setText(String.valueOf(comp.color));
+        txt_text.setText(comp.text != null ? comp.text : "");
+        txt_multi.setText(String.valueOf(comp.multiline));
+        txt_font.setText(String.valueOf(comp.fontId));
+        txt_modex.setText(String.valueOf(comp.aspectXType));
+        txt_positionmodeY.setText(String.valueOf(comp.aspectYType));
+        txt_xali.setText(String.valueOf(comp.textHorizontalAli));
+        txt_yali.setText(String.valueOf(comp.textVerticalAli));
 
         if (comp.rightclickOptions != null) {
-            this.txt_leftclick.setText(comp.rightclickOptions[0]);
-            if (comp.rightclickOptions.length > 1)
-                if (comp.rightclickOptions[1] != null) this.txt_option1.setText(comp.rightclickOptions[1]);
-            if (comp.rightclickOptions.length > 2)
-                if (comp.rightclickOptions[2] != null) this.txt_option2.setText(comp.rightclickOptions[2]);
-            if (comp.rightclickOptions.length > 3)
-                if (comp.rightclickOptions[3] != null) this.txt_option3.setText(comp.rightclickOptions[3]);
-            if (comp.rightclickOptions.length > 4)
-                if (comp.rightclickOptions[4] != null) this.txt_option4.setText(comp.rightclickOptions[4]);
-            if (comp.rightclickOptions.length > 5)
-                if (comp.rightclickOptions[5] != null) this.txt_option5.setText(comp.rightclickOptions[5]);
+            txt_leftclick.setText(comp.rightclickOptions.length > 0 && comp.rightclickOptions[0] != null ? comp.rightclickOptions[0] : "");
+            txt_option1.setText(comp.rightclickOptions.length > 1 && comp.rightclickOptions[1] != null ? comp.rightclickOptions[1] : "");
+            txt_option2.setText(comp.rightclickOptions.length > 2 && comp.rightclickOptions[2] != null ? comp.rightclickOptions[2] : "");
+            txt_option3.setText(comp.rightclickOptions.length > 3 && comp.rightclickOptions[3] != null ? comp.rightclickOptions[3] : "");
+            txt_option4.setText(comp.rightclickOptions.length > 4 && comp.rightclickOptions[4] != null ? comp.rightclickOptions[4] : "");
+            txt_option5.setText(comp.rightclickOptions.length > 5 && comp.rightclickOptions[5] != null ? comp.rightclickOptions[5] : "");
+        } else {
+            txt_leftclick.setText("");
+            txt_option1.setText("");
+            txt_option2.setText("");
+            txt_option3.setText("");
+            txt_option4.setText("");
+            txt_option5.setText("");
         }
-        String values = "";
-        if (comp.onMouseHoverScript != null) {
-            for (Object o : comp.onMouseHoverScript) {
-                values += o + ";";
-            }
-        }
-        txt_fullonhover.setText(values);
-        values = "";
-        if (comp.onMouseLeaveScript != null) {
-            for (Object o : comp.onMouseLeaveScript) {
-                values += o + ";";
-            }
-        }
-        txt_mouseLeave.setText(values);
-        values = "";
-        if (comp.onLoadScript != null) {
-            for (Object o : comp.onLoadScript) {
-                values += o + ";";
-            }
-        }
-        this.txt_onload.setText(values);
-        //anObjectArray4770
-        values = "";
-        if (comp.onOptionClick != null) {
-            for (Object o : comp.onOptionClick) {
-                values += o + ";";
-            }
-        }
-        this.txt_onOptionClick.setText(values);
-        values = "";
-        if (comp.onUseWith != null) {
-            for (Object o : comp.onUseWith) {
-                values += o + ";";
-            }
-        }
-        this.txt_onUseWith.setText(values);
-        values = "";
-        if (comp.onUse != null) {
-            for (Object o : comp.onUse) {
-                values += o + ";";
-            }
-        }
-        this.txt_onUse.setText(values);
-        values = "";
-        if (comp.onVarpTransmit != null) {
-            for (Object o : comp.onVarpTransmit) {
-                values += o + ";";
-            }
-        }
-        this.txt_onVarpTransmit.setText(values);
-        values = "";
-        if (comp.onMouseRepeat != null) {
-            for (Object o : comp.onMouseRepeat) {
-                values += o + ";";
-            }
 
-        }
-        this.txt_onMouseRepeat.setText(values);
-        values = "";
-        if (comp.onInvTransmit != null) {
-            for (Object o : comp.onInvTransmit) {
-                values += o + ";";
-            }
-        }
-        this.txt_onInvTransmit.setText(values);
+        txt_fullonhover.setText(joinObjects(comp.onMouseHoverScript));
+        txt_mouseLeave.setText(joinObjects(comp.onMouseLeaveScript));
+        txt_onload.setText(joinObjects(comp.onLoadScript));
+        txt_onOptionClick.setText(joinObjects(comp.onOptionClick));
+        txt_onUseWith.setText(joinObjects(comp.onUseWith));
+        txt_onUse.setText(joinObjects(comp.onUse));
+        txt_onVarpTransmit.setText(joinObjects(comp.onVarpTransmit));
+        txt_onMouseRepeat.setText(joinObjects(comp.onMouseRepeat));
+        txt_onInvTransmit.setText(joinObjects(comp.onInvTransmit));
+        txt_onStatTransmit.setText(joinObjects(comp.onStatTransmit));
+        txt_onTimer.setText(joinObjects(comp.onTimer));
+        txt_onClickRepeat.setText(joinObjects(comp.onClickRepeat));
+        txt_onDrag.setText(joinObjects(comp.onDrag));
+        txt_onRelease.setText(joinObjects(comp.onRelease));
+        txt_onHold.setText(joinObjects(comp.onHold));
+        txt_onDragStart.setText(joinObjects(comp.onDragStart));
+        txt_onDragRelease.setText(joinObjects(comp.onDragRelease));
+        txt_onScroll.setText(joinObjects(comp.onScroll));
+        txt_onVarcTransmit.setText(joinObjects(comp.onVarcTransmit));
+        txt_onVarcStrTransmit.setText(joinObjects(comp.onVarcStrTransmit));
 
-        values = "";
-        if (comp.onStatTransmit != null) {
-            for (Object o : comp.onStatTransmit) {
-                values += o + ";";
-            }
-        }
-        this.txt_onStatTransmit.setText(values);
+        txt_varpTriggers.setText(joinInts(comp.varpTriggers));
+        txt_inventoryTriggers.setText(joinInts(comp.inventoryTriggers));
+        txt_statTriggers.setText(joinInts(comp.statTriggers));
+        txt_varcTriggers.setText(joinInts(comp.varcTriggers));
+        txt_varcStrTriggers.setText(joinInts(comp.varcstrTriggers));
 
-        values = "";
-        if (comp.onTimer != null) {
-            for (Object o : comp.onTimer) {
-                values += o + ";";
-            }
-        }
-        this.txt_onTimer.setText(values);
-
-        values = "";
-        if (comp.onClickRepeat != null) {
-            for (Object o : comp.onClickRepeat) {
-                values += o + ";";
-            }
-        }
-        this.txt_onClickRepeat.setText(values);
-
-        values = "";
-        if (comp.onDrag != null) {
-            for (Object o : comp.onDrag) {
-                values += o + ";";
-            }
-        }
-        this.txt_onDrag.setText(values);
-        values = "";
-        if (comp.onRelease != null) {
-            for (Object o : comp.onRelease) {
-                values += o + ";";
-            }
-        }
-        this.txt_onRelease.setText(values);
-        values = "";
-        if (comp.onHold != null) {
-            for (Object o : comp.onHold) {
-                values += o + ";";
-            }
-        }
-        this.txt_onHold.setText(values);
-        values = "";
-        if (comp.onDragStart != null) {
-            for (Object o : comp.onDragStart) {
-                values += o + ";";
-            }
-        }
-        this.txt_onDragStart.setText(values);
-        values = "";
-        if (comp.onDragRelease != null) {
-            for (Object o : comp.onDragRelease) {
-                values += o + ";";
-            }
-        }
-        this.txt_onDragRelease.setText(values);
-
-        values = "";
-        if (comp.onScroll != null) {
-            for (Object o : comp.onScroll) {
-                values += o + ";";
-            }
-        }
-        this.txt_onScroll.setText(values);
-        values = "";
-        if (comp.onVarcTransmit != null) {
-            for (Object o : comp.onVarcTransmit) {
-                values += o + ";";
-            }
-        }
-        this.txt_onVarcTransmit.setText(values);
-        values = "";
-        if (comp.onVarcStrTransmit != null) {
-            for (Object o : comp.onVarcStrTransmit) {
-                values += o + ";";
-            }
-        }
-        this.txt_onVarcStrTransmit.setText(values);
-        /**
-         * configs
-         */
-        values = "";
-        if (comp.varpTriggers != null) {
-            for (int i : comp.varpTriggers) {
-                values += i;
-            }
-        }
-        this.txt_varpTriggers.setText(values);
-
-        values = "";
-        if (comp.inventoryTriggers != null) {
-            for (int i : comp.inventoryTriggers) {
-                values += i;
-            }
-        }
-        this.txt_inventoryTriggers.setText(values);
-        values = "";
-        if (comp.statTriggers != null) {
-            for (int i : comp.statTriggers) {
-                values += i;
-            }
-        }
-        this.txt_statTriggers.setText(values);
-        values = "";
-        if (comp.varcTriggers != null) {
-            for (int i : comp.varcTriggers) {
-                values += i;
-            }
-        }
-        this.txt_varcTriggers.setText(values);
-        values = "";
-        if (comp.varcstrTriggers != null) {
-            for (int i : comp.varcstrTriggers) {
-                values += i;
-            }
-        }
-        this.txt_varcStrTriggers.setText(values);
-        /*
-         * drawing rec
-         */
-        this.viewportPanel = new JPanel() {
+        viewportPanel = new JPanel() {
             @Override
-            public void paintComponent(Graphics g) {
+            protected void paintComponent(Graphics g) {
+                super.paintComponent(g);
                 g.setColor(Color.WHITE);
-                g.drawImage(result, 0, 0, null);
+                if (result != null) {
+                    g.drawImage(result, 0, 0, null);
+                }
                 ComponentPosition.setValues(comp);
                 g.drawRect(ComponentDefinition.getX(comp, inter), ComponentDefinition.getY(comp, inter), comp.width, comp.height);
-
             }
         };
+
         selectedComponent = comp;
     }
 
+    private String joinObjects(Object[] arr) {
+        if (arr == null) return "";
+        StringBuilder sb = new StringBuilder();
+        for (Object o : arr) {
+            sb.append(o).append(";");
+        }
+        return sb.toString();
+    }
+
+    private String joinInts(int[] arr) {
+        if (arr == null) return "";
+        StringBuilder sb = new StringBuilder();
+        for (int i : arr) {
+            sb.append(i).append(";");
+        }
+        return sb.toString();
+    }
 
     /**
      * cleans all the input of a giving component container
@@ -1160,70 +1048,71 @@ public class InterfaceEditor extends JFrame {
      * @param inter The interface ID.
      * @param comp  The component ID.
      */
-    public void saveInterface(int inter, int comp) {
-        // Retrieve the component to be saved
-        ComponentDefinition changedComponent = ComponentDefinition.getInterfaceComponent(inter, comp);
+    public void saveComponent(int inter, int comp) {
+        try {
+            ComponentDefinition changedComponent = ComponentDefinition.getInterfaceComponent(inter, comp);
 
-        // Set basic properties
-        changedComponent.basePositionX = parseInt(txt_x.getText());
-        changedComponent.basePositionY = parseInt(txt_y.getText());
-        changedComponent.baseHeight = parseInt(txt_height.getText());
-        changedComponent.baseWidth = parseInt(txt_width.getText()); // Fixed typo from 'txt_width' to 'txt_width'
-        changedComponent.parentId = parseInt(txt_parent.getText());
-        changedComponent.color = parseInt(txt_color.getText());
-        changedComponent.aspectXType = (byte) parseInt(txt_modex.getText());
-        changedComponent.aspectYType = (byte) parseInt(txt_positionmodeY.getText());
+            changedComponent.basePositionX = Integer.parseInt(txt_x.getText());
+            changedComponent.basePositionY = Integer.parseInt(txt_y.getText());
+            changedComponent.baseHeight = Integer.parseInt(txt_height.getText());
+            changedComponent.baseWidth = Integer.parseInt(txt_width.getText());
+            changedComponent.parentId = Integer.parseInt(txt_parent.getText());
+            changedComponent.color = Integer.parseInt(txt_color.getText());
 
-        // Handle sprite-specific properties
-        if (changedComponent.type == ComponentConstants.SPRITE) {
-            changedComponent.spriteId = parseInt(txt_sprite.getText());
-        }
-
-        // Set layer dimensions
-        changedComponent.layerHeight = parseInt(txt_scrollX.getText());
-        changedComponent.layerWidth = parseInt(txt_scrollY.getText());
-
-        // Set text and font properties
-        changedComponent.text = txt_text.getText();
-        if (!txt_font.getText().isEmpty()) {
-            changedComponent.fontId = parseInt(txt_font.getText());
-        }
-
-        // Handle animation ID
-        if (!txt_animationId.getText().isEmpty()) {
-            changedComponent.animationId = parseInt(txt_animationId.getText());
-        }
-
-        // Handle visibility and flipping
-        changedComponent.hidden = chckbxHidden.isSelected();
-        changedComponent.hFlip = chckbxHorizontalFlip.isSelected();
-        changedComponent.vFlip = chckbxVerticalFlip.isSelected();
-
-        // Set model and dimension properties
-        changedComponent.modelId = parseInt(txt_model.getText());
-        changedComponent.aspectHeightType = (byte) parseInt(txt_modeHeight.getText());
-        changedComponent.aspectWidthType = (byte) parseInt(txt_widthMode.getText());
-        changedComponent.transparency = parseInt(txt_trans.getText());
-        changedComponent.filled = chckbxFilled.isSelected();
-        changedComponent.textHorizontalAli = parseInt(txt_xali.getText());
-        changedComponent.textVerticalAli = parseInt(txt_yali.getText());
-
-        // Save right-click options
-        if (!txt_leftclick.getText().isEmpty()) {
-            if (changedComponent.rightclickOptions == null) {
-                changedComponent.rightclickOptions = new String[5];
+            if (!txt_type.getText().isEmpty()) {
+                changedComponent.type = Integer.parseInt(txt_type.getText());
             }
-            changedComponent.optionMask = ComponentConstants.CLICK_MASK;
-            changedComponent.rightclickOptions[0] = txt_leftclick.getText();
+
+            changedComponent.aspectXType = (byte) Integer.parseInt(txt_modex.getText());
+            changedComponent.aspectYType = (byte) Integer.parseInt(txt_positionmodeY.getText());
+            changedComponent.aspectHeightType = (byte) Integer.parseInt(txt_modeHeight.getText());
+            changedComponent.aspectWidthType = (byte) Integer.parseInt(txt_widthMode.getText());
+
+            changedComponent.layerHeight = Integer.parseInt(txt_scrollX.getText());
+            changedComponent.layerWidth = Integer.parseInt(txt_scrollY.getText());
+
+            changedComponent.text = txt_text.getText();
+            if (!txt_font.getText().isEmpty()) {
+                changedComponent.fontId = Integer.parseInt(txt_font.getText());
+            }
+            changedComponent.textHorizontalAli = Integer.parseInt(txt_xali.getText());
+            changedComponent.textVerticalAli = Integer.parseInt(txt_yali.getText());
+
+            if (!txt_animationId.getText().isEmpty()) {
+                changedComponent.animationId = Integer.parseInt(txt_animationId.getText());
+            }
+            changedComponent.modelId = Integer.parseInt(txt_model.getText());
+
+            if (changedComponent.type == ComponentConstants.SPRITE) {
+                changedComponent.spriteId = Integer.parseInt(txt_sprite.getText());
+            }
+
+            changedComponent.hidden = chckbxHidden.isSelected();
+            changedComponent.hFlip = chckbxHorizontalFlip.isSelected();
+            changedComponent.vFlip = chckbxVerticalFlip.isSelected();
+            changedComponent.filled = chckbxFilled.isSelected();
+            changedComponent.transparency = Integer.parseInt(txt_trans.getText());
+
+            if (!txt_leftclick.getText().isEmpty()) {
+                if (changedComponent.rightclickOptions == null) {
+                    changedComponent.rightclickOptions = new String[5];
+                }
+                changedComponent.optionMask = ComponentConstants.CLICK_MASK;
+                changedComponent.rightclickOptions[0] = txt_leftclick.getText();
+            }
+            saveScripts(changedComponent);
+            System.out.println("Saving component " + comp + " from interface" + inter);
+            InterfacePacker.packComponent(cache, inter, comp, changedComponent);
+        } catch (Exception e) {
+            e.printStackTrace();
         }
-
-        // Save scripts
-        saveScripts(changedComponent);
-
-        // Save the component to the cache
-        System.out.println("Saving component " + comp + " from interface " + inter);
-        Cache.getIndexes()[3].putFile(inter, comp, changedComponent.encode());
     }
+
+    public ComponentDefinition getCurrentInterface() {
+        return selectedInterface;
+    }
+
+    private ComponentDefinition selectedInterface;
 
     /**
      * Parses the provided text to an integer, returning 0 if parsing fails.
@@ -1264,21 +1153,21 @@ public class InterfaceEditor extends JFrame {
      *
      * @return DefaultListModel containing interface names.
      */
-    public DefaultListModel populateList() {
+    public DefaultListModel<String> populateList() {
         System.out.println("Populating interface list");
 
-        DefaultListModel listModel = new DefaultListModel();
+        DefaultListModel<String> listModel = new DefaultListModel<>();
 
-        if (Cache == null) {
+        if (cache == null) {
             System.out.println("Cache is null, cannot populate the interface list.");
             return listModel;
         }
 
-        int interfaceCount = ComponentDefinition.getInterfaceDefinitionsSize(Cache);
+        int interfaceCount = ComponentDefinition.getInterfaceDefinitionsSize(cache);
 
         for (int i = 0; i < interfaceCount; i++) {
             try {
-                ComponentDefinition[] interfaceDefs = ComponentDefinition.getInterface(i, false, Cache);
+                ComponentDefinition[] interfaceDefs = ComponentDefinition.getInterface(i, false, cache);
 
                 if (interfaceDefs != null) {
                     listModel.addElement("Interface: " + i);
@@ -1292,124 +1181,101 @@ public class InterfaceEditor extends JFrame {
             }
         }
 
-        Main.log("Iface tool", "Done populating list.");
+        System.out.println("Done populating list.");
         return listModel;
     }
 
-    /**
-     * Fills the JTree with components for a given interface ID.
-     *
-     * @param interfaceId The ID of the interface.
-     * @return The tree model for the interface.
-     */
     public DefaultTreeModel createInterfaceTree(int interfaceId) {
         DefaultMutableTreeNode root = new DefaultMutableTreeNode("Interface " + interfaceId);
 
-        // Loop through the components of the given interface ID.
-        for (int i = 0; i < ComponentDefinition.getInterfaceDefinitionsComponentsSize(Cache, interfaceId); i++) {
+        int componentCount = ComponentDefinition.getInterfaceDefinitionsComponentsSize(cache, interfaceId);
+        for (int i = 0; i < componentCount; i++) {
             ComponentDefinition component = ComponentDefinition.getInterfaceComponent(interfaceId, i);
             if (component == null) {
                 System.out.println("Component is null at index: " + i);
                 continue;
             }
 
-            // Check if the component has child components.
-            if (component.parentId == -1 && ComponentDefinition.hasChildren(interfaceId, component.ihash)) {
-                DefaultMutableTreeNode parentNode = new DefaultMutableTreeNode("Component " + component.componentId);
-                ArrayList<ComponentDefinition> childComponents = ComponentDefinition.getChildrenByParent(interfaceId, component.ihash);
+            if (component.parentId == -1) {
+                DefaultMutableTreeNode node = new DefaultMutableTreeNode("Component " + component.componentId);
 
-                // Loop through the child components.
-                for (ComponentDefinition child : childComponents) {
-                    addChildNodes(interfaceId, child, parentNode);
+                if (ComponentDefinition.hasChildren(interfaceId, component.ihash)) {
+                    List<ComponentDefinition> childComponents = ComponentDefinition.getChildrenByParent(interfaceId, component.ihash);
+                    if (childComponents != null) {
+                        for (ComponentDefinition child : childComponents) {
+                            addChildNodes(interfaceId, child, node);
+                        }
+                    }
                 }
-
-                root.add(parentNode);
-            } else if (component.parentId == -1) {
-                // If no children, add the component as a leaf node.
-                DefaultMutableTreeNode leafNode = new DefaultMutableTreeNode("Component " + component.componentId);
-                root.add(leafNode);
+                root.add(node);
             }
         }
-
         return new DefaultTreeModel(root);
     }
 
-    /**
-     * Recursively adds child nodes for a component and its children.
-     *
-     * @param interfaceId The ID of the interface.
-     * @param component   The component whose children are being added.
-     * @param parentNode  The parent node to which the child nodes will be added.
-     */
     private void addChildNodes(int interfaceId, ComponentDefinition component, DefaultMutableTreeNode parentNode) {
+        DefaultMutableTreeNode node = new DefaultMutableTreeNode("Component " + component.componentId);
+
         if (ComponentDefinition.hasChildren(interfaceId, component.ihash)) {
-            ArrayList<ComponentDefinition> childComponents = ComponentDefinition.getChildrenByParent(interfaceId, component.ihash);
-            DefaultMutableTreeNode containerNode = new DefaultMutableTreeNode("Component " + component.componentId);
-
-            // Recursively add child nodes for this component.
-            for (ComponentDefinition child : childComponents) {
-                addChildNodes(interfaceId, child, containerNode);
+            List<ComponentDefinition> childComponents = ComponentDefinition.getChildrenByParent(interfaceId, component.ihash);
+            if (childComponents != null) {
+                for (ComponentDefinition child : childComponents) {
+                    addChildNodes(interfaceId, child, node);
+                }
             }
-
-            parentNode.add(containerNode);
-        } else {
-            DefaultMutableTreeNode childNode = new DefaultMutableTreeNode("Component " + component.componentId);
-            parentNode.add(childNode);
         }
+        parentNode.add(node);
     }
 
-    /**
-     * Handles the pasting of a copied component into the current interface.
-     */
     public void pasteComponent() {
         if (copiedComp == null) {
             JOptionPane.showMessageDialog(interfaceViewportScrollPane, "No component was selected to paste.");
             return;
         }
 
-        int componentSize = ComponentDefinition.getInterfaceDefinitionsComponentsSize(Cache, currentInterface);
-        copiedComp.parentId = -1; // Reset parent ID to detach from previous structure
+        int componentSize = ComponentDefinition.getInterfaceDefinitionsComponentsSize(cache, currentInterface);
+        copiedComp.parentId = -1;
 
-        // If copying a container, ensure child components are also copied
-        if (copiedComp.type == ComponentConstants.CONTAINER) {
-            pasteContainer(componentSize);
-        } else {
-            pasteSingleComponent(componentSize);
+        try {
+            if (copiedComp.type == ComponentConstants.CONTAINER) {
+                pasteContainer(componentSize);
+            } else {
+                pasteSingleComponent(componentSize);
+            }
+            ComponentDefinition.getInterface(currentInterface);
+            drawTree(currentInterface);
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(interfaceViewportScrollPane,
+                    "Error while pasting component: " + ex.getMessage());
+            ex.printStackTrace();
         }
-
-        ComponentDefinition.getInterface(currentInterface);
-        drawTree(currentInterface);
     }
 
-    /**
-     * Pastes a container component along with its child components.
-     *
-     * @param containerIndex The index where the new container will be placed.
-     */
     private void pasteContainer(int containerIndex) {
-        Cache.getIndexes()[3].putFile(currentInterface, containerIndex, copiedComp.encode());
+        cache.getIndexes()[3].putFile(currentInterface, containerIndex, copiedComp.encode());
 
-        // Retrieve and clone child components
-        ArrayList<ComponentDefinition> childComponents = ComponentDefinition.getChildrenByParent(copiedComp.interfaceId, copiedComp.ihash);
+        List<ComponentDefinition> childComponents = ComponentDefinition.getChildrenByParent(copiedComp.interfaceId, copiedComp.ihash);
         if (childComponents == null || childComponents.isEmpty()) return;
 
-        int startIndex = ComponentDefinition.getInterfaceDefinitionsComponentsSize(Cache, currentInterface);
+        int startIndex = ComponentDefinition.getInterfaceDefinitionsComponentsSize(cache, currentInterface);
+
         for (ComponentDefinition child : childComponents) {
-            child.parentId = copiedComp.ihash; // Assign new parent ID
-            Cache.getIndexes()[3].putFile(currentInterface, startIndex++, child.encode());
+            ComponentDefinition childClone = child.clone();
+            childClone.parentId = copiedComp.ihash;
+            childClone.interfaceId = currentInterface;
+            cache.getIndexes()[3].putFile(currentInterface, startIndex++, childClone.encode());
         }
 
-        // Refresh parent-child relationships
+        saveComponent(currentInterface, copiedComp.componentId);
         updateParentReferences(containerIndex, childComponents);
     }
 
-    /**
-     * Pastes a single component into the interface.
-     *
-     * @param componentIndex The index where the new component will be placed.
-     */
-    private void pasteSingleComponent(int componentIndex) {
-        Cache.getIndexes()[3].putFile(currentInterface, componentIndex, copiedComp.encode());
+    private void pasteSingleComponent(int index) {
+        ComponentDefinition clone = copiedComp.clone();
+        clone.parentId = -1;
+        clone.interfaceId = currentInterface;
+        cache.getIndexes()[3].putFile(currentInterface, index, clone.encode());
+        saveComponent(currentInterface, clone.componentId);
     }
 
     /**
@@ -1418,22 +1284,22 @@ public class InterfaceEditor extends JFrame {
      * @param containerIndex  The index of the new container component.
      * @param childComponents The list of copied child components.
      */
-    private void updateParentReferences(int containerIndex, ArrayList<ComponentDefinition> childComponents) {
-        int totalSize = ComponentDefinition.getInterfaceDefinitionsComponentsSize(Cache, currentInterface);
+    private void updateParentReferences(int containerIndex, List<ComponentDefinition> childComponents) {
+        int totalSize = ComponentDefinition.getInterfaceDefinitionsComponentsSize(cache, currentInterface);
         ComponentDefinition newParent = ComponentDefinition.getInterfaceComponent(currentInterface, containerIndex);
 
         for (int i = totalSize - childComponents.size(); i < totalSize; i++) {
             ComponentDefinition child = ComponentDefinition.getInterfaceComponent(currentInterface, i);
             if (child != null && child.type != ComponentConstants.CONTAINER) {
                 child.parentId = newParent.ihash;
-                Cache.getIndexes()[3].putFile(currentInterface, i, child.encode());
+                cache.getIndexes()[3].putFile(currentInterface, i, child.encode());
             }
         }
     }
 
     public void exportInterface(int interfaceId) throws FileNotFoundException, IOException {
         File file = new File("data/export/" + interfaceId + ".dat");
-        byte[] data = Cache.getIndexes()[3].getArchive(interfaceId).getData();
+        byte[] data = cache.getIndexes()[3].getArchive(interfaceId).getData();
         try (FileOutputStream fos = new FileOutputStream(file)) {
             fos.write(data);
             fos.close();
@@ -1448,12 +1314,12 @@ public class InterfaceEditor extends JFrame {
      * @param path the file path of the data to pack.
      */
     public void packInterface(String path) {
-        int archiveId = ComponentDefinition.getInterfaceDefinitionsSize(Cache);
+        int archiveId = ComponentDefinition.getInterfaceDefinitionsSize(cache);
         ComponentDefinition defaultButton = ComponentDefinition.getInterfaceComponent(6, 19);
         defaultButton.parentId = -1;
 
-        Cache.getIndexes()[3].putFile(archiveId, 0, defaultButton.encode());
-        Cache.getIndexes()[3].getArchive(archiveId).getData();
+        cache.getIndexes()[3].putFile(archiveId, 0, defaultButton.encode());
+        cache.getIndexes()[3].getArchive(archiveId).getData();
 
         drawTree(archiveId);
     }
@@ -1525,31 +1391,31 @@ public class InterfaceEditor extends JFrame {
             case 0://default close button (with hover)
                 ComponentDefinition defaultCloseButton = ComponentDefinition.getInterfaceComponent(6, 36);
                 defaultCloseButton.parentId = -1;
-                Cache.getIndexes()[3].putFile(currentInterface, ComponentDefinition.getInterfaceDefinitionsComponentsSize(Cache, currentInterface), defaultCloseButton.encode());
+                cache.getIndexes()[3].putFile(currentInterface, ComponentDefinition.getInterfaceDefinitionsComponentsSize(cache, currentInterface), defaultCloseButton.encode());
                 ComponentDefinition.getInterface(currentInterface); //since we need to reload the array
                 drawTree(currentInterface);
                 break;
             case 1: //normal hover button
                 ComponentDefinition container = ComponentDefinition.getInterfaceComponent(506, 1);
                 ComponentDefinition text = ComponentDefinition.getInterfaceComponent(506, 2);
-                Cache.getIndexes()[3].putFile(currentInterface, ComponentDefinition.getInterfaceDefinitionsComponentsSize(Cache, currentInterface), container.encode());
-                Cache.getIndexes()[3].putFile(currentInterface, ComponentDefinition.getInterfaceDefinitionsComponentsSize(Cache, currentInterface), text.encode());
+                cache.getIndexes()[3].putFile(currentInterface, ComponentDefinition.getInterfaceDefinitionsComponentsSize(cache, currentInterface), container.encode());
+                cache.getIndexes()[3].putFile(currentInterface, ComponentDefinition.getInterfaceDefinitionsComponentsSize(cache, currentInterface), text.encode());
                 ComponentDefinition.getInterface(currentInterface); //since we need to reload the array
-                ComponentDefinition n = ComponentDefinition.getInterfaceComponent(currentInterface, ComponentDefinition.getInterfaceDefinitionsComponentsSize(Cache, currentInterface) - 2);
-                ComponentDefinition xd = ComponentDefinition.getInterfaceComponent(currentInterface, ComponentDefinition.getInterfaceDefinitionsComponentsSize(Cache, currentInterface) - 1);
+                ComponentDefinition n = ComponentDefinition.getInterfaceComponent(currentInterface, ComponentDefinition.getInterfaceDefinitionsComponentsSize(cache, currentInterface) - 2);
+                ComponentDefinition xd = ComponentDefinition.getInterfaceComponent(currentInterface, ComponentDefinition.getInterfaceDefinitionsComponentsSize(cache, currentInterface) - 1);
                 xd.parentId = n.ihash;
-                Cache.getIndexes()[3].putFile(currentInterface, ComponentDefinition.getInterfaceDefinitionsComponentsSize(Cache, currentInterface) - 1, xd.encode());
+                cache.getIndexes()[3].putFile(currentInterface, ComponentDefinition.getInterfaceDefinitionsComponentsSize(cache, currentInterface) - 1, xd.encode());
                 ComponentDefinition.getInterface(currentInterface); //since we need to reload the array
                 drawTree(currentInterface);
                 break;
             case 2: //basic starter interface
                 ComponentDefinition basic = ComponentDefinition.getInterfaceComponent(6, 0);
-                int place = ComponentDefinition.getInterfaceDefinitionsComponentsSize(Cache, currentInterface);
-                Cache.getIndexes()[3].putFile(currentInterface, place, basic.encode());
+                int place = ComponentDefinition.getInterfaceDefinitionsComponentsSize(cache, currentInterface);
+                cache.getIndexes()[3].putFile(currentInterface, place, basic.encode());
                 for (ComponentDefinition comp : ComponentDefinition.getChildrenByParent(6, ComponentDefinition.getInterfaceComponent(6, 0).ihash)) {
                     if (comp.text.toLowerCase().contains("brimhaven")) comp.text = "";
                     comp.parentId++;
-                    Cache.getIndexes()[3].putFile(currentInterface, ComponentDefinition.getInterfaceDefinitionsComponentsSize(Cache, currentInterface), comp.encode());
+                    cache.getIndexes()[3].putFile(currentInterface, ComponentDefinition.getInterfaceDefinitionsComponentsSize(cache, currentInterface), comp.encode());
                 }
                 ComponentDefinition.getInterface(currentInterface); //since we need to reload the array
                 drawTree(currentInterface);
@@ -1562,7 +1428,7 @@ public class InterfaceEditor extends JFrame {
                 hover.spriteId = 0;
                 hover.onMouseHoverScript[2] = 1;
                 hover.onMouseLeaveScript[2] = 0;
-                Cache.getIndexes()[3].putFile(currentInterface, ComponentDefinition.getInterfaceDefinitionsComponentsSize(Cache, currentInterface), hover.encode());
+                cache.getIndexes()[3].putFile(currentInterface, ComponentDefinition.getInterfaceDefinitionsComponentsSize(cache, currentInterface), hover.encode());
                 ComponentDefinition.getInterface(currentInterface); //since we need to reload the array
                 drawTree(currentInterface);
                 break;
@@ -1571,12 +1437,12 @@ public class InterfaceEditor extends JFrame {
                 ComponentDefinition cont = ComponentDefinition.getInterfaceComponent(762, 119);
                 cont.parentId = -1;
                 popupButton.parentId = -1;
-                int place2 = ComponentDefinition.getInterfaceDefinitionsComponentsSize(Cache, currentInterface);
-                Cache.getIndexes()[3].putFile(currentInterface, place2, cont.encode());
+                int place2 = ComponentDefinition.getInterfaceDefinitionsComponentsSize(cache, currentInterface);
+                cache.getIndexes()[3].putFile(currentInterface, place2, cont.encode());
                 popupButton.onMouseRepeat[3] = "Click here to change your preset settings.";
                 popupButton.onMouseLeaveScript[2] = ComponentDefinition.getInterfaceComponent(currentInterface, place2).ihash;
                 popupButton.onMouseRepeat[2] = ComponentDefinition.getInterfaceComponent(currentInterface, place2).ihash;
-                Cache.getIndexes()[3].putFile(currentInterface, ComponentDefinition.getInterfaceDefinitionsComponentsSize(Cache, currentInterface), popupButton.encode());
+                cache.getIndexes()[3].putFile(currentInterface, ComponentDefinition.getInterfaceDefinitionsComponentsSize(cache, currentInterface), popupButton.encode());
                 ComponentDefinition.getInterface(currentInterface); //since we need to reload the array
                 drawTree(currentInterface);
                 break;
@@ -1700,22 +1566,41 @@ public class InterfaceEditor extends JFrame {
     }
 
     private void drawContainer(Graphics g, ComponentDefinition component, int x, int y, boolean showContainers) {
-        // If the container is a scrollbar, use a specific sprite
+        if (component.width <= 0 || component.height <= 0) {
+            return;
+        }
+
         if (ContainerHelper.isScrollBar(component)) {
-            BufferedImage sprite = loadImage("data/export/scriptsprites/scrollbar.jpg", component.width, component.height);
+            BufferedImage sprite = loadImageCached(SCROLLBAR_IMAGE_PATH, component.width, component.height);
             if (sprite != null) {
                 g.drawImage(sprite, x, y, null);
             }
         } else if (ContainerHelper.isButton(component)) {
-            // Load and draw button sprite
-            BufferedImage sprite = loadImage("data/scriptsprites/button.png", component.width, component.height);
+            BufferedImage sprite = loadImageCached(BUTTON_IMAGE_PATH, component.width, component.height);
             if (sprite != null) {
                 g.drawImage(sprite, x, y, null);
             }
         } else if (showContainers) {
-            // Draw container borders with different colors
             g.setColor(component.parentId > 0 ? Color.RED : Color.GREEN);
             g.drawRect(x, y, component.width, component.height);
+        }
+    }
+
+    private BufferedImage loadImageCached(String path, int width, int height) {
+        if (width <= 0 || height <= 0) return null;
+        String key = path + "_W" + width + "_H" + height;
+        BufferedImage cached = imageCache.get(key);
+        if (cached != null) return cached;
+
+        try {
+            BufferedImage image = ImageIO.read(new File(path));
+            if (image == null) return null;
+            BufferedImage resized = ImageUtils.resize(image, width, height);
+            imageCache.put(key, resized);
+            return resized;
+        } catch (IOException e) {
+            System.err.println("Error loading image: " + path + " - " + e.getMessage());
+            return null;
         }
     }
 
@@ -1730,30 +1615,36 @@ public class InterfaceEditor extends JFrame {
     }
 
     private void drawText(Graphics g, ComponentDefinition component, int x, int y, boolean showRealFonts) {
+        if (component == null || component.text == null || component.text.isEmpty()) return;
+
+        g.setFont(DEFAULT_FONT);
         FontMetrics fm = g.getFontMetrics();
         Rectangle2D rect = fm.getStringBounds(component.text, g);
 
-        // Set the color for the text
-        g.setColor(new Color(component.color));
+        Color textColor;
+        try {
+            textColor = new Color(component.color);
+        } catch (IllegalArgumentException ex) {
+            textColor = Color.BLACK;
+        }
+        g.setColor(textColor);
 
-        // Set the font and draw text
-        g.setFont(new Font("Helvetica", Font.PLAIN, 11));
+        int drawX = x + (component.width / 2 - (int) rect.getWidth() / 2);
+        int drawY = y + (component.height / 2 + (int) rect.getHeight() / 2);
+
         if (component.parentId == -1) {
-            g.drawString(component.text, x + (component.width / 2 - (int) rect.getWidth() / 2), y + (component.height / 2 + (int) rect.getHeight() / 2));
+            g.drawString(component.text, drawX, drawY);
         } else {
             ComponentDefinition parent = InterfaceUtils.getParent(component.parentId);
             if (parent != null) {
-                // Center text for button-like components
                 if (component.baseWidth == 0 && component.baseHeight == 0) {
                     drawCenteredText(g, component.text, parent);
                 } else {
-                    // Position text within its container
-                    g.drawString(component.text, x + (component.width / 2 - (int) rect.getWidth() / 2), y + (component.height / 2 + (int) rect.getHeight() / 2));
+                    g.drawString(component.text, drawX, drawY);
                 }
             }
         }
 
-        // If showing real fonts, use the special font decoding
         if (showRealFonts) {
             drawRealFontText(g, component, x, y, rect);
         }
@@ -1767,9 +1658,22 @@ public class InterfaceEditor extends JFrame {
     }
 
     private void drawRealFontText(Graphics g, ComponentDefinition component, int x, int y, Rectangle2D rect) {
+        if (component == null) return;
+
+        List<BufferedImage> images = List.of(FontDecoding.getTextArray(component));
+        if (images == null || images.isEmpty()) return;
+
         int startX = x + (component.width / 2 - (int) rect.getWidth() / 2);
-        for (BufferedImage im : FontDecoding.getTextArray(component)) {
-            g.drawImage(ImageUtils.colorImage(im, new Color(component.color)), startX, y + (component.height / 2 + (int) rect.getHeight() / 2), null);
+        Color textColor;
+        try {
+            textColor = new Color(component.color);
+        } catch (IllegalArgumentException ex) {
+            textColor = Color.BLACK;
+        }
+
+        for (BufferedImage im : images) {
+            BufferedImage colored = ImageUtils.colorImage(im, textColor);
+            g.drawImage(colored, startX, y + (component.height / 2 + (int) rect.getHeight() / 2), null);
             startX += im.getWidth() / 2;
         }
     }

@@ -15,7 +15,7 @@ import java.util.Hashtable;
  * paolo 19/07/2019
  * #Shnek6969
  */
-public class ComponentDefinition {
+public class ComponentDefinition implements Cloneable {
     public static Cache Cache;
     public static ComponentDefinition[][] icomponentsdefs = new ComponentDefinition[850][];
     private static IComponentSettings GLOBAL_SETTINGS = new IComponentSettings(0, -1);
@@ -1096,5 +1096,12 @@ public class ComponentDefinition {
         targetLeaveCursor = -1;
     }
 
-
+    @Override
+    public ComponentDefinition clone() {
+        try {
+            return (ComponentDefinition) super.clone();
+        } catch (CloneNotSupportedException e) {
+            throw new RuntimeException("Clone not supported", e);
+        }
+    }
 }

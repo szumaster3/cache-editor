@@ -14,6 +14,7 @@ object InterfacePacker {
      * @param fileId The file ID where the component should be stored.
      * @param component The component definition to be packed.
      */
+    @JvmStatic
     fun packComponent(
         cache: Cache,
         interfaceId: Int,
@@ -30,6 +31,7 @@ object InterfacePacker {
      * @param interfaceId The ID of the interface to which the components belong.
      * @param components An array of components to be packed into the interface.
      */
+    @JvmStatic
     fun packInterface(
         cache: Cache,
         interfaceId: Int,
