@@ -10,7 +10,7 @@ object SpriteDumper {
     @JvmStatic
     fun dump(cachePath: String?, progressMonitor: javax.swing.ProgressMonitor) {
         try {
-            SpriteLoader.initStore(cachePath)
+            SpriteLoader.initStore(cachePath!!)
 
             val directory = File(PropertyValues.dump_path)
             if (!directory.exists()) {
@@ -18,11 +18,19 @@ object SpriteDumper {
             }
 
             val size = SpriteLoader.numSprites
+            val sizeDouble = size.toDouble()
+            val noteFormat = "Dumping sprite %d of %d - %d%%"
+
             for (i in 0 until size) {
+                if (progressMonitor.isCanceled) {
+                    log("Sprite Dumper", "Sprite dumping canceled.")
+                    break
+                }
+
                 val s = SpriteLoader.getArchive(i) ?: continue
 
                 for (frame in 0 until s.size()) {
-                    val file = File(PropertyValues.dump_path, "$i" + "_$frame.png")
+                    val file = File(PropertyValues.dump_path, "${i}_$frame.png")
                     val image = s.getSprite(frame)
                     try {
                         ImageIO.write(image, "png", file)
@@ -32,15 +40,10 @@ object SpriteDumper {
                     }
                 }
 
-                // Update progress monitor
-                val progress = (i + 1).toDouble() / size * 100
-                progressMonitor.setProgress(i + 1)
-                progressMonitor.setNote("Dumping sprite ${i + 1} of $size - ${Math.round(progress)}%")
-
-                // Check if the task was canceled
-                if (progressMonitor.isCanceled) {
-                    log("Sprite Dumper", "Sprite dumping canceled.")
-                    break
+                if (i % 5 == 0 || i == size - 1) {
+                    val progress = ((i + 1) / sizeDouble) * 100
+                    progressMonitor.setProgress(i + 1)
+                    progressMonitor.setNote(String.format(noteFormat, i + 1, size, Math.round(progress)))
                 }
             }
         } catch (e: IOException) {

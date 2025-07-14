@@ -15,6 +15,7 @@ import javax.swing.*;
 import javax.swing.border.TitledBorder;
 import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.DefaultTreeModel;
+import javax.swing.tree.TreePath;
 import java.awt.*;
 import java.awt.event.ItemEvent;
 import java.awt.event.MouseAdapter;
@@ -29,6 +30,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import static com.editor.cache.iface.sprites.ImageUtils.imageToBufferedImage;
 
 public class InterfaceEditor extends JFrame {
     public static Cache cache;
@@ -125,13 +128,8 @@ public class InterfaceEditor extends JFrame {
 
     private final Map<String, BufferedImage> imageCache = new HashMap<>();
 
-    public InterfaceEditor(String cache) throws IOException {
-        try {
-            InterfaceEditor.cache = new Cache(cache);
-        } catch (IOException e) {
-            e.printStackTrace();
-            JOptionPane.showMessageDialog(null, "Failed to load cache", "Error", JOptionPane.ERROR_MESSAGE);
-        }
+    public InterfaceEditor(Cache cache) throws IOException {
+        this.cache = cache;
         setTitle("Interface Editor Shnek");
         getContentPane().setLayout(new BorderLayout());
         setDefaultCloseOperation(1);
@@ -154,7 +152,7 @@ public class InterfaceEditor extends JFrame {
         JMenu mnAbout = new JMenu("Extra");
         menuBar.add(mnAbout);
 
-        JMenuItem mntmDumpSprites = getJMenuItem(cache, menuBar);
+        JMenuItem mntmDumpSprites = getJMenuItem(cache.toString(), menuBar);
         mnAbout.add(mntmDumpSprites);
 
         JMenuItem mntmPackInterface = getJMenuItem();
@@ -208,7 +206,7 @@ public class InterfaceEditor extends JFrame {
                     PropertyValues.setCachePath(path);
                 }
                 Main.log("Iface tool", "Application started...");
-                InterfaceEditor frame = new InterfaceEditor(cache.toString());
+                InterfaceEditor frame = new InterfaceEditor(cache);
                 frame.setVisible(true);
             } catch (Exception e) {
                 e.printStackTrace();
@@ -557,67 +555,65 @@ public class InterfaceEditor extends JFrame {
         btnDelete.setPreferredSize(buttonSize);
         btnDelete.setToolTipText("Deletes the selected component");
         btnDelete.addActionListener(e -> {
-            if (selectedComp <= 0) {
+            if (selectedComp < 0) {
                 JOptionPane.showMessageDialog(interfaceViewportScrollPane, "Please select a component first.");
-            } else {
-                ComponentDefinition c = ComponentDefinition.getInterfaceComponent(currentInterface, selectedComp);
-                String message = (c.type == ComponentConstants.CONTAINER ?
-                        "Are you sure that you want to remove component " + selectedComp + " from interface " + currentInterface +
-                                " ? NOTE: this component is a container, children will be removed as well." :
-                        "Are you sure that you want to remove component " + selectedComp + " from interface " + currentInterface + " ?");
-                int option = JOptionPane.showConfirmDialog(this, message, "Inane warning", JOptionPane.YES_NO_OPTION);
-                if (option == 0) {
-                    try {
-                        // If the component is a container, delete all nested components as well
-                        if (c.type == ComponentConstants.CONTAINER) {
-                            for (int compId : getNestedComponents(currentInterface, selectedComp)) {
-                                cache.getIndexes()[3].removeFile(currentInterface, compId);
-                            }
-                        }
-                        // Delete the selected component itself
-                        cache.getIndexes()[3].removeFile(currentInterface, selectedComp);
-                        cache.getIndexes()[3].resetCachedFiles();
-                        cache.getIndexes()[3].rewriteTable();
-                    } finally {
-                        drawTree(currentInterface);
+                return;
+            }
+
+            ComponentDefinition c = ComponentDefinition.getInterfaceComponent(currentInterface, selectedComp);
+            if (c == null) {
+                JOptionPane.showMessageDialog(interfaceViewportScrollPane, "Selected component not found.");
+                return;
+            }
+
+            String message = (c.type == ComponentConstants.CONTAINER ?
+                    "Are you sure that you want to remove component " + selectedComp + " from interface " + currentInterface +
+                            " ? NOTE: this component is a container, children will be removed as well." :
+                    "Are you sure that you want to remove component " + selectedComp + " from interface " + currentInterface + " ?");
+
+            int option = JOptionPane.showConfirmDialog(this, message, "Confirm deletion", JOptionPane.YES_NO_OPTION);
+            if (option != JOptionPane.YES_OPTION) {
+                return;
+            }
+
+            try {
+                if (c.type == ComponentConstants.CONTAINER) {
+                    List<Integer> allNested = getNestedComponentsRecursive(currentInterface, selectedComp);
+                    for (int compId : allNested) {
+                        cache.getIndexes()[3].removeFile(currentInterface, compId);
                     }
                 }
+                cache.getIndexes()[3].removeFile(currentInterface, selectedComp);
+                cache.getIndexes()[3].resetCachedFiles();
+                cache.getIndexes()[3].rewriteTable();
+
+            } catch (Exception ex) {
+                JOptionPane.showMessageDialog(interfaceViewportScrollPane, "Error deleting component: " + ex.getMessage());
+                ex.printStackTrace();
+            } finally {
+                drawTree(currentInterface);
             }
         });
         return btnDelete;
     }
 
-    /**
-     * This method retrieves nested components for a container component.
-     * It assumes the children are stored sequentially in the interface.
-     *
-     * @param interfaceId The ID of the interface.
-     * @param componentId The ID of the container component.
-     * @return A list of nested component IDs.
-     */
-    private List<Integer> getNestedComponents(int interfaceId, int componentId) {
+    private List<Integer> getNestedComponentsRecursive(int interfaceId, int componentId) {
         List<Integer> nestedComponents = new ArrayList<>();
+        collectNestedComponents(interfaceId, componentId, nestedComponents);
+        return nestedComponents;
+    }
 
-        // Retrieve the components for the interface
+    private void collectNestedComponents(int interfaceId, int parentId, List<Integer> accumulator) {
         ComponentDefinition[] interfaceComponents = ComponentDefinition.getInterface(interfaceId);
-        if (interfaceComponents == null || componentId >= interfaceComponents.length) {
-            return nestedComponents;
-        }
+        if (interfaceComponents == null) return;
 
-        // Get the container component
-        ComponentDefinition containerComponent = interfaceComponents[componentId];
-        if (containerComponent == null || containerComponent.type != ComponentConstants.CONTAINER) {
-            return nestedComponents;
-        }
-
-        for (int i = componentId + 1; i < interfaceComponents.length; i++) {
-            ComponentDefinition childComponent = interfaceComponents[i];
-            if (childComponent != null && childComponent.parentId == componentId) {
-                nestedComponents.add(i);
+        for (int i = 0; i < interfaceComponents.length; i++) {
+            ComponentDefinition comp = interfaceComponents[i];
+            if (comp != null && comp.parentId == parentId) {
+                accumulator.add(i);
+                collectNestedComponents(interfaceId, i, accumulator);
             }
         }
-
-        return nestedComponents;
     }
 
     private void constructCenterPanel() {
@@ -1153,6 +1149,11 @@ public class InterfaceEditor extends JFrame {
      *
      * @return DefaultListModel containing interface names.
      */
+    /**
+     * Fills the list with interface names.
+     *
+     * @return DefaultListModel containing interface names.
+     */
     public DefaultListModel<String> populateList() {
         System.out.println("Populating interface list");
 
@@ -1167,7 +1168,7 @@ public class InterfaceEditor extends JFrame {
 
         for (int i = 0; i < interfaceCount; i++) {
             try {
-                ComponentDefinition[] interfaceDefs = ComponentDefinition.getInterface(i, false, cache);
+                ComponentDefinition[] interfaceDefs = ComponentDefinition.getInterface(i, true, cache);
 
                 if (interfaceDefs != null) {
                     listModel.addElement("Interface: " + i);
@@ -1364,7 +1365,7 @@ public class InterfaceEditor extends JFrame {
         tree.addTreeSelectionListener(e -> {
             DefaultMutableTreeNode selectedNode = (DefaultMutableTreeNode) tree.getLastSelectedPathComponent();
             try {
-                if (selectedNode.getUserObject() != null) {
+                if (selectedNode != null && selectedNode.getUserObject() != null) {
                     int id1 = Integer.parseInt(selectedNode.getUserObject().toString().replaceAll("Component ", ""));
                     selectedComp = id1;
                     setValues(currentInterface, id1);
@@ -1373,12 +1374,24 @@ public class InterfaceEditor extends JFrame {
             } catch (Exception ex) {
                 ex.printStackTrace();
                 Main.log("Iface Tool", "Error selecting component, error->" + ex);
-                /* some roots aren't a root , better catch them instead of spamming console*/
-
             }
-
         });
         componentScrollpane.setViewportView(tree);
+        DefaultMutableTreeNode root = (DefaultMutableTreeNode) tree.getModel().getRoot();
+        if (root.getChildCount() > 0) {
+            DefaultMutableTreeNode firstChild = (DefaultMutableTreeNode) root.getChildAt(0);
+            TreePath path = new TreePath(firstChild.getPath());
+            tree.setSelectionPath(path);
+
+            try {
+                int id1 = Integer.parseInt(firstChild.getUserObject().toString().replaceAll("Component ", ""));
+                selectedComp = id1;
+                setValues(currentInterface, id1);
+                repaint();
+            } catch (Exception ex) {
+                ex.printStackTrace();
+            }
+        }
     }
 
     /**
@@ -1525,20 +1538,18 @@ public class InterfaceEditor extends JFrame {
     }
 
     private BufferedImage getScaledSprite(ComponentDefinition component) {
-        // Fetch the sprite from the cache using the spriteId
-        BufferedImage sprite = SpriteLoader.getSprite(component.spriteId);
+        BufferedImage sprite = SpriteLoader.INSTANCE.getSprite(component.spriteId, 0);
 
         if (sprite == null) {
-            // If the sprite is not found, trigger a load (or refresh) from the cache.
             reloadSpritesFromCache();
-            sprite = SpriteLoader.getSprite(component.spriteId);
+            sprite = SpriteLoader.INSTANCE.getSprite(component.spriteId, 0);
             if (sprite == null) {
-                return null;  // Return null if the sprite still isn't found
+                return null;
             }
         }
 
-        // Scale the sprite to fit the component's size
-        return ImageUtils.imageToBufferedImage(sprite.getScaledInstance(component.width, component.height, Image.SCALE_SMOOTH));
+        Image scaled = sprite.getScaledInstance(component.width, component.height, Image.SCALE_SMOOTH);
+        return imageToBufferedImage(scaled);
     }
 
     /**
@@ -1546,7 +1557,7 @@ public class InterfaceEditor extends JFrame {
      * This could be useful when sprites are dumped and need to be refreshed from the cache after the dump.
      */
     private void reloadSpritesFromCache() {
-        SpriteLoader.INSTANCE.getSpriteCache();
+        SpriteLoader.INSTANCE.getSpriteIndex();
     }
 
     private void drawRectangle(Graphics g, ComponentDefinition component, int x, int y) {

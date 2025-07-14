@@ -1,5 +1,6 @@
 package console
 
+import com.alex.filestore.Cache
 import com.displee.cache.CacheLibrary
 import com.editor.cache.FileManager
 import com.editor.cache.IndexManager
@@ -254,6 +255,7 @@ class ToolSelection : JFrame() {
             }
 
             3 -> try {
+                val cache = Cache(cache)
                 SwingUtilities.invokeLater { InterfaceEditor(cache).isVisible = true }; Main.log(
                     toolSelected, startMessage
                 )

@@ -105,30 +105,86 @@ public final class OutputStream extends Stream {
         this.writeByte(i);
     }
 
-    public void writeLong(long l) {
-        this.writeByte((int) (l >> 56));
-        this.writeByte((int) (l >> 48));
-        this.writeByte((int) (l >> 40));
-        this.writeByte((int) (l >> 32));
-        this.writeByte((int) (l >> 24));
-        this.writeByte((int) (l >> 16));
-        this.writeByte((int) (l >> 8));
-        this.writeByte((int) l);
-    }
-
-    public void writeString(String s) {
-        this.checkCapacityPosition(this.getOffset() + s.length() + 1);
-        System.arraycopy(s.getBytes(), 0, this.getBuffer(), this.getOffset(), s.length());
-        this.setOffset(this.getOffset() + s.length());
-        this.writeByte(0);
-    }
-
     public void writeSmartInt(int i) {
         if (i >= 32767 && i >= 0) {
             this.writeInt(i - Integer.MAX_VALUE - 1);
         } else {
             this.writeShort(i >= 0 ? i : 32767);
         }
+    }
+
+    public void write24BitInt(int i) {
+        writeByte(i >> 16);
+        writeByte(i >> 8);
+        writeByte(i);
+    }
+    public void writeLong(long l) {
+        writeByte((int) (l >> 56));
+        writeByte((int) (l >> 48));
+        writeByte((int) (l >> 40));
+        writeByte((int) (l >> 32));
+        writeByte((int) (l >> 24));
+        writeByte((int) (l >> 16));
+        writeByte((int) (l >> 8));
+        writeByte((int) l);
+    }
+
+    public void writePSmarts(int i) {
+        if (i < 128) {
+            writeByte(i);
+            return;
+        }
+        if (i < 32768) {
+            writeShort(32768 + i);
+            return;
+        } else {
+            System.out.println("Error psmarts out of range:");
+            return;
+        }
+    }
+
+    public void writeString(String s) {
+        checkCapacityPosition(getOffset() + s.length() + 1);
+        System.arraycopy(s.getBytes(), 0, getBuffer(), getOffset(), s.length());
+        setOffset(getOffset() + s.length());
+        writeByte(0);
+    }
+
+    public void writeGJString(String s) {
+        writeByte(0);
+        writeString(s);
+    }
+
+    public void putGJString3(String s) {
+        writeByte(0);
+        writeString(s);
+        writeByte(0);
+    }
+
+    public void writePacket(int id) {
+        writeByte(id);
+    }
+
+    public void writePacketVarByte(int id) {
+        writePacket(id);
+        writeByte(0);
+        opcodeStart = getOffset() - 1;
+    }
+
+    public void writePacketVarShort(int id) {
+        writePacket(id);
+        writeShort(0);
+        opcodeStart = getOffset() - 2;
+    }
+
+    public void endPacketVarByte() {
+        writeByte((getOffset() - (opcodeStart + 2)) + 1, opcodeStart);
+    }
+
+    public void endPacketVarShort() {
+        int size = getOffset() - (opcodeStart + 2);
+        writeByte(size >> 8, opcodeStart++);
+        writeByte(size, opcodeStart);
     }
 
     public void setBuffer(byte[] buffer) {

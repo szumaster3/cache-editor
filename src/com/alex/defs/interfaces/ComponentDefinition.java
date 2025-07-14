@@ -7,8 +7,7 @@ import com.editor.cache.iface.util.ComponentConstants;
 import com.editor.cache.iface.util.ComponentPosition;
 import com.editor.cache.iface.util.InterfaceUtils;
 
-import java.util.ArrayList;
-import java.util.Hashtable;
+import java.util.*;
 
 /**
  * Interface tool
@@ -16,9 +15,9 @@ import java.util.Hashtable;
  * #Shnek6969
  */
 public class ComponentDefinition implements Cloneable {
-    public static Cache Cache;
-    public static ComponentDefinition[][] icomponentsdefs = new ComponentDefinition[850][];
+    public static Cache cache;
     private static IComponentSettings GLOBAL_SETTINGS = new IComponentSettings(0, -1);
+
     /**
      * positions
      */
@@ -192,6 +191,24 @@ public class ComponentDefinition implements Cloneable {
     public int componentId;
     public int interfaceId;
 
+    public static ComponentDefinition[][] icomponentsdefs;
+
+    public static void setCache(Cache c) {
+        cache = c;
+        if (cache != null) {
+            int size = getInterfaceDefinitionsSize(cache);
+            icomponentsdefs = new ComponentDefinition[size][];
+        }
+    }
+
+    public static int getInterfaceDefinitionsSize(Cache cache) {
+        if (cache == null || cache.getIndexes() == null || cache.getIndexes().length <= 3 || cache.getIndexes()[3] == null) {
+            System.err.println("Cache or required index missing.");
+            return 0;
+        }
+        return cache.getIndexes()[3].getLastArchiveId() + 1;
+    }
+
     public static ComponentDefinition getInterfaceComponent(int interfaceId, int component) {
         ComponentDefinition[] inter = getInterface(interfaceId); // Call the corrected method
         if (inter == null || component >= inter.length) {
@@ -201,90 +218,57 @@ public class ComponentDefinition implements Cloneable {
         return inter[component];
     }
 
-    /**
-     * This method should return the array of components for an interface.
-     * It is now correctly implemented by calling the overloaded method.
-     *
-     * @param id The interface ID
-     * @return The array of components for the interface
-     */
     public static ComponentDefinition[] getInterface(int id) {
-        // You need to specify how to load/store the cache when this method is called
-        // For now, assume reload=false and store is available globally or passed elsewhere
-        return getInterface(id, false, Cache); // Corrected call
+        if (cache == null) {
+            System.err.println("Cache not set. Call setCache first.");
+            return null;
+        }
+        if (icomponentsdefs == null) {
+            setCache(cache);
+        }
+        return getInterface(id, false, cache);
     }
 
-    /**
-     * Returns an array of components aka the interface
-     *
-     * @param id     Interface ID
-     * @param reload Whether to reload the interface
-     * @param cache  The cache containing the data
-     * @return The array of components for the interface
-     */
     public static ComponentDefinition[] getInterface(int id, boolean reload, Cache cache) {
-        if (id >= icomponentsdefs.length) {
-            System.out.println("Interface ID " + id + " is out of bounds.");
+        if (icomponentsdefs == null) {
+            setCache(cache);
+        }
+        if (icomponentsdefs == null || id < 0 || id >= icomponentsdefs.length) {
+            System.out.println("Invalid interface id or icomponentsdefs not initialized");
             return null;
         }
 
-        // Prevent recursion by checking if the data is already loaded
         if (icomponentsdefs[id] == null || reload) {
-            if (cache == null || cache.getIndexes() == null || cache.getIndexes().length < 4 || cache.getIndexes()[3] == null) {
-                System.out.println("Cache or required index is null for interface " + id);
-                return null;
-            }
+            int maxComponents = getInterfaceDefinitionsComponentsSize(cache, id);
+            icomponentsdefs[id] = new ComponentDefinition[maxComponents];
 
-            // Initialize or reload the component definitions for this interface
-            icomponentsdefs[id] = new ComponentDefinition[getInterfaceDefinitionsComponentsSize(cache, id)];
-            System.out.println("Initializing interface " + id + " with " + icomponentsdefs[id].length + " components.");
-
-            // Load components for the interface
-            for (int i = 0; i < icomponentsdefs[id].length; i++) {
+            for (int i = 0; i < maxComponents; i++) {
                 byte[] data = cache.getIndexes()[3].getFile(id, i);
-                if (data == null) {
-                    System.out.println("Component " + i + " from interface " + id + " is null, on initial load.");
-                } else {
-                    ComponentDefinition defs = new ComponentDefinition();
-                    defs.ihash = i + (id << 16);
-                    defs.decode(new InputStream(data), i, id);
-                    icomponentsdefs[id][i] = defs;
-                    System.out.println("Loaded component " + i + " from interface " + id);
+                if (data == null) continue;
+
+                try {
+                    ComponentDefinition def = new ComponentDefinition();
+                    def.ihash = i + (id << 16);
+                    def.decode(new InputStream(data), i, id);
+                    icomponentsdefs[id][i] = def;
+                } catch (Exception e) {
+                    System.err.println("Error decoding component " + i + " from interface " + id + ": " + e.getMessage());
+                    e.printStackTrace();
                 }
             }
         }
-
-        // Return the loaded components
         return icomponentsdefs[id];
     }
 
-    /**
-     * Returns the size of the interface definitions.
-     *
-     * @param cache The cache containing the data
-     * @return The size of the interface definitions
-     */
-    public static int getInterfaceDefinitionsSize(Cache cache) {
-        return cache.getIndexes()[3].getLastArchiveId() + 1;
-    }
-
-    /**
-     * Returns the size of the components for a specific interface.
-     *
-     * @param cache       The cache containing the data
-     * @param interfaceId The interface ID
-     * @return The size of the components for the interface
-     */
     public static int getInterfaceDefinitionsComponentsSize(Cache cache, int interfaceId) {
+        if (cache == null || cache.getIndexes() == null || cache.getIndexes().length <= 3 || cache.getIndexes()[3] == null) {
+            System.err.println("Cache or required index missing.");
+            return 0;
+        }
         return cache.getIndexes()[3].getLastFileId(interfaceId) + 1;
     }
 
-    /**
-     * uncoding
-     *
-     * @return encoded byte array
-     */
-    public byte[] encode() {
+    public byte[] encode(){
         OutputStream out = new OutputStream();
         out.writeByte(newInt);
         out.writeByte(this.type);
@@ -301,22 +285,22 @@ public class ComponentDefinition implements Cloneable {
         out.writeByte(this.aspectHeightType);
         out.writeByte(this.aspectXType);
         out.writeByte(this.aspectYType);
-        if (parentId == -1 || parentId == 65535)
+        if(parentId == -1  || parentId == 65535)
             out.writeShort(65535);
         else
             out.writeShort(this.parentId);// - (ihash & ~0xffff));
-        if (this.hidden)
+        if(this.hidden)
             out.writeByte(1);
         else
             out.writeByte(0);
         /**
          * container
          */
-        if (type == ComponentConstants.CONTAINER) {
+        if(type == ComponentConstants.CONTAINER){
             out.writeShort(this.layerWidth);
             out.writeShort(this.layerHeight);
-            if ((newInt ^ 0xffffffff) > -1) {
-                if (disableHover)
+            if((newInt ^ 0xffffffff) > -1) {
+                if(disableHover)
                     out.writeByte(1);
                 else
                     out.writeByte(0);
@@ -325,24 +309,24 @@ public class ComponentDefinition implements Cloneable {
         /**
          * sprites
          */
-        if (type == ComponentConstants.SPRITE) {
+        if(type == ComponentConstants.SPRITE){
             out.writeInt(this.spriteId);
             out.writeShort(this.anInt4728);
             out.writeByte(flag);
             out.writeByte(this.transparency);
             out.writeByte(this.borderThickness);
             out.writeInt(anInt4796);
-            if (this.vFlip)
+            if(this.vFlip)
                 out.writeByte(1);//out.writeByte(this.aBoolean4732);
             else
                 out.writeByte(0);
-            if (this.hFlip)
+            if(this.hFlip)
                 out.writeByte(1);
             else
                 out.writeByte(0);
             out.writeInt(this.color);
             if ((newInt ^ 0xffffffff) <= -4) {
-                if (this.clickMask)
+                if(this.clickMask)
                     out.writeByte(1);
                 else
                     out.writeByte(0);
@@ -351,21 +335,21 @@ public class ComponentDefinition implements Cloneable {
         /**
          *  models
          */
-        if (type == 6) {
+        if(type == 6){
             if ((ihash >> 16) > 1144)
                 out.writeBigSmart(modelId);
             else
                 out.writeShort(modelId);
             out.writeByte(i_19_);
             boolean bool = (0x1 & i_19_) == 1;
-            if (bool) {
+            if(bool) {
                 out.writeShort(anInt4709);
                 out.writeShort(anInt4797);
                 out.writeShort(anInt4815);
                 out.writeShort(anInt4821);
                 out.writeShort(anInt4682);
                 out.writeShort(zoom);
-            } else if (aBoolean4865) {
+            } else if(aBoolean4865){
                 out.writeShort(anInt4709);
                 out.writeShort(anInt4797);
                 out.writeShort(anInt4842);
@@ -387,16 +371,18 @@ public class ComponentDefinition implements Cloneable {
             }
 
         }
-        /**
+
+        /*
          * text
          */
-        if (type == ComponentConstants.TEXT) {
+
+        if(type == ComponentConstants.TEXT){
             if ((ihash >> 16) > 1144)
-                out.writeBigSmart(fontId);
+                out.writeBigSmart(fontId );
             else
                 out.writeShort(fontId);
             if (newInt >= 2) {
-                if (aBoolean4832)
+                if(aBoolean4832)
                     out.writeByte(1);
                 else
                     out.writeByte(0);
@@ -405,7 +391,7 @@ public class ComponentDefinition implements Cloneable {
             out.writeByte(anInt4697);
             out.writeByte(textHorizontalAli);
             out.writeByte(textVerticalAli);
-            if (shadow)
+            if(shadow)
                 out.writeByte(1);
             else
                 out.writeByte(0);
@@ -414,30 +400,30 @@ public class ComponentDefinition implements Cloneable {
             if (newInt >= 0)
                 out.writeByte(multiline);
         }
-        if (type == ComponentConstants.FIGURE) {
+        if(type == ComponentConstants.FIGURE){
             out.writeInt(this.color);
-            if (filled)
+            if(filled)
                 out.writeByte(1);
             else
                 out.writeByte(0);
             out.writeByte(transparency);
         }
-        if (type == ComponentConstants.UNKNOWN) {
+        if(type == ComponentConstants.UNKNOWN){
             out.writeByte(anInt4752);
             out.writeInt(color);
-            if (aBoolean4721)
+            if(aBoolean4721)
                 out.writeByte(1);
             else
                 out.writeByte(0);
         }
-        out.writeMedium(optionMask);
+        out.write24BitInt(optionMask);
         out.writeByte(i_21_);
-        if (i_21_ != 0) {
+        if(i_21_ != 0){
             //system.out.println("USED");
             /**
              * TODO loop shit , almost always 0 so dw
              */
-            for (int i = 0; i < anIntArray4705.length; i++) {
+            for(int i = 0; i < anIntArray4705.length; i++){
 
                 out.writeInt(anIntArray4705[i]);
                 out.writeByte(aByteArray4806[i]);
@@ -447,29 +433,28 @@ public class ComponentDefinition implements Cloneable {
         }
 
         out.writeString(Name);
-        if (rightclickOptions != null)
+        if(rightclickOptions != null)
             out.writeByte(rightclickOptions.length);
         else
             out.writeByte(0);
-        if (rightclickOptions != null) {
-            if (rightclickOptions.length > 0) {
-                for (int index = 0; index < rightclickOptions.length; index++) {
-                    out.writeString(this.rightclickOptions[index] == null ? "" : this.rightclickOptions[index] + "");
+        if(rightclickOptions != null) {
+            if(rightclickOptions.length > 0){
+                for (int index = 0; index  < rightclickOptions.length ;index++){
+                    out.writeString(this.rightclickOptions[index] == null ? "" :this.rightclickOptions[index] +"");
                 }
 
             }
         }
-        int i_28_ = menuOptionsCount >> 4;
-        if ((i_28_ ^ 0xffffffff) < -1) {
+        int i_28_ = menuOptionsCount  >> 4;
+        if((i_28_ ^ 0xffffffff) < -1){
             out.writeByte(Option);
-            System.out.println("Option= " + Option);
+            System.out.println("Option= "+Option);
             out.writeShort(opCursors[Option]);
-        }
-        if ((i_28_ ^ 0xffffffff) < -2) {
+        } if ((i_28_ ^ 0xffffffff) < -2) {
             out.writeByte(option);
             out.writeShort(opCursors[option]);
         }
-        if (aString4784 == null)
+        if(aString4784 == null)
             out.writeString("");
         else
             out.writeString(aString4784);
@@ -477,7 +462,7 @@ public class ComponentDefinition implements Cloneable {
         out.writeByte(anInt4795);
         out.writeByte(anInt4860);
         out.writeString(aString4786);
-        if ((extractValueFromArchive(optionMask) ^ 0xffffffff) != -1) {
+        if ((method925(optionMask) ^ 0xffffffff) != -1) {
             out.writeShort(mask);
             out.writeShort(targetOverCursor);
             out.writeShort(targetLeaveCursor);
@@ -485,58 +470,57 @@ public class ComponentDefinition implements Cloneable {
         if (newInt >= 0) {
             out.writeShort(mouseOverCursor);
         }
-        if (newInt >= 0) {
+        if(newInt >= 0){
             out.writeByte(i_33_);
-            for (int i = 0; i < hashInt1.size(); i++) {
+            for(int i = 0; i < hashInt1.size(); i ++){
                 out.writeLong(hashLong1.get(i));
                 out.writeInt(hashInt1.get(i));
 
             }
 
             out.writeByte(i_37_);
-            for (int i = 0; i < hashInt1.size(); i++) {
+            for(int i = 0; i < hashInt1.size(); i ++){
                 out.writeLong(hashLong2.get(i));
                 out.writeString(hashString2.get(i));
 
             }
         }
-        encodeScript(onLoadScript, out);
-        encodeScript(onMouseHoverScript, out);
-        encodeScript(onMouseLeaveScript, out);
-        encodeScript(onUseWith, out);
-        encodeScript(onUse, out);
-        encodeScript(onVarpTransmit, out);
-        encodeScript(onInvTransmit, out);
-        encodeScript(onStatTransmit, out);
-        encodeScript(onTimer, out);
-        encodeScript(onOptionClick, out);
+        encodeScript(onLoadScript,out);
+        encodeScript(onMouseHoverScript,out);
+        encodeScript(onMouseLeaveScript,out);
+        encodeScript(onUseWith,out);
+        encodeScript(onUse,out);
+        encodeScript(onVarpTransmit,out);
+        encodeScript(onInvTransmit,out);
+        encodeScript(onStatTransmit,out);
+        encodeScript(onTimer,out);
+        encodeScript(onOptionClick,out);
         if ((newInt ^ 0xffffffff) <= -1) {
-            encodeScript(onSomethingElse, out);
+            encodeScript(onSomethingElse,out);
         }
-        encodeScript(onMouseRepeat, out);
-        encodeScript(onClickRepeat, out);
-        encodeScript(onDrag, out);
-        encodeScript(onRelease, out);
-        encodeScript(onHold, out);
-        encodeScript(onDragStart, out);
-        encodeScript(onDragRelease, out);
-        encodeScript(onScroll, out);
-        encodeScript(onVarcTransmit, out);
-        encodeScript(onVarcStrTransmit, out);
+        encodeScript(onMouseRepeat,out);
+        encodeScript(onClickRepeat,out);
+        encodeScript(onDrag,out);
+        encodeScript(onRelease,out);
+        encodeScript(onHold,out);
+        encodeScript(onDragStart,out);
+        encodeScript(onDragRelease,out);
+        encodeScript(onScroll,out);
+        encodeScript(onVarcTransmit,out);
+        encodeScript(onVarcStrTransmit,out);
 
 
-        encodeScripts3(this.varpTriggers, out);
-        encodeScripts3(this.inventoryTriggers, out);
-        encodeScripts3(this.statTriggers, out);
-        encodeScripts3(this.varcTriggers, out);
-        encodeScripts3(this.varcstrTriggers, out);
+        encodeScripts3(this.varpTriggers,out);
+        encodeScripts3(this.inventoryTriggers,out);
+        encodeScripts3(this.statTriggers,out);
+        encodeScripts3(this.varcTriggers,out);
+        encodeScripts3(this.varcstrTriggers,out);
         byte[] data = new byte[out.getOffset()];
         out.setOffset(0);
-        out.getBytes(data, 0, data.length - 1);
+        out.getBytes(data, 0, data.length -1);
         return data;
 
     }
-
     public int checkInt;
     public int flag;
     public byte newInt;
@@ -559,6 +543,9 @@ public class ComponentDefinition implements Cloneable {
     private ArrayList<Long> hashLong2 = new ArrayList();
 
 
+
+
+    @SuppressWarnings("unchecked")
     final void decode(InputStream stream, int id, int interfaceId) {
         newInt = (byte) stream.readUnsignedByte();
         if (newInt == 255) {
@@ -567,13 +554,11 @@ public class ComponentDefinition implements Cloneable {
         this.componentId = id;
         this.interfaceId = interfaceId;
         type = stream.readUnsignedByte();
-
         if ((type & 0x80) != 0) {
-            type &= 0x7F;
+            type &= 0x7f;
             name = stream.readString();
         }
-
-        contentType = stream.readUnsignedShort();
+        contentType = stream.readUnsignedShort(); //mostly 0 still have to found out
         basePositionX = stream.readShort();
         basePositionY = stream.readShort();
         baseWidth = stream.readUnsignedShort();
@@ -582,29 +567,31 @@ public class ComponentDefinition implements Cloneable {
         aspectHeightType = (byte) stream.readByte();
         aspectXType = (byte) stream.readByte();
         aspectYType = (byte) stream.readByte();
-
         parentId = stream.readUnsignedShort();
         if (parentId != 65535) {
             parentId = parentId + (ihash & ~0xffff);
         } else {
             parentId = -1;
         }
-
         int flag = stream.readUnsignedByte();
-        this.flag = flag;
+        this.flag  = flag;
         hidden = (0x1 & flag ^ 0xffffffff) != -1;//0 != (flag & 0x1);
         if (newInt >= 0) {
             disableHover = (flag & 0x2 ^ 0xffffffff) != -1;
         }
-
+        /**
+         * container
+         */
         if (type == ComponentConstants.CONTAINER) {
             layerWidth = stream.readUnsignedShort(); //scroll x ?
-            layerHeight = stream.readUnsignedShort();    //scroll y ?
+            layerHeight = stream.readUnsignedShort();	//scroll y ?
             if ((newInt ^ 0xffffffff) > -1) {
                 disableHover = stream.readUnsignedByte() == 1;
             }
         }
-
+        /**
+         * sprite
+         */
         if (type == ComponentConstants.SPRITE) {
             spriteId = stream.readInt();
             anInt4728 = stream.readUnsignedShort();
@@ -621,7 +608,6 @@ public class ComponentDefinition implements Cloneable {
                 clickMask = (stream.readUnsignedByte() ^ 0xffffffff) == -2;
             }
         }
-
         if (type == 6) {
             modelType = 1;
             if ((ihash >> 16) > 1144)
@@ -653,6 +639,8 @@ public class ComponentDefinition implements Cloneable {
                 anInt4682 = stream.readUnsignedShort();
                 zoom = stream.readShort();
             }
+            //zoom = 850;
+            //System.out.println(interfaceId+" "+componentId+" values:" + zoom +" "+anInt4682+" "+anInt4821);
 
             if ((ihash >> 16) > 1144)
                 animationId = stream.readBigSmart();
@@ -662,7 +650,6 @@ public class ComponentDefinition implements Cloneable {
                     animationId = -1;
                 }
             }
-
             if (aspectWidthType != 0) {
                 anInt4800 = stream.readUnsignedShort();
             }
@@ -670,7 +657,9 @@ public class ComponentDefinition implements Cloneable {
                 anInt4849 = stream.readUnsignedShort();
             }
         }
-
+        /**
+         * text
+         */
         if (type == ComponentConstants.TEXT) {
             if ((ihash >> 16) > 1144)
                 fontId = stream.readBigSmart();
@@ -687,74 +676,70 @@ public class ComponentDefinition implements Cloneable {
             anInt4697 = stream.readUnsignedByte();
             textHorizontalAli = stream.readUnsignedByte();
             textVerticalAli = stream.readUnsignedByte();
-            shadow = stream.readUnsignedByte() == 1;
+            shadow = stream.readUnsignedByte()  == 1;
             color = stream.readInt();
             transparency = stream.readUnsignedByte();
             if (newInt >= 0) {
                 multiline = stream.readUnsignedByte();
             }
         }
-
         if (type == ComponentConstants.FIGURE) {
             color = stream.readInt();
             filled = (stream.readUnsignedByte() ^ 0xffffffff) == -2; //filled ?
             transparency = stream.readUnsignedByte();
         }
-
         if (type == ComponentConstants.UNKNOWN) {
+
             anInt4752 = stream.readUnsignedByte();
             color = stream.readInt();
             aBoolean4721 = stream.readUnsignedByte() == 1;
         }
-
         optionMask = stream.read24BitInt();
         i_21_ = stream.readUnsignedByte();
-
-        if ((i_21_ ^ 0xffffffff) != -1) {
+        ////system.out.println("before if "+i_21_);
+        if ((i_21_ ^ 0xffffffff) != -1) {//if (i_21_ != 0) {
             aByteArray4806 = new byte[11];
             aByteArray4733 = new byte[11];
             anIntArray4705 = new int[11];
-
             for (; i_21_ != 0; i_21_ = stream.readUnsignedByte()) {
+                //system.out.println("After for : "+i_21_);
                 int i_22_ = (i_21_ >> 4) - 1;
                 i_21_ = stream.readUnsignedByte() | i_21_ << 8;
+                //system.out.println("second one : "+i_21_);
                 i_21_ &= 0xfff;
-
                 if (i_21_ == 4095) {
                     i_21_ = -1;
                 }
-
                 b_23_ = (byte) stream.readByte();
                 if (b_23_ != 0) {
                     aBoolean4802 = true;
                 }
-                byte b_24_ = (byte) stream.readByte();
-
-                if (i_22_ > -1) {
+                b_24_ = (byte) stream.readByte();
+                //system.out.println(" Index : "+i_22_);
+                //system.out.println("anInt4761="+anInt4761);
+                if(i_22_ > -1) {
                     anIntArray4705[i_22_] = i_21_;
                     aByteArray4806[i_22_] = b_23_;
                     aByteArray4733[i_22_] = b_24_;
                 }
             }
         }
-
         Name = stream.readString();
 
-        int options_length = stream.readUnsignedByte();
-        menuOptionsCount = options_length & 0xf;
+        int  options_length = stream.readUnsignedByte();
+        menuOptionsCount =  options_length & 0xf ;
         int menuCursorMask = options_length >> 4;
-
+        //System.out.println(this.interfaceId+" "+this.componentId+" =  menuCursorMask: "+menuCursorMask+ " menuOptionsCount: "+menuOptionsCount);
         if (options_length > 0) {
             rightclickOptions = new String[options_length];
-            for (int index = 0; index < rightclickOptions.length; index++) {
+            for (int index = 0;index < rightclickOptions.length ;index++){
                 rightclickOptions[index] = stream.readString();
             }
         }
-
         if (menuCursorMask > 0) {
             Option = stream.readUnsignedByte();
             opCursors = new int[Option - -1];
-            for (int i_30_ = 0; (i_30_ ^ 0xffffffff) > (opCursors.length ^ 0xffffffff); i_30_++) {
+            for (int i_30_ = 0; (i_30_ ^ 0xffffffff) > (opCursors.length ^ 0xffffffff); i_30_++){
                 opCursors[i_30_] = -1;
 
             }
@@ -766,51 +751,34 @@ public class ComponentDefinition implements Cloneable {
             option = stream.readUnsignedByte();
             opCursors[option] = stream.readUnsignedShort();
         }
-
         aString4784 = stream.readString();
         if (aString4784.equals("")) {
             aString4784 = null;
         }
-
         anInt4708 = stream.readUnsignedByte();
         anInt4795 = stream.readUnsignedByte();
         anInt4860 = stream.readUnsignedByte();
         aString4786 = stream.readString();
-
         mask = -1;
-        if (extractValueFromArchive(optionMask) != 0) {
+        if ((method925(optionMask) ^ 0xffffffff) != -1) {
             mask = stream.readUnsignedShort();
             if (mask == 65535) {
                 mask = -1;
             }
             targetOverCursor = stream.readUnsignedShort();
-            if (targetOverCursor == 65535) {
+            //system.out.println("anInt4698="+anInt4698);
+            if ((targetOverCursor == 65535)) {
                 targetOverCursor = -1;
             }
             targetLeaveCursor = stream.readUnsignedShort();
+            //system.out.println("anInt4839="+anInt4839);
             if (targetLeaveCursor == 65535) {
                 targetLeaveCursor = -1;
             }
         }
-
         if (newInt >= 0) {
             mouseOverCursor = stream.readUnsignedShort();
-            if (mouseOverCursor == 65535) {
-                mouseOverCursor = -1;
-            }
-        }
-
-        targetOverCursor = stream.readUnsignedShort();
-        if ((targetOverCursor == 65535)) {
-            targetOverCursor = -1;
-        }
-        targetLeaveCursor = stream.readUnsignedShort();
-        if (targetLeaveCursor == 65535) {
-            targetLeaveCursor = -1;
-        }
-
-        if (newInt >= 0) {
-            mouseOverCursor = stream.readUnsignedShort();
+            //system.out.println("anInt4761="+anInt4761);
             if (mouseOverCursor == 65535) {
                 mouseOverCursor = -1;
             }
@@ -823,7 +791,8 @@ public class ComponentDefinition implements Cloneable {
                 int i_36_ = stream.readInt();
                 aHashTable4823.put((long) i_35_, i_36_);
                 hashInt1.add(i_36_);
-                hashLong1.add((long) i_35_);
+                //system.out.println("_i_36"+i_36_);
+                hashLong1.add((long)i_35_);
 
             }
             i_37_ = stream.readUnsignedByte();
@@ -831,7 +800,7 @@ public class ComponentDefinition implements Cloneable {
                 i_39_ = stream.read24BitInt();
                 String string = stream.readJagString();
                 aHashTable4823.put((long) i_39_, string);
-                hashLong2.add((long) i_39_);
+                hashLong2.add((long)i_39_);
                 System.out.println(string);
                 hashString2.add(string);
             }
@@ -846,11 +815,9 @@ public class ComponentDefinition implements Cloneable {
         onStatTransmit = decodeScript(stream);
         onTimer = decodeScript(stream);
         onOptionClick = decodeScript(stream);
-
         if ((newInt ^ 0xffffffff) <= -1) {
             onSomethingElse = decodeScript(stream);
         }
-
         onMouseRepeat = decodeScript(stream);
         onClickRepeat = decodeScript(stream);
         onDrag = decodeScript(stream);
@@ -861,7 +828,6 @@ public class ComponentDefinition implements Cloneable {
         onScroll = decodeScript(stream);
         onVarcTransmit = decodeScript(stream);
         onVarcStrTransmit = decodeScript(stream);
-
         varpTriggers = decodeScripts3(stream);
         inventoryTriggers = decodeScripts3(stream);
         statTriggers = decodeScripts3(stream);
@@ -891,87 +857,77 @@ public class ComponentDefinition implements Cloneable {
         return objects;
     }
 
+
+
     private void encodeScript(Object[] obj, OutputStream out) {
-        int length;
-        if (obj == null)
-            length = 0;
-        else
-            length = obj.length;
+        int length = obj == null ? 0 : obj.length;
         out.writeByte(length);
-        if (obj == null)
-            return;
-        for (int index = 0; index < length; index++) {
-            Object arg = obj[index];
+        if (obj == null) return;
+        for (Object arg : obj) {
             if (arg instanceof String) {
                 out.writeByte(1);
                 out.writeString((String) arg);
             } else if (arg instanceof Integer) {
                 out.writeByte(0);
-                out.writeInt((int) arg);
+                out.writeInt((Integer) arg);
             }
-        }
-    }
-
-    private void encodeScripts3(int[] arr, OutputStream out) {
-        int length;
-        if (arr == null)
-            length = 0;
-        else
-            length = arr.length;
-        out.writeByte(length);
-        for (int index = 0; index < length; index++) {
-            out.writeInt(arr[index]);
         }
     }
 
     private final int[] decodeScripts3(InputStream buffer) {
         int length = buffer.readUnsignedByte();
-        if (length == 0) {
-            return null;
-        }
+        if (length == 0) return null;
+
         int[] is = new int[length];
-        for (int index = 0; index < length; index++) {
-            is[index] = buffer.readInt();
+        for (int i = 0; i < length; i++) {
+            is[i] = buffer.readInt();
         }
         return is;
     }
 
-    static final int extractValueFromArchive(int value) {
+    private void encodeScripts3(int[] arr, OutputStream out) {
+        int length = arr == null ? 0 : arr.length;
+        out.writeByte(length);
+        for (int i = 0; i < length; i++) {
+            out.writeInt(arr[i]);
+        }
+    }
+
+    public static int extractValueFromArchive(int value) {
         return (value & 0x3fda8) >> 11;
     }
 
     public static ArrayList<ComponentDefinition> getChildrenByParent(int interfaceId, int parentHash) {
         ComponentDefinition[] allComponents = getInterface(interfaceId);
-        ArrayList<ComponentDefinition> foundChilderen = new ArrayList<ComponentDefinition>();
+        ArrayList<ComponentDefinition> foundChildren = new ArrayList<>();
         for (ComponentDefinition component : allComponents) {
             if (component == null) continue;
             if (parentHash == component.parentId)
-                foundChilderen.add(component);
+                foundChildren.add(component);
         }
-        return foundChilderen;
+        return foundChildren;
     }
 
     public static boolean hasChildren(int interfaceId, int parentHash) {
-        ComponentDefinition[] list = ComponentDefinition.getInterface(interfaceId);
+        ComponentDefinition[] list = getInterface(interfaceId);
         for (ComponentDefinition c : list) {
-            if (c == null)
-                continue;
-            if (c.parentId == parentHash)
-                return true;
+            if (c == null) continue;
+            if (c.parentId == parentHash) return true;
         }
         return false;
     }
 
+    static final int method925(int i) {
+        return (i & 0x3fda8) >> 11;
+    }
+
     public static ArrayList<ComponentDefinition> getInterfaceContainers(int interfaceId) {
         ComponentDefinition[] possibleParents = getInterface(interfaceId);
-        ArrayList<ComponentDefinition> containers = new ArrayList<ComponentDefinition>();
-        if (possibleParents == null)
-            return null;
+        ArrayList<ComponentDefinition> containers = new ArrayList<>();
+        if (possibleParents == null) return null;
         for (ComponentDefinition component : possibleParents) {
-            if (component == null)
-                continue;
-            if (component.type == ComponentConstants.CONTAINER && component.hasChildren(interfaceId, component.ihash)) {
-
+            if (component == null) continue;
+            if (component.type == ComponentConstants.CONTAINER && hasChildren(interfaceId, component.ihash)) {
                 containers.add(component);
             }
         }
