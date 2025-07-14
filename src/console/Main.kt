@@ -10,7 +10,7 @@ import java.util.*
  * The Main.
  */
 object Main {
-    private const val APP_VERSION = "1.0.1b"
+    private const val APP_VERSION = "1.0.1c"
     /**
      * The entry point of application.
      *

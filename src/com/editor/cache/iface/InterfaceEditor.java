@@ -32,6 +32,7 @@ import java.util.List;
 import java.util.Map;
 
 import static com.editor.cache.iface.sprites.ImageUtils.imageToBufferedImage;
+import static com.editor.cache.iface.util.InterfacePacker.packInterface;
 
 public class InterfaceEditor extends JFrame {
     public static Cache cache;
@@ -119,6 +120,8 @@ public class InterfaceEditor extends JFrame {
 
     private int currentInterface = -1;
     private int selectedComp = -1;
+    private int interfaceId;
+    private ComponentDefinition[] components;
     private ComponentDefinition copiedComp = null;
     private ComponentDefinition selectedComponent;
 
@@ -155,7 +158,7 @@ public class InterfaceEditor extends JFrame {
         JMenuItem mntmDumpSprites = getJMenuItem(cache.toString(), menuBar);
         mnAbout.add(mntmDumpSprites);
 
-        JMenuItem mntmPackInterface = getJMenuItem();
+        JMenuItem mntmPackInterface = getJMenuItem(cache, interfaceId, components);
         mnAbout.add(mntmPackInterface);
 
         pack();
@@ -215,26 +218,24 @@ public class InterfaceEditor extends JFrame {
     }
 
     @NotNull
-    private JMenuItem getJMenuItem() {
+    private JMenuItem getJMenuItem(Cache cache, int interfaceId, ComponentDefinition[] components) {
         JMenuItem mntmPackInterface = new JMenuItem("Pack interface");
         mntmPackInterface.addActionListener(e -> {
-            JFileChooser chooser = new JFileChooser();
-            chooser.setCurrentDirectory(new File("."));
-            chooser.setDialogTitle("Choose a file to pack interface");
-            chooser.setFileSelectionMode(JFileChooser.FILES_ONLY);
-            chooser.setAcceptAllFileFilterUsed(false);
+            if (cache == null) {
+                JOptionPane.showMessageDialog(null, "Cache is not loaded.", "Error", JOptionPane.ERROR_MESSAGE);
+                return;
+            }
+            if (components == null || components.length == 0) {
+                JOptionPane.showMessageDialog(null, "No components to pack.", "Error", JOptionPane.ERROR_MESSAGE);
+                return;
+            }
 
-            int result = chooser.showOpenDialog(null);
-            if (result == JFileChooser.APPROVE_OPTION) {
-                File selectedFile = chooser.getSelectedFile();
-                if (selectedFile != null && selectedFile.exists()) {
-                    packInterface(selectedFile.getPath());
-                    JOptionPane.showMessageDialog(null, "Interface packed successfully: " + selectedFile.getName());
-                } else {
-                    JOptionPane.showMessageDialog(null, "The selected file does not exist.", "Error", JOptionPane.ERROR_MESSAGE);
-                }
-            } else {
-                System.out.println("No file selected.");
+            try {
+                packInterface(cache, interfaceId, components);
+                JOptionPane.showMessageDialog(null, "Interface packed successfully: " + interfaceId);
+            } catch (Exception ex) {
+                ex.printStackTrace();
+                JOptionPane.showMessageDialog(null, "Error packing interface: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
             }
         });
         return mntmPackInterface;
@@ -295,8 +296,7 @@ public class InterfaceEditor extends JFrame {
         popupMenu.add(export);
         interface_list.addMouseListener(new MouseAdapter() {
             public void mouseClicked(MouseEvent me) {
-                if (SwingUtilities.isRightMouseButton(me) && !interface_list.isSelectionEmpty() &&
-                        interface_list.locationToIndex(me.getPoint()) == interface_list.getSelectedIndex()) {
+                if (SwingUtilities.isRightMouseButton(me) && !interface_list.isSelectionEmpty() && interface_list.locationToIndex(me.getPoint()) == interface_list.getSelectedIndex()) {
                     popupMenu.show(interface_list, me.getX(), me.getY());
                 }
             }
@@ -362,12 +362,7 @@ public class InterfaceEditor extends JFrame {
     private JButton getButton() {
         JButton deleteInterfaceButton = new JButton("Delete Selected");
         deleteInterfaceButton.addActionListener(arg0 -> {
-            int option = JOptionPane.showConfirmDialog(
-                    this,
-                    "Are you sure that you want to remove interface " + currentInterface + "?",
-                    "Inane warning",
-                    JOptionPane.YES_NO_OPTION
-            );
+            int option = JOptionPane.showConfirmDialog(this, "Are you sure that you want to remove interface " + currentInterface + "?", "Inane warning", JOptionPane.YES_NO_OPTION);
 
             if (option == JOptionPane.YES_OPTION) {
                 cache.getIndexes()[3].removeArchive(currentInterface);
@@ -566,10 +561,7 @@ public class InterfaceEditor extends JFrame {
                 return;
             }
 
-            String message = (c.type == ComponentConstants.CONTAINER ?
-                    "Are you sure that you want to remove component " + selectedComp + " from interface " + currentInterface +
-                            " ? NOTE: this component is a container, children will be removed as well." :
-                    "Are you sure that you want to remove component " + selectedComp + " from interface " + currentInterface + " ?");
+            String message = (c.type == ComponentConstants.CONTAINER ? "Are you sure that you want to remove component " + selectedComp + " from interface " + currentInterface + " ? NOTE: this component is a container, children will be removed as well." : "Are you sure that you want to remove component " + selectedComp + " from interface " + currentInterface + " ?");
 
             int option = JOptionPane.showConfirmDialog(this, message, "Confirm deletion", JOptionPane.YES_NO_OPTION);
             if (option != JOptionPane.YES_OPTION) {
@@ -1246,8 +1238,7 @@ public class InterfaceEditor extends JFrame {
             ComponentDefinition.getInterface(currentInterface);
             drawTree(currentInterface);
         } catch (Exception ex) {
-            JOptionPane.showMessageDialog(interfaceViewportScrollPane,
-                    "Error while pasting component: " + ex.getMessage());
+            JOptionPane.showMessageDialog(interfaceViewportScrollPane, "Error while pasting component: " + ex.getMessage());
             ex.printStackTrace();
         }
     }
@@ -1299,30 +1290,14 @@ public class InterfaceEditor extends JFrame {
     }
 
     public void exportInterface(int interfaceId) throws FileNotFoundException, IOException {
-        File file = new File("data/export/" + interfaceId + ".dat");
+        File file = new File("data/export/interfaces/" + interfaceId + ".dat");
         byte[] data = cache.getIndexes()[3].getArchive(interfaceId).getData();
         try (FileOutputStream fos = new FileOutputStream(file)) {
             fos.write(data);
             fos.close();
             //message
-            JOptionPane.showMessageDialog(interfaceViewportScrollPane, interfaceId + " dumped to data/export/" + interfaceId + ".dat");
+            JOptionPane.showMessageDialog(interfaceViewportScrollPane, " dumped to data/export/interfaces/" + interfaceId + ".dat");
         }
-    }
-
-    /**
-     * Packs an interface from the given file path.
-     *
-     * @param path the file path of the data to pack.
-     */
-    public void packInterface(String path) {
-        int archiveId = ComponentDefinition.getInterfaceDefinitionsSize(cache);
-        ComponentDefinition defaultButton = ComponentDefinition.getInterfaceComponent(6, 19);
-        defaultButton.parentId = -1;
-
-        cache.getIndexes()[3].putFile(archiveId, 0, defaultButton.encode());
-        cache.getIndexes()[3].getArchive(archiveId).getData();
-
-        drawTree(archiveId);
     }
 
     /**
