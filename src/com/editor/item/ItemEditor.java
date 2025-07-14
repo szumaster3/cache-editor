@@ -777,14 +777,12 @@ public class ItemEditor extends JFrame {
     }
 
     private void export() {
-        File exportLocation = new File("data/export/lists/items/");
-        exportLocation.mkdirs();
+        File f = new File("./data/export/items/");
+        f.mkdirs();
 
         String lineSep = System.lineSeparator();
 
-        try (BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(
-                Files.newOutputStream(Paths.get(exportLocation.getPath(), this.defs.id + ".txt")),
-                StandardCharsets.UTF_8))) {
+        try (BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(Files.newOutputStream(Paths.get(f.getPath(), this.defs.id + ".txt")), StandardCharsets.UTF_8))) {
 
             writer.write("name = " + this.defs.name);
             writer.write(lineSep);
@@ -916,6 +914,8 @@ public class ItemEditor extends JFrame {
                     writer.write(lineSep);
                 }
             }
+            JOptionPane.showMessageDialog(this, "Export of item id: [" + defs.id + "] = completed.");
+
         } catch (IOException var151) {
             Main.log("ItemEditor", "Failed to export item definition.");
         }

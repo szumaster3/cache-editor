@@ -12,6 +12,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.*;
 import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.Iterator;
 
@@ -842,13 +844,12 @@ public class NPCEditor extends JFrame {
     }
 
     private void export() {
-        File f = new File("./export");
+        File f = new File("./data/export/npcs/");
         f.mkdirs();
-        String lineSep = System.getProperty("line.separator");
-        BufferedWriter writer = null;
 
-        try {
-            writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("export/npc_" + this.defs.id + ".txt"), StandardCharsets.UTF_8));
+        String lineSep = System.lineSeparator();
+
+        try (BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(Files.newOutputStream(Paths.get(f.getPath(), this.defs.id + ".txt")), StandardCharsets.UTF_8))) {
             writer.write("name = " + this.defs.getName());
             writer.write(lineSep);
             writer.write("combat level = " + this.defs.getCombatLevel());
@@ -953,16 +954,10 @@ public class NPCEditor extends JFrame {
                     writer.write(lineSep);
                 }
             }
+            JOptionPane.showMessageDialog(this, "Export of npc id: [" + defs.id + "] = completed.");
         } catch (IOException var151) {
-            Main.log("NPCEditor", "Failed to export NPC Defs to .txt");
-        } finally {
-            try {
-                writer.close();
-            } catch (Exception var14) {
-            }
-
+            Main.log("NPCEditor", "Failed to export item definition.");
         }
-
     }
 
     public String getClientScripts() {

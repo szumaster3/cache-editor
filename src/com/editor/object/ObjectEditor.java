@@ -5,7 +5,11 @@ import com.cache.defs.ObjectDefinition;
 import javax.swing.*;
 import javax.swing.table.TableModel;
 import java.awt.*;
+import java.io.BufferedWriter;
+import java.io.File;
 import java.io.IOException;
+import java.io.OutputStreamWriter;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -27,6 +31,9 @@ public class ObjectEditor extends JFrame {
     private JSpinner rotationX, rotationY, rotationZ;
     private JSpinner animationId;
     private JSpinner heightOffsetX, heightOffsetY;
+
+    private JTextField[] csk = new JTextField[7];
+    private JTextField[] csv = new JTextField[7];
 
     private Map<Integer, Object> clientScriptData;
     private ClientScriptTableModel clientScriptModel;
@@ -317,6 +324,7 @@ public class ObjectEditor extends JFrame {
         JOptionPane.showMessageDialog(this, "Client scripts loaded from definitions.");
     }
 
+
     private void save() {
         try {
             definitions.setName(name.getText().trim());
@@ -328,46 +336,25 @@ public class ObjectEditor extends JFrame {
             definitions.originalTextureColors = toShortArray(parseOriginalColors(textureColors.getText().trim()));
             definitions.modifiedTextureColors = toShortArray(parseModifiedColors(textureColors.getText().trim()));
 
-            if (sizeX != null) {
-                definitions.setSizeX((Integer) sizeX.getValue());
-            }
-            if (sizeY != null) {
-                definitions.setSizeY((Integer) sizeY.getValue());
-            }
+            definitions.setSizeX((Integer) sizeX.getValue());
+            definitions.setSizeY((Integer) sizeY.getValue());
             definitions.setBlockProjectile(projectileClipped.isSelected());
             definitions.setClipped(notClipped.isSelected());
-            if (scaleX != null) {
-                definitions.setScaleX((Integer) scaleX.getValue());
-            }
-            if (scaleY != null) {
-                definitions.setScaleY((Integer) scaleY.getValue());
-            }
-            if (scaleZ != null) {
-                definitions.setScaleZ((Integer) scaleZ.getValue());
-            }
-            if (rotationX != null) {
-                definitions.setRotationX((Integer) rotationX.getValue());
-            }
-            if (rotationY != null) {
-                definitions.setRotationY((Integer) rotationY.getValue());
-            }
-            if (rotationZ != null) {
-                definitions.setRotationZ((Integer) rotationZ.getValue());
-            }
-            if (animationId != null) {
-                definitions.setAnimationId((Integer) animationId.getValue());
-            }
+            definitions.anInt3841 = (Integer) scaleX.getValue();
+            definitions.anInt3917 = (Integer) scaleY.getValue();
+            definitions.anInt3902 = (Integer) scaleZ.getValue();
+            definitions.anInt3840 = (Integer) rotationX.getValue();
+            definitions.anInt3878 = (Integer) rotationY.getValue();
+            definitions.anInt3876 = (Integer) rotationZ.getValue();
+            definitions.anInt3855 = (Integer) animationId.getValue();
             definitions.setWalkable(isWalkable.isSelected());
             definitions.setSolid(isSolid.isSelected());
             definitions.setInteractive(isInteractive.isSelected());
             definitions.setCastsShadow(castsShadow.isSelected());
             definitions.setBlockProjectile(isProjectile.isSelected());
-            if (heightOffsetX != null) {
-                definitions.setHeightOffsetX((Integer) heightOffsetX.getValue());
-            }
-            if (heightOffsetY != null) {
-                definitions.setHeightOffsetY((Integer) heightOffsetY.getValue());
-            }
+            definitions.anInt3883 = (Integer) heightOffsetX.getValue();
+            definitions.anInt3915 = (Integer) heightOffsetY.getValue();
+
             try {
                 definitions.setConfigFileId(Integer.parseInt(configFileId.getText().trim()));
             } catch (NumberFormatException e) {
@@ -384,17 +371,24 @@ public class ObjectEditor extends JFrame {
                 definitions.setClipType(-1);
             }
 
-
-            Map<Integer, Object> clientScriptData = definitions.clientScriptData != null ? definitions.clientScriptData : new HashMap<>();
-            ClientScripts clientScriptModel = new ClientScripts(clientScriptData);
-
-            Map<Integer, Object> newClientScriptData = new HashMap<>();
-            for (Map.Entry<Integer, Object> entry : clientScriptModel.getEntries()) {
-                if (entry.getKey() != null && entry.getValue() != null) {
-                    newClientScriptData.put(entry.getKey(), entry.getValue());
+            Map<Integer, Object> csd = new HashMap<>();
+            for (int i = 0; i < 7; i++) {
+                String keyStr = csk[i].getText().trim();
+                String valueStr = csv[i].getText().trim();
+                if (!keyStr.isEmpty() && !valueStr.isEmpty()) {
+                    try {
+                        int key = Integer.parseInt(keyStr);
+                        Object value;
+                        try {
+                            value = Integer.parseInt(valueStr);
+                        } catch (NumberFormatException ex) {
+                            value = valueStr;
+                        }
+                        csd.put(key, value);
+                    } catch (NumberFormatException ignored) {}
                 }
             }
-            definitions.clientScriptData = new HashMap<>(newClientScriptData);
+            definitions.clientScriptData = (HashMap<Integer, Object>) csd;
 
             definitions.write(ObjectSelection.Cache);
             objectSelection.updateObjectDefs(definitions);
@@ -403,16 +397,49 @@ public class ObjectEditor extends JFrame {
             dispose();
         } catch (Exception e) {
             JOptionPane.showMessageDialog(this, "Error saving object: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+            e.printStackTrace();
         }
     }
 
     private void export() {
-        Path path = Paths.get("object_" + definitions.id + ".txt");
-        try {
-            Files.writeString(path, definitions.toString());
-            JOptionPane.showMessageDialog(this, "Exported to " + path.toAbsolutePath());
+        File f = new File("./data/export/items/");
+        f.mkdirs();
+        String lineSep = System.lineSeparator();
+
+        try (BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(Files.newOutputStream(Paths.get(f.getPath(), this.definitions.id + ".txt")), StandardCharsets.UTF_8))) {
+
+            writer.write("name = " + definitions.getName() + lineSep);
+            writer.write("options = " + joinArray(definitions.options, ";") + lineSep);
+            writer.write("models = " + joinIntArray(definitions.models, ";") + lineSep);
+            writer.write("childrenIds = " + joinIntArray(definitions.childrenIds, ";") + lineSep);
+            writer.write("model colors = " + getColorPairs(definitions.originalModelColors, definitions.modifiedModelColors) + lineSep);
+            writer.write("texture colors = " + getColorPairs(definitions.originalTextureColors, definitions.modifiedTextureColors) + lineSep);
+            writer.write("clipType = " + definitions.getClipType() + lineSep);
+            writer.write("sizeX = " + definitions.getSizeX() + lineSep);
+            writer.write("sizeY = " + definitions.getSizeY() + lineSep);
+            writer.write("configFileId = " + definitions.getConfigFileId() + lineSep);
+            writer.write("configId = " + definitions.getConfigId() + lineSep);
+            writer.write("animationId = " + definitions.anInt3855 + lineSep);
+            writer.write("scaleX = " + definitions.anInt3841 + lineSep);
+            writer.write("scaleY = " + definitions.anInt3917 + lineSep);
+            writer.write("scaleZ = " + definitions.anInt3902 + lineSep);
+            writer.write("rotationX = " + definitions.anInt3840 + lineSep);
+            writer.write("rotationY = " + definitions.anInt3878 + lineSep);
+            writer.write("rotationZ = " + definitions.anInt3876 + lineSep);
+            writer.write("heightOffsetX = " + definitions.anInt3883 + lineSep);
+            writer.write("heightOffsetY = " + definitions.anInt3915 + lineSep);
+            writer.write("projectileClipped = " + definitions.isProjectileClipped() + lineSep);
+            writer.write("notClipped = " + definitions.getClipped() + lineSep);
+            writer.write("isWalkable = " + definitions.isWalkable() + lineSep);
+            writer.write("isSolid = " + definitions.isSolid() + lineSep);
+            writer.write("isInteractive = " + definitions.isInteractive() + lineSep);
+            writer.write("castsShadow = " + definitions.castsShadow() + lineSep);
+            writer.write("isProjectile = " + definitions.blocksProjectile() + lineSep);
+
+            writer.flush();
+            JOptionPane.showMessageDialog(this, "Object exported to file: " + this.definitions.id + ".txt");
         } catch (IOException e) {
-            JOptionPane.showMessageDialog(this, "Export error: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Error exporting: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
         }
     }
 
@@ -556,6 +583,40 @@ public class ObjectEditor extends JFrame {
             intArr[i] = arr[i];
         }
         return intArr;
+    }
+    private String nullToEmpty(String str) {
+        return str == null ? "" : str;
+    }
+
+    private String joinArray(String[] arr, String sep) {
+        if (arr == null) return "";
+        StringBuilder sb = new StringBuilder();
+        for (String s : arr) {
+            if (s != null && !s.isEmpty()) {
+                if (sb.length() > 0) sb.append(sep);
+                sb.append(s);
+            }
+        }
+        return sb.toString();
+    }
+
+    private String joinIntArray(int[] arr, String sep) {
+        if (arr == null) return "";
+        StringBuilder sb = new StringBuilder();
+        for (int v : arr) {
+            if (sb.length() > 0) sb.append(sep);
+            sb.append(v);
+        }
+        return sb.toString();
+    }
+    private String getColorPairs(short[] original, short[] modified) {
+        if (original == null || modified == null) return "";
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < Math.min(original.length, modified.length); i++) {
+            if (i > 0) sb.append(";");
+            sb.append(original[i]).append("=").append(modified[i]);
+        }
+        return sb.toString();
     }
 
     private void limitSize(JSpinner spinner) {
