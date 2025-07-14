@@ -888,7 +888,7 @@ public class NPCEditor extends JFrame {
             writer.write(lineSep);
             writer.write("unknownBoolean1 = " + this.defs.unknownBoolean1);
             writer.write(lineSep);
-            writer.write("unknwonBoolean2 = " + this.defs.unknownBoolean2);
+            writer.write("unknownBoolean2 = " + this.defs.unknownBoolean2);
             writer.write(lineSep);
             writer.write("unknownBoolean3 = " + this.defs.unknownBoolean3);
             writer.write(lineSep);
