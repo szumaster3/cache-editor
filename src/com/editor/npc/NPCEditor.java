@@ -1006,9 +1006,9 @@ public class NPCEditor extends JFrame {
 
     public String getChangedModelColors() {
         String text = "";
-        if (this.defs.originalModelColors != null) {
-            for (int i = 0; i < this.defs.originalModelColors.length; ++i) {
-                text = text + this.defs.originalModelColors[i] + "=" + this.defs.modifiedModelColors[i] + ";";
+        if (this.defs.aShortArray896 != null) {
+            for (int i = 0; i < this.defs.aShortArray896.length; ++i) {
+                text = text + this.defs.aShortArray896[i] + "=" + this.defs.aShortArray859[i] + ";";
             }
         }
 
@@ -1017,9 +1017,9 @@ public class NPCEditor extends JFrame {
 
     public String getChangedTextureColors() {
         String text = "";
-        if (this.defs.originalTextureColors != null) {
-            for (int i = 0; i < this.defs.originalTextureColors.length; ++i) {
-                text = text + this.defs.originalTextureColors[i] + "=" + this.defs.modifiedTextureColors[i] + ";";
+        if (this.defs.aShortArray880 != null) {
+            for (int i = 0; i < this.defs.aShortArray880.length; ++i) {
+                text = text + this.defs.aShortArray880[i] + "=" + this.defs.aShortArray866[i] + ";";
             }
         }
 
