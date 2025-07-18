@@ -9,8 +9,8 @@
 
 package tukaani.check;
 
-import net.openrs.util.tukaani.UnsupportedOptionsException;
-import net.openrs.util.tukaani.XZ;
+import tukaani.UnsupportedOptionsException;
+import tukaani.XZ;
 
 public abstract class Check {
     int size;

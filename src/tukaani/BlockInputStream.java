@@ -9,8 +9,8 @@
 
 package tukaani;
 
-import net.openrs.util.tukaani.check.Check;
-import net.openrs.util.tukaani.common.DecoderUtil;
+import tukaani.check.Check;
+import tukaani.common.DecoderUtil;
 
 import java.io.ByteArrayInputStream;
 import java.io.DataInputStream;

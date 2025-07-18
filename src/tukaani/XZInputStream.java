@@ -9,7 +9,7 @@
 
 package tukaani;
 
-import net.openrs.util.tukaani.common.DecoderUtil;
+import tukaani.common.DecoderUtil;
 
 import java.io.DataInputStream;
 import java.io.EOFException;

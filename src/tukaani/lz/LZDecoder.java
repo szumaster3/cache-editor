@@ -10,7 +10,7 @@
 
 package tukaani.lz;
 
-import net.openrs.util.tukaani.CorruptedInputException;
+import tukaani.CorruptedInputException;
 
 import java.io.DataInputStream;
 import java.io.IOException;

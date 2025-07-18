@@ -10,7 +10,7 @@
 
 package tukaani.lzma;
 
-import net.openrs.util.tukaani.rangecoder.RangeCoder;
+import tukaani.rangecoder.RangeCoder;
 
 abstract class LZMACoder {
     static final int POS_STATES_MAX = 1 << 4;

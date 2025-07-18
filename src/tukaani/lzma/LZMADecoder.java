@@ -10,8 +10,8 @@
 
 package tukaani.lzma;
 
-import net.openrs.util.tukaani.lz.LZDecoder;
-import net.openrs.util.tukaani.rangecoder.RangeDecoder;
+import tukaani.lz.LZDecoder;
+import tukaani.rangecoder.RangeDecoder;
 
 import java.io.IOException;
 

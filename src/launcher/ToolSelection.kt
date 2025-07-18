@@ -17,6 +17,7 @@ import com.misc.ColorPicker
 import com.misc.model.ModelExporter
 import com.misc.model.ModelPacker
 import com.misc.model.view.frame.ModelFrame
+import openrs.cache.tools.MapDumper
 import java.awt.*
 import java.awt.event.ActionEvent
 import java.io.*
@@ -187,6 +188,7 @@ class ToolSelection : JFrame() {
                 "Pick a Color",
                 "File Manager",
                 "Model Viewer",
+                "Map Dumper"
             ),
         )
 
@@ -321,7 +323,12 @@ class ToolSelection : JFrame() {
             } catch (e: Exception) {
                 Main.log(toolSelected, failMessage)
             }
-
+            15 -> try {
+                MapDumper.launch(this)
+                Main.log(toolSelected, "Map Dumper started.")
+            } catch (e: Exception) {
+                Main.log(toolSelected, failMessage)
+            }
             else -> Main.log(toolSelected, "No Tool Selected!")
         }
     }

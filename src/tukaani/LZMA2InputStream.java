@@ -10,9 +10,9 @@
 
 package tukaani;
 
-import net.openrs.util.tukaani.lz.LZDecoder;
-import net.openrs.util.tukaani.lzma.LZMADecoder;
-import net.openrs.util.tukaani.rangecoder.RangeDecoderFromBuffer;
+import tukaani.lz.LZDecoder;
+import tukaani.lzma.LZMADecoder;
+import tukaani.rangecoder.RangeDecoderFromBuffer;
 
 import java.io.DataInputStream;
 import java.io.IOException;

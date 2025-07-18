@@ -9,7 +9,7 @@
 
 package tukaani;
 
-import net.openrs.util.tukaani.delta.DeltaDecoder;
+import tukaani.delta.DeltaDecoder;
 
 import java.io.IOException;
 import java.io.InputStream;

@@ -9,8 +9,8 @@
 
 package tukaani.index;
 
-import net.openrs.util.tukaani.XZIOException;
-import net.openrs.util.tukaani.common.Util;
+import tukaani.XZIOException;
+import tukaani.common.Util;
 
 abstract class IndexBase {
     private final XZIOException invalidIndexException;

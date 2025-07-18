@@ -9,12 +9,12 @@
 
 package tukaani.index;
 
-import net.openrs.util.tukaani.CorruptedInputException;
-import net.openrs.util.tukaani.MemoryLimitException;
-import net.openrs.util.tukaani.SeekableInputStream;
-import net.openrs.util.tukaani.UnsupportedOptionsException;
-import net.openrs.util.tukaani.common.DecoderUtil;
-import net.openrs.util.tukaani.common.StreamFlags;
+import tukaani.CorruptedInputException;
+import tukaani.MemoryLimitException;
+import tukaani.SeekableInputStream;
+import tukaani.UnsupportedOptionsException;
+import tukaani.common.DecoderUtil;
+import tukaani.common.StreamFlags;
 
 import java.io.EOFException;
 import java.io.IOException;

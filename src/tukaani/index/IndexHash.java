@@ -9,9 +9,9 @@
 
 package tukaani.index;
 
-import net.openrs.util.tukaani.CorruptedInputException;
-import net.openrs.util.tukaani.XZIOException;
-import net.openrs.util.tukaani.common.DecoderUtil;
+import tukaani.CorruptedInputException;
+import tukaani.XZIOException;
+import tukaani.common.DecoderUtil;
 
 import java.io.DataInputStream;
 import java.io.IOException;
@@ -21,15 +21,15 @@ import java.util.Arrays;
 import java.util.zip.CheckedInputStream;
 
 public class IndexHash extends IndexBase {
-    private net.openrs.util.tukaani.check.Check hash;
+    private tukaani.check.Check hash;
 
     public IndexHash() {
         super(new CorruptedInputException());
 
         try {
-            hash = new net.openrs.util.tukaani.check.SHA256();
+            hash = new tukaani.check.SHA256();
         } catch (java.security.NoSuchAlgorithmException e) {
-            hash = new net.openrs.util.tukaani.check.CRC32();
+            hash = new tukaani.check.CRC32();
         }
     }
 

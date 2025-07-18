@@ -9,10 +9,10 @@
 
 package tukaani;
 
-import net.openrs.util.tukaani.check.Check;
-import net.openrs.util.tukaani.common.DecoderUtil;
-import net.openrs.util.tukaani.common.StreamFlags;
-import net.openrs.util.tukaani.index.IndexHash;
+import tukaani.check.Check;
+import tukaani.common.DecoderUtil;
+import tukaani.common.StreamFlags;
+import tukaani.index.IndexHash;
 
 import java.io.DataInputStream;
 import java.io.EOFException;

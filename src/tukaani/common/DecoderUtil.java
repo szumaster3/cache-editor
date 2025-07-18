@@ -9,10 +9,10 @@
 
 package tukaani.common;
 
-import net.openrs.util.tukaani.CorruptedInputException;
-import net.openrs.util.tukaani.UnsupportedOptionsException;
-import net.openrs.util.tukaani.XZ;
-import net.openrs.util.tukaani.XZFormatException;
+import tukaani.CorruptedInputException;
+import tukaani.UnsupportedOptionsException;
+import tukaani.XZ;
+import tukaani.XZFormatException;
 
 import java.io.EOFException;
 import java.io.IOException;

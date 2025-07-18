@@ -9,7 +9,7 @@
 
 package tukaani;
 
-import net.openrs.util.tukaani.simple.SimpleFilter;
+import tukaani.simple.SimpleFilter;
 
 import java.io.IOException;
 import java.io.InputStream;

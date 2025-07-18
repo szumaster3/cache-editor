@@ -9,7 +9,7 @@
 
 package tukaani;
 
-import net.openrs.util.tukaani.simple.*;
+import tukaani.simple.*;
 
 import java.io.InputStream;
 
