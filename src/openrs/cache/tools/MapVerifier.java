@@ -1,9 +1,9 @@
 package openrs.cache.tools;
 
+import com.cache.util.XTEAManager;
 import openrs.cache.Cache;
 import openrs.cache.Constants;
 import openrs.cache.FileStore;
-import openrs.cache.util.XTEAManager;
 
 import java.util.Arrays;
 

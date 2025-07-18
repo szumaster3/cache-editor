@@ -10,7 +10,7 @@ import java.util.*
  * The Main.
  */
 object Main {
-    private const val APP_VERSION = "1.0.3"
+    private const val APP_VERSION = "1.0.3a"
     /**
      * The entry point of application.
      *
@@ -21,8 +21,17 @@ object Main {
         println("Application version: $APP_VERSION")
         Console.redirectSystemStreams()
         EventQueue.invokeLater {
-            Console().isVisible = true
-            ToolSelection().isVisible = true
+            val console = Console()
+            console.isVisible = true
+
+            val toolSelection = ToolSelection()
+
+            val consoleBounds = console.bounds
+
+            val toolSize = toolSelection.size
+
+            toolSelection.setLocation(consoleBounds.x - toolSize.width, consoleBounds.y)
+            toolSelection.isVisible = true
         }
     }
 

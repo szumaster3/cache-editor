@@ -1,7 +1,7 @@
 package openrs.cache;
 
+import com.cache.util.XTEAManager;
 import openrs.cache.util.CompressionUtils;
-import openrs.cache.util.XTEAManager;
 import openrs.util.crypto.Xtea;
 
 import java.io.IOException;

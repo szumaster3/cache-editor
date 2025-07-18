@@ -1,7 +1,7 @@
 package openrs.cache;
 
+import com.cache.util.XTEAManager;
 import openrs.cache.type.CacheIndex;
-import openrs.cache.util.XTEAManager;
 import openrs.util.ByteBufferUtils;
 import openrs.util.crypto.Djb2;
 import openrs.util.crypto.Whirlpool;
