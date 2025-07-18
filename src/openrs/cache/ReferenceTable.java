@@ -622,4 +622,15 @@ public class ReferenceTable {
             os.close();
         }
     }
+
+    /**
+     * Increments the version number of this ReferenceTable to signal an update.
+     */
+    public void updateRevision() {
+        if (version <= 0) {
+            version = 1;
+        } else {
+            version++;
+        }
+    }
 }

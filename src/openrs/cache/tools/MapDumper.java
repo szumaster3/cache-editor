@@ -1,7 +1,10 @@
 package openrs.cache.tools;
 
 import com.cache.util.XTEAManager;
+import com.displee.cache.CacheLibrary;
 import openrs.cache.*;
+import com.displee.cache.index.Index;
+import com.displee.cache.index.archive.Archive;
 import openrs.cache.ReferenceTable.Entry;
 import openrs.cache.type.CacheIndex;
 import openrs.cache.util.CompressionUtils;
@@ -9,8 +12,12 @@ import openrs.util.crypto.Djb2;
 import org.apache.commons.compress.compressors.bzip2.BZip2CompressorInputStream;
 
 import javax.swing.*;
+import java.awt.*;
 import java.io.*;
+import java.net.URI;
 import java.nio.ByteBuffer;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
@@ -31,13 +38,52 @@ public class MapDumper {
      * Entry point prompt.
      */
     public static void launch(JFrame parent) {
-        String[] options = {"BINARY", "CSV"};
+        String url = "https://mejrs.github.io/historical?era=rs2_2009_02_01";
+
+        String info = "<html><body width='350px'>" +
+                "<b>Information</b>" +
+                "<br>" +
+                "Dumps map and landscape files from cache to <b>data/dump/maps/</b>." +
+                "<br>" +
+                "<ul>" +
+                "<li><b>mX_Y.gz</b>: compressed map data.</li>" +
+                "<li><b>lX_Y.gz</b>: compressed landscape data.</li>" +
+                "</ul>" +
+
+                "<b>Buttons</b><br>" +
+                "<ul>" +
+                "<li><b>BINARY</b>: Generate <b>map_index</b> in binary format.</li>" +
+                "<li><b>CSV</b>: Generate <b>map_index</b> in CSV format.</li>" +
+                "<li><b>Add Region</b>: Add region from files by coordinates.</li>" +
+                "</ul>" +
+                "</body></html>";
+
+        JLabel label = new JLabel(info);
+
+        JButton linkButton = new JButton("Open Map");
+        linkButton.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+        linkButton.addActionListener(e -> {
+            try {
+                Desktop.getDesktop().browse(new URI(url));
+            } catch (Exception ex) {
+                JOptionPane.showMessageDialog(parent, "Failed to open link: " + url);
+            }
+        });
+
+        JPanel panel = new JPanel();
+        panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
+        panel.add(label);
+        panel.add(Box.createVerticalStrut(10));
+        panel.add(linkButton);
+
+        String[] options = {"BINARY", "CSV", "Add Region"};
+
         int choice = JOptionPane.showOptionDialog(
                 parent,
-                "Select output format for map_index",
-                "Choose Format",
+                panel,
+                "Choose Action",
                 JOptionPane.DEFAULT_OPTION,
-                JOptionPane.QUESTION_MESSAGE,
+                JOptionPane.INFORMATION_MESSAGE,
                 null,
                 options,
                 options[0]
@@ -48,8 +94,35 @@ public class MapDumper {
             return;
         }
 
-        Format format = (choice == 1) ? Format.CSV : Format.BINARY;
+        if (choice == 0 || choice == 1) {
+            Format format = (choice == 1) ? Format.CSV : Format.BINARY;
+            startDumpThread(format);
+        } else if (choice == 2) {
+            String input = JOptionPane.showInputDialog(parent, "Enter region coordinates as x,y (e.g. 50,50):");
+            if (input == null || input.trim().isEmpty()) {
+                System.out.println("No region specified.");
+                return;
+            }
+            String[] parts = input.trim().split(",");
+            if (parts.length != 2) {
+                JOptionPane.showMessageDialog(parent, "Invalid input format. Use x,y");
+                return;
+            }
+            try {
+                int x = Integer.parseInt(parts[0].trim());
+                int y = Integer.parseInt(parts[1].trim());
+                addRegion(parent, x, y);
+            } catch (NumberFormatException nfe) {
+                JOptionPane.showMessageDialog(parent, "Coordinates must be numbers.");
+            }
+        }
+    }
 
+    /**
+     * Starts a new thread to run the map dump.
+     * @param format The format of map_index.
+     */
+    private static void startDumpThread(Format format) {
         Thread dumpThread = new Thread(() -> {
             try {
                 runDump(format);
@@ -59,9 +132,78 @@ public class MapDumper {
                 e.printStackTrace();
             }
         });
-
         dumpThread.start();
         System.out.println("Map Dumper started.");
+    }
+
+    /**
+     * Starts a new thread to add a map region.
+     * @param parent The parent JFrame used to display dialogs.
+     * @param x The x-coordinate of the region.
+     * @param y The y-coordinate of the region.
+     */
+    private static void addRegion(JFrame parent, int x, int y) {
+        Thread addRegionThread = new Thread(() -> {
+            try {
+                CacheLibrary cache = new CacheLibrary("data/cache/", false, null);
+                byte[] mapData = load("data/dump/maps/m" + x + "_" + y + ".gz");
+                byte[] landData = load("data/dump/maps/l" + x + "_" + y + ".gz");
+                addRegion(cache, x, y, mapData, landData);
+                SwingUtilities.invokeLater(() -> JOptionPane.showMessageDialog(parent, "Region (" + x + "," + y + ") added to cache."));
+            } catch (Exception e) {
+                e.printStackTrace();
+                SwingUtilities.invokeLater(() -> JOptionPane.showMessageDialog(parent, "Failed to add region: " + e.getMessage()));
+            }
+        });
+        addRegionThread.start();
+    }
+
+    /**
+     * Adds a new map region to the cache
+     * @param cache The instance representing the cache.
+     * @param x The x-coordinate of the region.
+     * @param y The y-coordinate of the region.
+     * @param mapData The raw compressed map data bytes.
+     * @param landData The raw compressed landscape data bytes.
+     * @throws IOException If the cache index or archive is not found, or IO fails.
+     */
+    public static void addRegion(CacheLibrary cache, int x, int y, byte[] mapData, byte[] landData) throws IOException {
+        final int MAPS_INDEX = 5;
+        final int regionId = (x << 8) | y;
+
+        Index mapsIndex = cache.index(MAPS_INDEX);
+        if (mapsIndex == null) {
+            throw new IOException("Index 5 (maps) not found in cache.");
+        }
+
+        Archive regionArchive = mapsIndex.archive(regionId);
+        if (regionArchive == null) {
+            regionArchive = mapsIndex.add(regionId);
+        }
+
+        int compressionType = 2;
+
+        regionArchive.add(0, mapData, compressionType, true);  // true = overwrite
+        regionArchive.add(1, landData, compressionType, true);
+
+        mapsIndex.update();
+        cache.update();
+
+        System.out.printf("Region (%d,%d) added (regionId=%d)%n", x, y, regionId);
+    }
+
+    /**
+     * Loads the contents of a file as a byte array.
+     * @param path The file path to load.
+     * @return The byte contents of the file.
+     * @throws IOException If the file does not exist or cannot be read.
+     */
+    public static byte[] load(String path) throws IOException {
+        Path p = new File(path).toPath();
+        if (!Files.exists(p)) {
+            throw new IOException("File not found: " + path);
+        }
+        return Files.readAllBytes(p);
     }
 
     /**
@@ -78,7 +220,7 @@ public class MapDumper {
         }
 
         try (Cache cache = new Cache(FileStore.open(Constants.CACHE_PATH))) {
-            ReferenceTable index = cache.getReferenceTable(5);
+            openrs.cache.ReferenceTable index = cache.getReferenceTable(5);
             if (index == null) {
                 throw new IOException("Index 5 not found");
             }
@@ -160,6 +302,7 @@ public class MapDumper {
             System.out.printf("Dumped %d map files and %d landscape files.%n", mapCount, landCount);
         }
     }
+
 
     /**
      * Reads raw file bytes from the cache without decompressing.
